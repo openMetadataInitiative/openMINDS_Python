@@ -1,0 +1,48 @@
+"""
+{{docstring}}
+"""
+
+# this file was auto-generated!
+
+{{preamble}}
+
+from openminds.base import {{ base_class }}
+from openminds.properties import Property
+
+
+class {{ class_name }}({{ base_class }}):
+    """
+    {{ docstring }}
+    """
+    type_ = ["{{ openminds_type }}"]
+    context = {
+        "vocab": "https://openminds.ebrains.eu/vocab/"
+    }
+
+    properties = [
+        {% for property in properties -%}
+        Property(
+            "{{property.name}}",
+            {{property.type}},
+            "{{property.iri}}",
+            {%- if property.allow_multiple %}
+            multiple={{property.allow_multiple}},
+            unique_items={{property.unique_items}},
+            {% if property.min_items -%}min_items={{property.min_items}},{% endif %}
+            {% if property.max_items -%}max_items={{property.max_items}},{% endif %}
+            {% endif -%}
+            {% if property.type == "str" -%}
+            formatting="{{property.formatting}}",
+            {% if property.multiline -%}multiline={{property.multiline}},{% endif %}
+            {% endif %}
+            {%- if property.required -%}required={{property.required}},{% endif %}
+            description="{{property.description}}",
+            instructions="{{property.instructions}}"
+        ),
+        {% endfor %}
+    ]
+
+    def __init__(self, id=None{%- for property in properties -%}, {{property.name}}=None{%- endfor -%}):
+        return super().__init__(id=id{%- for property in properties -%}, {{property.name}}={{property.name}} {%- endfor -%})
+
+{{ additional_methods }}
