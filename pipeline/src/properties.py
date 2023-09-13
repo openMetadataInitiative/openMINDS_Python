@@ -4,6 +4,7 @@ Representations of metadata fields/properties
 # Copyright (c) 2023 openMetadataInitiative
 """
 
+from collections import defaultdict
 from .registry import lookup
 from .base import Node
 
@@ -42,6 +43,64 @@ class Property:
             self._types = tuple([lookup(obj) if isinstance(obj, str) else obj for obj in self._types])
             self._resolved_types = True
         return self._types
+
+    def validate(self, value):
+        """
+        Check whether `value` satisfies all constraints.
+
+        Returns a dict containing information about any validation failures.
+        """
+        failures = defaultdict(list)
+        if value is None:
+            if self.required:
+                failures["required"].append(
+                    f"{self.name} is required, but was not provided"
+                )
+        else:
+            if self.multiple:
+                if not isinstance(value, (list, tuple)):
+                    value = [value]
+                for item in value:
+                    if not isinstance(item, self.types):
+                        failures["type"].append(
+                            f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
+                            f"value contains {type(item)}"
+                        )
+                if self.min_items:
+                    if len(value) < self.min_items:
+                        failures["multiplicity"].append(
+                            f"{self.name}: minimum {self.min_items} items required, "
+                            f"value only contains {len(value)}"
+                        )
+                if self.max_items:
+                    if len(value) > self.max_items:
+                        failures["multiplicity"].append(
+                            f"{self.name}: maximum {self.max_items} items allowed, "
+                            f"value contains {len(value)}"
+                        )
+                if self.unique_items:
+                    try:
+                        unique_items = set(value)
+                    except (
+                        TypeError
+                    ):  # unhashable, i.e. can't anyway check if items are unique
+                        pass
+                    else:
+                        if len(unique_items) < len(value):
+                            failures["multiplicity"].append(
+                                f"{self.name}: items in array should be unique"
+                            )
+            elif isinstance(value, (list, tuple)):
+                failures["multiplicity"].append(
+                    f"{self.name} does not accept multiple values, but contains {len(value)}"
+                )
+            elif not isinstance(value, self.types):
+                failures["type"].append(
+                    f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
+                    f"value is {type(value)}"
+                )
+        # todo: check formatting
+        return failures
 
     def deserialize(self, data):
         """

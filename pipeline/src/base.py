@@ -6,6 +6,7 @@ Base classes for openMINDS
 
 from __future__ import annotations
 
+from collections import defaultdict
 import json
 from typing import Union
 from .registry import Registry
@@ -84,14 +85,26 @@ class Node(metaclass=Registry):
 
     def validate(self):
         """
-        docstring goes here
+        Check whether all constraints are satisfied.
+
+        Returns a dict containing information about any validation failures.
         """
-        raise NotImplementedError
+        failures = defaultdict(list)
+        for property in self.properties:
+            value = getattr(self, property.name, None)
+            for key, values in property.validate(value).items():
+                failures[key] += values
+        return failures
+
+    @property
+    def is_valid(self):
+        failures = self.validate()
+        return len(failures) == 0
 
     @property
     def links(self):
         """
-
+        Return a list of attributes that reference other metadata nodes
         """
         _links = []
         for property in self.__class__.properties:

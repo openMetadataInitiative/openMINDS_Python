@@ -21,6 +21,12 @@ def property_present(p):
 
 
 def build_fake_node(cls, depth=0):
+    """
+    Create a node of the given class.
+
+    Properties will contain values of the correct types,
+    but the node will not necessarily pass all validation checks.
+    """
     data = {}
     for property in cls.properties:
         if property.types:

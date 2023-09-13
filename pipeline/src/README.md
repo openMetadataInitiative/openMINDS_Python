@@ -42,6 +42,10 @@ ollie = omcore.Person(
 
 collection.add(stan, ollie, mgm)
 
+# Check the metadata are valid
+
+failures = collection.validate()
+
 # Save the collection in a single JSON-LD file
 
 collection.save("my_collection.jsonld")

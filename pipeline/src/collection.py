@@ -162,3 +162,21 @@ class Collection:
                 cls = lookup_type(data["@type"])
                 node = cls.from_jsonld(data)
                 self.add(node)
+
+    def validate(self):
+        """
+        Check whether all constraints are satisfied.
+
+        Returns a dict containing information about any validation failures.
+        """
+        all_failures = {}
+        for node in self:
+            failures = node.validate()
+            if failures:
+                all_failures[node.id] = failures
+        return all_failures
+
+    @property
+    def is_valid(self):
+        failures = self.validate()
+        return len(failures) == 0
