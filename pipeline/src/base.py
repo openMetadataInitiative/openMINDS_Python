@@ -31,7 +31,7 @@ class Node(metaclass=Registry):
                 return True
         return False
 
-    def to_jsonld(self, include_empty_properties=True, with_context=True):
+    def to_jsonld(self, include_empty_properties=True, embed_linked_nodes=True, with_context=True):
         """
         docstring goes here
         """
@@ -43,15 +43,23 @@ class Node(metaclass=Registry):
                 "vocab": "https://openminds.ebrains.eu/vocab/"
             }
         if self.id:
-            data["@id"] = id
+            data["@id"] = self.id
         for property in self.__class__.properties:
             value = getattr(self, property.name)
             if value or include_empty_properties:
                 if hasattr(value, "to_jsonld"):
-                    data[property.path] = value.to_jsonld(with_context=False)
+                    if embed_linked_nodes:
+                        data[property.path] = value.to_jsonld(with_context=False)
+                    else:
+                        if value.id is None:
+                            raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
+                        data[property.path] = {
+                            "@id": value.id,
+                            "@type": value.type_
+                        }
                 else:
                     data[property.path] = value
-        return data
+        return {key: data[key] for key in sorted(data)}
 
     @classmethod
     def from_jsonld(cls, data):
@@ -63,7 +71,9 @@ class Node(metaclass=Registry):
         type_ = data_copy.pop("@type")
         if type_ and type_ != cls.type_:
             raise TypeError(f"Mismatched types. Data has '{type_}' but trying to create '{cls.type_}'")
-        deserialized_data = {}
+        deserialized_data = {
+            "id": data_copy.pop("@id", None)
+        }
         for property in cls.properties:
             if property.path in data_copy:  # todo: use context to resolve uris
                 value = data_copy.pop(property.path)
@@ -80,6 +90,18 @@ class Node(metaclass=Registry):
         docstring goes here
         """
         raise NotImplementedError
+
+    @property
+    def links(self):
+        """
+
+        """
+        _links = []
+        for property in self.__class__.properties:
+            value = getattr(self, property.name)
+            if hasattr(value, "to_jsonld"):
+                _links.append(value)
+        return _links
 
 
 class LinkedMetadata(Node):

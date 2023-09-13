@@ -10,7 +10,50 @@ pip install openMINDS
 
 ## Usage
 
-TODO
+``` python
+from openminds import Collection, IRI
+import openminds.v3.core as omcore
+
+# Create an empty metadata collection
+
+collection = Collection()
+
+# Create some metadata
+
+mgm = omcore.Organization(
+    name="Metro-Goldwyn-Mayer Studios, Inc.",
+    alias="MGM",
+    homepage=IRI("https://www.mgm.com")
+)
+
+stan = omcore.Person(
+    given_name="Stan",
+    family_name="Laurel",
+    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
+)
+
+ollie = omcore.Person(
+    given_name="Oliver",
+    family_name="Hardy",
+    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
+)
+
+# Add the metadata to the collection
+
+collection.add(stan, ollie, mgm)
+
+# Save the collection in a single JSON-LD file
+
+collection.save("my_collection.jsonld")
+
+# Save each node in the collection to a separate file
+
+collection.save("my_collection")  # creates files within the 'my_collection' directory
+
+# Load a collection from file
+new_collection = Collection()
+new_collection.load("my_collection.jsonld")
+```
 
 ## License
 

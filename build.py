@@ -67,6 +67,7 @@ with open("target/pyproject.toml", "w") as fp:
 shutil.copy("pipeline/src/base.py", "target/openminds/base.py")
 shutil.copy("pipeline/src/properties.py", "target/openminds/properties.py")
 shutil.copy("pipeline/src/registry.py", "target/openminds/registry.py")
+shutil.copy("pipeline/src/collection.py", "target/openminds/collection.py")
 shutil.copy("pipeline/src/README.md", "target/README.md")
 shutil.copy("./LICENSE", "target/LICENSE")
 
