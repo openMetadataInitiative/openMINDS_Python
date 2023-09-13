@@ -1,4 +1,5 @@
 from collections import defaultdict
+import json
 import os.path
 import shutil
 import subprocess
@@ -25,17 +26,32 @@ for schema_version in schema_loader.get_schema_versions():
     # Step 2 - find all involved schemas for the current version
     schemas_file_paths = schema_loader.find_schemas(schema_version)
 
+    # Step 3a - figure out which schemas are embedded and which are linked
+    embedded = set()
+    linked = set()
     for schema_file_path in schemas_file_paths:
-        # Step 3 - translate and build each openMINDS schema as JSON-Schema
-        module_path, class_name = PythonBuilder(schema_file_path, schema_loader.schemas_sources).build()
+        emb, lnk = PythonBuilder(schema_file_path, schema_loader.schemas_sources).get_edges()
+        embedded.update(emb)
+        linked.update(lnk)
+    conflicts = linked.intersection(embedded)
+    if conflicts:
+        print(f"Found schema(s) in version {schema_version} "
+              f"that are both linked and embedded: {conflicts}")
+        # conflicts should not happen in new versions.
+        # There is one conflict in v1.0, QuantitativeValue,
+        # which we treat as embedded
+        for schema_identifier in conflicts:
+            linked.remove(schema_identifier)
+
+    # Step 3b - translate and build each openMINDS schema as JSON-Schema
+    for schema_file_path in schemas_file_paths:
+        module_path, class_name = PythonBuilder(
+            schema_file_path, schema_loader.schemas_sources
+        ).build(embedded=embedded)
 
         parts = module_path.split(".")
         parent_path = ".".join(parts[:-1])
         python_modules[parent_path].append((parts[-1], class_name))
-        # init_file_path = os.path.join(os.path.dirname(schema_file_path), "__init__.py")
-        # if not os.path.exists(init_file_path):
-        #     open(init_file_path, "w").close()
-
 
 # Step 4 - create additional files, e.g. __init__.py
 for path, classes in python_modules.items():

@@ -50,7 +50,7 @@ class PythonBuilder(object):
             self.version.replace(".", "_"),
             "/".join(self.relative_path_without_extension))
 
-    def translate(self):
+    def translate(self, embedded=None):
 
         def get_type(property):
             type_map = {
@@ -101,9 +101,13 @@ class PythonBuilder(object):
             else:
                 raise NotImplementedError
 
+        if self._schema_payload["_type"] in embedded:
+            base_class = "EmbeddedMetadata"
+        else:
+            base_class = "LinkedMetadata"
         self.context = {
             "docstring": self._schema_payload.get("description", "<description not available>"),
-            "base_class": "LinkedMetadata",  # todo: figure out if this class is for linked or embedded metadata
+            "base_class": base_class,
             "preamble": "",  # todo: e.g. extra imports
             "class_name": self._schema_payload["name"],
             "openminds_type": self._schema_payload["_type"],
@@ -148,11 +152,11 @@ class PythonBuilder(object):
             if extra_imports:
                 self.context["preamble"] = "\n".join(extra_imports)
 
-    def build(self):
+    def build(self, embedded=None):
         target_file_path = os.path.join("target", "openminds", f"{self._target_file_without_extension()}.py")
         os.makedirs(os.path.dirname(target_file_path), exist_ok=True)
 
-        self.translate()
+        self.translate(embedded=embedded)
 
         with open(target_file_path, "w") as target_file:
             contents = self.env.get_template(self.template_name).render(self.context)
@@ -162,3 +166,11 @@ class PythonBuilder(object):
             self._target_file_without_extension().replace("/", "."),
              self.context["class_name"]
         )
+
+    def get_edges(self):
+        embedded = set()
+        linked = set()
+        for property in self._schema_payload["properties"].values():
+            embedded.update(property.get("_embeddedTypes", []))
+            linked.update(property.get("_linkedTypes", []))
+        return embedded, linked

@@ -42,7 +42,7 @@ class {{ class_name }}({{ base_class }}):
         {% endfor %}
     ]
 
-    def __init__(self, id=None{%- for property in properties -%}, {{property.name}}=None{%- endfor -%}):
-        return super().__init__(id=id{%- for property in properties -%}, {{property.name}}={{property.name}} {%- endfor -%})
+    def __init__(self{%- if base_class == "LinkedMetadata" %}, id=None{%- endif -%}{%- for property in properties -%}, {{property.name}}=None{%- endfor -%}):
+        return super().__init__({%- if base_class == "LinkedMetadata" %}id=id, {%- endif -%}{%- for property in properties -%}{{property.name}}={{property.name}}, {%- endfor -%})
 
 {{ additional_methods }}

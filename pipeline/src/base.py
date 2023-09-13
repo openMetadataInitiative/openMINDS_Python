@@ -13,11 +13,6 @@ from .registry import Registry
 
 class Node(metaclass=Registry):
 
-    def __init__(self, id=None, **properties):
-        self.id = id  # todo: check this is a URI
-        for name, value in properties.items():
-            setattr(self, name, value)
-
     @property
     def uuid(self):
         if self.id is not None:
@@ -42,21 +37,23 @@ class Node(metaclass=Registry):
             data["@context"] = {
                 "vocab": "https://openminds.ebrains.eu/vocab/"
             }
-        if self.id:
+        if hasattr(self, "id") and self.id:
             data["@id"] = self.id
         for property in self.__class__.properties:
             value = getattr(self, property.name)
             if value or include_empty_properties:
-                if hasattr(value, "to_jsonld"):
+                if isinstance(value, LinkedMetadata):
                     if embed_linked_nodes:
                         data[property.path] = value.to_jsonld(with_context=False)
                     else:
-                        if value.id is None:
-                            raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
                         data[property.path] = {
                             "@id": value.id,
                             "@type": value.type_
                         }
+                        if hasattr(value, "id") and value.id is None:
+                            raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
+                elif isinstance(value, EmbeddedMetadata):
+                    data[property.path] = value.to_jsonld(with_context=False)
                 else:
                     data[property.path] = value
         return {key: data[key] for key in sorted(data)}
@@ -71,9 +68,9 @@ class Node(metaclass=Registry):
         type_ = data_copy.pop("@type")
         if type_ and type_ != cls.type_:
             raise TypeError(f"Mismatched types. Data has '{type_}' but trying to create '{cls.type_}'")
-        deserialized_data = {
-            "id": data_copy.pop("@id", None)
-        }
+        deserialized_data = {}
+        if issubclass(cls, LinkedMetadata):
+            deserialized_data["id"] = data_copy.pop("@id", None)
         for property in cls.properties:
             if property.path in data_copy:  # todo: use context to resolve uris
                 value = data_copy.pop(property.path)
@@ -99,7 +96,7 @@ class Node(metaclass=Registry):
         _links = []
         for property in self.__class__.properties:
             value = getattr(self, property.name)
-            if hasattr(value, "to_jsonld"):
+            if isinstance(value, LinkedMetadata):
                 _links.append(value)
         return _links
 
@@ -108,6 +105,11 @@ class LinkedMetadata(Node):
     """
     docstring goes here
     """
+
+    def __init__(self, id=None, **properties):
+        self.id = id  # todo: check this is a URI
+        for name, value in properties.items():
+            setattr(self, name, value)
 
     def save(self, file_path, indent=2):
         """
@@ -130,7 +132,10 @@ class EmbeddedMetadata(Node):
     """
     docstring goes here
     """
-    pass
+
+    def __init__(self, **properties):
+        for name, value in properties.items():
+            setattr(self, name, value)
 
 
 class IRI:
