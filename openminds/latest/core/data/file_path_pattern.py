@@ -5,7 +5,6 @@
 # this file was auto-generated!
 
 
-
 from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 
@@ -14,10 +13,9 @@ class FilePathPattern(EmbeddedMetadata):
     """
     <description not available>
     """
+
     type_ = ["https://openminds.ebrains.eu/core/FilePathPattern"]
-    context = {
-        "vocab": "https://openminds.ebrains.eu/vocab/"
-    }
+    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -27,23 +25,23 @@ class FilePathPattern(EmbeddedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="no description available",
-            instructions="Add all grouping types that are defined by this file path pattern."
+            instructions="Add all grouping types that are defined by this file path pattern.",
         ),
         Property(
             "regex",
             str,
-            "vocab:regex",formatting="text/plain",
-            
+            "vocab:regex",
+            formatting="text/plain",
             required=True,
             description="no description available",
-            instructions="Enter the regular expression that defines this file path pattern. Note that it must have the same number of groups as stated under 'groupingType'."
+            instructions="Enter the regular expression that defines this file path pattern. Note that it must have the same number of groups as stated under 'groupingType'.",
         ),
-        
     ]
 
     def __init__(self, grouping_type=None, regex=None):
-        return super().__init__(grouping_type=grouping_type,regex=regex,)
-
+        return super().__init__(
+            grouping_type=grouping_type,
+            regex=regex,
+        )

@@ -14,7 +14,6 @@ from .registry import Registry
 
 
 class Node(metaclass=Registry):
-
     @property
     def uuid(self):
         if self.id is not None:
@@ -32,13 +31,9 @@ class Node(metaclass=Registry):
         """
         docstring goes here
         """
-        data = {
-            "@type": self.type_
-        }
+        data = {"@type": self.type_}
         if with_context:
-            data["@context"] = {
-                "vocab": "https://openminds.ebrains.eu/vocab/"
-            }
+            data["@context"] = {"vocab": "https://openminds.ebrains.eu/vocab/"}
         if hasattr(self, "id") and self.id:
             data["@id"] = self.id
         for property in self.__class__.properties:
@@ -48,10 +43,7 @@ class Node(metaclass=Registry):
                     if embed_linked_nodes:
                         data[property.path] = value.to_jsonld(with_context=False)
                     else:
-                        data[property.path] = {
-                            "@id": value.id,
-                            "@type": value.type_
-                        }
+                        data[property.path] = {"@id": value.id, "@type": value.type_}
                         if hasattr(value, "id") and value.id is None:
                             raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
                 elif isinstance(value, EmbeddedMetadata):

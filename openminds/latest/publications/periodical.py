@@ -5,7 +5,6 @@
 # this file was auto-generated!
 
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
@@ -14,40 +13,40 @@ class Periodical(LinkedMetadata):
     """
     <description not available>
     """
+
     type_ = ["https://openminds.ebrains.eu/publications/Periodical"]
-    context = {
-        "vocab": "https://openminds.ebrains.eu/vocab/"
-    }
+    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "abbreviation",
             str,
-            "vocab:abbreviation",formatting="text/plain",
-            
-            
+            "vocab:abbreviation",
+            formatting="text/plain",
             description="no description available",
-            instructions="Enter the official (or most commonly used) abbreviation of the periodical (e.g., J. Physiol)."
+            instructions="Enter the official (or most commonly used) abbreviation of the periodical (e.g., J. Physiol).",
         ),
         Property(
             "digital_identifier",
             "openminds.latest.core.ISSN",
             "vocab:digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
-            instructions="Add the globally unique and persistent digital identifier of this periodical."
+            instructions="Add the globally unique and persistent digital identifier of this periodical.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",formatting="text/plain",
-            
-            
+            "vocab:name",
+            formatting="text/plain",
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
-            instructions="Enter the name (or title) of this periodical (e.g., Journal of Physiology)."
+            instructions="Enter the name (or title) of this periodical (e.g., Journal of Physiology).",
         ),
-        
     ]
 
     def __init__(self, id=None, abbreviation=None, digital_identifier=None, name=None):
-        return super().__init__(id=id,abbreviation=abbreviation,digital_identifier=digital_identifier,name=name,)
-
+        return super().__init__(
+            id=id,
+            abbreviation=abbreviation,
+            digital_identifier=digital_identifier,
+            name=name,
+        )

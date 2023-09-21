@@ -15,104 +15,105 @@ class ValidationTestVersion(LinkedMetadata):
     """
     Structured information about a specific implementation of a validation test.
     """
+
     type_ = ["https://openminds.ebrains.eu/computation/ValidationTestVersion"]
-    context = {
-        "vocab": "https://openminds.ebrains.eu/vocab/"
-    }
+    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "accessibility",
             "openminds.latest.controlled_terms.ProductAccessibility",
-            "vocab:accessibility",required=True,
+            "vocab:accessibility",
+            required=True,
             description="Level to which something is accessible to someone or something.",
-            instructions="Add the accessibility of the data for this research product version."
+            instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
             "configuration",
-            ['openminds.latest.core.Configuration', 'openminds.latest.core.File', 'openminds.latest.core.PropertyValueList', 'openminds.latest.core.WebResource'],
+            [
+                "openminds.latest.core.Configuration",
+                "openminds.latest.core.File",
+                "openminds.latest.core.PropertyValueList",
+                "openminds.latest.core.WebResource",
+            ],
             "vocab:configuration",
             description="no description available",
-            instructions="Add the configuration information for this validation test version (e.g., arguments to the SciUnit class)."
+            instructions="Add the configuration information for this validation test version (e.g., arguments to the SciUnit class).",
         ),
         Property(
             "copyright",
             "openminds.latest.core.Copyright",
             "vocab:copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
-            instructions="Enter the copyright information of this research product version."
+            instructions="Enter the copyright information of this research product version.",
         ),
         Property(
             "custodian",
-            ['openminds.latest.core.Consortium', 'openminds.latest.core.Organization', 'openminds.latest.core.Person'],
+            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "vocab:custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="The 'custodian' is a legal person who is responsible for the content and quality of the data, metadata, and/or code of a research product.",
-            instructions="Add all parties that fulfill the role of a custodian for the research product version (e.g., a research group leader or principle investigator). Custodians are typically the main contact in case of misconduct, obtain permission from the contributors to publish personal information, and maintain the content and quality of the data, metadata, and/or code of the research product version."
+            instructions="Add all parties that fulfill the role of a custodian for the research product version (e.g., a research group leader or principle investigator). Custodians are typically the main contact in case of misconduct, obtain permission from the contributors to publish personal information, and maintain the content and quality of the data, metadata, and/or code of the research product version.",
         ),
         Property(
             "description",
             str,
-            "vocab:description",formatting="text/markdown",
+            "vocab:description",
+            formatting="text/markdown",
             multiline=True,
-            
             description="Longer statement or account giving the characteristics of someone or something.",
-            instructions="Enter a description (or abstract) of this research product version. Note that this version specific description will overwrite the description for the overarching dataset."
+            instructions="Enter a description (or abstract) of this research product version. Note that this version specific description will overwrite the description for the overarching dataset.",
         ),
         Property(
             "developer",
-            ['openminds.latest.core.Consortium', 'openminds.latest.core.Organization', 'openminds.latest.core.Person'],
+            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "vocab:developer",
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Legal person that creates or improves products or services (e.g., software, applications, etc.).",
-            instructions="Add all parties that developed this validation test version. Note that these developers will overwrite the developer list provided for the overarching validation test."
+            instructions="Add all parties that developed this validation test version. Note that these developers will overwrite the developer list provided for the overarching validation test.",
         ),
         Property(
             "digital_identifier",
             "openminds.latest.core.DOI",
             "vocab:digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
-            instructions="Add the globally unique and persistent digital identifier of this research product version."
+            instructions="Add the globally unique and persistent digital identifier of this research product version.",
         ),
         Property(
             "entry_point",
             str,
-            "vocab:entryPoint",formatting="text/plain",
-            
-            
+            "vocab:entryPoint",
+            formatting="text/plain",
             description="no description available",
-            instructions="Add the entry point for this validation test version (e.g., the Python class name for a SciUnit test)."
+            instructions="Add the entry point for this validation test version (e.g., the Python class name for a SciUnit test).",
         ),
         Property(
             "format",
             "openminds.latest.core.ContentType",
-            "vocab:format",required=True,
+            "vocab:format",
+            required=True,
             description="Method of digitally organizing and structuring data or information.",
-            instructions="Add the content type of this validation test version, or the content types of the files composing the validation test version."
+            instructions="Add the content type of this validation test version, or the content types of the files composing the validation test version.",
         ),
         Property(
             "full_documentation",
-            ['openminds.latest.core.DOI', 'openminds.latest.core.File', 'openminds.latest.core.WebResource'],
-            "vocab:fullDocumentation",required=True,
+            ["openminds.latest.core.DOI", "openminds.latest.core.File", "openminds.latest.core.WebResource"],
+            "vocab:fullDocumentation",
+            required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
-            instructions="Add the publication or file that acts as the full documentation of this research product version."
+            instructions="Add the publication or file that acts as the full documentation of this research product version.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",formatting="text/plain",
-            
-            
+            "vocab:fullName",
+            formatting="text/plain",
             description="Whole, non-abbreviated name of something or somebody.",
-            instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset."
+            instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
         ),
         Property(
             "funding",
@@ -121,26 +122,24 @@ class ValidationTestVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Money provided by a legal person for a particular purpose.",
-            instructions="Add all funding information of this research product version."
+            instructions="Add all funding information of this research product version.",
         ),
         Property(
             "homepage",
             IRI,
             "vocab:homepage",
             description="Main website of something or someone.",
-            instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version."
+            instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",formatting="text/markdown",
+            "vocab:howToCite",
+            formatting="text/markdown",
             multiline=True,
-            
             description="Preferred format for citing a particular object or legal person.",
-            instructions="Enter the preferred citation text for this research product version. Leave blank if citation text can be extracted from the assigned digital identifier."
+            instructions="Enter the preferred citation text for this research product version. Leave blank if citation text can be extracted from the assigned digital identifier.",
         ),
         Property(
             "is_alternative_version_of",
@@ -149,29 +148,104 @@ class ValidationTestVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Reference to an original form where the essence was preserved, but presented in an alternative form.",
-            instructions="Add all validation test versions that can be used alternatively to this validation test version."
+            instructions="Add all validation test versions that can be used alternatively to this validation test version.",
         ),
         Property(
             "is_new_version_of",
             "openminds.latest.computation.ValidationTestVersion",
             "vocab:isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
-            instructions="Add the validation test version preceding this validation test version."
+            instructions="Add the validation test version preceding this validation test version.",
         ),
         Property(
             "keyword",
-            ['openminds.latest.controlled_terms.ActionStatusType', 'openminds.latest.controlled_terms.AgeCategory', 'openminds.latest.controlled_terms.AnalysisTechnique', 'openminds.latest.controlled_terms.AnatomicalAxesOrientation', 'openminds.latest.controlled_terms.AnatomicalIdentificationType', 'openminds.latest.controlled_terms.AnatomicalPlane', 'openminds.latest.controlled_terms.AnnotationCriteriaType', 'openminds.latest.controlled_terms.AnnotationType', 'openminds.latest.controlled_terms.AtlasType', 'openminds.latest.controlled_terms.AuditoryStimulusType', 'openminds.latest.controlled_terms.BiologicalOrder', 'openminds.latest.controlled_terms.BiologicalProcess', 'openminds.latest.controlled_terms.BiologicalSex', 'openminds.latest.controlled_terms.BreedingType', 'openminds.latest.controlled_terms.CellCultureType', 'openminds.latest.controlled_terms.CellType', 'openminds.latest.controlled_terms.ChemicalMixtureType', 'openminds.latest.controlled_terms.Colormap', 'openminds.latest.controlled_terms.ContributionType', 'openminds.latest.controlled_terms.CranialWindowConstructionType', 'openminds.latest.controlled_terms.CranialWindowReinforcementType', 'openminds.latest.controlled_terms.CriteriaQualityType', 'openminds.latest.controlled_terms.DataType', 'openminds.latest.controlled_terms.DeviceType', 'openminds.latest.controlled_terms.DifferenceMeasure', 'openminds.latest.controlled_terms.Disease', 'openminds.latest.controlled_terms.DiseaseModel', 'openminds.latest.controlled_terms.EducationalLevel', 'openminds.latest.controlled_terms.ElectricalStimulusType', 'openminds.latest.controlled_terms.EthicsAssessment', 'openminds.latest.controlled_terms.ExperimentalApproach', 'openminds.latest.controlled_terms.FileBundleGrouping', 'openminds.latest.controlled_terms.FileRepositoryType', 'openminds.latest.controlled_terms.FileUsageRole', 'openminds.latest.controlled_terms.GeneticStrainType', 'openminds.latest.controlled_terms.GustatoryStimulusType', 'openminds.latest.controlled_terms.Handedness', 'openminds.latest.controlled_terms.Language', 'openminds.latest.controlled_terms.Laterality', 'openminds.latest.controlled_terms.LearningResourceType', 'openminds.latest.controlled_terms.MeasuredQuantity', 'openminds.latest.controlled_terms.MeasuredSignalType', 'openminds.latest.controlled_terms.MetaDataModelType', 'openminds.latest.controlled_terms.ModelAbstractionLevel', 'openminds.latest.controlled_terms.ModelScope', 'openminds.latest.controlled_terms.MolecularEntity', 'openminds.latest.controlled_terms.OlfactoryStimulusType', 'openminds.latest.controlled_terms.OperatingDevice', 'openminds.latest.controlled_terms.OperatingSystem', 'openminds.latest.controlled_terms.OpticalStimulusType', 'openminds.latest.controlled_terms.Organ', 'openminds.latest.controlled_terms.OrganismSubstance', 'openminds.latest.controlled_terms.OrganismSystem', 'openminds.latest.controlled_terms.PatchClampVariation', 'openminds.latest.controlled_terms.PreparationType', 'openminds.latest.controlled_terms.ProductAccessibility', 'openminds.latest.controlled_terms.ProgrammingLanguage', 'openminds.latest.controlled_terms.QualitativeOverlap', 'openminds.latest.controlled_terms.SemanticDataType', 'openminds.latest.controlled_terms.Service', 'openminds.latest.controlled_terms.SetupType', 'openminds.latest.controlled_terms.SoftwareApplicationCategory', 'openminds.latest.controlled_terms.SoftwareFeature', 'openminds.latest.controlled_terms.Species', 'openminds.latest.controlled_terms.StimulationApproach', 'openminds.latest.controlled_terms.StimulationTechnique', 'openminds.latest.controlled_terms.SubcellularEntity', 'openminds.latest.controlled_terms.SubjectAttribute', 'openminds.latest.controlled_terms.TactileStimulusType', 'openminds.latest.controlled_terms.Technique', 'openminds.latest.controlled_terms.TermSuggestion', 'openminds.latest.controlled_terms.Terminology', 'openminds.latest.controlled_terms.TissueSampleAttribute', 'openminds.latest.controlled_terms.TissueSampleType', 'openminds.latest.controlled_terms.TypeOfUncertainty', 'openminds.latest.controlled_terms.UBERONParcellation', 'openminds.latest.controlled_terms.UnitOfMeasurement', 'openminds.latest.controlled_terms.VisualStimulusType'],
+            [
+                "openminds.latest.controlled_terms.ActionStatusType",
+                "openminds.latest.controlled_terms.AgeCategory",
+                "openminds.latest.controlled_terms.AnalysisTechnique",
+                "openminds.latest.controlled_terms.AnatomicalAxesOrientation",
+                "openminds.latest.controlled_terms.AnatomicalIdentificationType",
+                "openminds.latest.controlled_terms.AnatomicalPlane",
+                "openminds.latest.controlled_terms.AnnotationCriteriaType",
+                "openminds.latest.controlled_terms.AnnotationType",
+                "openminds.latest.controlled_terms.AtlasType",
+                "openminds.latest.controlled_terms.AuditoryStimulusType",
+                "openminds.latest.controlled_terms.BiologicalOrder",
+                "openminds.latest.controlled_terms.BiologicalProcess",
+                "openminds.latest.controlled_terms.BiologicalSex",
+                "openminds.latest.controlled_terms.BreedingType",
+                "openminds.latest.controlled_terms.CellCultureType",
+                "openminds.latest.controlled_terms.CellType",
+                "openminds.latest.controlled_terms.ChemicalMixtureType",
+                "openminds.latest.controlled_terms.Colormap",
+                "openminds.latest.controlled_terms.ContributionType",
+                "openminds.latest.controlled_terms.CranialWindowConstructionType",
+                "openminds.latest.controlled_terms.CranialWindowReinforcementType",
+                "openminds.latest.controlled_terms.CriteriaQualityType",
+                "openminds.latest.controlled_terms.DataType",
+                "openminds.latest.controlled_terms.DeviceType",
+                "openminds.latest.controlled_terms.DifferenceMeasure",
+                "openminds.latest.controlled_terms.Disease",
+                "openminds.latest.controlled_terms.DiseaseModel",
+                "openminds.latest.controlled_terms.EducationalLevel",
+                "openminds.latest.controlled_terms.ElectricalStimulusType",
+                "openminds.latest.controlled_terms.EthicsAssessment",
+                "openminds.latest.controlled_terms.ExperimentalApproach",
+                "openminds.latest.controlled_terms.FileBundleGrouping",
+                "openminds.latest.controlled_terms.FileRepositoryType",
+                "openminds.latest.controlled_terms.FileUsageRole",
+                "openminds.latest.controlled_terms.GeneticStrainType",
+                "openminds.latest.controlled_terms.GustatoryStimulusType",
+                "openminds.latest.controlled_terms.Handedness",
+                "openminds.latest.controlled_terms.Language",
+                "openminds.latest.controlled_terms.Laterality",
+                "openminds.latest.controlled_terms.LearningResourceType",
+                "openminds.latest.controlled_terms.MeasuredQuantity",
+                "openminds.latest.controlled_terms.MeasuredSignalType",
+                "openminds.latest.controlled_terms.MetaDataModelType",
+                "openminds.latest.controlled_terms.ModelAbstractionLevel",
+                "openminds.latest.controlled_terms.ModelScope",
+                "openminds.latest.controlled_terms.MolecularEntity",
+                "openminds.latest.controlled_terms.OlfactoryStimulusType",
+                "openminds.latest.controlled_terms.OperatingDevice",
+                "openminds.latest.controlled_terms.OperatingSystem",
+                "openminds.latest.controlled_terms.OpticalStimulusType",
+                "openminds.latest.controlled_terms.Organ",
+                "openminds.latest.controlled_terms.OrganismSubstance",
+                "openminds.latest.controlled_terms.OrganismSystem",
+                "openminds.latest.controlled_terms.PatchClampVariation",
+                "openminds.latest.controlled_terms.PreparationType",
+                "openminds.latest.controlled_terms.ProductAccessibility",
+                "openminds.latest.controlled_terms.ProgrammingLanguage",
+                "openminds.latest.controlled_terms.QualitativeOverlap",
+                "openminds.latest.controlled_terms.SemanticDataType",
+                "openminds.latest.controlled_terms.Service",
+                "openminds.latest.controlled_terms.SetupType",
+                "openminds.latest.controlled_terms.SoftwareApplicationCategory",
+                "openminds.latest.controlled_terms.SoftwareFeature",
+                "openminds.latest.controlled_terms.Species",
+                "openminds.latest.controlled_terms.StimulationApproach",
+                "openminds.latest.controlled_terms.StimulationTechnique",
+                "openminds.latest.controlled_terms.SubcellularEntity",
+                "openminds.latest.controlled_terms.SubjectAttribute",
+                "openminds.latest.controlled_terms.TactileStimulusType",
+                "openminds.latest.controlled_terms.Technique",
+                "openminds.latest.controlled_terms.TermSuggestion",
+                "openminds.latest.controlled_terms.Terminology",
+                "openminds.latest.controlled_terms.TissueSampleAttribute",
+                "openminds.latest.controlled_terms.TissueSampleType",
+                "openminds.latest.controlled_terms.TypeOfUncertainty",
+                "openminds.latest.controlled_terms.UBERONParcellation",
+                "openminds.latest.controlled_terms.UnitOfMeasurement",
+                "openminds.latest.controlled_terms.VisualStimulusType",
+            ],
             "vocab:keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Significant word or concept that are representative of something or someone.",
-            instructions="Add all relevant keywords to this research product version either by adding controlled terms or by suggesting new terms."
+            instructions="Add all relevant keywords to this research product version either by adding controlled terms or by suggesting new terms.",
         ),
         Property(
             "license",
@@ -180,10 +254,8 @@ class ValidationTestVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
-            instructions="Add the license of this validation test version."
+            instructions="Add the license of this validation test version.",
         ),
         Property(
             "other_contribution",
@@ -192,57 +264,65 @@ class ValidationTestVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Giving or supplying of something (such as money or time) as a part or share other than what is covered elsewhere.",
-            instructions="Add any other contributions to this research product version that are not covered under 'author'/'developer' or 'custodian'."
+            instructions="Add any other contributions to this research product version that are not covered under 'author'/'developer' or 'custodian'.",
         ),
         Property(
             "reference_data",
-            ['openminds.latest.core.DOI', 'openminds.latest.core.File', 'openminds.latest.core.FileBundle', 'openminds.latest.core.WebResource'],
+            [
+                "openminds.latest.core.DOI",
+                "openminds.latest.core.File",
+                "openminds.latest.core.FileBundle",
+                "openminds.latest.core.WebResource",
+            ],
             "vocab:referenceData",
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="no description available",
-            instructions="Add the data that define the expected output of this validation test version."
+            instructions="Add the data that define the expected output of this validation test version.",
         ),
         Property(
             "related_publication",
-            ['openminds.latest.core.DOI', 'openminds.latest.core.HANDLE', 'openminds.latest.core.ISBN', 'openminds.latest.core.ISSN', 'openminds.latest.publications.Book', 'openminds.latest.publications.Chapter', 'openminds.latest.publications.ScholarlyArticle'],
+            [
+                "openminds.latest.core.DOI",
+                "openminds.latest.core.HANDLE",
+                "openminds.latest.core.ISBN",
+                "openminds.latest.core.ISSN",
+                "openminds.latest.publications.Book",
+                "openminds.latest.publications.Chapter",
+                "openminds.latest.publications.ScholarlyArticle",
+            ],
             "vocab:relatedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Reference to something that was made available for the general public to see or buy.",
-            instructions="Add all further publications besides the full documentation that provide the original context for the production of this research product version (e.g., an original research article that used or produced the data of this research product version)."
+            instructions="Add all further publications besides the full documentation that provide the original context for the production of this research product version (e.g., an original research article that used or produced the data of this research product version).",
         ),
         Property(
             "release_date",
             date,
-            "vocab:releaseDate",required=True,
+            "vocab:releaseDate",
+            required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
-            instructions="Enter the date (actual or intended) on which this research product version was first release, formatted as 'YYYY-MM-DD'."
+            instructions="Enter the date (actual or intended) on which this research product version was first release, formatted as 'YYYY-MM-DD'.",
         ),
         Property(
             "repository",
             "openminds.latest.core.FileRepository",
             "vocab:repository",
             description="Place, room, or container where something is deposited or stored.",
-            instructions="Add the file repository of this research product version."
+            instructions="Add the file repository of this research product version.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",formatting="text/plain",
-            
+            "vocab:shortName",
+            formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
-            instructions="Enter a short name (or alias) for this research product version that could be used as a shortened display title (e.g., for web services with too little space to display the full name)."
+            instructions="Enter a short name (or alias) for this research product version that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
         Property(
             "support_channel",
@@ -251,34 +331,89 @@ class ValidationTestVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             formatting="text/plain",
-            
-            
             description="Way of communication used to interact with users or customers.",
-            instructions="Enter all channels through which a user can receive support for handling this research product version."
+            instructions="Enter all channels through which a user can receive support for handling this research product version.",
         ),
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",formatting="text/plain",
-            
+            "vocab:versionIdentifier",
+            formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
-            instructions="Enter the version identifier of this research product version."
+            instructions="Enter the version identifier of this research product version.",
         ),
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",formatting="text/markdown",
+            "vocab:versionInnovation",
+            formatting="text/markdown",
             multiline=True,
             required=True,
             description="Documentation on what changed in comparison to a previously published form of something.",
-            instructions="Enter a short description (or summary) of the novelties/peculiarities of this research product version in comparison to its preceding versions. If this research product version is the first version, you can enter the following disclaimer 'This is the first version of this research product'."
+            instructions="Enter a short description (or summary) of the novelties/peculiarities of this research product version in comparison to its preceding versions. If this research product version is the first version, you can enter the following disclaimer 'This is the first version of this research product'.",
         ),
-        
     ]
 
-    def __init__(self, id=None, accessibility=None, configuration=None, copyright=None, custodian=None, description=None, developer=None, digital_identifier=None, entry_point=None, format=None, full_documentation=None, full_name=None, funding=None, homepage=None, how_to_cite=None, is_alternative_version_of=None, is_new_version_of=None, keyword=None, license=None, other_contribution=None, reference_data=None, related_publication=None, release_date=None, repository=None, short_name=None, support_channel=None, version_identifier=None, version_innovation=None):
-        return super().__init__(id=id,accessibility=accessibility,configuration=configuration,copyright=copyright,custodian=custodian,description=description,developer=developer,digital_identifier=digital_identifier,entry_point=entry_point,format=format,full_documentation=full_documentation,full_name=full_name,funding=funding,homepage=homepage,how_to_cite=how_to_cite,is_alternative_version_of=is_alternative_version_of,is_new_version_of=is_new_version_of,keyword=keyword,license=license,other_contribution=other_contribution,reference_data=reference_data,related_publication=related_publication,release_date=release_date,repository=repository,short_name=short_name,support_channel=support_channel,version_identifier=version_identifier,version_innovation=version_innovation,)
-
+    def __init__(
+        self,
+        id=None,
+        accessibility=None,
+        configuration=None,
+        copyright=None,
+        custodian=None,
+        description=None,
+        developer=None,
+        digital_identifier=None,
+        entry_point=None,
+        format=None,
+        full_documentation=None,
+        full_name=None,
+        funding=None,
+        homepage=None,
+        how_to_cite=None,
+        is_alternative_version_of=None,
+        is_new_version_of=None,
+        keyword=None,
+        license=None,
+        other_contribution=None,
+        reference_data=None,
+        related_publication=None,
+        release_date=None,
+        repository=None,
+        short_name=None,
+        support_channel=None,
+        version_identifier=None,
+        version_innovation=None,
+    ):
+        return super().__init__(
+            id=id,
+            accessibility=accessibility,
+            configuration=configuration,
+            copyright=copyright,
+            custodian=custodian,
+            description=description,
+            developer=developer,
+            digital_identifier=digital_identifier,
+            entry_point=entry_point,
+            format=format,
+            full_documentation=full_documentation,
+            full_name=full_name,
+            funding=funding,
+            homepage=homepage,
+            how_to_cite=how_to_cite,
+            is_alternative_version_of=is_alternative_version_of,
+            is_new_version_of=is_new_version_of,
+            keyword=keyword,
+            license=license,
+            other_contribution=other_contribution,
+            reference_data=reference_data,
+            related_publication=related_publication,
+            release_date=release_date,
+            repository=repository,
+            short_name=short_name,
+            support_channel=support_channel,
+            version_identifier=version_identifier,
+            version_innovation=version_innovation,
+        )

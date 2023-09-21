@@ -14,10 +14,9 @@ class URL(LinkedMetadata):
     """
     <description not available>
     """
+
     type_ = ["https://openminds.ebrains.eu/core/URL"]
-    context = {
-        "vocab": "https://openminds.ebrains.eu/vocab/"
-    }
+    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -25,11 +24,12 @@ class URL(LinkedMetadata):
             IRI,
             "vocab:URL",
             description="no description available",
-            instructions="Enter a uniform resource locator (URL)."
+            instructions="Enter a uniform resource locator (URL).",
         ),
-        
     ]
 
     def __init__(self, id=None, url=None):
-        return super().__init__(id=id,url=url,)
-
+        return super().__init__(
+            id=id,
+            url=url,
+        )

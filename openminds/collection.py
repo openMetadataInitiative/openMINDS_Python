@@ -89,17 +89,13 @@ class Collection:
                 if parent_dir:
                     os.makedirs(parent_dir, exist_ok=True)
             data = {
-                "@context": {
-                     "vocab": "https://openminds.ebrains.eu/vocab/"
-                },
+                "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
                 "@graph": [
                     node.to_jsonld(
-                        embed_linked_nodes=False,
-                        include_empty_properties=include_empty_properties,
-                        with_context=False
+                        embed_linked_nodes=False, include_empty_properties=include_empty_properties, with_context=False
                     )
                     for node in self
-                ]
+                ],
             }
             with open(path, "w") as fp:
                 json.dump(data, fp, indent=2)
@@ -118,10 +114,7 @@ class Collection:
                     file_identifier = node.id[2:]
                 file_path = os.path.join(path, f"{file_identifier}.jsonld")
                 with open(file_path, "w") as fp:
-                    data = node.to_jsonld(
-                        embed_linked_nodes=False,
-                        include_empty_properties=include_empty_properties
-                    )
+                    data = node.to_jsonld(embed_linked_nodes=False, include_empty_properties=include_empty_properties)
                     json.dump(data, fp, indent=2)
                     output_paths.append(file_path)
         return output_paths

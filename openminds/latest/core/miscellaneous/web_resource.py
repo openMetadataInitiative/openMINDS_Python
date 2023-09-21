@@ -14,38 +14,41 @@ class WebResource(LinkedMetadata):
     """
     <description not available>
     """
+
     type_ = ["https://openminds.ebrains.eu/core/WebResource"]
-    context = {
-        "vocab": "https://openminds.ebrains.eu/vocab/"
-    }
+    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "iri",
             IRI,
-            "vocab:IRI",required=True,
+            "vocab:IRI",
+            required=True,
             description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier (IRI) to this web resource."
+            instructions="Enter the internationalized resource identifier (IRI) to this web resource.",
         ),
         Property(
             "content_description",
             str,
-            "vocab:contentDescription",formatting="text/plain",
+            "vocab:contentDescription",
+            formatting="text/plain",
             multiline=True,
-            
             description="no description available",
-            instructions="Enter a short content description for this web resource."
+            instructions="Enter a short content description for this web resource.",
         ),
         Property(
             "format",
             "openminds.latest.core.ContentType",
             "vocab:format",
             description="Method of digitally organizing and structuring data or information.",
-            instructions="Add the expected content type of the document at this web resource."
+            instructions="Add the expected content type of the document at this web resource.",
         ),
-        
     ]
 
     def __init__(self, id=None, iri=None, content_description=None, format=None):
-        return super().__init__(id=id,iri=iri,content_description=content_description,format=format,)
-
+        return super().__init__(
+            id=id,
+            iri=iri,
+            content_description=content_description,
+            format=format,
+        )

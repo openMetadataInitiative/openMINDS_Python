@@ -18,8 +18,8 @@ def register_class(target_class: ContainsMetadata):
     if "openminds" in target_class.__module__:
         parts = target_class.__module__.split(".")
         name = ".".join(parts[0:3] + [target_class.__name__])  # e.g. openminds.latest.core.Dataset
-    # else:
-    #     name = target_class.__module__.split(".")[-1] + "." + target_class.__name__
+        # else:
+        #     name = target_class.__module__.split(".")[-1] + "." + target_class.__name__
 
         registry["names"][name] = target_class
         if hasattr(target_class, "type_"):
@@ -85,7 +85,9 @@ class Registry(type):
                     return "~{}.{}".format(type_.__module__, type_.__name__)
 
             for property in cls.properties:
-                doc = "{} : {}\n    {}".format(property.name, ", ".join(gen_path(t) for t in property.types), property.description)
+                doc = "{} : {}\n    {}".format(
+                    property.name, ", ".join(gen_path(t) for t in property.types), property.description
+                )
                 # todo: add property.instructions if present
                 field_docs.append(doc)
         return docstring_template.format(base=cls._base_docstring, args="\n".join(field_docs))

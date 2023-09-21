@@ -14,18 +14,18 @@ class SoftwareVersion(LinkedMetadata):
     """
     <description not available>
     """
+
     type_ = ["https://openminds.ebrains.eu/core/SoftwareVersion"]
-    context = {
-        "vocab": "https://openminds.ebrains.eu/vocab/"
-    }
+    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "accessibility",
             "openminds.v2_0.controlled_terms.ProductAccessibility",
-            "vocab:accessibility",required=True,
+            "vocab:accessibility",
+            required=True,
             description="Level to which something is accessible to someone or something.",
-            instructions="Add the accessibility of the data for this research product version."
+            instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
             "application_category",
@@ -34,50 +34,45 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="Distinct class that groups software programs which perform a similar task or set of tasks.",
-            instructions="Add all categories to which this software version belongs."
+            instructions="Add all categories to which this software version belongs.",
         ),
         Property(
             "copyright",
             "openminds.v2_0.core.Copyright",
             "vocab:copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
-            instructions="Add the copyright information of this research product version."
+            instructions="Add the copyright information of this research product version.",
         ),
         Property(
             "custodian",
-            ['openminds.v2_0.core.Organization', 'openminds.v2_0.core.Person'],
+            ["openminds.v2_0.core.Organization", "openminds.v2_0.core.Person"],
             "vocab:custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="The 'custodian' is a legal person who is responsible for the content and quality of the data, metadata, and/or code of a research product.",
-            instructions="Add one or several custodians (person or organization) that are responsible for this research product version."
+            instructions="Add one or several custodians (person or organization) that are responsible for this research product version.",
         ),
         Property(
             "description",
             str,
-            "vocab:description",formatting="text/markdown",
+            "vocab:description",
+            formatting="text/markdown",
             multiline=True,
-            
             description="Longer statement or account giving the characteristics of someone or something.",
-            instructions="If necessary, enter a version specific description (abstract) for this research product version (max. 2000 characters, incl. spaces; no references). If left blank, the research product version will inherit the 'description' of it's corresponding research product."
+            instructions="If necessary, enter a version specific description (abstract) for this research product version (max. 2000 characters, incl. spaces; no references). If left blank, the research product version will inherit the 'description' of it's corresponding research product.",
         ),
         Property(
             "developer",
-            ['openminds.v2_0.core.Organization', 'openminds.v2_0.core.Person'],
+            ["openminds.v2_0.core.Organization", "openminds.v2_0.core.Person"],
             "vocab:developer",
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Legal person that creates or improves products or services (e.g., software, applications, etc.).",
-            instructions="If necessary, add one or several developers (person or organization) that contributed to the code implementation of this software version. Note that these developers will overwrite the once provided in the software product this version belongs to."
+            instructions="If necessary, add one or several developers (person or organization) that contributed to the code implementation of this software version. Note that these developers will overwrite the once provided in the software product this version belongs to.",
         ),
         Property(
             "device",
@@ -86,17 +81,16 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function.",
-            instructions="Add all hardware devices compatible with this software version."
+            instructions="Add all hardware devices compatible with this software version.",
         ),
         Property(
             "digital_identifier",
-            ['openminds.v2_0.core.DOI', 'openminds.v2_0.core.SWHID'],
+            ["openminds.v2_0.core.DOI", "openminds.v2_0.core.SWHID"],
             "vocab:digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
-            instructions="Add the globally unique and persistent digital identifier of this research product version."
+            instructions="Add the globally unique and persistent digital identifier of this research product version.",
         ),
         Property(
             "feature",
@@ -105,26 +99,25 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="Structure, form, or appearance that characterizes something or someone.",
-            instructions="Add all distinguishing characteristics of this software version (e.g. performance, portability, or functionality)."
+            instructions="Add all distinguishing characteristics of this software version (e.g. performance, portability, or functionality).",
         ),
         Property(
             "full_documentation",
-            ['openminds.v2_0.core.DOI', 'openminds.v2_0.core.File', 'openminds.v2_0.core.URL'],
-            "vocab:fullDocumentation",required=True,
+            ["openminds.v2_0.core.DOI", "openminds.v2_0.core.File", "openminds.v2_0.core.URL"],
+            "vocab:fullDocumentation",
+            required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
-            instructions="Add the DOI, file or URL that points to a full documentation of this research product version."
+            instructions="Add the DOI, file or URL that points to a full documentation of this research product version.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",formatting="text/plain",
-            
-            
+            "vocab:fullName",
+            formatting="text/plain",
             description="Whole, non-abbreviated name of something or somebody.",
-            instructions="If necessary, enter a version specific descriptive full name (title) for this research product version. If left blank, the research product version will inherit the 'fullName' of it's corresponding research product."
+            instructions="If necessary, enter a version specific descriptive full name (title) for this research product version. If left blank, the research product version will inherit the 'fullName' of it's corresponding research product.",
         ),
         Property(
             "funding",
@@ -133,10 +126,9 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="Money provided by a legal person for a particular purpose.",
-            instructions="Add all funding information of this research product version."
+            instructions="Add all funding information of this research product version.",
         ),
         Property(
             "has_component",
@@ -145,26 +137,24 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Reference to an element of a collection.",
-            instructions="Add all software versions that supplement this software version."
+            instructions="Add all software versions that supplement this software version.",
         ),
         Property(
             "homepage",
             "openminds.v2_0.core.URL",
             "vocab:homepage",
             description="Main website of something or someone.",
-            instructions="Add the uniform resource locator (URL) to the homepage of this research product version."
+            instructions="Add the uniform resource locator (URL) to the homepage of this research product version.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",formatting="text/markdown",
+            "vocab:howToCite",
+            formatting="text/markdown",
             multiline=True,
-            
             description="Preferred format for citing a particular object or legal person.",
-            instructions="Enter the preferred citation text for this research product version. Leave blank if citation text can be extracted from the assigned digital identifier."
+            instructions="Enter the preferred citation text for this research product version. Leave blank if citation text can be extracted from the assigned digital identifier.",
         ),
         Property(
             "input_format",
@@ -173,10 +163,8 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Format of data that is put into a process or machine.",
-            instructions="Add the content types of all possible input formats for this software version."
+            instructions="Add the content types of all possible input formats for this software version.",
         ),
         Property(
             "is_alternative_version_of",
@@ -185,17 +173,15 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Reference to an original form where the essence was preserved, but presented in an alternative form.",
-            instructions="Add all software versions that can be used alternatively to this software version."
+            instructions="Add all software versions that can be used alternatively to this software version.",
         ),
         Property(
             "is_new_version_of",
             "openminds.v2_0.core.SoftwareVersion",
             "vocab:isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
-            instructions="Add the software version preceding this software version."
+            instructions="Add the software version preceding this software version.",
         ),
         Property(
             "keyword",
@@ -206,10 +192,8 @@ class SoftwareVersion(LinkedMetadata):
             min_items=1,
             max_items=5,
             formatting="text/plain",
-            
-            
             description="Significant word or concept that are representative of something or someone.",
-            instructions="Enter custom keywords to this research product version."
+            instructions="Enter custom keywords to this research product version.",
         ),
         Property(
             "language",
@@ -218,10 +202,9 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="System of communication (words, their pronunciation, and the methods of combining them) used and understood by a particular community.",
-            instructions="Add all languages supported by this software version."
+            instructions="Add all languages supported by this software version.",
         ),
         Property(
             "license",
@@ -230,10 +213,9 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
-            instructions="Add at least one license for this software version."
+            instructions="Add at least one license for this software version.",
         ),
         Property(
             "operating_system",
@@ -242,10 +224,9 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="Software that controls the operation of a computer and directs the processing of programs.",
-            instructions="Add all operating systems supported by this software version."
+            instructions="Add all operating systems supported by this software version.",
         ),
         Property(
             "other_contribution",
@@ -254,10 +235,8 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Giving or supplying of something (such as money or time) as a part or share other than what is covered elsewhere.",
-            instructions="Add the contributions for each involved person or organization going beyond being an author, custodian or developer of this research product version."
+            instructions="Add the contributions for each involved person or organization going beyond being an author, custodian or developer of this research product version.",
         ),
         Property(
             "output_format",
@@ -266,10 +245,8 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Format of data that comes out of, is delivered or produced by a process or machine.",
-            instructions="Add the content types of all possible input formats for this software version."
+            instructions="Add the content types of all possible input formats for this software version.",
         ),
         Property(
             "programming_language",
@@ -278,36 +255,34 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             required=True,
             description="Distinct set of instructions for computer programs in order to produce various kinds of output.",
-            instructions="Add all programming languages used for this software version."
+            instructions="Add all programming languages used for this software version.",
         ),
         Property(
             "related_publication",
-            ['openminds.v2_0.core.DOI', 'openminds.v2_0.core.ISBN'],
+            ["openminds.v2_0.core.DOI", "openminds.v2_0.core.ISBN"],
             "vocab:relatedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Reference to something that was made available for the general public to see or buy.",
-            instructions="Add further publications besides the documentation (e.g. an original research article) providing the original context for the production of this research product version."
+            instructions="Add further publications besides the documentation (e.g. an original research article) providing the original context for the production of this research product version.",
         ),
         Property(
             "release_date",
             date,
-            "vocab:releaseDate",required=True,
+            "vocab:releaseDate",
+            required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
-            instructions="Enter the date (actual or intended) of the first broadcast/publication of this research product version."
+            instructions="Enter the date (actual or intended) of the first broadcast/publication of this research product version.",
         ),
         Property(
             "repository",
             "openminds.v2_0.core.FileRepository",
             "vocab:repository",
             description="Place, room, or container where something is deposited or stored.",
-            instructions="Add the file repository of this research product version."
+            instructions="Add the file repository of this research product version.",
         ),
         Property(
             "requirement",
@@ -316,21 +291,18 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             formatting="text/plain",
-            
-            
             description="Something essential to the existence, occurrence or function of something else.",
-            instructions="Enter all requirements of this software version."
+            instructions="Enter all requirements of this software version.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",formatting="text/plain",
-            
+            "vocab:shortName",
+            formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
-            instructions="Enter a short name (alias) for this research product version (max. 30 characters, no space)."
+            instructions="Enter a short name (alias) for this research product version (max. 30 characters, no space).",
         ),
         Property(
             "support_channel",
@@ -339,34 +311,101 @@ class SoftwareVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
             formatting="text/plain",
-            
-            
             description="Way of communication used to interact with users or customers.",
-            instructions="Enter all channels through which a user can receive support for handling this research product."
+            instructions="Enter all channels through which a user can receive support for handling this research product.",
         ),
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",formatting="text/plain",
-            
+            "vocab:versionIdentifier",
+            formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
-            instructions="Enter the version identifier of this research product version."
+            instructions="Enter the version identifier of this research product version.",
         ),
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",formatting="text/markdown",
+            "vocab:versionInnovation",
+            formatting="text/markdown",
             multiline=True,
             required=True,
             description="Documentation on what changed in comparison to a previously published form of something.",
-            instructions="Enter a summary/description of the novelties/peculiarities of this research product version in comparison to other versions of it's research product. If this research product version is the first released version, you can enter the following disclaimer 'This is the first version of this research product.'"
+            instructions="Enter a summary/description of the novelties/peculiarities of this research product version in comparison to other versions of it's research product. If this research product version is the first released version, you can enter the following disclaimer 'This is the first version of this research product.'",
         ),
-        
     ]
 
-    def __init__(self, id=None, accessibility=None, application_category=None, copyright=None, custodian=None, description=None, developer=None, device=None, digital_identifier=None, feature=None, full_documentation=None, full_name=None, funding=None, has_component=None, homepage=None, how_to_cite=None, input_format=None, is_alternative_version_of=None, is_new_version_of=None, keyword=None, language=None, license=None, operating_system=None, other_contribution=None, output_format=None, programming_language=None, related_publication=None, release_date=None, repository=None, requirement=None, short_name=None, support_channel=None, version_identifier=None, version_innovation=None):
-        return super().__init__(id=id,accessibility=accessibility,application_category=application_category,copyright=copyright,custodian=custodian,description=description,developer=developer,device=device,digital_identifier=digital_identifier,feature=feature,full_documentation=full_documentation,full_name=full_name,funding=funding,has_component=has_component,homepage=homepage,how_to_cite=how_to_cite,input_format=input_format,is_alternative_version_of=is_alternative_version_of,is_new_version_of=is_new_version_of,keyword=keyword,language=language,license=license,operating_system=operating_system,other_contribution=other_contribution,output_format=output_format,programming_language=programming_language,related_publication=related_publication,release_date=release_date,repository=repository,requirement=requirement,short_name=short_name,support_channel=support_channel,version_identifier=version_identifier,version_innovation=version_innovation,)
-
+    def __init__(
+        self,
+        id=None,
+        accessibility=None,
+        application_category=None,
+        copyright=None,
+        custodian=None,
+        description=None,
+        developer=None,
+        device=None,
+        digital_identifier=None,
+        feature=None,
+        full_documentation=None,
+        full_name=None,
+        funding=None,
+        has_component=None,
+        homepage=None,
+        how_to_cite=None,
+        input_format=None,
+        is_alternative_version_of=None,
+        is_new_version_of=None,
+        keyword=None,
+        language=None,
+        license=None,
+        operating_system=None,
+        other_contribution=None,
+        output_format=None,
+        programming_language=None,
+        related_publication=None,
+        release_date=None,
+        repository=None,
+        requirement=None,
+        short_name=None,
+        support_channel=None,
+        version_identifier=None,
+        version_innovation=None,
+    ):
+        return super().__init__(
+            id=id,
+            accessibility=accessibility,
+            application_category=application_category,
+            copyright=copyright,
+            custodian=custodian,
+            description=description,
+            developer=developer,
+            device=device,
+            digital_identifier=digital_identifier,
+            feature=feature,
+            full_documentation=full_documentation,
+            full_name=full_name,
+            funding=funding,
+            has_component=has_component,
+            homepage=homepage,
+            how_to_cite=how_to_cite,
+            input_format=input_format,
+            is_alternative_version_of=is_alternative_version_of,
+            is_new_version_of=is_new_version_of,
+            keyword=keyword,
+            language=language,
+            license=license,
+            operating_system=operating_system,
+            other_contribution=other_contribution,
+            output_format=output_format,
+            programming_language=programming_language,
+            related_publication=related_publication,
+            release_date=release_date,
+            repository=repository,
+            requirement=requirement,
+            short_name=short_name,
+            support_channel=support_channel,
+            version_identifier=version_identifier,
+            version_innovation=version_innovation,
+        )

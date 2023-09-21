@@ -1,2 +1,2 @@
-from .device import (SlicingDevice, SlicingDeviceUsage)
-from .activity import (TissueSampleSlicing, CranialWindowPreparation, TissueCulturePreparation)
+from .device import SlicingDevice, SlicingDeviceUsage
+from .activity import TissueSampleSlicing, CranialWindowPreparation, TissueCulturePreparation

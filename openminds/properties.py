@@ -13,9 +13,22 @@ from .base import Node, IRI
 class Property:
     """Representation of an openMINDS property (a metadata field)."""
 
-    def __init__(self, name, types, path, required=False, multiple=False,
-                 reverse=None, formatting=None, multiline=False, description="", instructions="",
-                 unique_items=None, min_items=None, max_items=None):
+    def __init__(
+        self,
+        name,
+        types,
+        path,
+        required=False,
+        multiple=False,
+        reverse=None,
+        formatting=None,
+        multiline=False,
+        description="",
+        instructions="",
+        unique_items=None,
+        min_items=None,
+        max_items=None,
+    ):
         self.name = name
         if isinstance(types, (type, str)):
             self._types = (types,)
@@ -37,7 +50,8 @@ class Property:
 
     def __repr__(self):
         return "Property(name='{}', types={}, path='{}', required={}, multiple={})".format(
-            self.name, self._types, self.path, self.required, self.multiple)
+            self.name, self._types, self.path, self.required, self.multiple
+        )
 
     @property
     def types(self):
@@ -55,9 +69,7 @@ class Property:
         failures = defaultdict(list)
         if value is None:
             if self.required:
-                failures["required"].append(
-                    f"{self.name} is required, but was not provided"
-                )
+                failures["required"].append(f"{self.name} is required, but was not provided")
         else:
             if self.multiple:
                 if not isinstance(value, (list, tuple)):
@@ -77,29 +89,23 @@ class Property:
                 if self.max_items:
                     if len(value) > self.max_items:
                         failures["multiplicity"].append(
-                            f"{self.name}: maximum {self.max_items} items allowed, "
-                            f"value contains {len(value)}"
+                            f"{self.name}: maximum {self.max_items} items allowed, " f"value contains {len(value)}"
                         )
                 if self.unique_items:
                     try:
                         unique_items = set(value)
-                    except (
-                        TypeError
-                    ):  # unhashable, i.e. can't anyway check if items are unique
+                    except TypeError:  # unhashable, i.e. can't anyway check if items are unique
                         pass
                     else:
                         if len(unique_items) < len(value):
-                            failures["multiplicity"].append(
-                                f"{self.name}: items in array should be unique"
-                            )
+                            failures["multiplicity"].append(f"{self.name}: items in array should be unique")
             elif isinstance(value, (list, tuple)):
                 failures["multiplicity"].append(
                     f"{self.name} does not accept multiple values, but contains {len(value)}"
                 )
             elif not isinstance(value, self.types):
                 failures["type"].append(
-                    f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
-                    f"value is {type(value)}"
+                    f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, " f"value is {type(value)}"
                 )
         # todo: check formatting, multiline
         return failures

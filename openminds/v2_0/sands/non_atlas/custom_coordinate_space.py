@@ -5,7 +5,6 @@
 # this file was auto-generated!
 
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
@@ -14,18 +13,18 @@ class CustomCoordinateSpace(LinkedMetadata):
     """
     <description not available>
     """
+
     type_ = ["https://openminds.ebrains.eu/sands/CustomCoordinateSpace"]
-    context = {
-        "vocab": "https://openminds.ebrains.eu/vocab/"
-    }
+    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "anatomical_axes_orientation",
             "openminds.v2_0.controlled_terms.AnatomicalAxesOrientation",
-            "vocab:anatomicalAxesOrientation",required=True,
+            "vocab:anatomicalAxesOrientation",
+            required=True,
             description="Relation between reference planes used in anatomy and mathematics.",
-            instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for this custom coordinate space."
+            instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for this custom coordinate space.",
         ),
         Property(
             "axes_origin",
@@ -37,7 +36,7 @@ class CustomCoordinateSpace(LinkedMetadata):
             max_items=3,
             required=True,
             description="Special point in a coordinate system used as a fixed point of reference for the geometry of the surrounding space.",
-            instructions="Enter the origin of this custom coordinate space (central point where axes intersect; 2D: [x, y] or 3D:[x, y, z])."
+            instructions="Enter the origin of this custom coordinate space (central point where axes intersect; 2D: [x, y] or 3D:[x, y, z]).",
         ),
         Property(
             "default_image",
@@ -46,30 +45,42 @@ class CustomCoordinateSpace(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            
-            
             description="Two or three dimensional image that particluarly represents a specific coordinate space.",
-            instructions="Add one or several image files used as visual representation of this custom coordinate space."
+            instructions="Add one or several image files used as visual representation of this custom coordinate space.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",formatting="text/plain",
-            
+            "vocab:name",
+            formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
-            instructions="Enter a descriptive name for this custom coordinate space."
+            instructions="Enter a descriptive name for this custom coordinate space.",
         ),
         Property(
             "native_unit",
             "openminds.v2_0.controlled_terms.UnitOfMeasurement",
-            "vocab:nativeUnit",required=True,
+            "vocab:nativeUnit",
+            required=True,
             description="Determinate quantity used in the original measurement.",
-            instructions="Add the native unit that is used for this custom coordinate space."
+            instructions="Add the native unit that is used for this custom coordinate space.",
         ),
-        
     ]
 
-    def __init__(self, id=None, anatomical_axes_orientation=None, axes_origin=None, default_image=None, name=None, native_unit=None):
-        return super().__init__(id=id,anatomical_axes_orientation=anatomical_axes_orientation,axes_origin=axes_origin,default_image=default_image,name=name,native_unit=native_unit,)
-
+    def __init__(
+        self,
+        id=None,
+        anatomical_axes_orientation=None,
+        axes_origin=None,
+        default_image=None,
+        name=None,
+        native_unit=None,
+    ):
+        return super().__init__(
+            id=id,
+            anatomical_axes_orientation=anatomical_axes_orientation,
+            axes_origin=axes_origin,
+            default_image=default_image,
+            name=name,
+            native_unit=native_unit,
+        )
