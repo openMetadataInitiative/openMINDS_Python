@@ -1,0 +1,6 @@
+from .digital_identifier import (GRIDID, ISSN, StockNumber, DOI, SWHID, HANDLE, IdentifiersDotOrgID, ORCID, ISBN, RRID, RORID)
+from .miscellaneous import (QuantitativeValueArray, WebResource, Comment, Funding, ResearchProductGroup, QuantitativeValue, QuantitativeValueRange)
+from .data import (FileRepository, License, Hash, FileBundle, ContentTypePattern, Copyright, ContentType, Measurement, FilePathPattern, FileRepositoryStructure, ServiceLink, FileArchive, File)
+from .research import (NumericalProperty, PropertyValueList, CustomPropertySet, ProtocolExecution, Subject, Strain, TissueSampleCollection, TissueSampleCollectionState, SubjectGroupState, Configuration, SubjectGroup, Protocol, TissueSample, SubjectState, TissueSampleState, BehavioralProtocol, StringProperty)
+from .products import (Model, Dataset, ModelVersion, Setup, MetaDataModelVersion, MetaDataModel, Project, WebService, WebServiceVersion, DatasetVersion, Software, SoftwareVersion)
+from .actors import (Person, Organization, Affiliation, ContactInformation, Consortium, AccountInformation, Contribution)
