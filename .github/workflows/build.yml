@@ -43,6 +43,7 @@ jobs:
       run: |
         cp -R target/* main
         cd main
+        rm -rf build openMINDS.egg-info
         git config --global user.email "openminds@ebrains.eu"
         git config --global user.name "openMINDS pipeline"
         if [[ $(git add . --dry-run | wc -l) -gt 0 ]]; then
