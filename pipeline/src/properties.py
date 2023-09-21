@@ -14,7 +14,7 @@ class Property:
     """Representation of an openMINDS property (a metadata field)."""
 
     def __init__(self, name, types, path, required=False, multiple=False,
-                 reverse=None, formatting=None, description="", instructions="",
+                 reverse=None, formatting=None, multiline=False, description="", instructions="",
                  unique_items=None, min_items=None, max_items=None):
         self.name = name
         if isinstance(types, (type, str)):
@@ -27,6 +27,7 @@ class Property:
         self.multiple = multiple
         self.reverse = reverse
         self.formatting = formatting
+        self.multiline = multiline
         self.description = description
         self.instructions = instructions
         self.unique_items = unique_items
@@ -100,7 +101,7 @@ class Property:
                     f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
                     f"value is {type(value)}"
                 )
-        # todo: check formatting
+        # todo: check formatting, multiline
         return failures
 
     def deserialize(self, data):
