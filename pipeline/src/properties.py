@@ -4,9 +4,10 @@ Representations of metadata fields/properties
 # Copyright (c) 2023 openMetadataInitiative
 """
 
+from datetime import datetime, date
 from collections import defaultdict
 from .registry import lookup
-from .base import Node
+from .base import Node, IRI
 
 
 class Property:
@@ -112,12 +113,19 @@ class Property:
         # todo: check data type
         if self.types == (str,):
             if self.formatting != "text/plain":
-                breakpoint()
+                pass  # todo
             return data
+        elif self.types == (IRI,):
+            assert isinstance(data, str)
+            return IRI(data)
         elif float in self.types:
             return data
         elif int in self.types:
             return data
+        elif datetime in self.types:
+            return datetime.fromisoformat(data)
+        elif date in self.types:
+            return date.fromisoformat(data)
         elif all(issubclass(t, Node) for t in self.types):
             # use data["@type"] to figure out class to use
             if "@type" in data:

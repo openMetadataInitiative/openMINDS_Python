@@ -6,6 +6,7 @@ Base classes for openMINDS
 
 from __future__ import annotations
 
+from datetime import date, datetime
 from collections import defaultdict
 import json
 from typing import Union
@@ -55,6 +56,10 @@ class Node(metaclass=Registry):
                             raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
                 elif isinstance(value, EmbeddedMetadata):
                     data[property.path] = value.to_jsonld(with_context=False)
+                elif hasattr(value, "to_jsonld"):  # e.g. IRI
+                    data[property.path] = value.to_jsonld()
+                elif isinstance(value, (date, datetime)):
+                    data[property.path] = value.isoformat()
                 else:
                     data[property.path] = value
         return {key: data[key] for key in sorted(data)}

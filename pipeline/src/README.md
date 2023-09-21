@@ -11,8 +11,9 @@ pip install openMINDS
 ## Usage
 
 ``` python
+from datetime import date
 from openminds import Collection, IRI
-import openminds.v3.core as omcore
+import openminds.latest.core as omcore
 
 # Create an empty metadata collection
 
@@ -21,21 +22,21 @@ collection = Collection()
 # Create some metadata
 
 mgm = omcore.Organization(
-    name="Metro-Goldwyn-Mayer Studios, Inc.",
-    alias="MGM",
+    full_name="Metro-Goldwyn-Mayer Studios, Inc.",
+    short_name="MGM",
     homepage=IRI("https://www.mgm.com")
 )
 
 stan = omcore.Person(
     given_name="Stan",
     family_name="Laurel",
-    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
+    affiliation=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
 )
 
 ollie = omcore.Person(
     given_name="Oliver",
     family_name="Hardy",
-    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
+    affiliation=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
 )
 
 # Add the metadata to the collection
@@ -52,7 +53,7 @@ collection.save("my_collection.jsonld")
 
 # Save each node in the collection to a separate file
 
-collection.save("my_collection")  # creates files within the 'my_collection' directory
+collection.save("my_collection", individual_files=True)  # creates files within the 'my_collection' directory
 
 # Load a collection from file
 new_collection = Collection()

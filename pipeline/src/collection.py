@@ -86,7 +86,8 @@ class Collection:
                     raise OSError(f"Cannot create file {path} because a directory with that name already exists.")
             else:
                 parent_dir = os.path.dirname(path)
-                os.makedirs(parent_dir, exist_ok=True)
+                if parent_dir:
+                    os.makedirs(parent_dir, exist_ok=True)
             data = {
                 "@context": {
                      "vocab": "https://openminds.ebrains.eu/vocab/"
