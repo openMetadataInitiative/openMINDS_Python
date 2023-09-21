@@ -30,7 +30,7 @@ jobs:
       run: |
         pip install pytest
         pip install ./target
-        pytest -v
+        pytest -v pipeline/tests
 
     - name: Checkout main branch
       uses: actions/checkout@v3
@@ -42,7 +42,7 @@ jobs:
     - name: Push to main
       run: |
         cp -R target/* main
-        cd main       
+        cd main
         git config --global user.email "openminds@ebrains.eu"
         git config --global user.name "openMINDS pipeline"
         if [[ $(git add . --dry-run | wc -l) -gt 0 ]]; then
