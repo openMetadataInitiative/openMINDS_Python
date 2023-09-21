@@ -54,13 +54,15 @@ for schema_version in schema_loader.get_schema_versions():
         python_modules[parent_path].append((parts[-1], class_name))
 
 # Step 4 - create additional files, e.g. __init__.py
+openminds_modules = defaultdict(set)
 for path, classes in python_modules.items():
     dir_path = ["target", "openminds"] + path.split(".")
+    openminds_modules[dir_path[2]].add(dir_path[3])
     init_file_path = os.path.join(*(dir_path + ["__init__.py"]))
     with open(init_file_path, "w") as fp:
         for class_module, class_name in classes:
             fp.write(f"from .{class_module} import {class_name}\n")
-    while len(dir_path) > 2:
+    while len(dir_path) > 3:
         child_dir = dir_path[-1]
         dir_path = dir_path[:-1]
         init_file_path = os.path.join(*(dir_path + ["__init__.py"]))
@@ -68,6 +70,11 @@ for path, classes in python_modules.items():
             if len(dir_path) > 3:
                 class_names = ", ".join(class_name for _, class_name in classes)
                 fp.write(f"from .{child_dir} import ({class_names})\n")
+
+for version, module_list in openminds_modules.items():
+    init_file_path = os.path.join("target", "openminds", version, "__init__.py")
+    with open(init_file_path, "w") as fp:
+        fp.write(f"from . import ({', '.join(sorted(module_list))})\n")
 
 env = Environment(
     loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))),
@@ -78,6 +85,9 @@ context = {
 }
 with open("target/pyproject.toml", "w") as fp:
     contents = env.get_template("pipeline/src/pyproject_template.toml.txt").render(context)
+    fp.write(contents)
+with open("target/openminds/__init__.py", "w") as fp:
+    contents = env.get_template("pipeline/src/init_template.py.txt").render(context)
     fp.write(contents)
 
 shutil.copy("pipeline/src/base.py", "target/openminds/base.py")
