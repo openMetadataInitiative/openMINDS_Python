@@ -1,6 +1,0 @@
-from .parcellation_terminology import ParcellationTerminology
-from .common_coordinate_space import CommonCoordinateSpace
-from .atlas_annotation import AtlasAnnotation
-from .brain_atlas_version import BrainAtlasVersion
-from .brain_atlas import BrainAtlas
-from .parcellation_entity import ParcellationEntity
