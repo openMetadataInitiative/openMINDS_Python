@@ -26,6 +26,12 @@ jobs:
         pip install -r requirements.txt
         python build.py
 
+    - name: Test built package
+      run: |
+        pip install pytest
+        pip install ./target
+        pytest -v
+
     - name: Checkout main branch
       uses: actions/checkout@v3
       with:
