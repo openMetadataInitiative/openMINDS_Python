@@ -1,0 +1,30 @@
+name: openMINDS_Python_test_pipeline
+
+on:
+  pull_request:
+      branches:
+        - pipeline
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Run build
+      run: |
+        pip install -r requirements.txt
+        python build.py
+
+    - name: Test built package
+      run: |
+        pip install pytest
+        pip install ./target
+        pytest -v pipeline/tests
