@@ -14,7 +14,7 @@ class {{ class_name }}({{ base_class }}):
     """
     {{ docstring }}
     """
-    type_ = ["{{ openminds_type }}"]
+    type_ = "{{ openminds_type }}"
     context = {
         "vocab": "https://openminds.ebrains.eu/vocab/"
     }
