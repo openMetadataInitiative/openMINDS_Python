@@ -1,0 +1,130 @@
+"""
+<description not available>
+"""
+
+# this file was auto-generated!
+
+
+from openminds.base import LinkedMetadata
+from openminds.properties import Property
+
+
+class SlicingDeviceUsage(LinkedMetadata):
+    """
+    <description not available>
+    """
+
+    type_ = ["https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"]
+    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+
+    properties = [
+        Property(
+            "device",
+            "openminds.v3_0.specimen_prep.SlicingDevice",
+            "vocab:device",
+            required=True,
+            description="Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function.",
+            instructions="Add the slicing device used.",
+        ),
+        Property(
+            "lookup_label",
+            str,
+            "vocab:lookupLabel",
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter a lookup label for this device usage that may help you to find this instance more easily.",
+        ),
+        Property(
+            "metadata_location",
+            ["openminds.v3_0.core.File", "openminds.v3_0.core.FileBundle"],
+            "vocab:metadataLocation",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all files or file bundles containing additional information about the usage of this device.",
+        ),
+        Property(
+            "oscillation_amplitude",
+            "openminds.v3_0.core.QuantitativeValue",
+            "vocab:oscillationAmplitude",
+            description="no description available",
+            instructions="Enter the oscillation amplitude of the blade from the slicing device during its use.",
+        ),
+        Property(
+            "slice_thickness",
+            ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
+            "vocab:sliceThickness",
+            required=True,
+            description="no description available",
+            instructions="Enter the defined slice thickness during the use of this slicing device.",
+        ),
+        Property(
+            "slicing_angle",
+            ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.NumericalProperty"],
+            "vocab:slicingAngle",
+            multiple=True,
+            unique_items=False,
+            min_items=1,
+            max_items=2,
+            description="no description available",
+            instructions="Enter all slicing angles (intentional or unintentional) in relation to the slicing plane used during this activity.",
+        ),
+        Property(
+            "slicing_plane",
+            "openminds.v3_0.controlled_terms.AnatomicalPlane",
+            "vocab:slicingPlane",
+            required=True,
+            description="no description available",
+            instructions="Add the anatomical plane that best describes the slicing direction of the tissue sample(s) during the use of this slicing device.",
+        ),
+        Property(
+            "slicing_speed",
+            "openminds.v3_0.core.QuantitativeValue",
+            "vocab:slicingSpeed",
+            description="no description available",
+            instructions="Enter the defined slicing speed during the use of this slicing device.",
+        ),
+        Property(
+            "used_specimen",
+            ["openminds.v3_0.core.SubjectState", "openminds.v3_0.core.TissueSampleState"],
+            "vocab:usedSpecimen",
+            description="no description available",
+            instructions="Add the state of the tissue sample or subject that this device was used on.",
+        ),
+        Property(
+            "vibration_frequency",
+            "openminds.v3_0.core.QuantitativeValue",
+            "vocab:vibrationFrequency",
+            description="no description available",
+            instructions="Enter the defined vibration frequency during the use of this slicing device.",
+        ),
+    ]
+
+    def __init__(
+        self,
+        id=None,
+        device=None,
+        lookup_label=None,
+        metadata_location=None,
+        oscillation_amplitude=None,
+        slice_thickness=None,
+        slicing_angle=None,
+        slicing_plane=None,
+        slicing_speed=None,
+        used_specimen=None,
+        vibration_frequency=None,
+    ):
+        return super().__init__(
+            id=id,
+            device=device,
+            lookup_label=lookup_label,
+            metadata_location=metadata_location,
+            oscillation_amplitude=oscillation_amplitude,
+            slice_thickness=slice_thickness,
+            slicing_angle=slicing_angle,
+            slicing_plane=slicing_plane,
+            slicing_speed=slicing_speed,
+            used_specimen=used_specimen,
+            vibration_frequency=vibration_frequency,
+        )

@@ -1,17 +1,17 @@
-from .miscellaneous import CoordinatePoint, QualitativeRelationAssessment, QuantitativeRelationAssessment
-from .non_atlas import (
-    ElectrodeContact,
-    Electrode,
-    CustomAnnotation,
-    ElectrodeArray,
-    CustomCoordinateSpace,
-    CustomAnatomicalEntity,
-)
 from .atlas import (
-    ParcellationTerminology,
     CommonCoordinateSpace,
+    ParcellationEntity,
     AtlasAnnotation,
     BrainAtlasVersion,
     BrainAtlas,
-    ParcellationEntity,
+    ParcellationTerminology,
+)
+from .miscellaneous import CoordinatePoint, QualitativeRelationAssessment, QuantitativeRelationAssessment
+from .non_atlas import (
+    CustomCoordinateSpace,
+    Electrode,
+    CustomAnnotation,
+    CustomAnatomicalEntity,
+    ElectrodeArray,
+    ElectrodeContact,
 )

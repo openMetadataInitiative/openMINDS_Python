@@ -4,8 +4,8 @@ Structured information on a brain atlas (version level).
 
 # this file was auto-generated!
 
-from openminds.base import IRI
 from datetime import date
+from openminds.base import IRI
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
