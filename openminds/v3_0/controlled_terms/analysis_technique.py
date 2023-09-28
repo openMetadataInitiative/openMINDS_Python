@@ -15,7 +15,7 @@ class AnalysisTechnique(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/AnalysisTechnique"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/AnalysisTechnique"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

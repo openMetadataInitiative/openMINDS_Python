@@ -14,7 +14,7 @@ class Modality(LinkedMetadata):
     Structured information on the modality.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Modality"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Modality"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

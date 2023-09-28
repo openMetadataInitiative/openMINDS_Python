@@ -15,7 +15,7 @@ class CommonCoordinateSpace(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/CommonCoordinateSpace"]
+    type_ = "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

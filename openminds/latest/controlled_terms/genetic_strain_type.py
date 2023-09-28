@@ -15,7 +15,7 @@ class GeneticStrainType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/GeneticStrainType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/GeneticStrainType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class CustomAnnotation(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/CustomAnnotation"]
+    type_ = "https://openminds.ebrains.eu/sands/CustomAnnotation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

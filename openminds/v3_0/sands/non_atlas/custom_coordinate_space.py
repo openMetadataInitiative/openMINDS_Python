@@ -14,7 +14,7 @@ class CustomCoordinateSpace(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/CustomCoordinateSpace"]
+    type_ = "https://openminds.ebrains.eu/sands/CustomCoordinateSpace"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

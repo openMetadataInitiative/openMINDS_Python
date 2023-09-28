@@ -14,7 +14,7 @@ class Annotation(LinkedMetadata):
     Structured information on an image annotation.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/Annotation"]
+    type_ = "https://openminds.ebrains.eu/sands/Annotation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

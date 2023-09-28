@@ -15,7 +15,7 @@ class AnatomicalAxesOrientation(LinkedMetadata):
     Structured information on the anatomical directions of the X, Y, and Z axis.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

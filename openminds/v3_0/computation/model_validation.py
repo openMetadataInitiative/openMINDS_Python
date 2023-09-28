@@ -15,7 +15,7 @@ class ModelValidation(LinkedMetadata):
     Structured information about a process of validating a computational model.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/ModelValidation"]
+    type_ = "https://openminds.ebrains.eu/computation/ModelValidation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

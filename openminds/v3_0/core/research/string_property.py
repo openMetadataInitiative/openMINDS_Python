@@ -14,7 +14,7 @@ class StringProperty(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/StringProperty"]
+    type_ = "https://openminds.ebrains.eu/core/StringProperty"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

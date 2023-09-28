@@ -14,7 +14,7 @@ class StockNumber(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/StockNumber"]
+    type_ = "https://openminds.ebrains.eu/core/StockNumber"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

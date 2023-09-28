@@ -15,7 +15,7 @@ class OperatingSystem(LinkedMetadata):
     Structured information on the operating system.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/OperatingSystem"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/OperatingSystem"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class Subject(LinkedMetadata):
     Structured information on a subject.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/Subject"]
+    type_ = "https://openminds.ebrains.eu/core/Subject"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

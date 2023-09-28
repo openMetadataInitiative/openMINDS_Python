@@ -15,7 +15,7 @@ class TactileStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/TactileStimulusType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/TactileStimulusType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

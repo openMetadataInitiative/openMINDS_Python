@@ -14,7 +14,7 @@ class Circle(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/Circle"]
+    type_ = "https://openminds.ebrains.eu/sands/Circle"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

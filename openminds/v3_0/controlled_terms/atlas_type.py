@@ -15,7 +15,7 @@ class AtlasType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/AtlasType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/AtlasType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

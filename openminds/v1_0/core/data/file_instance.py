@@ -14,7 +14,7 @@ class FileInstance(LinkedMetadata):
     Structured information on a file instances.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/FileInstance"]
+    type_ = "https://openminds.ebrains.eu/core/FileInstance"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

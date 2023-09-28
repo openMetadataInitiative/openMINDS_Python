@@ -15,7 +15,7 @@ class LearningResourceType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/LearningResourceType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/LearningResourceType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

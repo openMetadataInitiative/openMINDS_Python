@@ -14,7 +14,7 @@ class CoordinatePoint(LinkedMetadata):
     Structured information on a coordinate point.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/CoordinatePoint"]
+    type_ = "https://openminds.ebrains.eu/sands/CoordinatePoint"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

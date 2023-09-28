@@ -14,7 +14,7 @@ class ElectrodeContact(LinkedMetadata):
     Structured information on an electrode contact.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/ElectrodeContact"]
+    type_ = "https://openminds.ebrains.eu/sands/ElectrodeContact"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

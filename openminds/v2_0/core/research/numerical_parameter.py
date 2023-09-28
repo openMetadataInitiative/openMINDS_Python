@@ -14,7 +14,7 @@ class NumericalParameter(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/NumericalParameter"]
+    type_ = "https://openminds.ebrains.eu/core/NumericalParameter"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class Electrode(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/ephys/Electrode"]
+    type_ = "https://openminds.ebrains.eu/ephys/Electrode"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

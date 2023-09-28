@@ -15,7 +15,7 @@ class Consortium(LinkedMetadata):
     Structured information about an association of two or more persons or organizations, with the objective of participating in a common activity.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/Consortium"]
+    type_ = "https://openminds.ebrains.eu/core/Consortium"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

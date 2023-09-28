@@ -14,7 +14,7 @@ class License(LinkedMetadata):
     Structured information on a used license.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/License"]
+    type_ = "https://openminds.ebrains.eu/core/License"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

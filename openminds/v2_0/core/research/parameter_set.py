@@ -14,7 +14,7 @@ class ParameterSet(EmbeddedMetadata):
     Structured information on a used parameter set.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ParameterSet"]
+    type_ = "https://openminds.ebrains.eu/core/ParameterSet"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class PropertyValueList(LinkedMetadata):
     An identifiable list of property-value pairs.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/PropertyValueList"]
+    type_ = "https://openminds.ebrains.eu/core/PropertyValueList"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

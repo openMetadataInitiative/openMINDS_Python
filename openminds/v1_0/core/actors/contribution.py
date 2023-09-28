@@ -14,7 +14,7 @@ class Contribution(LinkedMetadata):
     Structured information on the contribution made to a research product.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/Contribution"]
+    type_ = "https://openminds.ebrains.eu/core/Contribution"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

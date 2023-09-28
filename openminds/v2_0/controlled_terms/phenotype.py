@@ -15,7 +15,7 @@ class Phenotype(LinkedMetadata):
     Structured information on the phenotype of a subject.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Phenotype"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Phenotype"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

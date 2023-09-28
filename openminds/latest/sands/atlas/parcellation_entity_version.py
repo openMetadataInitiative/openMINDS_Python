@@ -14,7 +14,7 @@ class ParcellationEntityVersion(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/ParcellationEntityVersion"]
+    type_ = "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

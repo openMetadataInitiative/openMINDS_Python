@@ -14,7 +14,7 @@ class Software(LinkedMetadata):
     Structured information on a software tool (concept level).
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/Software"]
+    type_ = "https://openminds.ebrains.eu/core/Software"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

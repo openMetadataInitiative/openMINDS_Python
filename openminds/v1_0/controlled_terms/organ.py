@@ -14,7 +14,7 @@ class Organ(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Organ"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Organ"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -15,7 +15,7 @@ class TermSuggestion(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/TermSuggestion"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

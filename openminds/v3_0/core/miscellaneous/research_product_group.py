@@ -14,7 +14,7 @@ class ResearchProductGroup(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ResearchProductGroup"]
+    type_ = "https://openminds.ebrains.eu/core/ResearchProductGroup"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

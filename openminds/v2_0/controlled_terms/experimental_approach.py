@@ -15,7 +15,7 @@ class ExperimentalApproach(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class ContactInformation(LinkedMetadata):
     Structured information about how to contact a given person or consortium.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ContactInformation"]
+    type_ = "https://openminds.ebrains.eu/core/ContactInformation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

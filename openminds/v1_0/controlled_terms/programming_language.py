@@ -14,7 +14,7 @@ class ProgrammingLanguage(LinkedMetadata):
     Structured information on the programming language.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

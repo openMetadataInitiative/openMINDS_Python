@@ -14,7 +14,7 @@ class Electrode(LinkedMetadata):
     Structured information on an electrode.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/Electrode"]
+    type_ = "https://openminds.ebrains.eu/sands/Electrode"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

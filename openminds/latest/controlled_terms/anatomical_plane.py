@@ -15,7 +15,7 @@ class AnatomicalPlane(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

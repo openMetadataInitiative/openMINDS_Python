@@ -15,7 +15,7 @@ class BreedingType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/BreedingType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/BreedingType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

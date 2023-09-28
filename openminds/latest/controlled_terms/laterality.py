@@ -15,7 +15,7 @@ class Laterality(LinkedMetadata):
     Structured information on the lateral direction.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Laterality"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Laterality"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

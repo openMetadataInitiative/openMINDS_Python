@@ -14,7 +14,7 @@ class CustomAnatomicalEntity(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"]
+    type_ = "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

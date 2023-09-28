@@ -15,7 +15,7 @@ class ContentType(LinkedMetadata):
     Structured information on the content type of a file instance, bundle or repository.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ContentType"]
+    type_ = "https://openminds.ebrains.eu/core/ContentType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

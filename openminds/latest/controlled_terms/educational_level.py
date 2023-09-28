@@ -15,7 +15,7 @@ class EducationalLevel(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/EducationalLevel"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/EducationalLevel"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

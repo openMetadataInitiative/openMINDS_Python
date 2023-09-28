@@ -15,7 +15,7 @@ class CranialWindowPreparation(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"]
+    type_ = "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

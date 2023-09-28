@@ -14,7 +14,7 @@ class FileRepositoryStructure(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/FileRepositoryStructure"]
+    type_ = "https://openminds.ebrains.eu/core/FileRepositoryStructure"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

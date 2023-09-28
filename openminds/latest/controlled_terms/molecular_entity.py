@@ -15,7 +15,7 @@ class MolecularEntity(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/MolecularEntity"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

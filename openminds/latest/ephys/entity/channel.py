@@ -14,7 +14,7 @@ class Channel(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/ephys/Channel"]
+    type_ = "https://openminds.ebrains.eu/ephys/Channel"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

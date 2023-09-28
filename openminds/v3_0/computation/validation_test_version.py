@@ -4,8 +4,8 @@ Structured information about a specific implementation of a validation test.
 
 # this file was auto-generated!
 
-from datetime import date
 from openminds.base import IRI
+from datetime import date
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -16,7 +16,7 @@ class ValidationTestVersion(LinkedMetadata):
     Structured information about a specific implementation of a validation test.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/ValidationTestVersion"]
+    type_ = "https://openminds.ebrains.eu/computation/ValidationTestVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

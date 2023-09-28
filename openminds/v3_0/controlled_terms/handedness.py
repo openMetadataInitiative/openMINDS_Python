@@ -15,7 +15,7 @@ class Handedness(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Handedness"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Handedness"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

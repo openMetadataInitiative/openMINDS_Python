@@ -14,7 +14,7 @@ class ORCID(LinkedMetadata):
     A persistent identifier for a researcher provided by Open Researcher and Contributor ID, Inc.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ORCID"]
+    type_ = "https://openminds.ebrains.eu/core/ORCID"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -15,7 +15,7 @@ class DatasetVersion(LinkedMetadata):
     Structured information on data originating from human/animal studies or simulations (version level).
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/DatasetVersion"]
+    type_ = "https://openminds.ebrains.eu/core/DatasetVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

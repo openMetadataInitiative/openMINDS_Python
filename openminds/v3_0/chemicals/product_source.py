@@ -14,7 +14,7 @@ class ProductSource(LinkedMetadata):
     Structured information about the source of a chemical substance or mixture.
     """
 
-    type_ = ["https://openminds.ebrains.eu/chemicals/ProductSource"]
+    type_ = "https://openminds.ebrains.eu/chemicals/ProductSource"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

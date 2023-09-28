@@ -15,7 +15,7 @@ class Terminology(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Terminology"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Terminology"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

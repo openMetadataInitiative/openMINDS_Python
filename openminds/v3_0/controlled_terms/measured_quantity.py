@@ -15,7 +15,7 @@ class MeasuredQuantity(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

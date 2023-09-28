@@ -14,7 +14,7 @@ class ChemicalSubstance(LinkedMetadata):
     Structured information about a chemical substance.
     """
 
-    type_ = ["https://openminds.ebrains.eu/chemicals/ChemicalSubstance"]
+    type_ = "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

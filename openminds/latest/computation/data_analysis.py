@@ -15,7 +15,7 @@ class DataAnalysis(LinkedMetadata):
     Structured information on inspecting, cleansing, transforming, and modelling data.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/DataAnalysis"]
+    type_ = "https://openminds.ebrains.eu/computation/DataAnalysis"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

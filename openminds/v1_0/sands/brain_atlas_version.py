@@ -14,7 +14,7 @@ class BrainAtlasVersion(LinkedMetadata):
     Structured information on a brain atlas (version level).
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/BrainAtlasVersion"]
+    type_ = "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

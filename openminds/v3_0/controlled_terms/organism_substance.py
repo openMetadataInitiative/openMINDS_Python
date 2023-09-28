@@ -15,7 +15,7 @@ class OrganismSubstance(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

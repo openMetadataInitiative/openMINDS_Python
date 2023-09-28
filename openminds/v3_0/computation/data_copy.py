@@ -15,7 +15,7 @@ class DataCopy(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/DataCopy"]
+    type_ = "https://openminds.ebrains.eu/computation/DataCopy"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

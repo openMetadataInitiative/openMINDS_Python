@@ -15,7 +15,7 @@ class WebService(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/WebService"]
+    type_ = "https://openminds.ebrains.eu/core/WebService"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class AtlasTerminology(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/AtlasTerminology"]
+    type_ = "https://openminds.ebrains.eu/sands/AtlasTerminology"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

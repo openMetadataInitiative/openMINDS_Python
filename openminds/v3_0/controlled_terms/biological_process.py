@@ -15,7 +15,7 @@ class BiologicalProcess(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/BiologicalProcess"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/BiologicalProcess"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

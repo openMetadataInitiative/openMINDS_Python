@@ -14,7 +14,7 @@ class ChemicalMixture(LinkedMetadata):
     Structured information about a mixture of chemical substances.
     """
 
-    type_ = ["https://openminds.ebrains.eu/chemicals/ChemicalMixture"]
+    type_ = "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

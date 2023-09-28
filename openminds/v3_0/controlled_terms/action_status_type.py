@@ -15,7 +15,7 @@ class ActionStatusType(LinkedMetadata):
     Structured information about the status of an action.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/ActionStatusType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ActionStatusType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

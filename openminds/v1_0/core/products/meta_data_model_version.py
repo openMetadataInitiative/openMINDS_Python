@@ -14,7 +14,7 @@ class MetaDataModelVersion(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/MetaDataModelVersion"]
+    type_ = "https://openminds.ebrains.eu/core/MetaDataModelVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

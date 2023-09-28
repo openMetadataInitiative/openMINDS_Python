@@ -14,7 +14,7 @@ class TissueCulturePreparation(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation"]
+    type_ = "https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

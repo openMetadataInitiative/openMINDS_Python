@@ -15,7 +15,7 @@ class UBERONParcellation(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

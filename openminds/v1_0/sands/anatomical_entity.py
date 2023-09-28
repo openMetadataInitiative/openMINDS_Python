@@ -14,7 +14,7 @@ class AnatomicalEntity(LinkedMetadata):
     Structured information on an anatomical entity.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/AnatomicalEntity"]
+    type_ = "https://openminds.ebrains.eu/sands/AnatomicalEntity"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

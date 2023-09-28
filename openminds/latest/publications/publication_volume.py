@@ -14,7 +14,7 @@ class PublicationVolume(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/publications/PublicationVolume"]
+    type_ = "https://openminds.ebrains.eu/publications/PublicationVolume"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

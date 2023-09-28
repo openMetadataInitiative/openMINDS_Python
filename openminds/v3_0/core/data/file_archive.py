@@ -15,7 +15,7 @@ class FileArchive(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/FileArchive"]
+    type_ = "https://openminds.ebrains.eu/core/FileArchive"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

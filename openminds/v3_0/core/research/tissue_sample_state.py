@@ -14,7 +14,7 @@ class TissueSampleState(LinkedMetadata):
     Structured information on a temporary state of a tissue sample.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/TissueSampleState"]
+    type_ = "https://openminds.ebrains.eu/core/TissueSampleState"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

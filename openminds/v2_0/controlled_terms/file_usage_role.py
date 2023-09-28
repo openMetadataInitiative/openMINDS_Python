@@ -15,7 +15,7 @@ class FileUsageRole(LinkedMetadata):
     Structured information on the usage role of a file instance or bundle.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/FileUsageRole"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/FileUsageRole"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

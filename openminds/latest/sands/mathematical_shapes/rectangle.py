@@ -14,7 +14,7 @@ class Rectangle(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/Rectangle"]
+    type_ = "https://openminds.ebrains.eu/sands/Rectangle"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

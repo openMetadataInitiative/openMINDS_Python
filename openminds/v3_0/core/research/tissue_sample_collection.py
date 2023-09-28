@@ -14,7 +14,7 @@ class TissueSampleCollection(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/TissueSampleCollection"]
+    type_ = "https://openminds.ebrains.eu/core/TissueSampleCollection"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

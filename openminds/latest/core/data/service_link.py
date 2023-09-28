@@ -15,7 +15,7 @@ class ServiceLink(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ServiceLink"]
+    type_ = "https://openminds.ebrains.eu/core/ServiceLink"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

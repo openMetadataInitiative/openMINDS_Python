@@ -15,7 +15,7 @@ class Service(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Service"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Service"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

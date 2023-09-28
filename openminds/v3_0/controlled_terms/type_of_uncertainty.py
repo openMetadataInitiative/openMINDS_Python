@@ -15,7 +15,7 @@ class TypeOfUncertainty(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

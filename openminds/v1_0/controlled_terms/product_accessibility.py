@@ -14,7 +14,7 @@ class productAccessibility(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/productAccessibility"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/productAccessibility"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

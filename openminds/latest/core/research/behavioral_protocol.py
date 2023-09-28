@@ -14,7 +14,7 @@ class BehavioralProtocol(LinkedMetadata):
     Structured information about a protocol used in an experiment studying human or animal behavior.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/BehavioralProtocol"]
+    type_ = "https://openminds.ebrains.eu/core/BehavioralProtocol"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

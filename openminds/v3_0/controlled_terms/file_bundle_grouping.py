@@ -15,7 +15,7 @@ class FileBundleGrouping(LinkedMetadata):
     Structured information on the grouping mechanism of a file bundle.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

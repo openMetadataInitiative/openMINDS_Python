@@ -4,8 +4,8 @@
 
 # this file was auto-generated!
 
-from datetime import date
 from openminds.base import IRI
+from datetime import date
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -16,7 +16,7 @@ class LearningResource(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/publications/LearningResource"]
+    type_ = "https://openminds.ebrains.eu/publications/LearningResource"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

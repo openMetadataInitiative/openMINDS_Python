@@ -14,7 +14,7 @@ class SoftwareApplicationCategory(LinkedMetadata):
     Structured information on the category of the software application.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

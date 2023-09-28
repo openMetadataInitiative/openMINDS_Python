@@ -14,7 +14,7 @@ class Pipette(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/ephys/Pipette"]
+    type_ = "https://openminds.ebrains.eu/ephys/Pipette"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class AnatomicalEntityRelation(LinkedMetadata):
     Structured information on the relation between one anatomical entity and another.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"]
+    type_ = "https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

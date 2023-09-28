@@ -14,7 +14,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"]
+    type_ = "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

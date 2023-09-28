@@ -14,7 +14,7 @@ class CriteriaQualityType(LinkedMetadata):
     Structured information on the quality type of the defined criteria for a measurement.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

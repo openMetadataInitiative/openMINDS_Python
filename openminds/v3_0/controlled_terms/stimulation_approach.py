@@ -15,7 +15,7 @@ class StimulationApproach(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/StimulationApproach"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/StimulationApproach"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

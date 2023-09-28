@@ -15,7 +15,7 @@ class BrainAtlas(LinkedMetadata):
     Structured information on a brain atlas (concept level).
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/BrainAtlas"]
+    type_ = "https://openminds.ebrains.eu/sands/BrainAtlas"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

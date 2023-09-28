@@ -14,7 +14,7 @@ class CoordinateSpace(LinkedMetadata):
     Structured information on a coordinate space.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/CoordinateSpace"]
+    type_ = "https://openminds.ebrains.eu/sands/CoordinateSpace"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

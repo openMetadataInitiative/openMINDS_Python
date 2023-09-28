@@ -15,7 +15,7 @@ class ElectricalStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -15,7 +15,7 @@ class CellCultureType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/CellCultureType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/CellCultureType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

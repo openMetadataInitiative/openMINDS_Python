@@ -15,7 +15,7 @@ class SetupType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/SetupType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/SetupType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

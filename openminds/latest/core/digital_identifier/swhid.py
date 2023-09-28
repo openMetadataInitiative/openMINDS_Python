@@ -14,7 +14,7 @@ class SWHID(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/SWHID"]
+    type_ = "https://openminds.ebrains.eu/core/SWHID"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

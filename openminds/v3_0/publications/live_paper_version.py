@@ -4,9 +4,9 @@
 
 # this file was auto-generated!
 
-from datetime import date
-from datetime import datetime
 from openminds.base import IRI
+from datetime import datetime
+from datetime import date
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -17,7 +17,7 @@ class LivePaperVersion(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/publications/LivePaperVersion"]
+    type_ = "https://openminds.ebrains.eu/publications/LivePaperVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

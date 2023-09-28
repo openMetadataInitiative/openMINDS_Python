@@ -15,7 +15,7 @@ class FileRepositoryType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/FileRepositoryType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/FileRepositoryType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -15,7 +15,7 @@ class ContributionType(LinkedMetadata):
     Structured information on the type of contribution a person or organization performed.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/ContributionType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ContributionType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

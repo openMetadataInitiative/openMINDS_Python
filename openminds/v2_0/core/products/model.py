@@ -14,7 +14,7 @@ class Model(LinkedMetadata):
     Structured information on a computational model (concept level).
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/Model"]
+    type_ = "https://openminds.ebrains.eu/core/Model"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

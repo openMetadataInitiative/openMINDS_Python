@@ -15,7 +15,7 @@ class DifferenceMeasure(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/DifferenceMeasure"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/DifferenceMeasure"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -15,7 +15,7 @@ class BiologicalOrder(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/BiologicalOrder"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/BiologicalOrder"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

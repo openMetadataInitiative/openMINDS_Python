@@ -14,7 +14,7 @@ class PreparationType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/PreparationType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/PreparationType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

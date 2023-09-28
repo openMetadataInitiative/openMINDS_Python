@@ -14,7 +14,7 @@ class Environment(LinkedMetadata):
     Structured information on the computer system or set of systems in which a computation is deployed and executed.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/Environment"]
+    type_ = "https://openminds.ebrains.eu/computation/Environment"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

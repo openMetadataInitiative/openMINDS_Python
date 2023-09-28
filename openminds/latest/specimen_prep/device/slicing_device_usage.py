@@ -14,7 +14,7 @@ class SlicingDeviceUsage(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"]
+    type_ = "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

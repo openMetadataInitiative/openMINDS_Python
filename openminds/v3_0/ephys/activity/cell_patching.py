@@ -15,7 +15,7 @@ class CellPatching(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/ephys/CellPatching"]
+    type_ = "https://openminds.ebrains.eu/ephys/CellPatching"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

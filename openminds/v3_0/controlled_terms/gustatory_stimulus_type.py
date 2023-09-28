@@ -15,7 +15,7 @@ class GustatoryStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

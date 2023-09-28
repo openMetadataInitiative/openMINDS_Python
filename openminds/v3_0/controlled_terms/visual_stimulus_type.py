@@ -15,7 +15,7 @@ class VisualStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/VisualStimulusType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/VisualStimulusType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

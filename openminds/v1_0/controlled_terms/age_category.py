@@ -14,7 +14,7 @@ class AgeCategory(LinkedMetadata):
     Structured information on the life cycle (semantic term) of a specific age group.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/AgeCategory"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/AgeCategory"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

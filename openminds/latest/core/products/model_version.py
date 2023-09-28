@@ -4,8 +4,8 @@ Structured information on a computational model (version level).
 
 # this file was auto-generated!
 
-from datetime import date
 from openminds.base import IRI
+from datetime import date
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -16,7 +16,7 @@ class ModelVersion(LinkedMetadata):
     Structured information on a computational model (version level).
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ModelVersion"]
+    type_ = "https://openminds.ebrains.eu/core/ModelVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

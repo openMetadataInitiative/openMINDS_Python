@@ -15,7 +15,7 @@ class AnnotationCriteriaType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

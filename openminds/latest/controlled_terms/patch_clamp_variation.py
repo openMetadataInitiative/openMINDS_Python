@@ -15,7 +15,7 @@ class PatchClampVariation(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/PatchClampVariation"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/PatchClampVariation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

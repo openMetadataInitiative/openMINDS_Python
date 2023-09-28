@@ -14,7 +14,7 @@ class SubjectState(LinkedMetadata):
     Structured information on a temporary state of a subject.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/SubjectState"]
+    type_ = "https://openminds.ebrains.eu/core/SubjectState"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

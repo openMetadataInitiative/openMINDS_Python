@@ -14,7 +14,7 @@ class ElectrodeArray(LinkedMetadata):
     Structured information on an electrode array.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/ElectrodeArray"]
+    type_ = "https://openminds.ebrains.eu/sands/ElectrodeArray"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

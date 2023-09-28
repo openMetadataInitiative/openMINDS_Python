@@ -14,7 +14,7 @@ class SingleColor(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/SingleColor"]
+    type_ = "https://openminds.ebrains.eu/sands/SingleColor"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

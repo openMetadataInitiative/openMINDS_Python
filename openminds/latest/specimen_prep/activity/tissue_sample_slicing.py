@@ -14,7 +14,7 @@ class TissueSampleSlicing(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"]
+    type_ = "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

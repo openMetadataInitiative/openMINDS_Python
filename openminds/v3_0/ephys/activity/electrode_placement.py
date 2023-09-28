@@ -15,7 +15,7 @@ class ElectrodePlacement(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/ephys/ElectrodePlacement"]
+    type_ = "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

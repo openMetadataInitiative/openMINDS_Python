@@ -15,7 +15,7 @@ class OpticalStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

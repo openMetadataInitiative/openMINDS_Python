@@ -14,7 +14,7 @@ class ISSN(LinkedMetadata):
     An International Standard Serial Number of the ISSN International Centre.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ISSN"]
+    type_ = "https://openminds.ebrains.eu/core/ISSN"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

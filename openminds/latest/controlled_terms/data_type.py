@@ -15,7 +15,7 @@ class DataType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/DataType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/DataType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

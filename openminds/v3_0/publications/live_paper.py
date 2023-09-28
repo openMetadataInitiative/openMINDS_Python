@@ -15,7 +15,7 @@ class LivePaper(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/publications/LivePaper"]
+    type_ = "https://openminds.ebrains.eu/publications/LivePaper"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

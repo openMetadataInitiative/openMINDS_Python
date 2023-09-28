@@ -15,7 +15,7 @@ class ParcellationTerminology(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/ParcellationTerminology"]
+    type_ = "https://openminds.ebrains.eu/sands/ParcellationTerminology"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

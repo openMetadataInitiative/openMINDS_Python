@@ -14,7 +14,7 @@ class RORID(LinkedMetadata):
     A persistent identifier for a research organization, provided by the Research Organization Registry.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/RORID"]
+    type_ = "https://openminds.ebrains.eu/core/RORID"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

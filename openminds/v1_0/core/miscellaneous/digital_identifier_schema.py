@@ -14,7 +14,7 @@ class DigitalIdentifierSchema(LinkedMetadata):
     Structured information on a digital identifier schema.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/DigitalIdentifierSchema"]
+    type_ = "https://openminds.ebrains.eu/core/DigitalIdentifierSchema"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

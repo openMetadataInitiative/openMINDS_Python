@@ -14,7 +14,7 @@ class ViewerSpecification(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/ViewerSpecification"]
+    type_ = "https://openminds.ebrains.eu/sands/ViewerSpecification"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

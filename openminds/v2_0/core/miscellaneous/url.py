@@ -15,7 +15,7 @@ class URL(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/URL"]
+    type_ = "https://openminds.ebrains.eu/core/URL"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -15,7 +15,7 @@ class Strain(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Strain"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Strain"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

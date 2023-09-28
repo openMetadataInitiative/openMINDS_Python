@@ -15,7 +15,7 @@ class ChemicalMixtureType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/ChemicalMixtureType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ChemicalMixtureType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

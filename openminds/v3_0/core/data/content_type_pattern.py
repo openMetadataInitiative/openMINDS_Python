@@ -14,7 +14,7 @@ class ContentTypePattern(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ContentTypePattern"]
+    type_ = "https://openminds.ebrains.eu/core/ContentTypePattern"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

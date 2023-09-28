@@ -15,7 +15,7 @@ class ModelVersion(LinkedMetadata):
     Structured information on a computational model (version level).
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ModelVersion"]
+    type_ = "https://openminds.ebrains.eu/core/ModelVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

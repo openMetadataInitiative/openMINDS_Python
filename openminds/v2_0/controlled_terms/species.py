@@ -15,7 +15,7 @@ class Species(LinkedMetadata):
     Structured information on the species.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Species"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Species"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

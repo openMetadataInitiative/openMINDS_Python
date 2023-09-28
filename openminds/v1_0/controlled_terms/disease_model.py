@@ -14,7 +14,7 @@ class DiseaseModel(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/DiseaseModel"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

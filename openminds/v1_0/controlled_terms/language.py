@@ -14,7 +14,7 @@ class Language(LinkedMetadata):
     Structured information on the available language setting.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Language"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Language"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

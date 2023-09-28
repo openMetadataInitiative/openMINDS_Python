@@ -14,7 +14,7 @@ class ModelScope(LinkedMetadata):
     Structured information on the scope of the computational model.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/ModelScope"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ModelScope"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

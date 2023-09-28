@@ -15,7 +15,7 @@ class Simulation(LinkedMetadata):
     Structured information about a process of running simulations of a computational model.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/Simulation"]
+    type_ = "https://openminds.ebrains.eu/computation/Simulation"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

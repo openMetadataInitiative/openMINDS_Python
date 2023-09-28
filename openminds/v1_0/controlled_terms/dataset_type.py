@@ -14,7 +14,7 @@ class DatasetType(LinkedMetadata):
     Structured information on the provided data type.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/DatasetType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/DatasetType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

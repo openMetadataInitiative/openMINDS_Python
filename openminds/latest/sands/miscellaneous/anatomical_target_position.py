@@ -14,7 +14,7 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"]
+    type_ = "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

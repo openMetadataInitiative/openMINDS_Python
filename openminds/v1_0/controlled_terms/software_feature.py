@@ -14,7 +14,7 @@ class SoftwareFeature(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

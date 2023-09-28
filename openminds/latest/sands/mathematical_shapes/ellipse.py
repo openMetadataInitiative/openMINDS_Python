@@ -14,7 +14,7 @@ class Ellipse(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/Ellipse"]
+    type_ = "https://openminds.ebrains.eu/sands/Ellipse"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

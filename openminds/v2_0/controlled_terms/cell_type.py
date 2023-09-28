@@ -15,7 +15,7 @@ class CellType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/CellType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/CellType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

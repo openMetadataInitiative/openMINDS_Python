@@ -14,7 +14,7 @@ class TissueSample(LinkedMetadata):
     Structured information on a tissue sample.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/TissueSample"]
+    type_ = "https://openminds.ebrains.eu/core/TissueSample"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

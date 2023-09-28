@@ -14,7 +14,7 @@ class QualitativeOverlap(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

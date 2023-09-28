@@ -15,7 +15,7 @@ class OlfactoryStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class ParameterSetting(LinkedMetadata):
     Structured information on a used parameter setting.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ParameterSetting"]
+    type_ = "https://openminds.ebrains.eu/core/ParameterSetting"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

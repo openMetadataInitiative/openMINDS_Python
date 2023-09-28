@@ -15,7 +15,7 @@ class AuditoryStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

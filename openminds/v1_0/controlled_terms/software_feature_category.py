@@ -14,7 +14,7 @@ class SoftwareFeatureCategory(LinkedMetadata):
     Structured information on the category of the software feature.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/SoftwareFeatureCategory"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/SoftwareFeatureCategory"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -15,7 +15,7 @@ class Technique(LinkedMetadata):
     Structured information on the technique.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Technique"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Technique"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

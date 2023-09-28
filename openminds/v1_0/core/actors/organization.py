@@ -14,7 +14,7 @@ class Organization(LinkedMetadata):
     Structured information on an organization.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/Organization"]
+    type_ = "https://openminds.ebrains.eu/core/Organization"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

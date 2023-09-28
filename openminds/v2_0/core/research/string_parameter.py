@@ -14,7 +14,7 @@ class StringParameter(EmbeddedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/StringParameter"]
+    type_ = "https://openminds.ebrains.eu/core/StringParameter"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

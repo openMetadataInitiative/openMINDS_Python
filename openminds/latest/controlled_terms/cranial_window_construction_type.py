@@ -15,7 +15,7 @@ class CranialWindowConstructionType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

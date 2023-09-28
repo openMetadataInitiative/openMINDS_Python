@@ -14,7 +14,7 @@ class Periodical(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/publications/Periodical"]
+    type_ = "https://openminds.ebrains.eu/publications/Periodical"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

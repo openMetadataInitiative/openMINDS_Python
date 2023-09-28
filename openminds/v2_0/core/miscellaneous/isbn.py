@@ -14,7 +14,7 @@ class ISBN(LinkedMetadata):
     An International Standard Book Number of the International ISBN Agency.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ISBN"]
+    type_ = "https://openminds.ebrains.eu/core/ISBN"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

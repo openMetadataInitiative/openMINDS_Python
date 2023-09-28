@@ -14,7 +14,7 @@ class LaunchConfiguration(LinkedMetadata):
     Structured information about the launch of a computational process.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/LaunchConfiguration"]
+    type_ = "https://openminds.ebrains.eu/computation/LaunchConfiguration"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

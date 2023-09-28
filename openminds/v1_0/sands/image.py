@@ -14,7 +14,7 @@ class Image(LinkedMetadata):
     Structured information on an image.
     """
 
-    type_ = ["https://openminds.ebrains.eu/sands/Image"]
+    type_ = "https://openminds.ebrains.eu/sands/Image"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

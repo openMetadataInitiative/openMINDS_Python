@@ -14,7 +14,7 @@ class StudyTargetType(LinkedMetadata):
     Structured information on the general type of the study target.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/StudyTargetType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/StudyTargetType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

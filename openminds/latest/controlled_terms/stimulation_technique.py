@@ -15,7 +15,7 @@ class StimulationTechnique(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/StimulationTechnique"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/StimulationTechnique"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

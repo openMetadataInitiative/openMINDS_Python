@@ -15,7 +15,7 @@ class OperatingDevice(LinkedMetadata):
     Structured information on the operating device.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/OperatingDevice"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

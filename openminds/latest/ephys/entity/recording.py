@@ -14,7 +14,7 @@ class Recording(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/ephys/Recording"]
+    type_ = "https://openminds.ebrains.eu/ephys/Recording"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

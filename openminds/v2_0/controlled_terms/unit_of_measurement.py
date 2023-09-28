@@ -15,7 +15,7 @@ class UnitOfMeasurement(LinkedMetadata):
     Structured information on the unit of measurement.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

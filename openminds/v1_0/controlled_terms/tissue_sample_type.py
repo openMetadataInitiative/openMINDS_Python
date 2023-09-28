@@ -14,7 +14,7 @@ class TissueSampleType(LinkedMetadata):
     Structured information on the general type of the tissue sample.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/TissueSampleType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/TissueSampleType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

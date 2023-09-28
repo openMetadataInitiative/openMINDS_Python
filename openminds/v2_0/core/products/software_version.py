@@ -15,7 +15,7 @@ class SoftwareVersion(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/SoftwareVersion"]
+    type_ = "https://openminds.ebrains.eu/core/SoftwareVersion"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

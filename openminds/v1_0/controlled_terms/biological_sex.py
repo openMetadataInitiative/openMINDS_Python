@@ -14,7 +14,7 @@ class BiologicalSex(LinkedMetadata):
     Structured information on the biological sex of a subject.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/BiologicalSex"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

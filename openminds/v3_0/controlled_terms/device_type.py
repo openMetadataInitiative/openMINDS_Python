@@ -15,7 +15,7 @@ class DeviceType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/DeviceType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/DeviceType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

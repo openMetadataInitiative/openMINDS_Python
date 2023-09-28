@@ -15,7 +15,7 @@ class Colormap(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Colormap"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Colormap"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

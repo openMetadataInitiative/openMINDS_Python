@@ -15,7 +15,7 @@ class ProtocolExecution(LinkedMetadata):
     Structured information on a protocol execution.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/ProtocolExecution"]
+    type_ = "https://openminds.ebrains.eu/core/ProtocolExecution"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

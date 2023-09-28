@@ -14,7 +14,7 @@ class WorkflowExecution(LinkedMetadata):
     Structured information about an execution of a computational workflow.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/WorkflowExecution"]
+    type_ = "https://openminds.ebrains.eu/computation/WorkflowExecution"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

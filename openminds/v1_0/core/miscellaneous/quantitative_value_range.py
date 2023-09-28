@@ -14,7 +14,7 @@ class QuantitativeValueRange(EmbeddedMetadata):
     A representation of a range of quantitative values.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/QuantitativeValueRange"]
+    type_ = "https://openminds.ebrains.eu/core/QuantitativeValueRange"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

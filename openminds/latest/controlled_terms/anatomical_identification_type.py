@@ -15,7 +15,7 @@ class AnatomicalIdentificationType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/AnatomicalIdentificationType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/AnatomicalIdentificationType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class Funding(LinkedMetadata):
     Structured information on used funding.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/Funding"]
+    type_ = "https://openminds.ebrains.eu/core/Funding"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

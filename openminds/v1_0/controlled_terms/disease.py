@@ -14,7 +14,7 @@ class Disease(LinkedMetadata):
     Structured information on a disease.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Disease"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Disease"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

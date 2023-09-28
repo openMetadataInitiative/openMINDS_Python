@@ -15,7 +15,7 @@ class EthicsAssessment(LinkedMetadata):
     Structured information on the ethics assessment of a dataset.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/EthicsAssessment"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/EthicsAssessment"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

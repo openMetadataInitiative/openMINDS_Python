@@ -14,7 +14,7 @@ class ModelAbstractionLevel(LinkedMetadata):
     Structured information on abstraction level of the computational model.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

@@ -14,7 +14,7 @@ class SoftwareAgent(LinkedMetadata):
     Structured information about a piece of software or web service that can perform a task autonomously.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/SoftwareAgent"]
+    type_ = "https://openminds.ebrains.eu/computation/SoftwareAgent"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

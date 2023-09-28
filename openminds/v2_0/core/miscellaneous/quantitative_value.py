@@ -14,7 +14,7 @@ class QuantitativeValue(EmbeddedMetadata):
     Structured information on a quantitative value.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/QuantitativeValue"]
+    type_ = "https://openminds.ebrains.eu/core/QuantitativeValue"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

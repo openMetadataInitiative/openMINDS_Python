@@ -15,7 +15,7 @@ class BehavioralTask(LinkedMetadata):
     Structured information on the behavioral task that had to be peformed by a subject.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/BehavioralTask"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/BehavioralTask"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

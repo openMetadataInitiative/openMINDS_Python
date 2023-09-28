@@ -14,7 +14,7 @@ class LocalFile(LinkedMetadata):
     Structured information about a file that is not accessible via a URL.
     """
 
-    type_ = ["https://openminds.ebrains.eu/computation/LocalFile"]
+    type_ = "https://openminds.ebrains.eu/computation/LocalFile"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

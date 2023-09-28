@@ -14,7 +14,7 @@ class Hash(LinkedMetadata):
     Structured information on a hash.
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/Hash"]
+    type_ = "https://openminds.ebrains.eu/core/Hash"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

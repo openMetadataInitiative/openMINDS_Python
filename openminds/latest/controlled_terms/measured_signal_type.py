@@ -15,7 +15,7 @@ class MeasuredSignalType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/MeasuredSignalType"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/MeasuredSignalType"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

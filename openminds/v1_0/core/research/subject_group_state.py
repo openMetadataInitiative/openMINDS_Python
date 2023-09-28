@@ -14,7 +14,7 @@ class SubjectGroupState(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/core/SubjectGroupState"]
+    type_ = "https://openminds.ebrains.eu/core/SubjectGroupState"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

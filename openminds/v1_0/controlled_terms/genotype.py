@@ -14,7 +14,7 @@ class Genotype(LinkedMetadata):
     Structured information on the genotype of a subject.
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/Genotype"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Genotype"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [

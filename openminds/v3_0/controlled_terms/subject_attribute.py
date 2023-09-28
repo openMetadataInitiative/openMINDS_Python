@@ -15,7 +15,7 @@ class SubjectAttribute(LinkedMetadata):
     <description not available>
     """
 
-    type_ = ["https://openminds.ebrains.eu/controlledTerms/SubjectAttribute"]
+    type_ = "https://openminds.ebrains.eu/controlledTerms/SubjectAttribute"
     context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
