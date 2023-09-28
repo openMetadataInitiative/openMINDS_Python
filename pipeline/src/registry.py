@@ -18,22 +18,11 @@ def register_class(target_class: ContainsMetadata):
     if "openminds" in target_class.__module__:
         parts = target_class.__module__.split(".")
         name = ".".join(parts[0:3] + [target_class.__name__])  # e.g. openminds.latest.core.Dataset
-    # else:
-    #     name = target_class.__module__.split(".")[-1] + "." + target_class.__name__
 
-        registry["names"][name] = target_class
         if hasattr(target_class, "type_"):
-            if isinstance(target_class.type_, str):
-                type_ = target_class.type_
-            else:
-                type_ = tuple(sorted(target_class.type_))
-            if type_ in registry["types"]:
-                if isinstance(registry["types"][type_], list):
-                    registry["types"][type_].append(target_class)
-                else:
-                    registry["types"][type_] = [registry["types"][type_], target_class]
-            else:
-                registry["types"][type_] = target_class
+            registry["names"][name] = target_class
+            type_ = target_class.type_
+            registry["types"][type_] = target_class
 
 
 def lookup(class_name: str) -> ContainsMetadata:
@@ -41,15 +30,15 @@ def lookup(class_name: str) -> ContainsMetadata:
     return registry["names"][class_name]
 
 
-def lookup_type(class_type: Union[str, List[str]]) -> ContainsMetadata:
+def lookup_type(class_type: str) -> ContainsMetadata:
     """Return the class whose global type identifier (a URI) is given."""
     if isinstance(class_type, str):
         if class_type in registry["types"]:
             return registry["types"][class_type]
         else:
-            return registry["types"][(class_type,)]
+            raise ValueError(f"Type '{class_type}' was not found in the registry.")
     else:
-        return registry["types"][tuple(sorted(class_type))]
+        raise TypeError("class type must be a string")
 
 
 docstring_template = """
