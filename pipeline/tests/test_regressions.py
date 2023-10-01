@@ -1,3 +1,4 @@
+from datetime import date
 import json
 import os
 from openminds import Collection, IRI
@@ -146,3 +147,38 @@ def test_issue0007():
         ],
     }
     assert saved_data == expected_saved_data
+
+
+def test_issue0008():
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/8
+    # The instance of linked types in instances of embedded types are integrated as embedded not linked
+    # (example: person -> affiliation (embedded) -> organization (linked))
+
+    uni1 = omcore.Organization(full_name="University of This Place", id="_:001")
+    person = omcore.Person(
+        id="_:002",
+        given_name="A",
+        family_name="Professor",
+        affiliation=[omcore.Affiliation(member_of=uni1, end_date=date(2023, 9, 30))],
+    )
+    actual = person.to_jsonld(
+        include_empty_properties=False, embed_linked_nodes=False, with_context=True
+    )
+    expected = {
+        "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@id": "_:002",
+        "@type": "https://openminds.ebrains.eu/core/Person",
+        "vocab:affiliation": [
+            {
+                "@type": "https://openminds.ebrains.eu/core/Affiliation",
+                "vocab:endDate": "2023-09-30",
+                "vocab:memberOf": {
+                    "@id": "_:001",
+                    "@type": "https://openminds.ebrains.eu/core/Organization",
+                },
+            }
+        ],
+        "vocab:familyName": "Professor",
+        "vocab:givenName": "A",
+    }
+    assert actual == expected
