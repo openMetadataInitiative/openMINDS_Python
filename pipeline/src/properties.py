@@ -68,6 +68,8 @@ class Property:
                             f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
                             f"value contains {type(item)}"
                         )
+                    elif isinstance(item, Node):
+                        failures.update(item.validate())
                 if self.min_items:
                     if len(value) < self.min_items:
                         failures["multiplicity"].append(
@@ -101,6 +103,8 @@ class Property:
                     f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
                     f"value is {type(value)}"
                 )
+            elif isinstance(value, Node):
+                failures.update(value.validate())
         # todo: check formatting, multiline
         return failures
 
