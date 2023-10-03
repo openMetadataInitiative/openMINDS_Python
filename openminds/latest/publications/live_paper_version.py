@@ -4,8 +4,8 @@
 
 # this file was auto-generated!
 
-from openminds.base import IRI
 from datetime import datetime
+from openminds.base import IRI
 from datetime import date
 
 from openminds.base import LinkedMetadata

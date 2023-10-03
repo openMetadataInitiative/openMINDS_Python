@@ -31,6 +31,33 @@ class Node(metaclass=Registry):
         """
         docstring goes here
         """
+
+        def value_to_jsonld(value):
+            if isinstance(value, LinkedMetadata):
+                if embed_linked_nodes:
+                    item = value.to_jsonld(
+                        with_context=False,
+                        include_empty_properties=include_empty_properties,
+                        embed_linked_nodes=embed_linked_nodes,
+                    )
+                else:
+                    if hasattr(value, "id") and value.id is None:
+                        raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
+                    item = {"@id": value.id, "@type": value.type_}
+            elif isinstance(value, EmbeddedMetadata):
+                item = value.to_jsonld(
+                    with_context=False,
+                    include_empty_properties=include_empty_properties,
+                    embed_linked_nodes=embed_linked_nodes,
+                )
+            elif hasattr(value, "to_jsonld"):  # e.g. IRI
+                item = value.to_jsonld()
+            elif isinstance(value, (date, datetime)):
+                item = value.isoformat()
+            else:
+                item = value
+            return item
+
         data = {"@type": self.type_}
         if with_context:
             data["@context"] = {"vocab": "https://openminds.ebrains.eu/vocab/"}
@@ -39,21 +66,12 @@ class Node(metaclass=Registry):
         for property in self.__class__.properties:
             value = getattr(self, property.name)
             if value or include_empty_properties:
-                if isinstance(value, LinkedMetadata):
-                    if embed_linked_nodes:
-                        data[property.path] = value.to_jsonld(with_context=False)
-                    else:
-                        data[property.path] = {"@id": value.id, "@type": value.type_}
-                        if hasattr(value, "id") and value.id is None:
-                            raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
-                elif isinstance(value, EmbeddedMetadata):
-                    data[property.path] = value.to_jsonld(with_context=False)
-                elif hasattr(value, "to_jsonld"):  # e.g. IRI
-                    data[property.path] = value.to_jsonld()
-                elif isinstance(value, (date, datetime)):
-                    data[property.path] = value.isoformat()
+                if property.multiple:
+                    if not isinstance(value, (tuple, list)):
+                        value = [value]
+                    data[property.path] = [value_to_jsonld(item) for item in value]
                 else:
-                    data[property.path] = value
+                    data[property.path] = value_to_jsonld(value)
         return {key: data[key] for key in sorted(data)}
 
     @classmethod
@@ -106,8 +124,18 @@ class Node(metaclass=Registry):
         _links = []
         for property in self.__class__.properties:
             value = getattr(self, property.name)
-            if isinstance(value, LinkedMetadata):
+            if property.multiple:
+                if not isinstance(value, (tuple, list)):
+                    value = [value]
+                for item in value:
+                    if isinstance(item, LinkedMetadata):
+                        _links.append(item)
+                    if hasattr(item, "links"):
+                        _links.extend(item.links)
+            elif isinstance(value, LinkedMetadata):
                 _links.append(value)
+            if hasattr(value, "links"):
+                _links.extend(value.links)
         return _links
 
 
