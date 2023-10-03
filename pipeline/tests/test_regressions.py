@@ -60,6 +60,28 @@ def test_issue_0003():
     )
 
 
+def test_issue0005():
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/5
+    # validate() does not complain about list/tuple entries that should be a direct single entry
+    uni1 = omcore.Organization(full_name="University of This Place")
+    person = omcore.Person(
+        given_name="A",
+        family_name="Professor",
+        affiliation=[
+            omcore.Affiliation(
+                member_of=uni1,
+                end_date=(2023, 9, 30)
+            )
+        ]
+    )
+    failures = person.validate()
+    assert len(failures) == 1
+
+    person.affiliation[0].end_date = date(2023, 9, 30)
+    failures = person.validate()
+    assert len(failures) == 0
+
+
 def test_issue0007():
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/7
     # Instances of embedded types with value type "array" are not correctly resolved for saving and causing an error.
