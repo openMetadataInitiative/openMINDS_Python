@@ -112,28 +112,34 @@ class Property:
             data: the JSON-LD data
         """
         # todo: check data type
-        if self.types == (str,):
-            if self.formatting != "text/plain":
-                pass  # todo
-            return data
-        elif self.types == (IRI,):
-            assert isinstance(data, str)
-            return IRI(data)
-        elif float in self.types:
-            return data
-        elif int in self.types:
-            return data
-        elif datetime in self.types:
-            return datetime.fromisoformat(data)
-        elif date in self.types:
-            return date.fromisoformat(data)
-        elif all(issubclass(t, Node) for t in self.types):
-            # use data["@type"] to figure out class to use
-            if "@type" in data:
-                for cls in self.types:
-                    if cls.type_ == data["@type"]:
-                        return cls.from_jsonld(data)
+        def deserialize_item(item):
+            if self.types == (str,):
+                if self.formatting != "text/plain":
+                    pass  # todo
+                return item
+            elif self.types == (IRI,):
+                assert isinstance(item, str)
+                return IRI(item)
+            elif float in self.types:
+                return item
+            elif int in self.types:
+                return item
+            elif datetime in self.types:
+                return datetime.fromisoformat(item)
+            elif date in self.types:
+                return date.fromisoformat(item)
+            elif all(issubclass(t, Node) for t in self.types):
+                # use data["@type"] to figure out class to use
+                if "@type" in item:
+                    for cls in self.types:
+                        if cls.type_ == item["@type"]:
+                            return cls.from_jsonld(item)
+                else:
+                    raise Exception("missing @type")
             else:
-                raise Exception("missing @type")
+                raise NotImplementedError()
+
+        if self.multiple and isinstance(data, (tuple, list)):
+            return [deserialize_item(item) for item in data]
         else:
-            raise NotImplementedError()
+            return deserialize_item(data)
