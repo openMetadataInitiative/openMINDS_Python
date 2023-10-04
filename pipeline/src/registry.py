@@ -74,7 +74,9 @@ class Registry(type):
                     return "~{}.{}".format(type_.__module__, type_.__name__)
 
             for property in cls.properties:
-                doc = "{} : {}\n    {}".format(property.name, ", ".join(gen_path(t) for t in property.types), property.description)
+                doc = "{} : {}\n    {}".format(
+                    property.name, ", ".join(gen_path(t) for t in property.types), property.description
+                )
                 # todo: add property.instructions if present
                 field_docs.append(doc)
         return docstring_template.format(base=cls._base_docstring, args="\n".join(field_docs))

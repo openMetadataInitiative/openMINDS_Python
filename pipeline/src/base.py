@@ -14,7 +14,6 @@ from .registry import Registry
 
 
 class Node(metaclass=Registry):
-
     @property
     def uuid(self):
         if self.id is not None:
@@ -39,20 +38,17 @@ class Node(metaclass=Registry):
                     item = value.to_jsonld(
                         with_context=False,
                         include_empty_properties=include_empty_properties,
-                        embed_linked_nodes=embed_linked_nodes
+                        embed_linked_nodes=embed_linked_nodes,
                     )
                 else:
                     if hasattr(value, "id") and value.id is None:
                         raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
-                    item = {
-                        "@id": value.id,
-                        "@type": value.type_
-                    }
+                    item = {"@id": value.id, "@type": value.type_}
             elif isinstance(value, EmbeddedMetadata):
                 item = value.to_jsonld(
                     with_context=False,
                     include_empty_properties=include_empty_properties,
-                    embed_linked_nodes=embed_linked_nodes
+                    embed_linked_nodes=embed_linked_nodes,
                 )
             elif hasattr(value, "to_jsonld"):  # e.g. IRI
                 item = value.to_jsonld()
@@ -62,13 +58,9 @@ class Node(metaclass=Registry):
                 item = value
             return item
 
-        data = {
-            "@type": self.type_
-        }
+        data = {"@type": self.type_}
         if with_context:
-            data["@context"] = {
-                "vocab": "https://openminds.ebrains.eu/vocab/"
-            }
+            data["@context"] = {"vocab": "https://openminds.ebrains.eu/vocab/"}
         if hasattr(self, "id") and self.id:
             data["@id"] = self.id
         for property in self.__class__.properties:
@@ -77,9 +69,7 @@ class Node(metaclass=Registry):
                 if property.multiple:
                     if not isinstance(value, (tuple, list)):
                         value = [value]
-                    data[property.path] = [
-                        value_to_jsonld(item) for item in value
-                    ]
+                    data[property.path] = [value_to_jsonld(item) for item in value]
                 else:
                     data[property.path] = value_to_jsonld(value)
         return {key: data[key] for key in sorted(data)}

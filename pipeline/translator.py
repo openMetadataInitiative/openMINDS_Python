@@ -6,7 +6,6 @@ from typing import List, Optional, Dict
 from jinja2 import Environment, select_autoescape, FileSystemLoader
 
 
-
 def generate_python_name(json_name, allow_multiple=False):
     python_name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", json_name)
     python_name = re.sub("([a-z0-9])([A-Z])", r"\1_\2", python_name).lower()
@@ -33,25 +32,25 @@ def generate_python_name(json_name, allow_multiple=False):
 class PythonBuilder(object):
     """docstring"""
 
-    def __init__(self, schema_file_path:str, root_path:str):
+    def __init__(self, schema_file_path: str, root_path: str):
         self.template_name = "src/module_template.py.txt"
         self.env = Environment(
-            loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))),
-            autoescape=select_autoescape()
+            loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))), autoescape=select_autoescape()
         )
-        _relative_path_without_extension = schema_file_path[len(root_path)+1:].replace(".schema.omi.json", "").split("/")
+        _relative_path_without_extension = (
+            schema_file_path[len(root_path) + 1 :].replace(".schema.omi.json", "").split("/")
+        )
         self.version = _relative_path_without_extension[0]
-        self.relative_path_without_extension = [generate_python_name(part) for part in _relative_path_without_extension[1:]]
+        self.relative_path_without_extension = [
+            generate_python_name(part) for part in _relative_path_without_extension[1:]
+        ]
         with open(schema_file_path, "r") as schema_f:
             self._schema_payload = json.load(schema_f)
 
     def _target_file_without_extension(self) -> str:
-        return os.path.join(
-            self.version.replace(".", "_"),
-            "/".join(self.relative_path_without_extension))
+        return os.path.join(self.version.replace(".", "_"), "/".join(self.relative_path_without_extension))
 
     def translate(self, embedded=None):
-
         def get_type(property):
             type_map = {
                 "string": "str",
@@ -61,8 +60,8 @@ class PythonBuilder(object):
                 "date-time": "datetime",
                 "time": "time",
                 "iri": "IRI",
-                "email": "str",   # todo: add an Email class for validation?
-                "ECMA262": "str"  #       ...
+                "email": "str",  # todo: add an Email class for validation?
+                "ECMA262": "str",  #       ...
             }
             version_module = self.version.replace(".", "_")
             if "_linkedTypes" in property:
@@ -125,17 +124,18 @@ class PythonBuilder(object):
                     "unique_items": property.get("uniqueItems", False),
                     "min_items": property.get("minItems", None),
                     "max_items": property.get("maxItems", None),
-                } for iri, property in self._schema_payload["properties"].items()
-            ], # todo
+                }
+                for iri, property in self._schema_payload["properties"].items()
+            ],  # todo
             # unused in property:  "nameForReverseLink"
-            "additional_methods": ""
+            "additional_methods": "",
         }
         import_map = {
             "date": "from datetime import date",
             "datetime": "from datetime import datetime",
             "time": "from datetime import time",
             "IRI": "from openminds.base import IRI",
-            "[datetime, time]": "from datetime import datetime, time"
+            "[datetime, time]": "from datetime import datetime, time",
         }
         extra_imports = set()
         for property in self.context["properties"]:
@@ -162,10 +162,7 @@ class PythonBuilder(object):
             contents = self.env.get_template(self.template_name).render(self.context)
             target_file.write(contents)
 
-        return (
-            self._target_file_without_extension().replace("/", "."),
-             self.context["class_name"]
-        )
+        return (self._target_file_without_extension().replace("/", "."), self.context["class_name"])
 
     def get_edges(self):
         embedded = set()

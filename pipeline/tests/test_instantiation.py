@@ -29,14 +29,9 @@ all_modules = (
 )
 
 
-
 def classes_in_module(module):
     contents = [getattr(module, name) for name in dir(module)]
-    return [
-        item
-        for item in contents
-        if isinstance(item, type) and issubclass(item, Node)
-    ]
+    return [item for item in contents if isinstance(item, type) and issubclass(item, Node)]
 
 
 def test_instantiation_random_data():

@@ -54,9 +54,7 @@ def test_issue_0003():
         ],
     }
     assert (
-        node1.to_jsonld(include_empty_properties=False)
-        == node2.to_jsonld(include_empty_properties=False)
-        == expected
+        node1.to_jsonld(include_empty_properties=False) == node2.to_jsonld(include_empty_properties=False) == expected
     )
 
 
@@ -67,12 +65,7 @@ def test_issue0005():
     person = omcore.Person(
         given_name="A",
         family_name="Professor",
-        affiliation=[
-            omcore.Affiliation(
-                member_of=uni1,
-                end_date=(2023, 9, 30)
-            )
-        ]
+        affiliation=[omcore.Affiliation(member_of=uni1, end_date=(2023, 9, 30))],
     )
     failures = person.validate()
     assert len(failures) == 1
@@ -94,9 +87,7 @@ def test_issue0007():
         omcore.Affiliation(member_of=uni2),
     ]
 
-    actual = person.to_jsonld(
-        include_empty_properties=False, embed_linked_nodes=False, with_context=True
-    )
+    actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
         "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
         "@id": "_:001",
@@ -123,9 +114,7 @@ def test_issue0007():
     assert actual == expected
 
     c = Collection(person, uni1, uni2)
-    output_paths = c.save(
-        "issue0007.jsonld", individual_files=False, include_empty_properties=False
-    )
+    output_paths = c.save("issue0007.jsonld", individual_files=False, include_empty_properties=False)
     assert output_paths == ["issue0007.jsonld"]
 
     with open(output_paths[0]) as fp:
@@ -183,9 +172,7 @@ def test_issue0008():
         family_name="Professor",
         affiliation=[omcore.Affiliation(member_of=uni1, end_date=date(2023, 9, 30))],
     )
-    actual = person.to_jsonld(
-        include_empty_properties=False, embed_linked_nodes=False, with_context=True
-    )
+    actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
         "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
         "@id": "_:002",
