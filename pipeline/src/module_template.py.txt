@@ -18,6 +18,7 @@ class {{ class_name }}({{ base_class }}):
     context = {
         "vocab": "https://openminds.ebrains.eu/vocab/"
     }
+    schema_version = "{{ schema_version }}"
 
     properties = [
         {% for property in properties -%}
