@@ -38,18 +38,18 @@ def test_issue_0003():
     )
     # on export, a single item should be wrapped in a list, where the property expects an array
     expected = {
-        "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
         "@type": "https://openminds.ebrains.eu/core/FileArchive",
-        "vocab:IRI": "http://example.com/archive.zip",
-        "vocab:format": {
+        "IRI": "http://example.com/archive.zip",
+        "format": {
             "@type": "https://openminds.ebrains.eu/core/ContentType",
-            "vocab:name": "application/zip",
+            "name": "application/zip",
         },
-        "vocab:sourceData": [
+        "sourceData": [
             {
                 "@type": "https://openminds.ebrains.eu/core/File",
-                "vocab:IRI": "http://example.com/some_file.txt",
-                "vocab:name": "some_file.txt",
+                "IRI": "http://example.com/some_file.txt",
+                "name": "some_file.txt",
             }
         ],
     }
@@ -89,22 +89,22 @@ def test_issue0007():
 
     actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
-        "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
         "@id": "_:001",
         "@type": "https://openminds.ebrains.eu/core/Person",
-        "vocab:familyName": "Professor",
-        "vocab:givenName": "A",
-        "vocab:affiliation": [
+        "familyName": "Professor",
+        "givenName": "A",
+        "affiliation": [
             {
                 "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                "vocab:memberOf": {
+                "memberOf": {
                     "@id": "_:002",
                     "@type": "https://openminds.ebrains.eu/core/Organization",
                 },
             },
             {
                 "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                "vocab:memberOf": {
+                "memberOf": {
                     "@id": "_:003",
                     "@type": "https://openminds.ebrains.eu/core/Organization",
                 },
@@ -121,39 +121,39 @@ def test_issue0007():
         saved_data = json.load(fp)
     os.remove("issue0007.jsonld")
     expected_saved_data = {
-        "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
         "@graph": [
             {
                 "@id": "_:001",
                 "@type": "https://openminds.ebrains.eu/core/Person",
-                "vocab:affiliation": [
+                "affiliation": [
                     {
                         "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                        "vocab:memberOf": {
+                        "memberOf": {
                             "@id": "_:002",
                             "@type": "https://openminds.ebrains.eu/core/Organization",
                         },
                     },
                     {
                         "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                        "vocab:memberOf": {
+                        "memberOf": {
                             "@id": "_:003",
                             "@type": "https://openminds.ebrains.eu/core/Organization",
                         },
                     },
                 ],
-                "vocab:familyName": "Professor",
-                "vocab:givenName": "A",
+                "familyName": "Professor",
+                "givenName": "A",
             },
             {
                 "@id": "_:002",
                 "@type": "https://openminds.ebrains.eu/core/Organization",
-                "vocab:fullName": "University of This Place",
+                "fullName": "University of This Place",
             },
             {
                 "@id": "_:003",
                 "@type": "https://openminds.ebrains.eu/core/Organization",
-                "vocab:fullName": "University of That Place",
+                "fullName": "University of That Place",
             },
         ],
     }
@@ -174,20 +174,20 @@ def test_issue0008():
     )
     actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
-        "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
         "@id": "_:002",
         "@type": "https://openminds.ebrains.eu/core/Person",
-        "vocab:affiliation": [
+        "affiliation": [
             {
                 "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                "vocab:endDate": "2023-09-30",
-                "vocab:memberOf": {
+                "endDate": "2023-09-30",
+                "memberOf": {
                     "@id": "_:001",
                     "@type": "https://openminds.ebrains.eu/core/Organization",
                 },
             }
         ],
-        "vocab:familyName": "Professor",
-        "vocab:givenName": "A",
+        "familyName": "Professor",
+        "givenName": "A",
     }
     assert actual == expected

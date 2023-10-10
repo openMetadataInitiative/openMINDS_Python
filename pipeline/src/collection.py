@@ -89,7 +89,7 @@ class Collection:
                 if parent_dir:
                     os.makedirs(parent_dir, exist_ok=True)
             data = {
-                "@context": {"vocab": "https://openminds.ebrains.eu/vocab/"},
+                "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
                 "@graph": [
                     node.to_jsonld(
                         embed_linked_nodes=False, include_empty_properties=include_empty_properties, with_context=False

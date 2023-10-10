@@ -114,7 +114,7 @@ class PythonBuilder(object):
                 {
                     "name": generate_python_name(property["name"]),
                     "type": get_type(property),  # compress using JSON-LD context
-                    "iri": f"vocab:{property['name']}",
+                    "iri": property['name'],  # assumes IRI uses standard @vocab
                     "allow_multiple": property.get("type", "") == "array",
                     "required": iri in self._schema_payload.get("required", []),
                     "description": property.get("description", "no description available"),
