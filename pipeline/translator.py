@@ -47,8 +47,15 @@ class PythonBuilder(object):
         with open(schema_file_path, "r") as schema_f:
             self._schema_payload = json.load(schema_f)
 
+    @property
+    def _version_module(self):
+        # we keep only the major version.
+        # this code assumes that minor versions are processed from oldest to newest
+        # so that the Python package will always contain the latest minor version
+        return self.version.split(".")[0]
+
     def _target_file_without_extension(self) -> str:
-        return os.path.join(self.version.replace(".", "_"), "/".join(self.relative_path_without_extension))
+        return os.path.join(self._version_module, "/".join(self.relative_path_without_extension))
 
     def translate(self, embedded=None):
         def get_type(property):
@@ -63,13 +70,12 @@ class PythonBuilder(object):
                 "email": "str",  # todo: add an Email class for validation?
                 "ECMA262": "str",  #       ...
             }
-            version_module = self.version.replace(".", "_")
             if "_linkedTypes" in property:
                 types = []
                 for item in property["_linkedTypes"]:
                     openminds_module, class_name = item.split("/")[-2:]
                     openminds_module = generate_python_name(openminds_module)
-                    types.append(f"openminds.{version_module}.{openminds_module}.{class_name}")
+                    types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
                     types = f'"{types[0]}"'
                 return types
@@ -78,7 +84,7 @@ class PythonBuilder(object):
                 for item in property["_embeddedTypes"]:
                     openminds_module, class_name = item.split("/")[-2:]
                     openminds_module = generate_python_name(openminds_module)
-                    types.append(f"openminds.{version_module}.{openminds_module}.{class_name}")
+                    types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
                     types = f'"{types[0]}"'
                 return types
@@ -110,6 +116,7 @@ class PythonBuilder(object):
             "preamble": "",  # todo: e.g. extra imports
             "class_name": self._schema_payload["name"],
             "openminds_type": self._schema_payload["_type"],
+            "schema_version": self.version,
             "properties": [  # call this "properties"
                 {
                     "name": generate_python_name(property["name"]),
