@@ -18,6 +18,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/computation/WorkflowRecipeVersion"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

@@ -16,6 +16,7 @@ class FilePathPattern(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/core/FilePathPattern"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

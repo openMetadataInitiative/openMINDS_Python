@@ -17,6 +17,7 @@ class MeasuredQuantity(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

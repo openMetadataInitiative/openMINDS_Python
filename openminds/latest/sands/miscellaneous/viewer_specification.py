@@ -16,6 +16,7 @@ class ViewerSpecification(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/sands/ViewerSpecification"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

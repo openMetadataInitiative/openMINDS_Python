@@ -16,6 +16,7 @@ class TissueSample(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/core/TissueSample"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

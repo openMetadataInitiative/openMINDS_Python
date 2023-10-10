@@ -18,6 +18,7 @@ class BrainAtlasVersion(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

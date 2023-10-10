@@ -17,6 +17,7 @@ class LivePaper(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/publications/LivePaper"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

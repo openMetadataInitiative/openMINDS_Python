@@ -16,6 +16,7 @@ class ISBN(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/core/ISBN"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

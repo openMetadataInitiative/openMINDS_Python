@@ -17,6 +17,7 @@ class Language(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/Language"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

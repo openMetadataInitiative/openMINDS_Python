@@ -16,6 +16,7 @@ class Setup(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/core/Setup"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

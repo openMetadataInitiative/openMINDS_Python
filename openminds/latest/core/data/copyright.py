@@ -16,6 +16,7 @@ class Copyright(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/core/Copyright"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

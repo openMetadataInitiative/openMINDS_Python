@@ -17,6 +17,7 @@ class FileRepositoryType(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/FileRepositoryType"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

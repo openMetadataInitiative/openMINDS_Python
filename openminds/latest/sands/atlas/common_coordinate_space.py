@@ -17,6 +17,7 @@ class CommonCoordinateSpace(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

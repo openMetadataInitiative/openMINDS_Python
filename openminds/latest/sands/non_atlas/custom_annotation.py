@@ -16,6 +16,7 @@ class CustomAnnotation(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/sands/CustomAnnotation"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

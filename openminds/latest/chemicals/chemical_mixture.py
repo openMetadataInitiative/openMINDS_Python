@@ -16,6 +16,7 @@ class ChemicalMixture(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

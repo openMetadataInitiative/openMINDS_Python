@@ -16,6 +16,7 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

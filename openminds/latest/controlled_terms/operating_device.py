@@ -17,6 +17,7 @@ class OperatingDevice(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

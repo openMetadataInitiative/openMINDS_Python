@@ -16,6 +16,7 @@ class NumericalProperty(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/core/NumericalProperty"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

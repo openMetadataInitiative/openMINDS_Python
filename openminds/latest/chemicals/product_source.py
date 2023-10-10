@@ -16,6 +16,7 @@ class ProductSource(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/chemicals/ProductSource"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

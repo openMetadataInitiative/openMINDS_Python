@@ -17,6 +17,7 @@ class SubcellularEntity(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

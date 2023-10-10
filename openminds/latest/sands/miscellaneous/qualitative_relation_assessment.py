@@ -16,6 +16,7 @@ class QualitativeRelationAssessment(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/sands/QualitativeRelationAssessment"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

@@ -17,6 +17,7 @@ class BiologicalOrder(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/BiologicalOrder"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

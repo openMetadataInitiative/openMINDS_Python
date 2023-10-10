@@ -16,6 +16,7 @@ class StockNumber(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/core/StockNumber"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

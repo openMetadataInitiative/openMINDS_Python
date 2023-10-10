@@ -17,6 +17,7 @@ class ContributionType(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/ContributionType"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

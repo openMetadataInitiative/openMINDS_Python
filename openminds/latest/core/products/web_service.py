@@ -17,6 +17,7 @@ class WebService(LinkedMetadata):
 
     type_ = "https://openminds.ebrains.eu/core/WebService"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(

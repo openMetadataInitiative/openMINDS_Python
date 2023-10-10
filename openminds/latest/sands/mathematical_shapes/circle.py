@@ -16,6 +16,7 @@ class Circle(EmbeddedMetadata):
 
     type_ = "https://openminds.ebrains.eu/sands/Circle"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    schema_version = "latest"
 
     properties = [
         Property(
