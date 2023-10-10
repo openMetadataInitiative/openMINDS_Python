@@ -15,20 +15,20 @@ class AnatomicalEntityRelation(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "criteria",
             "openminds.v1_0.core.ProtocolExecution",
-            "vocab:criteria",
+            "criteria",
             description="Aspects or standards on which a judgement or decision is based.",
             instructions="Add the protocol execution defining the criteria that were applied to determine this relation.",
         ),
         Property(
             "criteria_quality_type",
             "openminds.v1_0.controlled_terms.CriteriaQualityType",
-            "vocab:criteriaQualityType",
+            "criteriaQualityType",
             required=True,
             description="Distinct class that defines how the judgement or decision was made for a particular criteria.",
             instructions="Add the quality type of the stated criteria used to determine this relation.",
@@ -36,7 +36,7 @@ class AnatomicalEntityRelation(LinkedMetadata):
         Property(
             "in_relation_to",
             "openminds.v1_0.sands.AnatomicalEntity",
-            "vocab:inRelationTo",
+            "inRelationTo",
             required=True,
             description="Reference to a related element.",
             instructions="Add the anatomical entity to which the relation is described.",
@@ -44,7 +44,7 @@ class AnatomicalEntityRelation(LinkedMetadata):
         Property(
             "qualitative_overlap",
             "openminds.v1_0.controlled_terms.QualitativeOverlap",
-            "vocab:qualitativeOverlap",
+            "qualitativeOverlap",
             required=True,
             description="Semantic characterization of how much two things occupy the same space.",
             instructions="Add the qualitative overlap that best describes the relation between the two anatomical entities.",
@@ -52,7 +52,7 @@ class AnatomicalEntityRelation(LinkedMetadata):
         Property(
             "quantitative_overlap",
             ["openminds.v1_0.core.QuantitativeValue", "openminds.v1_0.core.QuantitativeValueRange"],
-            "vocab:quantitativeOverlap",
+            "quantitativeOverlap",
             description="Numerical characterization of how much two things occupy the same space.",
             instructions="Add the quantitative overlap between the two anatomical entities preferably expressed in percentage.",
         ),

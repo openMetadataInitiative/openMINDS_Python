@@ -15,13 +15,13 @@ class Dataset(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Dataset"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "author",
             ["openminds.v2_0.core.Organization", "openminds.v2_0.core.Person"],
-            "vocab:author",
+            "author",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class Dataset(LinkedMetadata):
         Property(
             "custodian",
             ["openminds.v2_0.core.Organization", "openminds.v2_0.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -42,7 +42,7 @@ class Dataset(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -52,14 +52,14 @@ class Dataset(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v2_0.core.DOI",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product. Note that this digital identifier will be used to reference all attached research product versions.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -68,7 +68,7 @@ class Dataset(LinkedMetadata):
         Property(
             "has_version",
             "openminds.v2_0.core.DatasetVersion",
-            "vocab:hasVersion",
+            "hasVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -79,14 +79,14 @@ class Dataset(LinkedMetadata):
         Property(
             "homepage",
             "openminds.v2_0.core.URL",
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Add the uniform resource locator (URL) to the homepage of this research product.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -95,7 +95,7 @@ class Dataset(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",

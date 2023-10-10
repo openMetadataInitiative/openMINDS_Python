@@ -15,13 +15,13 @@ class Periodical(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/publications/Periodical"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "abbreviation",
             str,
-            "vocab:abbreviation",
+            "abbreviation",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the official (or most commonly used) abbreviation of the periodical (e.g., J. Physiol).",
@@ -29,14 +29,14 @@ class Periodical(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.latest.core.ISSN",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this periodical.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
             instructions="Enter the name (or title) of this periodical (e.g., Journal of Physiology).",

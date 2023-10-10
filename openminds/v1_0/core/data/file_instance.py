@@ -15,13 +15,13 @@ class FileInstance(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/FileInstance"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "iri",
             str,
-            "vocab:IRI",
+            "IRI",
             formatting="text/plain",
             required=True,
             description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
@@ -30,7 +30,7 @@ class FileInstance(LinkedMetadata):
         Property(
             "content",
             str,
-            "vocab:content",
+            "content",
             formatting="text/plain",
             description="Something that is contained.",
             instructions="Enter a short content description for this file instance.",
@@ -38,21 +38,21 @@ class FileInstance(LinkedMetadata):
         Property(
             "format",
             "openminds.v1_0.core.ContentType",
-            "vocab:format",
+            "format",
             description="Method of digitally organizing and structuring data or information.",
             instructions="Add the content type of this file instance.",
         ),
         Property(
             "hash",
             "openminds.v1_0.core.Hash",
-            "vocab:hash",
+            "hash",
             description="Term used for the process of converting any data into a single value. Often also directly refers to the resulting single value.",
             instructions="Add the hash that was generated for this file instance.",
         ),
         Property(
             "is_part_of",
             "openminds.v1_0.core.FileBundle",
-            "vocab:isPartOf",
+            "isPartOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -63,7 +63,7 @@ class FileInstance(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -72,14 +72,14 @@ class FileInstance(LinkedMetadata):
         Property(
             "special_usage_role",
             "openminds.v1_0.controlled_terms.fileUsageRole",
-            "vocab:specialUsageRole",
+            "specialUsageRole",
             description="Particular function of something when it is used.",
             instructions="Add a special usage role for this file instance.",
         ),
         Property(
             "storage_size",
             "openminds.v1_0.core.QuantitativeValue",
-            "vocab:storageSize",
+            "storageSize",
             description="Quantitative value defining how much disk space is used by an object on a computer system.",
             instructions="Enter the storage size this file instance allocates.",
         ),

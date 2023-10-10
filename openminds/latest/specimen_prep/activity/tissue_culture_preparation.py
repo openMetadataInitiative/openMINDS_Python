@@ -15,13 +15,13 @@ class TissueCulturePreparation(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "culture_medium",
             "openminds.latest.chemicals.ChemicalMixture",
-            "vocab:cultureMedium",
+            "cultureMedium",
             required=True,
             description="no description available",
             instructions="Add the culture medium used during this tissue culture preparation.",
@@ -29,7 +29,7 @@ class TissueCulturePreparation(LinkedMetadata):
         Property(
             "culture_type",
             "openminds.latest.controlled_terms.CellCultureType",
-            "vocab:cultureType",
+            "cultureType",
             required=True,
             description="no description available",
             instructions="Add the cell culture type of the resulting tissue cell culture.",
@@ -42,14 +42,14 @@ class TissueCulturePreparation(LinkedMetadata):
                 "openminds.latest.core.SubjectGroupState",
                 "openminds.latest.core.SubjectState",
             ],
-            "vocab:input",
+            "input",
             description="Something or someone that is put into or participates in a process or machine.",
             instructions="Add the state of the specimen before it was prepared as culture in this activity.",
         ),
         Property(
             "output",
             "openminds.latest.core.TissueSampleState",
-            "vocab:output",
+            "output",
             description="Something or someone that comes out of, is delivered or produced by a process or machine.",
             instructions="Add the state of the prepared tissue sample culture that resulted from this activity.",
         ),

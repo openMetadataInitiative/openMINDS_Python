@@ -15,13 +15,13 @@ class Electrode(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/Electrode"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "electrode_contact",
             "openminds.v2_0.sands.ElectrodeContact",
-            "vocab:electrodeContact",
+            "electrodeContact",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class Electrode(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code that identifies someone or something within a particular product.",
@@ -41,7 +41,7 @@ class Electrode(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this electrode that may help you to more easily find it again.",

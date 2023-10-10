@@ -15,13 +15,13 @@ class BrainAtlas(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/BrainAtlas"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -31,7 +31,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -40,7 +40,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "has_version",
             "openminds.v1_0.sands.BrainAtlasVersion",
-            "vocab:hasVersion",
+            "hasVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -51,7 +51,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "homepage",
             str,
-            "vocab:homepage",
+            "homepage",
             formatting="text/plain",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this brain atlas.",
@@ -59,7 +59,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",

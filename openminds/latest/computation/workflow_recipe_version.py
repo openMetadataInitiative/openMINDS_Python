@@ -17,13 +17,13 @@ class WorkflowRecipeVersion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/computation/WorkflowRecipeVersion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "accessibility",
             "openminds.latest.controlled_terms.ProductAccessibility",
-            "vocab:accessibility",
+            "accessibility",
             required=True,
             description="Level to which something is accessible to someone or something.",
             instructions="Add the accessibility of the data for this research product version.",
@@ -31,14 +31,14 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "copyright",
             "openminds.latest.core.Copyright",
-            "vocab:copyright",
+            "copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
             instructions="Enter the copyright information of this research product version.",
         ),
         Property(
             "custodian",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -48,7 +48,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -57,7 +57,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "developer",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:developer",
+            "developer",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -67,14 +67,14 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.latest.core.DOI",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product version.",
         ),
         Property(
             "format",
             "openminds.latest.core.ContentType",
-            "vocab:format",
+            "format",
             required=True,
             description="Method of digitally organizing and structuring data or information.",
             instructions="Add the content type of this workflow recipe version.",
@@ -82,7 +82,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "full_documentation",
             ["openminds.latest.core.DOI", "openminds.latest.core.File", "openminds.latest.core.WebResource"],
-            "vocab:fullDocumentation",
+            "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
             instructions="Add the publication or file that acts as the full documentation of this research product version.",
@@ -90,7 +90,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             description="Whole, non-abbreviated name of something or somebody.",
             instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
@@ -98,7 +98,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "funding",
             "openminds.latest.core.Funding",
-            "vocab:funding",
+            "funding",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -113,7 +113,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
                 "openminds.latest.core.FileBundle",
                 "openminds.latest.core.SoftwareVersion",
             ],
-            "vocab:hasPart",
+            "hasPart",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -123,14 +123,14 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "homepage",
             IRI,
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -139,7 +139,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "is_alternative_version_of",
             "openminds.latest.computation.WorkflowRecipeVersion",
-            "vocab:isAlternativeVersionOf",
+            "isAlternativeVersionOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -149,7 +149,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "is_new_version_of",
             "openminds.latest.computation.WorkflowRecipeVersion",
-            "vocab:isNewVersionOf",
+            "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the workflow recipe version preceding this workflow recipe version.",
         ),
@@ -235,7 +235,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.UnitOfMeasurement",
                 "openminds.latest.controlled_terms.VisualStimulusType",
             ],
-            "vocab:keyword",
+            "keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -245,7 +245,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "license",
             "openminds.latest.core.License",
-            "vocab:license",
+            "license",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -255,7 +255,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "other_contribution",
             "openminds.latest.core.Contribution",
-            "vocab:otherContribution",
+            "otherContribution",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -273,7 +273,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
                 "openminds.latest.publications.Chapter",
                 "openminds.latest.publications.ScholarlyArticle",
             ],
-            "vocab:relatedPublication",
+            "relatedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -283,7 +283,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "release_date",
             date,
-            "vocab:releaseDate",
+            "releaseDate",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
             instructions="Enter the date (actual or intended) on which this research product version was first release, formatted as 'YYYY-MM-DD'.",
@@ -291,14 +291,14 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "repository",
             "openminds.latest.core.FileRepository",
-            "vocab:repository",
+            "repository",
             description="Place, room, or container where something is deposited or stored.",
             instructions="Add the file repository of this research product version.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -307,7 +307,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "support_channel",
             str,
-            "vocab:supportChannel",
+            "supportChannel",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -318,7 +318,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -327,7 +327,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             required=True,

@@ -15,13 +15,13 @@ class NumericalProperty(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/NumericalProperty"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -30,7 +30,7 @@ class NumericalProperty(EmbeddedMetadata):
         Property(
             "value",
             ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
-            "vocab:value",
+            "value",
             multiple=True,
             unique_items=False,
             min_items=1,

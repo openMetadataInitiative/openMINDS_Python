@@ -15,20 +15,20 @@ class CustomAnatomicalEntity(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "has_annotation",
             "openminds.v2_0.sands.CustomAnnotation",
-            "vocab:hasAnnotation",
+            "hasAnnotation",
             description="no description available",
             instructions="Add the custom annotation which this custom anatomical entity defines.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -40,7 +40,7 @@ class CustomAnatomicalEntity(LinkedMetadata):
                 "openminds.v2_0.sands.QualitativeRelationAssessment",
                 "openminds.v2_0.sands.QuantitativeRelationAssessment",
             ],
-            "vocab:relationAssessment",
+            "relationAssessment",
             multiple=True,
             unique_items=True,
             min_items=1,

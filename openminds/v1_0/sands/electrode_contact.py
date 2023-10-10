@@ -15,13 +15,13 @@ class ElectrodeContact(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/ElectrodeContact"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "coordinate_point",
             "openminds.v1_0.sands.CoordinatePoint",
-            "vocab:coordinatePoint",
+            "coordinatePoint",
             required=True,
             description="Pair or triplet of numbers defining the position in a particular two- or three dimensional plane or space.",
             instructions="Add the central coordinate of this electrode contact.",
@@ -29,7 +29,7 @@ class ElectrodeContact(LinkedMetadata):
         Property(
             "defined_in",
             "openminds.v1_0.core.FileInstance",
-            "vocab:definedIn",
+            "definedIn",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -39,7 +39,7 @@ class ElectrodeContact(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code that identifies someone or something within a particular product.",
@@ -48,7 +48,7 @@ class ElectrodeContact(LinkedMetadata):
         Property(
             "related_recording",
             "openminds.v1_0.core.FileInstance",
-            "vocab:relatedRecording",
+            "relatedRecording",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -58,7 +58,7 @@ class ElectrodeContact(LinkedMetadata):
         Property(
             "related_stimulation",
             "openminds.v1_0.core.FileInstance",
-            "vocab:relatedStimulation",
+            "relatedStimulation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -68,7 +68,7 @@ class ElectrodeContact(LinkedMetadata):
         Property(
             "visualized_in",
             "openminds.v1_0.sands.Image",
-            "vocab:visualizedIn",
+            "visualizedIn",
             multiple=True,
             unique_items=True,
             min_items=1,

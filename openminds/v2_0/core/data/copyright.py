@@ -15,13 +15,13 @@ class Copyright(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Copyright"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "holder",
             ["openminds.v2_0.core.Organization", "openminds.v2_0.core.Person"],
-            "vocab:holder",
+            "holder",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class Copyright(EmbeddedMetadata):
         Property(
             "year",
             str,
-            "vocab:year",
+            "year",
             formatting="text/plain",
             required=True,
             description="Cycle in the Gregorian calendar specified by a number and comprised of 365 or 366 days divided into 12 months beginning with January and ending with December.",

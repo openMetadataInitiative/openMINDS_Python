@@ -15,13 +15,13 @@ class CustomAnatomicalEntity(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "has_annotation",
             "openminds.v3_0.sands.CustomAnnotation",
-            "vocab:hasAnnotation",
+            "hasAnnotation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -31,7 +31,7 @@ class CustomAnatomicalEntity(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -40,7 +40,7 @@ class CustomAnatomicalEntity(LinkedMetadata):
         Property(
             "related_uberon_term",
             ["openminds.v3_0.controlled_terms.Organ", "openminds.v3_0.controlled_terms.UBERONParcellation"],
-            "vocab:relatedUBERONTerm",
+            "relatedUBERONTerm",
             description="no description available",
             instructions="Add the related anatomical entity as defined by the UBERON ontology.",
         ),
@@ -50,7 +50,7 @@ class CustomAnatomicalEntity(LinkedMetadata):
                 "openminds.v3_0.sands.QualitativeRelationAssessment",
                 "openminds.v3_0.sands.QuantitativeRelationAssessment",
             ],
-            "vocab:relationAssessment",
+            "relationAssessment",
             multiple=True,
             unique_items=True,
             min_items=1,

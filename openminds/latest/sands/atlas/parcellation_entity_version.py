@@ -15,13 +15,13 @@ class ParcellationEntityVersion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "abbreviation",
             str,
-            "vocab:abbreviation",
+            "abbreviation",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the official abbreviation of this parcellation entity version.",
@@ -29,7 +29,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -38,7 +38,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "alternate_name",
             str,
-            "vocab:alternateName",
+            "alternateName",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -49,7 +49,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "corrected_name",
             str,
-            "vocab:correctedName",
+            "correctedName",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the refined or corrected name of this parcellation entity version.",
@@ -57,7 +57,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "has_annotation",
             "openminds.latest.sands.AtlasAnnotation",
-            "vocab:hasAnnotation",
+            "hasAnnotation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -67,7 +67,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "has_parent",
             ["openminds.latest.sands.ParcellationEntity", "openminds.latest.sands.ParcellationEntityVersion"],
-            "vocab:hasParent",
+            "hasParent",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -77,7 +77,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this parcellation entity version that may help you to find this instance more easily.",
@@ -85,7 +85,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -94,7 +94,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "ontology_identifier",
             str,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -108,7 +108,7 @@ class ParcellationEntityVersion(LinkedMetadata):
                 "openminds.latest.sands.QualitativeRelationAssessment",
                 "openminds.latest.sands.QuantitativeRelationAssessment",
             ],
-            "vocab:relationAssessment",
+            "relationAssessment",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -118,7 +118,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -127,7 +127,7 @@ class ParcellationEntityVersion(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             description="Documentation on what changed in comparison to a previously published form of something.",

@@ -15,27 +15,27 @@ class AtlasAnnotation(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/AtlasAnnotation"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "best_view_point",
             "openminds.v2_0.sands.CoordinatePoint",
-            "vocab:bestViewPoint",
+            "bestViewPoint",
             description="Coordinate point from which you get the best view of something.",
             instructions="Add the coordinate point identifying the best view of this atlas annotation in space.",
         ),
         Property(
             "criteria",
             "openminds.v2_0.core.ProtocolExecution",
-            "vocab:criteria",
+            "criteria",
             description="Aspects or standards on which a judgement or decision is based.",
             instructions="Add the protocol execution defining the criteria that were applied to produce this atlas annotation.",
         ),
         Property(
             "criteria_quality_type",
             "openminds.v2_0.controlled_terms.CriteriaQualityType",
-            "vocab:criteriaQualityType",
+            "criteriaQualityType",
             required=True,
             description="Distinct class that defines how the judgement or decision was made for a particular criteria.",
             instructions="Add the quality type of the stated criteria used to define this atlas annotation.",
@@ -43,7 +43,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "display_color",
             str,
-            "vocab:displayColor",
+            "displayColor",
             formatting="text/plain",
             description="Preferred coloring.",
             instructions="Enter the preferred display color (HEX) for this atlas annotation.",
@@ -51,7 +51,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "inspired_by",
             "openminds.v2_0.core.File",
-            "vocab:inspiredBy",
+            "inspiredBy",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -61,7 +61,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code that identifies someone or something within a particular product.",
@@ -70,7 +70,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "laterality",
             "openminds.v2_0.controlled_terms.Laterality",
-            "vocab:laterality",
+            "laterality",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -81,7 +81,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this atlas annotation that may help you to more easily find it again.",
@@ -89,7 +89,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
             instructions="Enter a descriptive name for this atlas annotation.",
@@ -97,7 +97,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -106,7 +106,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -116,7 +116,7 @@ class AtlasAnnotation(LinkedMetadata):
         Property(
             "visualized_in",
             "openminds.v2_0.core.File",
-            "vocab:visualizedIn",
+            "visualizedIn",
             description="Reference to an image in which something is visible.",
             instructions="Add the (source) image file in which this atlas annotation is visualized in.",
         ),

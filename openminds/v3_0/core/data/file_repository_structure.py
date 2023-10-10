@@ -15,13 +15,13 @@ class FileRepositoryStructure(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/FileRepositoryStructure"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "file_path_pattern",
             "openminds.v3_0.core.FilePathPattern",
-            "vocab:filePathPattern",
+            "filePathPattern",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class FileRepositoryStructure(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this file repository structure that may help you to find this instance more easily.",

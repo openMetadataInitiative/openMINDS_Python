@@ -1,5 +1,5 @@
 """
-Structured information on the behavioral task that had to be peformed by a subject.
+Structured information on the behavioral task that had to be performed by a subject.
 """
 
 # this file was auto-generated!
@@ -11,17 +11,17 @@ from openminds.properties import Property
 
 class BehavioralTask(LinkedMetadata):
     """
-    Structured information on the behavioral task that had to be peformed by a subject.
+    Structured information on the behavioral task that had to be performed by a subject.
     """
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/BehavioralTask"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "definition",
             str,
-            "vocab:definition",
+            "definition",
             formatting="text/markdown",
             multiline=True,
             description="Short, but precise statement of the meaning of a word, word group, sign or a symbol.",
@@ -30,7 +30,7 @@ class BehavioralTask(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -39,7 +39,7 @@ class BehavioralTask(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -48,7 +48,7 @@ class BehavioralTask(LinkedMetadata):
         Property(
             "ontology_identifier",
             str,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             formatting="text/plain",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the related ontological term.",

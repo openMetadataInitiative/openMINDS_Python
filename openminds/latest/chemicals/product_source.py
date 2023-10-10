@@ -15,20 +15,20 @@ class ProductSource(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/chemicals/ProductSource"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "digital_identifier",
             "openminds.latest.core.RRID",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this product.",
         ),
         Property(
             "identifier",
             str,
-            "vocab:identifier",
+            "identifier",
             formatting="text/plain",
             description="Term or code used to identify something or someone.",
             instructions="Enter the identifier for this product, excluding its RRID (e.g., a catalog number).",
@@ -36,7 +36,7 @@ class ProductSource(LinkedMetadata):
         Property(
             "product_name",
             str,
-            "vocab:productName",
+            "productName",
             formatting="text/plain",
             required=True,
             description="no description available",
@@ -45,7 +45,7 @@ class ProductSource(LinkedMetadata):
         Property(
             "provider",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:provider",
+            "provider",
             required=True,
             description="no description available",
             instructions="Add the party (private, commercial or industrial) that provided this product.",
@@ -53,7 +53,7 @@ class ProductSource(LinkedMetadata):
         Property(
             "purity",
             ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
-            "vocab:purity",
+            "purity",
             description="no description available",
             instructions="Enter the purity of the product as stated by the 'provider'.",
         ),

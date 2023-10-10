@@ -15,7 +15,7 @@ class PipetteUsage(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/PipetteUsage"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -30,14 +30,14 @@ class PipetteUsage(LinkedMetadata):
                 "openminds.v3_0.sands.ParcellationEntity",
                 "openminds.v3_0.sands.ParcellationEntityVersion",
             ],
-            "vocab:anatomicalLocation",
+            "anatomicalLocation",
             description="no description available",
             instructions="Add the anatomical entity that semantically best describes the anatomical location of the pipette tip.",
         ),
         Property(
             "chloride_reversal_potential",
             "openminds.v3_0.core.Measurement",
-            "vocab:chlorideReversalPotential",
+            "chlorideReversalPotential",
             multiple=True,
             unique_items=False,
             min_items=1,
@@ -47,14 +47,14 @@ class PipetteUsage(LinkedMetadata):
         Property(
             "compensation_current",
             "openminds.v3_0.core.Measurement",
-            "vocab:compensationCurrent",
+            "compensationCurrent",
             description="no description available",
             instructions="Enter the compensation current for the series resistance of the pipette measured during its use.",
         ),
         Property(
             "device",
             "openminds.v3_0.ephys.Pipette",
-            "vocab:device",
+            "device",
             required=True,
             description="Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function.",
             instructions="Add the pipette used.",
@@ -62,21 +62,21 @@ class PipetteUsage(LinkedMetadata):
         Property(
             "end_membrane_potential",
             "openminds.v3_0.core.Measurement",
-            "vocab:endMembranePotential",
+            "endMembranePotential",
             description="no description available",
             instructions="Enter the membrane potential of e.g., a patched cell at the end of a recording measured during the use of this pipette.",
         ),
         Property(
             "holding_potential",
             "openminds.v3_0.core.Measurement",
-            "vocab:holdingPotential",
+            "holdingPotential",
             description="no description available",
             instructions="Enter the holding membrane potential of e.g., a patched cell measured during the use of this pipette.",
         ),
         Property(
             "input_resistance",
             "openminds.v3_0.core.Measurement",
-            "vocab:inputResistance",
+            "inputResistance",
             description="no description available",
             instructions="Enter the input resistance of e.g., a patched cell measured during the use of this pipette.",
         ),
@@ -87,21 +87,21 @@ class PipetteUsage(LinkedMetadata):
                 "openminds.v3_0.chemicals.ChemicalSubstance",
                 "openminds.v3_0.controlled_terms.MolecularEntity",
             ],
-            "vocab:labelingCompound",
+            "labelingCompound",
             description="no description available",
             instructions="Add the used compound for labelling e.g., a patched cell during the use of this pipette. ",
         ),
         Property(
             "liquid_junction_potential",
             "openminds.v3_0.core.Measurement",
-            "vocab:liquidJunctionPotential",
+            "liquidJunctionPotential",
             description="no description available",
             instructions="Enter the liquid junction potential of e.g., a patched cell measured during the use of this pipette.",
         ),
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this device usage that may help you to find this instance more easily.",
@@ -109,7 +109,7 @@ class PipetteUsage(LinkedMetadata):
         Property(
             "metadata_location",
             ["openminds.v3_0.core.File", "openminds.v3_0.core.FileBundle"],
-            "vocab:metadataLocation",
+            "metadataLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -119,14 +119,14 @@ class PipetteUsage(LinkedMetadata):
         Property(
             "pipette_resistance",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
-            "vocab:pipetteResistance",
+            "pipetteResistance",
             description="no description available",
             instructions="Enter the resistance of the pipette during its use.",
         ),
         Property(
             "pipette_solution",
             "openminds.v3_0.chemicals.ChemicalMixture",
-            "vocab:pipetteSolution",
+            "pipetteSolution",
             required=True,
             description="no description available",
             instructions="Enter the solution with which the pipette was filled during its use.",
@@ -134,35 +134,35 @@ class PipetteUsage(LinkedMetadata):
         Property(
             "seal_resistance",
             "openminds.v3_0.core.Measurement",
-            "vocab:sealResistance",
+            "sealResistance",
             description="no description available",
             instructions="Enter the seal resistance of e.g., a patched cell measured during the use of this pipette.",
         ),
         Property(
             "series_resistance",
             "openminds.v3_0.core.Measurement",
-            "vocab:seriesResistance",
+            "seriesResistance",
             description="no description available",
             instructions="Enter the series resistance of the pipette measured during its use.",
         ),
         Property(
             "spatial_location",
             "openminds.v3_0.sands.CoordinatePoint",
-            "vocab:spatialLocation",
+            "spatialLocation",
             description="no description available",
             instructions="Add the coordinate point that best describes the spatial location of the pipette tip during its use.",
         ),
         Property(
             "start_membrane_potential",
             "openminds.v3_0.core.Measurement",
-            "vocab:startMembranePotential",
+            "startMembranePotential",
             description="no description available",
             instructions="Enter the membrane potential of e.g., a patched cell at the beginning of a recording measured during the use of this pipette.",
         ),
         Property(
             "used_specimen",
             ["openminds.v3_0.core.SubjectState", "openminds.v3_0.core.TissueSampleState"],
-            "vocab:usedSpecimen",
+            "usedSpecimen",
             description="no description available",
             instructions="Add the state of the tissue sample or subject that this device was used on.",
         ),

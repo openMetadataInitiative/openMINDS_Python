@@ -15,13 +15,13 @@ class Strain(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Strain"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "alternate_identifier",
             str,
-            "vocab:alternateIdentifier",
+            "alternateIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class Strain(LinkedMetadata):
         Property(
             "background_strain",
             "openminds.v3_0.core.Strain",
-            "vocab:backgroundStrain",
+            "backgroundStrain",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -43,14 +43,14 @@ class Strain(LinkedMetadata):
         Property(
             "breeding_type",
             "openminds.v3_0.controlled_terms.BreedingType",
-            "vocab:breedingType",
+            "breedingType",
             description="no description available",
             instructions="Add the breeding type for this strain.",
         ),
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -59,14 +59,14 @@ class Strain(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v3_0.core.RRID",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the 'Research Resource Identifier' (RRID) of this strain.",
         ),
         Property(
             "disease_model",
             ["openminds.v3_0.controlled_terms.Disease", "openminds.v3_0.controlled_terms.DiseaseModel"],
-            "vocab:diseaseModel",
+            "diseaseModel",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -76,7 +76,7 @@ class Strain(LinkedMetadata):
         Property(
             "genetic_strain_type",
             "openminds.v3_0.controlled_terms.GeneticStrainType",
-            "vocab:geneticStrainType",
+            "geneticStrainType",
             required=True,
             description="no description available",
             instructions="Add the genetic background type of this strain.",
@@ -84,7 +84,7 @@ class Strain(LinkedMetadata):
         Property(
             "laboratory_code",
             str,
-            "vocab:laboratoryCode",
+            "laboratoryCode",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the laboratory code assigned by the Institute of Laboratory Animal Research (ILAR) for the investigator or organization that has created this strain following the defined pattern (e.g., Aaa).",
@@ -92,7 +92,7 @@ class Strain(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -101,7 +101,7 @@ class Strain(LinkedMetadata):
         Property(
             "ontology_identifier",
             str,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -112,7 +112,7 @@ class Strain(LinkedMetadata):
         Property(
             "phenotype",
             str,
-            "vocab:phenotype",
+            "phenotype",
             formatting="text/plain",
             description="Physical expression of one or more genes of an organism.",
             instructions="Enter a short description for the phenotype of this strain.",
@@ -120,7 +120,7 @@ class Strain(LinkedMetadata):
         Property(
             "species",
             "openminds.v3_0.controlled_terms.Species",
-            "vocab:species",
+            "species",
             required=True,
             description="Category of biological classification comprising related organisms or populations potentially capable of interbreeding, and being designated by a binomial that consists of the name of a genus followed by a Latin or latinized uncapitalized noun or adjective.",
             instructions="Add the species of this strain.",
@@ -128,14 +128,14 @@ class Strain(LinkedMetadata):
         Property(
             "stock_number",
             "openminds.v3_0.core.StockNumber",
-            "vocab:stockNumber",
+            "stockNumber",
             description="no description available",
             instructions="Add the stock number from the vendor the strain was supplied from/is in stock at.",
         ),
         Property(
             "synonym",
             str,
-            "vocab:synonym",
+            "synonym",
             multiple=True,
             unique_items=True,
             min_items=1,

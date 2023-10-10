@@ -15,13 +15,13 @@ class CustomCoordinateSpace(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/CustomCoordinateSpace"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "anatomical_axes_orientation",
             "openminds.v3_0.controlled_terms.AnatomicalAxesOrientation",
-            "vocab:anatomicalAxesOrientation",
+            "anatomicalAxesOrientation",
             required=True,
             description="Relation between reference planes used in anatomy and mathematics.",
             instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for this custom coordinate space.",
@@ -29,7 +29,7 @@ class CustomCoordinateSpace(LinkedMetadata):
         Property(
             "axes_origin",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:axesOrigin",
+            "axesOrigin",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -41,7 +41,7 @@ class CustomCoordinateSpace(LinkedMetadata):
         Property(
             "default_image",
             "openminds.v3_0.core.File",
-            "vocab:defaultImage",
+            "defaultImage",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -51,7 +51,7 @@ class CustomCoordinateSpace(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -60,7 +60,7 @@ class CustomCoordinateSpace(LinkedMetadata):
         Property(
             "native_unit",
             "openminds.v3_0.controlled_terms.UnitOfMeasurement",
-            "vocab:nativeUnit",
+            "nativeUnit",
             required=True,
             description="Determinate quantity used in the original measurement.",
             instructions="Add the native unit that is used for this custom coordinate space.",

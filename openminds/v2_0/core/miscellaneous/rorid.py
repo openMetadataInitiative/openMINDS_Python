@@ -15,13 +15,13 @@ class RORID(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/RORID"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "identifier",
             str,
-            "vocab:identifier",
+            "identifier",
             formatting="text/plain",
             description="Term or code used to identify something or someone.",
             instructions="Enter the resolvable identifier (IRI) of the Research Organization Registry.",

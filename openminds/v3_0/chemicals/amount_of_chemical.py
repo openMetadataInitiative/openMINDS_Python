@@ -15,13 +15,13 @@ class AmountOfChemical(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/chemicals/AmountOfChemical"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "amount",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:amount",
+            "amount",
             description="no description available",
             instructions="When used in a mixture, enter the amount of the substance within the mixture (e.g., as concentration or as ratio). When used in its pure state, enter the used amount of the substance.",
         ),
@@ -32,7 +32,7 @@ class AmountOfChemical(EmbeddedMetadata):
                 "openminds.v3_0.chemicals.ChemicalSubstance",
                 "openminds.v3_0.controlled_terms.MolecularEntity",
             ],
-            "vocab:chemicalProduct",
+            "chemicalProduct",
             required=True,
             description="no description available",
             instructions="Add the chemical product that was used.",

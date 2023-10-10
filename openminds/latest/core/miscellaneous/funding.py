@@ -15,21 +15,21 @@ class Funding(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Funding"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "acknowledgement",
             str,
-            "vocab:acknowledgement",
+            "acknowledgement",
             formatting="text/plain",
-            description="Offical declaration or avowal of appreciation of an act or achievement.",
+            description="Official declaration or avowal of appreciation of an act or achievement.",
             instructions="Enter the acknowledgement that should be used with this funding.",
         ),
         Property(
             "award_number",
             str,
-            "vocab:awardNumber",
+            "awardNumber",
             formatting="text/plain",
             description="Machine-readable identifier for a benefit that is conferred or bestowed on the basis of merit or need.",
             instructions="Enter the associated award number of this funding.",
@@ -37,7 +37,7 @@ class Funding(LinkedMetadata):
         Property(
             "award_title",
             str,
-            "vocab:awardTitle",
+            "awardTitle",
             formatting="text/plain",
             description="Human-readable identifier for a benefit that is conferred or bestowed on the basis of merit or need.",
             instructions="Enter the award title of this funding.",
@@ -45,7 +45,7 @@ class Funding(LinkedMetadata):
         Property(
             "funder",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:funder",
+            "funder",
             required=True,
             description="Legal person that provides money for a particular purpose.",
             instructions="Add the party that provided this funding.",

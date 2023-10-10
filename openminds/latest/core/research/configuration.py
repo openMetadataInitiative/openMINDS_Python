@@ -15,13 +15,13 @@ class Configuration(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Configuration"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "configuration",
             str,
-            "vocab:configuration",
+            "configuration",
             formatting="text/plain",
             multiline=True,
             required=True,
@@ -31,7 +31,7 @@ class Configuration(LinkedMetadata):
         Property(
             "format",
             "openminds.latest.core.ContentType",
-            "vocab:format",
+            "format",
             required=True,
             description="Method of digitally organizing and structuring data or information.",
             instructions="Add the content type of this configuration.",
@@ -39,7 +39,7 @@ class Configuration(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this configuration that may help you to find this instance more easily.",

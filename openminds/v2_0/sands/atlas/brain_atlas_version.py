@@ -17,13 +17,13 @@ class BrainAtlasVersion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "coordinate_space",
             "openminds.v2_0.sands.CommonCoordinateSpace",
-            "vocab:coordinateSpace",
+            "coordinateSpace",
             required=True,
             description="Two or three dimensional geometric setting.",
             instructions="Add the common coordinate space in which this brain atlas version exists in.",
@@ -31,14 +31,14 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v2_0.core.DOI",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this brain atlas version.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -47,7 +47,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "has_terminology",
             "openminds.v2_0.sands.parcellationTerminology",
-            "vocab:hasTerminology",
+            "hasTerminology",
             required=True,
             description="no description available",
             instructions="Add the parcellation terminology for this brain atlas version.",
@@ -55,14 +55,14 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "homepage",
             "openminds.v2_0.core.URL",
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Add the uniform resource locator (URL) to the homepage of this brain atlas version.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -71,7 +71,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "is_alternative_version_of",
             "openminds.v2_0.sands.BrainAtlasVersion",
-            "vocab:isAlternativeVersionOf",
+            "isAlternativeVersionOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -81,21 +81,21 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "is_new_version_of",
             "openminds.v2_0.sands.BrainAtlasVersion",
-            "vocab:isNewVersionOf",
+            "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the earlier version of this brain atlas version.",
         ),
         Property(
             "ontology_identifier",
             IRI,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this brain atlas version.",
         ),
         Property(
             "release_date",
             date,
-            "vocab:releaseDate",
+            "releaseDate",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
             instructions="Enter the date of first publication of this brain atlas version.",
@@ -103,7 +103,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -112,7 +112,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -121,7 +121,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             required=True,

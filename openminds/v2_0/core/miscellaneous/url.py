@@ -16,13 +16,13 @@ class URL(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/URL"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "url",
             IRI,
-            "vocab:URL",
+            "URL",
             description="no description available",
             instructions="Enter a uniform resource locator (URL).",
         ),

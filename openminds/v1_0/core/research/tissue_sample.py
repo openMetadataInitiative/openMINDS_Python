@@ -15,13 +15,13 @@ class TissueSample(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/TissueSample"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "biological_sex",
             "openminds.v1_0.controlled_terms.BiologicalSex",
-            "vocab:biologicalSex",
+            "biologicalSex",
             required=True,
             description="Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce.",
             instructions="Add the biological sex of this specimen.",
@@ -29,14 +29,14 @@ class TissueSample(LinkedMetadata):
         Property(
             "genotype",
             "openminds.v1_0.controlled_terms.Genotype",
-            "vocab:genotype",
+            "genotype",
             description="Genetic constitution of an individual or group.",
             instructions="Add the genotype of this specimen.",
         ),
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code that identifies someone or something within a particular product.",
@@ -45,7 +45,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "laterality",
             "openminds.v1_0.controlled_terms.Laterality",
-            "vocab:laterality",
+            "laterality",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -56,7 +56,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "origin",
             ["openminds.v1_0.controlled_terms.CellType", "openminds.v1_0.controlled_terms.Organ"],
-            "vocab:origin",
+            "origin",
             required=True,
             description="Source at which something begins or rises, or from which something derives.",
             instructions="Add the biogical origin (organ or cell type) of this tissue sample.",
@@ -64,14 +64,14 @@ class TissueSample(LinkedMetadata):
         Property(
             "phenotype",
             "openminds.v1_0.controlled_terms.Phenotype",
-            "vocab:phenotype",
+            "phenotype",
             description="Physical expression of one or more genes of an organism.",
             instructions="Add the phenotype of this specimen.",
         ),
         Property(
             "species",
             "openminds.v1_0.controlled_terms.Species",
-            "vocab:species",
+            "species",
             required=True,
             description="Category of biological classification comprising related organisms or populations potentially capable of interbreeding, and being designated by a binomial that consists of the name of a genus followed by a Latin or latinized uncapitalized noun or adjective.",
             instructions="Add the species of this specimen.",
@@ -79,14 +79,14 @@ class TissueSample(LinkedMetadata):
         Property(
             "strain",
             "openminds.v1_0.controlled_terms.Strain",
-            "vocab:strain",
+            "strain",
             description="Group of presumed common ancestry with physiological but usually not morphological distinctions.",
             instructions="Add the strain of this specimen.",
         ),
         Property(
             "studied_state",
             "openminds.v1_0.core.TissueSampleState",
-            "vocab:studiedState",
+            "studiedState",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -97,7 +97,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "type",
             "openminds.v1_0.controlled_terms.TissueSampleType",
-            "vocab:type",
+            "type",
             required=True,
             description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",
             instructions="Add the type of this tissue sample.",

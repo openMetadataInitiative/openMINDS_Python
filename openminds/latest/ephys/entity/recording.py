@@ -15,13 +15,13 @@ class Recording(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/Recording"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -30,7 +30,7 @@ class Recording(LinkedMetadata):
         Property(
             "channel",
             "openminds.latest.ephys.Channel",
-            "vocab:channel",
+            "channel",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -41,7 +41,7 @@ class Recording(LinkedMetadata):
         Property(
             "data_location",
             ["openminds.latest.core.File", "openminds.latest.core.FileBundle"],
-            "vocab:dataLocation",
+            "dataLocation",
             required=True,
             description="no description available",
             instructions="Add the location of the file or file bundle in which the recorded data is stored.",
@@ -49,7 +49,7 @@ class Recording(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this recording that is used within the corresponding data files to identify this recording.",
@@ -57,7 +57,7 @@ class Recording(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
             instructions="Enter a descriptive name for this recording.",
@@ -65,7 +65,7 @@ class Recording(LinkedMetadata):
         Property(
             "previous_recording",
             "openminds.latest.ephys.Recording",
-            "vocab:previousRecording",
+            "previousRecording",
             description="no description available",
             instructions="If this recording is part of a sequence of recordings (e.g., multiple repetitions or sweeps), add the recording preceding this recording.",
         ),
@@ -77,7 +77,7 @@ class Recording(LinkedMetadata):
                 "openminds.latest.ephys.PipetteUsage",
                 "openminds.latest.specimen_prep.SlicingDeviceUsage",
             ],
-            "vocab:recordedWith",
+            "recordedWith",
             required=True,
             description="no description available",
             instructions="Add the device used to generate this recording.",
@@ -85,7 +85,7 @@ class Recording(LinkedMetadata):
         Property(
             "sampling_frequency",
             "openminds.latest.core.QuantitativeValue",
-            "vocab:samplingFrequency",
+            "samplingFrequency",
             required=True,
             description="no description available",
             instructions="Enter the sampling frequency of this recording.",

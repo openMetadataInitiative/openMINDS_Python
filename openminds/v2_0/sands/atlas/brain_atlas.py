@@ -15,13 +15,13 @@ class BrainAtlas(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/BrainAtlas"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -31,14 +31,14 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v2_0.core.DOI",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this brain atlas.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -47,7 +47,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "has_version",
             "openminds.v2_0.sands.BrainAtlasVersion",
-            "vocab:hasVersion",
+            "hasVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -58,14 +58,14 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "homepage",
             "openminds.v2_0.core.URL",
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Add the uniform resource locator (URL) to the homepage of this brain atlas.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -74,7 +74,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",

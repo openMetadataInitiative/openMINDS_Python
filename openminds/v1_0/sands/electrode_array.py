@@ -15,13 +15,13 @@ class ElectrodeArray(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/ElectrodeArray"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "electrodes",
             "openminds.v1_0.sands.Electrode",
-            "vocab:electrodes",
+            "electrodes",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -32,7 +32,7 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code that identifies someone or something within a particular product.",

@@ -15,13 +15,13 @@ class ContentType(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ContentType"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "associated_file_extension",
             str,
-            "vocab:associatedFileExtension",
+            "associatedFileExtension",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -33,7 +33,7 @@ class ContentType(LinkedMetadata):
         Property(
             "category",
             str,
-            "vocab:category",
+            "category",
             formatting="text/plain",
             required=True,
             description="no description available",
@@ -42,7 +42,7 @@ class ContentType(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -51,7 +51,7 @@ class ContentType(LinkedMetadata):
         Property(
             "related_media_type",
             str,
-            "vocab:relatedMediaType",
+            "relatedMediaType",
             formatting="text/plain",
             description="Reference to an official two-part identifier for file formats and format contents.",
             instructions="Enter the iternationalized resource identifier (IRI) to a registered media type (e.g. on IANA.org) matching this content type.",
@@ -59,7 +59,7 @@ class ContentType(LinkedMetadata):
         Property(
             "synonym",
             str,
-            "vocab:synonym",
+            "synonym",
             multiple=True,
             unique_items=True,
             min_items=1,

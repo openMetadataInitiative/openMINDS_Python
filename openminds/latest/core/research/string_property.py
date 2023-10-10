@@ -15,13 +15,13 @@ class StringProperty(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/StringProperty"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -30,7 +30,7 @@ class StringProperty(EmbeddedMetadata):
         Property(
             "value",
             str,
-            "vocab:value",
+            "value",
             formatting="text/plain",
             required=True,
             description="Entry for a property.",

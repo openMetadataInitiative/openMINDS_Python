@@ -16,13 +16,13 @@ class Organization(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Organization"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "affiliation",
             "openminds.latest.core.Affiliation",
-            "vocab:affiliation",
+            "affiliation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class Organization(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.latest.core.GRIDID", "openminds.latest.core.RORID", "openminds.latest.core.RRID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -42,7 +42,7 @@ class Organization(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -51,7 +51,7 @@ class Organization(LinkedMetadata):
         Property(
             "has_parent",
             "openminds.latest.core.Organization",
-            "vocab:hasParent",
+            "hasParent",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -61,14 +61,14 @@ class Organization(LinkedMetadata):
         Property(
             "homepage",
             IRI,
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this organization.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             description="Shortened or fully abbreviated name of something or somebody.",
             instructions="Enter a short name (or alias) for this organization that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",

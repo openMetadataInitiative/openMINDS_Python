@@ -16,13 +16,13 @@ class ProtocolExecution(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ProtocolExecution"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "behavioral_protocol",
             "openminds.latest.core.BehavioralProtocol",
-            "vocab:behavioralProtocol",
+            "behavioralProtocol",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "custom_property_set",
             "openminds.latest.core.CustomPropertySet",
-            "vocab:customPropertySet",
+            "customPropertySet",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -42,7 +42,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -51,7 +51,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "end_time",
             [datetime, time],
-            "vocab:endTime",
+            "endTime",
             description="no description available",
             instructions="Enter the date and/or time on when this activity ended, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
@@ -67,7 +67,7 @@ class ProtocolExecution(LinkedMetadata):
                 "openminds.latest.sands.BrainAtlasVersion",
                 "openminds.latest.sands.CommonCoordinateSpaceVersion",
             ],
-            "vocab:input",
+            "input",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -78,7 +78,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "is_part_of",
             "openminds.latest.core.DatasetVersion",
-            "vocab:isPartOf",
+            "isPartOf",
             required=True,
             description="Reference to the ensemble of multiple things or beings.",
             instructions="Add the dataset version in which this activity was conducted.",
@@ -86,7 +86,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this activity that may help you to find this instance more easily.",
@@ -101,7 +101,7 @@ class ProtocolExecution(LinkedMetadata):
                 "openminds.latest.core.TissueSampleCollectionState",
                 "openminds.latest.core.TissueSampleState",
             ],
-            "vocab:output",
+            "output",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -112,7 +112,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "performed_by",
             ["openminds.latest.computation.SoftwareAgent", "openminds.latest.core.Person"],
-            "vocab:performedBy",
+            "performedBy",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -122,14 +122,14 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "preparation_design",
             "openminds.latest.controlled_terms.PreparationType",
-            "vocab:preparationDesign",
+            "preparationDesign",
             description="no description available",
             instructions="Add the initial preparation type for this activity.",
         ),
         Property(
             "protocol",
             "openminds.latest.core.Protocol",
-            "vocab:protocol",
+            "protocol",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -140,7 +140,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "start_time",
             [datetime, time],
-            "vocab:startTime",
+            "startTime",
             description="no description available",
             instructions="Enter the date and/or time on when this activity started, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
@@ -175,7 +175,7 @@ class ProtocolExecution(LinkedMetadata):
                 "openminds.latest.sands.ParcellationEntity",
                 "openminds.latest.sands.ParcellationEntityVersion",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,

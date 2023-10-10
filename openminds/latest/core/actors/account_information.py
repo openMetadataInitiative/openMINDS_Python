@@ -15,13 +15,13 @@ class AccountInformation(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/AccountInformation"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "service",
             "openminds.latest.core.WebService",
-            "vocab:service",
+            "service",
             required=True,
             description="no description available",
             instructions="Add the web service of this account.",
@@ -29,7 +29,7 @@ class AccountInformation(LinkedMetadata):
         Property(
             "user_name",
             str,
-            "vocab:userName",
+            "userName",
             formatting="text/plain",
             required=True,
             description="no description available",

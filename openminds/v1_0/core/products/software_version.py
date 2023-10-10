@@ -15,13 +15,13 @@ class SoftwareVersion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/SoftwareVersion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "accessibility",
             "openminds.v1_0.controlled_terms.ProductAccessibility",
-            "vocab:accessibility",
+            "accessibility",
             required=True,
             description="Level to which something is accessible to someone or something.",
             instructions="Add the accessibility of the data for this research product version.",
@@ -29,7 +29,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "application_category",
             "openminds.v1_0.controlled_terms.SoftwareApplicationCategory",
-            "vocab:applicationCategory",
+            "applicationCategory",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -40,7 +40,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "author",
             ["openminds.v1_0.core.Organization", "openminds.v1_0.core.Person"],
-            "vocab:author",
+            "author",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -50,14 +50,14 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "copyright",
             "openminds.v1_0.core.Copyright",
-            "vocab:copyright",
+            "copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
             instructions="Add the copyright information of this research product version.",
         ),
         Property(
             "custodian",
             ["openminds.v1_0.core.Organization", "openminds.v1_0.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -67,7 +67,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -77,7 +77,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "developer",
             ["openminds.v1_0.core.Organization", "openminds.v1_0.core.Person"],
-            "vocab:developer",
+            "developer",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -88,7 +88,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "device",
             "openminds.v1_0.controlled_terms.OperatingDevice",
-            "vocab:device",
+            "device",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -99,7 +99,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             required=True,
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product version.",
@@ -107,7 +107,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "full_documentation",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:fullDocumentation",
+            "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
             instructions="Add the globally unique and persistent digital identifier of a full documentation of this research product version.",
@@ -115,7 +115,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -124,7 +124,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "funding",
             "openminds.v1_0.core.Funding",
-            "vocab:funding",
+            "funding",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -135,7 +135,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "has_alternative_version",
             "openminds.v1_0.core.SoftwareVersion",
-            "vocab:hasAlternativeVersion",
+            "hasAlternativeVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -145,7 +145,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "has_feature",
             "openminds.v1_0.controlled_terms.SoftwareFeature",
-            "vocab:hasFeature",
+            "hasFeature",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -156,7 +156,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "has_requirement",
             str,
-            "vocab:hasRequirement",
+            "hasRequirement",
             formatting="text/plain",
             required=True,
             description="no description available",
@@ -165,7 +165,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "has_supplement_version",
             "openminds.v1_0.core.SoftwareVersion",
-            "vocab:hasSupplementVersion",
+            "hasSupplementVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -175,7 +175,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "homepage",
             str,
-            "vocab:homepage",
+            "homepage",
             formatting="text/plain",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
@@ -183,7 +183,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "input_format",
             "openminds.v1_0.core.ContentType",
-            "vocab:inputFormat",
+            "inputFormat",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -194,14 +194,14 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "is_new_version_of",
             "openminds.v1_0.core.SoftwareVersion",
-            "vocab:isNewVersionOf",
+            "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the software version preceding this software version.",
         ),
         Property(
             "keyword",
             str,
-            "vocab:keyword",
+            "keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -213,7 +213,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "language",
             "openminds.v1_0.controlled_terms.Language",
-            "vocab:language",
+            "language",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -224,7 +224,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "license",
             "openminds.v1_0.core.License",
-            "vocab:license",
+            "license",
             required=True,
             description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
             instructions="Add the license of this research product version.",
@@ -232,7 +232,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "operating_system",
             "openminds.v1_0.controlled_terms.OperatingSystem",
-            "vocab:operatingSystem",
+            "operatingSystem",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -243,7 +243,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "other_contribution",
             "openminds.v1_0.core.Contribution",
-            "vocab:otherContribution",
+            "otherContribution",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -253,7 +253,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "output_format",
             "openminds.v1_0.core.ContentType",
-            "vocab:outputFormat",
+            "outputFormat",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -264,7 +264,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "programming_language",
             "openminds.v1_0.controlled_terms.ProgrammingLanguage",
-            "vocab:programmingLanguage",
+            "programmingLanguage",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -275,7 +275,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "related_publication",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:relatedPublication",
+            "relatedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -285,7 +285,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "release_date",
             str,
-            "vocab:releaseDate",
+            "releaseDate",
             formatting="text/plain",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
@@ -294,7 +294,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "repository",
             "openminds.v1_0.core.FileRepository",
-            "vocab:repository",
+            "repository",
             required=True,
             description="Place, room, or container where something is deposited or stored.",
             instructions="Add the file repository of this research product version.",
@@ -302,7 +302,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -311,7 +311,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -320,7 +320,7 @@ class SoftwareVersion(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             description="Documentation on what changed in comparison to a previously published form of something.",

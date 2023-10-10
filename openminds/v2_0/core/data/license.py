@@ -16,13 +16,13 @@ class License(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/License"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -31,7 +31,7 @@ class License(LinkedMetadata):
         Property(
             "legal_code",
             IRI,
-            "vocab:legalCode",
+            "legalCode",
             required=True,
             description="Type of legislation that claims to cover the law system (complete or parts) as it existed at the time the code was enacted.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the legal code of this license.",
@@ -39,7 +39,7 @@ class License(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -48,7 +48,7 @@ class License(LinkedMetadata):
         Property(
             "webpage",
             str,
-            "vocab:webpage",
+            "webpage",
             multiple=True,
             unique_items=True,
             min_items=1,

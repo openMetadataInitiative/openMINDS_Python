@@ -15,13 +15,13 @@ class ContactInformation(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ContactInformation"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "email",
             str,
-            "vocab:email",
+            "email",
             formatting="text/plain",
             required=True,
             description="Address to which or from which an electronic mail can be sent.",

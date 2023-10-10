@@ -17,13 +17,13 @@ class BrainAtlasVersion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "abbreviation",
             str,
-            "vocab:abbreviation",
+            "abbreviation",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the official abbreviation of this brain atlas version.",
@@ -31,7 +31,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "accessibility",
             "openminds.latest.controlled_terms.ProductAccessibility",
-            "vocab:accessibility",
+            "accessibility",
             required=True,
             description="Level to which something is accessible to someone or something.",
             instructions="Add the accessibility of the data for this research product version.",
@@ -39,7 +39,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "author",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:author",
+            "author",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -49,7 +49,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "coordinate_space",
             "openminds.latest.sands.CommonCoordinateSpaceVersion",
-            "vocab:coordinateSpace",
+            "coordinateSpace",
             required=True,
             description="Two or three dimensional geometric setting.",
             instructions="Add the specific common coordinate space in which this brain atlas version exists.",
@@ -57,14 +57,14 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "copyright",
             "openminds.latest.core.Copyright",
-            "vocab:copyright",
+            "copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
             instructions="Enter the copyright information of this research product version.",
         ),
         Property(
             "custodian",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -74,7 +74,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -83,14 +83,14 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.latest.core.DOI", "openminds.latest.core.ISBN", "openminds.latest.core.RRID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product version.",
         ),
         Property(
             "full_documentation",
             ["openminds.latest.core.DOI", "openminds.latest.core.File", "openminds.latest.core.WebResource"],
-            "vocab:fullDocumentation",
+            "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
             instructions="Add the publication or file that acts as the full documentation of this research product version.",
@@ -98,7 +98,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             description="Whole, non-abbreviated name of something or somebody.",
             instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
@@ -106,7 +106,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "funding",
             "openminds.latest.core.Funding",
-            "vocab:funding",
+            "funding",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -116,7 +116,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "has_terminology",
             "openminds.latest.sands.ParcellationTerminologyVersion",
-            "vocab:hasTerminology",
+            "hasTerminology",
             required=True,
             description="no description available",
             instructions="Enter the specific parcellation terminology of this brain atlas version.",
@@ -124,14 +124,14 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "homepage",
             IRI,
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -140,7 +140,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "is_alternative_version_of",
             "openminds.latest.sands.BrainAtlasVersion",
-            "vocab:isAlternativeVersionOf",
+            "isAlternativeVersionOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -150,7 +150,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "is_new_version_of",
             "openminds.latest.sands.BrainAtlasVersion",
-            "vocab:isNewVersionOf",
+            "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the brain atlas version preceding this brain atlas version.",
         ),
@@ -236,7 +236,7 @@ class BrainAtlasVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.UnitOfMeasurement",
                 "openminds.latest.controlled_terms.VisualStimulusType",
             ],
-            "vocab:keyword",
+            "keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -246,7 +246,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "license",
             "openminds.latest.core.License",
-            "vocab:license",
+            "license",
             required=True,
             description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
             instructions="Add the license of this brain atlas version.",
@@ -254,7 +254,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "major_version_identifier",
             str,
-            "vocab:majorVersionIdentifier",
+            "majorVersionIdentifier",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the identifier of the major version release this research product version belongs to.",
@@ -262,14 +262,14 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "ontology_identifier",
             IRI,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) to the related ontological term matching this brain atlas version.",
         ),
         Property(
             "other_contribution",
             "openminds.latest.core.Contribution",
-            "vocab:otherContribution",
+            "otherContribution",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -287,7 +287,7 @@ class BrainAtlasVersion(LinkedMetadata):
                 "openminds.latest.publications.Chapter",
                 "openminds.latest.publications.ScholarlyArticle",
             ],
-            "vocab:relatedPublication",
+            "relatedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -297,7 +297,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "release_date",
             date,
-            "vocab:releaseDate",
+            "releaseDate",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
             instructions="Enter the date (actual or intended) on which this research product version was first release, formatted as 'YYYY-MM-DD'.",
@@ -305,14 +305,14 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "repository",
             "openminds.latest.core.FileRepository",
-            "vocab:repository",
+            "repository",
             description="Place, room, or container where something is deposited or stored.",
             instructions="Add the file repository of this research product version.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -321,7 +321,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "support_channel",
             str,
-            "vocab:supportChannel",
+            "supportChannel",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -332,7 +332,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "type",
             "openminds.latest.controlled_terms.AtlasType",
-            "vocab:type",
+            "type",
             description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",
             instructions="Add the type of this brain atlas version.",
         ),
@@ -344,7 +344,7 @@ class BrainAtlasVersion(LinkedMetadata):
                 "openminds.latest.core.TissueSample",
                 "openminds.latest.core.TissueSampleCollection",
             ],
-            "vocab:usedSpecimen",
+            "usedSpecimen",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -354,7 +354,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -363,7 +363,7 @@ class BrainAtlasVersion(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             required=True,

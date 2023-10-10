@@ -15,13 +15,13 @@ class ContentTypePattern(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ContentTypePattern"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "content_type",
             "openminds.latest.core.ContentType",
-            "vocab:contentType",
+            "contentType",
             required=True,
             description="no description available",
             instructions="Add the content type that can be defined by the regular expression of this content type pattern (e.g., for file extensions).",
@@ -29,7 +29,7 @@ class ContentTypePattern(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this content type pattern that may help you to find this instance more easily.",
@@ -37,7 +37,7 @@ class ContentTypePattern(LinkedMetadata):
         Property(
             "regex",
             str,
-            "vocab:regex",
+            "regex",
             formatting="text/plain",
             required=True,
             description="no description available",

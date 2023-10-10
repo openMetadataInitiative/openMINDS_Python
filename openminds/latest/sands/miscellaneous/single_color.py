@@ -15,13 +15,13 @@ class SingleColor(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/SingleColor"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "value",
             str,
-            "vocab:value",
+            "value",
             formatting="text/plain",
             required=True,
             description="Entry for a property.",

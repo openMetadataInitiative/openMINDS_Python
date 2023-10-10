@@ -16,20 +16,20 @@ class Affiliation(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Affiliation"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "end_date",
             date,
-            "vocab:endDate",
+            "endDate",
             description="Date in the Gregorian calendar at which something terminates in time.",
             instructions="Enter the end date of this affiliation. Leave blank if the affiliation is still current.",
         ),
         Property(
             "organization",
             "openminds.v2_0.core.Organization",
-            "vocab:organization",
+            "organization",
             required=True,
             description="Legally accountable, administrative and functional structure.",
             instructions="Add organization to which a person is or was affiliated.",
@@ -37,7 +37,7 @@ class Affiliation(EmbeddedMetadata):
         Property(
             "start_date",
             date,
-            "vocab:startDate",
+            "startDate",
             description="Date in the Gregorian calendar at which something begins in time",
             instructions="Enter the start date of this affiliation.",
         ),

@@ -16,20 +16,20 @@ class Consortium(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Consortium"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "contact_information",
             "openminds.v3_0.core.ContactInformation",
-            "vocab:contactInformation",
+            "contactInformation",
             description="Any available way used to contact a person or business (e.g., address, phone number, email address, etc.).",
             instructions="Add the contact information of this consortium.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -38,14 +38,14 @@ class Consortium(LinkedMetadata):
         Property(
             "homepage",
             IRI,
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this consortium.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             description="Shortened or fully abbreviated name of something or somebody.",
             instructions="Enter a short name (or alias) for this consortium that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",

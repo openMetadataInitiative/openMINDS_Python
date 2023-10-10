@@ -15,13 +15,13 @@ class BehavioralProtocol(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/BehavioralProtocol"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "described_in",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.File", "openminds.v3_0.core.WebResource"],
-            "vocab:describedIn",
+            "describedIn",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -31,7 +31,7 @@ class BehavioralProtocol(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -41,7 +41,7 @@ class BehavioralProtocol(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this behavioral protocol that is used within the corresponding data files to identify this behavioral protocol.",
@@ -49,7 +49,7 @@ class BehavioralProtocol(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -61,7 +61,7 @@ class BehavioralProtocol(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.StimulationApproach",
                 "openminds.v3_0.controlled_terms.StimulationTechnique",
             ],
-            "vocab:stimulation",
+            "stimulation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -79,7 +79,7 @@ class BehavioralProtocol(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.TactileStimulusType",
                 "openminds.v3_0.controlled_terms.VisualStimulusType",
             ],
-            "vocab:stimulusType",
+            "stimulusType",
             multiple=True,
             unique_items=True,
             min_items=1,

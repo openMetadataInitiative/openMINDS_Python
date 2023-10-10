@@ -15,13 +15,13 @@ class Channel(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/Channel"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code that identifies someone or something within a particular product.",
@@ -30,7 +30,7 @@ class Channel(EmbeddedMetadata):
         Property(
             "unit",
             "openminds.latest.controlled_terms.UnitOfMeasurement",
-            "vocab:unit",
+            "unit",
             required=True,
             description="Determinate quantity adopted as a standard of measurement.",
             instructions="Add the unit of measurement for this channel.",

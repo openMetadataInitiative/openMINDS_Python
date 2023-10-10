@@ -16,13 +16,13 @@ class Measurement(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Measurement"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -31,7 +31,7 @@ class Measurement(EmbeddedMetadata):
         Property(
             "measured_quantity",
             "openminds.latest.controlled_terms.MeasuredQuantity",
-            "vocab:measuredQuantity",
+            "measuredQuantity",
             required=True,
             description="no description available",
             instructions="Add the quantity that was measured during this measurement.",
@@ -44,21 +44,21 @@ class Measurement(EmbeddedMetadata):
                 "openminds.latest.ephys.PipetteUsage",
                 "openminds.latest.specimen_prep.SlicingDeviceUsage",
             ],
-            "vocab:measuredWith",
+            "measuredWith",
             description="no description available",
             instructions="Add the device that was used during this measurement.",
         ),
         Property(
             "timestamp",
             datetime,
-            "vocab:timestamp",
+            "timestamp",
             description="no description available",
             instructions="Enter the date and time on which this measurement was made, formatted as '2023-02-07T16:00:00+00:00'.",
         ),
         Property(
             "value",
             ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
-            "vocab:value",
+            "value",
             multiple=True,
             unique_items=True,
             min_items=1,

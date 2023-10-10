@@ -15,13 +15,13 @@ class ChemicalSubstance(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -30,7 +30,7 @@ class ChemicalSubstance(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this chemical substance that may help you to find this instance more easily.",
@@ -38,7 +38,7 @@ class ChemicalSubstance(LinkedMetadata):
         Property(
             "molecular_entity",
             "openminds.v3_0.controlled_terms.MolecularEntity",
-            "vocab:molecularEntity",
+            "molecularEntity",
             required=True,
             description="no description available",
             instructions="Add the molecular entity that makes up this chemical substance.",
@@ -46,14 +46,14 @@ class ChemicalSubstance(LinkedMetadata):
         Property(
             "product_source",
             "openminds.v3_0.chemicals.ProductSource",
-            "vocab:productSource",
+            "productSource",
             description="no description available",
             instructions="Add the source of this chemical substance.",
         ),
         Property(
             "purity",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
-            "vocab:purity",
+            "purity",
             description="no description available",
             instructions="Enter the purity of this chemical substance.",
         ),

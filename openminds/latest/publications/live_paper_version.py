@@ -4,9 +4,9 @@
 
 # this file was auto-generated!
 
-from datetime import datetime
 from openminds.base import IRI
 from datetime import date
+from datetime import datetime
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -18,7 +18,7 @@ class LivePaperVersion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/publications/LivePaperVersion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -28,7 +28,7 @@ class LivePaperVersion(LinkedMetadata):
                 "openminds.latest.core.ModelVersion",
                 "openminds.latest.core.SoftwareVersion",
             ],
-            "vocab:about",
+            "about",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -38,7 +38,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "accessibility",
             "openminds.latest.controlled_terms.ProductAccessibility",
-            "vocab:accessibility",
+            "accessibility",
             required=True,
             description="Level to which something is accessible to someone or something.",
             instructions="Add the accessibility of the data for this research product version.",
@@ -46,7 +46,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "author",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:author",
+            "author",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -56,14 +56,14 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "copyright",
             "openminds.latest.core.Copyright",
-            "vocab:copyright",
+            "copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
             instructions="Enter the copyright information of this research product version.",
         ),
         Property(
             "custodian",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -73,7 +73,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -82,7 +82,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.latest.core.DOI",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             required=True,
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product version.",
@@ -90,7 +90,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "full_documentation",
             ["openminds.latest.core.DOI", "openminds.latest.core.File", "openminds.latest.core.WebResource"],
-            "vocab:fullDocumentation",
+            "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
             instructions="Add the publication or file that acts as the full documentation of this research product version.",
@@ -98,7 +98,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             description="Whole, non-abbreviated name of something or somebody.",
             instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
@@ -106,7 +106,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "funding",
             "openminds.latest.core.Funding",
-            "vocab:funding",
+            "funding",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -116,14 +116,14 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "homepage",
             IRI,
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -132,7 +132,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "is_alternative_version_of",
             "openminds.latest.publications.LivePaperVersion",
-            "vocab:isAlternativeVersionOf",
+            "isAlternativeVersionOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -142,7 +142,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "is_new_version_of",
             "openminds.latest.publications.LivePaperVersion",
-            "vocab:isNewVersionOf",
+            "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the live paper version preceding this live paper version.",
         ),
@@ -228,7 +228,7 @@ class LivePaperVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.UnitOfMeasurement",
                 "openminds.latest.controlled_terms.VisualStimulusType",
             ],
-            "vocab:keyword",
+            "keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -238,7 +238,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "license",
             "openminds.latest.core.License",
-            "vocab:license",
+            "license",
             required=True,
             description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
             instructions="Add the license of this live paper version.",
@@ -246,14 +246,14 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "modification_date",
             datetime,
-            "vocab:modificationDate",
+            "modificationDate",
             description="no description available",
             instructions="Enter the date and time on which this live paper version was last modified, formatted as 'YYYY-MM-DDThh:mm:ssTZD' (e.g., '2023-02-07T16:00:00+00:00').",
         ),
         Property(
             "other_contribution",
             "openminds.latest.core.Contribution",
-            "vocab:otherContribution",
+            "otherContribution",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -271,7 +271,7 @@ class LivePaperVersion(LinkedMetadata):
                 "openminds.latest.publications.Chapter",
                 "openminds.latest.publications.ScholarlyArticle",
             ],
-            "vocab:relatedPublication",
+            "relatedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -281,7 +281,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "release_date",
             date,
-            "vocab:releaseDate",
+            "releaseDate",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
             instructions="Enter the date (actual or intended) on which this research product version was first release, formatted as 'YYYY-MM-DD'.",
@@ -289,14 +289,14 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "repository",
             "openminds.latest.core.FileRepository",
-            "vocab:repository",
+            "repository",
             description="Place, room, or container where something is deposited or stored.",
             instructions="Add the file repository of this research product version.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -305,7 +305,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "support_channel",
             str,
-            "vocab:supportChannel",
+            "supportChannel",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -316,7 +316,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -325,7 +325,7 @@ class LivePaperVersion(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             required=True,

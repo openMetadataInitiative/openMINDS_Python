@@ -15,13 +15,13 @@ class EphysStimulus(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/stimulation/EphysStimulus"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "type",
             "openminds.v3_0.controlled_terms.ElectricalStimulusType",
-            "vocab:type",
+            "type",
             description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",
             instructions="Add the type that describe this electrical stimulus.",
         ),

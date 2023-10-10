@@ -15,13 +15,13 @@ class FileBundle(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/FileBundle"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "iri",
             str,
-            "vocab:IRI",
+            "IRI",
             formatting="text/plain",
             required=True,
             description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
@@ -30,28 +30,28 @@ class FileBundle(LinkedMetadata):
         Property(
             "format",
             "openminds.v1_0.core.ContentType",
-            "vocab:format",
+            "format",
             description="Method of digitally organizing and structuring data or information.",
             instructions="Add the content type of this file bundle.",
         ),
         Property(
             "grouped_by",
             "openminds.v1_0.controlled_terms.FileBundleGrouping",
-            "vocab:groupedBy",
+            "groupedBy",
             description="Reference to the aspect used to group something.",
             instructions="Add the concept which was used to group file instances into this file bundle.",
         ),
         Property(
             "hash",
             "openminds.v1_0.core.Hash",
-            "vocab:hash",
+            "hash",
             description="Term used for the process of converting any data into a single value. Often also directly refers to the resulting single value.",
             instructions="Add the hash that was generated for this file bundle.",
         ),
         Property(
             "is_part_of",
             ["openminds.v1_0.core.FileBundle", "openminds.v1_0.core.FileRepository"],
-            "vocab:isPartOf",
+            "isPartOf",
             required=True,
             description="Reference to the ensemble of multiple things or beings.",
             instructions="Add the file bundle or file repository this file bundle is a part of.",
@@ -59,7 +59,7 @@ class FileBundle(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -68,7 +68,7 @@ class FileBundle(LinkedMetadata):
         Property(
             "storage_size",
             "openminds.v1_0.core.QuantitativeValue",
-            "vocab:storageSize",
+            "storageSize",
             description="Quantitative value defining how much disk space is used by an object on a computer system.",
             instructions="Enter the storage size this file bundle allocates.",
         ),

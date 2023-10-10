@@ -15,13 +15,13 @@ class TissueSampleSlicing(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "device",
             "openminds.latest.specimen_prep.SlicingDeviceUsage",
-            "vocab:device",
+            "device",
             required=True,
             description="Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function.",
             instructions="Add the device used to slice the tissue sample.",
@@ -33,14 +33,14 @@ class TissueSampleSlicing(LinkedMetadata):
                 "openminds.latest.core.TissueSampleCollectionState",
                 "openminds.latest.core.TissueSampleState",
             ],
-            "vocab:input",
+            "input",
             description="Something or someone that is put into or participates in a process or machine.",
             instructions="Add the state of the specimen that was sliced during this activity.",
         ),
         Property(
             "output",
             ["openminds.latest.core.TissueSampleCollectionState", "openminds.latest.core.TissueSampleState"],
-            "vocab:output",
+            "output",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -50,14 +50,14 @@ class TissueSampleSlicing(LinkedMetadata):
         Property(
             "temperature",
             ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
-            "vocab:temperature",
+            "temperature",
             description="no description available",
             instructions="Enter the temperature at which the tissue sample was sliced during the activity.",
         ),
         Property(
             "tissue_bath_solution",
             "openminds.latest.chemicals.ChemicalMixture",
-            "vocab:tissueBathSolution",
+            "tissueBathSolution",
             description="no description available",
             instructions="Add the chemical mixture used as bath solution during this activity.",
         ),

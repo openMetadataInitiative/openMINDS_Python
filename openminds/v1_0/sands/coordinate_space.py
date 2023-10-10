@@ -15,13 +15,13 @@ class CoordinateSpace(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/CoordinateSpace"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "anatomical_axes_orientation",
             "openminds.v1_0.controlled_terms.AnatomicalAxesOrientation",
-            "vocab:anatomicalAxesOrientation",
+            "anatomicalAxesOrientation",
             required=True,
             description="Relation between reference planes used in anatomy and mathematics.",
             instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ).",
@@ -29,7 +29,7 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "axes_origin",
             "openminds.v1_0.core.QuantitativeValue",
-            "vocab:axesOrigin",
+            "axesOrigin",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -41,7 +41,7 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "default_image",
             "openminds.v1_0.sands.Image",
-            "vocab:defaultImage",
+            "defaultImage",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -51,14 +51,14 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this coordinate space.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -67,7 +67,7 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "homepage",
             str,
-            "vocab:homepage",
+            "homepage",
             formatting="text/plain",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this brain atlas.",
@@ -75,7 +75,7 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "native_unit",
             "openminds.v1_0.controlled_terms.UnitOfMeasurement",
-            "vocab:nativeUnit",
+            "nativeUnit",
             required=True,
             description="Determinate quantity used in the original measurement.",
             instructions="Add the native unit that is used for this coordinate space.",
@@ -83,7 +83,7 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "ontology_identifier",
             str,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             formatting="text/plain",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this coordinate space.",
@@ -91,7 +91,7 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "release_date",
             str,
-            "vocab:releaseDate",
+            "releaseDate",
             formatting="text/plain",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
@@ -100,7 +100,7 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -109,7 +109,7 @@ class CoordinateSpace(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",

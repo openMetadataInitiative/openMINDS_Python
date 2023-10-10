@@ -15,7 +15,7 @@ class Electrode(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/Electrode"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -25,14 +25,14 @@ class Electrode(LinkedMetadata):
                 "openminds.v3_0.chemicals.ChemicalSubstance",
                 "openminds.v3_0.controlled_terms.MolecularEntity",
             ],
-            "vocab:conductorMaterial",
+            "conductorMaterial",
             description="no description available",
             instructions="Add the conductor material of this electrode.",
         ),
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -41,7 +41,7 @@ class Electrode(LinkedMetadata):
         Property(
             "device_type",
             "openminds.v3_0.controlled_terms.DeviceType",
-            "vocab:deviceType",
+            "deviceType",
             required=True,
             description="no description available",
             instructions="Add the type of this device.",
@@ -49,7 +49,7 @@ class Electrode(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.RRID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this device.",
         ),
@@ -60,14 +60,14 @@ class Electrode(LinkedMetadata):
                 "openminds.v3_0.chemicals.ChemicalSubstance",
                 "openminds.v3_0.controlled_terms.MolecularEntity",
             ],
-            "vocab:insulatorMaterial",
+            "insulatorMaterial",
             description="no description available",
             instructions="Add the insulator material of this electrode.",
         ),
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this electrode that is used within the corresponding data files to identify this electrode.",
@@ -75,14 +75,14 @@ class Electrode(LinkedMetadata):
         Property(
             "intrinsic_resistance",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
-            "vocab:intrinsicResistance",
+            "intrinsicResistance",
             description="no description available",
             instructions="Enter the intrinsic resistance of this electrode.",
         ),
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this device that may help you to find this instance more easily.",
@@ -90,7 +90,7 @@ class Electrode(LinkedMetadata):
         Property(
             "manufacturer",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:manufacturer",
+            "manufacturer",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -100,7 +100,7 @@ class Electrode(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -109,7 +109,7 @@ class Electrode(LinkedMetadata):
         Property(
             "owner",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:owner",
+            "owner",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -119,7 +119,7 @@ class Electrode(LinkedMetadata):
         Property(
             "serial_number",
             str,
-            "vocab:serialNumber",
+            "serialNumber",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the serial number of this device.",

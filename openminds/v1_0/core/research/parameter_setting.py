@@ -15,13 +15,13 @@ class ParameterSetting(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ParameterSetting"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -31,7 +31,7 @@ class ParameterSetting(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -40,7 +40,7 @@ class ParameterSetting(LinkedMetadata):
         Property(
             "relevant_for",
             ["openminds.v1_0.controlled_terms.BehavioralTask", "openminds.v1_0.controlled_terms.Technique"],
-            "vocab:relevantFor",
+            "relevantFor",
             required=True,
             description="Reference to what or whom something or someone bears siginificance.",
             instructions="Add the technique or behavioral task where this parameter setting is used in.",
@@ -48,14 +48,14 @@ class ParameterSetting(LinkedMetadata):
         Property(
             "unit",
             "openminds.v1_0.controlled_terms.UnitOfMeasurement",
-            "vocab:unit",
+            "unit",
             description="Determinate quantity adopted as a standard of measurement.",
             instructions="Add the unit of measurement used for the value of this parameter setting.",
         ),
         Property(
             "value",
             ["float", "str"],
-            "vocab:value",
+            "value",
             required=True,
             description="Entry for a property.",
             instructions="Enter the value of this parameter setting.",

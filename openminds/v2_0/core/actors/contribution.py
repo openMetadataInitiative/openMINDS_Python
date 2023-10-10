@@ -15,13 +15,13 @@ class Contribution(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Contribution"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "contribution_type",
             "openminds.v2_0.controlled_terms.ContributionType",
-            "vocab:contributionType",
+            "contributionType",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class Contribution(EmbeddedMetadata):
         Property(
             "contributor",
             ["openminds.v2_0.core.Organization", "openminds.v2_0.core.Person"],
-            "vocab:contributor",
+            "contributor",
             required=True,
             description="Legal person that gave or supplied something as a part or share.",
             instructions="Add the contributing person or organization.",

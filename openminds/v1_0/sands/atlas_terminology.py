@@ -15,13 +15,13 @@ class AtlasTerminology(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/AtlasTerminology"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "anatomical_entity",
             "openminds.v1_0.sands.AnatomicalEntity",
-            "vocab:anatomicalEntity",
+            "anatomicalEntity",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class AtlasTerminology(LinkedMetadata):
         Property(
             "defined_in",
             "openminds.v1_0.core.FileInstance",
-            "vocab:definedIn",
+            "definedIn",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -42,7 +42,7 @@ class AtlasTerminology(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -51,7 +51,7 @@ class AtlasTerminology(LinkedMetadata):
         Property(
             "ontology_identifier",
             str,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             formatting="text/plain",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this atlas terminology.",
@@ -59,7 +59,7 @@ class AtlasTerminology(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",

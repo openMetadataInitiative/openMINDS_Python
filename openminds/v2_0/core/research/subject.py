@@ -15,13 +15,13 @@ class Subject(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Subject"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "biological_sex",
             "openminds.v2_0.controlled_terms.BiologicalSex",
-            "vocab:biologicalSex",
+            "biologicalSex",
             required=True,
             description="Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce.",
             instructions="Add the biological sex of this specimen.",
@@ -29,7 +29,7 @@ class Subject(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code that identifies someone or something within a particular product.",
@@ -38,7 +38,7 @@ class Subject(LinkedMetadata):
         Property(
             "is_part_of",
             "openminds.v2_0.core.SubjectGroup",
-            "vocab:isPartOf",
+            "isPartOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -48,7 +48,7 @@ class Subject(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this specimen that may help you to more easily find it again.",
@@ -56,14 +56,14 @@ class Subject(LinkedMetadata):
         Property(
             "phenotype",
             "openminds.v2_0.controlled_terms.Phenotype",
-            "vocab:phenotype",
+            "phenotype",
             description="Physical expression of one or more genes of an organism.",
             instructions="Add the phenotype of this specimen.",
         ),
         Property(
             "species",
             "openminds.v2_0.controlled_terms.Species",
-            "vocab:species",
+            "species",
             required=True,
             description="Category of biological classification comprising related organisms or populations potentially capable of interbreeding, and being designated by a binomial that consists of the name of a genus followed by a Latin or latinized uncapitalized noun or adjective.",
             instructions="Add the species of this specimen.",
@@ -71,14 +71,14 @@ class Subject(LinkedMetadata):
         Property(
             "strain",
             "openminds.v2_0.controlled_terms.Strain",
-            "vocab:strain",
+            "strain",
             description="Group of presumed common ancestry with physiological but usually not morphological distinctions.",
             instructions="Add the strain of this specimen.",
         ),
         Property(
             "studied_state",
             "openminds.v2_0.core.SubjectState",
-            "vocab:studiedState",
+            "studiedState",
             multiple=True,
             unique_items=True,
             min_items=1,

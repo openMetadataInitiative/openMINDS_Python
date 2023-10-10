@@ -15,20 +15,20 @@ class AnatomicalEntity(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/AnatomicalEntity"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "has_parent",
             "openminds.v1_0.sands.AnatomicalEntity",
-            "vocab:hasParent",
+            "hasParent",
             description="Reference to a parent object or legal person.",
             instructions="Add another anatomical entity representing the anatomical parent structure of this anatomical entity.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -37,7 +37,7 @@ class AnatomicalEntity(LinkedMetadata):
         Property(
             "ontology_identifier",
             str,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             formatting="text/plain",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the ontological term matching this anatomical entity.",
@@ -45,7 +45,7 @@ class AnatomicalEntity(LinkedMetadata):
         Property(
             "other_anatomical_relation",
             "openminds.v1_0.sands.AnatomicalEntityRelation",
-            "vocab:otherAnatomicalRelation",
+            "otherAnatomicalRelation",
             multiple=True,
             unique_items=True,
             min_items=1,

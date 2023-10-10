@@ -15,13 +15,13 @@ class AtlasAnnotation(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/AtlasAnnotation"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "anchor_point",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:anchorPoint",
+            "anchorPoint",
             multiple=True,
             unique_items=False,
             min_items=2,
@@ -32,14 +32,14 @@ class AtlasAnnotation(EmbeddedMetadata):
         Property(
             "criteria",
             "openminds.v3_0.core.ProtocolExecution",
-            "vocab:criteria",
+            "criteria",
             description="Aspects or standards on which a judgement or decision is based.",
             instructions="Add the protocol execution defining the criteria that were applied to produce this annotation.",
         ),
         Property(
             "criteria_quality_type",
             "openminds.v3_0.controlled_terms.CriteriaQualityType",
-            "vocab:criteriaQualityType",
+            "criteriaQualityType",
             required=True,
             description="Distinct class that defines how the judgement or decision was made for a particular criteria.",
             instructions="Add the quality type of the stated criteria used to define this annotation.",
@@ -47,7 +47,7 @@ class AtlasAnnotation(EmbeddedMetadata):
         Property(
             "criteria_type",
             "openminds.v3_0.controlled_terms.AnnotationCriteriaType",
-            "vocab:criteriaType",
+            "criteriaType",
             required=True,
             description="no description available",
             instructions="Add the criteria type for this annotation.",
@@ -55,7 +55,7 @@ class AtlasAnnotation(EmbeddedMetadata):
         Property(
             "inspired_by",
             "openminds.v3_0.core.File",
-            "vocab:inspiredBy",
+            "inspiredBy",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -65,7 +65,7 @@ class AtlasAnnotation(EmbeddedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this annotation that is used within the corresponding data files to identify this annotation.",
@@ -73,7 +73,7 @@ class AtlasAnnotation(EmbeddedMetadata):
         Property(
             "laterality",
             "openminds.v3_0.controlled_terms.Laterality",
-            "vocab:laterality",
+            "laterality",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -84,21 +84,21 @@ class AtlasAnnotation(EmbeddedMetadata):
         Property(
             "preferred_visualization",
             "openminds.v3_0.sands.ViewerSpecification",
-            "vocab:preferredVisualization",
+            "preferredVisualization",
             description="no description available",
             instructions="Add the preferred viewer specification to visualize this annotation.",
         ),
         Property(
             "specification",
             "openminds.v3_0.core.File",
-            "vocab:specification",
+            "specification",
             description="Detailed and precise presentation of, or proposal for something.",
             instructions="Add the non-parametric specification of this annotation.",
         ),
         Property(
             "type",
             "openminds.v3_0.controlled_terms.AnnotationType",
-            "vocab:type",
+            "type",
             required=True,
             description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",
             instructions="Add the geometry type of this annotation.",

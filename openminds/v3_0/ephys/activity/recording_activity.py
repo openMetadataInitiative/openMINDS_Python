@@ -16,13 +16,13 @@ class RecordingActivity(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/RecordingActivity"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "custom_property_set",
             "openminds.v3_0.core.CustomPropertySet",
-            "vocab:customPropertySet",
+            "customPropertySet",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -45,7 +45,7 @@ class RecordingActivity(LinkedMetadata):
                 "openminds.v3_0.ephys.ElectrodeUsage",
                 "openminds.v3_0.ephys.PipetteUsage",
             ],
-            "vocab:device",
+            "device",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -55,7 +55,7 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "end_time",
             [datetime, time],
-            "vocab:endTime",
+            "endTime",
             description="no description available",
             instructions="Enter the date and/or time on when this activity ended, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
@@ -67,7 +67,7 @@ class RecordingActivity(LinkedMetadata):
                 "openminds.v3_0.core.TissueSampleCollectionState",
                 "openminds.v3_0.core.TissueSampleState",
             ],
-            "vocab:input",
+            "input",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -78,7 +78,7 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this recording activity that is used within the corresponding data files to identify this recording activity.",
@@ -86,7 +86,7 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "is_part_of",
             "openminds.v3_0.core.DatasetVersion",
-            "vocab:isPartOf",
+            "isPartOf",
             required=True,
             description="Reference to the ensemble of multiple things or beings.",
             instructions="Add the dataset version in which this activity was conducted.",
@@ -94,7 +94,7 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this activity that may help you to find this instance more easily.",
@@ -102,7 +102,7 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "output",
             ["openminds.v3_0.core.File", "openminds.v3_0.core.FileBundle"],
-            "vocab:output",
+            "output",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -113,7 +113,7 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "performed_by",
             ["openminds.v3_0.computation.SoftwareAgent", "openminds.v3_0.core.Person"],
-            "vocab:performedBy",
+            "performedBy",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -123,14 +123,14 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "preparation_design",
             "openminds.v3_0.controlled_terms.PreparationType",
-            "vocab:preparationDesign",
+            "preparationDesign",
             description="no description available",
             instructions="Add the initial preparation type for this activity.",
         ),
         Property(
             "protocol",
             "openminds.v3_0.core.Protocol",
-            "vocab:protocol",
+            "protocol",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -141,7 +141,7 @@ class RecordingActivity(LinkedMetadata):
         Property(
             "start_time",
             [datetime, time],
-            "vocab:startTime",
+            "startTime",
             description="no description available",
             instructions="Enter the date and/or time on when this activity started, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
@@ -176,7 +176,7 @@ class RecordingActivity(LinkedMetadata):
                 "openminds.v3_0.sands.ParcellationEntity",
                 "openminds.v3_0.sands.ParcellationEntityVersion",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,

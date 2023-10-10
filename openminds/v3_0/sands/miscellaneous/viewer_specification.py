@@ -15,13 +15,13 @@ class ViewerSpecification(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/ViewerSpecification"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -30,7 +30,7 @@ class ViewerSpecification(EmbeddedMetadata):
         Property(
             "anchor_point",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:anchorPoint",
+            "anchorPoint",
             multiple=True,
             unique_items=False,
             min_items=2,
@@ -42,14 +42,14 @@ class ViewerSpecification(EmbeddedMetadata):
         Property(
             "camera_position",
             "openminds.v3_0.sands.CoordinatePoint",
-            "vocab:cameraPosition",
+            "cameraPosition",
             description="no description available",
             instructions="Enter the camera position that a viewer should use.",
         ),
         Property(
             "preferred_display_color",
             ["openminds.v3_0.controlled_terms.Colormap", "openminds.v3_0.sands.SingleColor"],
-            "vocab:preferredDisplayColor",
+            "preferredDisplayColor",
             description="no description available",
             instructions="Add the preferred color that a viewer should display.",
         ),

@@ -15,13 +15,13 @@ class SubjectState(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/SubjectState"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -30,14 +30,14 @@ class SubjectState(LinkedMetadata):
         Property(
             "age",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
-            "vocab:age",
+            "age",
             description="Time of life or existence at which some particular qualification, capacity or event arises.",
             instructions="Enter the age of the specimen (set) in this state.",
         ),
         Property(
             "age_category",
             "openminds.v3_0.controlled_terms.AgeCategory",
-            "vocab:ageCategory",
+            "ageCategory",
             required=True,
             description="Distinct life cycle class that is defined by a similar age or age range (developmental stage) within a group of individual beings.",
             instructions="Add the age category of the subject in this state.",
@@ -45,7 +45,7 @@ class SubjectState(LinkedMetadata):
         Property(
             "attribute",
             "openminds.v3_0.controlled_terms.SubjectAttribute",
-            "vocab:attribute",
+            "attribute",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -55,21 +55,21 @@ class SubjectState(LinkedMetadata):
         Property(
             "descended_from",
             "openminds.v3_0.core.SubjectState",
-            "vocab:descendedFrom",
+            "descendedFrom",
             description="no description available",
             instructions="Add the previous subject state.",
         ),
         Property(
             "handedness",
             "openminds.v3_0.controlled_terms.Handedness",
-            "vocab:handedness",
+            "handedness",
             description="Degree to which an organism prefers one hand or foot over the other hand or foot during the performance of a task.",
             instructions="Add the preferred handedness of the subject in this state.",
         ),
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this specimen (set) state that is used within the corresponding data files to identify this specimen (set) state.",
@@ -77,7 +77,7 @@ class SubjectState(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this specimen (set) state that may help you to find this instance more easily.",
@@ -85,7 +85,7 @@ class SubjectState(LinkedMetadata):
         Property(
             "pathology",
             ["openminds.v3_0.controlled_terms.Disease", "openminds.v3_0.controlled_terms.DiseaseModel"],
-            "vocab:pathology",
+            "pathology",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -95,14 +95,14 @@ class SubjectState(LinkedMetadata):
         Property(
             "relative_time_indication",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
-            "vocab:relativeTimeIndication",
+            "relativeTimeIndication",
             description="no description available",
             instructions="If there is a temporal relation between the states of a specimen (set), enter the relative time that has passed between this and the preceding specimen (set) state referenced under 'descendedFrom'.",
         ),
         Property(
             "weight",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
-            "vocab:weight",
+            "weight",
             description="Amount that a thing or being weighs.",
             instructions="Enter the weight of the specimen (set) in this state.",
         ),

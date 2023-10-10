@@ -15,7 +15,7 @@ class TissueSample(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/TissueSample"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -30,7 +30,7 @@ class TissueSample(LinkedMetadata):
                 "openminds.v3_0.sands.ParcellationEntity",
                 "openminds.v3_0.sands.ParcellationEntityVersion",
             ],
-            "vocab:anatomicalLocation",
+            "anatomicalLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -40,14 +40,14 @@ class TissueSample(LinkedMetadata):
         Property(
             "biological_sex",
             "openminds.v3_0.controlled_terms.BiologicalSex",
-            "vocab:biologicalSex",
+            "biologicalSex",
             description="Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce.",
             instructions="Add the biological sex of this specimen.",
         ),
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this specimen that is used within the corresponding data files to identify this specimen.",
@@ -55,7 +55,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "is_part_of",
             "openminds.v3_0.core.TissueSampleCollection",
-            "vocab:isPartOf",
+            "isPartOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -65,7 +65,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "laterality",
             "openminds.v3_0.controlled_terms.Laterality",
-            "vocab:laterality",
+            "laterality",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -76,7 +76,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this specimen that may help you to find this instance more easily.",
@@ -88,7 +88,7 @@ class TissueSample(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.Organ",
                 "openminds.v3_0.controlled_terms.OrganismSubstance",
             ],
-            "vocab:origin",
+            "origin",
             required=True,
             description="Source at which something begins or rises, or from which something derives.",
             instructions="Add the biogical origin of this tissue sample.",
@@ -96,7 +96,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "species",
             ["openminds.v3_0.controlled_terms.Species", "openminds.v3_0.core.Strain"],
-            "vocab:species",
+            "species",
             required=True,
             description="Category of biological classification comprising related organisms or populations potentially capable of interbreeding, and being designated by a binomial that consists of the name of a genus followed by a Latin or latinized uncapitalized noun or adjective.",
             instructions="Add the species or strain (a sub-type of a genetic variant of species) of this specimen.",
@@ -104,7 +104,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "studied_state",
             "openminds.v3_0.core.TissueSampleState",
-            "vocab:studiedState",
+            "studiedState",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -115,7 +115,7 @@ class TissueSample(LinkedMetadata):
         Property(
             "type",
             "openminds.v3_0.controlled_terms.TissueSampleType",
-            "vocab:type",
+            "type",
             required=True,
             description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",
             instructions="Add the type of this tissue sample.",

@@ -15,13 +15,13 @@ class Image(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/Image"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "coordinate_space",
             "openminds.v1_0.sands.CoordinateSpace",
-            "vocab:coordinateSpace",
+            "coordinateSpace",
             required=True,
             description="Two or three dimensional geometric setting.",
             instructions="Add the coordinate space this image exists in.",
@@ -29,7 +29,7 @@ class Image(LinkedMetadata):
         Property(
             "defined_in",
             "openminds.v1_0.core.FileInstance",
-            "vocab:definedIn",
+            "definedIn",
             required=True,
             description="Reference to a file instance in which something is stored.",
             instructions="Add the file in which this image is stored in.",
@@ -37,7 +37,7 @@ class Image(LinkedMetadata):
         Property(
             "voxel_size",
             "openminds.v1_0.core.QuantitativeValue",
-            "vocab:voxelSize",
+            "voxelSize",
             multiple=True,
             unique_items=True,
             min_items=2,

@@ -15,13 +15,13 @@ class DigitalIdentifierSchema(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/DigitalIdentifierSchema"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "iri",
             str,
-            "vocab:IRI",
+            "IRI",
             formatting="text/plain",
             description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
             instructions="Enter the internationalized resource identifier (IRI) of this digital identifier schema.",
@@ -29,7 +29,7 @@ class DigitalIdentifierSchema(LinkedMetadata):
         Property(
             "identifier_pattern",
             str,
-            "vocab:identifierPattern",
+            "identifierPattern",
             formatting="text/plain",
             description="Format of a term or code used to identify something or someone.",
             instructions="Enter the required pattern for the identifiers of this digital identifier schema.",
@@ -37,7 +37,7 @@ class DigitalIdentifierSchema(LinkedMetadata):
         Property(
             "type",
             str,
-            "vocab:type",
+            "type",
             formatting="text/plain",
             required=True,
             description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",

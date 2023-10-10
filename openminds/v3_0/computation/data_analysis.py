@@ -16,13 +16,13 @@ class DataAnalysis(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/computation/DataAnalysis"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "custom_property_set",
             "openminds.v3_0.core.CustomPropertySet",
-            "vocab:customPropertySet",
+            "customPropertySet",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -41,14 +41,14 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "end_time",
             [datetime, time],
-            "vocab:endTime",
+            "endTime",
             description="no description available",
             instructions="Enter the date and/or time on when this activity ended, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
         Property(
             "environment",
             ["openminds.v3_0.computation.Environment", "openminds.v3_0.core.WebServiceVersion"],
-            "vocab:environment",
+            "environment",
             required=True,
             description="no description available",
             instructions="Add the computational environment in which this computation was executed.",
@@ -63,7 +63,7 @@ class DataAnalysis(LinkedMetadata):
                 "openminds.v3_0.sands.BrainAtlasVersion",
                 "openminds.v3_0.sands.CommonCoordinateSpaceVersion",
             ],
-            "vocab:input",
+            "input",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -74,14 +74,14 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "launch_configuration",
             "openminds.v3_0.computation.LaunchConfiguration",
-            "vocab:launchConfiguration",
+            "launchConfiguration",
             description="no description available",
             instructions="Add the launch configuration of this computation (e.g., command-line arguments).",
         ),
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this activity that may help you to find this instance more easily.",
@@ -94,7 +94,7 @@ class DataAnalysis(LinkedMetadata):
                 "openminds.v3_0.core.FileArchive",
                 "openminds.v3_0.core.FileBundle",
             ],
-            "vocab:output",
+            "output",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -105,7 +105,7 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "performed_by",
             ["openminds.v3_0.computation.SoftwareAgent", "openminds.v3_0.core.Person"],
-            "vocab:performedBy",
+            "performedBy",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -115,14 +115,14 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "recipe",
             "openminds.v3_0.computation.WorkflowRecipeVersion",
-            "vocab:recipe",
+            "recipe",
             description="no description available",
             instructions="Add the workflow recipe version used for this computation.",
         ),
         Property(
             "resource_usage",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
-            "vocab:resourceUsage",
+            "resourceUsage",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -132,7 +132,7 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "start_time",
             [datetime, time],
-            "vocab:startTime",
+            "startTime",
             required=True,
             description="no description available",
             instructions="Enter the date and/or time on when this activity started, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
@@ -140,14 +140,14 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "started_by",
             ["openminds.v3_0.computation.SoftwareAgent", "openminds.v3_0.core.Person"],
-            "vocab:startedBy",
+            "startedBy",
             description="no description available",
             instructions="Add the agent that started this computation.",
         ),
         Property(
             "status",
             "openminds.v3_0.controlled_terms.ActionStatusType",
-            "vocab:status",
+            "status",
             description="no description available",
             instructions="Enter the current status of this computation.",
         ),
@@ -182,7 +182,7 @@ class DataAnalysis(LinkedMetadata):
                 "openminds.v3_0.sands.ParcellationEntity",
                 "openminds.v3_0.sands.ParcellationEntityVersion",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -192,7 +192,7 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "tag",
             str,
-            "vocab:tag",
+            "tag",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -203,7 +203,7 @@ class DataAnalysis(LinkedMetadata):
         Property(
             "technique",
             "openminds.v3_0.controlled_terms.AnalysisTechnique",
-            "vocab:technique",
+            "technique",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -221,7 +221,7 @@ class DataAnalysis(LinkedMetadata):
                 "openminds.v3_0.computation.Simulation",
                 "openminds.v3_0.computation.Visualization",
             ],
-            "vocab:wasInformedBy",
+            "wasInformedBy",
             description="no description available",
             instructions="Add another computation that sent data to this one during runtime.",
         ),

@@ -16,13 +16,13 @@ class ContentType(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ContentType"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "data_type",
             "openminds.v3_0.controlled_terms.DataType",
-            "vocab:dataType",
+            "dataType",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class ContentType(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -41,7 +41,7 @@ class ContentType(LinkedMetadata):
         Property(
             "display_label",
             str,
-            "vocab:displayLabel",
+            "displayLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a display label for this content type.",
@@ -49,7 +49,7 @@ class ContentType(LinkedMetadata):
         Property(
             "file_extension",
             str,
-            "vocab:fileExtension",
+            "fileExtension",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -60,7 +60,7 @@ class ContentType(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -69,21 +69,21 @@ class ContentType(LinkedMetadata):
         Property(
             "related_media_type",
             IRI,
-            "vocab:relatedMediaType",
+            "relatedMediaType",
             description="Reference to an official two-part identifier for file formats and format contents.",
             instructions="Enter the internationalized resource identifier (IRI) to the official registered media type (e.g., provided on IANA.org) matching this content type.",
         ),
         Property(
             "specification",
             IRI,
-            "vocab:specification",
+            "specification",
             description="Detailed and precise presentation of, or proposal for something.",
             instructions="Enter the internationalized resource identifier (IRI) to the offical specification of this content type. If no offical and public specification is available, leave blank and enter the specification under 'description'.",
         ),
         Property(
             "synonym",
             str,
-            "vocab:synonym",
+            "synonym",
             multiple=True,
             unique_items=True,
             min_items=1,

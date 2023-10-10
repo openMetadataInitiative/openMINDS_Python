@@ -15,13 +15,13 @@ class ISBN(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ISBN"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "identifier",
             str,
-            "vocab:identifier",
+            "identifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify something or someone.",

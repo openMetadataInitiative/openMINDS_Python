@@ -15,13 +15,13 @@ class LocalFile(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/computation/LocalFile"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "content_description",
             str,
-            "vocab:contentDescription",
+            "contentDescription",
             formatting="text/plain",
             multiline=True,
             description="no description available",
@@ -30,14 +30,14 @@ class LocalFile(LinkedMetadata):
         Property(
             "copy_of",
             "openminds.latest.core.File",
-            "vocab:copyOf",
+            "copyOf",
             description="no description available",
             instructions="Add the file of which this is a copy.",
         ),
         Property(
             "data_type",
             "openminds.latest.controlled_terms.DataType",
-            "vocab:dataType",
+            "dataType",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -47,21 +47,21 @@ class LocalFile(LinkedMetadata):
         Property(
             "format",
             "openminds.latest.core.ContentType",
-            "vocab:format",
+            "format",
             description="Method of digitally organizing and structuring data or information.",
             instructions="Add the content type of this local file instance.",
         ),
         Property(
             "hash",
             "openminds.latest.core.Hash",
-            "vocab:hash",
+            "hash",
             description="Term used for the process of converting any data into a single value. Often also directly refers to the resulting single value.",
             instructions="Add the hash that was generated for this local file instance.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -70,7 +70,7 @@ class LocalFile(LinkedMetadata):
         Property(
             "path",
             str,
-            "vocab:path",
+            "path",
             formatting="text/plain",
             required=True,
             description="no description available",
@@ -79,14 +79,14 @@ class LocalFile(LinkedMetadata):
         Property(
             "special_usage_role",
             "openminds.latest.controlled_terms.FileUsageRole",
-            "vocab:specialUsageRole",
+            "specialUsageRole",
             description="Particular function of something when it is used.",
             instructions="Add the special usage role of this local file instance.",
         ),
         Property(
             "storage_size",
             "openminds.latest.core.QuantitativeValue",
-            "vocab:storageSize",
+            "storageSize",
             description="Quantitative value defining how much disk space is used by an object on a computer system.",
             instructions="Enter the storage size of this local file instance.",
         ),

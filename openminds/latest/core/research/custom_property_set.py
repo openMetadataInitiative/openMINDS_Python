@@ -15,13 +15,13 @@ class CustomPropertySet(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/CustomPropertySet"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "context",
             str,
-            "vocab:context",
+            "context",
             formatting="text/plain",
             required=True,
             description="no description available",
@@ -34,7 +34,7 @@ class CustomPropertySet(EmbeddedMetadata):
                 "openminds.latest.core.File",
                 "openminds.latest.core.PropertyValueList",
             ],
-            "vocab:dataLocation",
+            "dataLocation",
             required=True,
             description="no description available",
             instructions="Add the location of the data that define the custom property set for the given context (e.g., stored as file or other entities such as property-value lists).",
@@ -47,7 +47,7 @@ class CustomPropertySet(EmbeddedMetadata):
                 "openminds.latest.controlled_terms.StimulationTechnique",
                 "openminds.latest.controlled_terms.Technique",
             ],
-            "vocab:relevantFor",
+            "relevantFor",
             required=True,
             description="Reference to what or whom something or someone bears siginificance.",
             instructions="Add the technique for which this custom property set is relevant.",

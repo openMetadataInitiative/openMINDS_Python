@@ -16,13 +16,13 @@ class Model(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Model"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "abstraction_level",
             "openminds.latest.controlled_terms.ModelAbstractionLevel",
-            "vocab:abstractionLevel",
+            "abstractionLevel",
             required=True,
             description="Extent of simplification of physical, spatial, or temporal details or attributes in the study of objects or systems.",
             instructions="Add the abstraction level of this computational model.",
@@ -30,7 +30,7 @@ class Model(LinkedMetadata):
         Property(
             "custodian",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -40,7 +40,7 @@ class Model(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -50,7 +50,7 @@ class Model(LinkedMetadata):
         Property(
             "developer",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:developer",
+            "developer",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -61,14 +61,14 @@ class Model(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.latest.core.DOI", "openminds.latest.core.SWHID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product. Note that this digital identifier will be used to reference all attached research product versions.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -77,7 +77,7 @@ class Model(LinkedMetadata):
         Property(
             "has_version",
             "openminds.latest.core.ModelVersion",
-            "vocab:hasVersion",
+            "hasVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -88,14 +88,14 @@ class Model(LinkedMetadata):
         Property(
             "homepage",
             IRI,
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -104,7 +104,7 @@ class Model(LinkedMetadata):
         Property(
             "scope",
             "openminds.latest.controlled_terms.ModelScope",
-            "vocab:scope",
+            "scope",
             required=True,
             description="Extent of something.",
             instructions="Add the scope of this computational model.",
@@ -112,7 +112,7 @@ class Model(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -149,7 +149,7 @@ class Model(LinkedMetadata):
                 "openminds.latest.sands.ParcellationEntity",
                 "openminds.latest.sands.ParcellationEntityVersion",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,

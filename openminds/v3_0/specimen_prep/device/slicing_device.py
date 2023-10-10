@@ -15,13 +15,13 @@ class SlicingDevice(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -30,7 +30,7 @@ class SlicingDevice(LinkedMetadata):
         Property(
             "device_type",
             "openminds.v3_0.controlled_terms.DeviceType",
-            "vocab:deviceType",
+            "deviceType",
             required=True,
             description="no description available",
             instructions="Add the type of this device.",
@@ -38,14 +38,14 @@ class SlicingDevice(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.RRID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this device.",
         ),
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this device that may help you to find this instance more easily.",
@@ -53,7 +53,7 @@ class SlicingDevice(LinkedMetadata):
         Property(
             "manufacturer",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:manufacturer",
+            "manufacturer",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -63,7 +63,7 @@ class SlicingDevice(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -72,7 +72,7 @@ class SlicingDevice(LinkedMetadata):
         Property(
             "owner",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:owner",
+            "owner",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -82,7 +82,7 @@ class SlicingDevice(LinkedMetadata):
         Property(
             "serial_number",
             str,
-            "vocab:serialNumber",
+            "serialNumber",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the serial number of this device.",

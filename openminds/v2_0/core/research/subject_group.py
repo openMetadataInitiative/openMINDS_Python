@@ -15,13 +15,13 @@ class SubjectGroup(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/SubjectGroup"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -30,7 +30,7 @@ class SubjectGroup(LinkedMetadata):
         Property(
             "biological_sex",
             "openminds.v2_0.controlled_terms.BiologicalSex",
-            "vocab:biologicalSex",
+            "biologicalSex",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -41,7 +41,7 @@ class SubjectGroup(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier of this specimen set that is used within the corresponding data.",
@@ -49,7 +49,7 @@ class SubjectGroup(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this specimen set that may help you to more easily find it again.",
@@ -57,7 +57,7 @@ class SubjectGroup(LinkedMetadata):
         Property(
             "phenotype",
             "openminds.v2_0.controlled_terms.Phenotype",
-            "vocab:phenotype",
+            "phenotype",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -67,14 +67,14 @@ class SubjectGroup(LinkedMetadata):
         Property(
             "quantity",
             int,
-            "vocab:quantity",
+            "quantity",
             description="Total amount or number of things or beings.",
             instructions="Enter the number of specimen that belong to this set.",
         ),
         Property(
             "species",
             "openminds.v2_0.controlled_terms.Species",
-            "vocab:species",
+            "species",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -85,7 +85,7 @@ class SubjectGroup(LinkedMetadata):
         Property(
             "strain",
             "openminds.v2_0.controlled_terms.Strain",
-            "vocab:strain",
+            "strain",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -95,7 +95,7 @@ class SubjectGroup(LinkedMetadata):
         Property(
             "studied_state",
             "openminds.v2_0.core.SubjectGroupState",
-            "vocab:studiedState",
+            "studiedState",
             multiple=True,
             unique_items=True,
             min_items=1,

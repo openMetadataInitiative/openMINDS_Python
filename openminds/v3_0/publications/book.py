@@ -17,20 +17,20 @@ class Book(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/publications/Book"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "iri",
             IRI,
-            "vocab:IRI",
+            "IRI",
             description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
             instructions="Enter the internationalized resource identifier (IRI) to this creative work.",
         ),
         Property(
             "abstract",
             str,
-            "vocab:abstract",
+            "abstract",
             formatting="text/plain",
             multiline=True,
             description="no description available",
@@ -39,7 +39,7 @@ class Book(LinkedMetadata):
         Property(
             "author",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:author",
+            "author",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -49,7 +49,7 @@ class Book(LinkedMetadata):
         Property(
             "cited_publication",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.ISBN"],
-            "vocab:citedPublication",
+            "citedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -59,21 +59,21 @@ class Book(LinkedMetadata):
         Property(
             "copyright",
             "openminds.v3_0.core.Copyright",
-            "vocab:copyright",
+            "copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
             instructions="Enter the copyright information of this creative work.",
         ),
         Property(
             "creation_date",
             date,
-            "vocab:creationDate",
+            "creationDate",
             description="no description available",
             instructions="Enter the date on which this creative work was created, formatted as '2023-02-07'.",
         ),
         Property(
             "custodian",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -83,14 +83,14 @@ class Book(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.ISBN"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this creative work.",
         ),
         Property(
             "editor",
             "openminds.v3_0.core.Person",
-            "vocab:editor",
+            "editor",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -100,7 +100,7 @@ class Book(LinkedMetadata):
         Property(
             "funding",
             "openminds.v3_0.core.Funding",
-            "vocab:funding",
+            "funding",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -189,7 +189,7 @@ class Book(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.UnitOfMeasurement",
                 "openminds.v3_0.controlled_terms.VisualStimulusType",
             ],
-            "vocab:keyword",
+            "keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -199,21 +199,21 @@ class Book(LinkedMetadata):
         Property(
             "license",
             "openminds.v3_0.core.License",
-            "vocab:license",
+            "license",
             description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
             instructions="Add the license of this creative work.",
         ),
         Property(
             "modification_date",
             date,
-            "vocab:modificationDate",
+            "modificationDate",
             description="no description available",
             instructions="Enter the date on which this creative work was last modfied, formatted as '2023-02-07'.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -222,7 +222,7 @@ class Book(LinkedMetadata):
         Property(
             "publication_date",
             date,
-            "vocab:publicationDate",
+            "publicationDate",
             required=True,
             description="no description available",
             instructions="Enter the date on which this creative work was published, formatted as '2023-02-07'.",
@@ -230,14 +230,14 @@ class Book(LinkedMetadata):
         Property(
             "publisher",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:publisher",
+            "publisher",
             description="no description available",
             instructions="Add the party (private or commercial) that published this creative work.",
         ),
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             description="Term or code used to identify the version of something.",
             instructions="Enter the version identifier of this creative work.",

@@ -15,13 +15,13 @@ class PublicationVolume(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/publications/PublicationVolume"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "is_part_of",
             "openminds.latest.publications.Periodical",
-            "vocab:isPartOf",
+            "isPartOf",
             required=True,
             description="Reference to the ensemble of multiple things or beings.",
             instructions="Add the periodical this publication volume is part of.",
@@ -29,7 +29,7 @@ class PublicationVolume(LinkedMetadata):
         Property(
             "volume_number",
             str,
-            "vocab:volumeNumber",
+            "volumeNumber",
             formatting="text/plain",
             required=True,
             description="no description available",

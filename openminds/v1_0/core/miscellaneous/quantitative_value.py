@@ -15,13 +15,13 @@ class QuantitativeValue(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/QuantitativeValue"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "uncertainty",
             float,
-            "vocab:uncertainty",
+            "uncertainty",
             multiple=True,
             unique_items=False,
             min_items=2,
@@ -32,14 +32,14 @@ class QuantitativeValue(EmbeddedMetadata):
         Property(
             "unit",
             "openminds.v1_0.controlled_terms.UnitOfMeasurement",
-            "vocab:unit",
+            "unit",
             description="Determinate quantity adopted as a standard of measurement.",
             instructions="Add the unit of measurement of this quantitative value.",
         ),
         Property(
             "value",
             float,
-            "vocab:value",
+            "value",
             required=True,
             description="Entry for a property.",
             instructions="Enter the measurement value of this quantitative value.",

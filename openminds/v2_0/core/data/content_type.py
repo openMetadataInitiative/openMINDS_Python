@@ -16,13 +16,13 @@ class ContentType(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ContentType"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -31,7 +31,7 @@ class ContentType(LinkedMetadata):
         Property(
             "file_extension",
             str,
-            "vocab:fileExtension",
+            "fileExtension",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -42,7 +42,7 @@ class ContentType(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -51,21 +51,21 @@ class ContentType(LinkedMetadata):
         Property(
             "related_media_type",
             IRI,
-            "vocab:relatedMediaType",
+            "relatedMediaType",
             description="Reference to an official two-part identifier for file formats and format contents.",
             instructions="Enter the iternationalized resource identifier (IRI) of the official registered media type (e.g. on IANA.org) matching this content type.",
         ),
         Property(
             "specification",
             IRI,
-            "vocab:specification",
+            "specification",
             description="Detailed and precise presentation of, or proposal for something.",
             instructions="Enter the iternationalized resource identifier (IRI) of the official specification of this content type. Leave blank and use 'description' to provide some specification if an official specification is not available.",
         ),
         Property(
             "synonym",
             str,
-            "vocab:synonym",
+            "synonym",
             multiple=True,
             unique_items=True,
             min_items=1,

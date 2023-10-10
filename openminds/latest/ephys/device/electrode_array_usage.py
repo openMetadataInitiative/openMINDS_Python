@@ -15,7 +15,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -30,7 +30,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
                 "openminds.latest.sands.ParcellationEntity",
                 "openminds.latest.sands.ParcellationEntityVersion",
             ],
-            "vocab:anatomicalLocationOfArray",
+            "anatomicalLocationOfArray",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -49,7 +49,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
                 "openminds.latest.sands.ParcellationEntity",
                 "openminds.latest.sands.ParcellationEntityVersion",
             ],
-            "vocab:anatomicalLocationOfElectrodes",
+            "anatomicalLocationOfElectrodes",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -59,7 +59,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
         Property(
             "contact_resistances",
             ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
-            "vocab:contactResistances",
+            "contactResistances",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -69,7 +69,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
         Property(
             "device",
             "openminds.latest.ephys.ElectrodeArray",
-            "vocab:device",
+            "device",
             required=True,
             description="Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function.",
             instructions="Add the electrode array used.",
@@ -77,7 +77,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this device usage that may help you to find this instance more easily.",
@@ -85,7 +85,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
         Property(
             "metadata_location",
             ["openminds.latest.core.File", "openminds.latest.core.FileBundle"],
-            "vocab:metadataLocation",
+            "metadataLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -95,7 +95,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
         Property(
             "spatial_location_of_electrodes",
             "openminds.latest.sands.CoordinatePoint",
-            "vocab:spatialLocationOfElectrodes",
+            "spatialLocationOfElectrodes",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -105,7 +105,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
         Property(
             "used_electrode",
             str,
-            "vocab:usedElectrode",
+            "usedElectrode",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -116,7 +116,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
         Property(
             "used_specimen",
             ["openminds.latest.core.SubjectState", "openminds.latest.core.TissueSampleState"],
-            "vocab:usedSpecimen",
+            "usedSpecimen",
             description="no description available",
             instructions="Add the state of the tissue sample or subject that this device was used on.",
         ),

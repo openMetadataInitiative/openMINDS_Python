@@ -15,13 +15,13 @@ class LivePaperSection(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/publications/LivePaperSection"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -30,7 +30,7 @@ class LivePaperSection(LinkedMetadata):
         Property(
             "is_part_of",
             "openminds.v3_0.publications.LivePaperVersion",
-            "vocab:isPartOf",
+            "isPartOf",
             required=True,
             description="Reference to the ensemble of multiple things or beings.",
             instructions="Add the live paper version this live paper section is part of.",
@@ -38,7 +38,7 @@ class LivePaperSection(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -47,7 +47,7 @@ class LivePaperSection(LinkedMetadata):
         Property(
             "order",
             int,
-            "vocab:order",
+            "order",
             required=True,
             description="no description available",
             instructions="Enter an integer that is used to sort this live paper section in ascending order with other live paper sections of the overarching live paper version.",
@@ -55,7 +55,7 @@ class LivePaperSection(LinkedMetadata):
         Property(
             "type",
             str,
-            "vocab:type",
+            "type",
             formatting="text/plain",
             required=True,
             description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",

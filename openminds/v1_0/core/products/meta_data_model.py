@@ -15,13 +15,13 @@ class MetaDataModel(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/MetaDataModel"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -31,7 +31,7 @@ class MetaDataModel(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             required=True,
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product.",
@@ -39,7 +39,7 @@ class MetaDataModel(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -48,7 +48,7 @@ class MetaDataModel(LinkedMetadata):
         Property(
             "has_version",
             "openminds.v1_0.core.MetaDataModelVersion",
-            "vocab:hasVersion",
+            "hasVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -58,7 +58,7 @@ class MetaDataModel(LinkedMetadata):
         Property(
             "homepage",
             str,
-            "vocab:homepage",
+            "homepage",
             formatting="text/plain",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product.",
@@ -66,7 +66,7 @@ class MetaDataModel(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",

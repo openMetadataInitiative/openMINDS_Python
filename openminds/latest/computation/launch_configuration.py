@@ -15,13 +15,13 @@ class LaunchConfiguration(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/computation/LaunchConfiguration"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "argument",
             str,
-            "vocab:argument",
+            "argument",
             multiple=True,
             unique_items=False,
             min_items=1,
@@ -32,7 +32,7 @@ class LaunchConfiguration(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -41,14 +41,14 @@ class LaunchConfiguration(LinkedMetadata):
         Property(
             "environment_variable",
             "openminds.latest.core.PropertyValueList",
-            "vocab:environmentVariable",
+            "environmentVariable",
             description="no description available",
             instructions="Add any environment variables defined by this launch configuration.",
         ),
         Property(
             "executable",
             str,
-            "vocab:executable",
+            "executable",
             formatting="text/plain",
             required=True,
             description="no description available",
@@ -57,7 +57,7 @@ class LaunchConfiguration(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
             instructions="Enter a descriptive name for this launch configuration.",

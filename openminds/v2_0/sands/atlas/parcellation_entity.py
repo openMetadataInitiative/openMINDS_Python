@@ -16,27 +16,27 @@ class ParcellationEntity(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/ParcellationEntity"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "has_annotation",
             "openminds.v2_0.sands.AtlasAnnotation",
-            "vocab:hasAnnotation",
+            "hasAnnotation",
             description="no description available",
             instructions="Add the atlas annotation which this parcellation entity defines.",
         ),
         Property(
             "has_parent",
             "openminds.v2_0.sands.ParcellationEntity",
-            "vocab:hasParent",
+            "hasParent",
             description="Reference to a parent object or legal person.",
             instructions="Add for this parcellation entity the defined anatomical parent structure.",
         ),
         Property(
             "is_part_of",
             "openminds.v2_0.sands.ParcellationTerminology",
-            "vocab:isPartOf",
+            "isPartOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -47,7 +47,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -56,14 +56,14 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "ontology_identifier",
             IRI,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the ontological term matching this parcellation entity.",
         ),
         Property(
             "related_uberon_term",
             "openminds.v2_0.controlled_terms.UBERONParcellation",
-            "vocab:relatedUBERONTerm",
+            "relatedUBERONTerm",
             required=True,
             description="no description available",
             instructions="Add the related UBERON parcellation term.",
@@ -74,7 +74,7 @@ class ParcellationEntity(LinkedMetadata):
                 "openminds.v2_0.sands.QualitativeRelationAssessment",
                 "openminds.v2_0.sands.QuantitativeRelationAssessment",
             ],
-            "vocab:relationAssessment",
+            "relationAssessment",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -84,7 +84,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -93,7 +93,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             required=True,

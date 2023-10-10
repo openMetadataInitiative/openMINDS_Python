@@ -15,20 +15,20 @@ class SoftwareAgent(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/computation/SoftwareAgent"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "environment",
             "openminds.v3_0.computation.Environment",
-            "vocab:environment",
+            "environment",
             description="no description available",
             instructions="Add the computational environment in which this software agent was running.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -37,7 +37,7 @@ class SoftwareAgent(LinkedMetadata):
         Property(
             "software",
             "openminds.v3_0.core.SoftwareVersion",
-            "vocab:software",
+            "software",
             required=True,
             description="no description available",
             instructions="Add the software version that is being run as this software agent.",

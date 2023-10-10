@@ -15,13 +15,13 @@ class PropertyValueList(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/PropertyValueList"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this property-value list that may help you to find this instance more easily.",
@@ -29,7 +29,7 @@ class PropertyValueList(LinkedMetadata):
         Property(
             "property_value_pair",
             ["openminds.latest.core.NumericalProperty", "openminds.latest.core.StringProperty"],
-            "vocab:propertyValuePair",
+            "propertyValuePair",
             multiple=True,
             unique_items=True,
             min_items=1,

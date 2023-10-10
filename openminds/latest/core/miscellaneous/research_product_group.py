@@ -15,13 +15,13 @@ class ResearchProductGroup(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ResearchProductGroup"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "context",
             str,
-            "vocab:context",
+            "context",
             formatting="text/plain",
             required=True,
             description="no description available",
@@ -51,7 +51,7 @@ class ResearchProductGroup(LinkedMetadata):
                 "openminds.latest.sands.CommonCoordinateSpace",
                 "openminds.latest.sands.CommonCoordinateSpaceVersion",
             ],
-            "vocab:hasPart",
+            "hasPart",
             multiple=True,
             unique_items=True,
             min_items=1,

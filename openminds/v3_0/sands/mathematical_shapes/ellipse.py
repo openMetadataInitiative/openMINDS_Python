@@ -15,13 +15,13 @@ class Ellipse(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/Ellipse"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "semi_major_axis",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:semiMajorAxis",
+            "semiMajorAxis",
             required=True,
             description="no description available",
             instructions="Enter the length of the semi-minor axis of this ellipse.",
@@ -29,7 +29,7 @@ class Ellipse(EmbeddedMetadata):
         Property(
             "semi_minor_axis",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:semiMinorAxis",
+            "semiMinorAxis",
             required=True,
             description="no description available",
             instructions="Enter the length of the semi-major axis of this ellipse.",

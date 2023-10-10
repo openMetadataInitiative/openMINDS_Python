@@ -15,13 +15,13 @@ class StockNumber(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/StockNumber"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "identifier",
             str,
-            "vocab:identifier",
+            "identifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify something or someone.",
@@ -30,7 +30,7 @@ class StockNumber(EmbeddedMetadata):
         Property(
             "vendor",
             "openminds.v3_0.core.Organization",
-            "vocab:vendor",
+            "vendor",
             required=True,
             description="no description available",
             instructions="Add the vendor that has the item with this identifier in stock.",

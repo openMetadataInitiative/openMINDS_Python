@@ -15,13 +15,13 @@ class Protocol(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Protocol"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "behavioral_task",
             "openminds.v1_0.controlled_terms.BehavioralTask",
-            "vocab:behavioralTask",
+            "behavioralTask",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -31,7 +31,7 @@ class Protocol(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -41,7 +41,7 @@ class Protocol(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -58,7 +58,7 @@ class Protocol(LinkedMetadata):
                 "openminds.v1_0.controlled_term.TermSuggestion",
                 "openminds.v1_0.sands.AnatomicalEntity",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -68,7 +68,7 @@ class Protocol(LinkedMetadata):
         Property(
             "technique",
             "openminds.v1_0.controlled_terms.Technique",
-            "vocab:technique",
+            "technique",
             multiple=True,
             unique_items=True,
             min_items=1,

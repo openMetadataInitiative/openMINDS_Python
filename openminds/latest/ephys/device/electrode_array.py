@@ -15,7 +15,7 @@ class ElectrodeArray(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/ElectrodeArray"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -25,14 +25,14 @@ class ElectrodeArray(LinkedMetadata):
                 "openminds.latest.chemicals.ChemicalSubstance",
                 "openminds.latest.controlled_terms.MolecularEntity",
             ],
-            "vocab:conductorMaterial",
+            "conductorMaterial",
             description="no description available",
             instructions="Add the conductor material of this electrode array.",
         ),
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -41,7 +41,7 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "device_type",
             "openminds.latest.controlled_terms.DeviceType",
-            "vocab:deviceType",
+            "deviceType",
             required=True,
             description="no description available",
             instructions="Add the type of this device.",
@@ -49,14 +49,14 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.latest.core.DOI", "openminds.latest.core.RRID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this device.",
         ),
         Property(
             "electrode_identifier",
             str,
-            "vocab:electrodeIdentifier",
+            "electrodeIdentifier",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -72,14 +72,14 @@ class ElectrodeArray(LinkedMetadata):
                 "openminds.latest.chemicals.ChemicalSubstance",
                 "openminds.latest.controlled_terms.MolecularEntity",
             ],
-            "vocab:insulatorMaterial",
+            "insulatorMaterial",
             description="no description available",
             instructions="Add the insulator material of this electrode array.",
         ),
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this electrode array that is used within the corresponding data files to identify this electrode array.",
@@ -87,14 +87,14 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "intrinsic_resistance",
             ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
-            "vocab:intrinsicResistance",
+            "intrinsicResistance",
             description="no description available",
             instructions="Enter the intrinsic resistance of this electrode array.",
         ),
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this device that may help you to find this instance more easily.",
@@ -102,7 +102,7 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "manufacturer",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:manufacturer",
+            "manufacturer",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -112,7 +112,7 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -121,7 +121,7 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "number_of_electrodes",
             int,
-            "vocab:numberOfElectrodes",
+            "numberOfElectrodes",
             required=True,
             description="no description available",
             instructions="Enter the number of electrodes that belong to this electrode array.",
@@ -129,7 +129,7 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "owner",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:owner",
+            "owner",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -139,7 +139,7 @@ class ElectrodeArray(LinkedMetadata):
         Property(
             "serial_number",
             str,
-            "vocab:serialNumber",
+            "serialNumber",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the serial number of this device.",

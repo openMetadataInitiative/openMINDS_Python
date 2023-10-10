@@ -15,13 +15,13 @@ class Copyright(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Copyright"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "holder",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:holder",
+            "holder",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class Copyright(EmbeddedMetadata):
         Property(
             "year",
             str,
-            "vocab:year",
+            "year",
             multiple=True,
             unique_items=True,
             min_items=1,

@@ -15,20 +15,20 @@ class Protocol(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Protocol"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "described_in",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.File", "openminds.v3_0.core.WebResource"],
-            "vocab:describedIn",
+            "describedIn",
             description="no description available",
             instructions="Add a publication or file in which this behavioral protocol is (originally) described in detail.",
         ),
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -38,7 +38,7 @@ class Protocol(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -55,7 +55,7 @@ class Protocol(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.TactileStimulusType",
                 "openminds.v3_0.controlled_terms.VisualStimulusType",
             ],
-            "vocab:stimulusType",
+            "stimulusType",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -70,7 +70,7 @@ class Protocol(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.StimulationTechnique",
                 "openminds.v3_0.controlled_terms.Technique",
             ],
-            "vocab:technique",
+            "technique",
             multiple=True,
             unique_items=True,
             min_items=1,

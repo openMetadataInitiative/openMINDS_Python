@@ -15,13 +15,13 @@ class SlicingDeviceUsage(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "device",
             "openminds.v3_0.specimen_prep.SlicingDevice",
-            "vocab:device",
+            "device",
             required=True,
             description="Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function.",
             instructions="Add the slicing device used.",
@@ -29,7 +29,7 @@ class SlicingDeviceUsage(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this device usage that may help you to find this instance more easily.",
@@ -37,7 +37,7 @@ class SlicingDeviceUsage(LinkedMetadata):
         Property(
             "metadata_location",
             ["openminds.v3_0.core.File", "openminds.v3_0.core.FileBundle"],
-            "vocab:metadataLocation",
+            "metadataLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -47,14 +47,14 @@ class SlicingDeviceUsage(LinkedMetadata):
         Property(
             "oscillation_amplitude",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:oscillationAmplitude",
+            "oscillationAmplitude",
             description="no description available",
             instructions="Enter the oscillation amplitude of the blade from the slicing device during its use.",
         ),
         Property(
             "slice_thickness",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.QuantitativeValueRange"],
-            "vocab:sliceThickness",
+            "sliceThickness",
             required=True,
             description="no description available",
             instructions="Enter the defined slice thickness during the use of this slicing device.",
@@ -62,7 +62,7 @@ class SlicingDeviceUsage(LinkedMetadata):
         Property(
             "slicing_angle",
             ["openminds.v3_0.core.QuantitativeValue", "openminds.v3_0.core.NumericalProperty"],
-            "vocab:slicingAngle",
+            "slicingAngle",
             multiple=True,
             unique_items=False,
             min_items=1,
@@ -73,7 +73,7 @@ class SlicingDeviceUsage(LinkedMetadata):
         Property(
             "slicing_plane",
             "openminds.v3_0.controlled_terms.AnatomicalPlane",
-            "vocab:slicingPlane",
+            "slicingPlane",
             required=True,
             description="no description available",
             instructions="Add the anatomical plane that best describes the slicing direction of the tissue sample(s) during the use of this slicing device.",
@@ -81,21 +81,21 @@ class SlicingDeviceUsage(LinkedMetadata):
         Property(
             "slicing_speed",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:slicingSpeed",
+            "slicingSpeed",
             description="no description available",
             instructions="Enter the defined slicing speed during the use of this slicing device.",
         ),
         Property(
             "used_specimen",
             ["openminds.v3_0.core.SubjectState", "openminds.v3_0.core.TissueSampleState"],
-            "vocab:usedSpecimen",
+            "usedSpecimen",
             description="no description available",
             instructions="Add the state of the tissue sample or subject that this device was used on.",
         ),
         Property(
             "vibration_frequency",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:vibrationFrequency",
+            "vibrationFrequency",
             description="no description available",
             instructions="Enter the defined vibration frequency during the use of this slicing device.",
         ),

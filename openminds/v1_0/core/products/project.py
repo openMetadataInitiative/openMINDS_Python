@@ -15,13 +15,13 @@ class Project(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Project"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -31,7 +31,7 @@ class Project(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -49,7 +49,7 @@ class Project(LinkedMetadata):
                 "openminds.v1_0.core.Software",
                 "openminds.v1_0.core.SoftwareVersion",
             ],
-            "vocab:hasResearchProducts",
+            "hasResearchProducts",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -60,7 +60,7 @@ class Project(LinkedMetadata):
         Property(
             "homepage",
             str,
-            "vocab:homepage",
+            "homepage",
             formatting="text/plain",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this model version.",
@@ -68,7 +68,7 @@ class Project(LinkedMetadata):
         Property(
             "project_leader",
             ["openminds.v1_0.core.Organization", "openminds.v1_0.core.Person"],
-            "vocab:projectLeader",
+            "projectLeader",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -78,7 +78,7 @@ class Project(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",

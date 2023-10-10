@@ -15,13 +15,13 @@ class TissueSampleCollection(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/TissueSampleCollection"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -39,7 +39,7 @@ class TissueSampleCollection(LinkedMetadata):
                 "openminds.v3_0.sands.ParcellationEntity",
                 "openminds.v3_0.sands.ParcellationEntityVersion",
             ],
-            "vocab:anatomicalLocation",
+            "anatomicalLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -49,7 +49,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "biological_sex",
             "openminds.v3_0.controlled_terms.BiologicalSex",
-            "vocab:biologicalSex",
+            "biologicalSex",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -59,7 +59,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier (or label) of this specimen set that is used within the corresponding data files to identify this specimen set.",
@@ -67,7 +67,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "laterality",
             "openminds.v3_0.controlled_terms.Laterality",
-            "vocab:laterality",
+            "laterality",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -78,7 +78,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this specimen set that may help you to find this instance more easily.",
@@ -86,7 +86,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "number_of_tissue_samples",
             int,
-            "vocab:numberOfTissueSamples",
+            "numberOfTissueSamples",
             description="no description available",
             instructions="Enter the number of tissue samples that belong to this tissue sample collection.",
         ),
@@ -97,7 +97,7 @@ class TissueSampleCollection(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.Organ",
                 "openminds.v3_0.controlled_terms.OrganismSubstance",
             ],
-            "vocab:origin",
+            "origin",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -108,7 +108,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "species",
             ["openminds.v3_0.controlled_terms.Species", "openminds.v3_0.core.Strain"],
-            "vocab:species",
+            "species",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -119,7 +119,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "studied_state",
             "openminds.v3_0.core.TissueSampleCollectionState",
-            "vocab:studiedState",
+            "studiedState",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -130,7 +130,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "type",
             "openminds.v3_0.controlled_terms.TissueSampleType",
-            "vocab:type",
+            "type",
             multiple=True,
             unique_items=True,
             min_items=1,

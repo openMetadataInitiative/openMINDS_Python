@@ -15,13 +15,13 @@ class ParcellationEntity(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/ParcellationEntity"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "abbreviation",
             str,
-            "vocab:abbreviation",
+            "abbreviation",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the official abbreviation of this parcellation entity.",
@@ -29,7 +29,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "alternate_name",
             str,
-            "vocab:alternateName",
+            "alternateName",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -40,7 +40,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "definition",
             str,
-            "vocab:definition",
+            "definition",
             formatting="text/markdown",
             multiline=True,
             description="Short, but precise statement of the meaning of a word, word group, sign or a symbol.",
@@ -49,17 +49,17 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "has_parent",
             "openminds.latest.sands.ParcellationEntity",
-            "vocab:hasParent",
+            "hasParent",
             multiple=True,
             unique_items=True,
             min_items=1,
             description="Reference to a parent object or legal person.",
-            instructions="Add all anatomical parent structures for this parcellation entity as defined within the corrsponding brain atlas.",
+            instructions="Add all anatomical parent structures for this parcellation entity as defined within the corresponding brain atlas.",
         ),
         Property(
             "has_version",
             "openminds.latest.sands.ParcellationEntityVersion",
-            "vocab:hasVersion",
+            "hasVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -69,7 +69,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this parcellation entity that may help you to find this instance more easily.",
@@ -77,7 +77,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -86,7 +86,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "ontology_identifier",
             str,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -97,7 +97,7 @@ class ParcellationEntity(LinkedMetadata):
         Property(
             "related_uberon_term",
             ["openminds.latest.controlled_terms.Organ", "openminds.latest.controlled_terms.UBERONParcellation"],
-            "vocab:relatedUBERONTerm",
+            "relatedUBERONTerm",
             description="no description available",
             instructions="Add the related anatomical entity as defined by the UBERON ontology.",
         ),

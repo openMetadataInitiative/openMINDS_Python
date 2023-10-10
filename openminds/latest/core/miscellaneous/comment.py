@@ -16,7 +16,7 @@ class Comment(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Comment"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -43,7 +43,7 @@ class Comment(LinkedMetadata):
                 "openminds.latest.sands.CommonCoordinateSpace",
                 "openminds.latest.sands.CommonCoordinateSpaceVersion",
             ],
-            "vocab:about",
+            "about",
             required=True,
             description="no description available",
             instructions="Add the research product (version) that this comment is about.",
@@ -51,7 +51,7 @@ class Comment(LinkedMetadata):
         Property(
             "comment",
             str,
-            "vocab:comment",
+            "comment",
             formatting="text/plain",
             multiline=True,
             required=True,
@@ -61,7 +61,7 @@ class Comment(LinkedMetadata):
         Property(
             "commenter",
             "openminds.latest.core.Person",
-            "vocab:commenter",
+            "commenter",
             required=True,
             description="no description available",
             instructions="Add the person that created this comment.",
@@ -69,7 +69,7 @@ class Comment(LinkedMetadata):
         Property(
             "timestamp",
             datetime,
-            "vocab:timestamp",
+            "timestamp",
             required=True,
             description="no description available",
             instructions="Enter the date and time on which this comment was made, formatted as '2023-02-07T16:00:00+00:00'.",

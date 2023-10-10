@@ -15,27 +15,27 @@ class Annotation(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/Annotation"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "best_view_point",
             "openminds.v1_0.sands.CoordinatePoint",
-            "vocab:bestViewPoint",
+            "bestViewPoint",
             description="Coordinate point from which you get the best view of something.",
             instructions="Add the coordinate point identifying the best view of this annotation in space.",
         ),
         Property(
             "criteria",
             "openminds.v1_0.core.ProtocolExecution",
-            "vocab:criteria",
+            "criteria",
             description="Aspects or standards on which a judgement or decision is based.",
             instructions="Add the protocol execution defining the criteria that were applied to produce this annotation.",
         ),
         Property(
             "criteria_quality_type",
             "openminds.v1_0.controlled_terms.CriteriaQualityType",
-            "vocab:criteriaQualityType",
+            "criteriaQualityType",
             required=True,
             description="Distinct class that defines how the judgement or decision was made for a particular criteria.",
             instructions="Add the quality type of the stated criteria used to define this annotation.",
@@ -43,7 +43,7 @@ class Annotation(LinkedMetadata):
         Property(
             "display_color",
             int,
-            "vocab:displayColor",
+            "displayColor",
             multiple=True,
             unique_items=False,
             min_items=3,
@@ -54,7 +54,7 @@ class Annotation(LinkedMetadata):
         Property(
             "inspired_by",
             "openminds.v1_0.sands.Image",
-            "vocab:inspiredBy",
+            "inspiredBy",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -64,7 +64,7 @@ class Annotation(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code that identifies someone or something within a particular product.",
@@ -73,7 +73,7 @@ class Annotation(LinkedMetadata):
         Property(
             "laterality",
             "openminds.v1_0.controlled_terms.Laterality",
-            "vocab:laterality",
+            "laterality",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -85,7 +85,7 @@ class Annotation(LinkedMetadata):
         Property(
             "naming_term",
             "openminds.v1_0.sands.AnatomicalEntity",
-            "vocab:namingTerm",
+            "namingTerm",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -96,7 +96,7 @@ class Annotation(LinkedMetadata):
         Property(
             "related_atlas_term",
             "openminds.v1_0.sands.AnatomicalEntity",
-            "vocab:relatedAtlasTerm",
+            "relatedAtlasTerm",
             multiple=True,
             unique_items=False,
             min_items=1,
@@ -106,7 +106,7 @@ class Annotation(LinkedMetadata):
         Property(
             "visualized_in",
             "openminds.v1_0.sands.Image",
-            "vocab:visualizedIn",
+            "visualizedIn",
             description="Reference to an image in which something is visible.",
             instructions="Add the image in which this annotation is visualized in.",
         ),

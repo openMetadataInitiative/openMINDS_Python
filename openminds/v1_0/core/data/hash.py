@@ -15,13 +15,13 @@ class Hash(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Hash"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "algorithm",
             str,
-            "vocab:algorithm",
+            "algorithm",
             formatting="text/plain",
             required=True,
             description="Procedure for solving a mathematical problem in a finite number of steps. Can involve repetition of an operation.",
@@ -30,7 +30,7 @@ class Hash(LinkedMetadata):
         Property(
             "digest",
             str,
-            "vocab:digest",
+            "digest",
             formatting="text/plain",
             required=True,
             description="Summation or condensation of a body of information.",

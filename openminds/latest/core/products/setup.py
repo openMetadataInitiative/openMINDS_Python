@@ -15,13 +15,13 @@ class Setup(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Setup"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -38,7 +38,7 @@ class Setup(LinkedMetadata):
                 "openminds.latest.ephys.Pipette",
                 "openminds.latest.specimen_prep.SlicingDevice",
             ],
-            "vocab:hasPart",
+            "hasPart",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -49,7 +49,7 @@ class Setup(LinkedMetadata):
         Property(
             "location",
             str,
-            "vocab:location",
+            "location",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the geographic location of this setup. This may include room number, building, institution and/or city.",
@@ -57,7 +57,7 @@ class Setup(LinkedMetadata):
         Property(
             "manufacturer",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "vocab:manufacturer",
+            "manufacturer",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -67,7 +67,7 @@ class Setup(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -76,7 +76,7 @@ class Setup(LinkedMetadata):
         Property(
             "type",
             "openminds.latest.controlled_terms.SetupType",
-            "vocab:type",
+            "type",
             multiple=True,
             unique_items=True,
             min_items=1,

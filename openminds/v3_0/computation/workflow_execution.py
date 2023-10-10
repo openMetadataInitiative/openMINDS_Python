@@ -15,20 +15,20 @@ class WorkflowExecution(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/computation/WorkflowExecution"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "configuration",
             ["openminds.v3_0.core.Configuration", "openminds.v3_0.core.File"],
-            "vocab:configuration",
+            "configuration",
             description="no description available",
             instructions="Add the configuration information for this workflow execution.",
         ),
         Property(
             "recipe",
             "openminds.v3_0.computation.WorkflowRecipeVersion",
-            "vocab:recipe",
+            "recipe",
             description="no description available",
             instructions="Add the workflow recipe version used for this workflow execution.",
         ),
@@ -43,7 +43,7 @@ class WorkflowExecution(LinkedMetadata):
                 "openminds.v3_0.computation.Simulation",
                 "openminds.v3_0.computation.Visualization",
             ],
-            "vocab:stage",
+            "stage",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -53,7 +53,7 @@ class WorkflowExecution(LinkedMetadata):
         Property(
             "started_by",
             ["openminds.v3_0.computation.SoftwareAgent", "openminds.v3_0.core.Person"],
-            "vocab:startedBy",
+            "startedBy",
             description="no description available",
             instructions="Add the agent that started this workflow execution.",
         ),

@@ -15,13 +15,13 @@ class FilePathPattern(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/FilePathPattern"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "grouping_type",
             "openminds.v3_0.controlled_terms.FileBundleGrouping",
-            "vocab:groupingType",
+            "groupingType",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class FilePathPattern(EmbeddedMetadata):
         Property(
             "regex",
             str,
-            "vocab:regex",
+            "regex",
             formatting="text/plain",
             required=True,
             description="no description available",

@@ -15,13 +15,13 @@ class Circle(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/Circle"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "radius",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:radius",
+            "radius",
             required=True,
             description="no description available",
             instructions="Enter the radius of this circle.",

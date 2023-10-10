@@ -15,13 +15,13 @@ class ParameterSet(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ParameterSet"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "context",
             str,
-            "vocab:context",
+            "context",
             formatting="text/plain",
             required=True,
             description="no description available",
@@ -30,7 +30,7 @@ class ParameterSet(EmbeddedMetadata):
         Property(
             "parameter",
             ["openminds.v2_0.core.NumericalParameter", "openminds.v2_0.core.StringParameter"],
-            "vocab:parameter",
+            "parameter",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -41,7 +41,7 @@ class ParameterSet(EmbeddedMetadata):
         Property(
             "relevant_for",
             ["openminds.v2_0.controlled_terms.BehavioralTask", "openminds.v2_0.controlled_terms.Technique"],
-            "vocab:relevantFor",
+            "relevantFor",
             required=True,
             description="Reference to what or whom something or someone bears siginificance.",
             instructions="Add the technique or behavioral task where this set of parameters is used in.",

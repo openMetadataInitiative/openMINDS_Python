@@ -15,13 +15,13 @@ class ProtocolExecution(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ProtocolExecution"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -37,7 +37,7 @@ class ProtocolExecution(LinkedMetadata):
                 "openminds.v2_0.core.TissueSampleCollectionState",
                 "openminds.v2_0.core.TissueSampleState",
             ],
-            "vocab:input",
+            "input",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -48,7 +48,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this protocol execution that may help you to more easily find it again.",
@@ -63,7 +63,7 @@ class ProtocolExecution(LinkedMetadata):
                 "openminds.v2_0.core.TissueSampleCollectionState",
                 "openminds.v2_0.core.TissueSampleState",
             ],
-            "vocab:output",
+            "output",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -74,7 +74,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "parameter_set",
             "openminds.v2_0.core.ParameterSet",
-            "vocab:parameterSet",
+            "parameterSet",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -84,14 +84,14 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "preparation_type",
             "openminds.v2_0.controlled_terms.PreparationType",
-            "vocab:preparationType",
+            "preparationType",
             description="Distinct class of actions or processes that make something ready for use or service.",
             instructions="Add the initial preparation type for this protocol execution.",
         ),
         Property(
             "protocol",
             "openminds.v2_0.core.Protocol",
-            "vocab:protocol",
+            "protocol",
             required=True,
             description="Plan that describes the process of a scientific or medical experiment, treatment, or procedure.",
             instructions="Add the protocol of this protocol execution.",
@@ -99,7 +99,7 @@ class ProtocolExecution(LinkedMetadata):
         Property(
             "semantically_anchored_to",
             "openminds.v2_0.sands.AnatomicalEntity",
-            "vocab:semanticallyAnchoredTo",
+            "semanticallyAnchoredTo",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -122,7 +122,7 @@ class ProtocolExecution(LinkedMetadata):
                 "openminds.v2_0.sands.CustomAnatomicalEntity",
                 "openminds.v2_0.sands.ParcellationEntity",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,

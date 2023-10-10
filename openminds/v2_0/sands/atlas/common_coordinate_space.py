@@ -17,13 +17,13 @@ class CommonCoordinateSpace(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "anatomical_axes_orientation",
             "openminds.v2_0.controlled_terms.AnatomicalAxesOrientation",
-            "vocab:anatomicalAxesOrientation",
+            "anatomicalAxesOrientation",
             required=True,
             description="Relation between reference planes used in anatomy and mathematics.",
             instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for this common coordinate space.",
@@ -31,7 +31,7 @@ class CommonCoordinateSpace(LinkedMetadata):
         Property(
             "axes_origin",
             "openminds.v2_0.core.QuantitativeValue",
-            "vocab:axesOrigin",
+            "axesOrigin",
             multiple=True,
             unique_items=True,
             min_items=2,
@@ -43,7 +43,7 @@ class CommonCoordinateSpace(LinkedMetadata):
         Property(
             "default_image",
             "openminds.v2_0.core.File",
-            "vocab:defaultImage",
+            "defaultImage",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -53,14 +53,14 @@ class CommonCoordinateSpace(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v2_0.core.DOI",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this common coordinate space.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -69,14 +69,14 @@ class CommonCoordinateSpace(LinkedMetadata):
         Property(
             "homepage",
             "openminds.v2_0.core.URL",
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Add the uniform resource locator (URL) to the homepage of this common coordinate space.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -85,7 +85,7 @@ class CommonCoordinateSpace(LinkedMetadata):
         Property(
             "native_unit",
             "openminds.v2_0.controlled_terms.UnitOfMeasurement",
-            "vocab:nativeUnit",
+            "nativeUnit",
             required=True,
             description="Determinate quantity used in the original measurement.",
             instructions="Add the native unit that is used for this common coordinate space.",
@@ -93,14 +93,14 @@ class CommonCoordinateSpace(LinkedMetadata):
         Property(
             "ontology_identifier",
             IRI,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this common coordinate space.",
         ),
         Property(
             "release_date",
             date,
-            "vocab:releaseDate",
+            "releaseDate",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
             instructions="Enter the date of first publication of this common coordinate space.",
@@ -108,7 +108,7 @@ class CommonCoordinateSpace(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -117,7 +117,7 @@ class CommonCoordinateSpace(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",

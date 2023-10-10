@@ -15,13 +15,13 @@ class CoordinatePoint(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/CoordinatePoint"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "coordinate_space",
             ["openminds.v2_0.sands.CommonCoordinateSpace", "openminds.v2_0.sands.CustomCoordinateSpace"],
-            "vocab:coordinateSpace",
+            "coordinateSpace",
             required=True,
             description="Two or three dimensional geometric setting.",
             instructions="Add the coordinate space in which this coordinate point exists in.",
@@ -29,7 +29,7 @@ class CoordinatePoint(EmbeddedMetadata):
         Property(
             "coordinates",
             "openminds.v2_0.core.QuantitativeValue",
-            "vocab:coordinates",
+            "coordinates",
             multiple=True,
             unique_items=False,
             min_items=2,

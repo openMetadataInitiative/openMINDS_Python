@@ -15,13 +15,13 @@ class Person(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Person"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "affiliation",
             "openminds.v2_0.core.Affiliation",
-            "vocab:affiliation",
+            "affiliation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -31,14 +31,14 @@ class Person(LinkedMetadata):
         Property(
             "contact_information",
             "openminds.v2_0.core.ContactInformation",
-            "vocab:contactInformation",
+            "contactInformation",
             description="Any available way used to contact a person or business (e.g., address, phone number, email address, etc.).",
             instructions="Add the contact information of this person.",
         ),
         Property(
             "digital_identifier",
             "openminds.v2_0.core.ORCID",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -48,7 +48,7 @@ class Person(LinkedMetadata):
         Property(
             "family_name",
             str,
-            "vocab:familyName",
+            "familyName",
             formatting="text/plain",
             description="Name borne in common by members of a family.",
             instructions="Enter the family name of this person.",
@@ -56,7 +56,7 @@ class Person(LinkedMetadata):
         Property(
             "given_name",
             str,
-            "vocab:givenName",
+            "givenName",
             formatting="text/plain",
             required=True,
             description="Name given to a person, including all potential middle names, but excluding the family name.",

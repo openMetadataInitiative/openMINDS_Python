@@ -16,7 +16,7 @@ class ServiceLink(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ServiceLink"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -29,7 +29,7 @@ class ServiceLink(LinkedMetadata):
                 "openminds.v3_0.publications.LivePaperResourceItem",
                 "openminds.v3_0.sands.ParcellationEntityVersion",
             ],
-            "vocab:dataLocation",
+            "dataLocation",
             required=True,
             description="no description available",
             instructions="Add the location of the data that are linked to this specific service (e.g., stored as file (bundles) or registered as other entities such as atlas annotations).",
@@ -37,7 +37,7 @@ class ServiceLink(LinkedMetadata):
         Property(
             "display_label",
             str,
-            "vocab:displayLabel",
+            "displayLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a display label for this service link.",
@@ -45,7 +45,7 @@ class ServiceLink(LinkedMetadata):
         Property(
             "open_data_in",
             IRI,
-            "vocab:openDataIn",
+            "openDataIn",
             required=True,
             description="no description available",
             instructions="Enter the internationalized resource identifier (IRI) to the linked data in the specified service.",
@@ -53,14 +53,14 @@ class ServiceLink(LinkedMetadata):
         Property(
             "preview_image",
             "openminds.v3_0.core.File",
-            "vocab:previewImage",
+            "previewImage",
             description="no description available",
             instructions="Add an image file to this service link that acts as a preview of its content or could function as an icon.",
         ),
         Property(
             "service",
             "openminds.v3_0.controlled_terms.Service",
-            "vocab:service",
+            "service",
             required=True,
             description="no description available",
             instructions="Add the service in which the specified data can be opened.",

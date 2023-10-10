@@ -15,13 +15,13 @@ class QuantitativeValueArray(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/QuantitativeValueArray"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "negative_uncertainties",
             float,
-            "vocab:negativeUncertainties",
+            "negativeUncertainties",
             multiple=True,
             unique_items=False,
             min_items=2,
@@ -31,7 +31,7 @@ class QuantitativeValueArray(LinkedMetadata):
         Property(
             "positive_uncertainties",
             float,
-            "vocab:positiveUncertainties",
+            "positiveUncertainties",
             multiple=True,
             unique_items=False,
             min_items=2,
@@ -41,21 +41,21 @@ class QuantitativeValueArray(LinkedMetadata):
         Property(
             "type_of_uncertainty",
             "openminds.v3_0.controlled_terms.TypeOfUncertainty",
-            "vocab:typeOfUncertainty",
+            "typeOfUncertainty",
             description="Distinct technique used to quantify the uncertainty of a measurement.",
             instructions="Add the type of estimation for the uncertainties.",
         ),
         Property(
             "unit",
             "openminds.v3_0.controlled_terms.UnitOfMeasurement",
-            "vocab:unit",
+            "unit",
             description="Determinate quantity adopted as a standard of measurement.",
             instructions="Add the unit of measurement of the values and their uncertainties.",
         ),
         Property(
             "values",
             float,
-            "vocab:values",
+            "values",
             multiple=True,
             unique_items=False,
             min_items=2,

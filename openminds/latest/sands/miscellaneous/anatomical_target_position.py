@@ -15,17 +15,17 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
-            instructions="Enter any additional remarks concering this anatomical target position.",
+            instructions="Enter any additional remarks concerning this anatomical target position.",
         ),
         Property(
             "anatomical_target",
@@ -39,7 +39,7 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
                 "openminds.latest.sands.ParcellationEntity",
                 "openminds.latest.sands.ParcellationEntityVersion",
             ],
-            "vocab:anatomicalTarget",
+            "anatomicalTarget",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -50,7 +50,7 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
         Property(
             "spatial_location",
             "openminds.latest.sands.CoordinatePoint",
-            "vocab:spatialLocation",
+            "spatialLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -60,7 +60,7 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
         Property(
             "target_identification_type",
             "openminds.latest.controlled_terms.AnatomicalIdentificationType",
-            "vocab:targetIdentificationType",
+            "targetIdentificationType",
             required=True,
             description="no description available",
             instructions="Add the target identification type that best describes how the this anatomical target position was identified.",

@@ -15,13 +15,13 @@ class ModelVersion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/ModelVersion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "abstraction_level",
             "openminds.v1_0.controlled_terms.ModelAbstractionLevel",
-            "vocab:abstractionLevel",
+            "abstractionLevel",
             required=True,
             description="Extent of simplification of physical, spatial, or temporal details or attributes in the study of objects or systems.",
             instructions="Add the abstraction level of this model version.",
@@ -29,7 +29,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "accessibility",
             "openminds.v1_0.controlled_terms.ProductAccessibility",
-            "vocab:accessibility",
+            "accessibility",
             required=True,
             description="Level to which something is accessible to someone or something.",
             instructions="Add the accessibility of the data for this research product version.",
@@ -37,7 +37,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "author",
             ["openminds.v1_0.core.Organization", "openminds.v1_0.core.Person"],
-            "vocab:author",
+            "author",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -47,14 +47,14 @@ class ModelVersion(LinkedMetadata):
         Property(
             "copyright",
             "openminds.v1_0.core.Copyright",
-            "vocab:copyright",
+            "copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
             instructions="Add the copyright information of this research product version.",
         ),
         Property(
             "custodian",
             ["openminds.v1_0.core.Organization", "openminds.v1_0.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -64,7 +64,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -74,7 +74,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "developer",
             ["openminds.v1_0.core.Organization", "openminds.v1_0.core.Person"],
-            "vocab:developer",
+            "developer",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -85,7 +85,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "digital_identifier",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             required=True,
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product version.",
@@ -93,7 +93,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "format",
             "openminds.v1_0.core.ContentType",
-            "vocab:format",
+            "format",
             required=True,
             description="Method of digitally organizing and structuring data or information.",
             instructions="Add the used content type of this model version.",
@@ -101,7 +101,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "full_documentation",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:fullDocumentation",
+            "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
             instructions="Add the globally unique and persistent digital identifier of a full documentation of this research product version.",
@@ -109,7 +109,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -118,7 +118,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "funding",
             "openminds.v1_0.core.Funding",
-            "vocab:funding",
+            "funding",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -129,7 +129,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "has_alternative_version",
             "openminds.v1_0.core.ModelVersion",
-            "vocab:hasAlternativeVersion",
+            "hasAlternativeVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -139,7 +139,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "has_supplement_version",
             "openminds.v1_0.core.ModelVersion",
-            "vocab:hasSupplementVersion",
+            "hasSupplementVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -149,7 +149,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "homepage",
             str,
-            "vocab:homepage",
+            "homepage",
             formatting="text/plain",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
@@ -157,21 +157,21 @@ class ModelVersion(LinkedMetadata):
         Property(
             "input_data",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:inputData",
+            "inputData",
             description="Data that is put into a process or machine.",
             instructions="Add the data that was used as input for this model version.",
         ),
         Property(
             "is_new_version_of",
             "openminds.v1_0.core.ModelVersion",
-            "vocab:isNewVersionOf",
+            "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the model version preceding this model version.",
         ),
         Property(
             "keyword",
             str,
-            "vocab:keyword",
+            "keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -183,7 +183,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "license",
             "openminds.v1_0.core.License",
-            "vocab:license",
+            "license",
             required=True,
             description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
             instructions="Add the license of this research product version.",
@@ -191,7 +191,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "other_contribution",
             "openminds.v1_0.core.Contribution",
-            "vocab:otherContribution",
+            "otherContribution",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -201,14 +201,14 @@ class ModelVersion(LinkedMetadata):
         Property(
             "output_data",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:outputData",
+            "outputData",
             description="Data that comes out of, is delivered or produced by a process or machine.",
             instructions="Add the data that was generated as output of this model version.",
         ),
         Property(
             "related_publication",
             "openminds.v1_0.core.DigitalIdentifier",
-            "vocab:relatedPublication",
+            "relatedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -218,7 +218,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "release_date",
             str,
-            "vocab:releaseDate",
+            "releaseDate",
             formatting="text/plain",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
@@ -227,7 +227,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "repository",
             "openminds.v1_0.core.FileRepository",
-            "vocab:repository",
+            "repository",
             required=True,
             description="Place, room, or container where something is deposited or stored.",
             instructions="Add the file repository of this research product version.",
@@ -235,7 +235,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "scope",
             "openminds.v1_0.controlled_terms.ModelScope",
-            "vocab:scope",
+            "scope",
             required=True,
             description="Extent of something.",
             instructions="Add the scope of this model version.",
@@ -243,7 +243,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -260,7 +260,7 @@ class ModelVersion(LinkedMetadata):
                 "openminds.v1_0.controlled_terms.TermSuggestion",
                 "openminds.v1_0.sands.AnatomicalEntity",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -271,7 +271,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -280,7 +280,7 @@ class ModelVersion(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             description="Documentation on what changed in comparison to a previously published form of something.",

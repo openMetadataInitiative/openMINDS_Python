@@ -15,13 +15,13 @@ class ParcellationTerminology(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/ParcellationTerminology"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "data_location",
             "openminds.v3_0.core.File",
-            "vocab:dataLocation",
+            "dataLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -31,7 +31,7 @@ class ParcellationTerminology(EmbeddedMetadata):
         Property(
             "has_entity",
             "openminds.v3_0.sands.ParcellationEntity",
-            "vocab:hasEntity",
+            "hasEntity",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -42,7 +42,7 @@ class ParcellationTerminology(EmbeddedMetadata):
         Property(
             "ontology_identifier",
             str,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,

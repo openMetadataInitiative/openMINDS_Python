@@ -15,7 +15,7 @@ class ElectrodeUsage(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
@@ -30,21 +30,21 @@ class ElectrodeUsage(LinkedMetadata):
                 "openminds.latest.sands.ParcellationEntity",
                 "openminds.latest.sands.ParcellationEntityVersion",
             ],
-            "vocab:anatomicalLocation",
+            "anatomicalLocation",
             description="no description available",
             instructions="Add the anatomical entity that semantically best describes the anatomical location of the electrode contact.",
         ),
         Property(
             "contact_resistance",
             ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
-            "vocab:contactResistance",
+            "contactResistance",
             description="no description available",
             instructions="Enter the contact resistance of this electrode during its use.",
         ),
         Property(
             "device",
             "openminds.latest.ephys.Electrode",
-            "vocab:device",
+            "device",
             required=True,
             description="Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function.",
             instructions="Add the electrode used.",
@@ -52,7 +52,7 @@ class ElectrodeUsage(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this device usage that may help you to find this instance more easily.",
@@ -60,7 +60,7 @@ class ElectrodeUsage(LinkedMetadata):
         Property(
             "metadata_location",
             ["openminds.latest.core.File", "openminds.latest.core.FileBundle"],
-            "vocab:metadataLocation",
+            "metadataLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -70,14 +70,14 @@ class ElectrodeUsage(LinkedMetadata):
         Property(
             "spatial_location",
             "openminds.latest.sands.CoordinatePoint",
-            "vocab:spatialLocation",
+            "spatialLocation",
             description="no description available",
             instructions="Add the coordinate point that best describes the spatial location of the electrode contact during its use.",
         ),
         Property(
             "used_specimen",
             ["openminds.latest.core.SubjectState", "openminds.latest.core.TissueSampleState"],
-            "vocab:usedSpecimen",
+            "usedSpecimen",
             description="no description available",
             instructions="Add the state of the tissue sample or subject that this device was used on.",
         ),

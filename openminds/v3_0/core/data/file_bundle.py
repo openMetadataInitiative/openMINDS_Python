@@ -15,13 +15,13 @@ class FileBundle(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/FileBundle"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "content_description",
             str,
-            "vocab:contentDescription",
+            "contentDescription",
             formatting="text/plain",
             multiline=True,
             description="no description available",
@@ -30,7 +30,7 @@ class FileBundle(LinkedMetadata):
         Property(
             "format",
             "openminds.v3_0.core.ContentType",
-            "vocab:format",
+            "format",
             description="Method of digitally organizing and structuring data or information.",
             instructions="If the files within this bundle are organised and formatted according to a formal data structure, add the content type of this file bundle. Leave blank if no formal data structure has been applied to the files within this bundle.",
         ),
@@ -84,7 +84,7 @@ class FileBundle(LinkedMetadata):
                 "openminds.v3_0.sands.ParcellationEntity",
                 "openminds.v3_0.sands.ParcellationEntityVersion",
             ],
-            "vocab:groupedBy",
+            "groupedBy",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -94,7 +94,7 @@ class FileBundle(LinkedMetadata):
         Property(
             "grouping_type",
             "openminds.v3_0.controlled_terms.FileBundleGrouping",
-            "vocab:groupingType",
+            "groupingType",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -104,14 +104,14 @@ class FileBundle(LinkedMetadata):
         Property(
             "hash",
             "openminds.v3_0.core.Hash",
-            "vocab:hash",
+            "hash",
             description="Term used for the process of converting any data into a single value. Often also directly refers to the resulting single value.",
             instructions="Add the hash that was generated for this file bundle.",
         ),
         Property(
             "is_part_of",
             ["openminds.v3_0.core.FileBundle", "openminds.v3_0.core.FileRepository"],
-            "vocab:isPartOf",
+            "isPartOf",
             required=True,
             description="Reference to the ensemble of multiple things or beings.",
             instructions="Add the file bundle or file repository this file bundle is part of.",
@@ -119,7 +119,7 @@ class FileBundle(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -128,7 +128,7 @@ class FileBundle(LinkedMetadata):
         Property(
             "storage_size",
             "openminds.v3_0.core.QuantitativeValue",
-            "vocab:storageSize",
+            "storageSize",
             description="Quantitative value defining how much disk space is used by an object on a computer system.",
             instructions="Enter the storage size of this file bundle.",
         ),

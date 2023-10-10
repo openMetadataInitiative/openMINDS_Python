@@ -15,13 +15,13 @@ class Rectangle(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/Rectangle"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "length",
             "openminds.latest.core.QuantitativeValue",
-            "vocab:length",
+            "length",
             required=True,
             description="no description available",
             instructions="Enter the length of this rectangle.",
@@ -29,7 +29,7 @@ class Rectangle(EmbeddedMetadata):
         Property(
             "width",
             "openminds.latest.core.QuantitativeValue",
-            "vocab:width",
+            "width",
             required=True,
             description="no description available",
             instructions="Enter the width of this rectangle.",

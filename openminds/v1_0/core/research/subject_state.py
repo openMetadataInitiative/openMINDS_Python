@@ -15,13 +15,13 @@ class SubjectState(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/SubjectState"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "additional_remarks",
             str,
-            "vocab:additionalRemarks",
+            "additionalRemarks",
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
@@ -30,14 +30,14 @@ class SubjectState(LinkedMetadata):
         Property(
             "age",
             ["openminds.v1_0.core.QuantitativeValue", "openminds.v1_0.core.QuantitativeValueRange"],
-            "vocab:age",
+            "age",
             description="Time of life or existence at which some particular qualification, capacity or event arises.",
             instructions="Add the age of the specimen (set) in this state.",
         ),
         Property(
             "age_category",
             "openminds.v1_0.controlled_terms.AgeCategory",
-            "vocab:ageCategory",
+            "ageCategory",
             required=True,
             description="Distinct life cycle class that is defined by a similar age or age range (developmental stage) within a group of individual beings.",
             instructions="Add the age category of the subject in this state.",
@@ -45,14 +45,14 @@ class SubjectState(LinkedMetadata):
         Property(
             "handedness",
             "openminds.v1_0.controlled_terms.Laterality",
-            "vocab:handedness",
+            "handedness",
             description="Degree to which an organism prefers one hand or foot over the other hand or foot during the performance of a task.",
             instructions="Add the preferred hand of the subject in this state.",
         ),
         Property(
             "pathology",
             ["openminds.v1_0.controlled_terms.Disease", "openminds.v1_0.controlled_terms.DiseaseModel"],
-            "vocab:pathology",
+            "pathology",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -62,7 +62,7 @@ class SubjectState(LinkedMetadata):
         Property(
             "weight",
             ["openminds.v1_0.core.QuantitativeValue", "openminds.v1_0.core.QuantitativeValueRange"],
-            "vocab:weight",
+            "weight",
             description="Amount that a thing or being weighs.",
             instructions="Add the weight of the specimen (set) in this state.",
         ),

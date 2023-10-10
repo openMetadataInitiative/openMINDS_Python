@@ -16,13 +16,13 @@ class LivePaperResourceItem(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/publications/LivePaperResourceItem"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "iri",
             IRI,
-            "vocab:IRI",
+            "IRI",
             required=True,
             description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
             instructions="Enter the internationalized resource identifier (IRI) to this live paper resource item.",
@@ -30,7 +30,7 @@ class LivePaperResourceItem(LinkedMetadata):
         Property(
             "hosted_by",
             "openminds.latest.core.Organization",
-            "vocab:hostedBy",
+            "hostedBy",
             required=True,
             description="Reference to an organization that provides facilities and services for something.",
             instructions="Add the host organization of this live paper resource item.",
@@ -38,7 +38,7 @@ class LivePaperResourceItem(LinkedMetadata):
         Property(
             "is_part_of",
             "openminds.latest.publications.LivePaperSection",
-            "vocab:isPartOf",
+            "isPartOf",
             required=True,
             description="Reference to the ensemble of multiple things or beings.",
             instructions="Add the live paper section this live paper resource item is part of.",
@@ -46,7 +46,7 @@ class LivePaperResourceItem(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",

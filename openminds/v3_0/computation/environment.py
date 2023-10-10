@@ -15,20 +15,20 @@ class Environment(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/computation/Environment"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "configuration",
             "openminds.v3_0.core.Configuration",
-            "vocab:configuration",
+            "configuration",
             description="no description available",
             instructions="Add the configuration of this computational environment.",
         ),
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -37,7 +37,7 @@ class Environment(LinkedMetadata):
         Property(
             "hardware",
             "openminds.v3_0.computation.HardwareSystem",
-            "vocab:hardware",
+            "hardware",
             required=True,
             description="no description available",
             instructions="Add the hardware system on which this computational environment runs.",
@@ -45,7 +45,7 @@ class Environment(LinkedMetadata):
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -54,7 +54,7 @@ class Environment(LinkedMetadata):
         Property(
             "software",
             "openminds.v3_0.core.SoftwareVersion",
-            "vocab:software",
+            "software",
             multiple=True,
             unique_items=True,
             min_items=1,

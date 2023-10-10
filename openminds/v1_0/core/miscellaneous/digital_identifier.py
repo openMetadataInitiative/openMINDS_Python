@@ -15,13 +15,13 @@ class DigitalIdentifier(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/DigitalIdentifier"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -30,7 +30,7 @@ class DigitalIdentifier(LinkedMetadata):
         Property(
             "identifier",
             str,
-            "vocab:identifier",
+            "identifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify something or someone.",
@@ -39,7 +39,7 @@ class DigitalIdentifier(LinkedMetadata):
         Property(
             "identifier_schema",
             "openminds.v1_0.core.DigitalIdentifierSchema",
-            "vocab:identifierSchema",
+            "identifierSchema",
             required=True,
             description="Standard for creating a particular identifier for something or someone.",
             instructions="Add the used schema of this digital identifier.",

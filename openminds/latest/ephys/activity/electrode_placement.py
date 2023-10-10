@@ -16,13 +16,13 @@ class ElectrodePlacement(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "custom_property_set",
             "openminds.latest.core.CustomPropertySet",
-            "vocab:customPropertySet",
+            "customPropertySet",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -46,7 +46,7 @@ class ElectrodePlacement(LinkedMetadata):
                 "openminds.latest.ephys.PipetteUsage",
                 "openminds.latest.specimen_prep.SlicingDeviceUsage",
             ],
-            "vocab:device",
+            "device",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -57,14 +57,14 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "end_time",
             [datetime, time],
-            "vocab:endTime",
+            "endTime",
             description="no description available",
             instructions="Enter the date and/or time on when this activity ended, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
         Property(
             "input",
             ["openminds.latest.core.TissueSampleState", "openminds.latest.core.SubjectState"],
-            "vocab:input",
+            "input",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -75,7 +75,7 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "is_part_of",
             "openminds.latest.core.DatasetVersion",
-            "vocab:isPartOf",
+            "isPartOf",
             required=True,
             description="Reference to the ensemble of multiple things or beings.",
             instructions="Add the dataset version in which this activity was conducted.",
@@ -83,7 +83,7 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "lookup_label",
             str,
-            "vocab:lookupLabel",
+            "lookupLabel",
             formatting="text/plain",
             description="no description available",
             instructions="Enter a lookup label for this activity that may help you to find this instance more easily.",
@@ -91,7 +91,7 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "output",
             ["openminds.latest.core.TissueSampleState", "openminds.latest.core.SubjectState"],
-            "vocab:output",
+            "output",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -102,7 +102,7 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "performed_by",
             ["openminds.latest.computation.SoftwareAgent", "openminds.latest.core.Person"],
-            "vocab:performedBy",
+            "performedBy",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -112,14 +112,14 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "preparation_design",
             "openminds.latest.controlled_terms.PreparationType",
-            "vocab:preparationDesign",
+            "preparationDesign",
             description="no description available",
             instructions="Add the initial preparation type for this activity.",
         ),
         Property(
             "protocol",
             "openminds.latest.core.Protocol",
-            "vocab:protocol",
+            "protocol",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -130,7 +130,7 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "start_time",
             [datetime, time],
-            "vocab:startTime",
+            "startTime",
             description="no description available",
             instructions="Enter the date and/or time on when this activity started, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
@@ -165,7 +165,7 @@ class ElectrodePlacement(LinkedMetadata):
                 "openminds.latest.sands.ParcellationEntity",
                 "openminds.latest.sands.ParcellationEntityVersion",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -175,7 +175,7 @@ class ElectrodePlacement(LinkedMetadata):
         Property(
             "target_position",
             "openminds.latest.sands.AnatomicalTargetPosition",
-            "vocab:targetPosition",
+            "targetPosition",
             description="no description available",
             instructions="Enter the anatomical target position for the placement of the device.",
         ),

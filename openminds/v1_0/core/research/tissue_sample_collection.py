@@ -15,13 +15,13 @@ class TissueSampleCollection(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/TissueSampleCollection"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "biological_sex",
             "openminds.v1_0.controlled_terms.BiologicalSex",
-            "vocab:biologicalSex",
+            "biologicalSex",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "genotype",
             "openminds.v1_0.controlled_terms.Genotype",
-            "vocab:genotype",
+            "genotype",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -42,7 +42,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "internal_identifier",
             str,
-            "vocab:internalIdentifier",
+            "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies someone or something within a particular product.",
             instructions="Enter the identifier of this specimen set that is used within the corresponding data.",
@@ -50,7 +50,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "laterality",
             "openminds.v1_0.controlled_terms.Laterality",
-            "vocab:laterality",
+            "laterality",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -61,7 +61,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "origin",
             ["openminds.v1_0.controlled_terms.CellType", "openminds.v1_0.controlled_terms.Organ"],
-            "vocab:origin",
+            "origin",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -72,7 +72,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "phenotype",
             "openminds.v1_0.controlled_terms.Phenotype",
-            "vocab:phenotype",
+            "phenotype",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -82,14 +82,14 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "quantity",
             int,
-            "vocab:quantity",
+            "quantity",
             description="Total amount or number of things or beings.",
             instructions="Enter the number of specimen that belong to this set.",
         ),
         Property(
             "species",
             "openminds.v1_0.controlled_terms.Species",
-            "vocab:species",
+            "species",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -100,7 +100,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "strain",
             "openminds.v1_0.controlled_terms.Strain",
-            "vocab:strain",
+            "strain",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -110,7 +110,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "studied_state",
             "openminds.v1_0.core.TissueSampleCollectionState",
-            "vocab:studiedState",
+            "studiedState",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -121,7 +121,7 @@ class TissueSampleCollection(LinkedMetadata):
         Property(
             "type",
             "openminds.v1_0.controlled_terms.TissueSampleType",
-            "vocab:type",
+            "type",
             multiple=True,
             unique_items=True,
             min_items=1,

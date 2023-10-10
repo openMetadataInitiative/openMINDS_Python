@@ -16,13 +16,13 @@ class BrainAtlas(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/BrainAtlas"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "abbreviation",
             str,
-            "vocab:abbreviation",
+            "abbreviation",
             formatting="text/plain",
             description="no description available",
             instructions="Enter the official abbreviation of this brain atlas.",
@@ -30,7 +30,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "author",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:author",
+            "author",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -41,7 +41,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "custodian",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -51,7 +51,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             required=True,
@@ -61,14 +61,14 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.ISBN", "openminds.v3_0.core.RRID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product. Note that this digital identifier will be used to reference all attached research product versions.",
         ),
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -77,7 +77,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "has_terminology",
             "openminds.v3_0.sands.ParcellationTerminology",
-            "vocab:hasTerminology",
+            "hasTerminology",
             required=True,
             description="no description available",
             instructions="Enter the parcellation terminology of this brain atlas.",
@@ -85,7 +85,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "has_version",
             "openminds.v3_0.sands.BrainAtlasVersion",
-            "vocab:hasVersion",
+            "hasVersion",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -96,14 +96,14 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "homepage",
             IRI,
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -112,14 +112,14 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "ontology_identifier",
             IRI,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) to the related ontological term matching this brain atlas.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -128,7 +128,7 @@ class BrainAtlas(LinkedMetadata):
         Property(
             "used_species",
             "openminds.v3_0.controlled_terms.Species",
-            "vocab:usedSpecies",
+            "usedSpecies",
             description="no description available",
             instructions="Add the species that was used for the creation of this brain atlas.",
         ),

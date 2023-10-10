@@ -15,13 +15,13 @@ class QuantitativeValueRange(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/QuantitativeValueRange"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "max_value",
             float,
-            "vocab:maxValue",
+            "maxValue",
             required=True,
             description="Greatest quantity attained or allowed.",
             instructions="Enter the maximum value.",
@@ -29,14 +29,14 @@ class QuantitativeValueRange(EmbeddedMetadata):
         Property(
             "max_value_unit",
             "openminds.latest.controlled_terms.UnitOfMeasurement",
-            "vocab:maxValueUnit",
+            "maxValueUnit",
             description="no description available",
             instructions="Add the unit of measurement for the maximum value.",
         ),
         Property(
             "min_value",
             float,
-            "vocab:minValue",
+            "minValue",
             required=True,
             description="Smallest quantity attained or allowed.",
             instructions="Enter the minimum value.",
@@ -44,7 +44,7 @@ class QuantitativeValueRange(EmbeddedMetadata):
         Property(
             "min_value_unit",
             "openminds.latest.controlled_terms.UnitOfMeasurement",
-            "vocab:minValueUnit",
+            "minValueUnit",
             description="no description available",
             instructions="Add the unit of measurement for the minimum value.",
         ),

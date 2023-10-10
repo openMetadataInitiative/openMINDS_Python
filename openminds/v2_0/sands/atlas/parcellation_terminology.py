@@ -16,13 +16,13 @@ class ParcellationTerminology(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/ParcellationTerminology"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "defined_in",
             "openminds.v2_0.core.File",
-            "vocab:definedIn",
+            "definedIn",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -32,7 +32,7 @@ class ParcellationTerminology(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -41,7 +41,7 @@ class ParcellationTerminology(LinkedMetadata):
         Property(
             "is_alternative_version_of",
             "openminds.v2_0.sands.BrainAtlasVersion",
-            "vocab:isAlternativeVersionOf",
+            "isAlternativeVersionOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -51,21 +51,21 @@ class ParcellationTerminology(LinkedMetadata):
         Property(
             "is_new_version_of",
             "openminds.v2_0.sands.BrainAtlasVersion",
-            "vocab:isNewVersionOf",
+            "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the earlier version of this parcellation terminology.",
         ),
         Property(
             "ontology_identifier",
             IRI,
-            "vocab:ontologyIdentifier",
+            "ontologyIdentifier",
             description="Term or code used to identify something or someone registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this parcellation terminology.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -74,7 +74,7 @@ class ParcellationTerminology(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -83,7 +83,7 @@ class ParcellationTerminology(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             required=True,

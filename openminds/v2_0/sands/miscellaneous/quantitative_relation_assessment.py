@@ -15,20 +15,20 @@ class QuantitativeRelationAssessment(EmbeddedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/sands/QuantitativeRelationAssessment"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "criteria",
             "openminds.v2_0.core.ProtocolExecution",
-            "vocab:criteria",
+            "criteria",
             description="Aspects or standards on which a judgement or decision is based.",
             instructions="Add the protocol execution defining the criteria that were applied to determine this relation.",
         ),
         Property(
             "in_relation_to",
             "openminds.v2_0.sands.ParcellationEntity",
-            "vocab:inRelationTo",
+            "inRelationTo",
             required=True,
             description="Reference to a related element.",
             instructions="Add the anatomical entity to which the relation is described.",
@@ -36,7 +36,7 @@ class QuantitativeRelationAssessment(EmbeddedMetadata):
         Property(
             "quantitative_overlap",
             ["openminds.v2_0.core.QuantitativeValue", "openminds.v2_0.core.QuantitativeValueRange"],
-            "vocab:quantitativeOverlap",
+            "quantitativeOverlap",
             required=True,
             description="Numerical characterization of how much two things occupy the same space.",
             instructions="Add the quantitative overlap between the two anatomical entities preferably expressed in percentage.",

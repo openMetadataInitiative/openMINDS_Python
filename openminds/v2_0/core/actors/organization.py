@@ -15,13 +15,13 @@ class Organization(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/Organization"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "digital_identifier",
             ["openminds.v2_0.core.GRIDID", "openminds.v2_0.core.RORID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -31,7 +31,7 @@ class Organization(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             required=True,
             description="Whole, non-abbreviated name of something or somebody.",
@@ -40,21 +40,21 @@ class Organization(LinkedMetadata):
         Property(
             "has_parent",
             "openminds.v2_0.core.Organization",
-            "vocab:hasParent",
+            "hasParent",
             description="Reference to a parent object or legal person.",
             instructions="Add a parent organization to this organization.",
         ),
         Property(
             "homepage",
             "openminds.v2_0.core.URL",
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Add the uniform resource locator (URL) to the homepage of this organization.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             description="Shortened or fully abbreviated name of something or somebody.",
             instructions="Enter the short name of this organization.",

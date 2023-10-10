@@ -17,13 +17,13 @@ class DatasetVersion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/DatasetVersion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "accessibility",
             "openminds.v3_0.controlled_terms.ProductAccessibility",
-            "vocab:accessibility",
+            "accessibility",
             required=True,
             description="Level to which something is accessible to someone or something.",
             instructions="Add the accessibility of the data for this research product version.",
@@ -31,7 +31,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "author",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:author",
+            "author",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -41,7 +41,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "behavioral_protocol",
             "openminds.v3_0.core.BehavioralProtocol",
-            "vocab:behavioralProtocol",
+            "behavioralProtocol",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -51,14 +51,14 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "copyright",
             "openminds.v3_0.core.Copyright",
-            "vocab:copyright",
+            "copyright",
             description="Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period.",
             instructions="Enter the copyright information of this research product version.",
         ),
         Property(
             "custodian",
             ["openminds.v3_0.core.Consortium", "openminds.v3_0.core.Organization", "openminds.v3_0.core.Person"],
-            "vocab:custodian",
+            "custodian",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -68,7 +68,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "data_type",
             "openminds.v3_0.controlled_terms.SemanticDataType",
-            "vocab:dataType",
+            "dataType",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -79,7 +79,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -88,7 +88,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "digital_identifier",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.IdentifiersDotOrgID"],
-            "vocab:digitalIdentifier",
+            "digitalIdentifier",
             required=True,
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product version.",
@@ -96,7 +96,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "ethics_assessment",
             "openminds.v3_0.controlled_terms.EthicsAssessment",
-            "vocab:ethicsAssessment",
+            "ethicsAssessment",
             required=True,
             description="Judgment about the applied principles of conduct governing an individual or a group.",
             instructions="Add the result of the ethics assessment of this dataset version.",
@@ -104,7 +104,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "experimental_approach",
             "openminds.v3_0.controlled_terms.ExperimentalApproach",
-            "vocab:experimentalApproach",
+            "experimentalApproach",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -115,7 +115,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "full_documentation",
             ["openminds.v3_0.core.DOI", "openminds.v3_0.core.File", "openminds.v3_0.core.WebResource"],
-            "vocab:fullDocumentation",
+            "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
             instructions="Add the publication or file that acts as the full documentation of this research product version.",
@@ -123,7 +123,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "full_name",
             str,
-            "vocab:fullName",
+            "fullName",
             formatting="text/plain",
             description="Whole, non-abbreviated name of something or somebody.",
             instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
@@ -131,7 +131,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "funding",
             "openminds.v3_0.core.Funding",
-            "vocab:funding",
+            "funding",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -141,14 +141,14 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "homepage",
             IRI,
-            "vocab:homepage",
+            "homepage",
             description="Main website of something or someone.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
             "how_to_cite",
             str,
-            "vocab:howToCite",
+            "howToCite",
             formatting="text/markdown",
             multiline=True,
             description="Preferred format for citing a particular object or legal person.",
@@ -166,7 +166,7 @@ class DatasetVersion(LinkedMetadata):
                 "openminds.v3_0.sands.CommonCoordinateSpace",
                 "openminds.v3_0.sands.CommonCoordinateSpaceVersion",
             ],
-            "vocab:inputData",
+            "inputData",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -176,7 +176,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "is_alternative_version_of",
             "openminds.v3_0.core.DatasetVersion",
-            "vocab:isAlternativeVersionOf",
+            "isAlternativeVersionOf",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -186,7 +186,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "is_new_version_of",
             "openminds.v3_0.core.DatasetVersion",
-            "vocab:isNewVersionOf",
+            "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the dataset version preceding this dataset version.",
         ),
@@ -272,7 +272,7 @@ class DatasetVersion(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.UnitOfMeasurement",
                 "openminds.v3_0.controlled_terms.VisualStimulusType",
             ],
-            "vocab:keyword",
+            "keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -282,7 +282,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "license",
             ["openminds.v3_0.core.License", "openminds.v3_0.core.WebResource"],
-            "vocab:license",
+            "license",
             required=True,
             description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
             instructions="Add the license or an online available data usage agreement for this dataset version.",
@@ -290,7 +290,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "other_contribution",
             "openminds.v3_0.core.Contribution",
-            "vocab:otherContribution",
+            "otherContribution",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -300,7 +300,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "preparation_design",
             "openminds.v3_0.controlled_terms.PreparationType",
-            "vocab:preparationDesign",
+            "preparationDesign",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -310,7 +310,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "protocol",
             "openminds.v3_0.core.Protocol",
-            "vocab:protocol",
+            "protocol",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -328,7 +328,7 @@ class DatasetVersion(LinkedMetadata):
                 "openminds.v3_0.publications.Chapter",
                 "openminds.v3_0.publications.ScholarlyArticle",
             ],
-            "vocab:relatedPublication",
+            "relatedPublication",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -338,7 +338,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "release_date",
             date,
-            "vocab:releaseDate",
+            "releaseDate",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
             instructions="Enter the date (actual or intended) on which this research product version was first release, formatted as 'YYYY-MM-DD'.",
@@ -346,14 +346,14 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "repository",
             "openminds.v3_0.core.FileRepository",
-            "vocab:repository",
+            "repository",
             description="Place, room, or container where something is deposited or stored.",
             instructions="Add the file repository of this research product version.",
         ),
         Property(
             "short_name",
             str,
-            "vocab:shortName",
+            "shortName",
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of something or somebody.",
@@ -367,7 +367,7 @@ class DatasetVersion(LinkedMetadata):
                 "openminds.v3_0.core.TissueSample",
                 "openminds.v3_0.core.TissueSampleCollection",
             ],
-            "vocab:studiedSpecimen",
+            "studiedSpecimen",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -405,7 +405,7 @@ class DatasetVersion(LinkedMetadata):
                 "openminds.v3_0.sands.ParcellationEntity",
                 "openminds.v3_0.sands.ParcellationEntityVersion",
             ],
-            "vocab:studyTarget",
+            "studyTarget",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -415,7 +415,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "support_channel",
             str,
-            "vocab:supportChannel",
+            "supportChannel",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -431,7 +431,7 @@ class DatasetVersion(LinkedMetadata):
                 "openminds.v3_0.controlled_terms.StimulationTechnique",
                 "openminds.v3_0.controlled_terms.Technique",
             ],
-            "vocab:technique",
+            "technique",
             multiple=True,
             unique_items=True,
             min_items=1,
@@ -442,7 +442,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "version_identifier",
             str,
-            "vocab:versionIdentifier",
+            "versionIdentifier",
             formatting="text/plain",
             required=True,
             description="Term or code used to identify the version of something.",
@@ -451,7 +451,7 @@ class DatasetVersion(LinkedMetadata):
         Property(
             "version_innovation",
             str,
-            "vocab:versionInnovation",
+            "versionInnovation",
             formatting="text/markdown",
             multiline=True,
             required=True,

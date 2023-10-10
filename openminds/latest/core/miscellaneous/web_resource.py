@@ -16,13 +16,13 @@ class WebResource(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/core/WebResource"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "iri",
             IRI,
-            "vocab:IRI",
+            "IRI",
             required=True,
             description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
             instructions="Enter the internationalized resource identifier (IRI) to this web resource.",
@@ -30,7 +30,7 @@ class WebResource(LinkedMetadata):
         Property(
             "content_description",
             str,
-            "vocab:contentDescription",
+            "contentDescription",
             formatting="text/plain",
             multiline=True,
             description="no description available",
@@ -39,7 +39,7 @@ class WebResource(LinkedMetadata):
         Property(
             "format",
             "openminds.latest.core.ContentType",
-            "vocab:format",
+            "format",
             description="Method of digitally organizing and structuring data or information.",
             instructions="Add the expected content type of the document at this web resource.",
         ),

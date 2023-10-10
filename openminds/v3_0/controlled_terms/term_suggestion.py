@@ -16,20 +16,20 @@ class TermSuggestion(LinkedMetadata):
     """
 
     type_ = "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
-    context = {"vocab": "https://openminds.ebrains.eu/vocab/"}
+    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
 
     properties = [
         Property(
             "add_existing_terminology",
             "openminds.v3_0.controlled_terms.Terminology",
-            "vocab:addExistingTerminology",
+            "addExistingTerminology",
             description="Reference to an existing terminology (distinct class to group related terms).",
             instructions="Add an existing terminology in which the suggested term should be integrated in.",
         ),
         Property(
             "definition",
             str,
-            "vocab:definition",
+            "definition",
             formatting="text/markdown",
             multiline=True,
             description="Short, but precise statement of the meaning of a word, word group, sign or a symbol.",
@@ -38,7 +38,7 @@ class TermSuggestion(LinkedMetadata):
         Property(
             "description",
             str,
-            "vocab:description",
+            "description",
             formatting="text/markdown",
             multiline=True,
             description="Longer statement or account giving the characteristics of someone or something.",
@@ -47,21 +47,21 @@ class TermSuggestion(LinkedMetadata):
         Property(
             "interlex_identifier",
             IRI,
-            "vocab:interlexIdentifier",
+            "interlexIdentifier",
             description="Persistent identifier for a term registered in the InterLex project.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
         ),
         Property(
             "knowledge_space_link",
             IRI,
-            "vocab:knowledgeSpaceLink",
+            "knowledgeSpaceLink",
             description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
         ),
         Property(
             "name",
             str,
-            "vocab:name",
+            "name",
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of a being or thing.",
@@ -70,14 +70,14 @@ class TermSuggestion(LinkedMetadata):
         Property(
             "preferred_ontology_identifier",
             IRI,
-            "vocab:preferredOntologyIdentifier",
+            "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
         ),
         Property(
             "suggest_new_terminology",
             str,
-            "vocab:suggestNewTerminology",
+            "suggestNewTerminology",
             formatting="text/plain",
             description="Proposal of a new distinct class to group related terms.",
             instructions="Propose a name for a new terminology in which the suggested term should be integrated in.",
@@ -85,7 +85,7 @@ class TermSuggestion(LinkedMetadata):
         Property(
             "synonym",
             str,
-            "vocab:synonym",
+            "synonym",
             multiple=True,
             unique_items=True,
             min_items=1,
