@@ -24,7 +24,7 @@ class Funding(LinkedMetadata):
             str,
             "acknowledgement",
             formatting="text/plain",
-            description="Offical declaration or avowal of appreciation of an act or achievement.",
+            description="Official declaration or avowal of appreciation of an act or achievement.",
             instructions="Enter the acknowledgement that should be used with this funding.",
         ),
         Property(

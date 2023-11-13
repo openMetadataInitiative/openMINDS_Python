@@ -172,6 +172,7 @@ class StimulationActivity(LinkedMetadata):
                 "openminds.latest.controlled_terms.SubcellularEntity",
                 "openminds.latest.controlled_terms.TactileStimulusType",
                 "openminds.latest.controlled_terms.TermSuggestion",
+                "openminds.latest.controlled_terms.TissueSampleType",
                 "openminds.latest.controlled_terms.UBERONParcellation",
                 "openminds.latest.controlled_terms.VisualStimulusType",
                 "openminds.latest.sands.CustomAnatomicalEntity",
