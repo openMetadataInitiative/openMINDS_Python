@@ -47,7 +47,7 @@ class Node(metaclass=Registry):
                 else:
                     if hasattr(value, "id") and value.id is None:
                         raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
-                    item = {"@id": value.id, "@type": value.type_}
+                    item = {"@id": value.id}
             elif isinstance(value, EmbeddedMetadata):
                 item = value.to_jsonld(
                     with_context=False,
@@ -142,6 +142,14 @@ class Node(metaclass=Registry):
                 _links.extend(value.links)
         return _links
 
+    def _resolve_links(self, node_lookup):
+        """Replace `Link` attributes with typed Nodes where possible"""
+        for property in self.__class__.properties:
+            value = getattr(self, property.name)
+            if isinstance(value, Link):
+                resolved_value = node_lookup[value.identifier]
+                setattr(self, property.name, resolved_value)
+
 
 class LinkedMetadata(Node):
     """
@@ -181,9 +189,16 @@ class EmbeddedMetadata(Node):
             setattr(self, name, value)
 
 
+class Link:
+    """Representation of a metadata node for which only the identifier is currently known."""
+
+    def __init__(self, identifier):
+        self.identifier = identifier
+
+
 class IRI:
     """
-    Representation of an Internationalized Resource Identifier
+    Representation of an International Resource Identifier
     """
 
     def __init__(self, value: Union[str, IRI]):

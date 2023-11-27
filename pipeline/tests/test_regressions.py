@@ -98,15 +98,13 @@ def test_issue0007():
             {
                 "@type": "https://openminds.ebrains.eu/core/Affiliation",
                 "memberOf": {
-                    "@id": "_:002",
-                    "@type": "https://openminds.ebrains.eu/core/Organization",
+                    "@id": "_:002"
                 },
             },
             {
                 "@type": "https://openminds.ebrains.eu/core/Affiliation",
                 "memberOf": {
-                    "@id": "_:003",
-                    "@type": "https://openminds.ebrains.eu/core/Organization",
+                    "@id": "_:003"
                 },
             },
         ],
@@ -130,15 +128,13 @@ def test_issue0007():
                     {
                         "@type": "https://openminds.ebrains.eu/core/Affiliation",
                         "memberOf": {
-                            "@id": "_:002",
-                            "@type": "https://openminds.ebrains.eu/core/Organization",
+                            "@id": "_:002"
                         },
                     },
                     {
                         "@type": "https://openminds.ebrains.eu/core/Affiliation",
                         "memberOf": {
-                            "@id": "_:003",
-                            "@type": "https://openminds.ebrains.eu/core/Organization",
+                            "@id": "_:003"
                         },
                     },
                 ],
@@ -182,8 +178,7 @@ def test_issue0008():
                 "@type": "https://openminds.ebrains.eu/core/Affiliation",
                 "endDate": "2023-09-30",
                 "memberOf": {
-                    "@id": "_:001",
-                    "@type": "https://openminds.ebrains.eu/core/Organization",
+                    "@id": "_:001"
                 },
             }
         ],
