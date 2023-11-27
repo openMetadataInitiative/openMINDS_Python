@@ -8,6 +8,7 @@ The collection can be saved to and loaded from disk, in JSON-LD format.
 import json
 import os
 from .registry import lookup_type
+from .base import Link
 
 
 class Collection:
@@ -147,15 +148,31 @@ class Collection:
                 data = json.load(fp)
             if "@graph" in data:
                 for item in data["@graph"]:
-                    cls = lookup_type(item["@type"])
-                    node = cls.from_jsonld(item)
+                    if "@type" in item:
+                        cls = lookup_type(item["@type"])
+                        node = cls.from_jsonld(item)
+                    else:
+                        # allow links to metadata instances outside this collection
+                        if not item["@id"].startswith("http"):
+                            raise ValueError("Local nodes must have @type specified")
+                        node = Link(item["@id"])
                     self.add(node)
             else:
-                if "@type" not in data:
-                    raise ValueError(f"Invalid file '{path}': no @type property")
-                cls = lookup_type(data["@type"])
-                node = cls.from_jsonld(data)
+                if "@type" in data:
+                    cls = lookup_type(data["@type"])
+                    node = cls.from_jsonld(data)
+                else:
+                    # allow links to metadata instances outside this collection
+                    if not data["@id"].startswith("http"):
+                        raise ValueError("Local nodes must have @type specified")
+                    node = Link(data["@id"])
                 self.add(node)
+        self.resolve_links()
+
+    def resolve_links(self):
+        """Replace `Link` attributes with typed Nodes where possible"""
+        for node in self.nodes.values():
+            node.resolve_links(self.nodes)
 
     def validate(self):
         """
