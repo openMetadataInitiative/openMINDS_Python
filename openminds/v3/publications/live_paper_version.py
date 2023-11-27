@@ -4,9 +4,9 @@
 
 # this file was auto-generated!
 
+from datetime import datetime
 from openminds.base import IRI
 from datetime import date
-from datetime import datetime
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property

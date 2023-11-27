@@ -7,7 +7,7 @@ Representations of metadata fields/properties
 from datetime import datetime, date
 from collections import defaultdict
 from .registry import lookup
-from .base import Node, IRI
+from .base import Node, IRI, Link
 
 
 class Property:
@@ -146,7 +146,7 @@ class Property:
                         if cls.type_ == item["@type"]:
                             return cls.from_jsonld(item)
                 else:
-                    raise Exception("missing @type")
+                    return Link(item["@id"])
             else:
                 raise NotImplementedError()
 
