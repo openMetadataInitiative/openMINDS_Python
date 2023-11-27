@@ -152,6 +152,18 @@ class Node(metaclass=Registry):
             if isinstance(value, Link):
                 resolved_value = node_lookup[value.identifier]
                 setattr(self, property.name, resolved_value)
+            elif hasattr(value, "_resolve_links"):
+                value._resolve_links(node_lookup)
+            elif isinstance(value, (tuple, list)):
+                resolved_values = []
+                for item in value:
+                    if isinstance(item, Link):
+                        resolved_values.append(node_lookup[item.identifier])
+                    else:
+                        resolved_values.append(item)
+                        if hasattr(item, "_resolve_links"):
+                            item._resolve_links(node_lookup)
+                setattr(self, property.name, resolved_values)
 
 
 class LinkedMetadata(Node):
