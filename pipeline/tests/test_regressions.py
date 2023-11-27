@@ -214,3 +214,43 @@ def test_issue0026():
     person_again = [item for item in new_collection if isinstance(item, omcore.Person)][0]
     assert len(person_again.affiliation) == 1
     assert person_again.affiliation[0].member_of.full_name == "University of This Place"
+
+
+def test_issue0023():
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/23
+    # If a user adds an instance/node to a collection, and then later adds linked types to the instance,
+    # currently that is not added to the collection
+
+    uni1 = omcore.Organization(full_name="University of This Place", id="_:uthisp")
+    person = omcore.Person(
+        given_name="A",
+        family_name="Professor",
+        affiliation = [omcore.Affiliation(member_of=uni1)],
+        id="_:ap"
+    )
+    dv = omcore.DatasetVersion(
+        full_name="The name of the dataset version",
+        custodian=[person],
+        id="_:dv"
+    )
+
+    c = Collection(dv)
+
+    # even though we add uni2 and the repository after creating the collection,
+    # they should be included when we save the collection.
+    uni2 = omcore.Organization(full_name="University of That Place", id="_:uthatp")
+    person.affiliation.append(omcore.Affiliation(member_of=uni2))
+    dv.repository = omcore.FileRepository(iri="http://example.com", id="_:fr")
+
+    output_paths = c.save("issue0023.jsonld", individual_files=False, include_empty_properties=False)
+
+    new_collection = Collection()
+    new_collection.load(*output_paths)
+    os.remove("issue0023.jsonld")
+
+    dv_again = [item for item in new_collection if isinstance(item, omcore.DatasetVersion)][0]
+    assert isinstance(dv_again.repository, omcore.FileRepository)
+    assert dv_again.repository.iri.value == "http://example.com"
+    assert len(dv_again.custodian[0].affiliation) == 2
+    assert dv_again.custodian[0].affiliation[0].member_of.full_name == "University of This Place"
+    assert dv_again.custodian[0].affiliation[1].member_of.full_name == "University of That Place"
