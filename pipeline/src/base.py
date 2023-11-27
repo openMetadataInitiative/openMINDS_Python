@@ -14,6 +14,10 @@ from .registry import Registry
 
 
 class Node(metaclass=Registry):
+    """
+    Base class for a metadata node
+    """
+
     @property
     def uuid(self):
         if self.id is not None:
@@ -29,7 +33,7 @@ class Node(metaclass=Registry):
 
     def to_jsonld(self, include_empty_properties=True, embed_linked_nodes=True, with_context=True):
         """
-        docstring goes here
+        Return a represention of this metadata node as a dictionary that can be directly serialized to JSON-LD.
         """
 
         def value_to_jsonld(value):
@@ -77,7 +81,7 @@ class Node(metaclass=Registry):
     @classmethod
     def from_jsonld(cls, data):
         """
-        docstring goes here
+        Create a Python object representing a metadata node from a JSON-LD-compatible dictionary
         """
         data_copy = data.copy()
         context = data_copy.pop("@context", None)
@@ -141,7 +145,7 @@ class Node(metaclass=Registry):
 
 class LinkedMetadata(Node):
     """
-    docstring goes here
+    A Python representation of a metadata node that should have a unique identifier.
     """
 
     def __init__(self, id=None, **properties):
@@ -151,7 +155,7 @@ class LinkedMetadata(Node):
 
     def save(self, file_path, indent=2):
         """
-        docstring goes here
+        Save this object to a file in JSON-LD format
         """
         with open(file_path, "w") as output_file:
             json.dump(self.to_jsonld(), output_file, indent=indent)
@@ -159,7 +163,7 @@ class LinkedMetadata(Node):
     @classmethod
     def load(cls, file_path):
         """
-        docstring goes here
+        Create a Python object representing a metadata node from a JSON-LD file
         """
         with open(file_path, "r") as input_file:
             data = json.load(input_file)
@@ -168,7 +172,8 @@ class LinkedMetadata(Node):
 
 class EmbeddedMetadata(Node):
     """
-    docstring goes here
+    A Python representation of a metadata node that should only be embedded within another node,
+    and should not have a unique identifier.
     """
 
     def __init__(self, **properties):
@@ -177,6 +182,10 @@ class EmbeddedMetadata(Node):
 
 
 class IRI:
+    """
+    Representation of an Internationalized Resource Identifier
+    """
+
     def __init__(self, value: Union[str, IRI]):
         if isinstance(value, IRI):
             iri = value.value
