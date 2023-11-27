@@ -186,3 +186,31 @@ def test_issue0008():
         "givenName": "A",
     }
     assert actual == expected
+
+
+def test_issue0026():
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/26
+    # When reading a JSON-LD file, the attributes of LinkedMetadata nodes
+    # inside EmbeddedMetadata nodes are not set properly
+
+    uni1 = omcore.Organization(full_name="University of This Place", id="_:uthisp")
+    person = omcore.Person(
+        given_name="A",
+        family_name="Professor",
+        affiliation = [omcore.Affiliation(member_of=uni1)],
+        id="_:ap"
+    )
+
+    c = Collection(person)
+
+    # uni1 was not added explicitly, but should nevertheless be included in the JSON-LD export
+
+    output_paths = c.save("issue0026.jsonld", individual_files=False, include_empty_properties=False)
+
+    new_collection = Collection()
+    new_collection.load(*output_paths)
+    os.remove("issue0026.jsonld")
+
+    person_again = [item for item in new_collection if isinstance(item, omcore.Person)][0]
+    assert len(person_again.affiliation) == 1
+    assert person_again.affiliation[0].member_of.full_name == "University of This Place"
