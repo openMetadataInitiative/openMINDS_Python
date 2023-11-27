@@ -167,12 +167,12 @@ class Collection:
                         raise ValueError("Local nodes must have @type specified")
                     node = Link(data["@id"])
                 self.add(node)
-        self.resolve_links()
+        self._resolve_links()
 
-    def resolve_links(self):
+    def _resolve_links(self):
         """Replace `Link` attributes with typed Nodes where possible"""
         for node in self.nodes.values():
-            node.resolve_links(self.nodes)
+            node._resolve_links(self.nodes)
 
     def validate(self):
         """

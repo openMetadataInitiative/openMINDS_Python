@@ -142,7 +142,7 @@ class Node(metaclass=Registry):
                 _links.extend(value.links)
         return _links
 
-    def resolve_links(self, node_lookup):
+    def _resolve_links(self, node_lookup):
         """Replace `Link` attributes with typed Nodes where possible"""
         for property in self.__class__.properties:
             value = getattr(self, property.name)
