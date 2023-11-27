@@ -71,9 +71,12 @@ class Node(metaclass=Registry):
             value = getattr(self, property.name)
             if value or include_empty_properties:
                 if property.multiple:
-                    if not isinstance(value, (tuple, list)):
-                        value = [value]
-                    data[property.path] = [value_to_jsonld(item) for item in value]
+                    if value is None:
+                        data[property.path] = value
+                    else:
+                        if not isinstance(value, (tuple, list)):
+                            value = [value]
+                        data[property.path] = [value_to_jsonld(item) for item in value]
                 else:
                     data[property.path] = value_to_jsonld(value)
         return {key: data[key] for key in sorted(data)}
