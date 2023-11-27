@@ -81,6 +81,13 @@ class Collection:
 
         A list of the file paths created.
         """
+        # in case a user has added additional child nodes _after_ adding the parent node to the collection
+        # we first re-add all child nodes to the collection.
+        # This is probably not the most elegant or fast way to do this, but it is simple and robust.
+        for node in tuple(self.nodes.values()):
+            for linked_node in node.links:
+                self._add_node(linked_node)
+        # Now we can actually save the nodes
         if not individual_files:
             if os.path.exists(path):
                 if not os.path.isfile(path):
