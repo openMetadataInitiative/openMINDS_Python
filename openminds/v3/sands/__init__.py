@@ -1,21 +1,21 @@
 from .atlas import (
-    BrainAtlas,
+    ParcellationEntity,
     BrainAtlasVersion,
-    CommonCoordinateSpaceVersion,
+    ParcellationTerminology,
+    ParcellationTerminologyVersion,
+    BrainAtlas,
+    CommonCoordinateSpace,
     ParcellationEntityVersion,
     AtlasAnnotation,
-    ParcellationTerminologyVersion,
-    CommonCoordinateSpace,
-    ParcellationTerminology,
-    ParcellationEntity,
+    CommonCoordinateSpaceVersion,
 )
+from .non_atlas import CustomAnnotation, CustomCoordinateSpace, CustomAnatomicalEntity
 from .miscellaneous import (
-    QuantitativeRelationAssessment,
-    ViewerSpecification,
-    CoordinatePoint,
-    SingleColor,
     QualitativeRelationAssessment,
+    CoordinatePoint,
+    QuantitativeRelationAssessment,
+    SingleColor,
     AnatomicalTargetPosition,
+    ViewerSpecification,
 )
-from .non_atlas import CustomCoordinateSpace, CustomAnatomicalEntity, CustomAnnotation
-from .mathematical_shapes import Rectangle, Ellipse, Circle
+from .mathematical_shapes import Rectangle, Circle, Ellipse
