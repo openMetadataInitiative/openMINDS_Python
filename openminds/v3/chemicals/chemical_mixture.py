@@ -26,7 +26,7 @@ class ChemicalMixture(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
-            instructions="Enter any additional remarks concering this chemical mixture.",
+            instructions="Enter any additional remarks concerning this chemical mixture.",
         ),
         Property(
             "has_part",

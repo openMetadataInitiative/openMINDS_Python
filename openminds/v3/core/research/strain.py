@@ -142,7 +142,7 @@ class Strain(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter any synonyms (inlcuding abbreviations) of this strain.",
+            instructions="Enter any synonyms (including abbreviations) of this strain.",
         ),
     ]
 
