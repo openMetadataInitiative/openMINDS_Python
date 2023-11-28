@@ -46,7 +46,7 @@ class CustomPropertySet(EmbeddedMetadata):
             ],
             "relevantFor",
             required=True,
-            description="Reference to what or whom something or someone bears siginificance.",
+            description="Reference to what or whom something or someone bears significance.",
             instructions="Add the technique for which this custom property set is relevant.",
         ),
     ]

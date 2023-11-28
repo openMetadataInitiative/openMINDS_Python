@@ -28,7 +28,7 @@ class Strain(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="no description available",
-            instructions="Enter all identifiers for this strain, excluding its ontological identifers or RRID (e.g., identifiers from the Mouse Genome Informatics (MGI) database or Rat Genome Database (RGD)).",
+            instructions="Enter all identifiers for this strain, excluding its ontological identifiers or RRID (e.g., identifiers from the Mouse Genome Informatics (MGI) database or Rat Genome Database (RGD)).",
         ),
         Property(
             "background_strain",

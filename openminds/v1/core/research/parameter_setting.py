@@ -43,7 +43,7 @@ class ParameterSetting(LinkedMetadata):
             ["openminds.v1.controlled_terms.BehavioralTask", "openminds.v1.controlled_terms.Technique"],
             "relevantFor",
             required=True,
-            description="Reference to what or whom something or someone bears siginificance.",
+            description="Reference to what or whom something or someone bears significance.",
             instructions="Add the technique or behavioral task where this parameter setting is used in.",
         ),
         Property(

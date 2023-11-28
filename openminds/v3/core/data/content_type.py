@@ -79,7 +79,7 @@ class ContentType(LinkedMetadata):
             IRI,
             "specification",
             description="Detailed and precise presentation of, or proposal for something.",
-            instructions="Enter the internationalized resource identifier (IRI) to the offical specification of this content type. If no offical and public specification is available, leave blank and enter the specification under 'description'.",
+            instructions="Enter the internationalized resource identifier (IRI) to the official specification of this content type. If no official and public specification is available, leave blank and enter the specification under 'description'.",
         ),
         Property(
             "synonym",
