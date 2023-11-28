@@ -73,6 +73,15 @@ please open a ticket in the [openMINDS Python library issue tracker](https://git
 If you identify a problem or would like to suggest changes to the openMINDS specification itself,
 please open a ticket in the [openMINDS issue tracker](https://github.com/openMetadataInitiative/openMINDS/issues).
 
+## Development
+
+Contributions are welcome, please see our [contribution guidelines](https://openminds-documentation.readthedocs.io/en/latest/shared/contribution_guidelines.html).
+
+This repository has two main branches: `pipeline` and `main`.
+The `pipeline` contains the code for building the Python package from the openMINDS schemas.
+The build process is triggered by changes to the schemas, and runs as a GitHub action.
+The resultant package is copied to the `main` branch, and at intervals is published on PyPI.
+
 ## Acknowledgements
 
 <div><img src="https://www.braincouncil.eu/wp-content/uploads/2018/11/wsi-imageoptim-EU-Logo.jpg" alt="EU Logo" height="23%" width="15%" align="right" style="margin-left: 10px"></div>
