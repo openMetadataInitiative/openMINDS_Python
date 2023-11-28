@@ -113,7 +113,7 @@ class PythonBuilder(object):
         self.context = {
             "docstring": self._schema_payload.get("description", "<description not available>"),
             "base_class": base_class,
-            "preamble": "",  # todo: e.g. extra imports
+            "preamble": "",  # default value, may be updated below
             "class_name": self._schema_payload["name"],
             "openminds_type": self._schema_payload["_type"],
             "schema_version": self.version,
@@ -151,13 +151,12 @@ class PythonBuilder(object):
                     imp = import_map.get(t, None)
                     if imp:
                         extra_imports.add(imp)
-                        breakpoint()
             else:
                 imp = import_map.get(property["type"], None)
                 if imp:
                     extra_imports.add(imp)
             if extra_imports:
-                self.context["preamble"] = "\n".join(extra_imports)
+                self.context["preamble"] = "\n".join(sorted(extra_imports))
 
     def build(self, embedded=None):
         target_file_path = os.path.join("target", "openminds", f"{self._target_file_without_extension()}.py")
