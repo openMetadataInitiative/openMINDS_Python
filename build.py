@@ -1,4 +1,5 @@
 from collections import defaultdict
+import json
 import os.path
 import shutil
 import subprocess
@@ -7,25 +8,35 @@ import sys
 from jinja2 import Environment, select_autoescape, FileSystemLoader
 
 from pipeline.translator import PythonBuilder
-from pipeline.utils import clone_sources, SchemaLoader
+from pipeline.utils import clone_sources, SchemaLoader, InstanceLoader
 
-print("***************************************")
+print("*********************************************************")
 print(f"Triggering the generation of Python package for openMINDS")
-print("***************************************")
+print("*********************************************************")
 
 # Step 1 - clone central repository in main branch to get the latest sources
 clone_sources()
 schema_loader = SchemaLoader()
+instance_loader = InstanceLoader()
 if os.path.exists("target"):
     shutil.rmtree("target")
+
+# Step 2 - load instances
+instances = {}
+for version in instance_loader.get_instance_versions():
+    instances[version] = defaultdict(list)
+    for instance_path in instance_loader.find_instances(version):
+        with open(instance_path) as fp:
+            instance_data = json.load(fp)
+        instances[version][instance_data["@type"]].append(instance_data)
 
 python_modules = defaultdict(list)
 for schema_version in schema_loader.get_schema_versions():
 
-    # Step 2 - find all involved schemas for the current version
+    # Step 3 - find all involved schemas for the current version
     schemas_file_paths = schema_loader.find_schemas(schema_version)
 
-    # Step 3a - figure out which schemas are embedded and which are linked
+    # Step 4a - figure out which schemas are embedded and which are linked
     embedded = set()
     linked = set()
     for schema_file_path in schemas_file_paths:
@@ -42,17 +53,17 @@ for schema_version in schema_loader.get_schema_versions():
         for schema_identifier in conflicts:
             linked.remove(schema_identifier)
 
-    # Step 3b - translate and build each openMINDS schema as JSON-Schema
+    # Step 4b - translate and build each openMINDS schema as JSON-Schema
     for schema_file_path in schemas_file_paths:
         module_path, class_name = PythonBuilder(
-            schema_file_path, schema_loader.schemas_sources
+            schema_file_path, schema_loader.schemas_sources, instances=instances.get(schema_version, None)
         ).build(embedded=embedded)
 
         parts = module_path.split(".")
         parent_path = ".".join(parts[:-1])
         python_modules[parent_path].append((parts[-1], class_name))
 
-# Step 4 - create additional files, e.g. __init__.py
+# Step 5 - create additional files, e.g. __init__.py
 openminds_modules = defaultdict(set)
 for path, classes in python_modules.items():
     dir_path = ["target", "openminds"] + path.split(".")
@@ -96,5 +107,5 @@ shutil.copy("pipeline/src/collection.py", "target/openminds/collection.py")
 shutil.copy("pipeline/src/README.md", "target/README.md")
 shutil.copy("./LICENSE", "target/LICENSE")
 
-# Step 5 - run formatter
+# Step 6 - run formatter
 subprocess.call([sys.executable, "-m", "black", "--quiet", "target"])

@@ -6,10 +6,27 @@ from typing import List, Optional, Dict
 from jinja2 import Environment, select_autoescape, FileSystemLoader
 
 
+number_names = {
+    "0": "zero",
+    "1": "one",
+    "2": "two",
+    "3": "three",
+    "4": "four",
+    "5": "five",
+    "6": "six",
+    "7": "seven",
+    "8": "eight",
+    "9": "nine"
+}
+
+
 def generate_python_name(json_name, allow_multiple=False):
     python_name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", json_name)
     python_name = re.sub("([a-z0-9])([A-Z])", r"\1_\2", python_name).lower()
-    python_name = python_name.replace("-", "_")
+    python_name = python_name.replace("-", "_").replace(".", "_").replace("+", "plus").replace("#", "sharp")
+    if python_name[0] in number_names:  # Python variables can't start with a number
+        python_name = number_names[python_name[0]] + python_name[1:]
+
     # if (
     #     allow_multiple
     #     and python_name[-1] != "s"
@@ -32,7 +49,7 @@ def generate_python_name(json_name, allow_multiple=False):
 class PythonBuilder(object):
     """docstring"""
 
-    def __init__(self, schema_file_path: str, root_path: str):
+    def __init__(self, schema_file_path: str, root_path: str, instances: Optional[dict] = None):
         self.template_name = "src/module_template.py.txt"
         self.env = Environment(
             loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))), autoescape=select_autoescape()
@@ -46,6 +63,7 @@ class PythonBuilder(object):
         ]
         with open(schema_file_path, "r") as schema_f:
             self._schema_payload = json.load(schema_f)
+        self.instances = instances or {}
 
     @property
     def _version_module(self):
@@ -106,16 +124,40 @@ class PythonBuilder(object):
             else:
                 raise NotImplementedError
 
-        if self._schema_payload["_type"] in embedded:
+        openminds_type = self._schema_payload["_type"]
+        if openminds_type in embedded:
             base_class = "EmbeddedMetadata"
         else:
             base_class = "LinkedMetadata"
+
+        def filter_value(value):
+            if isinstance(value, str):
+                return value.replace('"', "'").replace("\n", " ")
+            return value
+
+        def filter_instance(instance):
+            filtered_instance = {
+                generate_python_name(k): filter_value(v)
+                for k, v in instance.items()
+                if k[0] != "@" and k[:4] != "http" and v is not None
+            }
+            filtered_instance["id"] = instance["@id"]
+            return filtered_instance
+
+        instances = {
+            generate_python_name(instance["@id"].split("/")[-1]) : filter_instance(instance)
+            for instance in self.instances.get(openminds_type, [])
+        }
+        instances = {  # sort by key
+            name: instances[name] for name in sorted(instances)
+        }
+
         self.context = {
             "docstring": self._schema_payload.get("description", "<description not available>"),
             "base_class": base_class,
             "preamble": "",  # todo: e.g. extra imports
             "class_name": self._schema_payload["name"],
-            "openminds_type": self._schema_payload["_type"],
+            "openminds_type": openminds_type,
             "schema_version": self.version,
             "properties": [  # call this "properties"
                 {
@@ -136,6 +178,7 @@ class PythonBuilder(object):
             ],  # todo
             # unused in property:  "nameForReverseLink"
             "additional_methods": "",
+            "instances": instances
         }
         import_map = {
             "date": "from datetime import date",
