@@ -26,7 +26,7 @@ class SubjectGroupState(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
-            instructions="Enter any additional remarks concerning the specimen (set) in this state.",
+            instructions="Enter any additional remarks concering the specimen (set) in this state.",
         ),
         Property(
             "age",
