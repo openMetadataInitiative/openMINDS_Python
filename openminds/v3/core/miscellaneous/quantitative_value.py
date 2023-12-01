@@ -27,7 +27,7 @@ class QuantitativeValue(EmbeddedMetadata):
             instructions="Add the type of uncertainty used to determine the uncertainity for this quantitative value.",
         ),
         Property(
-            "uncertainty",
+            "uncertainties",
             float,
             "uncertainty",
             multiple=True,
@@ -54,10 +54,10 @@ class QuantitativeValue(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, type_of_uncertainty=None, uncertainty=None, unit=None, value=None):
+    def __init__(self, type_of_uncertainty=None, uncertainties=None, unit=None, value=None):
         return super().__init__(
             type_of_uncertainty=type_of_uncertainty,
-            uncertainty=uncertainty,
+            uncertainties=uncertainties,
             unit=unit,
             value=value,
         )

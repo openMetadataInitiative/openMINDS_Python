@@ -20,7 +20,7 @@ class ContentType(LinkedMetadata):
 
     properties = [
         Property(
-            "associated_file_extension",
+            "associated_file_extensions",
             str,
             "associatedFileExtension",
             multiple=True,
@@ -58,7 +58,7 @@ class ContentType(LinkedMetadata):
             instructions="Enter the iternationalized resource identifier (IRI) to a registered media type (e.g. on IANA.org) matching this content type.",
         ),
         Property(
-            "synonym",
+            "synonyms",
             str,
             "synonym",
             multiple=True,
@@ -71,13 +71,19 @@ class ContentType(LinkedMetadata):
     ]
 
     def __init__(
-        self, id=None, associated_file_extension=None, category=None, name=None, related_media_type=None, synonym=None
+        self,
+        id=None,
+        associated_file_extensions=None,
+        category=None,
+        name=None,
+        related_media_type=None,
+        synonyms=None,
     ):
         return super().__init__(
             id=id,
-            associated_file_extension=associated_file_extension,
+            associated_file_extensions=associated_file_extensions,
             category=category,
             name=name,
             related_media_type=related_media_type,
-            synonym=synonym,
+            synonyms=synonyms,
         )

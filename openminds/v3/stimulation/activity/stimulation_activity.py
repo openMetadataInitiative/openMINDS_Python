@@ -21,7 +21,7 @@ class StimulationActivity(LinkedMetadata):
 
     properties = [
         Property(
-            "custom_property_set",
+            "custom_property_sets",
             "openminds.v3.core.CustomPropertySet",
             "customPropertySet",
             multiple=True,
@@ -47,7 +47,7 @@ class StimulationActivity(LinkedMetadata):
             instructions="Enter the date and/or time on when this activity ended, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
         Property(
-            "input",
+            "inputs",
             [
                 "openminds.v3.core.SubjectGroupState",
                 "openminds.v3.core.SubjectState",
@@ -79,7 +79,7 @@ class StimulationActivity(LinkedMetadata):
             instructions="Enter a lookup label for this activity that may help you to find this instance more easily.",
         ),
         Property(
-            "output",
+            "outputs",
             [
                 "openminds.v3.core.SubjectGroupState",
                 "openminds.v3.core.SubjectState",
@@ -112,7 +112,7 @@ class StimulationActivity(LinkedMetadata):
             instructions="Add the initial preparation type for this activity.",
         ),
         Property(
-            "protocol",
+            "protocols",
             "openminds.v3.core.Protocol",
             "protocol",
             multiple=True,
@@ -137,7 +137,7 @@ class StimulationActivity(LinkedMetadata):
             instructions="Enter the date and/or time on when this activity started, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
         Property(
-            "stimulus",
+            "stimuli",
             [],
             "stimulus",
             multiple=True,
@@ -148,7 +148,7 @@ class StimulationActivity(LinkedMetadata):
             instructions="Add all stimuli used during this activity.",
         ),
         Property(
-            "study_target",
+            "study_targets",
             [
                 "openminds.v3.controlled_terms.AuditoryStimulusType",
                 "openminds.v3.controlled_terms.BiologicalOrder",
@@ -190,35 +190,35 @@ class StimulationActivity(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        custom_property_set=None,
+        custom_property_sets=None,
         description=None,
         end_time=None,
-        input=None,
+        inputs=None,
         is_part_of=None,
         lookup_label=None,
-        output=None,
+        outputs=None,
         performed_by=None,
         preparation_design=None,
-        protocol=None,
+        protocols=None,
         setup=None,
         start_time=None,
-        stimulus=None,
-        study_target=None,
+        stimuli=None,
+        study_targets=None,
     ):
         return super().__init__(
             id=id,
-            custom_property_set=custom_property_set,
+            custom_property_sets=custom_property_sets,
             description=description,
             end_time=end_time,
-            input=input,
+            inputs=inputs,
             is_part_of=is_part_of,
             lookup_label=lookup_label,
-            output=output,
+            outputs=outputs,
             performed_by=performed_by,
             preparation_design=preparation_design,
-            protocol=protocol,
+            protocols=protocols,
             setup=setup,
             start_time=start_time,
-            stimulus=stimulus,
-            study_target=study_target,
+            stimuli=stimuli,
+            study_targets=study_targets,
         )

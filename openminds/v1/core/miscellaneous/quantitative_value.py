@@ -20,7 +20,7 @@ class QuantitativeValue(EmbeddedMetadata):
 
     properties = [
         Property(
-            "uncertainty",
+            "uncertainties",
             float,
             "uncertainty",
             multiple=True,
@@ -47,9 +47,9 @@ class QuantitativeValue(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, uncertainty=None, unit=None, value=None):
+    def __init__(self, uncertainties=None, unit=None, value=None):
         return super().__init__(
-            uncertainty=uncertainty,
+            uncertainties=uncertainties,
             unit=unit,
             value=value,
         )

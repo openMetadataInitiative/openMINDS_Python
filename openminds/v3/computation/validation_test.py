@@ -21,7 +21,7 @@ class ValidationTest(LinkedMetadata):
 
     properties = [
         Property(
-            "custodian",
+            "custodians",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "custodian",
             multiple=True,
@@ -41,7 +41,7 @@ class ValidationTest(LinkedMetadata):
             instructions="Enter a description (or abstract) of this research product. Note that this should be a suitable description for all attached research product versions.",
         ),
         Property(
-            "developer",
+            "developers",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "developer",
             multiple=True,
@@ -68,7 +68,7 @@ class ValidationTest(LinkedMetadata):
             instructions="Enter a descriptive full name (or title) for this research product. Note that this should be a suitable full name for all attached research product versions.",
         ),
         Property(
-            "has_version",
+            "has_versions",
             "openminds.v3.computation.ValidationTestVersion",
             "hasVersion",
             multiple=True,
@@ -95,7 +95,7 @@ class ValidationTest(LinkedMetadata):
             instructions="Enter the preferred citation text for this research product. Leave blank if citation text can be extracted from the assigned digital identifier.",
         ),
         Property(
-            "reference_data_acquisition",
+            "reference_data_acquisitions",
             "openminds.v3.controlled_terms.Technique",
             "referenceDataAcquisition",
             multiple=True,
@@ -128,7 +128,7 @@ class ValidationTest(LinkedMetadata):
             instructions="Enter a short name (or alias) for this research product that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
         Property(
-            "study_target",
+            "study_targets",
             [
                 "openminds.v3.controlled_terms.AuditoryStimulusType",
                 "openminds.v3.controlled_terms.BiologicalOrder",
@@ -170,33 +170,33 @@ class ValidationTest(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        custodian=None,
+        custodians=None,
         description=None,
-        developer=None,
+        developers=None,
         digital_identifier=None,
         full_name=None,
-        has_version=None,
+        has_versions=None,
         homepage=None,
         how_to_cite=None,
-        reference_data_acquisition=None,
+        reference_data_acquisitions=None,
         scope=None,
         score_type=None,
         short_name=None,
-        study_target=None,
+        study_targets=None,
     ):
         return super().__init__(
             id=id,
-            custodian=custodian,
+            custodians=custodians,
             description=description,
-            developer=developer,
+            developers=developers,
             digital_identifier=digital_identifier,
             full_name=full_name,
-            has_version=has_version,
+            has_versions=has_versions,
             homepage=homepage,
             how_to_cite=how_to_cite,
-            reference_data_acquisition=reference_data_acquisition,
+            reference_data_acquisitions=reference_data_acquisitions,
             scope=scope,
             score_type=score_type,
             short_name=short_name,
-            study_target=study_target,
+            study_targets=study_targets,
         )

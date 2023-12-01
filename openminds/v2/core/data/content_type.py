@@ -30,7 +30,7 @@ class ContentType(LinkedMetadata):
             instructions="Enter a description of the content type specification. May be left blank if a public specification can be linked in 'specification'.",
         ),
         Property(
-            "file_extension",
+            "file_extensions",
             str,
             "fileExtension",
             multiple=True,
@@ -64,7 +64,7 @@ class ContentType(LinkedMetadata):
             instructions="Enter the iternationalized resource identifier (IRI) of the official specification of this content type. Leave blank and use 'description' to provide some specification if an official specification is not available.",
         ),
         Property(
-            "synonym",
+            "synonyms",
             str,
             "synonym",
             multiple=True,
@@ -80,18 +80,18 @@ class ContentType(LinkedMetadata):
         self,
         id=None,
         description=None,
-        file_extension=None,
+        file_extensions=None,
         name=None,
         related_media_type=None,
         specification=None,
-        synonym=None,
+        synonyms=None,
     ):
         return super().__init__(
             id=id,
             description=description,
-            file_extension=file_extension,
+            file_extensions=file_extensions,
             name=name,
             related_media_type=related_media_type,
             specification=specification,
-            synonym=synonym,
+            synonyms=synonyms,
         )

@@ -20,7 +20,7 @@ class SubjectGroup(LinkedMetadata):
 
     properties = [
         Property(
-            "biological_sex",
+            "biological_sexes",
             "openminds.v1.controlled_terms.BiologicalSex",
             "biologicalSex",
             multiple=True,
@@ -31,7 +31,7 @@ class SubjectGroup(LinkedMetadata):
             instructions="Add the biological sex of all specimen in this set.",
         ),
         Property(
-            "genotype",
+            "genotypes",
             "openminds.v1.controlled_terms.Genotype",
             "genotype",
             multiple=True,
@@ -49,7 +49,7 @@ class SubjectGroup(LinkedMetadata):
             instructions="Enter the identifier of this specimen set that is used within the corresponding data.",
         ),
         Property(
-            "phenotype",
+            "phenotypes",
             "openminds.v1.controlled_terms.Phenotype",
             "phenotype",
             multiple=True,
@@ -77,7 +77,7 @@ class SubjectGroup(LinkedMetadata):
             instructions="Add the species of all specimen in this set.",
         ),
         Property(
-            "strain",
+            "strains",
             "openminds.v1.controlled_terms.Strain",
             "strain",
             multiple=True,
@@ -87,7 +87,7 @@ class SubjectGroup(LinkedMetadata):
             instructions="Add the strain of all specimen in this set.",
         ),
         Property(
-            "studied_state",
+            "studied_states",
             "openminds.v1.core.SubjectGroupState",
             "studiedState",
             multiple=True,
@@ -102,23 +102,23 @@ class SubjectGroup(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        biological_sex=None,
-        genotype=None,
+        biological_sexes=None,
+        genotypes=None,
         internal_identifier=None,
-        phenotype=None,
+        phenotypes=None,
         quantity=None,
         species=None,
-        strain=None,
-        studied_state=None,
+        strains=None,
+        studied_states=None,
     ):
         return super().__init__(
             id=id,
-            biological_sex=biological_sex,
-            genotype=genotype,
+            biological_sexes=biological_sexes,
+            genotypes=genotypes,
             internal_identifier=internal_identifier,
-            phenotype=phenotype,
+            phenotypes=phenotypes,
             quantity=quantity,
             species=species,
-            strain=strain,
-            studied_state=studied_state,
+            strains=strains,
+            studied_states=studied_states,
         )

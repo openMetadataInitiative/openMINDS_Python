@@ -20,7 +20,7 @@ class TissueSampleCollection(LinkedMetadata):
 
     properties = [
         Property(
-            "biological_sex",
+            "biological_sexes",
             "openminds.v1.controlled_terms.BiologicalSex",
             "biologicalSex",
             multiple=True,
@@ -31,7 +31,7 @@ class TissueSampleCollection(LinkedMetadata):
             instructions="Add the biological sex of all specimen in this set.",
         ),
         Property(
-            "genotype",
+            "genotypes",
             "openminds.v1.controlled_terms.Genotype",
             "genotype",
             multiple=True,
@@ -49,7 +49,7 @@ class TissueSampleCollection(LinkedMetadata):
             instructions="Enter the identifier of this specimen set that is used within the corresponding data.",
         ),
         Property(
-            "laterality",
+            "lateralities",
             "openminds.v1.controlled_terms.Laterality",
             "laterality",
             multiple=True,
@@ -60,7 +60,7 @@ class TissueSampleCollection(LinkedMetadata):
             instructions="Add one or both hemisphere sides from which the tissue samples in this collection originate from.",
         ),
         Property(
-            "origin",
+            "origins",
             ["openminds.v1.controlled_terms.CellType", "openminds.v1.controlled_terms.Organ"],
             "origin",
             multiple=True,
@@ -71,7 +71,7 @@ class TissueSampleCollection(LinkedMetadata):
             instructions="Add the biogical origin (organ or cell type) of all tissue samples in this collection.",
         ),
         Property(
-            "phenotype",
+            "phenotypes",
             "openminds.v1.controlled_terms.Phenotype",
             "phenotype",
             multiple=True,
@@ -99,7 +99,7 @@ class TissueSampleCollection(LinkedMetadata):
             instructions="Add the species of all specimen in this set.",
         ),
         Property(
-            "strain",
+            "strains",
             "openminds.v1.controlled_terms.Strain",
             "strain",
             multiple=True,
@@ -109,7 +109,7 @@ class TissueSampleCollection(LinkedMetadata):
             instructions="Add the strain of all specimen in this set.",
         ),
         Property(
-            "studied_state",
+            "studied_states",
             "openminds.v1.core.TissueSampleCollectionState",
             "studiedState",
             multiple=True,
@@ -120,7 +120,7 @@ class TissueSampleCollection(LinkedMetadata):
             instructions="Add all states in which this tissue sample collection was studied.",
         ),
         Property(
-            "type",
+            "types",
             "openminds.v1.controlled_terms.TissueSampleType",
             "type",
             multiple=True,
@@ -135,29 +135,29 @@ class TissueSampleCollection(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        biological_sex=None,
-        genotype=None,
+        biological_sexes=None,
+        genotypes=None,
         internal_identifier=None,
-        laterality=None,
-        origin=None,
-        phenotype=None,
+        lateralities=None,
+        origins=None,
+        phenotypes=None,
         quantity=None,
         species=None,
-        strain=None,
-        studied_state=None,
-        type=None,
+        strains=None,
+        studied_states=None,
+        types=None,
     ):
         return super().__init__(
             id=id,
-            biological_sex=biological_sex,
-            genotype=genotype,
+            biological_sexes=biological_sexes,
+            genotypes=genotypes,
             internal_identifier=internal_identifier,
-            laterality=laterality,
-            origin=origin,
-            phenotype=phenotype,
+            lateralities=lateralities,
+            origins=origins,
+            phenotypes=phenotypes,
             quantity=quantity,
             species=species,
-            strain=strain,
-            studied_state=studied_state,
-            type=type,
+            strains=strains,
+            studied_states=studied_states,
+            types=types,
         )

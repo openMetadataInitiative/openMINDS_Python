@@ -29,7 +29,7 @@ class SubjectGroup(LinkedMetadata):
             instructions="Enter any additional remarks concerning this specimen set.",
         ),
         Property(
-            "biological_sex",
+            "biological_sexes",
             "openminds.latest.controlled_terms.BiologicalSex",
             "biologicalSex",
             multiple=True,
@@ -73,7 +73,7 @@ class SubjectGroup(LinkedMetadata):
             instructions="Add the species and/or strain (a sub-type of a genetic variant of species) of all specimen in this set.",
         ),
         Property(
-            "studied_state",
+            "studied_states",
             "openminds.latest.core.SubjectGroupState",
             "studiedState",
             multiple=True,
@@ -89,20 +89,20 @@ class SubjectGroup(LinkedMetadata):
         self,
         id=None,
         additional_remarks=None,
-        biological_sex=None,
+        biological_sexes=None,
         internal_identifier=None,
         lookup_label=None,
         number_of_subjects=None,
         species=None,
-        studied_state=None,
+        studied_states=None,
     ):
         return super().__init__(
             id=id,
             additional_remarks=additional_remarks,
-            biological_sex=biological_sex,
+            biological_sexes=biological_sexes,
             internal_identifier=internal_identifier,
             lookup_label=lookup_label,
             number_of_subjects=number_of_subjects,
             species=species,
-            studied_state=studied_state,
+            studied_states=studied_states,
         )

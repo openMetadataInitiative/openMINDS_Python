@@ -20,7 +20,7 @@ class Person(LinkedMetadata):
 
     properties = [
         Property(
-            "affiliation",
+            "affiliations",
             "openminds.v3.core.Affiliation",
             "affiliation",
             multiple=True,
@@ -30,7 +30,7 @@ class Person(LinkedMetadata):
             instructions="Enter all current and, if desired, past affiliations of this person.",
         ),
         Property(
-            "alternate_name",
+            "alternate_names",
             str,
             "alternateName",
             multiple=True,
@@ -41,7 +41,7 @@ class Person(LinkedMetadata):
             instructions="Enter any other known full name of this person.",
         ),
         Property(
-            "associated_account",
+            "associated_accounts",
             "openminds.v3.core.AccountInformation",
             "associatedAccount",
             multiple=True,
@@ -58,7 +58,7 @@ class Person(LinkedMetadata):
             instructions="Add the contact information of this person.",
         ),
         Property(
-            "digital_identifier",
+            "digital_identifiers",
             "openminds.v3.core.ORCID",
             "digitalIdentifier",
             multiple=True,
@@ -89,21 +89,21 @@ class Person(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        affiliation=None,
-        alternate_name=None,
-        associated_account=None,
+        affiliations=None,
+        alternate_names=None,
+        associated_accounts=None,
         contact_information=None,
-        digital_identifier=None,
+        digital_identifiers=None,
         family_name=None,
         given_name=None,
     ):
         return super().__init__(
             id=id,
-            affiliation=affiliation,
-            alternate_name=alternate_name,
-            associated_account=associated_account,
+            affiliations=affiliations,
+            alternate_names=alternate_names,
+            associated_accounts=associated_accounts,
             contact_information=contact_information,
-            digital_identifier=digital_identifier,
+            digital_identifiers=digital_identifiers,
             family_name=family_name,
             given_name=given_name,
         )

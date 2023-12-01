@@ -20,7 +20,7 @@ class Copyright(EmbeddedMetadata):
 
     properties = [
         Property(
-            "holder",
+            "holders",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "holder",
             multiple=True,
@@ -31,7 +31,7 @@ class Copyright(EmbeddedMetadata):
             instructions="Add all parties that hold this copyright.",
         ),
         Property(
-            "year",
+            "years",
             str,
             "year",
             multiple=True,
@@ -44,8 +44,8 @@ class Copyright(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, holder=None, year=None):
+    def __init__(self, holders=None, years=None):
         return super().__init__(
-            holder=holder,
-            year=year,
+            holders=holders,
+            years=years,
         )

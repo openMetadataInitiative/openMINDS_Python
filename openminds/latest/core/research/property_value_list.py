@@ -28,7 +28,7 @@ class PropertyValueList(LinkedMetadata):
             instructions="Enter a lookup label for this property-value list that may help you to find this instance more easily.",
         ),
         Property(
-            "property_value_pair",
+            "property_value_pairs",
             ["openminds.latest.core.NumericalProperty", "openminds.latest.core.StringProperty"],
             "propertyValuePair",
             multiple=True,
@@ -40,9 +40,9 @@ class PropertyValueList(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, lookup_label=None, property_value_pair=None):
+    def __init__(self, id=None, lookup_label=None, property_value_pairs=None):
         return super().__init__(
             id=id,
             lookup_label=lookup_label,
-            property_value_pair=property_value_pair,
+            property_value_pairs=property_value_pairs,
         )

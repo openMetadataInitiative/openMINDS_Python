@@ -20,7 +20,7 @@ class Electrode(LinkedMetadata):
 
     properties = [
         Property(
-            "electrode_contact",
+            "electrode_contacts",
             "openminds.v1.sands.ElectrodeContact",
             "electrodeContact",
             multiple=True,
@@ -41,9 +41,9 @@ class Electrode(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, electrode_contact=None, internal_identifier=None):
+    def __init__(self, id=None, electrode_contacts=None, internal_identifier=None):
         return super().__init__(
             id=id,
-            electrode_contact=electrode_contact,
+            electrode_contacts=electrode_contacts,
             internal_identifier=internal_identifier,
         )

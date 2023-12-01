@@ -74,7 +74,7 @@ class Pipette(LinkedMetadata):
             instructions="Enter a lookup label for this device that may help you to find this instance more easily.",
         ),
         Property(
-            "manufacturer",
+            "manufacturers",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "manufacturer",
             multiple=True,
@@ -104,7 +104,7 @@ class Pipette(LinkedMetadata):
             instructions="Enter a descriptive name for this device, preferably including the model name as defined by the manufacturer.",
         ),
         Property(
-            "owner",
+            "owners",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "owner",
             multiple=True,
@@ -133,10 +133,10 @@ class Pipette(LinkedMetadata):
         internal_diameter=None,
         internal_identifier=None,
         lookup_label=None,
-        manufacturer=None,
+        manufacturers=None,
         material=None,
         name=None,
-        owner=None,
+        owners=None,
         serial_number=None,
     ):
         return super().__init__(
@@ -148,9 +148,9 @@ class Pipette(LinkedMetadata):
             internal_diameter=internal_diameter,
             internal_identifier=internal_identifier,
             lookup_label=lookup_label,
-            manufacturer=manufacturer,
+            manufacturers=manufacturers,
             material=material,
             name=name,
-            owner=owner,
+            owners=owners,
             serial_number=serial_number,
         )

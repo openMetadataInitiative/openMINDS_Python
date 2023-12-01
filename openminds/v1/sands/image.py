@@ -36,7 +36,7 @@ class Image(LinkedMetadata):
             instructions="Add the file in which this image is stored in.",
         ),
         Property(
-            "voxel_size",
+            "voxel_sizes",
             "openminds.v1.core.QuantitativeValue",
             "voxelSize",
             multiple=True,
@@ -49,10 +49,10 @@ class Image(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, coordinate_space=None, defined_in=None, voxel_size=None):
+    def __init__(self, id=None, coordinate_space=None, defined_in=None, voxel_sizes=None):
         return super().__init__(
             id=id,
             coordinate_space=coordinate_space,
             defined_in=defined_in,
-            voxel_size=voxel_size,
+            voxel_sizes=voxel_sizes,
         )

@@ -42,7 +42,7 @@ class Annotation(LinkedMetadata):
             instructions="Add the quality type of the stated criteria used to define this annotation.",
         ),
         Property(
-            "display_color",
+            "display_colors",
             int,
             "displayColor",
             multiple=True,
@@ -72,7 +72,7 @@ class Annotation(LinkedMetadata):
             instructions="Enter the identifier used for this annotation within the file it is stored in.",
         ),
         Property(
-            "laterality",
+            "lateralities",
             "openminds.v1.controlled_terms.Laterality",
             "laterality",
             multiple=True,
@@ -84,7 +84,7 @@ class Annotation(LinkedMetadata):
             instructions="Add one or both sides of the body or bilateral organ that this annotation is defined in.",
         ),
         Property(
-            "naming_term",
+            "naming_terms",
             "openminds.v1.sands.AnatomicalEntity",
             "namingTerm",
             multiple=True,
@@ -95,7 +95,7 @@ class Annotation(LinkedMetadata):
             instructions="Add one or several anatomical entities that name this annotation.",
         ),
         Property(
-            "related_atlas_term",
+            "related_atlas_terms",
             "openminds.v1.sands.AnatomicalEntity",
             "relatedAtlasTerm",
             multiple=True,
@@ -119,12 +119,12 @@ class Annotation(LinkedMetadata):
         best_view_point=None,
         criteria=None,
         criteria_quality_type=None,
-        display_color=None,
+        display_colors=None,
         inspired_by=None,
         internal_identifier=None,
-        laterality=None,
-        naming_term=None,
-        related_atlas_term=None,
+        lateralities=None,
+        naming_terms=None,
+        related_atlas_terms=None,
         visualized_in=None,
     ):
         return super().__init__(
@@ -132,11 +132,11 @@ class Annotation(LinkedMetadata):
             best_view_point=best_view_point,
             criteria=criteria,
             criteria_quality_type=criteria_quality_type,
-            display_color=display_color,
+            display_colors=display_colors,
             inspired_by=inspired_by,
             internal_identifier=internal_identifier,
-            laterality=laterality,
-            naming_term=naming_term,
-            related_atlas_term=related_atlas_term,
+            lateralities=lateralities,
+            naming_terms=naming_terms,
+            related_atlas_terms=related_atlas_terms,
             visualized_in=visualized_in,
         )

@@ -20,7 +20,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
 
     properties = [
         Property(
-            "anatomical_location_of_array",
+            "anatomical_locations_of_arrays",
             [
                 "openminds.latest.controlled_terms.CellType",
                 "openminds.latest.controlled_terms.Organ",
@@ -39,7 +39,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
             instructions="Add all anatomical entities that semantically best describe the overall anatomical location of the electrode array.",
         ),
         Property(
-            "anatomical_location_of_electrodes",
+            "anatomical_locations_of_electrodes",
             [
                 "openminds.latest.controlled_terms.CellType",
                 "openminds.latest.controlled_terms.Organ",
@@ -84,7 +84,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
             instructions="Enter a lookup label for this device usage that may help you to find this instance more easily.",
         ),
         Property(
-            "metadata_location",
+            "metadata_locations",
             ["openminds.latest.core.File", "openminds.latest.core.FileBundle"],
             "metadataLocation",
             multiple=True,
@@ -94,7 +94,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
             instructions="Add all files or file bundles containing additional information about the usage of this device.",
         ),
         Property(
-            "spatial_location_of_electrodes",
+            "spatial_locations_of_electrodes",
             "openminds.latest.sands.CoordinatePoint",
             "spatialLocationOfElectrodes",
             multiple=True,
@@ -104,7 +104,7 @@ class ElectrodeArrayUsage(LinkedMetadata):
             instructions="Add all coordinate points that best describe the spatial location of each electrode contact of this array during its use, in the same order that the electrode identifiers for this electrode array have been specified.",
         ),
         Property(
-            "used_electrode",
+            "used_electrodes",
             str,
             "usedElectrode",
             multiple=True,
@@ -126,25 +126,25 @@ class ElectrodeArrayUsage(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        anatomical_location_of_array=None,
-        anatomical_location_of_electrodes=None,
+        anatomical_locations_of_arrays=None,
+        anatomical_locations_of_electrodes=None,
         contact_resistances=None,
         device=None,
         lookup_label=None,
-        metadata_location=None,
-        spatial_location_of_electrodes=None,
-        used_electrode=None,
+        metadata_locations=None,
+        spatial_locations_of_electrodes=None,
+        used_electrodes=None,
         used_specimen=None,
     ):
         return super().__init__(
             id=id,
-            anatomical_location_of_array=anatomical_location_of_array,
-            anatomical_location_of_electrodes=anatomical_location_of_electrodes,
+            anatomical_locations_of_arrays=anatomical_locations_of_arrays,
+            anatomical_locations_of_electrodes=anatomical_locations_of_electrodes,
             contact_resistances=contact_resistances,
             device=device,
             lookup_label=lookup_label,
-            metadata_location=metadata_location,
-            spatial_location_of_electrodes=spatial_location_of_electrodes,
-            used_electrode=used_electrode,
+            metadata_locations=metadata_locations,
+            spatial_locations_of_electrodes=spatial_locations_of_electrodes,
+            used_electrodes=used_electrodes,
             used_specimen=used_specimen,
         )

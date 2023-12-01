@@ -77,7 +77,7 @@ class Subject(LinkedMetadata):
             instructions="Add the strain of this specimen.",
         ),
         Property(
-            "studied_state",
+            "studied_states",
             "openminds.v2.core.SubjectState",
             "studiedState",
             multiple=True,
@@ -99,7 +99,7 @@ class Subject(LinkedMetadata):
         phenotype=None,
         species=None,
         strain=None,
-        studied_state=None,
+        studied_states=None,
     ):
         return super().__init__(
             id=id,
@@ -110,5 +110,5 @@ class Subject(LinkedMetadata):
             phenotype=phenotype,
             species=species,
             strain=strain,
-            studied_state=studied_state,
+            studied_states=studied_states,
         )

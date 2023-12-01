@@ -39,7 +39,7 @@ class BrainAtlas(LinkedMetadata):
             instructions="Enter a descriptive full name for this brain atlas.",
         ),
         Property(
-            "has_version",
+            "has_versions",
             "openminds.v1.sands.BrainAtlasVersion",
             "hasVersion",
             multiple=True,
@@ -68,12 +68,12 @@ class BrainAtlas(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, description=None, full_name=None, has_version=None, homepage=None, short_name=None):
+    def __init__(self, id=None, description=None, full_name=None, has_versions=None, homepage=None, short_name=None):
         return super().__init__(
             id=id,
             description=description,
             full_name=full_name,
-            has_version=has_version,
+            has_versions=has_versions,
             homepage=homepage,
             short_name=short_name,
         )

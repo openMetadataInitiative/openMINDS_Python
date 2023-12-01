@@ -47,7 +47,7 @@ class License(LinkedMetadata):
             instructions="Enter a short name (or alias) for this license that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
         Property(
-            "webpage",
+            "webpages",
             str,
             "webpage",
             multiple=True,
@@ -59,11 +59,11 @@ class License(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, full_name=None, legal_code=None, short_name=None, webpage=None):
+    def __init__(self, id=None, full_name=None, legal_code=None, short_name=None, webpages=None):
         return super().__init__(
             id=id,
             full_name=full_name,
             legal_code=legal_code,
             short_name=short_name,
-            webpage=webpage,
+            webpages=webpages,
         )

@@ -39,7 +39,7 @@ class Strain(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "identifier",
+            "identifiers",
             str,
             "identifier",
             multiple=True,
@@ -68,13 +68,13 @@ class Strain(LinkedMetadata):
     ]
 
     def __init__(
-        self, id=None, definition=None, description=None, identifier=None, name=None, ontology_identifier=None
+        self, id=None, definition=None, description=None, identifiers=None, name=None, ontology_identifier=None
     ):
         return super().__init__(
             id=id,
             definition=definition,
             description=description,
-            identifier=identifier,
+            identifiers=identifiers,
             name=name,
             ontology_identifier=ontology_identifier,
         )

@@ -36,7 +36,7 @@ class SubjectGroupState(LinkedMetadata):
             instructions="Add the age of the specimen (set) in this state.",
         ),
         Property(
-            "age_category",
+            "age_categories",
             "openminds.v2.controlled_terms.AgeCategory",
             "ageCategory",
             multiple=True,
@@ -65,7 +65,7 @@ class SubjectGroupState(LinkedMetadata):
             instructions="Enter a lookup label for this specimen (set) state that may help you to more easily find it again.",
         ),
         Property(
-            "pathology",
+            "pathologies",
             ["openminds.v2.controlled_terms.Disease", "openminds.v2.controlled_terms.DiseaseModel"],
             "pathology",
             multiple=True,
@@ -88,19 +88,19 @@ class SubjectGroupState(LinkedMetadata):
         id=None,
         additional_remarks=None,
         age=None,
-        age_category=None,
+        age_categories=None,
         handedness=None,
         lookup_label=None,
-        pathology=None,
+        pathologies=None,
         weight=None,
     ):
         return super().__init__(
             id=id,
             additional_remarks=additional_remarks,
             age=age,
-            age_category=age_category,
+            age_categories=age_categories,
             handedness=handedness,
             lookup_label=lookup_label,
-            pathology=pathology,
+            pathologies=pathologies,
             weight=weight,
         )

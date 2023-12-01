@@ -67,7 +67,7 @@ class Project(LinkedMetadata):
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this model version.",
         ),
         Property(
-            "project_leader",
+            "project_leaders",
             ["openminds.v1.core.Organization", "openminds.v1.core.Person"],
             "projectLeader",
             multiple=True,
@@ -94,7 +94,7 @@ class Project(LinkedMetadata):
         full_name=None,
         has_research_products=None,
         homepage=None,
-        project_leader=None,
+        project_leaders=None,
         short_name=None,
     ):
         return super().__init__(
@@ -103,6 +103,6 @@ class Project(LinkedMetadata):
             full_name=full_name,
             has_research_products=has_research_products,
             homepage=homepage,
-            project_leader=project_leader,
+            project_leaders=project_leaders,
             short_name=short_name,
         )

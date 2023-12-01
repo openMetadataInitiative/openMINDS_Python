@@ -21,7 +21,7 @@ class Software(LinkedMetadata):
 
     properties = [
         Property(
-            "custodian",
+            "custodians",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "custodian",
             multiple=True,
@@ -41,7 +41,7 @@ class Software(LinkedMetadata):
             instructions="Enter a description (or abstract) of this research product. Note that this should be a suitable description for all attached research product versions.",
         ),
         Property(
-            "developer",
+            "developers",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "developer",
             multiple=True,
@@ -68,7 +68,7 @@ class Software(LinkedMetadata):
             instructions="Enter a descriptive full name (or title) for this research product. Note that this should be a suitable full name for all attached research product versions.",
         ),
         Property(
-            "has_version",
+            "has_versions",
             "openminds.v3.core.SoftwareVersion",
             "hasVersion",
             multiple=True,
@@ -108,24 +108,24 @@ class Software(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        custodian=None,
+        custodians=None,
         description=None,
-        developer=None,
+        developers=None,
         digital_identifier=None,
         full_name=None,
-        has_version=None,
+        has_versions=None,
         homepage=None,
         how_to_cite=None,
         short_name=None,
     ):
         return super().__init__(
             id=id,
-            custodian=custodian,
+            custodians=custodians,
             description=description,
-            developer=developer,
+            developers=developers,
             digital_identifier=digital_identifier,
             full_name=full_name,
-            has_version=has_version,
+            has_versions=has_versions,
             homepage=homepage,
             how_to_cite=how_to_cite,
             short_name=short_name,

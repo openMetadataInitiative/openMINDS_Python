@@ -52,7 +52,7 @@ class SlicingDevice(LinkedMetadata):
             instructions="Enter a lookup label for this device that may help you to find this instance more easily.",
         ),
         Property(
-            "manufacturer",
+            "manufacturers",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "manufacturer",
             multiple=True,
@@ -71,7 +71,7 @@ class SlicingDevice(LinkedMetadata):
             instructions="Enter a descriptive name for this device, preferably including the model name as defined by the manufacturer.",
         ),
         Property(
-            "owner",
+            "owners",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "owner",
             multiple=True,
@@ -97,9 +97,9 @@ class SlicingDevice(LinkedMetadata):
         device_type=None,
         digital_identifier=None,
         lookup_label=None,
-        manufacturer=None,
+        manufacturers=None,
         name=None,
-        owner=None,
+        owners=None,
         serial_number=None,
     ):
         return super().__init__(
@@ -108,8 +108,8 @@ class SlicingDevice(LinkedMetadata):
             device_type=device_type,
             digital_identifier=digital_identifier,
             lookup_label=lookup_label,
-            manufacturer=manufacturer,
+            manufacturers=manufacturers,
             name=name,
-            owner=owner,
+            owners=owners,
             serial_number=serial_number,
         )

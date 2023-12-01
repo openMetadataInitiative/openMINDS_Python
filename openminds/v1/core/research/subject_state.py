@@ -51,7 +51,7 @@ class SubjectState(LinkedMetadata):
             instructions="Add the preferred hand of the subject in this state.",
         ),
         Property(
-            "pathology",
+            "pathologies",
             ["openminds.v1.controlled_terms.Disease", "openminds.v1.controlled_terms.DiseaseModel"],
             "pathology",
             multiple=True,
@@ -76,7 +76,7 @@ class SubjectState(LinkedMetadata):
         age=None,
         age_category=None,
         handedness=None,
-        pathology=None,
+        pathologies=None,
         weight=None,
     ):
         return super().__init__(
@@ -85,6 +85,6 @@ class SubjectState(LinkedMetadata):
             age=age,
             age_category=age_category,
             handedness=handedness,
-            pathology=pathology,
+            pathologies=pathologies,
             weight=weight,
         )

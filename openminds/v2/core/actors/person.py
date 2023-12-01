@@ -20,7 +20,7 @@ class Person(LinkedMetadata):
 
     properties = [
         Property(
-            "affiliation",
+            "affiliations",
             "openminds.v2.core.Affiliation",
             "affiliation",
             multiple=True,
@@ -37,7 +37,7 @@ class Person(LinkedMetadata):
             instructions="Add the contact information of this person.",
         ),
         Property(
-            "digital_identifier",
+            "digital_identifiers",
             "openminds.v2.core.ORCID",
             "digitalIdentifier",
             multiple=True,
@@ -68,17 +68,17 @@ class Person(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        affiliation=None,
+        affiliations=None,
         contact_information=None,
-        digital_identifier=None,
+        digital_identifiers=None,
         family_name=None,
         given_name=None,
     ):
         return super().__init__(
             id=id,
-            affiliation=affiliation,
+            affiliations=affiliations,
             contact_information=contact_information,
-            digital_identifier=digital_identifier,
+            digital_identifiers=digital_identifiers,
             family_name=family_name,
             given_name=given_name,
         )

@@ -29,7 +29,7 @@ class ViewerSpecification(EmbeddedMetadata):
             instructions="Enter any additional remarks concerning this viewer specification.",
         ),
         Property(
-            "anchor_point",
+            "anchor_points",
             "openminds.v3.core.QuantitativeValue",
             "anchorPoint",
             multiple=True,
@@ -56,10 +56,12 @@ class ViewerSpecification(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, additional_remarks=None, anchor_point=None, camera_position=None, preferred_display_color=None):
+    def __init__(
+        self, additional_remarks=None, anchor_points=None, camera_position=None, preferred_display_color=None
+    ):
         return super().__init__(
             additional_remarks=additional_remarks,
-            anchor_point=anchor_point,
+            anchor_points=anchor_points,
             camera_position=camera_position,
             preferred_display_color=preferred_display_color,
         )

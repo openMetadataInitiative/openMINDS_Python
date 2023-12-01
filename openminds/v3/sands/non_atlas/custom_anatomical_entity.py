@@ -20,7 +20,7 @@ class CustomAnatomicalEntity(LinkedMetadata):
 
     properties = [
         Property(
-            "has_annotation",
+            "has_annotations",
             "openminds.v3.sands.CustomAnnotation",
             "hasAnnotation",
             multiple=True,
@@ -46,7 +46,7 @@ class CustomAnatomicalEntity(LinkedMetadata):
             instructions="Add the related anatomical entity as defined by the UBERON ontology.",
         ),
         Property(
-            "relation_assessment",
+            "relation_assessments",
             ["openminds.v3.sands.QualitativeRelationAssessment", "openminds.v3.sands.QuantitativeRelationAssessment"],
             "relationAssessment",
             multiple=True,
@@ -57,11 +57,11 @@ class CustomAnatomicalEntity(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, has_annotation=None, name=None, related_uberon_term=None, relation_assessment=None):
+    def __init__(self, id=None, has_annotations=None, name=None, related_uberon_term=None, relation_assessments=None):
         return super().__init__(
             id=id,
-            has_annotation=has_annotation,
+            has_annotations=has_annotations,
             name=name,
             related_uberon_term=related_uberon_term,
-            relation_assessment=relation_assessment,
+            relation_assessments=relation_assessments,
         )

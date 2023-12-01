@@ -21,7 +21,7 @@ class Organization(LinkedMetadata):
 
     properties = [
         Property(
-            "affiliation",
+            "affiliations",
             "openminds.latest.core.Affiliation",
             "affiliation",
             multiple=True,
@@ -31,7 +31,7 @@ class Organization(LinkedMetadata):
             instructions="Enter all current and, if necessary, past affiliations of this organization.",
         ),
         Property(
-            "digital_identifier",
+            "digital_identifiers",
             ["openminds.latest.core.GRIDID", "openminds.latest.core.RORID", "openminds.latest.core.RRID"],
             "digitalIdentifier",
             multiple=True,
@@ -50,7 +50,7 @@ class Organization(LinkedMetadata):
             instructions="Enter the full name of this organization.",
         ),
         Property(
-            "has_parent",
+            "has_parents",
             "openminds.latest.core.Organization",
             "hasParent",
             multiple=True,
@@ -79,19 +79,19 @@ class Organization(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        affiliation=None,
-        digital_identifier=None,
+        affiliations=None,
+        digital_identifiers=None,
         full_name=None,
-        has_parent=None,
+        has_parents=None,
         homepage=None,
         short_name=None,
     ):
         return super().__init__(
             id=id,
-            affiliation=affiliation,
-            digital_identifier=digital_identifier,
+            affiliations=affiliations,
+            digital_identifiers=digital_identifiers,
             full_name=full_name,
-            has_parent=has_parent,
+            has_parents=has_parents,
             homepage=homepage,
             short_name=short_name,
         )

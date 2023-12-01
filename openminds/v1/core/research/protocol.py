@@ -20,7 +20,7 @@ class Protocol(LinkedMetadata):
 
     properties = [
         Property(
-            "behavioral_task",
+            "behavioral_tasks",
             "openminds.v1.controlled_terms.BehavioralTask",
             "behavioralTask",
             multiple=True,
@@ -49,7 +49,7 @@ class Protocol(LinkedMetadata):
             instructions="Enter a descriptive name for this protocol.",
         ),
         Property(
-            "study_target",
+            "study_targets",
             [
                 "openminds.v1.controlled_term.BiologicalSex",
                 "openminds.v1.controlled_term.Disease",
@@ -67,7 +67,7 @@ class Protocol(LinkedMetadata):
             instructions="Add all study targets of this model version.",
         ),
         Property(
-            "technique",
+            "techniques",
             "openminds.v1.controlled_terms.Technique",
             "technique",
             multiple=True,
@@ -79,12 +79,14 @@ class Protocol(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, behavioral_task=None, description=None, name=None, study_target=None, technique=None):
+    def __init__(
+        self, id=None, behavioral_tasks=None, description=None, name=None, study_targets=None, techniques=None
+    ):
         return super().__init__(
             id=id,
-            behavioral_task=behavioral_task,
+            behavioral_tasks=behavioral_tasks,
             description=description,
             name=name,
-            study_target=study_target,
-            technique=technique,
+            study_targets=study_targets,
+            techniques=techniques,
         )

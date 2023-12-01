@@ -21,7 +21,7 @@ class DataAnalysis(LinkedMetadata):
 
     properties = [
         Property(
-            "custom_property_set",
+            "custom_property_sets",
             "openminds.v3.core.CustomPropertySet",
             "customPropertySet",
             multiple=True,
@@ -55,7 +55,7 @@ class DataAnalysis(LinkedMetadata):
             instructions="Add the computational environment in which this computation was executed.",
         ),
         Property(
-            "input",
+            "inputs",
             [
                 "openminds.v3.computation.LocalFile",
                 "openminds.v3.core.File",
@@ -88,7 +88,7 @@ class DataAnalysis(LinkedMetadata):
             instructions="Enter a lookup label for this activity that may help you to find this instance more easily.",
         ),
         Property(
-            "output",
+            "outputs",
             [
                 "openminds.v3.computation.LocalFile",
                 "openminds.v3.core.File",
@@ -121,7 +121,7 @@ class DataAnalysis(LinkedMetadata):
             instructions="Add the workflow recipe version used for this computation.",
         ),
         Property(
-            "resource_usage",
+            "resource_usages",
             ["openminds.v3.core.QuantitativeValue", "openminds.v3.core.QuantitativeValueRange"],
             "resourceUsage",
             multiple=True,
@@ -153,7 +153,7 @@ class DataAnalysis(LinkedMetadata):
             instructions="Enter the current status of this computation.",
         ),
         Property(
-            "study_target",
+            "study_targets",
             [
                 "openminds.v3.controlled_terms.AuditoryStimulusType",
                 "openminds.v3.controlled_terms.BiologicalOrder",
@@ -191,7 +191,7 @@ class DataAnalysis(LinkedMetadata):
             instructions="Add all study targets of this activity.",
         ),
         Property(
-            "tag",
+            "tags",
             str,
             "tag",
             multiple=True,
@@ -202,7 +202,7 @@ class DataAnalysis(LinkedMetadata):
             instructions="Enter any custom tags for this computation.",
         ),
         Property(
-            "technique",
+            "techniques",
             "openminds.v3.controlled_terms.AnalysisTechnique",
             "technique",
             multiple=True,
@@ -231,43 +231,43 @@ class DataAnalysis(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        custom_property_set=None,
+        custom_property_sets=None,
         description=None,
         end_time=None,
         environment=None,
-        input=None,
+        inputs=None,
         launch_configuration=None,
         lookup_label=None,
-        output=None,
+        outputs=None,
         performed_by=None,
         recipe=None,
-        resource_usage=None,
+        resource_usages=None,
         start_time=None,
         started_by=None,
         status=None,
-        study_target=None,
-        tag=None,
-        technique=None,
+        study_targets=None,
+        tags=None,
+        techniques=None,
         was_informed_by=None,
     ):
         return super().__init__(
             id=id,
-            custom_property_set=custom_property_set,
+            custom_property_sets=custom_property_sets,
             description=description,
             end_time=end_time,
             environment=environment,
-            input=input,
+            inputs=inputs,
             launch_configuration=launch_configuration,
             lookup_label=lookup_label,
-            output=output,
+            outputs=outputs,
             performed_by=performed_by,
             recipe=recipe,
-            resource_usage=resource_usage,
+            resource_usages=resource_usages,
             start_time=start_time,
             started_by=started_by,
             status=status,
-            study_target=study_target,
-            tag=tag,
-            technique=technique,
+            study_targets=study_targets,
+            tags=tags,
+            techniques=techniques,
             was_informed_by=was_informed_by,
         )

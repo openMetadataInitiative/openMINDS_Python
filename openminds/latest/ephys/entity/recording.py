@@ -29,7 +29,7 @@ class Recording(LinkedMetadata):
             instructions="Enter any additional remarks concerning this recording.",
         ),
         Property(
-            "channel",
+            "channels",
             "openminds.latest.ephys.Channel",
             "channel",
             multiple=True,
@@ -97,7 +97,7 @@ class Recording(LinkedMetadata):
         self,
         id=None,
         additional_remarks=None,
-        channel=None,
+        channels=None,
         data_location=None,
         internal_identifier=None,
         name=None,
@@ -108,7 +108,7 @@ class Recording(LinkedMetadata):
         return super().__init__(
             id=id,
             additional_remarks=additional_remarks,
-            channel=channel,
+            channels=channels,
             data_location=data_location,
             internal_identifier=internal_identifier,
             name=name,

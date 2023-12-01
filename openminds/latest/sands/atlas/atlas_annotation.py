@@ -20,7 +20,7 @@ class AtlasAnnotation(EmbeddedMetadata):
 
     properties = [
         Property(
-            "anchor_point",
+            "anchor_points",
             "openminds.latest.core.QuantitativeValue",
             "anchorPoint",
             multiple=True,
@@ -72,7 +72,7 @@ class AtlasAnnotation(EmbeddedMetadata):
             instructions="Enter the identifier (or label) of this annotation that is used within the corresponding data files to identify this annotation.",
         ),
         Property(
-            "laterality",
+            "lateralities",
             "openminds.latest.controlled_terms.Laterality",
             "laterality",
             multiple=True,
@@ -108,25 +108,25 @@ class AtlasAnnotation(EmbeddedMetadata):
 
     def __init__(
         self,
-        anchor_point=None,
+        anchor_points=None,
         criteria=None,
         criteria_quality_type=None,
         criteria_type=None,
         inspired_by=None,
         internal_identifier=None,
-        laterality=None,
+        lateralities=None,
         preferred_visualization=None,
         specification=None,
         type=None,
     ):
         return super().__init__(
-            anchor_point=anchor_point,
+            anchor_points=anchor_points,
             criteria=criteria,
             criteria_quality_type=criteria_quality_type,
             criteria_type=criteria_type,
             inspired_by=inspired_by,
             internal_identifier=internal_identifier,
-            laterality=laterality,
+            lateralities=lateralities,
             preferred_visualization=preferred_visualization,
             specification=specification,
             type=type,

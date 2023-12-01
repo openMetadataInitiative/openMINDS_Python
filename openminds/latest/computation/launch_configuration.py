@@ -20,7 +20,7 @@ class LaunchConfiguration(LinkedMetadata):
 
     properties = [
         Property(
-            "argument",
+            "arguments",
             str,
             "argument",
             multiple=True,
@@ -66,11 +66,11 @@ class LaunchConfiguration(LinkedMetadata):
     ]
 
     def __init__(
-        self, id=None, argument=None, description=None, environment_variable=None, executable=None, name=None
+        self, id=None, arguments=None, description=None, environment_variable=None, executable=None, name=None
     ):
         return super().__init__(
             id=id,
-            argument=argument,
+            arguments=arguments,
             description=description,
             environment_variable=environment_variable,
             executable=executable,

@@ -21,7 +21,7 @@ class ContentType(LinkedMetadata):
 
     properties = [
         Property(
-            "data_type",
+            "data_types",
             "openminds.v3.controlled_terms.DataType",
             "dataType",
             multiple=True,
@@ -48,7 +48,7 @@ class ContentType(LinkedMetadata):
             instructions="Enter a display label for this content type.",
         ),
         Property(
-            "file_extension",
+            "file_extensions",
             str,
             "fileExtension",
             multiple=True,
@@ -82,7 +82,7 @@ class ContentType(LinkedMetadata):
             instructions="Enter the internationalized resource identifier (IRI) to the offical specification of this content type. If no offical and public specification is available, leave blank and enter the specification under 'description'.",
         ),
         Property(
-            "synonym",
+            "synonyms",
             str,
             "synonym",
             multiple=True,
@@ -97,23 +97,23 @@ class ContentType(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        data_type=None,
+        data_types=None,
         description=None,
         display_label=None,
-        file_extension=None,
+        file_extensions=None,
         name=None,
         related_media_type=None,
         specification=None,
-        synonym=None,
+        synonyms=None,
     ):
         return super().__init__(
             id=id,
-            data_type=data_type,
+            data_types=data_types,
             description=description,
             display_label=display_label,
-            file_extension=file_extension,
+            file_extensions=file_extensions,
             name=name,
             related_media_type=related_media_type,
             specification=specification,
-            synonym=synonym,
+            synonyms=synonyms,
         )

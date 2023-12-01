@@ -47,7 +47,7 @@ class TissueSample(LinkedMetadata):
             instructions="Add all tissue sample collections of which this tissue sample is part of.",
         ),
         Property(
-            "laterality",
+            "lateralities",
             "openminds.v2.controlled_terms.Laterality",
             "laterality",
             multiple=True,
@@ -96,7 +96,7 @@ class TissueSample(LinkedMetadata):
             instructions="Add the strain of this specimen.",
         ),
         Property(
-            "studied_state",
+            "studied_states",
             "openminds.v2.core.TissueSampleState",
             "studiedState",
             multiple=True,
@@ -122,13 +122,13 @@ class TissueSample(LinkedMetadata):
         biological_sex=None,
         internal_identifier=None,
         is_part_of=None,
-        laterality=None,
+        lateralities=None,
         lookup_label=None,
         origin=None,
         phenotype=None,
         species=None,
         strain=None,
-        studied_state=None,
+        studied_states=None,
         type=None,
     ):
         return super().__init__(
@@ -136,12 +136,12 @@ class TissueSample(LinkedMetadata):
             biological_sex=biological_sex,
             internal_identifier=internal_identifier,
             is_part_of=is_part_of,
-            laterality=laterality,
+            lateralities=lateralities,
             lookup_label=lookup_label,
             origin=origin,
             phenotype=phenotype,
             species=species,
             strain=strain,
-            studied_state=studied_state,
+            studied_states=studied_states,
             type=type,
         )

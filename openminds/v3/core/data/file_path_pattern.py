@@ -20,7 +20,7 @@ class FilePathPattern(EmbeddedMetadata):
 
     properties = [
         Property(
-            "grouping_type",
+            "grouping_types",
             "openminds.v3.controlled_terms.FileBundleGrouping",
             "groupingType",
             multiple=True,
@@ -41,8 +41,8 @@ class FilePathPattern(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, grouping_type=None, regex=None):
+    def __init__(self, grouping_types=None, regex=None):
         return super().__init__(
-            grouping_type=grouping_type,
+            grouping_types=grouping_types,
             regex=regex,
         )

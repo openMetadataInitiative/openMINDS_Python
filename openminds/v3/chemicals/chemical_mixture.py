@@ -29,7 +29,7 @@ class ChemicalMixture(LinkedMetadata):
             instructions="Enter any additional remarks concering this chemical mixture.",
         ),
         Property(
-            "has_part",
+            "has_parts",
             "openminds.v3.chemicals.AmountOfChemical",
             "hasPart",
             multiple=True,
@@ -64,11 +64,11 @@ class ChemicalMixture(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, additional_remarks=None, has_part=None, name=None, product_source=None, type=None):
+    def __init__(self, id=None, additional_remarks=None, has_parts=None, name=None, product_source=None, type=None):
         return super().__init__(
             id=id,
             additional_remarks=additional_remarks,
-            has_part=has_part,
+            has_parts=has_parts,
             name=name,
             product_source=product_source,
             type=type,

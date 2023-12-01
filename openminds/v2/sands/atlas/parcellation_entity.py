@@ -70,7 +70,7 @@ class ParcellationEntity(LinkedMetadata):
             instructions="Add the related UBERON parcellation term.",
         ),
         Property(
-            "relation_assessment",
+            "relation_assessments",
             ["openminds.v2.sands.QualitativeRelationAssessment", "openminds.v2.sands.QuantitativeRelationAssessment"],
             "relationAssessment",
             multiple=True,
@@ -109,7 +109,7 @@ class ParcellationEntity(LinkedMetadata):
         name=None,
         ontology_identifier=None,
         related_uberon_term=None,
-        relation_assessment=None,
+        relation_assessments=None,
         version_identifier=None,
         version_innovation=None,
     ):
@@ -121,7 +121,7 @@ class ParcellationEntity(LinkedMetadata):
             name=name,
             ontology_identifier=ontology_identifier,
             related_uberon_term=related_uberon_term,
-            relation_assessment=relation_assessment,
+            relation_assessments=relation_assessments,
             version_identifier=version_identifier,
             version_innovation=version_innovation,
         )

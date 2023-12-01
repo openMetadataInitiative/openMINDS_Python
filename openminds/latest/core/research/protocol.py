@@ -46,7 +46,7 @@ class Protocol(LinkedMetadata):
             instructions="Enter a descriptive name for this protocol.",
         ),
         Property(
-            "stimulus_type",
+            "stimulus_types",
             [
                 "openminds.latest.controlled_terms.AuditoryStimulusType",
                 "openminds.latest.controlled_terms.ElectricalStimulusType",
@@ -64,7 +64,7 @@ class Protocol(LinkedMetadata):
             instructions="Add all stimulus types used with this protocol.",
         ),
         Property(
-            "technique",
+            "techniques",
             [
                 "openminds.latest.controlled_terms.AnalysisTechnique",
                 "openminds.latest.controlled_terms.StimulationApproach",
@@ -81,12 +81,12 @@ class Protocol(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, described_in=None, description=None, name=None, stimulus_type=None, technique=None):
+    def __init__(self, id=None, described_in=None, description=None, name=None, stimulus_types=None, techniques=None):
         return super().__init__(
             id=id,
             described_in=described_in,
             description=description,
             name=name,
-            stimulus_type=stimulus_type,
-            technique=technique,
+            stimulus_types=stimulus_types,
+            techniques=techniques,
         )

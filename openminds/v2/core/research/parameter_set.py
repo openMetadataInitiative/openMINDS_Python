@@ -29,7 +29,7 @@ class ParameterSet(EmbeddedMetadata):
             instructions="Enter the common context for the parameters grouped in this set.",
         ),
         Property(
-            "parameter",
+            "parameters",
             ["openminds.v2.core.NumericalParameter", "openminds.v2.core.StringParameter"],
             "parameter",
             multiple=True,
@@ -49,9 +49,9 @@ class ParameterSet(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, context=None, parameter=None, relevant_for=None):
+    def __init__(self, context=None, parameters=None, relevant_for=None):
         return super().__init__(
             context=context,
-            parameter=parameter,
+            parameters=parameters,
             relevant_for=relevant_for,
         )

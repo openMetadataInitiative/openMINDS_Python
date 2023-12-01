@@ -29,7 +29,7 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
             instructions="Enter any additional remarks concering this anatomical target position.",
         ),
         Property(
-            "anatomical_target",
+            "anatomical_targets",
             [
                 "openminds.v3.controlled_terms.CellType",
                 "openminds.v3.controlled_terms.Organ",
@@ -49,7 +49,7 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
             instructions="Add all anatomical entities that describe the target position(s).",
         ),
         Property(
-            "spatial_location",
+            "spatial_locations",
             "openminds.v3.sands.CoordinatePoint",
             "spatialLocation",
             multiple=True,
@@ -69,11 +69,11 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
     ]
 
     def __init__(
-        self, additional_remarks=None, anatomical_target=None, spatial_location=None, target_identification_type=None
+        self, additional_remarks=None, anatomical_targets=None, spatial_locations=None, target_identification_type=None
     ):
         return super().__init__(
             additional_remarks=additional_remarks,
-            anatomical_target=anatomical_target,
-            spatial_location=spatial_location,
+            anatomical_targets=anatomical_targets,
+            spatial_locations=spatial_locations,
             target_identification_type=target_identification_type,
         )

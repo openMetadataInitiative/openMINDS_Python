@@ -44,7 +44,7 @@ class AnatomicalEntity(LinkedMetadata):
             instructions="Enter the internationalized resource identifier (IRI) pointing to the ontological term matching this anatomical entity.",
         ),
         Property(
-            "other_anatomical_relation",
+            "other_anatomical_relations",
             "openminds.v1.sands.AnatomicalEntityRelation",
             "otherAnatomicalRelation",
             multiple=True,
@@ -55,11 +55,11 @@ class AnatomicalEntity(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, has_parent=None, name=None, ontology_identifier=None, other_anatomical_relation=None):
+    def __init__(self, id=None, has_parent=None, name=None, ontology_identifier=None, other_anatomical_relations=None):
         return super().__init__(
             id=id,
             has_parent=has_parent,
             name=name,
             ontology_identifier=ontology_identifier,
-            other_anatomical_relation=other_anatomical_relation,
+            other_anatomical_relations=other_anatomical_relations,
         )

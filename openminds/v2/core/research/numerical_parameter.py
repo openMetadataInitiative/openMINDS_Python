@@ -29,7 +29,7 @@ class NumericalParameter(EmbeddedMetadata):
             instructions="Enter a descriptive name for this numerical parameter.",
         ),
         Property(
-            "value",
+            "values",
             ["openminds.v2.core.QuantitativeValue", "openminds.v2.core.QuantitativeValueRange"],
             "value",
             multiple=True,
@@ -41,8 +41,8 @@ class NumericalParameter(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, name=None, value=None):
+    def __init__(self, name=None, values=None):
         return super().__init__(
             name=name,
-            value=value,
+            values=values,
         )

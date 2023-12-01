@@ -28,7 +28,7 @@ class Contribution(EmbeddedMetadata):
             instructions="Add all types of contribution made by the stated 'contributor'.",
         ),
         Property(
-            "type",
+            "types",
             "openminds.v3.controlled_terms.ContributionType",
             "type",
             multiple=True,
@@ -40,8 +40,8 @@ class Contribution(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, contributor=None, type=None):
+    def __init__(self, contributor=None, types=None):
         return super().__init__(
             contributor=contributor,
-            type=type,
+            types=types,
         )

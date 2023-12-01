@@ -39,7 +39,7 @@ class TissueSampleSlicing(LinkedMetadata):
             instructions="Add the state of the specimen that was sliced during this activity.",
         ),
         Property(
-            "output",
+            "outputs",
             ["openminds.v3.core.TissueSampleCollectionState", "openminds.v3.core.TissueSampleState"],
             "output",
             multiple=True,
@@ -64,12 +64,12 @@ class TissueSampleSlicing(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, device=None, input=None, output=None, temperature=None, tissue_bath_solution=None):
+    def __init__(self, id=None, device=None, input=None, outputs=None, temperature=None, tissue_bath_solution=None):
         return super().__init__(
             id=id,
             device=device,
             input=input,
-            output=output,
+            outputs=outputs,
             temperature=temperature,
             tissue_bath_solution=tissue_bath_solution,
         )

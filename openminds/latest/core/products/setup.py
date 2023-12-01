@@ -30,7 +30,7 @@ class Setup(LinkedMetadata):
             instructions="Enter a short text describing this setup.",
         ),
         Property(
-            "has_part",
+            "has_parts",
             [
                 "openminds.latest.core.Setup",
                 "openminds.latest.core.SoftwareVersion",
@@ -56,7 +56,7 @@ class Setup(LinkedMetadata):
             instructions="Enter the geographic location of this setup. This may include room number, building, institution and/or city.",
         ),
         Property(
-            "manufacturer",
+            "manufacturers",
             ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "manufacturer",
             multiple=True,
@@ -75,7 +75,7 @@ class Setup(LinkedMetadata):
             instructions="Enter a descriptive name for this setup.",
         ),
         Property(
-            "type",
+            "types",
             "openminds.latest.controlled_terms.SetupType",
             "type",
             multiple=True,
@@ -87,14 +87,14 @@ class Setup(LinkedMetadata):
     ]
 
     def __init__(
-        self, id=None, description=None, has_part=None, location=None, manufacturer=None, name=None, type=None
+        self, id=None, description=None, has_parts=None, location=None, manufacturers=None, name=None, types=None
     ):
         return super().__init__(
             id=id,
             description=description,
-            has_part=has_part,
+            has_parts=has_parts,
             location=location,
-            manufacturer=manufacturer,
+            manufacturers=manufacturers,
             name=name,
-            type=type,
+            types=types,
         )

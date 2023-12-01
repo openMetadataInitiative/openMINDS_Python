@@ -36,7 +36,7 @@ class SubjectGroupState(LinkedMetadata):
             instructions="Add the age of the specimen (set) in this state.",
         ),
         Property(
-            "age_category",
+            "age_categories",
             "openminds.v1.controlled_terms.AgeCategory",
             "ageCategory",
             multiple=True,
@@ -57,7 +57,7 @@ class SubjectGroupState(LinkedMetadata):
             instructions="Add the preferred hand of the subject in this state.",
         ),
         Property(
-            "pathology",
+            "pathologies",
             ["openminds.v1.controlled_terms.Disease", "openminds.v1.controlled_terms.DiseaseModel"],
             "pathology",
             multiple=True,
@@ -80,17 +80,17 @@ class SubjectGroupState(LinkedMetadata):
         id=None,
         additional_remarks=None,
         age=None,
-        age_category=None,
+        age_categories=None,
         handedness=None,
-        pathology=None,
+        pathologies=None,
         weight=None,
     ):
         return super().__init__(
             id=id,
             additional_remarks=additional_remarks,
             age=age,
-            age_category=age_category,
+            age_categories=age_categories,
             handedness=handedness,
-            pathology=pathology,
+            pathologies=pathologies,
             weight=weight,
         )

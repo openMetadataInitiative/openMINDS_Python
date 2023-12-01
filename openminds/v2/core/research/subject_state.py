@@ -59,7 +59,7 @@ class SubjectState(LinkedMetadata):
             instructions="Enter a lookup label for this specimen (set) state that may help you to more easily find it again.",
         ),
         Property(
-            "pathology",
+            "pathologies",
             ["openminds.v2.controlled_terms.Disease", "openminds.v2.controlled_terms.DiseaseModel"],
             "pathology",
             multiple=True,
@@ -85,7 +85,7 @@ class SubjectState(LinkedMetadata):
         age_category=None,
         handedness=None,
         lookup_label=None,
-        pathology=None,
+        pathologies=None,
         weight=None,
     ):
         return super().__init__(
@@ -95,6 +95,6 @@ class SubjectState(LinkedMetadata):
             age_category=age_category,
             handedness=handedness,
             lookup_label=lookup_label,
-            pathology=pathology,
+            pathologies=pathologies,
             weight=weight,
         )

@@ -21,7 +21,7 @@ class RecordingActivity(LinkedMetadata):
 
     properties = [
         Property(
-            "custom_property_set",
+            "custom_property_sets",
             "openminds.v3.core.CustomPropertySet",
             "customPropertySet",
             multiple=True,
@@ -40,7 +40,7 @@ class RecordingActivity(LinkedMetadata):
             instructions="Enter a description of this activity.",
         ),
         Property(
-            "device",
+            "devices",
             [
                 "openminds.v3.ephys.ElectrodeArrayUsage",
                 "openminds.v3.ephys.ElectrodeUsage",
@@ -61,7 +61,7 @@ class RecordingActivity(LinkedMetadata):
             instructions="Enter the date and/or time on when this activity ended, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
         Property(
-            "input",
+            "inputs",
             [
                 "openminds.v3.core.SubjectGroupState",
                 "openminds.v3.core.SubjectState",
@@ -101,7 +101,7 @@ class RecordingActivity(LinkedMetadata):
             instructions="Enter a lookup label for this activity that may help you to find this instance more easily.",
         ),
         Property(
-            "output",
+            "outputs",
             ["openminds.v3.core.File", "openminds.v3.core.FileBundle"],
             "output",
             multiple=True,
@@ -129,7 +129,7 @@ class RecordingActivity(LinkedMetadata):
             instructions="Add the initial preparation type for this activity.",
         ),
         Property(
-            "protocol",
+            "protocols",
             "openminds.v3.core.Protocol",
             "protocol",
             multiple=True,
@@ -147,7 +147,7 @@ class RecordingActivity(LinkedMetadata):
             instructions="Enter the date and/or time on when this activity started, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
         Property(
-            "study_target",
+            "study_targets",
             [
                 "openminds.v3.controlled_terms.AuditoryStimulusType",
                 "openminds.v3.controlled_terms.BiologicalOrder",
@@ -189,35 +189,35 @@ class RecordingActivity(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        custom_property_set=None,
+        custom_property_sets=None,
         description=None,
-        device=None,
+        devices=None,
         end_time=None,
-        input=None,
+        inputs=None,
         internal_identifier=None,
         is_part_of=None,
         lookup_label=None,
-        output=None,
+        outputs=None,
         performed_by=None,
         preparation_design=None,
-        protocol=None,
+        protocols=None,
         start_time=None,
-        study_target=None,
+        study_targets=None,
     ):
         return super().__init__(
             id=id,
-            custom_property_set=custom_property_set,
+            custom_property_sets=custom_property_sets,
             description=description,
-            device=device,
+            devices=devices,
             end_time=end_time,
-            input=input,
+            inputs=inputs,
             internal_identifier=internal_identifier,
             is_part_of=is_part_of,
             lookup_label=lookup_label,
-            output=output,
+            outputs=outputs,
             performed_by=performed_by,
             preparation_design=preparation_design,
-            protocol=protocol,
+            protocols=protocols,
             start_time=start_time,
-            study_target=study_target,
+            study_targets=study_targets,
         )

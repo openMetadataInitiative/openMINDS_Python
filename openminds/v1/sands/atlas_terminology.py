@@ -20,7 +20,7 @@ class AtlasTerminology(LinkedMetadata):
 
     properties = [
         Property(
-            "anatomical_entity",
+            "anatomical_entities",
             "openminds.v1.sands.AnatomicalEntity",
             "anatomicalEntity",
             multiple=True,
@@ -71,7 +71,7 @@ class AtlasTerminology(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        anatomical_entity=None,
+        anatomical_entities=None,
         defined_in=None,
         full_name=None,
         ontology_identifier=None,
@@ -79,7 +79,7 @@ class AtlasTerminology(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
-            anatomical_entity=anatomical_entity,
+            anatomical_entities=anatomical_entities,
             defined_in=defined_in,
             full_name=full_name,
             ontology_identifier=ontology_identifier,

@@ -44,7 +44,7 @@ class TissueSample(LinkedMetadata):
             instructions="Enter the identifier of this specimen that is used within the corresponding data.",
         ),
         Property(
-            "laterality",
+            "lateralities",
             "openminds.v1.controlled_terms.Laterality",
             "laterality",
             multiple=True,
@@ -85,7 +85,7 @@ class TissueSample(LinkedMetadata):
             instructions="Add the strain of this specimen.",
         ),
         Property(
-            "studied_state",
+            "studied_states",
             "openminds.v1.core.TissueSampleState",
             "studiedState",
             multiple=True,
@@ -111,12 +111,12 @@ class TissueSample(LinkedMetadata):
         biological_sex=None,
         genotype=None,
         internal_identifier=None,
-        laterality=None,
+        lateralities=None,
         origin=None,
         phenotype=None,
         species=None,
         strain=None,
-        studied_state=None,
+        studied_states=None,
         type=None,
     ):
         return super().__init__(
@@ -124,11 +124,11 @@ class TissueSample(LinkedMetadata):
             biological_sex=biological_sex,
             genotype=genotype,
             internal_identifier=internal_identifier,
-            laterality=laterality,
+            lateralities=lateralities,
             origin=origin,
             phenotype=phenotype,
             species=species,
             strain=strain,
-            studied_state=studied_state,
+            studied_states=studied_states,
             type=type,
         )

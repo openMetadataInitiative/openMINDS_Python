@@ -59,7 +59,7 @@ class ElectrodeUsage(LinkedMetadata):
             instructions="Enter a lookup label for this device usage that may help you to find this instance more easily.",
         ),
         Property(
-            "metadata_location",
+            "metadata_locations",
             ["openminds.v3.core.File", "openminds.v3.core.FileBundle"],
             "metadataLocation",
             multiple=True,
@@ -91,7 +91,7 @@ class ElectrodeUsage(LinkedMetadata):
         contact_resistance=None,
         device=None,
         lookup_label=None,
-        metadata_location=None,
+        metadata_locations=None,
         spatial_location=None,
         used_specimen=None,
     ):
@@ -101,7 +101,7 @@ class ElectrodeUsage(LinkedMetadata):
             contact_resistance=contact_resistance,
             device=device,
             lookup_label=lookup_label,
-            metadata_location=metadata_location,
+            metadata_locations=metadata_locations,
             spatial_location=spatial_location,
             used_specimen=used_specimen,
         )

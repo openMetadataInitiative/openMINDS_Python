@@ -57,7 +57,7 @@ class Measurement(EmbeddedMetadata):
             instructions="Enter the date and time on which this measurement was made, formatted as '2023-02-07T16:00:00+00:00'.",
         ),
         Property(
-            "value",
+            "values",
             ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
             "value",
             multiple=True,
@@ -70,12 +70,12 @@ class Measurement(EmbeddedMetadata):
     ]
 
     def __init__(
-        self, additional_remarks=None, measured_quantity=None, measured_with=None, timestamp=None, value=None
+        self, additional_remarks=None, measured_quantity=None, measured_with=None, timestamp=None, values=None
     ):
         return super().__init__(
             additional_remarks=additional_remarks,
             measured_quantity=measured_quantity,
             measured_with=measured_with,
             timestamp=timestamp,
-            value=value,
+            values=values,
         )

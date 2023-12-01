@@ -84,7 +84,7 @@ class TermSuggestion(LinkedMetadata):
             instructions="Propose a name for a new terminology in which the suggested term should be integrated in.",
         ),
         Property(
-            "synonym",
+            "synonyms",
             str,
             "synonym",
             multiple=True,
@@ -107,7 +107,7 @@ class TermSuggestion(LinkedMetadata):
         name=None,
         preferred_ontology_identifier=None,
         suggest_new_terminology=None,
-        synonym=None,
+        synonyms=None,
     ):
         return super().__init__(
             id=id,
@@ -119,5 +119,5 @@ class TermSuggestion(LinkedMetadata):
             name=name,
             preferred_ontology_identifier=preferred_ontology_identifier,
             suggest_new_terminology=suggest_new_terminology,
-            synonym=synonym,
+            synonyms=synonyms,
         )

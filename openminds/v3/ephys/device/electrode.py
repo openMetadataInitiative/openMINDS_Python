@@ -89,7 +89,7 @@ class Electrode(LinkedMetadata):
             instructions="Enter a lookup label for this device that may help you to find this instance more easily.",
         ),
         Property(
-            "manufacturer",
+            "manufacturers",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "manufacturer",
             multiple=True,
@@ -108,7 +108,7 @@ class Electrode(LinkedMetadata):
             instructions="Enter a descriptive name for this device, preferably including the model name as defined by the manufacturer.",
         ),
         Property(
-            "owner",
+            "owners",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "owner",
             multiple=True,
@@ -138,9 +138,9 @@ class Electrode(LinkedMetadata):
         internal_identifier=None,
         intrinsic_resistance=None,
         lookup_label=None,
-        manufacturer=None,
+        manufacturers=None,
         name=None,
-        owner=None,
+        owners=None,
         serial_number=None,
     ):
         return super().__init__(
@@ -153,8 +153,8 @@ class Electrode(LinkedMetadata):
             internal_identifier=internal_identifier,
             intrinsic_resistance=intrinsic_resistance,
             lookup_label=lookup_label,
-            manufacturer=manufacturer,
+            manufacturers=manufacturers,
             name=name,
-            owner=owner,
+            owners=owners,
             serial_number=serial_number,
         )

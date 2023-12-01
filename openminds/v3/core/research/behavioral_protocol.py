@@ -57,7 +57,7 @@ class BehavioralProtocol(LinkedMetadata):
             instructions="Enter a descriptive name for this behavioral protocol.",
         ),
         Property(
-            "stimulation",
+            "stimulations",
             [
                 "openminds.v3.controlled_terms.StimulationApproach",
                 "openminds.v3.controlled_terms.StimulationTechnique",
@@ -70,7 +70,7 @@ class BehavioralProtocol(LinkedMetadata):
             instructions="Add all stimulation approaches and/or techniques used within this behavioral protocol.",
         ),
         Property(
-            "stimulus_type",
+            "stimulus_types",
             [
                 "openminds.v3.controlled_terms.AuditoryStimulusType",
                 "openminds.v3.controlled_terms.ElectricalStimulusType",
@@ -96,8 +96,8 @@ class BehavioralProtocol(LinkedMetadata):
         description=None,
         internal_identifier=None,
         name=None,
-        stimulation=None,
-        stimulus_type=None,
+        stimulations=None,
+        stimulus_types=None,
     ):
         return super().__init__(
             id=id,
@@ -105,6 +105,6 @@ class BehavioralProtocol(LinkedMetadata):
             description=description,
             internal_identifier=internal_identifier,
             name=name,
-            stimulation=stimulation,
-            stimulus_type=stimulus_type,
+            stimulations=stimulations,
+            stimulus_types=stimulus_types,
         )

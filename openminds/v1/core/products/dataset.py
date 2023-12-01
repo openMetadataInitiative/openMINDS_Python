@@ -47,7 +47,7 @@ class Dataset(LinkedMetadata):
             instructions="Enter a descriptive full name (title) for this research product.",
         ),
         Property(
-            "has_version",
+            "has_versions",
             "openminds.v1.core.DatasetVersion",
             "hasVersion",
             multiple=True,
@@ -81,7 +81,7 @@ class Dataset(LinkedMetadata):
         description=None,
         digital_identifier=None,
         full_name=None,
-        has_version=None,
+        has_versions=None,
         homepage=None,
         short_name=None,
     ):
@@ -90,7 +90,7 @@ class Dataset(LinkedMetadata):
             description=description,
             digital_identifier=digital_identifier,
             full_name=full_name,
-            has_version=has_version,
+            has_versions=has_versions,
             homepage=homepage,
             short_name=short_name,
         )

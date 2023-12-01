@@ -20,7 +20,7 @@ class BrainAtlasVersion(LinkedMetadata):
 
     properties = [
         Property(
-            "annotation_set",
+            "annotation_sets",
             "openminds.v1.sands.Annotation",
             "annotationSet",
             multiple=True,
@@ -55,7 +55,7 @@ class BrainAtlasVersion(LinkedMetadata):
             instructions="Enter a descriptive full name for this brain atlas version.",
         ),
         Property(
-            "has_alternative_version",
+            "has_alternative_versions",
             "openminds.v1.sands.BrainAtlasVersion",
             "hasAlternativeVersion",
             multiple=True,
@@ -137,11 +137,11 @@ class BrainAtlasVersion(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        annotation_set=None,
+        annotation_sets=None,
         coordinate_space=None,
         digital_identifier=None,
         full_name=None,
-        has_alternative_version=None,
+        has_alternative_versions=None,
         homepage=None,
         is_new_version_of=None,
         ontology_identifier=None,
@@ -153,11 +153,11 @@ class BrainAtlasVersion(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
-            annotation_set=annotation_set,
+            annotation_sets=annotation_sets,
             coordinate_space=coordinate_space,
             digital_identifier=digital_identifier,
             full_name=full_name,
-            has_alternative_version=has_alternative_version,
+            has_alternative_versions=has_alternative_versions,
             homepage=homepage,
             is_new_version_of=is_new_version_of,
             ontology_identifier=ontology_identifier,

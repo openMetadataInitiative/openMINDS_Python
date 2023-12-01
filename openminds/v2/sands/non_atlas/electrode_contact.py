@@ -55,7 +55,7 @@ class ElectrodeContact(LinkedMetadata):
             instructions="Enter a lookup label for this electrode contact that may help you to more easily find it again.",
         ),
         Property(
-            "related_recording",
+            "related_recordings",
             ["openminds.v2.core.File", "openminds.v2.core.FileBundle"],
             "relatedRecording",
             multiple=True,
@@ -65,7 +65,7 @@ class ElectrodeContact(LinkedMetadata):
             instructions="Add one or several files in which the recordings from this electrode contact were stored.",
         ),
         Property(
-            "related_stimulation",
+            "related_stimulations",
             ["openminds.v2.core.File", "openminds.v2.core.FileBundle"],
             "relatedStimulation",
             multiple=True,
@@ -93,8 +93,8 @@ class ElectrodeContact(LinkedMetadata):
         defined_in=None,
         internal_identifier=None,
         lookup_label=None,
-        related_recording=None,
-        related_stimulation=None,
+        related_recordings=None,
+        related_stimulations=None,
         visualized_in=None,
     ):
         return super().__init__(
@@ -103,7 +103,7 @@ class ElectrodeContact(LinkedMetadata):
             defined_in=defined_in,
             internal_identifier=internal_identifier,
             lookup_label=lookup_label,
-            related_recording=related_recording,
-            related_stimulation=related_stimulation,
+            related_recordings=related_recordings,
+            related_stimulations=related_stimulations,
             visualized_in=visualized_in,
         )

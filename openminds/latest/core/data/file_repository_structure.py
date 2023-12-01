@@ -20,7 +20,7 @@ class FileRepositoryStructure(LinkedMetadata):
 
     properties = [
         Property(
-            "file_path_pattern",
+            "file_path_patterns",
             "openminds.latest.core.FilePathPattern",
             "filePathPattern",
             multiple=True,
@@ -40,9 +40,9 @@ class FileRepositoryStructure(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, file_path_pattern=None, lookup_label=None):
+    def __init__(self, id=None, file_path_patterns=None, lookup_label=None):
         return super().__init__(
             id=id,
-            file_path_pattern=file_path_pattern,
+            file_path_patterns=file_path_patterns,
             lookup_label=lookup_label,
         )

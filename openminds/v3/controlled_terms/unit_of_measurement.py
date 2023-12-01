@@ -69,7 +69,7 @@ class UnitOfMeasurement(LinkedMetadata):
             instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
         ),
         Property(
-            "synonym",
+            "synonyms",
             str,
             "synonym",
             multiple=True,
@@ -90,7 +90,7 @@ class UnitOfMeasurement(LinkedMetadata):
         knowledge_space_link=None,
         name=None,
         preferred_ontology_identifier=None,
-        synonym=None,
+        synonyms=None,
     ):
         return super().__init__(
             id=id,
@@ -100,5 +100,5 @@ class UnitOfMeasurement(LinkedMetadata):
             knowledge_space_link=knowledge_space_link,
             name=name,
             preferred_ontology_identifier=preferred_ontology_identifier,
-            synonym=synonym,
+            synonyms=synonyms,
         )

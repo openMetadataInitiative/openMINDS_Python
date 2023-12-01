@@ -29,7 +29,7 @@ class ResearchProductGroup(LinkedMetadata):
             instructions="Enter the common context for this research product group.",
         ),
         Property(
-            "has_part",
+            "has_parts",
             [
                 "openminds.v3.computation.ValidationTest",
                 "openminds.v3.computation.ValidationTestVersion",
@@ -62,9 +62,9 @@ class ResearchProductGroup(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, context=None, has_part=None):
+    def __init__(self, id=None, context=None, has_parts=None):
         return super().__init__(
             id=id,
             context=context,
-            has_part=has_part,
+            has_parts=has_parts,
         )

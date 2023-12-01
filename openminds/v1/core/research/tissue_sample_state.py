@@ -36,7 +36,7 @@ class TissueSampleState(LinkedMetadata):
             instructions="Add the age of the specimen (set) in this state.",
         ),
         Property(
-            "pathology",
+            "pathologies",
             ["openminds.v1.controlled_terms.Disease", "openminds.v1.controlled_terms.DiseaseModel"],
             "pathology",
             multiple=True,
@@ -54,11 +54,11 @@ class TissueSampleState(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, additional_remarks=None, age=None, pathology=None, weight=None):
+    def __init__(self, id=None, additional_remarks=None, age=None, pathologies=None, weight=None):
         return super().__init__(
             id=id,
             additional_remarks=additional_remarks,
             age=age,
-            pathology=pathology,
+            pathologies=pathologies,
             weight=weight,
         )

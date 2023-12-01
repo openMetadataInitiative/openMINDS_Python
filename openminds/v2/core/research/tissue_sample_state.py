@@ -44,7 +44,7 @@ class TissueSampleState(LinkedMetadata):
             instructions="Enter a lookup label for this specimen (set) state that may help you to more easily find it again.",
         ),
         Property(
-            "pathology",
+            "pathologies",
             ["openminds.v2.controlled_terms.Disease", "openminds.v2.controlled_terms.DiseaseModel"],
             "pathology",
             multiple=True,
@@ -62,12 +62,12 @@ class TissueSampleState(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, additional_remarks=None, age=None, lookup_label=None, pathology=None, weight=None):
+    def __init__(self, id=None, additional_remarks=None, age=None, lookup_label=None, pathologies=None, weight=None):
         return super().__init__(
             id=id,
             additional_remarks=additional_remarks,
             age=age,
             lookup_label=lookup_label,
-            pathology=pathology,
+            pathologies=pathologies,
             weight=weight,
         )

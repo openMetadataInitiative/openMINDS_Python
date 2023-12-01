@@ -36,7 +36,7 @@ class CustomAnatomicalEntity(LinkedMetadata):
             instructions="Enter a descriptive name for this custom anatomical entity.",
         ),
         Property(
-            "relation_assessment",
+            "relation_assessments",
             ["openminds.v2.sands.QualitativeRelationAssessment", "openminds.v2.sands.QuantitativeRelationAssessment"],
             "relationAssessment",
             multiple=True,
@@ -47,10 +47,10 @@ class CustomAnatomicalEntity(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, has_annotation=None, name=None, relation_assessment=None):
+    def __init__(self, id=None, has_annotation=None, name=None, relation_assessments=None):
         return super().__init__(
             id=id,
             has_annotation=has_annotation,
             name=name,
-            relation_assessment=relation_assessment,
+            relation_assessments=relation_assessments,
         )

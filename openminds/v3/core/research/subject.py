@@ -61,7 +61,7 @@ class Subject(LinkedMetadata):
             instructions="Add the species or strain (a sub-type of a genetic variant of species) of this specimen.",
         ),
         Property(
-            "studied_state",
+            "studied_states",
             "openminds.v3.core.SubjectState",
             "studiedState",
             multiple=True,
@@ -81,7 +81,7 @@ class Subject(LinkedMetadata):
         is_part_of=None,
         lookup_label=None,
         species=None,
-        studied_state=None,
+        studied_states=None,
     ):
         return super().__init__(
             id=id,
@@ -90,5 +90,5 @@ class Subject(LinkedMetadata):
             is_part_of=is_part_of,
             lookup_label=lookup_label,
             species=species,
-            studied_state=studied_state,
+            studied_states=studied_states,
         )

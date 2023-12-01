@@ -28,7 +28,7 @@ class CustomCoordinateSpace(LinkedMetadata):
             instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for this custom coordinate space.",
         ),
         Property(
-            "axes_origin",
+            "axes_origins",
             "openminds.v2.core.QuantitativeValue",
             "axesOrigin",
             multiple=True,
@@ -40,7 +40,7 @@ class CustomCoordinateSpace(LinkedMetadata):
             instructions="Enter the origin of this custom coordinate space (central point where axes intersect; 2D: [x, y] or 3D:[x, y, z]).",
         ),
         Property(
-            "default_image",
+            "default_images",
             "openminds.v2.core.File",
             "defaultImage",
             multiple=True,
@@ -72,16 +72,16 @@ class CustomCoordinateSpace(LinkedMetadata):
         self,
         id=None,
         anatomical_axes_orientation=None,
-        axes_origin=None,
-        default_image=None,
+        axes_origins=None,
+        default_images=None,
         name=None,
         native_unit=None,
     ):
         return super().__init__(
             id=id,
             anatomical_axes_orientation=anatomical_axes_orientation,
-            axes_origin=axes_origin,
-            default_image=default_image,
+            axes_origins=axes_origins,
+            default_images=default_images,
             name=name,
             native_unit=native_unit,
         )

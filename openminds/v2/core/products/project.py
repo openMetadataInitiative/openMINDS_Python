@@ -20,7 +20,7 @@ class Project(LinkedMetadata):
 
     properties = [
         Property(
-            "coordinator",
+            "coordinators",
             ["openminds.v2.core.Organization", "openminds.v2.core.Person"],
             "coordinator",
             multiple=True,
@@ -89,7 +89,7 @@ class Project(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        coordinator=None,
+        coordinators=None,
         description=None,
         full_name=None,
         has_research_products=None,
@@ -98,7 +98,7 @@ class Project(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
-            coordinator=coordinator,
+            coordinators=coordinators,
             description=description,
             full_name=full_name,
             has_research_products=has_research_products,

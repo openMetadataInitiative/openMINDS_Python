@@ -29,7 +29,7 @@ class FileRepository(LinkedMetadata):
             instructions="Enter the internationalized resource identifier (IRI) to this file repository.",
         ),
         Property(
-            "content_type_pattern",
+            "content_type_patterns",
             "openminds.latest.core.ContentTypePattern",
             "contentTypePattern",
             multiple=True,
@@ -96,7 +96,7 @@ class FileRepository(LinkedMetadata):
         self,
         id=None,
         iri=None,
-        content_type_pattern=None,
+        content_type_patterns=None,
         format=None,
         hash=None,
         hosted_by=None,
@@ -108,7 +108,7 @@ class FileRepository(LinkedMetadata):
         return super().__init__(
             id=id,
             iri=iri,
-            content_type_pattern=content_type_pattern,
+            content_type_patterns=content_type_patterns,
             format=format,
             hash=hash,
             hosted_by=hosted_by,

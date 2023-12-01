@@ -20,7 +20,7 @@ class Organization(LinkedMetadata):
 
     properties = [
         Property(
-            "digital_identifier",
+            "digital_identifiers",
             "openminds.v1.core.DigitalIdentifier",
             "digitalIdentifier",
             multiple=True,
@@ -64,11 +64,11 @@ class Organization(LinkedMetadata):
     ]
 
     def __init__(
-        self, id=None, digital_identifier=None, full_name=None, has_parent=None, homepage=None, short_name=None
+        self, id=None, digital_identifiers=None, full_name=None, has_parent=None, homepage=None, short_name=None
     ):
         return super().__init__(
             id=id,
-            digital_identifier=digital_identifier,
+            digital_identifiers=digital_identifiers,
             full_name=full_name,
             has_parent=has_parent,
             homepage=homepage,

@@ -34,7 +34,7 @@ class WorkflowExecution(LinkedMetadata):
             instructions="Add the workflow recipe version used for this workflow execution.",
         ),
         Property(
-            "stage",
+            "stages",
             [
                 "openminds.v3.computation.DataAnalysis",
                 "openminds.v3.computation.DataCopy",
@@ -60,11 +60,11 @@ class WorkflowExecution(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, configuration=None, recipe=None, stage=None, started_by=None):
+    def __init__(self, id=None, configuration=None, recipe=None, stages=None, started_by=None):
         return super().__init__(
             id=id,
             configuration=configuration,
             recipe=recipe,
-            stage=stage,
+            stages=stages,
             started_by=started_by,
         )

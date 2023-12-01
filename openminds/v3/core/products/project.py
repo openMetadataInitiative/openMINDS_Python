@@ -21,7 +21,7 @@ class Project(LinkedMetadata):
 
     properties = [
         Property(
-            "coordinator",
+            "coordinators",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "coordinator",
             multiple=True,
@@ -50,7 +50,7 @@ class Project(LinkedMetadata):
             instructions="Enter a descriptive full name (or title) for this project.",
         ),
         Property(
-            "has_part",
+            "has_parts",
             [
                 "openminds.v3.computation.ValidationTest",
                 "openminds.v3.computation.ValidationTestVersion",
@@ -102,19 +102,19 @@ class Project(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        coordinator=None,
+        coordinators=None,
         description=None,
         full_name=None,
-        has_part=None,
+        has_parts=None,
         homepage=None,
         short_name=None,
     ):
         return super().__init__(
             id=id,
-            coordinator=coordinator,
+            coordinators=coordinators,
             description=description,
             full_name=full_name,
-            has_part=has_part,
+            has_parts=has_parts,
             homepage=homepage,
             short_name=short_name,
         )

@@ -47,7 +47,7 @@ class ElectrodeContact(LinkedMetadata):
             instructions="Enter the identifier used for this electrode contact within the file it is stored in.",
         ),
         Property(
-            "related_recording",
+            "related_recordings",
             "openminds.v1.core.FileInstance",
             "relatedRecording",
             multiple=True,
@@ -57,7 +57,7 @@ class ElectrodeContact(LinkedMetadata):
             instructions="Add one or several files in which the recordings from this electrode contact were stored.",
         ),
         Property(
-            "related_stimulation",
+            "related_stimulations",
             "openminds.v1.core.FileInstance",
             "relatedStimulation",
             multiple=True,
@@ -84,8 +84,8 @@ class ElectrodeContact(LinkedMetadata):
         coordinate_point=None,
         defined_in=None,
         internal_identifier=None,
-        related_recording=None,
-        related_stimulation=None,
+        related_recordings=None,
+        related_stimulations=None,
         visualized_in=None,
     ):
         return super().__init__(
@@ -93,7 +93,7 @@ class ElectrodeContact(LinkedMetadata):
             coordinate_point=coordinate_point,
             defined_in=defined_in,
             internal_identifier=internal_identifier,
-            related_recording=related_recording,
-            related_stimulation=related_stimulation,
+            related_recordings=related_recordings,
+            related_stimulations=related_stimulations,
             visualized_in=visualized_in,
         )

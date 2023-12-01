@@ -21,7 +21,7 @@ class Dataset(LinkedMetadata):
 
     properties = [
         Property(
-            "author",
+            "authors",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "author",
             multiple=True,
@@ -32,7 +32,7 @@ class Dataset(LinkedMetadata):
             instructions="Add all parties that contributed to this dataset as authors.",
         ),
         Property(
-            "custodian",
+            "custodians",
             ["openminds.v3.core.Consortium", "openminds.v3.core.Organization", "openminds.v3.core.Person"],
             "custodian",
             multiple=True,
@@ -68,7 +68,7 @@ class Dataset(LinkedMetadata):
             instructions="Enter a descriptive full name (or title) for this research product. Note that this should be a suitable full name for all attached research product versions.",
         ),
         Property(
-            "has_version",
+            "has_versions",
             "openminds.v3.core.DatasetVersion",
             "hasVersion",
             multiple=True,
@@ -108,24 +108,24 @@ class Dataset(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        author=None,
-        custodian=None,
+        authors=None,
+        custodians=None,
         description=None,
         digital_identifier=None,
         full_name=None,
-        has_version=None,
+        has_versions=None,
         homepage=None,
         how_to_cite=None,
         short_name=None,
     ):
         return super().__init__(
             id=id,
-            author=author,
-            custodian=custodian,
+            authors=authors,
+            custodians=custodians,
             description=description,
             digital_identifier=digital_identifier,
             full_name=full_name,
-            has_version=has_version,
+            has_versions=has_versions,
             homepage=homepage,
             how_to_cite=how_to_cite,
             short_name=short_name,

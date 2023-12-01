@@ -20,7 +20,7 @@ class TissueSample(LinkedMetadata):
 
     properties = [
         Property(
-            "anatomical_location",
+            "anatomical_locations",
             [
                 "openminds.latest.controlled_terms.CellType",
                 "openminds.latest.controlled_terms.Organ",
@@ -64,7 +64,7 @@ class TissueSample(LinkedMetadata):
             instructions="Add all tissue sample collections this tissue sample is part of.",
         ),
         Property(
-            "laterality",
+            "lateralities",
             "openminds.latest.controlled_terms.Laterality",
             "laterality",
             multiple=True,
@@ -103,7 +103,7 @@ class TissueSample(LinkedMetadata):
             instructions="Add the species or strain (a sub-type of a genetic variant of species) of this specimen.",
         ),
         Property(
-            "studied_state",
+            "studied_states",
             "openminds.latest.core.TissueSampleState",
             "studiedState",
             multiple=True,
@@ -126,27 +126,27 @@ class TissueSample(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        anatomical_location=None,
+        anatomical_locations=None,
         biological_sex=None,
         internal_identifier=None,
         is_part_of=None,
-        laterality=None,
+        lateralities=None,
         lookup_label=None,
         origin=None,
         species=None,
-        studied_state=None,
+        studied_states=None,
         type=None,
     ):
         return super().__init__(
             id=id,
-            anatomical_location=anatomical_location,
+            anatomical_locations=anatomical_locations,
             biological_sex=biological_sex,
             internal_identifier=internal_identifier,
             is_part_of=is_part_of,
-            laterality=laterality,
+            lateralities=lateralities,
             lookup_label=lookup_label,
             origin=origin,
             species=species,
-            studied_state=studied_state,
+            studied_states=studied_states,
             type=type,
         )

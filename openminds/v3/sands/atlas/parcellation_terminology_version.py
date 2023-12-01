@@ -20,7 +20,7 @@ class ParcellationTerminologyVersion(EmbeddedMetadata):
 
     properties = [
         Property(
-            "data_location",
+            "data_locations",
             "openminds.v3.core.File",
             "dataLocation",
             multiple=True,
@@ -30,7 +30,7 @@ class ParcellationTerminologyVersion(EmbeddedMetadata):
             instructions="Add the location of all files in which this parcellation terminology version is stored.",
         ),
         Property(
-            "has_entity",
+            "has_entities",
             "openminds.v3.sands.ParcellationEntityVersion",
             "hasEntity",
             multiple=True,
@@ -41,7 +41,7 @@ class ParcellationTerminologyVersion(EmbeddedMetadata):
             instructions="Add all parcellation entity versions which belong to this parcellation terminology version.",
         ),
         Property(
-            "ontology_identifier",
+            "ontology_identifiers",
             str,
             "ontologyIdentifier",
             multiple=True,
@@ -53,9 +53,9 @@ class ParcellationTerminologyVersion(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, data_location=None, has_entity=None, ontology_identifier=None):
+    def __init__(self, data_locations=None, has_entities=None, ontology_identifiers=None):
         return super().__init__(
-            data_location=data_location,
-            has_entity=has_entity,
-            ontology_identifier=ontology_identifier,
+            data_locations=data_locations,
+            has_entities=has_entities,
+            ontology_identifiers=ontology_identifiers,
         )
