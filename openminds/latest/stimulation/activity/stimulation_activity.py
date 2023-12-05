@@ -138,7 +138,7 @@ class StimulationActivity(LinkedMetadata):
         ),
         Property(
             "stimuli",
-            [],
+            "openminds.latest.stimulation.EphysStimulus",
             "stimulus",
             multiple=True,
             unique_items=True,
