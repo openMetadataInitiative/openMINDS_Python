@@ -21,11 +21,17 @@ number_names = {
 
 
 def generate_python_name(json_name, allow_multiple=False):
-    python_name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", json_name)
+    python_name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", json_name.strip())
     python_name = re.sub("([a-z0-9])([A-Z])", r"\1_\2", python_name).lower()
-    python_name = python_name.replace("-", "_").replace(".", "_").replace("+", "plus").replace("#", "sharp")
+    replacements = [
+        ("-", "_"), (".", "_"), ("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
+    ]
+    for before, after in replacements:
+        python_name = python_name.replace(before, after)
     if python_name[0] in number_names:  # Python variables can't start with a number
         python_name = number_names[python_name[0]] + python_name[1:]
+    if not python_name.isidentifier():
+        raise NameError(f"Cannot generate a valid Python name from '{json_name}'")
     return python_name
 
 
@@ -120,7 +126,7 @@ class PythonBuilder(object):
 
         def filter_instance(instance):
             filtered_instance = {
-                generate_python_name(k): filter_value(v)
+                k: filter_value(v)
                 for k, v in instance.items()
                 if k[0] != "@" and k[:4] != "http" and v is not None
             }
@@ -142,11 +148,12 @@ class PythonBuilder(object):
                 property_name = property['namePlural']
             else:
                 property_name = property['name']
+            pythononic_name = generate_python_name(property_name)
             properties.append(
                 {
-                    "name": generate_python_name(property_name),
+                    "name": pythononic_name,
                     "type": get_type(property),  # compress using JSON-LD context
-                    "iri": property['name'],  # assumes IRI uses standard @vocab
+                    "iri": property["name"],  # assumes IRI uses standard @vocab
                     "allow_multiple": allow_multiple,
                     "required": iri in self._schema_payload.get("required", []),
                     "description": property.get("description", "no description available"),
@@ -159,6 +166,9 @@ class PythonBuilder(object):
                 }
             )
             # unused in property:  "nameForReverseLink"
+            for instance in instances.values():
+                if property["name"] in instance:
+                    instance[pythononic_name] = instance.pop(property['name'])
         self.context = {
             "docstring": self._schema_payload.get("description", "<description not available>"),
             "base_class": base_class,
