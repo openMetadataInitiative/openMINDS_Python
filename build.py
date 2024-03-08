@@ -53,7 +53,7 @@ for schema_version in schema_loader.get_schema_versions():
         for schema_identifier in conflicts:
             linked.remove(schema_identifier)
 
-    # Step 4b - translate and build each openMINDS schema as JSON-Schema
+    # Step 4b - translate and build each openMINDS schema as a Python class
     for schema_file_path in schemas_file_paths:
         module_path, class_name = PythonBuilder(
             schema_file_path, schema_loader.schemas_sources, instances=instances.get(schema_version, None)

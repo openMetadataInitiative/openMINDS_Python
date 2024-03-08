@@ -65,12 +65,12 @@ def test_issue0005():
     person = omcore.Person(
         given_name="A",
         family_name="Professor",
-        affiliation=[omcore.Affiliation(member_of=uni1, end_date=(2023, 9, 30))],
+        affiliations=[omcore.Affiliation(member_of=uni1, end_date=(2023, 9, 30))],
     )
     failures = person.validate()
     assert len(failures) == 1
 
-    person.affiliation[0].end_date = date(2023, 9, 30)
+    person.affiliations[0].end_date = date(2023, 9, 30)
     failures = person.validate()
     assert len(failures) == 0
 
@@ -82,7 +82,7 @@ def test_issue0007():
     person = omcore.Person(given_name="A", family_name="Professor", id="_:001")
     uni1 = omcore.Organization(full_name="University of This Place", id="_:002")
     uni2 = omcore.Organization(full_name="University of That Place", id="_:003")
-    person.affiliation = [
+    person.affiliations = [
         omcore.Affiliation(member_of=uni1),
         omcore.Affiliation(member_of=uni2),
     ]
@@ -159,14 +159,14 @@ def test_issue0007():
 def test_issue0008():
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/8
     # The instance of linked types in instances of embedded types are integrated as embedded not linked
-    # (example: person -> affiliation (embedded) -> organization (linked))
+    # (example: person -> affiliations (embedded) -> organization (linked))
 
     uni1 = omcore.Organization(full_name="University of This Place", id="_:001")
     person = omcore.Person(
         id="_:002",
         given_name="A",
         family_name="Professor",
-        affiliation=[omcore.Affiliation(member_of=uni1, end_date=date(2023, 9, 30))],
+        affiliations=[omcore.Affiliation(member_of=uni1, end_date=date(2023, 9, 30))],
     )
     actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
@@ -197,7 +197,7 @@ def test_issue0026():
     person = omcore.Person(
         given_name="A",
         family_name="Professor",
-        affiliation = [omcore.Affiliation(member_of=uni1)],
+        affiliations = [omcore.Affiliation(member_of=uni1)],
         id="_:ap"
     )
 
@@ -212,5 +212,45 @@ def test_issue0026():
     os.remove("issue0026.jsonld")
 
     person_again = [item for item in new_collection if isinstance(item, omcore.Person)][0]
-    assert len(person_again.affiliation) == 1
-    assert person_again.affiliation[0].member_of.full_name == "University of This Place"
+    assert len(person_again.affiliations) == 1
+    assert person_again.affiliations[0].member_of.full_name == "University of This Place"
+
+
+def test_issue0023():
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/23
+    # If a user adds an instance/node to a collection, and then later adds linked types to the instance,
+    # currently that is not added to the collection
+
+    uni1 = omcore.Organization(full_name="University of This Place", id="_:uthisp")
+    person = omcore.Person(
+        given_name="A",
+        family_name="Professor",
+        affiliations = [omcore.Affiliation(member_of=uni1)],
+        id="_:ap"
+    )
+    dv = omcore.DatasetVersion(
+        full_name="The name of the dataset version",
+        custodians=[person],
+        id="_:dv"
+    )
+
+    c = Collection(dv)
+
+    # even though we add uni2 and the repository after creating the collection,
+    # they should be included when we save the collection.
+    uni2 = omcore.Organization(full_name="University of That Place", id="_:uthatp")
+    person.affiliations.append(omcore.Affiliation(member_of=uni2))
+    dv.repository = omcore.FileRepository(iri="http://example.com", id="_:fr")
+
+    output_paths = c.save("issue0023.jsonld", individual_files=False, include_empty_properties=False)
+
+    new_collection = Collection()
+    new_collection.load(*output_paths)
+    os.remove("issue0023.jsonld")
+
+    dv_again = [item for item in new_collection if isinstance(item, omcore.DatasetVersion)][0]
+    assert isinstance(dv_again.repository, omcore.FileRepository)
+    assert dv_again.repository.iri.value == "http://example.com"
+    assert len(dv_again.custodians[0].affiliations) == 2
+    assert dv_again.custodians[0].affiliations[0].member_of.full_name == "University of This Place"
+    assert dv_again.custodians[0].affiliations[1].member_of.full_name == "University of That Place"

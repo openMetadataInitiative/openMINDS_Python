@@ -30,13 +30,13 @@ mgm = omcore.Organization(
 stan = omcore.Person(
     given_name="Stan",
     family_name="Laurel",
-    affiliation=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
+    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
 )
 
 ollie = omcore.Person(
     given_name="Oliver",
     family_name="Hardy",
-    affiliation=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
+    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
 )
 
 # Add the metadata to the collection
@@ -66,12 +66,21 @@ This work is licensed under the MIT License.
 
 ## Getting help
 
-In case of questions about **openMINDS**, please contact us via https://ebrains.eu/support/.
+In case of questions about **openMINDS**, please contact us at support@openmetadatainitiative.org.
 If you find a bug in the Python library or would like to suggest an enhancement or new feature,
 please open a ticket in the [openMINDS Python library issue tracker](https://github.com/openMetadataInitiative/openMINDS_Python/issues).
 
 If you identify a problem or would like to suggest changes to the openMINDS specification itself,
 please open a ticket in the [openMINDS issue tracker](https://github.com/openMetadataInitiative/openMINDS/issues).
+
+## Development
+
+Contributions are welcome, please see our [contribution guidelines](https://openminds-documentation.readthedocs.io/en/latest/shared/contribution_guidelines.html).
+
+This repository has two main branches: `pipeline` and `main`.
+The `pipeline` contains the code for building the Python package from the openMINDS schemas.
+The build process is triggered by changes to the schemas, and runs as a GitHub action.
+The resultant package is copied to the `main` branch, and at intervals is published on PyPI.
 
 ## Acknowledgements
 

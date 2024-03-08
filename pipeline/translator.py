@@ -26,23 +26,6 @@ def generate_python_name(json_name, allow_multiple=False):
     python_name = python_name.replace("-", "_").replace(".", "_").replace("+", "plus").replace("#", "sharp")
     if python_name[0] in number_names:  # Python variables can't start with a number
         python_name = number_names[python_name[0]] + python_name[1:]
-
-    # if (
-    #     allow_multiple
-    #     and python_name[-1] != "s"
-    #     and python_name[-3:] not in ("_of", "_by", "_in", "_to")
-    #     and not python_name.endswith("data")
-    # ):
-    #     if python_name in custom_multiple:
-    #         python_name = custom_multiple[python_name]
-    #     elif python_name.endswith("y"):
-    #         python_name = python_name[:-1] + "ies"
-    #     else:
-    #         python_name += "s"
-    # elif python_name in custom_singular:
-    #     python_name = custom_singular[python_name]
-    # if isinstance(python_name, list):
-    #     python_name.sort()
     return python_name
 
 
@@ -152,19 +135,19 @@ class PythonBuilder(object):
             name: instances[name] for name in sorted(instances)
         }
 
-        self.context = {
-            "docstring": self._schema_payload.get("description", "<description not available>"),
-            "base_class": base_class,
-            "preamble": "",  # todo: e.g. extra imports
-            "class_name": self._schema_payload["name"],
-            "openminds_type": openminds_type,
-            "schema_version": self.version,
-            "properties": [  # call this "properties"
+        properties = []
+        for iri, property in self._schema_payload["properties"].items():
+            allow_multiple = property.get("type", "") == "array"
+            if allow_multiple:
+                property_name = property['namePlural']
+            else:
+                property_name = property['name']
+            properties.append(
                 {
-                    "name": generate_python_name(property["name"]),
+                    "name": generate_python_name(property_name),
                     "type": get_type(property),  # compress using JSON-LD context
                     "iri": property['name'],  # assumes IRI uses standard @vocab
-                    "allow_multiple": property.get("type", "") == "array",
+                    "allow_multiple": allow_multiple,
                     "required": iri in self._schema_payload.get("required", []),
                     "description": property.get("description", "no description available"),
                     "instructions": property.get("_instruction", "no instructions available"),
@@ -174,9 +157,16 @@ class PythonBuilder(object):
                     "min_items": property.get("minItems", None),
                     "max_items": property.get("maxItems", None),
                 }
-                for iri, property in self._schema_payload["properties"].items()
-            ],  # todo
+            )
             # unused in property:  "nameForReverseLink"
+        self.context = {
+            "docstring": self._schema_payload.get("description", "<description not available>"),
+            "base_class": base_class,
+            "preamble": "",  # default value, may be updated below
+            "class_name": self._schema_payload["name"],
+            "openminds_type": openminds_type,
+            "schema_version": self.version,
+            "properties": properties,
             "additional_methods": "",
             "instances": instances
         }
@@ -194,13 +184,12 @@ class PythonBuilder(object):
                     imp = import_map.get(t, None)
                     if imp:
                         extra_imports.add(imp)
-                        breakpoint()
             else:
                 imp = import_map.get(property["type"], None)
                 if imp:
                     extra_imports.add(imp)
             if extra_imports:
-                self.context["preamble"] = "\n".join(extra_imports)
+                self.context["preamble"] = "\n".join(sorted(extra_imports))
 
     def build(self, embedded=None):
         target_file_path = os.path.join("target", "openminds", f"{self._target_file_without_extension()}.py")
