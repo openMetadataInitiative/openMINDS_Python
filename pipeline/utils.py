@@ -11,14 +11,12 @@ def clone_sources():
         shutil.rmtree("_sources")
     Repo.clone_from(
         "https://github.com/openMetadataInitiative/openMINDS.git",
-        to_path="_sources",
+        to_path="_sources/schemas",
         depth=1,
     )
-    if os.path.exists("_instances"):
-        shutil.rmtree("_instances")
     Repo.clone_from(
         "https://github.com/openMetadataInitiative/openMINDS_instances.git",
-        to_path="_instances",
+        to_path="_sources/instances",
         depth=1,
     )
 
@@ -26,7 +24,7 @@ def clone_sources():
 class SchemaLoader:
     def __init__(self):
         self._root_directory = os.path.realpath(".")
-        self.schemas_sources = os.path.join(self._root_directory, "_sources", "schemas")
+        self.schemas_sources = os.path.join(self._root_directory, "_sources/schemas", "schemas")
 
     def get_schema_versions(self) -> List[str]:
         return os.listdir(self.schemas_sources)
@@ -42,7 +40,7 @@ class InstanceLoader:
     def __init__(self):
         self._root_directory = os.path.realpath(".")
         self.instances_sources = os.path.join(
-            self._root_directory, "_instances", "instances"
+            self._root_directory, "_sources/instances", "instances"
         )
 
     def get_instance_versions(self) -> List[str]:
