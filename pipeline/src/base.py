@@ -170,6 +170,7 @@ class LinkedMetadata(Node):
     """
     A Python representation of a metadata node that should have a unique identifier.
     """
+    _instance_lookup = None
 
     def __init__(self, id=None, **properties):
         self.id = id  # todo: check this is a URI

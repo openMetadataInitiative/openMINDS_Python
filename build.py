@@ -14,6 +14,12 @@ print("*********************************************************")
 print(f"Triggering the generation of Python package for openMINDS")
 print("*********************************************************")
 
+# Step 0 - read code for additional methods
+additional_methods = {}
+with open("pipeline/src/additional_methods/by_name.py.txt") as fp:
+    code = fp.read()
+additional_methods["by_name"] = code
+
 # Step 1 - clone central repository in main branch to get the latest sources
 clone_sources()
 schema_loader = SchemaLoader()
@@ -56,7 +62,8 @@ for schema_version in schema_loader.get_schema_versions():
     # Step 4b - translate and build each openMINDS schema as a Python class
     for schema_file_path in schemas_file_paths:
         module_path, class_name = PythonBuilder(
-            schema_file_path, schema_loader.schemas_sources, instances=instances.get(schema_version, None)
+            schema_file_path, schema_loader.schemas_sources, instances=instances.get(schema_version, None),
+            additional_methods=additional_methods
         ).build(embedded=embedded)
 
         parts = module_path.split(".")

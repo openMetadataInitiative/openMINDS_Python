@@ -38,7 +38,8 @@ def generate_python_name(json_name, allow_multiple=False):
 class PythonBuilder(object):
     """docstring"""
 
-    def __init__(self, schema_file_path: str, root_path: str, instances: Optional[dict] = None):
+    def __init__(self, schema_file_path: str, root_path: str, instances: Optional[dict] = None,
+                 additional_methods: Optional[dict] = None):
         self.template_name = "src/module_template.py.txt"
         self.env = Environment(
             loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))), autoescape=select_autoescape()
@@ -53,6 +54,7 @@ class PythonBuilder(object):
         with open(schema_file_path, "r") as schema_f:
             self._schema_payload = json.load(schema_f)
         self.instances = instances or {}
+        self.additional_methods = additional_methods
 
     @property
     def _version_module(self):
@@ -180,6 +182,10 @@ class PythonBuilder(object):
             "additional_methods": "",
             "instances": instances
         }
+
+        if len(instances) > 0:
+            self.context["additional_methods"] = self.additional_methods["by_name"]
+
         import_map = {
             "date": "from datetime import date",
             "datetime": "from datetime import datetime",
