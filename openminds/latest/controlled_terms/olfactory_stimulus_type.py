@@ -102,3 +102,25 @@ class OlfactoryStimulusType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+OlfactoryStimulusType.floral_odor = OlfactoryStimulusType(
+    id="https://openminds.ebrains.eu/instances/olfactoryStimulusType/floralOdor",
+    definition="Any chemical compound that smells floral.",
+    name="floral odor",
+)

@@ -5,24 +5,27 @@ based on names and type identifiers.
 """
 
 from __future__ import annotations
+from collections import defaultdict
 from typing import TYPE_CHECKING, Union, List, Optional
 
 if TYPE_CHECKING:
     from .base import ContainsMetadata
 
-registry: dict = {"names": {}, "types": {}}
+registry: dict = {"names": {}, "types": defaultdict(dict)}
 
 
 def register_class(target_class: ContainsMetadata):
     """Add a class to the registry"""
     if "openminds" in target_class.__module__:
         parts = target_class.__module__.split(".")
+        assert parts[0] == "openminds"
+        version = parts[1]
         name = ".".join(parts[0:3] + [target_class.__name__])  # e.g. openminds.latest.core.Dataset
 
         if hasattr(target_class, "type_"):
             registry["names"][name] = target_class
             type_ = target_class.type_
-            registry["types"][type_] = target_class
+            registry["types"][version][type_] = target_class
 
 
 def lookup(class_name: str) -> ContainsMetadata:
@@ -30,13 +33,13 @@ def lookup(class_name: str) -> ContainsMetadata:
     return registry["names"][class_name]
 
 
-def lookup_type(class_type: str) -> ContainsMetadata:
+def lookup_type(class_type: str, version: str = "latest") -> ContainsMetadata:
     """Return the class whose global type identifier (a URI) is given."""
     if isinstance(class_type, str):
-        if class_type in registry["types"]:
-            return registry["types"][class_type]
+        if class_type in registry["types"][version]:
+            return registry["types"][version][class_type]
         else:
-            raise ValueError(f"Type '{class_type}' was not found in the registry.")
+            raise ValueError(f"Type '{class_type}' was not found in the registry for version {version}.")
     else:
         raise TypeError("class type must be a string")
 

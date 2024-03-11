@@ -102,3 +102,34 @@ class CellCultureType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+CellCultureType.primary = CellCultureType(
+    id="https://openminds.ebrains.eu/instances/cellCultureType/primary",
+    definition="A cell culture comprised of primary cultured cells and the media in which they are being actively propagated or quiescently stored.",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0490188",
+    name="primary cell culture",
+    preferred_ontology_identifier="http://id.nlm.nih.gov/mesh/2018/M0452904",
+)
+CellCultureType.secondary = CellCultureType(
+    id="https://openminds.ebrains.eu/instances/cellCultureType/secondary",
+    definition="A cultured cell population that is derived through one or more passages in culture.",
+    interlex_identifier="http://uri.interlex.org/ilx_0782434",
+    name="secondary cell culture",
+    preferred_ontology_identifier="http://purl.obolibrary.org/obo/OBI_0001905",
+)

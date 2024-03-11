@@ -102,3 +102,65 @@ class OperatingSystem(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+OperatingSystem.android = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/Android",
+    name="Android",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q94",
+)
+OperatingSystem.i_os = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/iOS",
+    name="iOS",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q48493",
+)
+OperatingSystem.linux = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/Linux",
+    name="Linux",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q388",
+)
+OperatingSystem.mac_os = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/MacOS",
+    name="MacOS",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q43627",
+)
+OperatingSystem.platform_independent = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/platformIndependent",
+    name="platform independent",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q174666",
+)
+OperatingSystem.solaris = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/Solaris",
+    name="Solaris",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q14646",
+)
+OperatingSystem.unix = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/Unix",
+    name="Unix",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q11368",
+)
+OperatingSystem.windows = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/Windows",
+    name="Windows",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q1406",
+)
+OperatingSystem.windows_phone = OperatingSystem(
+    id="https://openminds.ebrains.eu/instances/operatingSystem/WindowsPhone",
+    name="Windows Phone",
+    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q4885200",
+)

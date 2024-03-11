@@ -1,2 +1,2 @@
-from .channel import Channel
 from .recording import Recording
+from .channel import Channel

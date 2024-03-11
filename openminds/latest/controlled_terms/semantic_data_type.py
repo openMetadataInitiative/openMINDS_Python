@@ -102,3 +102,36 @@ class SemanticDataType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+SemanticDataType.derived_data = SemanticDataType(
+    id="https://openminds.ebrains.eu/instances/semanticDataType/derivedData",
+    name="derived data",
+)
+SemanticDataType.experimental_data = SemanticDataType(
+    id="https://openminds.ebrains.eu/instances/semanticDataType/experimentalData",
+    name="experimental data",
+)
+SemanticDataType.raw_data = SemanticDataType(
+    id="https://openminds.ebrains.eu/instances/semanticDataType/rawData",
+    name="raw data",
+)
+SemanticDataType.simulated_data = SemanticDataType(
+    id="https://openminds.ebrains.eu/instances/semanticDataType/simulatedData",
+    name="simulated data",
+)

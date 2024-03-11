@@ -1,3 +1,3 @@
-from .activity import ElectrodePlacement, CellPatching, RecordingActivity
-from .device import ElectrodeArrayUsage, ElectrodeUsage, Electrode, ElectrodeArray, PipetteUsage, Pipette
-from .entity import Channel, Recording
+from .device import ElectrodeArray, ElectrodeArrayUsage, Electrode, Pipette, ElectrodeUsage, PipetteUsage
+from .activity import RecordingActivity, CellPatching, ElectrodePlacement
+from .entity import Recording, Channel

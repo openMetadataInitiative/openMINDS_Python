@@ -102,3 +102,40 @@ class GustatoryStimulusType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+GustatoryStimulusType.bitter_substance = GustatoryStimulusType(
+    id="https://openminds.ebrains.eu/instances/gustatoryStimulusType/bitterSubstance",
+    definition="Any chemical compound that tastes bitter.",
+    name="bitter substance",
+)
+GustatoryStimulusType.salty_substance = GustatoryStimulusType(
+    id="https://openminds.ebrains.eu/instances/gustatoryStimulusType/saltySubstance",
+    definition="Any chemical compound that tastes salty.",
+    name="salty substance",
+)
+GustatoryStimulusType.sour_substance = GustatoryStimulusType(
+    id="https://openminds.ebrains.eu/instances/gustatoryStimulusType/sourSubstance",
+    definition="Any chemical compound that tastes sour.",
+    name="sour substance",
+)
+GustatoryStimulusType.sweet_substance = GustatoryStimulusType(
+    id="https://openminds.ebrains.eu/instances/gustatoryStimulusType/sweetSubstance",
+    definition="Any chemical compound that tastes sweet.",
+    name="sweet substance",
+)

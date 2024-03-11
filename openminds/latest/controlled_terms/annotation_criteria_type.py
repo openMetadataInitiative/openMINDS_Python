@@ -102,3 +102,30 @@ class AnnotationCriteriaType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+AnnotationCriteriaType.deterministic_annotation = AnnotationCriteriaType(
+    id="https://openminds.ebrains.eu/instances/annotationCriteriaType/deterministicAnnotation",
+    definition="A 'deterministic annotation' provides an exact assignment of an entity or a list of entities to a defined annotation. The assignment itself can be based on a deterministic or maximum probability assumption.",
+    name="deterministic annotation",
+)
+AnnotationCriteriaType.probabalistic_annotation = AnnotationCriteriaType(
+    id="https://openminds.ebrains.eu/instances/annotationCriteriaType/probabalisticAnnotation",
+    definition="A 'probabalistic annotation' provides the probability or probabilities to which an entity or a list of entities belong(s) to a defined annotation.",
+    name="probabilistic annotation",
+)

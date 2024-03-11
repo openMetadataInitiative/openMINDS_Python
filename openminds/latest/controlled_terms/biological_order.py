@@ -102,3 +102,64 @@ class BiologicalOrder(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+BiologicalOrder.carnivora = BiologicalOrder(
+    id="https://openminds.ebrains.eu/instances/biologicalOrder/carnivora",
+    definition="The biological order *Carnivora* (carnivore) belongs to the class *Mammalia* (mammals).",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0101675",
+    name="Carnivora",
+    preferred_ontology_identifier="http://purl.obolibrary.org/obo/NCBITaxon_33554",
+    synonyms=["carnivore"],
+)
+BiologicalOrder.cypriniformes = BiologicalOrder(
+    id="https://openminds.ebrains.eu/instances/biologicalOrder/cypriniformes",
+    definition="The biological order *Cypriniformes* belongs to the class *Actinopterygii* (ray-finned fishes).",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0737279",
+    name="Cypriniformes",
+    preferred_ontology_identifier="http://id.nlm.nih.gov/mesh/2018/M0005508",
+)
+BiologicalOrder.didelphimorphia = BiologicalOrder(
+    id="https://openminds.ebrains.eu/instances/biologicalOrder/didelphimorphia",
+    definition="The biological order *Didelphimorphia* (opossums) belongs to the class *Mammalia* (mammals).",
+    name="Didelphimorphia",
+    synonyms=["opossums"],
+)
+BiologicalOrder.nudibranchia = BiologicalOrder(
+    id="https://openminds.ebrains.eu/instances/biologicalOrder/nudibranchia",
+    definition="The biological order *Nudibranchia* (nudibranchs) belongs to the class *Gastropoda* (gastropods).",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0107805",
+    name="Nudibranchia",
+    preferred_ontology_identifier="http://purl.obolibrary.org/obo/NCBITaxon_70849",
+    synonyms=["nudibranchs"],
+)
+BiologicalOrder.primates = BiologicalOrder(
+    id="https://openminds.ebrains.eu/instances/biologicalOrder/primates",
+    definition="The biological order *Primates* belongs to the class *Mammalia* (mammals).",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0486298",
+    name="Primates",
+    preferred_ontology_identifier="http://id.nlm.nih.gov/mesh/2018/M0017579",
+)
+BiologicalOrder.rodentia = BiologicalOrder(
+    id="https://openminds.ebrains.eu/instances/biologicalOrder/rodentia",
+    definition="The biological order *Rodentia* (rodents) belongs to the class *Mammalia* (mammals).",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0110175",
+    name="Rodentia",
+    preferred_ontology_identifier="http://purl.obolibrary.org/obo/NCBITaxon_9989",
+    synonyms=["rodents"],
+)

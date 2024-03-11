@@ -66,7 +66,7 @@ This work is licensed under the MIT License.
 
 ## Getting help
 
-In case of questions about **openMINDS**, please contact us via https://ebrains.eu/support/.
+In case of questions about **openMINDS**, please contact us at support@openmetadatainitiative.org.
 If you find a bug in the Python library or would like to suggest an enhancement or new feature,
 please open a ticket in the [openMINDS Python library issue tracker](https://github.com/openMetadataInitiative/openMINDS_Python/issues).
 

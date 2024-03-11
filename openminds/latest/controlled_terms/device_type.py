@@ -102,3 +102,63 @@ class DeviceType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+DeviceType.c_tscanner = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/CTscanner",
+    definition="A 'CT scanner' is an x-ray machine that creates and combines serial two-dimensional x-ray images (sections) with the aid of a computer to generate cross-sectional views and/or three-dimensional images of internal body structures (e.g., bones, blood vessels or soft tissues).",
+    name="CT scanner",
+    synonyms=["CAT scanner", "computed axial tomography scanner", "computed tomography scanner"],
+)
+DeviceType.electronic_amplifier = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/electronicAmplifier",
+    definition="An 'electronic amplifier' is a device that increases the power (voltage or current) of a time-varying signal.",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0100567",
+    name="electronic amplifier",
+    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nlx_27076",
+    synonyms=["amp", "amplifier"],
+)
+DeviceType.microscope = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/microscope",
+    definition="A 'microscope' is an instrument used to obtain a magnified image of small objects and reveal details of structures not otherwise distinguishable.",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0106921",
+    name="microscope",
+    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/birnlex_2106",
+)
+DeviceType.microtome = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/microtome",
+    definition="A 'microtome' is a mechanical instrument with a steel, glass or diamond blade used to cut (typically) biological specimens into very thin segments for further treatment and ultimately microscopic or histologic examination.",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0106925",
+    name="microtome",
+    preferred_ontology_identifier="http://purl.obolibrary.org/obo/OBI_0400168",
+)
+DeviceType.mr_iscanner = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/MRIscanner",
+    definition="An 'MRI scanner' is a machine that uses strong magnetic fields, magnetic field gradients, and radio waves to generate static or time-resolved three-dimensional images of the anatomy and physiological processes of the body.",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0106463",
+    name="MRI scanner",
+    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/birnlex_2100",
+    synonyms=["magnetic resonance imaging scanner"],
+)
+DeviceType.vibrating_microtome = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/vibratingMicrotome",
+    definition="A 'vibrating microtome' is an mechanical instrument with a vibrating steel blade used to cut (typically) biological specimens into thin segments for further treatment and ultimately microscopic or histologic examination.",
+    interlex_identifier="http://uri.interlex.org/base/ilx_0780522",
+    name="vibrating microtome",
+    synonyms=["vibratome"],
+)

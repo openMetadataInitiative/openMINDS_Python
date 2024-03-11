@@ -102,3 +102,56 @@ class Language(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+Language.dutch = Language(
+    id="https://openminds.ebrains.eu/instances/language/dutch",
+    name="Dutch",
+)
+Language.english = Language(
+    id="https://openminds.ebrains.eu/instances/language/english",
+    name="English",
+)
+Language.french = Language(
+    id="https://openminds.ebrains.eu/instances/language/french",
+    name="French",
+)
+Language.german = Language(
+    id="https://openminds.ebrains.eu/instances/language/german",
+    name="German",
+)
+Language.greek = Language(
+    id="https://openminds.ebrains.eu/instances/language/greek",
+    name="Greek",
+)
+Language.italian = Language(
+    id="https://openminds.ebrains.eu/instances/language/italian",
+    name="Italian",
+)
+Language.norwegian = Language(
+    id="https://openminds.ebrains.eu/instances/language/norwegian",
+    name="Norwegian",
+)
+Language.spanish = Language(
+    id="https://openminds.ebrains.eu/instances/language/spanish",
+    name="Spanish",
+)
+Language.swedish = Language(
+    id="https://openminds.ebrains.eu/instances/language/swedish",
+    name="Swedish",
+)

@@ -102,3 +102,30 @@ class AnatomicalIdentificationType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+AnatomicalIdentificationType.landmark_based = AnatomicalIdentificationType(
+    id="https://openminds.ebrains.eu/instances/anatomicalIdentificationType/landmarkBased",
+    definition="'Landmark based' identification makes use of distinct anatomical structures as a point of orientation in locating other structures in the body.",
+    name="landmark based",
+)
+AnatomicalIdentificationType.stereotactic = AnatomicalIdentificationType(
+    id="https://openminds.ebrains.eu/instances/anatomicalIdentificationType/stereotactic",
+    definition="'Stereotactic' identification makes use of three-dimensional coordinate system to locate specific targets inside the body. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Stereotactic_surgery)]",
+    name="stereotactic",
+)

@@ -1,33 +1,33 @@
+from .miscellaneous import (
+    QuantitativeValueRange,
+    QuantitativeValue,
+    DigitalIdentifierSchema,
+    Funding,
+    DigitalIdentifier,
+)
+from .products import (
+    Model,
+    Software,
+    Dataset,
+    MetaDataModel,
+    ModelVersion,
+    SoftwareVersion,
+    DatasetVersion,
+    Project,
+    MetaDataModelVersion,
+)
 from .research import (
-    ProtocolExecution,
     SubjectState,
-    TissueSample,
     SubjectGroupState,
-    TissueSampleCollectionState,
-    TissueSampleCollection,
-    ParameterSetting,
-    Protocol,
     Subject,
     TissueSampleState,
+    ProtocolExecution,
     SubjectGroup,
+    TissueSample,
+    ParameterSetting,
+    Protocol,
+    TissueSampleCollection,
+    TissueSampleCollectionState,
 )
-from .actors import Organization, Contribution, Person
-from .products import (
-    Software,
-    Model,
-    SoftwareVersion,
-    MetaDataModel,
-    Project,
-    ModelVersion,
-    Dataset,
-    MetaDataModelVersion,
-    DatasetVersion,
-)
-from .miscellaneous import (
-    DigitalIdentifier,
-    DigitalIdentifierSchema,
-    QuantitativeValue,
-    QuantitativeValueRange,
-    Funding,
-)
-from .data import Hash, FileInstance, FileRepository, ContentType, FileBundle, Copyright, License
+from .data import Copyright, License, FileRepository, FileBundle, Hash, ContentType, FileInstance
+from .actors import Person, Organization, Contribution

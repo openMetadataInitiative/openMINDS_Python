@@ -102,3 +102,35 @@ class CranialWindowConstructionType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+CranialWindowConstructionType.cleared_skull_cranial_window = CranialWindowConstructionType(
+    id="https://openminds.ebrains.eu/instances/cranialWindowConstructionType/clearedSkullCranialWindow",
+    definition="A cranial window that is constructed by clearing a small region of the skull.",
+    name="cleared skull cranial window",
+)
+CranialWindowConstructionType.thinned_skull_cranial_window = CranialWindowConstructionType(
+    id="https://openminds.ebrains.eu/instances/cranialWindowConstructionType/thinnedSkullCranialWindow",
+    definition="A cranial window that is constructed by thinning a small region of the skull.",
+    name="thinned skull cranial window",
+)
+CranialWindowConstructionType.transcranial_window = CranialWindowConstructionType(
+    id="https://openminds.ebrains.eu/instances/cranialWindowConstructionType/transcranialWindow",
+    definition="A cranial window that is constructed by removal of a small region of the skull.",
+    name="transcranial window",
+)

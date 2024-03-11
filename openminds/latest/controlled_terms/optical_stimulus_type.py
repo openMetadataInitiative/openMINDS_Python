@@ -102,3 +102,25 @@ class OpticalStimulusType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+OpticalStimulusType.infrared_neural_stimulus = OpticalStimulusType(
+    id="https://openminds.ebrains.eu/instances/opticalStimulusType/infraredNeuralStimulus",
+    definition="An 'infrared neural stimulus' is a pulsed IR light (between the wavelength of 1400–2100 nm) used to generate a highly controlled temperature transients in neurons (dT/dz or dT/dt), leading them to fire action potentials. [adapted from [Horváth et al., (2020)](https://doi.org/10.1038/s41378-020-0153-3)]",
+    name="infrared neural stimulus",
+)
