@@ -47,3 +47,10 @@ class {{ class_name }}({{ base_class }}):
         return super().__init__({%- if base_class == "LinkedMetadata" %}id=id, {%- endif -%}{%- for property in properties -%}{{property.name}}={{property.name}}, {%- endfor -%})
 
 {{ additional_methods }}
+
+{% for instance_name, instance in instances.items() %}
+{{ class_name }}.{{ instance_name }} = {{ class_name }}(
+    {% for key, value in instance.items() -%}
+    {% if value is string %}{{key}}="{{value}}",{% else %}{{key}}={{value}},{% endif %}
+    {% endfor -%}
+){% endfor %}
