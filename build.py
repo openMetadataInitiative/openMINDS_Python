@@ -4,6 +4,7 @@ import os.path
 import shutil
 import subprocess
 import sys
+from urllib.request import urlopen, HTTPError
 
 from jinja2 import Environment, select_autoescape, FileSystemLoader
 
@@ -113,6 +114,25 @@ shutil.copy("pipeline/src/registry.py", "target/openminds/registry.py")
 shutil.copy("pipeline/src/collection.py", "target/openminds/collection.py")
 shutil.copy("pipeline/src/README.md", "target/README.md")
 shutil.copy("./LICENSE", "target/LICENSE")
+
+# If we have a PyPI release for the current version, complete the codemeta.json template
+try:
+    with urlopen(f"https://pypi.org/pypi/openminds/{context['version']}/json") as handle:
+        pypi_metadata = json.loads(handle.read())
+except HTTPError:
+    pypi_metadata = None
+
+if pypi_metadata:
+    with open("pipeline/src/codemeta.json") as fp:
+        codemeta = json.load(fp)
+        codemeta["version"] = context["version"]
+        for item in pypi_metadata["urls"]:
+            if item["packagetype"] == "sdist":
+                codemeta["downloadUrl"] = item["url"]
+                codemeta["dateModified"] = item["upload_time"].split("T")[0]
+                break
+    with open("target/codemeta.json", "w") as fp:
+        json.dump(codemeta, fp, indent=2)
 
 # Step 6 - run formatter
 subprocess.call([sys.executable, "-m", "black", "--quiet", "target"])
