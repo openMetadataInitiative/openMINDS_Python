@@ -1,0 +1,61 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "codeRepository": "https://github.com/openMetadataInitiative/openMINDS_Python",
+  "contIntegration": "https://github.com/openMetadataInitiative/openMINDS_Python/actions",
+  "issueTracker": "https://github.com/openMetadataInitiative/openMINDS_Python/issues",
+  "name": "openMINDS Python",
+  "description": "openMINDS Python is a small library to support the creation and use of openMINDS metadata models and schemas in your Python application, with import and export in JSON-LD format. The package contains all openMINDS schemas as Python classes in addition to schema base classes and utility methods.",
+  "applicationCategory": "neuroscience",
+  "releaseNotes": "https://github.com/openMetadataInitiative/openMINDS_Python/blob/pipeline/CHANGELOG.md",
+  "funding": "https://cordis.europa.eu/project/id/945539",
+  "developmentStatus": "active",
+  "funder": {
+    "@type": "Organization",
+    "name": "European Commission"
+  },
+  "programmingLanguage": [
+    "Python"
+  ],
+  "operatingSystem": [
+    "Linux",
+    "Windows",
+    "macOS"
+  ],
+  "softwareRequirements": [
+    "Python (version >=3.7)"
+  ],
+  "relatedLink": [
+    "http://neuralensemble.org/docs/PyNN/",
+    "https://groups.google.com/g/neuralensemble"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "@id": "http://orcid.org/0000-0002-4793-7541",
+      "givenName": "Andrew P.",
+      "familyName": "Davison"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0002-5947-9939",
+      "givenName": "Lyuba",
+      "familyName": "Zehl"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0003-1746-3995",
+      "givenName": "Peyman",
+      "familyName": "Najafi"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Louisa",
+      "familyName": "K\u00f6hnen"
+    }
+  ],
+  "version": "0.2.0",
+  "downloadUrl": "https://files.pythonhosted.org/packages/1c/9d/c6a6ef773862d8231b8791ab1e4cf19ddd58b367b996602644b60970a656/openMINDS-0.2.0.tar.gz",
+  "dateModified": "2024-03-12"
+}
