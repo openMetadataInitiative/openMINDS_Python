@@ -6,34 +6,46 @@ based on names and type identifiers.
 
 from __future__ import annotations
 from collections import defaultdict
-from typing import TYPE_CHECKING, Union, List, Optional
+from typing import TYPE_CHECKING, Union, List, Dict
+from warnings import warn
 
 if TYPE_CHECKING:
-    from .base import ContainsMetadata
+    from .base import Node
+    from .properties import Property
+
 
 registry: dict = {"names": {}, "types": defaultdict(dict)}
 
 
-def register_class(target_class: ContainsMetadata):
+def register_class(target_class: Registry):
     """Add a class to the registry"""
-    if "openminds" in target_class.__module__:
+    if hasattr(target_class, "schema_version"):
+        assert "openminds" in target_class.__module__
         parts = target_class.__module__.split(".")
-        assert parts[0] == "openminds"
-        version = parts[1]
+        version = target_class.schema_version.split(".")[0]  # e.g. 'v3' or 'latest'
         name = ".".join(parts[0:3] + [target_class.__name__])  # e.g. openminds.latest.core.Dataset
+        # taking the first 3 parts is artbitrary, should add an attribute to each class
+        # with its preferred import name
+        # e.g. for `openminds.latest.core.research.protocol_execution.ProtocolExecution`
+        #      the preferred import name is `openminds.latest.core.ProtocolExecution`
+        #      because the intermediate directory structure is an implementation detail
 
-        if hasattr(target_class, "type_"):
-            registry["names"][name] = target_class
+        registry["names"][name] = target_class
+
+        if isinstance(target_class.type_, str):
             type_ = target_class.type_
             registry["types"][version][type_] = target_class
+        else:
+            for type_ in target_class.type_:
+                registry["types"][version][type_] = target_class
 
 
-def lookup(class_name: str) -> ContainsMetadata:
+def lookup(class_name: str) -> Node:
     """Return the class whose name is given."""
     return registry["names"][class_name]
 
 
-def lookup_type(class_type: str, version: str = "latest") -> ContainsMetadata:
+def lookup_type(class_type: str, version: str = "latest") -> Node:
     """Return the class whose global type identifier (a URI) is given."""
     if isinstance(class_type, str):
         if class_type in registry["types"][version]:
@@ -57,7 +69,10 @@ Args
 class Registry(type):
     """Metaclass for registering Knowledge Graph classes."""
 
-    properties = []
+    properties: List[Property] = []
+    type_: Union[str, List[str]]
+    context: Dict[str, str]
+    _base_docstring: str
 
     def __new__(meta, name, bases, class_dict):
         cls = type.__new__(meta, name, bases, class_dict)
@@ -84,4 +99,12 @@ class Registry(type):
                 field_docs.append(doc)
         return docstring_template.format(base=cls._base_docstring, args="\n".join(field_docs))
 
-    __doc__ = property(_get_doc)
+    __doc__ = property(_get_doc)  # type: ignore[assignment]
+
+    @property
+    def property_names(cls) -> List[str]:
+        return [p.name for p in cls.properties]
+
+    @property
+    def required_property_names(cls) -> List[str]:
+        return [p.name for p in cls.properties if p.required]

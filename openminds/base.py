@@ -1,5 +1,6 @@
 """
-Base classes for openMINDS
+This module contains base classes that define interfaces
+and contain code common to sub-classes, to avoid code duplication.
 
 # Copyright (c) 2023 openMetadataInitiative
 """
