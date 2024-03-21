@@ -11,6 +11,8 @@ from jinja2 import Environment, select_autoescape, FileSystemLoader
 from pipeline.translator import PythonBuilder
 from pipeline.utils import clone_sources, SchemaLoader, InstanceLoader
 
+include_instances = True  # to speed up the build during development, set this to False
+
 print("*********************************************************")
 print(f"Triggering the generation of Python package for openMINDS")
 print("*********************************************************")
@@ -30,12 +32,13 @@ if os.path.exists("target"):
 
 # Step 2 - load instances
 instances = {}
-for version in instance_loader.get_instance_versions():
-    instances[version] = defaultdict(list)
-    for instance_path in instance_loader.find_instances(version):
-        with open(instance_path) as fp:
-            instance_data = json.load(fp)
-        instances[version][instance_data["@type"]].append(instance_data)
+if include_instances:
+    for version in instance_loader.get_instance_versions():
+        instances[version] = defaultdict(list)
+        for instance_path in instance_loader.find_instances(version):
+            with open(instance_path) as fp:
+                instance_data = json.load(fp)
+            instances[version][instance_data["@type"]].append(instance_data)
 
 python_modules = defaultdict(list)
 for schema_version in schema_loader.get_schema_versions():
@@ -63,8 +66,10 @@ for schema_version in schema_loader.get_schema_versions():
     # Step 4b - translate and build each openMINDS schema as a Python class
     for schema_file_path in schemas_file_paths:
         module_path, class_name = PythonBuilder(
-            schema_file_path, schema_loader.schemas_sources, instances=instances.get(schema_version, None),
-            additional_methods=additional_methods
+            schema_file_path,
+            schema_loader.schemas_sources,
+            instances=instances.get(schema_version, None),
+            additional_methods=additional_methods,
         ).build(embedded=embedded)
 
         parts = module_path.split(".")

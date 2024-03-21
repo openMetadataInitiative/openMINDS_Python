@@ -6,28 +6,57 @@ Representations of metadata fields/properties
 
 from datetime import datetime, date
 from collections import defaultdict
+from collections.abc import Iterable
+from typing import Optional, Union
+
 from .registry import lookup
-from .base import Node, IRI, Link
+from .base import Node, IRI, Link, Node
 
 
 class Property:
-    """Representation of an openMINDS property (a metadata field)."""
+    """
+    Representation of an openMINDS property (a metadata field).
+
+    Args:
+        name (str): The name of the field.
+        types (str, date, datetime, int, KGObject, EmbeddedMetadata): The types of values that the field can take.
+        path (URI): The globally unique identifier of this field.
+        required (bool, optional): Whether the field is required or not. Defaults to False.
+        multiple (bool, optional): Whether the field can have multiple values or not. Defaults to False.
+        reverse (str, optional): The name of the reverse field, if any.
+        formatting (str, optional): todo
+        multiline (bool, optional): todo - defaults to False
+        description (str, optional): todo
+        instructions (str, optional): todo
+        unique_items (str, optional): todo
+        min_items (int, optional): todo
+        max_items (int, optional): todo
+
+
+    The class also contains machinery for serialization into JSON-LD of values stored in fields in
+    KGObjects and EmbeddedMetadata instances, and for de-serialization from JSON-LD into Python objects.
+    """
 
     def __init__(
         self,
-        name,
-        types,
-        path,
-        required=False,
-        multiple=False,
-        reverse=None,
-        formatting=None,
-        multiline=False,
-        description="",
-        instructions="",
-        unique_items=None,
-        min_items=None,
-        max_items=None,
+        name: str,
+        types: Union[
+            str,
+            type,
+            Node,
+            Iterable[Union[str, type, Node]],
+        ],
+        path: str,
+        required: bool = False,
+        multiple: bool = False,
+        reverse: Optional[str] = None,
+        formatting: Optional[str] = None,
+        multiline: bool = False,
+        description: str = "",
+        instructions: str = "",
+        unique_items: bool = False,
+        min_items: Optional[int] = None,
+        max_items: Optional[int] = None,
     ):
         self.name = name
         if isinstance(types, (type, str)):
