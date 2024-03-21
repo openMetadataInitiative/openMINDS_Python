@@ -25,7 +25,7 @@ class ORCID(LinkedMetadata):
             "identifier",
             formatting="text/plain",
             required=True,
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the ORCID.",
             instructions="Enter the identifier for researchers provided by Open Researcher and Contributor ID, Inc. (ORCID, Inc.) as an internationalized resource identifier (IRI) following the defined pattern (i.e., 'https://orcid.org/' + ORCID).",
         ),
     ]

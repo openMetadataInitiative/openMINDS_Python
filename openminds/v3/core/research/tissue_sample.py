@@ -50,7 +50,7 @@ class TissueSample(LinkedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the tissue sample within a particular product.",
             instructions="Enter the identifier (or label) of this specimen that is used within the corresponding data files to identify this specimen.",
         ),
         Property(
@@ -110,7 +110,7 @@ class TissueSample(LinkedMetadata):
             unique_items=True,
             min_items=1,
             required=True,
-            description="Reference to a point in time at which something or someone was studied in a particular mode or condition.",
+            description="Reference to a point in time at which the tissue sample was studied in a particular mode or condition.",
             instructions="Add all states in which this tissue sample was studied.",
         ),
         Property(

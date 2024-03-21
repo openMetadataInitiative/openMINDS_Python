@@ -64,14 +64,14 @@ class CommonCoordinateSpace(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the common coordinate space.",
             instructions="Enter a descriptive full name for this common coordinate space.",
         ),
         Property(
             "homepage",
             "openminds.v2.core.URL",
             "homepage",
-            description="Main website of something or someone.",
+            description="Main website of the common coordinate space.",
             instructions="Add the uniform resource locator (URL) to the homepage of this common coordinate space.",
         ),
         Property(
@@ -95,7 +95,7 @@ class CommonCoordinateSpace(LinkedMetadata):
             "ontology_identifier",
             IRI,
             "ontologyIdentifier",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the common coordinate space registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this common coordinate space.",
         ),
         Property(
@@ -112,7 +112,7 @@ class CommonCoordinateSpace(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the common coordinate space.",
             instructions="Enter a descriptive short name for this common coordinate space.",
         ),
         Property(

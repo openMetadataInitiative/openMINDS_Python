@@ -25,7 +25,7 @@ class IdentifiersDotOrgID(LinkedMetadata):
             "identifier",
             formatting="text/plain",
             required=True,
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the identifiers dot org i d.",
             instructions="Enter the resolvable identifier (IRI) of Identifiers.org.",
         ),
     ]

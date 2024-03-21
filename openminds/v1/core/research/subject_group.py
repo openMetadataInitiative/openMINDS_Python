@@ -45,7 +45,7 @@ class SubjectGroup(LinkedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the subject group within a particular product.",
             instructions="Enter the identifier of this specimen set that is used within the corresponding data.",
         ),
         Property(
@@ -94,7 +94,7 @@ class SubjectGroup(LinkedMetadata):
             unique_items=True,
             min_items=1,
             required=True,
-            description="Reference to a point in time at which something or someone was studied in a particular mode or condition.",
+            description="Reference to a point in time at which the subject group was studied in a particular mode or condition.",
             instructions="Add all states in which this subject group was studied.",
         ),
     ]

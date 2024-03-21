@@ -48,7 +48,7 @@ class ParcellationTerminologyVersion(EmbeddedMetadata):
             unique_items=True,
             min_items=1,
             formatting="text/plain",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the parcellation terminology version registered within a particular ontology.",
             instructions="Enter the internationalized resource identifiers (IRIs) to the related ontological terms matching this parcellation terminology version.",
         ),
     ]

@@ -36,7 +36,7 @@ class Software(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             required=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the software.",
             instructions="Enter a description (abstract) for this research product (max. 2000 characters, incl. spaces; no references). Note that this description should be fitting for all attached research product versions.",
         ),
         Property(
@@ -63,7 +63,7 @@ class Software(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the software.",
             instructions="Enter a descriptive full name (title) for this research product.  Note that this full name should be fitting for all attached research product versions.",
         ),
         Property(
@@ -81,7 +81,7 @@ class Software(LinkedMetadata):
             "homepage",
             "openminds.v2.core.URL",
             "homepage",
-            description="Main website of something or someone.",
+            description="Main website of the software.",
             instructions="Add the uniform resource locator (URL) to the homepage of this research product.",
         ),
         Property(
@@ -99,7 +99,7 @@ class Software(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the software.",
             instructions="Enter a short name (alias) for this research product (max. 30 characters; no space).",
         ),
     ]

@@ -25,7 +25,7 @@ class Pipette(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the pipette.",
             instructions="Enter a short text describing this device.",
         ),
         Property(
@@ -62,7 +62,7 @@ class Pipette(LinkedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the pipette within a particular product.",
             instructions="Enter the identifier (or label) of this pipette that is used within the corresponding data files to identify this pipette.",
         ),
         Property(
@@ -100,7 +100,7 @@ class Pipette(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the pipette.",
             instructions="Enter a descriptive name for this device, preferably including the model name as defined by the manufacturer.",
         ),
         Property(

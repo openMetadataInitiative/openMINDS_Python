@@ -35,7 +35,7 @@ class Strain(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the strain.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -46,7 +46,7 @@ class Strain(LinkedMetadata):
             unique_items=True,
             min_items=1,
             formatting="text/plain",
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the strain.",
             instructions="Enter other database identifiers for the given strain that are supported by the members of the Alliance of Genome Resources (https://www.alliancegenome.org/).",
         ),
         Property(
@@ -55,14 +55,14 @@ class Strain(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the strain.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
             "ontology_identifier",
             IRI,
             "ontologyIdentifier",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the strain registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the related ontological term.",
         ),
     ]

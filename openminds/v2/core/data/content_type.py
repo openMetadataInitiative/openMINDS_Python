@@ -26,7 +26,7 @@ class ContentType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the content type.",
             instructions="Enter a description of the content type specification. May be left blank if a public specification can be linked in 'specification'.",
         ),
         Property(
@@ -46,7 +46,7 @@ class ContentType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the content type.",
             instructions="Enter the name (iana-inspired convention) of this content type.",
         ),
         Property(

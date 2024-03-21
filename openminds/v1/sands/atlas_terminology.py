@@ -46,7 +46,7 @@ class AtlasTerminology(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the atlas terminology.",
             instructions="Enter a descriptive full name for this atlas terminology.",
         ),
         Property(
@@ -54,7 +54,7 @@ class AtlasTerminology(LinkedMetadata):
             str,
             "ontologyIdentifier",
             formatting="text/plain",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the atlas terminology registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this atlas terminology.",
         ),
         Property(
@@ -63,7 +63,7 @@ class AtlasTerminology(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the atlas terminology.",
             instructions="Enter a descriptive short name for this atlas terminology.",
         ),
     ]

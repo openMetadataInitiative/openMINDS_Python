@@ -68,7 +68,7 @@ class Annotation(LinkedMetadata):
             "internalIdentifier",
             formatting="text/plain",
             required=True,
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the annotation within a particular product.",
             instructions="Enter the identifier used for this annotation within the file it is stored in.",
         ),
         Property(

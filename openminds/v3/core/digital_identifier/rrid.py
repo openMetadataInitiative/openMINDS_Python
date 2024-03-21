@@ -25,7 +25,7 @@ class RRID(LinkedMetadata):
             "identifier",
             formatting="text/plain",
             required=True,
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the RRID.",
             instructions="Enter the resource identifier provided by the Resource Identification Initiative ('Research Resource IDentifier'; RRID) as an internationalized resource identifier (IRI) following the defined pattern (i.e., 'https://scicrunch.org/resolver/' + RRID).",
         ),
     ]

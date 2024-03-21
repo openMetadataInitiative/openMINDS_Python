@@ -25,7 +25,7 @@ class StockNumber(EmbeddedMetadata):
             "identifier",
             formatting="text/plain",
             required=True,
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the stock number.",
             instructions="Enter the stock number of an item provided by a store or company.",
         ),
         Property(

@@ -46,7 +46,7 @@ class Organization(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the organization.",
             instructions="Enter the full name of this organization.",
         ),
         Property(
@@ -63,7 +63,7 @@ class Organization(LinkedMetadata):
             "homepage",
             IRI,
             "homepage",
-            description="Main website of something or someone.",
+            description="Main website of the organization.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this organization.",
         ),
         Property(
@@ -71,7 +71,7 @@ class Organization(LinkedMetadata):
             str,
             "shortName",
             formatting="text/plain",
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the organization.",
             instructions="Enter a short name (or alias) for this organization that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
     ]

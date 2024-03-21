@@ -24,7 +24,7 @@ class SWHID(LinkedMetadata):
             str,
             "identifier",
             formatting="text/plain",
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the SWHID.",
             instructions="Enter the resolvable identifier (IRI) of the Software Heritage archive.",
         ),
     ]

@@ -39,7 +39,7 @@ class Periodical(LinkedMetadata):
             str,
             "name",
             formatting="text/plain",
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the periodical.",
             instructions="Enter the name (or title) of this periodical (e.g., Journal of Physiology).",
         ),
     ]

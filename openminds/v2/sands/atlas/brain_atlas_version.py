@@ -42,7 +42,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the brain atlas version.",
             instructions="Enter a descriptive full name for this brain atlas version.",
         ),
         Property(
@@ -57,7 +57,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "homepage",
             "openminds.v2.core.URL",
             "homepage",
-            description="Main website of something or someone.",
+            description="Main website of the brain atlas version.",
             instructions="Add the uniform resource locator (URL) to the homepage of this brain atlas version.",
         ),
         Property(
@@ -90,7 +90,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "ontology_identifier",
             IRI,
             "ontologyIdentifier",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the brain atlas version registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this brain atlas version.",
         ),
         Property(
@@ -107,7 +107,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the brain atlas version.",
             instructions="Enter a descriptive short name for this brain atlas version.",
         ),
         Property(

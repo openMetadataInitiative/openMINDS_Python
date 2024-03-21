@@ -73,7 +73,7 @@ class CustomAnnotation(LinkedMetadata):
             "internalIdentifier",
             formatting="text/plain",
             required=True,
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the custom annotation within a particular product.",
             instructions="Enter the identifier used for this custom annotation within the file it is stored in.",
         ),
         Property(
@@ -100,7 +100,7 @@ class CustomAnnotation(LinkedMetadata):
             str,
             "name",
             formatting="text/plain",
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the custom annotation.",
             instructions="Enter a descriptive name for this custom annotation.",
         ),
         Property(

@@ -25,7 +25,7 @@ class NumericalProperty(EmbeddedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the numerical property.",
             instructions="Enter a descriptive name for this numerical property.",
         ),
         Property(

@@ -36,7 +36,7 @@ class ParcellationTerminology(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the parcellation terminology.",
             instructions="Enter a descriptive full name for this parcellation terminology.",
         ),
         Property(
@@ -60,7 +60,7 @@ class ParcellationTerminology(LinkedMetadata):
             "ontology_identifier",
             IRI,
             "ontologyIdentifier",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the parcellation terminology registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this parcellation terminology.",
         ),
         Property(
@@ -69,7 +69,7 @@ class ParcellationTerminology(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the parcellation terminology.",
             instructions="Enter a descriptive short name for this parcellation terminology.",
         ),
         Property(

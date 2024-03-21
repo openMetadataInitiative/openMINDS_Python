@@ -65,7 +65,7 @@ class AtlasAnnotation(LinkedMetadata):
             "internalIdentifier",
             formatting="text/plain",
             required=True,
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the atlas annotation within a particular product.",
             instructions="Enter the identifier used for this annotation within the file it is stored in.",
         ),
         Property(
@@ -92,7 +92,7 @@ class AtlasAnnotation(LinkedMetadata):
             str,
             "name",
             formatting="text/plain",
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the atlas annotation.",
             instructions="Enter a descriptive name for this atlas annotation.",
         ),
         Property(

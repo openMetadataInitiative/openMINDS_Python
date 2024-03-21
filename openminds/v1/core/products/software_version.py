@@ -24,7 +24,7 @@ class SoftwareVersion(LinkedMetadata):
             "openminds.v1.controlled_terms.ProductAccessibility",
             "accessibility",
             required=True,
-            description="Level to which something is accessible to someone or something.",
+            description="Level to which something is accessible to the software version.",
             instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
@@ -72,7 +72,7 @@ class SoftwareVersion(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             required=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the software version.",
             instructions="Enter a description (abstract) for this research product (max. 2000 characters, incl. spaces; no references).",
         ),
         Property(
@@ -119,7 +119,7 @@ class SoftwareVersion(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the software version.",
             instructions="Enter a descriptive full name (title) for this research product version.",
         ),
         Property(
@@ -178,7 +178,7 @@ class SoftwareVersion(LinkedMetadata):
             str,
             "homepage",
             formatting="text/plain",
-            description="Main website of something or someone.",
+            description="Main website of the software version.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
@@ -208,7 +208,7 @@ class SoftwareVersion(LinkedMetadata):
             min_items=1,
             max_items=5,
             formatting="text/plain",
-            description="Significant word or concept that are representative of something or someone.",
+            description="Significant word or concept that are representative of the software version.",
             instructions="Enter custom keywords to this research product version.",
         ),
         Property(
@@ -306,7 +306,7 @@ class SoftwareVersion(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the software version.",
             instructions="Enter a short name (alias) for this research product version (max. 30 characters, no space).",
         ),
         Property(

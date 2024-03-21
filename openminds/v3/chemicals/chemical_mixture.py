@@ -44,7 +44,7 @@ class ChemicalMixture(LinkedMetadata):
             str,
             "name",
             formatting="text/plain",
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the chemical mixture.",
             instructions="Enter the name of this chemical mixture.",
         ),
         Property(

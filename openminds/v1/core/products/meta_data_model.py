@@ -26,7 +26,7 @@ class MetaDataModel(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             required=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the meta data model.",
             instructions="Enter a description (abstract) for this research product (max. 2000 characters, incl. spaces; no references).",
         ),
         Property(
@@ -43,7 +43,7 @@ class MetaDataModel(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the meta data model.",
             instructions="Enter a descriptive full name (title) for this research product.",
         ),
         Property(
@@ -61,7 +61,7 @@ class MetaDataModel(LinkedMetadata):
             str,
             "homepage",
             formatting="text/plain",
-            description="Main website of something or someone.",
+            description="Main website of the meta data model.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product.",
         ),
         Property(
@@ -70,7 +70,7 @@ class MetaDataModel(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the meta data model.",
             instructions="Enter a short name (alias) for this research product (max. 30 characters; no space).",
         ),
     ]

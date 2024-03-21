@@ -54,7 +54,7 @@ class Strain(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the strain.",
             instructions="Enter a short text describing this strain.",
         ),
         Property(
@@ -96,7 +96,7 @@ class Strain(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the strain.",
             instructions="Enter the name of this strain.",
         ),
         Property(
@@ -107,7 +107,7 @@ class Strain(LinkedMetadata):
             unique_items=True,
             min_items=1,
             formatting="text/plain",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the strain registered within a particular ontology.",
             instructions="Enter the internationalized resource identifiers (IRIs) to the related ontological terms matching this strain.",
         ),
         Property(

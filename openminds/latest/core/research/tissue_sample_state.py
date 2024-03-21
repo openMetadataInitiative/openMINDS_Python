@@ -65,7 +65,7 @@ class TissueSampleState(LinkedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the tissue sample state within a particular product.",
             instructions="Enter the identifier (or label) of this specimen (set) state that is used within the corresponding data files to identify this specimen (set) state.",
         ),
         Property(

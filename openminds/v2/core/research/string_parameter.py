@@ -25,7 +25,7 @@ class StringParameter(EmbeddedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the string parameter.",
             instructions="Enter a descriptive name for this parameter.",
         ),
         Property(

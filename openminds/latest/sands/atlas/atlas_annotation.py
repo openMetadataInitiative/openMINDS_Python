@@ -68,7 +68,7 @@ class AtlasAnnotation(EmbeddedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the atlas annotation within a particular product.",
             instructions="Enter the identifier (or label) of this annotation that is used within the corresponding data files to identify this annotation.",
         ),
         Property(

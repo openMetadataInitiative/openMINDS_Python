@@ -36,7 +36,7 @@ class RecordingActivity(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the recording activity.",
             instructions="Enter a description of this activity.",
         ),
         Property(
@@ -81,7 +81,7 @@ class RecordingActivity(LinkedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the recording activity within a particular product.",
             instructions="Enter the identifier (or label) of this recording activity that is used within the corresponding data files to identify this recording activity.",
         ),
         Property(

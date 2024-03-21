@@ -35,7 +35,7 @@ class MetaDataModelType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the meta data model type.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -44,14 +44,14 @@ class MetaDataModelType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the meta data model type.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
             "ontology_identifier",
             IRI,
             "ontologyIdentifier",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the meta data model type registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the related ontological term.",
         ),
     ]

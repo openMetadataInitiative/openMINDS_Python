@@ -81,7 +81,7 @@ class ParcellationEntity(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the parcellation entity.",
             instructions="Enter the name of this parcellation entity.",
         ),
         Property(
@@ -92,7 +92,7 @@ class ParcellationEntity(LinkedMetadata):
             unique_items=True,
             min_items=1,
             formatting="text/plain",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the parcellation entity registered within a particular ontology.",
             instructions="Enter the internationalized resource identifiers (IRIs) to the related ontological terms matching this parcellation entity.",
         ),
         Property(

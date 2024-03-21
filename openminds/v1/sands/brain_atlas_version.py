@@ -51,7 +51,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the brain atlas version.",
             instructions="Enter a descriptive full name for this brain atlas version.",
         ),
         Property(
@@ -69,7 +69,7 @@ class BrainAtlasVersion(LinkedMetadata):
             str,
             "homepage",
             formatting="text/plain",
-            description="Main website of something or someone.",
+            description="Main website of the brain atlas version.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this brain atlas.",
         ),
         Property(
@@ -84,7 +84,7 @@ class BrainAtlasVersion(LinkedMetadata):
             str,
             "ontologyIdentifier",
             formatting="text/plain",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the brain atlas version registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this brain atlas version.",
         ),
         Property(
@@ -102,7 +102,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the brain atlas version.",
             instructions="Enter a descriptive short name for this brain atlas version.",
         ),
         Property(

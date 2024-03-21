@@ -25,7 +25,7 @@ class LivePaperSection(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the live paper section.",
             instructions="Enter a description of this live paper section.",
         ),
         Property(
@@ -42,7 +42,7 @@ class LivePaperSection(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the live paper section.",
             instructions="Enter the name (or title) of this live paper section.",
         ),
         Property(

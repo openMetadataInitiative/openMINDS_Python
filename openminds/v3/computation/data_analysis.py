@@ -36,7 +36,7 @@ class DataAnalysis(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the data analysis.",
             instructions="Enter a description of this activity.",
         ),
         Property(

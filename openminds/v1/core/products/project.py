@@ -26,7 +26,7 @@ class Project(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             required=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the project.",
             instructions="Enter a description of this project.",
         ),
         Property(
@@ -35,7 +35,7 @@ class Project(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the project.",
             instructions="Enter a descriptive full name (title) for this project.",
         ),
         Property(
@@ -63,7 +63,7 @@ class Project(LinkedMetadata):
             str,
             "homepage",
             formatting="text/plain",
-            description="Main website of something or someone.",
+            description="Main website of the project.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this model version.",
         ),
         Property(
@@ -82,7 +82,7 @@ class Project(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the project.",
             instructions="Enter a short name (alias) for this project.",
         ),
     ]

@@ -25,7 +25,7 @@ class Channel(EmbeddedMetadata):
             "internalIdentifier",
             formatting="text/plain",
             required=True,
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the channel within a particular product.",
             instructions="Enter the identifier (or label) of this channel that is used within the corresponding data files to identify this channel.",
         ),
         Property(

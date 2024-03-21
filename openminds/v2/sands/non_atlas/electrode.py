@@ -36,7 +36,7 @@ class Electrode(LinkedMetadata):
             "internalIdentifier",
             formatting="text/plain",
             required=True,
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the electrode within a particular product.",
             instructions="Enter the identifier used for this electrode within the file it is stored in.",
         ),
         Property(

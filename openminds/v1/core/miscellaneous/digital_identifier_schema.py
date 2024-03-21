@@ -32,7 +32,7 @@ class DigitalIdentifierSchema(LinkedMetadata):
             str,
             "identifierPattern",
             formatting="text/plain",
-            description="Format of a term or code used to identify something or someone.",
+            description="Format of a term or code used to identify the digital identifier schema.",
             instructions="Enter the required pattern for the identifiers of this digital identifier schema.",
         ),
         Property(

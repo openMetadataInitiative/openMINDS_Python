@@ -44,7 +44,7 @@ class TissueSampleCollection(LinkedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the tissue sample collection within a particular product.",
             instructions="Enter the identifier of this specimen set that is used within the corresponding data.",
         ),
         Property(
@@ -123,7 +123,7 @@ class TissueSampleCollection(LinkedMetadata):
             unique_items=True,
             min_items=1,
             required=True,
-            description="Reference to a point in time at which something or someone was studied in a particular mode or condition.",
+            description="Reference to a point in time at which the tissue sample collection was studied in a particular mode or condition.",
             instructions="Add all states in which this tissue sample collection was studied.",
         ),
         Property(

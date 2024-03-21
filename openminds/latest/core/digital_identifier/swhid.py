@@ -25,7 +25,7 @@ class SWHID(LinkedMetadata):
             "identifier",
             formatting="text/plain",
             required=True,
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the SWHID.",
             instructions="Enter the identifier for software source code artefacts provided by the Software Heritage archive ('SoftWare Heritage persistent IDentifier'; SWHID) as an internationalized resource identifier (IRI) following the defined pattern (i.e., 'https://archive.softwareheritage.org/' + SWHID).",
         ),
     ]

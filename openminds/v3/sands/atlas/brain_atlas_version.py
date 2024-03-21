@@ -34,7 +34,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "openminds.v3.controlled_terms.ProductAccessibility",
             "accessibility",
             required=True,
-            description="Level to which something is accessible to someone or something.",
+            description="Level to which something is accessible to the brain atlas version.",
             instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
@@ -78,7 +78,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the brain atlas version.",
             instructions="Enter a description (or abstract) of this research product version. Note that this version specific description will overwrite the description for the overarching dataset.",
         ),
         Property(
@@ -101,7 +101,7 @@ class BrainAtlasVersion(LinkedMetadata):
             str,
             "fullName",
             formatting="text/plain",
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the brain atlas version.",
             instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
         ),
         Property(
@@ -126,7 +126,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "homepage",
             IRI,
             "homepage",
-            description="Main website of something or someone.",
+            description="Main website of the brain atlas version.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
@@ -241,7 +241,7 @@ class BrainAtlasVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            description="Significant word or concept that are representative of something or someone.",
+            description="Significant word or concept that are representative of the brain atlas version.",
             instructions="Add all relevant keywords to this research product version either by adding controlled terms or by suggesting new terms.",
         ),
         Property(
@@ -264,7 +264,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "ontology_identifier",
             IRI,
             "ontologyIdentifier",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the brain atlas version registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) to the related ontological term matching this brain atlas version.",
         ),
         Property(
@@ -316,7 +316,7 @@ class BrainAtlasVersion(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the brain atlas version.",
             instructions="Enter a short name (or alias) for this research product version that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
         Property(

@@ -36,7 +36,7 @@ class ElectrodeArray(LinkedMetadata):
             "internalIdentifier",
             formatting="text/plain",
             required=True,
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the electrode array within a particular product.",
             instructions="Enter the identifier used for this electrode array within the file it is stored in.",
         ),
     ]

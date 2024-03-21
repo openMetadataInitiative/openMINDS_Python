@@ -36,7 +36,7 @@ class ElectrodeArray(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the electrode array.",
             instructions="Enter a short text describing this device.",
         ),
         Property(
@@ -82,7 +82,7 @@ class ElectrodeArray(LinkedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the electrode array within a particular product.",
             instructions="Enter the identifier (or label) of this electrode array that is used within the corresponding data files to identify this electrode array.",
         ),
         Property(
@@ -116,7 +116,7 @@ class ElectrodeArray(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the electrode array.",
             instructions="Enter a descriptive name for this device, preferably including the model name as defined by the manufacturer.",
         ),
         Property(

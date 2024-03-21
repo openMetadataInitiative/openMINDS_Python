@@ -25,7 +25,7 @@ class HANDLE(LinkedMetadata):
             "identifier",
             formatting="text/plain",
             required=True,
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the HANDLE.",
             instructions="Enter the identifier for a superset of DOIs provided by the Corporation for National Research Initiatives (HANDLE) as an internationalized resource identifier (IRI) following the defined pattern (i.e., 'http://hdl.handle.net/' + HANDLE).",
         ),
     ]

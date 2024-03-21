@@ -31,7 +31,7 @@ class ProductSource(LinkedMetadata):
             str,
             "identifier",
             formatting="text/plain",
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the product source.",
             instructions="Enter the identifier for this product, excluding its RRID (e.g., a catalog number).",
         ),
         Property(

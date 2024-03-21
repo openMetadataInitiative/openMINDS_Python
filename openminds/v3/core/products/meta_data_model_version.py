@@ -26,7 +26,7 @@ class MetaDataModelVersion(LinkedMetadata):
             "openminds.v3.controlled_terms.ProductAccessibility",
             "accessibility",
             required=True,
-            description="Level to which something is accessible to someone or something.",
+            description="Level to which something is accessible to the meta data model version.",
             instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
@@ -52,7 +52,7 @@ class MetaDataModelVersion(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the meta data model version.",
             instructions="Enter a description (or abstract) of this research product version. Note that this version specific description will overwrite the description for the overarching dataset.",
         ),
         Property(
@@ -85,7 +85,7 @@ class MetaDataModelVersion(LinkedMetadata):
             str,
             "fullName",
             formatting="text/plain",
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the meta data model version.",
             instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
         ),
         Property(
@@ -102,7 +102,7 @@ class MetaDataModelVersion(LinkedMetadata):
             "homepage",
             IRI,
             "homepage",
-            description="Main website of something or someone.",
+            description="Main website of the meta data model version.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
@@ -217,7 +217,7 @@ class MetaDataModelVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            description="Significant word or concept that are representative of something or someone.",
+            description="Significant word or concept that are representative of the meta data model version.",
             instructions="Add all relevant keywords to this research product version either by adding controlled terms or by suggesting new terms.",
         ),
         Property(
@@ -287,7 +287,7 @@ class MetaDataModelVersion(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the meta data model version.",
             instructions="Enter a short name (or alias) for this research product version that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
         Property(

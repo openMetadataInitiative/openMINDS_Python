@@ -25,7 +25,7 @@ class SoftwareVersion(LinkedMetadata):
             "openminds.v2.controlled_terms.ProductAccessibility",
             "accessibility",
             required=True,
-            description="Level to which something is accessible to someone or something.",
+            description="Level to which something is accessible to the software version.",
             instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
@@ -62,7 +62,7 @@ class SoftwareVersion(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the software version.",
             instructions="If necessary, enter a version specific description (abstract) for this research product version (max. 2000 characters, incl. spaces; no references). If left blank, the research product version will inherit the 'description' of it's corresponding research product.",
         ),
         Property(
@@ -101,7 +101,7 @@ class SoftwareVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             required=True,
-            description="Structure, form, or appearance that characterizes something or someone.",
+            description="Structure, form, or appearance that characterizes the software version.",
             instructions="Add all distinguishing characteristics of this software version (e.g. performance, portability, or functionality).",
         ),
         Property(
@@ -117,7 +117,7 @@ class SoftwareVersion(LinkedMetadata):
             str,
             "fullName",
             formatting="text/plain",
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the software version.",
             instructions="If necessary, enter a version specific descriptive full name (title) for this research product version. If left blank, the research product version will inherit the 'fullName' of it's corresponding research product.",
         ),
         Property(
@@ -145,7 +145,7 @@ class SoftwareVersion(LinkedMetadata):
             "homepage",
             "openminds.v2.core.URL",
             "homepage",
-            description="Main website of something or someone.",
+            description="Main website of the software version.",
             instructions="Add the uniform resource locator (URL) to the homepage of this research product version.",
         ),
         Property(
@@ -193,7 +193,7 @@ class SoftwareVersion(LinkedMetadata):
             min_items=1,
             max_items=5,
             formatting="text/plain",
-            description="Significant word or concept that are representative of something or someone.",
+            description="Significant word or concept that are representative of the software version.",
             instructions="Enter custom keywords to this research product version.",
         ),
         Property(
@@ -302,7 +302,7 @@ class SoftwareVersion(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the software version.",
             instructions="Enter a short name (alias) for this research product version (max. 30 characters, no space).",
         ),
         Property(

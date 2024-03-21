@@ -65,7 +65,7 @@ class LocalFile(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the local file.",
             instructions="Enter the name of this local file instance.",
         ),
         Property(

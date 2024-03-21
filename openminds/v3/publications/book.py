@@ -194,7 +194,7 @@ class Book(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            description="Significant word or concept that are representative of something or someone.",
+            description="Significant word or concept that are representative of the book.",
             instructions="Add all relevant keywords to this creative work either by adding controlled terms or by suggesting new terms.",
         ),
         Property(
@@ -217,7 +217,7 @@ class Book(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the book.",
             instructions="Enter the name (or title) of this creative work.",
         ),
         Property(

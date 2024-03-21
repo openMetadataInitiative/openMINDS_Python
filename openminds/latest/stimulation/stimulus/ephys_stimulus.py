@@ -37,7 +37,7 @@ class EphysStimulus(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the ephys stimulus.",
             instructions="Enter a short text describing this stimulus.",
         ),
         Property(
@@ -65,7 +65,7 @@ class EphysStimulus(LinkedMetadata):
             "internalIdentifier",
             formatting="text/plain",
             required=True,
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the ephys stimulus within a particular product.",
             instructions="Enter the identifier (or label) of this stimulus that is used within the corresponding data files to identify this stimulus.",
         ),
         Property(

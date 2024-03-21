@@ -62,7 +62,7 @@ class CoordinateSpace(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of something or somebody.",
+            description="Whole, non-abbreviated name of the coordinate space.",
             instructions="Enter a descriptive full name for this coordinate space.",
         ),
         Property(
@@ -70,7 +70,7 @@ class CoordinateSpace(LinkedMetadata):
             str,
             "homepage",
             formatting="text/plain",
-            description="Main website of something or someone.",
+            description="Main website of the coordinate space.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this brain atlas.",
         ),
         Property(
@@ -86,7 +86,7 @@ class CoordinateSpace(LinkedMetadata):
             str,
             "ontologyIdentifier",
             formatting="text/plain",
-            description="Term or code used to identify something or someone registered within a particular ontology.",
+            description="Term or code used to identify the coordinate space registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this coordinate space.",
         ),
         Property(
@@ -104,7 +104,7 @@ class CoordinateSpace(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of something or somebody.",
+            description="Shortened or fully abbreviated name of the coordinate space.",
             instructions="Enter a descriptive short name for this coordinate space.",
         ),
         Property(

@@ -25,7 +25,7 @@ class ISBN(LinkedMetadata):
             "identifier",
             formatting="text/plain",
             required=True,
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the ISBN.",
             instructions="Enter the numeric commercial book identifier 'International Standard Book Number' (ISBN) following the defined pattern (e.g., 123-4-567-89012-3 (13-digit ISBN) or 4-567-89012-3 (10-digit ISBN)).",
         ),
     ]

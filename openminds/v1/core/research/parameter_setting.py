@@ -26,7 +26,7 @@ class ParameterSetting(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             required=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the parameter setting.",
             instructions="Enter a description of this parameter setting.",
         ),
         Property(
@@ -35,7 +35,7 @@ class ParameterSetting(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the parameter setting.",
             instructions="Enter the name of this parameter setting.",
         ),
         Property(
@@ -43,7 +43,7 @@ class ParameterSetting(LinkedMetadata):
             ["openminds.v1.controlled_terms.BehavioralTask", "openminds.v1.controlled_terms.Technique"],
             "relevantFor",
             required=True,
-            description="Reference to what or whom something or someone bears significance.",
+            description="Reference to what or whom the parameter setting bears significance.",
             instructions="Add the technique or behavioral task where this parameter setting is used in.",
         ),
         Property(

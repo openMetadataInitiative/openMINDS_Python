@@ -35,7 +35,7 @@ class MolecularEntity(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of someone or something.",
+            description="Longer statement or account giving the characteristics of the molecular entity.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class MolecularEntity(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the molecular entity.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(

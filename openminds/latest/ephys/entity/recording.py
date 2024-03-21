@@ -52,7 +52,7 @@ class Recording(LinkedMetadata):
             str,
             "internalIdentifier",
             formatting="text/plain",
-            description="Term or code that identifies someone or something within a particular product.",
+            description="Term or code that identifies the recording within a particular product.",
             instructions="Enter the identifier (or label) of this recording that is used within the corresponding data files to identify this recording.",
         ),
         Property(
@@ -60,7 +60,7 @@ class Recording(LinkedMetadata):
             str,
             "name",
             formatting="text/plain",
-            description="Word or phrase that constitutes the distinctive designation of a being or thing.",
+            description="Word or phrase that constitutes the distinctive designation of the recording.",
             instructions="Enter a descriptive name for this recording.",
         ),
         Property(

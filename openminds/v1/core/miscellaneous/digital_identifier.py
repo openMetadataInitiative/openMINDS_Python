@@ -34,7 +34,7 @@ class DigitalIdentifier(LinkedMetadata):
             "identifier",
             formatting="text/plain",
             required=True,
-            description="Term or code used to identify something or someone.",
+            description="Term or code used to identify the digital identifier.",
             instructions="Enter the digital identifier of a resource.",
         ),
         Property(
@@ -42,7 +42,7 @@ class DigitalIdentifier(LinkedMetadata):
             "openminds.v1.core.DigitalIdentifierSchema",
             "identifierSchema",
             required=True,
-            description="Standard for creating a particular identifier for something or someone.",
+            description="Standard for creating a particular identifier for the digital identifier.",
             instructions="Add the used schema of this digital identifier.",
         ),
     ]
