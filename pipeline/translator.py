@@ -35,6 +35,22 @@ def generate_python_name(json_name, allow_multiple=False):
     return python_name
 
 
+def customize_description(property, obj_title):
+    """Replace generic text with a type-specific name."""
+    if obj_title.upper() == obj_title:  # for acronyms, e.g. DOI
+        obj_title_readable = obj_title
+    elif "UBERON" in obj_title:
+        obj_title_readable = obj_title
+    else:
+        obj_title_readable = re.sub("([A-Z])", " \g<0>", obj_title).strip().lower()
+    doc = property.get("description", "no description available")
+    doc = doc.replace("someone or something", f"the {obj_title_readable}")
+    doc = doc.replace("something or somebody", f"the {obj_title_readable}")
+    doc = doc.replace("something or someone", f"the {obj_title_readable}")
+    doc = doc.replace("a being or thing", f"the {obj_title_readable}")
+    return doc
+
+
 class PythonBuilder(object):
     """docstring"""
 
@@ -115,6 +131,7 @@ class PythonBuilder(object):
             else:
                 raise NotImplementedError
 
+        class_name = self._schema_payload["name"]
         openminds_type = self._schema_payload["_type"]
         if openminds_type in embedded:
             base_class = "EmbeddedMetadata"
@@ -150,15 +167,15 @@ class PythonBuilder(object):
                 property_name = property['namePlural']
             else:
                 property_name = property['name']
-            pythononic_name = generate_python_name(property_name)
+            pythonic_name = generate_python_name(property_name)
             properties.append(
                 {
-                    "name": pythononic_name,
+                    "name": pythonic_name,
                     "type": get_type(property),  # compress using JSON-LD context
                     "iri": property["name"],  # assumes IRI uses standard @vocab
                     "allow_multiple": allow_multiple,
                     "required": iri in self._schema_payload.get("required", []),
-                    "description": property.get("description", "no description available"),
+                    "description": customize_description(property, class_name),
                     "instructions": property.get("_instruction", "no instructions available"),
                     "formatting": property.get("formatting", None),
                     "multiline": property.get("multiline", None),
@@ -170,12 +187,12 @@ class PythonBuilder(object):
             # unused in property:  "nameForReverseLink"
             for instance in instances.values():
                 if property["name"] in instance:
-                    instance[pythononic_name] = instance.pop(property['name'])
+                    instance[pythonic_name] = instance.pop(property['name'])
         self.context = {
             "docstring": self._schema_payload.get("description", "<description not available>"),
             "base_class": base_class,
             "preamble": "",  # default value, may be updated below
-            "class_name": self._schema_payload["name"],
+            "class_name": class_name,
             "openminds_type": openminds_type,
             "schema_version": self.version,
             "properties": properties,
