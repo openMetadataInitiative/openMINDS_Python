@@ -106,16 +106,20 @@ class Node(metaclass=Registry):
             raise NameError(f"Unexpected arguments for {cls}: {tuple(data_copy.keys())}")
         return cls(**deserialized_data)
 
-    def validate(self):
+    def validate(self, ignore=None):
         """
         Check whether all constraints are satisfied.
+
+        Arguments:
+            ignore: an optional list of check types that should be ignored
+                    ("required", "type", "multiplicity")
 
         Returns a dict containing information about any validation failures.
         """
         failures = defaultdict(list)
         for property in self.properties:
             value = getattr(self, property.name, None)
-            for key, values in property.validate(value).items():
+            for key, values in property.validate(value, ignore=ignore).items():
                 failures[key] += values
         return failures
 
