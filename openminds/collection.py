@@ -181,9 +181,13 @@ class Collection:
         for node in self.nodes.values():
             node._resolve_links(self.nodes)
 
-    def validate(self):
+    def validate(self, ignore=None):
         """
         Check whether all constraints are satisfied.
+
+        Arguments:
+            ignore: an optional list of check types that should be ignored
+                    ("required", "type", "multiplicity")
 
         Returns a dict containing information about any validation failures.
         """

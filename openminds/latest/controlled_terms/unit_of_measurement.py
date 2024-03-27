@@ -335,6 +335,12 @@ UnitOfMeasurement.picoampere = UnitOfMeasurement(
     preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0010054",
     synonyms=["pA"],
 )
+UnitOfMeasurement.postnatal_day = UnitOfMeasurement(
+    id="https://openminds.ebrains.eu/instances/unitOfMeasurement/postnatalDay",
+    definition="'Postnatal day' is a specific unit to measure the age of an organism that is born live (viviparous animals), starting with the day of birth (postnatal day 0, or short: P0).",
+    name="postnatal day",
+    synonyms=["P"],
+)
 UnitOfMeasurement.radian = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/radian",
     definition="A 'radian' is the SI unit for measuring angles. One 'radian' defines the arc of a circle with the same length as the radius of that circle.",

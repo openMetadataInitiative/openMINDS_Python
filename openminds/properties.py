@@ -89,15 +89,24 @@ class Property:
             self._resolved_types = True
         return self._types
 
-    def validate(self, value):
+    def validate(self, value, ignore=None):
         """
         Check whether `value` satisfies all constraints.
 
+        Arguments:
+            value: the value to be checked
+            ignore: an optional list of check types that should be ignored
+                    ("required", "type", "multiplicity")
+
         Returns a dict containing information about any validation failures.
         """
+        if ignore is None:
+            ignore = []
+        if not isinstance(ignore, (list, tuple)):
+            raise TypeError("`ignore` must be a list or tuple")
         failures = defaultdict(list)
         if value is None:
-            if self.required:
+            if self.required and "required" not in ignore:
                 failures["required"].append(f"{self.name} is required, but was not provided")
         else:
             if self.multiple:
@@ -105,20 +114,21 @@ class Property:
                     value = [value]
                 for item in value:
                     if not isinstance(item, self.types):
-                        failures["type"].append(
-                            f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
-                            f"value contains {type(item)}"
-                        )
+                        if "type" not in ignore:
+                            failures["type"].append(
+                                f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
+                                f"value contains {type(item)}"
+                            )
                     elif isinstance(item, Node):
-                        failures.update(item.validate())
+                        failures.update(item.validate(ignore=ignore))
                 if self.min_items:
-                    if len(value) < self.min_items:
+                    if len(value) < self.min_items and "multiplicity" not in ignore:
                         failures["multiplicity"].append(
                             f"{self.name}: minimum {self.min_items} items required, "
                             f"value only contains {len(value)}"
                         )
                 if self.max_items:
-                    if len(value) > self.max_items:
+                    if len(value) > self.max_items and "multiplicity" not in ignore:
                         failures["multiplicity"].append(
                             f"{self.name}: maximum {self.max_items} items allowed, " f"value contains {len(value)}"
                         )
@@ -128,18 +138,21 @@ class Property:
                     except TypeError:  # unhashable, i.e. can't anyway check if items are unique
                         pass
                     else:
-                        if len(unique_items) < len(value):
+                        if len(unique_items) < len(value) and "multiplicity" not in ignore:
                             failures["multiplicity"].append(f"{self.name}: items in array should be unique")
             elif isinstance(value, (list, tuple)):
-                failures["multiplicity"].append(
-                    f"{self.name} does not accept multiple values, but contains {len(value)}"
-                )
+                if "multiplicity" not in ignore:
+                    failures["multiplicity"].append(
+                        f"{self.name} does not accept multiple values, but contains {len(value)}"
+                    )
             elif not isinstance(value, self.types):
-                failures["type"].append(
-                    f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, " f"value is {type(value)}"
-                )
+                if "type" not in ignore:
+                    failures["type"].append(
+                        f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
+                        f"value is {type(value)}"
+                    )
             elif isinstance(value, Node):
-                failures.update(value.validate())
+                failures.update(value.validate(ignore=ignore))
         # todo: check formatting, multiline
         return failures
 
