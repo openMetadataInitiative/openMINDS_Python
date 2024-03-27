@@ -10,6 +10,7 @@ from __future__ import annotations
 from datetime import date, datetime
 from collections import defaultdict
 import json
+import re
 from typing import Union
 from .registry import Registry
 
@@ -175,6 +176,7 @@ class LinkedMetadata(Node):
     """
     A Python representation of a metadata node that should have a unique identifier.
     """
+
     _instance_lookup = None
 
     def __init__(self, id=None, **properties):
@@ -221,13 +223,14 @@ class IRI:
     """
     Representation of an International Resource Identifier
     """
+    pattern = re.compile(r"^\w+:\S+$")
 
     def __init__(self, value: Union[str, IRI]):
         if isinstance(value, IRI):
             iri = value.value
         else:
             iri = value
-        if not iri.startswith("http"):
+        if not IRI.pattern.match(iri):
             raise ValueError("Invalid IRI")
         self.value: str = iri
 
@@ -242,3 +245,9 @@ class IRI:
 
     def to_jsonld(self):
         return self.value
+
+    def validate(self, ignore=None):
+        failures = defaultdict(list)
+        if self.value.startswith("file") and not "value" in ignore:
+            failures["value"].append("IRI points to a local file path")
+        return failures
