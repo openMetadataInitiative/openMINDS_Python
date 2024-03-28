@@ -10,8 +10,10 @@ from __future__ import annotations
 from datetime import date, datetime
 from collections import defaultdict
 import json
-import re
 from typing import Union
+
+import rfc3987
+
 from .registry import Registry
 
 
@@ -223,14 +225,13 @@ class IRI:
     """
     Representation of an International Resource Identifier
     """
-    pattern = re.compile(r"^\w+:\S+$")
 
     def __init__(self, value: Union[str, IRI]):
         if isinstance(value, IRI):
             iri = value.value
         else:
             iri = value
-        if not IRI.pattern.match(iri):
+        if not rfc3987.match(iri, rule="IRI"):
             raise ValueError("Invalid IRI")
         self.value: str = iri
 
@@ -247,7 +248,9 @@ class IRI:
         return self.value
 
     def validate(self, ignore=None):
+        if ignore is None:
+            ignore = []
         failures = defaultdict(list)
-        if self.value.startswith("file") and not "value" in ignore:
+        if self.value.startswith("file") and "value" not in ignore:
             failures["value"].append("IRI points to a local file path")
         return failures

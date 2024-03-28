@@ -2,7 +2,9 @@
 Tests for openMINDS Python module
 """
 
-from openminds.base import Node
+import pytest
+
+from openminds.base import Node, IRI
 from openminds.latest import (
     chemicals,
     computation,
@@ -50,3 +52,25 @@ def test_json_roundtrip():
             data = node.to_jsonld(include_empty_properties=False)
             recreated_node = cls.from_jsonld(data)
             assert recreated_node.to_jsonld(include_empty_properties=False) == data
+
+
+def test_IRI():
+    valid_iris = [
+        "https://example.com/path/to/my/file.txt",
+        "file:///path/to/my/file.txt"
+    ]
+    for value in valid_iris:
+        iri = IRI(value)
+        assert iri.value == value
+        failures = iri.validate()
+        if value.startswith("http"):
+            assert not failures
+        else:
+            assert failures["value"][0] == "IRI points to a local file path"
+    invalid_iris = [
+        "/path/to/my/file.txt"
+    ]
+    for value in invalid_iris:
+        with pytest.raises(ValueError) as exc_info:
+            iri = IRI(value)
+        assert exc_info.value.args[0] == "Invalid IRI"

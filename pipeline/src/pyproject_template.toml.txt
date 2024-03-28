@@ -19,7 +19,9 @@ classifiers = [
     "Programming Language :: Python :: 3"
 ]
 keywords = ["openMINDS", "Open Metadata Initiative", "metadata"]
-dependencies=[]
+dependencies=[
+    "rfc3987"
+]
 
 [project.optional-dependencies]
 
