@@ -11,6 +11,9 @@ from datetime import date, datetime
 from collections import defaultdict
 import json
 from typing import Union
+
+import rfc3987
+
 from .registry import Registry
 
 
@@ -228,7 +231,7 @@ class IRI:
             iri = value.value
         else:
             iri = value
-        if not iri.startswith("http"):
+        if not rfc3987.match(iri, rule="IRI"):
             raise ValueError("Invalid IRI")
         self.value: str = iri
 
@@ -243,3 +246,11 @@ class IRI:
 
     def to_jsonld(self):
         return self.value
+
+    def validate(self, ignore=None):
+        if ignore is None:
+            ignore = []
+        failures = defaultdict(list)
+        if self.value.startswith("file") and "value" not in ignore:
+            failures["value"].append("IRI points to a local file path")
+        return failures
