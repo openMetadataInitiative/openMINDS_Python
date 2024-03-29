@@ -1,6 +1,6 @@
 [project]
 name = "openMINDS"
-version = "0.2.1"
+version = "0.2.2"
 description = "Python library for interacting with openMINDS metadata schemas"
 readme = "README.md"
 authors = [

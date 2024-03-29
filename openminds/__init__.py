@@ -4,7 +4,7 @@ openMINDS Python package
 # Copyright (c) 2023 openMetadataInitiative
 """
 
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 
 from .base import Node, EmbeddedMetadata, LinkedMetadata, IRI
 from .collection import Collection
