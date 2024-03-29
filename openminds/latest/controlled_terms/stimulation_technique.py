@@ -147,9 +147,9 @@ StimulationTechnique.drifting_grating_visual_stimulation = StimulationTechnique(
 StimulationTechnique.electrical_stimulation = StimulationTechnique(
     id="https://openminds.ebrains.eu/instances/stimulationTechnique/electricalStimulation",
     definition="A technique used to elicit a reaction by an electrical stimulus.",
-    interlex_identifier="http://uri.interlex.org/ilx_0739699",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739699"),
     name="electrical stimulation",
-    preferred_ontology_identifier="http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/188",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/188"),
 )
 StimulationTechnique.figure_ground_visual_stimulation = StimulationTechnique(
     id="https://openminds.ebrains.eu/instances/stimulationTechnique/figure-groundVisualStimulation",

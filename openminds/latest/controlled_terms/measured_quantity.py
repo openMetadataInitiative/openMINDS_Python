@@ -149,9 +149,9 @@ MeasuredQuantity.liquid_junction_potential = MeasuredQuantity(
 MeasuredQuantity.membrane_potential = MeasuredQuantity(
     id="https://openminds.ebrains.eu/instances/measuredQuantity/membranePotential",
     definition="A quality inhering in a cell's plasma membrane by virtue of the electric potential difference across it.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0106774",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106774"),
     name="membrane potential",
-    preferred_ontology_identifier="http://uri.interlex.org/base/ilx_0106774",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0106774"),
 )
 MeasuredQuantity.seal_resistance = MeasuredQuantity(
     id="https://openminds.ebrains.eu/instances/measuredQuantity/sealResistance",

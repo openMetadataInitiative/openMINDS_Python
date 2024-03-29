@@ -128,7 +128,7 @@ CellType.aromatase_expressing_neuron = CellType(
 CellType.astrocyte = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/astrocyte",
     definition="'Astrocytes' are a class of large, star-shaped neuroglial (macroglial) cells in the central nervous system.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0100947",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100947"),
     name="astrocyte",
     synonyms=["astroglial cell"],
 )
@@ -172,19 +172,19 @@ CellType.cerebellar_interneuron = CellType(
 CellType.cerebellum_basket_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/cerebellumBasketCell",
     definition="An inhibitory GABAergic interneurons of the cerebellum, enmeshing the cell body of another neuron with its terminal axon ramifications.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0101964",
-    knowledge_space_link="https://knowledge-space.org/wiki/SAO:666951243#cerebellum-basket-cell",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101964"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:666951243#cerebellum-basket-cell"),
     name="cerebellum basket cell",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/sao666951243",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao666951243"),
     synonyms=["cerebellar basket cell"],
 )
 CellType.cerebellum_golgi_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/cerebellumGolgiCell",
     definition="An inhibitory interneuron found within the granular layer of the cerebellum.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0101966",
-    knowledge_space_link="https://knowledge-space.org/wiki/NIFEXT:129#golgi-cell",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101966"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:129#golgi-cell"),
     name="cerebellum Golgi cell",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/sao1415726815",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1415726815"),
     synonyms=[
         "cerebellar Golgi cell",
         "cerebellar Golgi neuron",
@@ -196,19 +196,19 @@ CellType.cerebellum_golgi_cell = CellType(
 CellType.cerebellum_granule_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/cerebellumGranuleCell",
     definition="'Cerebellum granule cells' form the thick granular layer of the cerebellar cortex and typically have small cell bodies but varying functions.",
-    interlex_identifier="http://uri.interlex.org/ilx_0101967",
-    knowledge_space_link="https://knowledge-space.org/wiki/NIFEXT:128#cerebellum-granule-cell",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0101967"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:128#cerebellum-granule-cell"),
     name="cerebellum granule cell",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nifext_128",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_128"),
     synonyms=["cerebellar granule cell", "cerebellar granule neuron", "cerebellum granule neuron"],
 )
 CellType.cerebellum_stellate_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/cerebellumStellateNeuron",
     definition="Any cerebellar neuron that has a star-like shape formed by dendritic processes radiating from the cell body.",
-    interlex_identifier="http://uri.interlex.org/ilx_0101975",
-    knowledge_space_link="https://knowledge-space.org/wiki/NIFEXT:130#cerebellum-stellate-cell",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0101975"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:130#cerebellum-stellate-cell"),
     name="cerebellum stellate neuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nifext_130",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_130"),
     synonyms=["cerebellar stellate cell", "cerebellar stellate neuron", "cerebellum stellate cell"],
 )
 CellType.cholecystokinin_expressing_neuron = CellType(
@@ -248,19 +248,19 @@ CellType.cholinergic_interneuron = CellType(
 CellType.cholinergic_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/cholinergicNeuron",
     definition="Any neuron that releases some acetylcholine as a neurotransmitter",
-    interlex_identifier="http://uri.interlex.org/ilx_0102131",
-    knowledge_space_link="https://knowledge-space.org/wiki/NLXNEURNT:090802#cholinergic-neuron",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0102131"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXNEURNT:090802#cholinergic-neuron"),
     name="cholinergic neuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nlx_148005",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_148005"),
     synonyms=["ACh neuron"],
 )
 CellType.cortical_basket_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/corticalBasketCell",
     definition="An inhibitory GABAergic interneurons of the cortex, enmeshing the cell body of another neuron with its terminal axon ramifications.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0107351",
-    knowledge_space_link="https://knowledge-space.org/wiki/NIFEXT:56#neocortex-basket-cell",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107351"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:56#neocortex-basket-cell"),
     name="cortical basket cell",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nifext_56",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_56"),
     synonyms=["basket cell", "cortical basket neuron", "neocortex basket cell", "neocortical basket cell"],
 )
 CellType.cortical_interneuron = CellType(
@@ -302,10 +302,10 @@ CellType.d2_receptor_expressing_neuron = CellType(
 CellType.dopaminergic_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/dopaminergicNeuron",
     definition="Any neuron that releases some dopamine as a neurotransmitter",
-    interlex_identifier="http://uri.interlex.org/ilx_0103395",
-    knowledge_space_link="https://knowledge-space.org/wiki/NLXNEURNT:090806#dopaminergic-neuron",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0103395"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXNEURNT:090806#dopaminergic-neuron"),
     name="dopaminergic neuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nlx_147835",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_147835"),
     synonyms=["DA neuron"],
 )
 CellType.excitatory_neuron = CellType(
@@ -323,7 +323,7 @@ CellType.fast_spiking_interneuron = CellType(
 CellType.glial_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/glialCell",
     definition="A 'glial cell' is a non-neuronal cell of the nervous system. Glial cells provide physical support, respond to injury, regulate the ionic and chemical composition of the extracellular milieu, guide neuronal migration during development, and exchange metabolites with neurons.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0104634",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104634"),
     name="glial cell",
     synonyms=["neuroglial cell"],
 )
@@ -336,10 +336,10 @@ CellType.granule_neuron = CellType(
 CellType.hippocampus_ca1_pyramidal_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/hippocampusCA1PyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body that is located in the cornu ammonis 1 (CA1) of the hippocampus.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0105031",
-    knowledge_space_link="https://knowledge-space.org/wiki/SAO:830368389#hippocampus-ca1-pyramidal-cell",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105031"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:830368389#hippocampus-ca1-pyramidal-cell"),
     name="hippocampus CA1 pyramidal neuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/sao830368389",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao830368389"),
     synonyms=[
         "CA1 pyramidal neuron",
         "cornu ammonis 1 pyramidal neuron",
@@ -361,13 +361,13 @@ CellType.interneuron = CellType(
 CellType.macroglial_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/macroglialCell",
     definition="'Macroglial cells' are large glial cells in the central nervous system.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0106438",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106438"),
     name="macroglial cell",
 )
 CellType.microglial_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/microglialCell",
     definition="'Microglial cells' are small, migratory, phagocytic, interstitial glial cells in the central nervous system.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0106919",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106919"),
     name="microglial cell",
 )
 CellType.motor_neuron = CellType(
@@ -377,10 +377,10 @@ CellType.motor_neuron = CellType(
 CellType.neocortex_layer2_3_pyramidal_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/neocortexLayer2-3PyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body that is located in layer 2/3 of the neocortex.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0107387",
-    knowledge_space_link="https://knowledge-space.org/wiki/NIFEXT:49#neocortex-pyramidal-cell-layer-2-3",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107387"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:49#neocortex-pyramidal-cell-layer-2-3"),
     name="neocortex layer 2/3 pyramidal neuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nifext_49",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_49"),
     synonyms=[
         "layer 2/3 pyramidal cell",
         "layer 2/3 pyramidal neuron",
@@ -393,7 +393,7 @@ CellType.neocortex_layer2_3_pyramidal_neuron = CellType(
 CellType.neocortex_layer5_tufted_pyramidal_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/neocortexLayer5TuftedPyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body found in layer 5 of the neocortex and projects to subcortical areas.",
-    interlex_identifier="http://uri.interlex.org/ilx_0738209",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0738209"),
     name="neocortex layer 5 tufted pyramidal neuron",
     synonyms=[
         "L5 TPC",
@@ -406,10 +406,10 @@ CellType.neocortex_layer5_tufted_pyramidal_neuron = CellType(
 CellType.neostriatum_cholinergic_interneuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/neostriatumCholinergicInterneuron",
     definition="An inhibitory interneuron in the caudate nucleus and putamen which mainly uses the neurotrasmitter acetylcholine (ACh).",
-    interlex_identifier="http://uri.interlex.org/ilx_0107403",
-    knowledge_space_link="https://knowledge-space.org/wiki/SAO:1866881837#neostriatum-cholinergic-cell",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0107403"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:1866881837#neostriatum-cholinergic-cell"),
     name="neostriatum cholinergic interneuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/sao1866881837",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1866881837"),
     synonyms=[
         "cholinergic striatal neuron",
         "CIN",
@@ -424,9 +424,9 @@ CellType.neostriatum_cholinergic_interneuron = CellType(
 CellType.neostriatum_direct_pathway_spiny_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/neostriatumDirectPathwaySpinyNeuron",
     definition="The principal projection neuron of the caudate and putamen that excite their output structure.",
-    interlex_identifier="http://uri.interlex.org/ilx_0107404",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0107404"),
     name="neostriatum direct pathway spiny neuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nlx_149135",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_149135"),
     synonyms=[
         "direct pathway medium spiny neuron",
         "direct pathway medium-sized spiny neuron",
@@ -438,9 +438,9 @@ CellType.neostriatum_direct_pathway_spiny_neuron = CellType(
 CellType.neostriatum_indirect_pathway_spiny_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/neostriatumIndirectPathwaySpinyNeuron",
     definition="The principal projection neuron of the caudate and putamen that inhibit their output structure.",
-    interlex_identifier="http://uri.interlex.org/ilx_0107405",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0107405"),
     name="neostriatum indirect pathway spiny neuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nlx_149136",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_149136"),
     synonyms=[
         "iMSN",
         "indirect pathway medium spiny neuron",
@@ -452,7 +452,7 @@ CellType.neostriatum_indirect_pathway_spiny_neuron = CellType(
 CellType.neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/neuron",
     definition="A 'neuron' is a basic cellular unit of nervous tissue which can receive, conduct, and transmit electrical impulses.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0107497",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107497"),
     name="neuron",
     synonyms=["nerve cell", "neurone"],
 )
@@ -507,9 +507,9 @@ CellType.progenitor_cell = CellType(
 CellType.purkinje_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/PurkinjeCell",
     definition="A class of GABAergic inhibitory neurons located in the cerebellum with pear-shape cell bodies arranged in a single layer, typically one primary dendrites and an elaborate dendritic tree heavily invested with dendritic spines.",
-    interlex_identifier="http://uri.interlex.org/ilx_0101974",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0101974"),
     name="Purkinje cell",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/sao471801888",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao471801888"),
     synonyms=[
         "cerebellar Punkinje cell",
         "cerebellar Punkinje neuron",
@@ -552,9 +552,9 @@ CellType.spinal_interneuron = CellType(
 CellType.spiny_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/spinyNeuron",
     definition="Any neuron characterized by a high density of dendritic spines on the dendrites.",
-    knowledge_space_link="https://knowledge-space.org/wiki/NLXCELL:100601#spiny-neuron",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXCELL:100601#spiny-neuron"),
     name="spiny neuron",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/nlx_100601",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_100601"),
 )
 CellType.stellate_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/stellateNeuron",
@@ -568,25 +568,25 @@ CellType.striatal_interneuron = CellType(
 CellType.striatum_medium_spiny_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/striatumMediumSpinyNeuron",
     definition="A special type of GABAergic neuron with large dendritic trees that is located in the striatum.",
-    interlex_identifier="http://uri.interlex.org/ilx_0784362",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0784362"),
     name="striatum medium spiny neuron",
-    preferred_ontology_identifier="http://uri.interlex.org/npo/uris/neurons/35",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/npo/uris/neurons/35"),
     synonyms=["MSN", "spiny projection neuron", "SPN", "striatal medium spiny neuron"],
 )
 CellType.vascular_endothelial_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/vascularEndothelialCell",
     definition="Cells that constitute the inner cellular lining of arteries, veins and capillaries.",
-    interlex_identifier="http://uri.interlex.org/ilx_0112265",
-    knowledge_space_link="https://knowledge-space.org/wiki/SAO:1543450574#vascular-endothelial-cell",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0112265"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:1543450574#vascular-endothelial-cell"),
     name="vascular endothelial cell",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/sao1543450574",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1543450574"),
     synonyms=["endothelial cell"],
 )
 CellType.vascular_smooth_muscle_cell = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/vascularSmoothMuscleCell",
     definition="A smooth muscle cell assocatiated with the vasculature.",
     name="vascular smooth muscle cell",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/CL_0000359",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CL_0000359"),
     synonyms=["vascular associated smooth muscle cell", "VSMC"],
 )
 CellType.vasoactive_intestinal_peptide_expressing_neuron = CellType(

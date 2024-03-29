@@ -4,6 +4,7 @@ A representation of a range of quantitative values.
 
 # this file was auto-generated!
 
+from numbers import Real
 
 from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
@@ -21,7 +22,7 @@ class QuantitativeValueRange(EmbeddedMetadata):
     properties = [
         Property(
             "max_value",
-            float,
+            Real,
             "maxValue",
             required=True,
             description="Greatest quantity attained or allowed.",
@@ -36,7 +37,7 @@ class QuantitativeValueRange(EmbeddedMetadata):
         ),
         Property(
             "min_value",
-            float,
+            Real,
             "minValue",
             required=True,
             description="Smallest quantity attained or allowed.",

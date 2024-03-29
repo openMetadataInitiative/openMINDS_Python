@@ -4,6 +4,7 @@ Structured information on a quantitative value.
 
 # this file was auto-generated!
 
+from numbers import Real
 
 from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
@@ -21,7 +22,7 @@ class QuantitativeValue(EmbeddedMetadata):
     properties = [
         Property(
             "uncertainties",
-            float,
+            Real,
             "uncertainty",
             multiple=True,
             unique_items=False,
@@ -39,7 +40,7 @@ class QuantitativeValue(EmbeddedMetadata):
         ),
         Property(
             "value",
-            float,
+            Real,
             "value",
             required=True,
             description="Entry for a property.",

@@ -122,17 +122,17 @@ class SoftwareFeature(LinkedMetadata):
 SoftwareFeature.augmented_reality = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/augmentedReality",
     name="augmented reality",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q254183",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q254183"),
 )
 SoftwareFeature.commandline_interface = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/commandlineInterface",
     name="commandline interface",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q189053",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q189053"),
 )
 SoftwareFeature.control = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/control",
     name="control",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q29017603",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q29017603"),
 )
 SoftwareFeature.data_acquisition = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/dataAcquisition",
@@ -141,27 +141,27 @@ SoftwareFeature.data_acquisition = SoftwareFeature(
 SoftwareFeature.data_processing = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/dataProcessing",
     name="data processing",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q6661985",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q6661985"),
 )
 SoftwareFeature.desktop_environment = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/desktopEnvironment",
     name="desktop environment",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q56155",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q56155"),
 )
 SoftwareFeature.graph_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/graphDataTypes",
     name="graph data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q2479726",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q2479726"),
 )
 SoftwareFeature.graphical_user_interface = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/graphicalUserInterface",
     name="graphical user interface",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q782543",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q782543"),
 )
 SoftwareFeature.heterogeneous_architecture = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/heterogeneousArchitecture",
     name="heterogeneous architecture",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q17111997",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q17111997"),
 )
 SoftwareFeature.interactive_analysis = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/interactiveAnalysis",
@@ -170,57 +170,57 @@ SoftwareFeature.interactive_analysis = SoftwareFeature(
 SoftwareFeature.matrix_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/matrixDataTypes",
     name="matrix data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q44337",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q44337"),
 )
 SoftwareFeature.metadata_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/metadataDataTypes",
     name="metadata data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q180160",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q180160"),
 )
 SoftwareFeature.mobile_device = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/mobileDevice",
     name="mobile device",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q5082128",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q5082128"),
 )
 SoftwareFeature.modelling = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/modelling",
     name="modelling",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q1116876",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q1116876"),
 )
 SoftwareFeature.parallel_programming = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/parallelProgramming",
     name="parallel programming",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q232661",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q232661"),
 )
 SoftwareFeature.performance_measurement = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/performanceMeasurement",
     name="performance measurement",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q1771949",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q1771949"),
 )
 SoftwareFeature.positional_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/positionalDataTypes",
     name="positional data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q1477538",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q1477538"),
 )
 SoftwareFeature.presentation_visualisation = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/presentationVisualisation",
     name="presentation visualisation",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q451553",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q451553"),
 )
 SoftwareFeature.profiling = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/profiling",
     name="profiling",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q1138496",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q1138496"),
 )
 SoftwareFeature.provenance = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/provenance",
     name="provenance",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q30105403",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q30105403"),
 )
 SoftwareFeature.raster_image_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/rasterImageDataTypes",
     name="raster image data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q182270",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q182270"),
 )
 SoftwareFeature.scripting_interface = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/scriptingInterface",
@@ -229,22 +229,22 @@ SoftwareFeature.scripting_interface = SoftwareFeature(
 SoftwareFeature.simulation = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/simulation",
     name="simulation",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q925667",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q925667"),
 )
 SoftwareFeature.statistical_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/statisticalDataTypes",
     name="statistical data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q7604387",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q7604387"),
 )
 SoftwareFeature.tensor_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/tensorDataTypes",
     name="tensor data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q188524",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q188524"),
 )
 SoftwareFeature.three_d_geometry_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/3DGeometryDataTypes",
     name="3D geometry data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q189177",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q189177"),
 )
 SoftwareFeature.three_d_scalar_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/3DScalarDataTypes",
@@ -261,15 +261,15 @@ SoftwareFeature.tiled_display_wall = SoftwareFeature(
 SoftwareFeature.time_series_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/timeSeriesDataTypes",
     name="time series data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q186588",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q186588"),
 )
 SoftwareFeature.vector_image_data_types = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/vectorImageDataTypes",
     name="vector image data types",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q170130",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q170130"),
 )
 SoftwareFeature.virtual_reality = SoftwareFeature(
     id="https://openminds.ebrains.eu/instances/softwareFeature/virtualReality",
     name="virtual reality",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q170519",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q170519"),
 )

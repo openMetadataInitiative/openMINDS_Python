@@ -473,7 +473,7 @@ CommonCoordinateSpaceVersion.amb_ccf_v1 = CommonCoordinateSpaceVersion(
     accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/PIR"},
     full_name="Allen Mouse Brain Common Coordinate Framework",
-    homepage="https://portal.brain-map.org/",
+    homepage=IRI("https://portal.brain-map.org/"),
     how_to_cite="Lein E, Hawrylycz M, Ao N, et al.; 'Genome-wide atlas of gene expression in the adult mouse brain.'; Nature; Jan 2007; 445(7124):168–176. [doi: 10.1038/nature05453](https://doi.org/10.1038/nature05453)",
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
     short_name="Allen Mouse Brain CCF",
@@ -486,7 +486,7 @@ CommonCoordinateSpaceVersion.amb_ccf_v2 = CommonCoordinateSpaceVersion(
     accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/PIR"},
     full_name="Allen Mouse Brain Common Coordinate Framework",
-    homepage="https://portal.brain-map.org/",
+    homepage=IRI("https://portal.brain-map.org/"),
     how_to_cite="Oh S, Harris J, Ng L, et al.; 'A mesoscale connectome of the mouse brain.'; Nature; Apr 2014; 508(7495):207–214. [doi: 10.1038/nature13186](https://doi.org/10.1038/nature13186)",
     is_new_version_of={"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v1"},
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
@@ -505,7 +505,7 @@ CommonCoordinateSpaceVersion.amb_ccf_v3 = CommonCoordinateSpaceVersion(
         {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 0.0},
     ],
     full_name="Allen Mouse Brain Common Coordinate Framework",
-    homepage="https://portal.brain-map.org/",
+    homepage=IRI("https://portal.brain-map.org/"),
     how_to_cite="Wang Q, Ding S-L, Li Y, et al.; 'The Allen Mouse Brain Common Coordinate Framework: A 3D Reference Atlas.'; Cell; May 2020; 181(4):936-953.e20. [doi: 10.1016/j.cell.2020.04.007](https://doi.org/10.1016/j.cell.2020.04.007)",
     is_alternative_version_of=[
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v3-RAS"}
@@ -528,7 +528,7 @@ CommonCoordinateSpaceVersion.amb_ccf_v3_ras = CommonCoordinateSpaceVersion(
         {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 0.0},
     ],
     full_name="Allen Mouse Brain Common Coordinate Framework",
-    homepage="https://portal.brain-map.org/",
+    homepage=IRI("https://portal.brain-map.org/"),
     how_to_cite="Wang Q, Ding S-L, Li Y, et al.; 'The Allen Mouse Brain Common Coordinate Framework: A 3D Reference Atlas.'; Cell; May 2020; 181(4):936-953.e20. [doi: 10.1016/j.cell.2020.04.007](https://doi.org/10.1016/j.cell.2020.04.007)",
     is_alternative_version_of=[
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v3"}
@@ -555,7 +555,7 @@ CommonCoordinateSpaceVersion.big_brain_2015 = CommonCoordinateSpaceVersion(
         {"@id": "https://openminds.ebrains.eu/instances/person/amuntsKatrin"},
     ],
     full_name="BigBrain Whole-Brain Model",
-    homepage="https://bigbrainproject.org/",
+    homepage=IRI("https://bigbrainproject.org/"),
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
     release_date="2013-06-21",
     short_name="BigBrain Model",
@@ -651,7 +651,7 @@ CommonCoordinateSpaceVersion.mni__colin27_1998 = CommonCoordinateSpaceVersion(
         {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 67.0},
     ],
     full_name="MNI Colin27 Average Brain Stereotaxic Registration Model",
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases",
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
     is_alternative_version_of=[
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-Colin27_2008"}
     ],
@@ -664,7 +664,7 @@ CommonCoordinateSpaceVersion.mni__colin27_2008 = CommonCoordinateSpaceVersion(
     id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-Colin27_2008",
     abbreviation="MNI-Colin27",
     full_name="MNI Colin27 Average Brain Stereotaxic Registration Model",
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases",
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
     is_alternative_version_of=[
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNIColin27_1998"}
     ],
@@ -711,7 +711,9 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009b_asym = CommonCoordinate
     id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009b-asym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
@@ -721,7 +723,9 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009b_sym = CommonCoordinateS
     id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009b-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
@@ -737,7 +741,9 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009c_asym = CommonCoordinate
         {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 78.0},
     ],
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
@@ -747,7 +753,9 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009c_sym = CommonCoordinateS
     id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009c-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
@@ -757,7 +765,7 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_6_g_sym = CommonCoordinateSpa
     id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-6G-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear",
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear"),
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
@@ -768,7 +776,7 @@ CommonCoordinateSpaceVersion.whssd_v1 = CommonCoordinateSpaceVersion(
     abbreviation="WHSSD",
     anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/ALS"},
     full_name="Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)",
-    homepage="https://www.nitrc.org/projects/whs-sd-atlas",
+    homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
     release_date="2014-07-16",
     short_name="WHS of the SD Rat Brain",
@@ -784,7 +792,7 @@ CommonCoordinateSpaceVersion.whssd_v1_01 = CommonCoordinateSpaceVersion(
         {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 247.9999936},
     ],
     full_name="Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)",
-    homepage="https://www.nitrc.org/projects/whs-sd-atlas",
+    homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
     is_new_version_of={"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/WHSSD_v1"},
     native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
     release_date="2014-07-16",

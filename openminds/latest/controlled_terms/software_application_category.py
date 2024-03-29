@@ -122,30 +122,30 @@ class SoftwareApplicationCategory(LinkedMetadata):
 SoftwareApplicationCategory.application = SoftwareApplicationCategory(
     id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/application",
     name="application",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q166142",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q166142"),
 )
 SoftwareApplicationCategory.library = SoftwareApplicationCategory(
     id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/library",
     name="library",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q188860",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q188860"),
 )
 SoftwareApplicationCategory.middleware = SoftwareApplicationCategory(
     id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/middleware",
     name="middleware",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q146768",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q146768"),
 )
 SoftwareApplicationCategory.module = SoftwareApplicationCategory(
     id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/module",
     name="module",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q11883090",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q11883090"),
 )
 SoftwareApplicationCategory.notebook = SoftwareApplicationCategory(
     id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/notebook",
     name="notebook",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q28405706",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q28405706"),
 )
 SoftwareApplicationCategory.plugin = SoftwareApplicationCategory(
     id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/plugin",
     name="plugin",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q184148",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q184148"),
 )

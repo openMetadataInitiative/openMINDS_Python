@@ -122,9 +122,9 @@ class TissueSampleType(LinkedMetadata):
 TissueSampleType.biopsy_sample = TissueSampleType(
     id="https://openminds.ebrains.eu/instances/tissueSampleType/biopsySample",
     definition="Typically very small sample of tissue that was excised from a living or deceased multicellular organism body.",
-    interlex_identifier="http://uri.interlex.org/ilx_0782394",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0782394"),
     name="biopsy sample",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/OBI_0002650",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/OBI_0002650"),
 )
 TissueSampleType.fluid_specimen = TissueSampleType(
     id="https://openminds.ebrains.eu/instances/tissueSampleType/fluidSpecimen",

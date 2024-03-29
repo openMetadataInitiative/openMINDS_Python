@@ -122,36 +122,36 @@ class OperatingDevice(LinkedMetadata):
 OperatingDevice.desktop = OperatingDevice(
     id="https://openminds.ebrains.eu/instances/operatingDevice/desktop",
     name="desktop",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q56155",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q56155"),
 )
 OperatingDevice.embedded_system = OperatingDevice(
     id="https://openminds.ebrains.eu/instances/operatingDevice/embeddedSystem",
     name="embedded system",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q193040",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q193040"),
 )
 OperatingDevice.high_performance_computer = OperatingDevice(
     id="https://openminds.ebrains.eu/instances/operatingDevice/highPerformanceComputer",
     name="high-performance computer",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q121117",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q121117"),
 )
 OperatingDevice.mobile = OperatingDevice(
     id="https://openminds.ebrains.eu/instances/operatingDevice/mobile",
     name="mobile",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q5082128",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q5082128"),
 )
 OperatingDevice.neuromorphic_computer = OperatingDevice(
     id="https://openminds.ebrains.eu/instances/operatingDevice/neuromorphicComputer",
     definition="Very-large-scale integration (VLSI) systems containing electronic circuits used to mimic neuro-biological architectures present in the nervous system.",
     name="neuromorphic computer",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q56270917",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q56270917"),
 )
 OperatingDevice.server = OperatingDevice(
     id="https://openminds.ebrains.eu/instances/operatingDevice/server",
     name="server",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q64729893",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q64729893"),
 )
 OperatingDevice.web = OperatingDevice(
     id="https://openminds.ebrains.eu/instances/operatingDevice/web",
     name="web",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q6368",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q6368"),
 )

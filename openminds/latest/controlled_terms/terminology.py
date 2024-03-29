@@ -127,7 +127,7 @@ Terminology.age_category = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/ageCategory",
     definition="The age category describes a specific spatiotemporal part of the life cycle of an organism.",
     name="age category",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UBERON_0000105",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000105"),
 )
 Terminology.analysis_technique = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/analysisTechnique",
@@ -145,9 +145,9 @@ Terminology.anatomical_identification_type = Terminology(
 Terminology.anatomical_plane = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/anatomicalPlane",
     definition="A flat anatomical 2D surface that bisects an anatomical structure or an anatomical space.",
-    interlex_identifier="http://uri.interlex.org/ilx_0725051",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0725051"),
     name="anatomical plane",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UBERON_0035085",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035085"),
     synonyms=["fiat anatomical surface"],
 )
 Terminology.annotation_criteria_type = Terminology(
@@ -318,10 +318,10 @@ Terminology.model_scope = Terminology(
 Terminology.molecular_entity = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/molecularEntity",
     definition="Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0107064",
-    knowledge_space_link="https://knowledge-space.org/wiki/CHEBI:23367#molecular-entity",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107064"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:23367#molecular-entity"),
     name="molecular entity",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/CHEBI_23367",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_23367"),
 )
 Terminology.olfactory_stimulus_type = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/olfactoryStimulusType",
@@ -346,7 +346,7 @@ Terminology.organ = Terminology(
     definition="Anatomical structure that performs a specific function or group of functions.",
     description="The preferred ontology for 'organ' is UBERON.",
     name="organ",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UBERON_0000062",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000062"),
 )
 Terminology.organism_substance = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/organismSubstance",
@@ -416,10 +416,10 @@ Terminology.stimulation_technique = Terminology(
 Terminology.subcellular_entity = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/subcellularEntity",
     definition="Entity derived from a cell or cells. The anatomical scale of these objects roughly corresponds to that which would be visible in high resolution light microscopy or conventional electron microscopy, e.g., nanometers to microns",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0111157",
-    knowledge_space_link="https://knowledge-space.org/wiki/GO:0005575#iJ6UjX8BxpaxvvQA_2ri",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111157"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/GO:0005575#iJ6UjX8BxpaxvvQA_2ri"),
     name="subcellular entity",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/GO_0005575",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/GO_0005575"),
     synonyms=["cellular component"],
 )
 Terminology.subject_attribute = Terminology(

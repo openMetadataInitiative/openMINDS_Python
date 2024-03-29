@@ -193,7 +193,7 @@ class Collection:
         """
         all_failures = {}
         for node in self:
-            failures = node.validate()
+            failures = node.validate(ignore=ignore)
             if failures:
                 all_failures[node.id] = failures
         return all_failures

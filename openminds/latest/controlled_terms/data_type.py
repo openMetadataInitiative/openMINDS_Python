@@ -123,7 +123,7 @@ DataType.associative_array = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/associativeArray",
     definition="A 'associative array' is an abstract data type that associates keys (scalars) with values (scalars, lists or matrices).",
     name="associative array",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q80585",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q80585"),
     synonyms=["dictionary"],
 )
 DataType.event_sequence = DataType(
@@ -135,52 +135,52 @@ DataType.list = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/list",
     definition="A 'list' is a series of ordered scalars and/or lists.",
     name="list",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q12139612",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q12139612"),
 )
 DataType.matrix = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/matrix",
     definition="A 'matrix' is a list of lists.",
     name="matrix",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q44337",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q44337"),
 )
 DataType.raster_graphic = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/rasterGraphic",
     definition="A 'raster graphic' is a matrix, representing values (scalars, lists, matrices) on a grid in a two dimensional space, viewable via a monitor, paper, or other display medium.",
     name="raster graphic",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q182270",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q182270"),
     synonyms=["pixel data", "raster image"],
 )
 DataType.scalar = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/scalar",
     definition="A 'scalar' represent a single value (e.g., integer, float, string, etc.).",
     name="scalar",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q1289248",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q1289248"),
 )
 DataType.table = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/table",
     definition="A 'table' is an arrangement of elements (scalars, lists and/or matrices) in specified/named rows and columns.",
     name="table",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q496946",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q496946"),
     synonyms=["tabular data"],
 )
 DataType.three_d_computer_graphic = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/3DComputerGraphic",
     definition="A '3D computer graphic' is an associative array, defining points, lines, and/or curves in a three dimensional space, which can be rendered to raster graphic.",
     name="3D computer graphic",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q189177",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q189177"),
 )
 DataType.time_series = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/timeSeries",
     definition="A 'time series' is a list or matrix, where elements are ordered in equally spaced points in time.",
     name="time series",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q186588",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q186588"),
     synonyms=["time-series"],
 )
 DataType.vector_graphic = DataType(
     id="https://openminds.ebrains.eu/instances/dataType/vectorGraphic",
     definition="A 'vector graphic' is an associative array defining points, lines and curves which can be rendered to a raster graphic.",
     name="vector graphic",
-    preferred_ontology_identifier="https://www.wikidata.org/wiki/Q170130",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q170130"),
     synonyms=["vector image"],
 )
 DataType.voxel_data = DataType(

@@ -255,7 +255,7 @@ BrainAtlas.aal1 = BrainAtlas(
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/AAL1_SPM2-vbeta1"},
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/AAL1_SPM99-vbeta2"},
     ],
-    homepage="https://www.gin.cnrs.fr/en/tools/aal/",
+    homepage=IRI("https://www.gin.cnrs.fr/en/tools/aal/"),
     short_name="AAL Atlas 1",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
 )
@@ -267,7 +267,7 @@ BrainAtlas.amba = BrainAtlas(
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/AMBA_CCFv3-2015"},
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/AMBA_CCFv3-2017"},
     ],
-    homepage="https://portal.brain-map.org/",
+    homepage=IRI("https://portal.brain-map.org/"),
     short_name="Allen Mouse Brain Atlas",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/musMusculus"},
 )
@@ -786,7 +786,7 @@ BrainAtlas.julich__brain_atlas = BrainAtlas(
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/JBA_v3.0.3-fsaverage"},
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/JBA_v3.0.3-MNI152"},
     ],
-    homepage="https://julich-brain-atlas.de/",
+    homepage=IRI("https://julich-brain-atlas.de/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the two main publications [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001) AND [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588) along with the atlas version(s) you have used.",
     short_name="Julich-Brain Atlas",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
@@ -809,7 +809,9 @@ BrainAtlas.schaefer_400p = BrainAtlas(
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/Schaefer-400p_2018-fsLR32k-yeo17n"},
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/Schaefer-400p_2018-fsLR32k-kong17n"},
     ],
-    homepage="https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal",
+    homepage=IRI(
+        "https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal"
+    ),
     short_name="Schaefer Atlas (400p)",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
 )
@@ -1481,7 +1483,7 @@ BrainAtlas.whss_datlas = BrainAtlas(
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/WHSSDatlas_v3.01"},
         {"@id": "https://openminds.ebrains.eu/instances/brainAtlasVersion/WHSSDatlas_v4"},
     ],
-    homepage="https://www.nitrc.org/projects/whs-sd-atlas/",
+    homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_001592](https://scicrunch.org/resolver/SCR_001592), and cite the first publication [Papp et al. (2014)](https://doi.org/10.1016/j.neuroimage.2014.04.001) along with the atlas version(s) you have used.",
     short_name="Waxholm Space Rat Brain Atlas",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/rattusNorvegicus"},

@@ -123,7 +123,7 @@ UnitOfMeasurement.ampere = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/ampere",
     definition="An electric current unit which is equal to the constant current which, if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed 1 m apart in vacuum, would produce between these conductors a force equal to 2 x 10^[-7] newton per meter of length.",
     name="ampere",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0000011",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0000011"),
     synonyms=["A"],
 )
 UnitOfMeasurement.arcdegree = UnitOfMeasurement(
@@ -193,7 +193,7 @@ UnitOfMeasurement.hertz = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/hertz",
     definition="Unit of frequency equivalent to one event per second",
     name="hertz",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0000106",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0000106"),
     synonyms=["Hz", "cycles per second", "events per second"],
 )
 UnitOfMeasurement.hour = UnitOfMeasurement(
@@ -229,7 +229,7 @@ UnitOfMeasurement.microampere = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/microampere",
     definition="An electric current unit current which is equal to one millionth of an ampere or 10^[-6] A.",
     name="microampere",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0000038",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0000038"),
     synonyms=["µA"],
 )
 UnitOfMeasurement.microgram_per_milliliter = UnitOfMeasurement(
@@ -280,14 +280,14 @@ UnitOfMeasurement.millisiemens = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/millisiemens",
     definition="An electrical conduction unit which is equal to one thousandth of a siemen or 10^[-3] siemens.",
     name="millisiemens",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0010002",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0010002"),
     synonyms=["mS"],
 )
 UnitOfMeasurement.millivolt = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/millivolt",
     definition="An electric potential difference unit which is equal to one thousandth of a volt or 10^[-3] V.",
     name="millivolt",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0000247",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0000247"),
     synonyms=["mV"],
 )
 UnitOfMeasurement.minute = UnitOfMeasurement(
@@ -332,7 +332,7 @@ UnitOfMeasurement.picoampere = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/picoampere",
     definition="An electric current unit current which is equal to one trillionth of an ampere or 10^[-12] A.",
     name="picoampere",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0010054",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0010054"),
     synonyms=["pA"],
 )
 UnitOfMeasurement.postnatal_day = UnitOfMeasurement(
@@ -345,7 +345,7 @@ UnitOfMeasurement.radian = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/radian",
     definition="A 'radian' is the SI unit for measuring angles. One 'radian' defines the arc of a circle with the same length as the radius of that circle.",
     name="radian",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0000123",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0000123"),
     synonyms=["rad"],
 )
 UnitOfMeasurement.second = UnitOfMeasurement(
@@ -356,7 +356,7 @@ UnitOfMeasurement.siemens = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/siemens",
     definition="An electrical conduction unit which is equal to A/V.",
     name="siemens",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0000264",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0000264"),
     synonyms=["S"],
 )
 UnitOfMeasurement.terabyte = UnitOfMeasurement(
@@ -367,7 +367,7 @@ UnitOfMeasurement.volt = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/volt",
     definition="An electric potential difference unit which is equal to the work per unit charge. One volt is the potential difference required to move one coulomb of charge between two points in a circuit while using one joule of energy.",
     name="volt",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/UO_0010054",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0010054"),
     synonyms=["V"],
 )
 UnitOfMeasurement.volume_per_volume_percentage = UnitOfMeasurement(

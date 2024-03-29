@@ -4,6 +4,7 @@ Structured information on a used parameter setting.
 
 # this file was auto-generated!
 
+from numbers import Real
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -55,7 +56,7 @@ class ParameterSetting(LinkedMetadata):
         ),
         Property(
             "value",
-            ["float", "str"],
+            ["Real", "str"],
             "value",
             required=True,
             description="Entry for a property.",

@@ -4,6 +4,7 @@ A representation of an array of quantitative values, optionally with uncertainti
 
 # this file was auto-generated!
 
+from numbers import Real
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -21,7 +22,7 @@ class QuantitativeValueArray(LinkedMetadata):
     properties = [
         Property(
             "negative_uncertainties",
-            float,
+            Real,
             "negativeUncertainties",
             multiple=True,
             unique_items=False,
@@ -31,7 +32,7 @@ class QuantitativeValueArray(LinkedMetadata):
         ),
         Property(
             "positive_uncertainties",
-            float,
+            Real,
             "positiveUncertainties",
             multiple=True,
             unique_items=False,
@@ -55,7 +56,7 @@ class QuantitativeValueArray(LinkedMetadata):
         ),
         Property(
             "values",
-            float,
+            Real,
             "values",
             multiple=True,
             unique_items=False,

@@ -190,7 +190,7 @@ CommonCoordinateSpace.amb_ccf = CommonCoordinateSpace(
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v2"},
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v1"},
     ],
-    homepage="https://portal.brain-map.org/",
+    homepage=IRI("https://portal.brain-map.org/"),
     short_name="Allen Mouse Brain CCF",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/musMusculus"},
 )
@@ -200,7 +200,7 @@ CommonCoordinateSpace.big_brain = CommonCoordinateSpace(
     description="The 'BigBrain Whole-Brain Model' is a 3D reconstruction of a human brain in extremely high resolution.",
     full_name="BigBrain Whole-Brain Model",
     has_versions=[{"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/BigBrain_2015"}],
-    homepage="https://bigbrainproject.org/",
+    homepage=IRI("https://bigbrainproject.org/"),
     short_name="BigBrain Model",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
 )
@@ -250,7 +250,7 @@ CommonCoordinateSpace.mni__colin27 = CommonCoordinateSpace(
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNIColin27_1998"},
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNIColin27_2008"},
     ],
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases",
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
     how_to_cite="Holmes CJ, Hoge R, Collins L, Woods R, Toga AW, and Evans AC; 'Enhancement of MR images using registration for signal averaging.'; J Comput Assist Tomogr; 1998 Mar-Apr; 22(2):324–33. [doi: 10.1097/00004728-199803000-00032](http://dx.doi.org/10.1097/00004728-199803000-00032) Aubert-Broche B, Evans AC, and Collins DL; 'A new improved version of the realistic digital brain phantom'; NeuroImage; 2006 Aug;32(1):138–45. [doi: 10.1016/j.neuroimage.2006.03.052](https://doi.org/10.1016/j.neuroimage.2006.03.052)",
     short_name="MNI Colin27 Average Brain",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
@@ -276,7 +276,7 @@ CommonCoordinateSpace.mni_icbm152 = CommonCoordinateSpace(
         },
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009c-sym"},
     ],
-    homepage="https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases",
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
     short_name="MNI ICBM152",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
 )
@@ -289,7 +289,7 @@ CommonCoordinateSpace.whssd = CommonCoordinateSpace(
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/WHSSD_v1.01"},
         {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/WHSSD_v1"},
     ],
-    homepage="https://www.nitrc.org/projects/whs-sd-atlas",
+    homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
     short_name="WHS of the SD Rat Brain",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/rattusNorvegicus"},
 )

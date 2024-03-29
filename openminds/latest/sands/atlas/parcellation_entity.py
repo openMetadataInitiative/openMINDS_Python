@@ -4,6 +4,7 @@
 
 # this file was auto-generated!
 
+from openminds.base import IRI
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property

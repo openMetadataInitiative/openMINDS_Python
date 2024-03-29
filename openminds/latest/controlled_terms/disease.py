@@ -122,26 +122,26 @@ class Disease(LinkedMetadata):
 Disease.acquired_blindness = Disease(
     id="https://openminds.ebrains.eu/instances/disease/acquiredBlindness",
     definition="Acquired blindness is caused by a group of diseases, disorders or injuries that led to permanent severely impaired vision or irreversible lack of vision during adulthood.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0499758",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0499758"),
     name="acquired blindness",
-    preferred_ontology_identifier="http://id.nlm.nih.gov/mesh/2018/M0336554",
+    preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0336554"),
 )
 Disease.alzheimers_disease = Disease(
     id="https://openminds.ebrains.eu/instances/disease/alzheimersDisease",
     name="Alzheimer's disease",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/DOID_10652",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_10652"),
 )
 Disease.autism_spectrum_disorder = Disease(
     id="https://openminds.ebrains.eu/instances/disease/autismSpectrumDisorder",
     name="autism sprectrum disorder",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/DOID_0060041",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_0060041"),
 )
 Disease.cerebral_atrophy = Disease(
     id="https://openminds.ebrains.eu/instances/disease/cerebralAtrophy",
     definition="Cerebral atrophy describes the pathological process of wasting or decrease in size of the cells or tissue of the cerebrum.",
-    knowledge_space_link="https://knowledge-space.org/wiki/HP:0012444#brain-atrophy",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/HP:0012444#brain-atrophy"),
     name="cerebral atrophy",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/HP_0002059",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/HP_0002059"),
     synonyms=["atrophy of cerebrum", "brain atrophy", "degeneration of cerebrum", "degeneration of brain"],
 )
 Disease.congenital_blindness = Disease(
@@ -159,7 +159,7 @@ Disease.epilepsy = Disease(
     id="https://openminds.ebrains.eu/instances/disease/epilepsy",
     definition="Epilepsy describes a group of central nervous system disorders characterized by recurrent unprovoked seizures.",
     name="epilepsy",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/DOID_1826",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_1826"),
 )
 Disease.focal_cerebral_ischemia = Disease(
     id="https://openminds.ebrains.eu/instances/disease/focalCerebralIschemia",
@@ -170,15 +170,15 @@ Disease.focal_cerebral_ischemia = Disease(
 Disease.fragile_xsyndrome = Disease(
     id="https://openminds.ebrains.eu/instances/disease/fragileXsyndrome",
     name="fragile X syndrome",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/DOID_14261",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_14261"),
 )
 Disease.glioma = Disease(
     id="https://openminds.ebrains.eu/instances/disease/glioma",
     definition="A benign or malignant brain and spinal cord tumor that arises from glial cells (astrocytes, oligodendrocytes, ependymal cells).",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0104647",
-    knowledge_space_link="https://knowledge-space.org/wiki/BIRNLEX:12618#glioma",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104647"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12618#glioma"),
     name="glioma",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/birnlex_12618",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_12618"),
     synonyms=[
         "glial neoplasm",
         "neoplasm of the neuroglia",
@@ -191,18 +191,18 @@ Disease.glioma = Disease(
 Disease.malignant_neoplasm = Disease(
     id="https://openminds.ebrains.eu/instances/disease/malignantNeoplasm",
     definition="A 'malignant neoplasm' is composed of atypical, often pleomorphic cells that uncontrollably grow and multiply, spreading into surrounding tissue and even invading distant anatomic sites (metastasis). Many malignant neoplasm form solid tumors, but cancers of the blood generally do not. [(adapted from [NCI](https://www.cancer.gov/about-cancer/understanding/what-is-cancer)].",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0752652",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0752652"),
     name="malignant neoplasm",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/NCIT_C9305",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCIT_C9305"),
     synonyms=["cancer"],
 )
 Disease.meningioma = Disease(
     id="https://openminds.ebrains.eu/instances/disease/meningioma",
     definition="A generally slow growing tumor attached to the dura mater and composed of neoplastic meningothelial (arachnoidal) cells.",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0106789",
-    knowledge_space_link="https://knowledge-space.org/wiki/BIRNLEX:12601#meningioma",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106789"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12601#meningioma"),
     name="meningioma",
-    preferred_ontology_identifier="http://uri.neuinfo.org/nif/nifstd/birnlex_12601",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_12601"),
     synonyms=[
         "meningeal neoplasm",
         "meningothelial cell tumor",
@@ -214,10 +214,10 @@ Disease.meningioma = Disease(
 Disease.mental_disorder = Disease(
     id="https://openminds.ebrains.eu/instances/disease/mentalDisorder",
     definition="A 'mental disorder' is characterized by a clinically significant disturbance in an individual’s cognition, emotional regulation, or behaviour and is usually associated with distress or impairment in important areas of functioning. [adapted from [WHO fact-sheets](https://www.who.int/news-room/fact-sheets/detail/mental-disorders)]",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0106792",
-    knowledge_space_link="https://knowledge-space.org/wiki/BIRNLEX:12669#mental-disorder",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106792"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12669#mental-disorder"),
     name="mental disorder",
-    preferred_ontology_identifier="http://uri.interlex.org/base/ilx_0106792",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0106792"),
     synonyms=["mental disease", "mental illness", "psychiatric disease", "psychiatric disorder"],
 )
 Disease.minimally_conscious_state = Disease(
@@ -229,24 +229,24 @@ Disease.minimally_conscious_state = Disease(
 Disease.multiple_sclerosis = Disease(
     id="https://openminds.ebrains.eu/instances/disease/multipleSclerosis",
     definition="'Multiple sclerosis' is a disorder in which the body's immune system attacks the protective meylin covering of the nerve cells in the brain, optic nerve and spinal cord (adapted from the [Mayo clinic](https://www.mayoclinic.org/diseases-conditions/multiple-sclerosis/symptoms-causes/syc-20350269#:~:text=Multiple%20sclerosis%20is%20a%20disorder,insulation%20on%20an%20electrical%20wire.))",
-    interlex_identifier="http://uri.interlex.org/base/ilx_0756481",
-    knowledge_space_link="https://knowledge-space.org/wiki/BIRNLEX:12514#multiple-sclerosis-1",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0756481"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12514#multiple-sclerosis-1"),
     name="multiple sclerosis",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/DOID_2377",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_2377"),
     synonyms=["MS", "generalized multiple sclerosis"],
 )
 Disease.parkinsons_disease = Disease(
     id="https://openminds.ebrains.eu/instances/disease/parkinsonsDisease",
     definition="Parkinson's is a progressive central nervous system disorder that affects the motor system.",
     name="Parkinson's disease",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/DOID_14330",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_14330"),
 )
 Disease.stroke = Disease(
     id="https://openminds.ebrains.eu/instances/disease/stroke",
     definition="A sudden loss of neurological function secondary to hemorrhage or ischemia in the brain parenchyma due to a vascular event.",
-    interlex_identifier="http://uri.interlex.org/ilx_0738754",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0738754"),
     name="stroke",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/DOID_6713",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_6713"),
     synonyms=["cerebral infaction", "cerebrovascular accident", "cerebrovascular disease", "CVA", "stroke disorder"],
 )
 Disease.unresponsive_wakefulness_syndrome = Disease(
@@ -258,5 +258,5 @@ Disease.unresponsive_wakefulness_syndrome = Disease(
 Disease.williams_beuren_syndrome = Disease(
     id="https://openminds.ebrains.eu/instances/disease/williamsBeurenSyndrome",
     name="Williams-Beuren syndrome",
-    preferred_ontology_identifier="http://purl.obolibrary.org/obo/DOID_1928",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_1928"),
 )

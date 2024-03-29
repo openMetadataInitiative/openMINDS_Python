@@ -150,50 +150,50 @@ ContentType.application_dicom = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_dicom",
     file_extensions=[".dcm"],
     name="application/dicom",
-    related_media_type="https://www.iana.org/assignments/media-types/application/dicom",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/dicom"),
     synonyms=["Digital Imaging and Communications in Medicine", "DICOM"],
 )
 ContentType.application_json = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_json",
     file_extensions=[".json"],
     name="application/json",
-    related_media_type="https://www.iana.org/assignments/media-types/application/json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["JavaScript Object Notation", "JSON"],
 )
 ContentType.application_ldplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_ld+json",
     file_extensions=[".jsonld"],
     name="application/ld+json",
-    related_media_type="https://www.iana.org/assignments/media-types/application/ld+json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/ld+json"),
     synonyms=["JSON-LD"],
 )
 ContentType.application_octet_stream = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_octet-stream",
     file_extensions=[".bin"],
     name="application/octet-stream",
-    related_media_type="https://www.iana.org/assignments/media-types/application/octet-stream",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/octet-stream"),
     synonyms=["binary format", "BIN"],
 )
 ContentType.application_pdf = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_pdf",
     file_extensions=[".pdf"],
     name="application/pdf",
-    related_media_type="https://www.iana.org/assignments/media-types/application/pdf",
-    specification="https://www.pdfa.org/resource/iso-32000-2-pdf-2-0/",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/pdf"),
+    specification=IRI("https://www.pdfa.org/resource/iso-32000-2-pdf-2-0/"),
     synonyms=["Adobe Portable Document Format", "PDF"],
 )
 ContentType.application_sbmlplusxml = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_sbml+xml",
     file_extensions=[".sbml"],
     name="application/sbml+xml",
-    related_media_type="https://www.iana.org/assignments/media-types/application/sbml+xml",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/sbml+xml"),
     synonyms=["System Biology Markup Language"],
 )
 ContentType.application_schemaplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_schema+json",
     file_extensions=[".schema.json", ".json", ".jschema", ".jsd", ".jsonsd"],
     name="application/schema+json",
-    related_media_type="https://www.iana.org/assignments/media-types/application/schema+json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/schema+json"),
     synonyms=["JSON Schema"],
 )
 ContentType.application_vnd_3i_slidebook = ContentType(
@@ -206,7 +206,7 @@ ContentType.application_vnd_abberior_imspector = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.abberior.imspector",
     file_extensions=[".msr", ".obf"],
     name="application/vnd.abberior.imspector",
-    specification="https://imspectordocs.readthedocs.io/en/latest/fileformat.html#the-imspector-msr-file-format",
+    specification=IRI("https://imspectordocs.readthedocs.io/en/latest/fileformat.html#the-imspector-msr-file-format"),
     synonyms=["Imspector OBF"],
 )
 ContentType.application_vnd_afni = ContentType(
@@ -414,70 +414,70 @@ ContentType.application_vnd_blackrockmicrosystems_neuralevents = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralevents",
     file_extensions=[".nev"],
     name="application/vnd.blackrockmicrosystems.neuralevents",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Events"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_1 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.1",
     file_extensions=[".ns1"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.1",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 1"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_2 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.2",
     file_extensions=[".ns2"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.2",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 2"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_3 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.3",
     file_extensions=[".ns3"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.3",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 3"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_4 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.4",
     file_extensions=[".ns4"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.4",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 4"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_5 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.5",
     file_extensions=[".ns5"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.5",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 5"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_6 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.6",
     file_extensions=[".ns6"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.6",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 6"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_7 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.7",
     file_extensions=[".ns7"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.7",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 7"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_8 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.8",
     file_extensions=[".ns8"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.8",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 8"],
 )
 ContentType.application_vnd_blackrockmicrosystems_neuralsignals_9 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.blackrockmicrosystems.neuralsignals.9",
     file_extensions=[".ns9"],
     name="application/vnd.blackrockmicrosystems.neuralsignals.9",
-    specification="https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf",
+    specification=IRI("https://blackrockneurotech.com/research/wp-content/ifu/LB-0023-7.00_NEV_File_Format.pdf"),
     synonyms=["Blackrock Neural Signals 9"],
 )
 ContentType.application_vnd_blackrockmicrosystems_parallelrecordings = ContentType(
@@ -721,7 +721,7 @@ ContentType.application_vnd_freesurfer_annotation = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.freesurfer.annotation",
     file_extensions=[".annot"],
     name="application/vnd.freesurfer.annotation",
-    specification="https://surfer.nmr.mgh.harvard.edu/fswiki/LabelsClutsAnnotationFiles#Annotation",
+    specification=IRI("https://surfer.nmr.mgh.harvard.edu/fswiki/LabelsClutsAnnotationFiles#Annotation"),
     synonyms=["FreeSurfer Annotation File"],
 )
 ContentType.application_vnd_g_node_nix_neo = ContentType(
@@ -740,7 +740,7 @@ ContentType.application_vnd_g_node_odml = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.g-node.odml",
     file_extensions=[".odml"],
     name="application/vnd.g-node.odml",
-    specification="https://g-node.github.io/python-odml/",
+    specification=IRI("https://g-node.github.io/python-odml/"),
     synonyms=["odML", "open metadata Markup Language"],
 )
 ContentType.application_vnd_gatan_digitalmicrograph2 = ContentType(
@@ -1033,7 +1033,7 @@ ContentType.application_vnd_mathworks_live_scriptpluszip = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.mathworks.live-script+zip",
     file_extensions=[".mlx"],
     name="application/vnd.mathworks.live-script+zip",
-    specification="https://de.mathworks.com/help/matlab/matlab_prog/live-script-file-format.html",
+    specification=IRI("https://de.mathworks.com/help/matlab/matlab_prog/live-script-file-format.html"),
     synonyms=["MATLAB MLX", "MATLAB Live", "MATLAB Live Script", "MATLAB Live-Script"],
 )
 ContentType.application_vnd_mbf_neurolucida = ContentType(
@@ -1086,14 +1086,18 @@ ContentType.application_vnd_microsoft_deepzoom_collectionplusxml = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.microsoft.deepzoom.collection+xml",
     file_extensions=[".dzc", ".xml"],
     name="application/vnd.microsoft.deepzoom.collection+xml",
-    specification="https://docs.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc645077(v=vs.95)",
+    specification=IRI(
+        "https://docs.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc645077(v=vs.95)"
+    ),
     synonyms=["Deep Zoom Collection", "DZC"],
 )
 ContentType.application_vnd_microsoft_deepzoom_imageplusxml = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.microsoft.deepzoom.image+xml",
     file_extensions=[".dzi", ".xml"],
     name="application/vnd.microsoft.deepzoom.image+xml",
-    specification="https://docs.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc645077(v=vs.95)",
+    specification=IRI(
+        "https://docs.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc645077(v=vs.95)"
+    ),
     synonyms=["Deep Zoom Image", "DZI"],
 )
 ContentType.application_vnd_minc = ContentType(
@@ -1153,7 +1157,7 @@ ContentType.application_vnd_ms_excel = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.ms-excel",
     file_extensions=[".xls"],
     name="application/vnd.ms-excel",
-    related_media_type="https://www.iana.org/assignments/media-types/application/vnd.ms-excel",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/vnd.ms-excel"),
     synonyms=["Microsoft Excel", "XLS"],
 )
 ContentType.application_vnd_neo_ascii_image = ContentType(
@@ -1211,19 +1215,25 @@ ContentType.application_vnd_neuralynx = ContentType(
 ContentType.application_vnd_neuroglancer_precomputed = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.neuroglancer.precomputed",
     name="application/vnd.neuroglancer.precomputed",
-    specification="https://github.com/google/neuroglancer/blob/33d5206cf16c60530e9d0d517dc8bb9b968e2e18/src/neuroglancer/datasource/precomputed/README.md",
+    specification=IRI(
+        "https://github.com/google/neuroglancer/blob/33d5206cf16c60530e9d0d517dc8bb9b968e2e18/src/neuroglancer/datasource/precomputed/README.md"
+    ),
     synonyms=["Neuroglancer precomputed"],
 )
 ContentType.application_vnd_neuroglancer_precomputed_infoplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.neuroglancer.precomputed.info+json",
     name="application/vnd.neuroglancer.precomputed.info+json",
-    specification="https://github.com/google/neuroglancer/blob/33d5206cf16c60530e9d0d517dc8bb9b968e2e18/src/neuroglancer/datasource/precomputed/README.md",
+    specification=IRI(
+        "https://github.com/google/neuroglancer/blob/33d5206cf16c60530e9d0d517dc8bb9b968e2e18/src/neuroglancer/datasource/precomputed/README.md"
+    ),
     synonyms=["Neuroglancer precomputed info", "Neuroglancer precomputed metadata"],
 )
 ContentType.application_vnd_neuroglancer_precomputed_raw = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.neuroglancer.precomputed.raw",
     name="application/vnd.neuroglancer.precomputed.raw",
-    specification="https://github.com/google/neuroglancer/blob/33d5206cf16c60530e9d0d517dc8bb9b968e2e18/src/neuroglancer/datasource/precomputed/README.md",
+    specification=IRI(
+        "https://github.com/google/neuroglancer/blob/33d5206cf16c60530e9d0d517dc8bb9b968e2e18/src/neuroglancer/datasource/precomputed/README.md"
+    ),
     synonyms=["Neuroglancer precomputed raw"],
 )
 ContentType.application_vnd_neuroml = ContentType(
@@ -1327,7 +1337,7 @@ ContentType.application_vnd_nutil_quantifierplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.nutil.quantifier+json",
     file_extensions=[".json"],
     name="application/vnd.nutil.quantifier+json",
-    related_media_type="https://www.iana.org/assignments/media-types/application/json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["Nutil Quantifier JavaScript Object Notation", "Nutil Quantifier JSON"],
 )
 ContentType.application_vnd_nutil_resultspluscsv = ContentType(
@@ -1392,14 +1402,18 @@ ContentType.application_vnd_openxmlformats_officedocument_spreadsheetml_sheet = 
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     file_extensions=[".xlsx"],
     name="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    related_media_type="https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    related_media_type=IRI(
+        "https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ),
     synonyms=["Microsoft Excel (Open XML)", "XLSX"],
 )
 ContentType.application_vnd_openxmlformats_officedocument_wordprocessingml_document = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.openxmlformats-officedocument.wordprocessingml.document",
     file_extensions=[".docx"],
     name="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-    related_media_type="https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    related_media_type=IRI(
+        "https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    ),
     synonyms=["Microsoft Word (OpenXML)", "DOCX"],
 )
 ContentType.application_vnd_oxford_instruments = ContentType(
@@ -1542,14 +1556,14 @@ ContentType.application_vnd_quickniiplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.quicknii+json",
     file_extensions=[".json"],
     name="application/vnd.quicknii+json",
-    related_media_type="https://www.iana.org/assignments/media-types/application/json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["QuickNII JavaScript Object Notation", "QuickNII JSON"],
 )
 ContentType.application_vnd_quickniiplusxml = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.quicknii+xml",
     file_extensions=[".xml"],
     name="application/vnd.quicknii+xml",
-    related_media_type="https://www.iana.org/assignments/media-types/application/xml",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/xml"),
     synonyms=["QuickNII Extensible Markup Language", "QuickNII XML"],
 )
 ContentType.application_vnd_raw_binarysignal = ContentType(
@@ -1841,7 +1855,7 @@ ContentType.application_vnd_visualignplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.visualign+json",
     file_extensions=[".json"],
     name="application/vnd.visualign+json",
-    related_media_type="https://www.iana.org/assignments/media-types/application/json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["VisuAlign JavaScript Object Notation", "VisuAlign JSON"],
 )
 ContentType.application_vnd_voluba_v1_landmark_pairsplusjson = ContentType(
@@ -1928,14 +1942,14 @@ ContentType.application_vnd_wavefronttechnologies = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.wavefronttechnologies",
     file_extensions=[".obj"],
     name="application/vnd.wavefronttechnologies",
-    related_media_type="https://www.iana.org/assignments/media-types/model/obj",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/model/obj"),
     synonyms=["Wavefront OBJ"],
 )
 ContentType.application_vnd_wavefronttechnologies_mtl = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.wavefronttechnologies.mtl",
     file_extensions=[".mtl"],
     name="application/vnd.wavefronttechnologies.mtl",
-    related_media_type="https://www.iana.org/assignments/media-types/model/mtl",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/model/mtl"),
     synonyms=["Wavefront MTL"],
 )
 ContentType.application_vnd_wavemetrics_igorpro = ContentType(
@@ -2030,7 +2044,7 @@ ContentType.application_x_ipynbplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_x-ipynb+json",
     file_extensions=[".ipynb"],
     name="application/x-ipynb+json",
-    specification="https://nbformat.readthedocs.io/en/latest/format_description.html",
+    specification=IRI("https://nbformat.readthedocs.io/en/latest/format_description.html"),
     synonyms=["Jupyter Notebook", "IPYNB"],
 )
 ContentType.application_x_kseg = ContentType(
@@ -2060,7 +2074,7 @@ ContentType.application_xml = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_xml",
     file_extensions=[".xml"],
     name="application/xml",
-    related_media_type="https://www.iana.org/assignments/media-types/application/xml",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/xml"),
     synonyms=["Extensible Markup Language", "XML"],
 )
 ContentType.application_yaml = ContentType(
@@ -2073,15 +2087,15 @@ ContentType.application_zip = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_zip",
     file_extensions=[".zip", ".zipx"],
     name="application/zip",
-    related_media_type="https://www.iana.org/assignments/media-types/application/zip",
-    specification="https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/zip"),
+    specification=IRI("https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"),
     synonyms=["ZIP", "ZIP file", "zipfile"],
 )
 ContentType.image_bmp = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/image_bmp",
     file_extensions=[".bmp"],
     name="image/bmp",
-    related_media_type="https://www.iana.org/assignments/media-types/image/bmp",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/image/bmp"),
     synonyms=["Bitmap image"],
 )
 ContentType.image_jp2 = ContentType(
@@ -2100,14 +2114,14 @@ ContentType.image_png = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/image_png",
     file_extensions=[".png"],
     name="image/png",
-    related_media_type="https://www.iana.org/assignments/media-types/image/png",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/image/png"),
     synonyms=["Portable Network Graphics", "PNG"],
 )
 ContentType.image_tiff = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/image_tiff",
     file_extensions=[".tiff", ".tif"],
     name="image/tiff",
-    related_media_type="https://www.iana.org/assignments/media-types/image/tiff",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/image/tiff"),
     synonyms=["Tagged Image File (Tiled)"],
 )
 ContentType.image_tiff_andor_abd = ContentType(
@@ -2236,21 +2250,21 @@ ContentType.text_csv = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/text_csv",
     file_extensions=[".csv"],
     name="text/csv",
-    related_media_type="https://www.iana.org/assignments/media-types/text/csv",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/csv"),
     synonyms=["Comma-Separated Value", "CSV"],
 )
 ContentType.text_html = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/text_html",
     file_extensions=[".html", ".htm"],
     name="text/html",
-    related_media_type="https://www.iana.org/assignments/media-types/text/html",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/html"),
     synonyms=["Hypertext Markup Language", "HTML"],
 )
 ContentType.text_markdown = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/text_markdown",
     file_extensions=[".md", ".markdown"],
     name="text/markdown",
-    related_media_type="https://www.iana.org/assignments/media-types/text/markdown",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/markdown"),
     synonyms=["Markdown"],
 )
 ContentType.text_plain = ContentType(
@@ -2274,14 +2288,14 @@ ContentType.text_tab_separated_values = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/text_tab-separated-values",
     file_extensions=[".tsv", ".csv"],
     name="text/tab-separated-values",
-    related_media_type="https://www.iana.org/assignments/media-types/text/tab-separated-values",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/tab-separated-values"),
     synonyms=["Tab-Separated Value", "TSV"],
 )
 ContentType.text_x_cmlplusxml = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/text_x-cml+xml",
     file_extensions=[".cml"],
     name="text/x-cml+xml",
-    specification="http://www.xml-cml.org/schema/schema3/schema.xsd",
+    specification=IRI("http://www.xml-cml.org/schema/schema3/schema.xsd"),
 )
 ContentType.text_x_matlab = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/text_x-matlab",
@@ -2344,7 +2358,7 @@ ContentType.video_mp4 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/video_mp4",
     file_extensions=[".mp4"],
     name="video/mp4",
-    related_media_type="https://www.iana.org/assignments/media-types/video/mp4",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/video/mp4"),
     synonyms=["Moving Picture Experts Group 4 video file", "MPEG-4"],
 )
 ContentType.video_quicktime = ContentType(

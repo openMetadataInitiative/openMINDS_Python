@@ -123,21 +123,21 @@ ActionStatusType.active = ActionStatusType(
     id="https://openminds.ebrains.eu/instances/actionStatusType/active",
     definition="An in-progress action.",
     name="active",
-    preferred_ontology_identifier="https://schema.org/ActiveActionStatus",
+    preferred_ontology_identifier=IRI("https://schema.org/ActiveActionStatus"),
     synonyms=["active action status", "active action"],
 )
 ActionStatusType.completed = ActionStatusType(
     id="https://openminds.ebrains.eu/instances/actionStatusType/completed",
     definition="An action that has already taken place with a successful outcome.",
     name="completed",
-    preferred_ontology_identifier="https://schema.org/CompletedActionStatus",
+    preferred_ontology_identifier=IRI("https://schema.org/CompletedActionStatus"),
     synonyms=["completed action status", "completed action", "finished successfully"],
 )
 ActionStatusType.failed = ActionStatusType(
     id="https://openminds.ebrains.eu/instances/actionStatusType/failed",
     definition="An action that failed to complete or completed but produced an error.",
     name="failed",
-    preferred_ontology_identifier="https://schema.org/FailedActionStatus",
+    preferred_ontology_identifier=IRI("https://schema.org/FailedActionStatus"),
     synonyms=["failed action status", "failed action", "finished unsuccessfully", "error"],
 )
 ActionStatusType.inactive = ActionStatusType(
@@ -162,6 +162,6 @@ ActionStatusType.potential = ActionStatusType(
     id="https://openminds.ebrains.eu/instances/actionStatusType/potential",
     definition="A description of an action that is supported.",
     name="potential",
-    preferred_ontology_identifier="https://schema.org/PotentialActionStatus",
+    preferred_ontology_identifier=IRI("https://schema.org/PotentialActionStatus"),
     synonyms=["potential action type", "potential action"],
 )
