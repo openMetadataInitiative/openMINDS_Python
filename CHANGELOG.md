@@ -30,3 +30,8 @@ Out[2]: True
 ```
 
 For more detail see #29.
+
+## Release 0.2.1 (2024-03-29)
+
+- Improved property descriptions, for example the `identifier` property of the `ProductSource` class now has the description "Term or code used to identify the product source" whereas previously it was the generic "Term or code used to identify something or someone".
+- Non-HTTP IRIs are now allowed.

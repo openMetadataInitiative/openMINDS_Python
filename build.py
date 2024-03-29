@@ -104,7 +104,7 @@ env = Environment(
     autoescape=select_autoescape()
 )
 context = {
-    "version": "0.2.0",
+    "version": "0.2.1",
 }
 with open("target/pyproject.toml", "w") as fp:
     contents = env.get_template("pipeline/src/pyproject_template.toml.txt").render(context)
