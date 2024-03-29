@@ -11,15 +11,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.12"]
     steps:
 
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Set up Python 3.11
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v5
       with:
-        python-version: 3.11
+        python-version: ${{ matrix.python-version }}
 
     - name: Run build
       run: |
@@ -38,8 +41,10 @@ jobs:
         ref: main
         path: main
         token: ${{ secrets.GITHUB_TOKEN }}
+      if: ${{  matrix.python-version == 3.12 }}
 
     - name: Push to main
+      if: ${{  matrix.python-version == 3.12 }}
       run: |
         cp -R target/* main
         cd main
