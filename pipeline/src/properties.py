@@ -6,8 +6,7 @@ Representations of metadata fields/properties
 
 from datetime import datetime, date
 from collections import defaultdict
-from collections.abc import Iterable
-from typing import Optional, Union
+from typing import Optional, Union, Iterable
 
 from .registry import lookup
 from .base import Node, IRI, Link, Node
