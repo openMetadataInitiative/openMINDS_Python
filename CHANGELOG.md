@@ -35,3 +35,11 @@ For more detail see #29.
 
 - Improved property descriptions, for example the `identifier` property of the `ProductSource` class now has the description "Term or code used to identify the product source" whereas previously it was the generic "Term or code used to identify something or someone".
 - Non-HTTP IRIs are now allowed.
+
+## Release 0.2.2 (2024-03-29)
+
+- Bug fixes:
+    - instance properties that should be IRI objects were just plain strings
+    - passing an integer to a property of type "number" produced a validation error
+    - when validating collections the "ignore" argument wasn't being passed down
+    - type hints were producing an error with Python 3.8
