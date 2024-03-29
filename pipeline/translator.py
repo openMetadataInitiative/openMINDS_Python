@@ -1,5 +1,6 @@
 from datetime import date, time, datetime
 import json
+from numbers import Real
 import os.path
 import re
 from typing import List, Optional, Dict
@@ -87,7 +88,7 @@ class PythonBuilder(object):
             type_map = {
                 "string": "str",
                 "integer": "int",
-                "number": "float",
+                "number": "Real",
                 "date": "date",
                 "date-time": "datetime",
                 "time": "time",
@@ -209,6 +210,7 @@ class PythonBuilder(object):
             "time": "from datetime import time",
             "IRI": "from openminds.base import IRI",
             "[datetime, time]": "from datetime import datetime, time",
+            "Real": "from numbers import Real"
         }
         extra_imports = set()
         for property in self.context["properties"]:

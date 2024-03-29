@@ -2,6 +2,7 @@
 Utility functions and constants for openMINDS tests
 """
 
+from numbers import Real
 import random
 import string
 from datetime import date, datetime
@@ -34,7 +35,7 @@ def build_fake_node(cls, depth=0):
                 # todo: check for property.formatting
                 value = "".join(random.choices(string.printable, k=random.randint(0, 40)))
                 data[property.name] = value
-            elif float in property.types:
+            elif Real in property.types:
                 value = 100 * random.random()
                 data[property.name] = value
             elif int in property.types:

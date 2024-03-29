@@ -6,6 +6,7 @@ Representations of metadata fields/properties
 
 from datetime import datetime, date
 from collections import defaultdict
+from numbers import Real
 from typing import Optional, Union, Iterable
 
 from .registry import lookup
@@ -171,6 +172,8 @@ class Property:
                 assert isinstance(item, str)
                 return IRI(item)
             elif float in self.types:
+                return item
+            elif Real in self.types:
                 return item
             elif int in self.types:
                 return item
