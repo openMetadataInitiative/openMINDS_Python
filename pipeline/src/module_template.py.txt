@@ -51,6 +51,14 @@ class {{ class_name }}({{ base_class }}):
 {% for instance_name, instance in instances.items() %}
 {{ class_name }}.{{ instance_name }} = {{ class_name }}(
     {% for key, value in instance.items() -%}
-    {% if value is string %}{{key}}="{{value}}",{% else %}{{key}}={{value}},{% endif %}
+    {% if value is string -%}
+        {% if value.startswith('http') and key != 'id' -%}
+            {{key}}=IRI("{{value}}"),
+        {%- else -%}
+            {{key}}="{{value}}",
+        {%- endif %}
+    {%- else -%}
+        {{key}}={{value}},
+    {%- endif %}
     {% endfor -%}
 ){% endfor %}

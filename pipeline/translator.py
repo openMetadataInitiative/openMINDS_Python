@@ -213,6 +213,8 @@ class PythonBuilder(object):
             "Real": "from numbers import Real"
         }
         extra_imports = set()
+        if len(instances) > 0:
+            extra_imports.add(import_map["IRI"])
         for property in self.context["properties"]:
             if isinstance(property["type"], list):
                 for t in property["type"]:
