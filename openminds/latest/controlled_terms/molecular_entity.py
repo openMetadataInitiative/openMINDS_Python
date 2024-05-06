@@ -866,6 +866,18 @@ MolecularEntity.growth_factor = MolecularEntity(
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1671627152"),
     synonyms=["GF"],
 )
+MolecularEntity.gtp_disodium_salt = MolecularEntity(
+    id="https://openminds.ebrains.eu/instances/molecularEntity/GTPDisodiumSalt",
+    definition="A GTP (guanosine 5'-triphosphate) molecule bonded with two sodium ions (Na+), forming a salt hydrate.",
+    name="GTP, disodium salt",
+    preferred_ontology_identifier=IRI("https://pubchem.ncbi.nlm.nih.gov/compound/135818278"),
+    synonyms=[
+        "Guanosine 5'-triphosphate sodium salt hydrate",
+        "NaGTP",
+        "5'-triphospho-guanosine; hydrate; sodium salt",
+        "disodium;[[[(2R,3S,4R,5R)-5-(2-amino-6-oxo-1H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy-hydroxyphosphoryl]oxy-oxidophosphoryl] hydrogen phosphate;dihydrate",
+    ],
+)
 MolecularEntity.halothane = MolecularEntity(
     id="https://openminds.ebrains.eu/instances/molecularEntity/Halothane",
     definition="Halothane is a haloalkane comprising ethane having three fluoro substituents at the 1-position as well as bromo- and chloro substituents at the 2-position. It has a role as an inhalation anaesthetic. It is a haloalkane, an organofluorine compound, an organochlorine compound and an organobromine compound.[adapted from ChEBI (https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5615)]",

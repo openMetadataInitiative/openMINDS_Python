@@ -24,7 +24,7 @@ class Protocol(LinkedMetadata):
             ["openminds.latest.core.DOI", "openminds.latest.core.File", "openminds.latest.core.WebResource"],
             "describedIn",
             description="no description available",
-            instructions="Add a publication or file in which this behavioral protocol is (originally) described in detail.",
+            instructions="Add a publication or file in which this protocol is (originally) described in detail.",
         ),
         Property(
             "description",

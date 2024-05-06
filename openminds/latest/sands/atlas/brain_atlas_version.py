@@ -90,7 +90,12 @@ class BrainAtlasVersion(LinkedMetadata):
         ),
         Property(
             "full_documentation",
-            ["openminds.latest.core.DOI", "openminds.latest.core.File", "openminds.latest.core.WebResource"],
+            [
+                "openminds.latest.core.DOI",
+                "openminds.latest.core.File",
+                "openminds.latest.core.ISBN",
+                "openminds.latest.core.WebResource",
+            ],
             "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
@@ -19488,6 +19493,11334 @@ BrainAtlasVersion.jba_v3_0_mni152 = BrainAtlasVersion(
     type={"@id": "https://openminds.ebrains.eu/instances/atlasType/probabilisticAtlas"},
     version_identifier="v3.0, MNI152",
 )
+BrainAtlasVersion.pw_rbsc_cor_6th_ed__bregma_lia = BrainAtlasVersion(
+    id="https://openminds.ebrains.eu/instances/brainAtlasVersion/PW-RBSC-cor_6th-ed-Bregma-LIA",
+    abbreviation="PW-RBSC-cor",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/paidAccess"},
+    coordinate_space={
+        "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-LIA"
+    },
+    digital_identifier={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_documentation={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
+    has_terminology={
+        "@type": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion",
+        "dataLocation": None,
+        "hasEntity": [
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_10thCerebellarLobuleNodule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_1stCerebellarLobuleLingula"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2bCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2ndAnd3rdCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2ndCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdAnd4thCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thAnd5thCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_5thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6aCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6bCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6cCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_7thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_8thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleAAndB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleC"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A11dopamineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A13DopamineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A1NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A1NoradrenalineCellsC1AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A2NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A5NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A7NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_B9SerotoninCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_BarringtonsNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_BotzingerComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C1AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C1AdrenalineCellsAndA1NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C2AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C3AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_EdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_FCellGroupOfTheVestibularComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_KillikerFuseNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_PurkinjeCellLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_abducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_abducensNucleusRetractorBulbiPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryAbducensFacialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryNerveNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryNeurosecretoryNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleusCore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleusShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexVentralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_alarNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_alveusOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusLoosePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusSubcompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaAnterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaPosterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaPosteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdaloidFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdaloidIntramedullaryGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalopiriformTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalostriatalTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_angularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ansoparamedianFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorAmygdaloidArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissuralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissureAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissureIntrabulbarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissurePosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusVentroposteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPerifornicalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorSpinalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteromedialThalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventThalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralPeriventricularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralThalamicNucleusVentrolateralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_aqueduct"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusLateroposteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusMedialPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_areaPostrema"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_artery"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ascendingFibersOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_azygousAnteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_azygousPericallosalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basalNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basalNucleusMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basilarArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basomedialAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basomedialAmygdaloidNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisFusiformPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivisionLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivisionMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheAccessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheAnteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisIntermediateDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisIntraamygdaloidDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionJuxtacapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosterointermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_brachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_brachiumOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalInterstitialNucleusOfTheMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalLinearNucleusOfTheRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudatePutamenStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudomedialEntothinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudoventrolateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cellBridgesOfTheVentralStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralCanal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralCervicalNucleusOfTheSpinalCord"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGray"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayBetaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayGammaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayNucleusO"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralMedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralNucleusOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centrolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellarCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellarWhiteMatter"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebralCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebralPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_choroidPlexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulateCortexArea1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulateCortexArea2"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_circularNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_claustrum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cochlearRootOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissuralNucleusOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissuralStriaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_conterminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_copulaOfThePyramis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_corpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cortexAmygdalaTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cortexAmygdalaTransitionZoneLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_crus1OfTheAnsiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_crus2OfTheAnsiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateNucleusRotundusPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_decussationOfTheSuperiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_decussationOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepCerebralWhiteMatter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepWhiteLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsal3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalAcousticStria"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusDeepCore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusFusiformLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusGranularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCortexOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCorticospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalFornix"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalIntermediateEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalLateralGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalLateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalMotorNucleusOfVagus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalNucleusOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalParagigantocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPartOfClaustrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeduncularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeduncularPontineNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeriolivaryRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSpinocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSpinocerebellarTractAndOlivocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalNucleusPericentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTeniaTecta"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTeniaTectaLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialSpinalTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialTegmentalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dysgranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ectorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ectotrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_entopeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_entorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ependymaAndSubependymalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ependymalAndSubendymalLayerOlfactoryVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epifascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epilemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epipeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epirubrospinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_episupraopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ethmoidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCapsule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCortexOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCortexOfTheInferiorColliculusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCuneateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalMedullaryLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalPlexiformLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalPlexiformLayerOfTheOlfactoryBulb"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsalIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsolateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusStylohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusVentralIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusVentromedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fasciculusRetroflexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fasciolaCinereum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA1OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA2OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA3OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fimbriaOfTheHippocampus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_flocculus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_forcepsMajorOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_forcepsMinorOfTheCorpusCallosum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fornix"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_frontalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_frontalCortexArea3"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gelatinousLayerOfTheCaudalSpinalTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_geminiHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_genuOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_genuOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_globusPallidus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glomerularLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glomerularLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glossopharyngealNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gracileFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gracileNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularCellLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfCochlearNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_habenularCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hilusOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hippocampalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hypoglossalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hypoglossalNucleusGeniohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_indusiumGriseum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorCerebellarPeduncleDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorCerebellarPeduncleRestiformBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveBetaSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveCapOfKooyOfTheMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveDorsalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveDorsomedialCellGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOlivePrincipalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusAOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusBOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusCOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveVentrolateralProtrusion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infralimbicCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infundibularRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infundibularStem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interanterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interanteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedAmygdaloidNucleusMainPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedNucleiOfTheAmygdala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercruralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interfascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intergeniculateLeaf"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateInterstitialNucleusOfTheMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateNucleusOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateWhiteLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediolateralCellColumnOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermedioventralThalamicCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediusNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalArcuateFibers"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalCapsule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalCarotidArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalMedullaryLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalPlexiformLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularFossa"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusApicalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusCaudalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusDorsolateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusRostralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusDorsolateralHump"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusDorsomedialCrest"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusPosteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfCajalShellRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheDecussationOfTheSuperiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissureLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissureMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interventricularForamen"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intramedullaryThalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_islandsOfCalleja"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_islandsOfCallejaMajorIsland"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_isthmicPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_isthmicReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_juxtaolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_juxtaparaventricularPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lacunosumMoleculareLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lambdoidSeptalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAccumbensShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusVentromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralCerebellarNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralCervicalNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralDentateCerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralMammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOrbitofrontalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusCrescentPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusInternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusSuperiorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParietalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusLaterocaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusLaterorostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusMediocaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusMediorostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralRecessOfThe4thVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleusSubtrigeminalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSpinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralStripeOfTheStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSuperiorOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateroanteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalTegmentalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateroventralPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer1OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer1bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer2OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer3OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer4OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5aOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6aOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_leminaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_linearNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lithoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_locusCoeruleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_longitudinalFasciculusOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularNucleusOfTheLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularNucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillaryPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillaryRecessOfThe3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillotegmentalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_marginalZoneOfTheMedialGeniculate"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_matrixRegionOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAccessoryOculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusPosterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusPosteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusCaudomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusDorsolateralProtuberance"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCorticohypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEminenceExternalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEminenceInternalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEntorhinalCortexVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialFastigialCerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundleAComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundleBComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialHabenularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLemniscusDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusMedianPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialOrbitofrontalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParabrachialNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParalemniscialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParietalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialSuperiorOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialTuberalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianAccessoryNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianEminence"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medioventralPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medullaryReticularNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medullaryReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicTrigeminalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_microcellularTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_middleCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_middleCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mitralCellLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mitralCellLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorRootOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusAnteriorDigastricPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusMasseterPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusMylohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusTemporalisPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusTensorTympaniPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_navicularNucleusOfTheBasalForebrain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nervusIntermediusComponentOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nigrostriatalBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfDarkschewitsch"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfOriginOfEfferentsOfTheVestibularNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfRoller"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheAnsaLenticularis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheBrachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheCentralAcousticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheCommissuralStriaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheFieldsOfForel"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheHorizontalLimbOfTheDiagonalBand"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheLateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheLateralOlfactoryTractLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractCommissuralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractGelatinousPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractInterstitialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractRostrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheStriaMedullaris"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheVerticalLimbOfTheDiagonalBand"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusX"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusY"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusZ"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_obex"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryNerveLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryTubercle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryVentricleOlfactoryPartOfLateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivaryPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivocochlearBundle"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticChiasm"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticNerveLayerOfTheSuperiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticTract"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oriensLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ovalParacentralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_p1PeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraabducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parabigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parabrachialPigmentedNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracentralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracochlearGlialSubstance"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracommissuralNucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parafascicularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parafloccularSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraflocculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parainterfascicularNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paralambdoidSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paralemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paranigralNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parapyramidalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pararubralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasolitaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parastrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasubthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratenialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratereteNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratrochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusDorsalCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusLateralMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusMedialMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusMedialParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraxiphoidNucleusOfThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parvicellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parvicellularReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peduncularPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pedunculopontineTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifacialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifornicalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifornicalPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perilemniscalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periolivaryHorn"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peripeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perirhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peritrigeminalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pinealGland"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pinealStalk"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_piriformCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_piriformCortexLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pleomorphicPartOfPeriaqueductaiGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_polymorphLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorIntralaminarThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorLimitansThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorSuperiorFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorThalamicNuclearGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorThalamicNuclearGroupTriangularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralCorticalAmygdaloidNucleusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteromedialCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteromedianThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_postsubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preBotzingerComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preEdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_precommissuralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preculminateFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_precuneiformArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prelimbicCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_premammillaryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_premammillaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preopticRecessOfThe3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prepositusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prepyramidalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prerubralField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_presubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryAuditoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryMotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexBarrelField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexDysgranularZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexForelimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexHindlimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexJawRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexOralDysgranularZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexShoulderRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexTrunkRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexUpperLipRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortexBinocularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortexMonocularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalMammillaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalCellLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r1ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r2ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r3ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_radiatumLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheInterpositusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheMagnusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheObscurusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_raphePallidusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_recessOfTheInferiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_regionWhereVAAndVLOverlap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticluostrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePonsLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePonsPericentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroambiguusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrochiasmaticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrochiasmaticAreaLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroendopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroethmoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrolemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroparafascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrorubralField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrorubralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialDysgranularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexARegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexBRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexCRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrouniensArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reuniensThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhabdoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhinalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhinalIncisure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhomboidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfAbducensNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfAccessoryNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfHypoglossalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralAmygdalopiriformArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralInterstitialNucleusOfMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralLinearNucleusOfTheRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralVentralRespiratoryGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostroventrolateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostrumOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rubrospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sagulumNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_scaphoidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryAuditoryCortexDorsalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryAuditoryCortexVentralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryMotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondarySomatosensoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexLateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexMediolateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexMediomedialArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sensoryRootOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septofimbrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septohippocampalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septohypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobuleA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobuleB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simplexFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sphenoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusInterpolarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spleniumOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_stigmoidHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_stratumLucidumOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striaMedullarisOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_strialPartOfThePreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striohypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subbrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcommissuralOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subfornicalOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subgeniculateNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subiculum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subiculumTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subincertalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdalaCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdalaMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submammillothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparafascicularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparafascicularThalamicNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparaventricularZoneOfTheHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subpeduncularTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subpostremaArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaInnominata"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaInnominataBasalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactPartDorsalTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactPartMedialTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactaPartVentralTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraReticularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superficialGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorCerebellarPeduncleBrachiumConjunctivum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorCerebellarPeduncleDescendingLimb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorMedullaryVelum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorParaolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorThalamicRadiation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleusVentromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprageniculateThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supragenualNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraoculomotorCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraoculomotorPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticNucleusRetrochiasmaticPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tectospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tereteHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_transverseFibersOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_triangularNucleusLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_triangularSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalSolitaryTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNucluesShellRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tuberalRegionOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_uncinateFasciculusDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_uncinateFasciculusOfTheCerebellum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vagusNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vascularOrganOfTheLaminaTerminalis"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vein"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralAnteriorThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusGranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusPosteriorPartOctopusCellArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralGeniculateNucleusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralIntermediateEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralLinearNucleusOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralNucleusOfTheLatLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPallidum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPartOfClaustrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosteriorNucleusOfTheThalamusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosterolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralReuniensThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSpinocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSpinocerebellarTractDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalAreaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTeniaTecta"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTeniaTectaLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralHypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialNucleusOfTheHypothalamusShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vertebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibularRootOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocochlearGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulomesencephalicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vomeronasalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vomeronasalNerveLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_xiphoidThalamicNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncerta"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaLimitans"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonalLayerOfTheSuperiorColliculus"
+            },
+        ],
+        "ontologyIdentifier": None,
+    },
+    how_to_cite="Paxinos, G. and Watson, C. (2006) The Rat Brain in Stereotaxic Coordinates. 6th Edition, Academic Press, San Diego.",
+    release_date="2006-11-02",
+    short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
+    type={"@id": "https://openminds.ebrains.eu/instances/atlasType/deterministicAtlas"},
+    version_identifier="6th ed. (Bregma, LIA)",
+    version_innovation="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
+)
+BrainAtlasVersion.pw_rbsc_cor_6th_ed__bregma_ria = BrainAtlasVersion(
+    id="https://openminds.ebrains.eu/instances/brainAtlasVersion/PW-RBSC-cor_6th-ed-Bregma-RIA",
+    abbreviation="PW-RBSC-cor",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/paidAccess"},
+    coordinate_space={
+        "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-RIA"
+    },
+    digital_identifier={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_documentation={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
+    has_terminology={
+        "@type": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion",
+        "dataLocation": None,
+        "hasEntity": [
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_10thCerebellarLobuleNodule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_1stCerebellarLobuleLingula"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2bCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2ndAnd3rdCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2ndCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdAnd4thCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thAnd5thCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_5thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6aCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6bCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6cCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_7thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_8thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleAAndB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleC"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A11dopamineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A13DopamineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A1NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A1NoradrenalineCellsC1AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A2NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A5NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A7NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_B9SerotoninCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_BarringtonsNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_BotzingerComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C1AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C1AdrenalineCellsAndA1NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C2AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C3AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_EdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_FCellGroupOfTheVestibularComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_KillikerFuseNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_PurkinjeCellLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_abducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_abducensNucleusRetractorBulbiPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryAbducensFacialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryNerveNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryNeurosecretoryNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleusCore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleusShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexVentralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_alarNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_alveusOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusLoosePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusSubcompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaAnterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaPosterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaPosteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdaloidFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdaloidIntramedullaryGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalopiriformTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalostriatalTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_angularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ansoparamedianFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorAmygdaloidArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissuralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissureAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissureIntrabulbarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissurePosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusVentroposteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPerifornicalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorSpinalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteromedialThalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventThalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralPeriventricularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralThalamicNucleusVentrolateralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_aqueduct"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusLateroposteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusMedialPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_areaPostrema"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_artery"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ascendingFibersOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_azygousAnteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_azygousPericallosalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basalNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basalNucleusMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basilarArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basomedialAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basomedialAmygdaloidNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisFusiformPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivisionLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivisionMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheAccessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheAnteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisIntermediateDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisIntraamygdaloidDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionJuxtacapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosterointermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_brachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_brachiumOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalInterstitialNucleusOfTheMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalLinearNucleusOfTheRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudatePutamenStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudomedialEntothinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudoventrolateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cellBridgesOfTheVentralStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralCanal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralCervicalNucleusOfTheSpinalCord"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGray"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayBetaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayGammaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayNucleusO"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralMedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralNucleusOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centrolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellarCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellarWhiteMatter"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebralCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebralPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_choroidPlexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulateCortexArea1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulateCortexArea2"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_circularNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_claustrum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cochlearRootOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissuralNucleusOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissuralStriaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_conterminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_copulaOfThePyramis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_corpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cortexAmygdalaTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cortexAmygdalaTransitionZoneLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_crus1OfTheAnsiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_crus2OfTheAnsiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateNucleusRotundusPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_decussationOfTheSuperiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_decussationOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepCerebralWhiteMatter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepWhiteLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsal3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalAcousticStria"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusDeepCore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusFusiformLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusGranularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCortexOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCorticospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalFornix"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalIntermediateEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalLateralGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalLateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalMotorNucleusOfVagus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalNucleusOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalParagigantocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPartOfClaustrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeduncularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeduncularPontineNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeriolivaryRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSpinocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSpinocerebellarTractAndOlivocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalNucleusPericentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTeniaTecta"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTeniaTectaLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialSpinalTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialTegmentalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dysgranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ectorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ectotrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_entopeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_entorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ependymaAndSubependymalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ependymalAndSubendymalLayerOlfactoryVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epifascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epilemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epipeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epirubrospinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_episupraopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ethmoidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCapsule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCortexOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCortexOfTheInferiorColliculusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCuneateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalMedullaryLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalPlexiformLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalPlexiformLayerOfTheOlfactoryBulb"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsalIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsolateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusStylohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusVentralIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusVentromedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fasciculusRetroflexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fasciolaCinereum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA1OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA2OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA3OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fimbriaOfTheHippocampus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_flocculus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_forcepsMajorOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_forcepsMinorOfTheCorpusCallosum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fornix"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_frontalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_frontalCortexArea3"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gelatinousLayerOfTheCaudalSpinalTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_geminiHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_genuOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_genuOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_globusPallidus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glomerularLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glomerularLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glossopharyngealNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gracileFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gracileNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularCellLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfCochlearNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_habenularCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hilusOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hippocampalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hypoglossalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hypoglossalNucleusGeniohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_indusiumGriseum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorCerebellarPeduncleDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorCerebellarPeduncleRestiformBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveBetaSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveCapOfKooyOfTheMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveDorsalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveDorsomedialCellGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOlivePrincipalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusAOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusBOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusCOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveVentrolateralProtrusion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infralimbicCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infundibularRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infundibularStem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interanterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interanteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedAmygdaloidNucleusMainPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedNucleiOfTheAmygdala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercruralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interfascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intergeniculateLeaf"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateInterstitialNucleusOfTheMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateNucleusOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateWhiteLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediolateralCellColumnOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermedioventralThalamicCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediusNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalArcuateFibers"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalCapsule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalCarotidArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalMedullaryLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalPlexiformLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularFossa"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusApicalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusCaudalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusDorsolateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusRostralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusDorsolateralHump"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusDorsomedialCrest"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusPosteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfCajalShellRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheDecussationOfTheSuperiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissureLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissureMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interventricularForamen"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intramedullaryThalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_islandsOfCalleja"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_islandsOfCallejaMajorIsland"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_isthmicPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_isthmicReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_juxtaolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_juxtaparaventricularPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lacunosumMoleculareLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lambdoidSeptalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAccumbensShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusVentromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralCerebellarNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralCervicalNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralDentateCerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralMammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOrbitofrontalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusCrescentPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusInternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusSuperiorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParietalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusLaterocaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusLaterorostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusMediocaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusMediorostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralRecessOfThe4thVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleusSubtrigeminalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSpinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralStripeOfTheStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSuperiorOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateroanteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalTegmentalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateroventralPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer1OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer1bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer2OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer3OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer4OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5aOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6aOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_leminaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_linearNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lithoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_locusCoeruleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_longitudinalFasciculusOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularNucleusOfTheLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularNucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillaryPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillaryRecessOfThe3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillotegmentalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_marginalZoneOfTheMedialGeniculate"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_matrixRegionOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAccessoryOculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusPosterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusPosteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusCaudomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusDorsolateralProtuberance"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCorticohypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEminenceExternalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEminenceInternalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEntorhinalCortexVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialFastigialCerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundleAComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundleBComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialHabenularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLemniscusDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusMedianPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialOrbitofrontalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParabrachialNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParalemniscialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParietalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialSuperiorOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialTuberalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianAccessoryNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianEminence"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medioventralPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medullaryReticularNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medullaryReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicTrigeminalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_microcellularTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_middleCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_middleCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mitralCellLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mitralCellLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorRootOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusAnteriorDigastricPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusMasseterPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusMylohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusTemporalisPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusTensorTympaniPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_navicularNucleusOfTheBasalForebrain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nervusIntermediusComponentOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nigrostriatalBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfDarkschewitsch"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfOriginOfEfferentsOfTheVestibularNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfRoller"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheAnsaLenticularis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheBrachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheCentralAcousticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheCommissuralStriaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheFieldsOfForel"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheHorizontalLimbOfTheDiagonalBand"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheLateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheLateralOlfactoryTractLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractCommissuralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractGelatinousPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractInterstitialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractRostrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheStriaMedullaris"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheVerticalLimbOfTheDiagonalBand"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusX"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusY"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusZ"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_obex"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryNerveLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryTubercle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryVentricleOlfactoryPartOfLateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivaryPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivocochlearBundle"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticChiasm"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticNerveLayerOfTheSuperiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticTract"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oriensLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ovalParacentralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_p1PeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraabducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parabigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parabrachialPigmentedNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracentralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracochlearGlialSubstance"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracommissuralNucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parafascicularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parafloccularSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraflocculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parainterfascicularNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paralambdoidSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paralemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paranigralNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parapyramidalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pararubralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasolitaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parastrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasubthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratenialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratereteNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratrochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusDorsalCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusLateralMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusMedialMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusMedialParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraxiphoidNucleusOfThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parvicellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parvicellularReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peduncularPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pedunculopontineTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifacialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifornicalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifornicalPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perilemniscalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periolivaryHorn"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peripeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perirhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peritrigeminalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pinealGland"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pinealStalk"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_piriformCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_piriformCortexLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pleomorphicPartOfPeriaqueductaiGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_polymorphLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorIntralaminarThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorLimitansThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorSuperiorFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorThalamicNuclearGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorThalamicNuclearGroupTriangularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralCorticalAmygdaloidNucleusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteromedialCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteromedianThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_postsubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preBotzingerComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preEdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_precommissuralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preculminateFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_precuneiformArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prelimbicCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_premammillaryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_premammillaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preopticRecessOfThe3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prepositusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prepyramidalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prerubralField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_presubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryAuditoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryMotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexBarrelField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexDysgranularZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexForelimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexHindlimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexJawRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexOralDysgranularZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexShoulderRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexTrunkRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexUpperLipRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortexBinocularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortexMonocularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalMammillaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalCellLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r1ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r2ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r3ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_radiatumLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheInterpositusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheMagnusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheObscurusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_raphePallidusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_recessOfTheInferiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_regionWhereVAAndVLOverlap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticluostrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePonsLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePonsPericentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroambiguusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrochiasmaticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrochiasmaticAreaLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroendopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroethmoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrolemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroparafascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrorubralField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrorubralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialDysgranularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexARegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexBRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexCRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrouniensArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reuniensThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhabdoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhinalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhinalIncisure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhomboidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfAbducensNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfAccessoryNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfHypoglossalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralAmygdalopiriformArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralInterstitialNucleusOfMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralLinearNucleusOfTheRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralVentralRespiratoryGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostroventrolateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostrumOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rubrospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sagulumNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_scaphoidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryAuditoryCortexDorsalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryAuditoryCortexVentralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryMotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondarySomatosensoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexLateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexMediolateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexMediomedialArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sensoryRootOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septofimbrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septohippocampalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septohypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobuleA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobuleB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simplexFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sphenoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusInterpolarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spleniumOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_stigmoidHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_stratumLucidumOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striaMedullarisOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_strialPartOfThePreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striohypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subbrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcommissuralOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subfornicalOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subgeniculateNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subiculum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subiculumTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subincertalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdalaCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdalaMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submammillothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparafascicularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparafascicularThalamicNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparaventricularZoneOfTheHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subpeduncularTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subpostremaArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaInnominata"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaInnominataBasalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactPartDorsalTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactPartMedialTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactaPartVentralTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraReticularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superficialGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorCerebellarPeduncleBrachiumConjunctivum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorCerebellarPeduncleDescendingLimb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorMedullaryVelum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorParaolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorThalamicRadiation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleusVentromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprageniculateThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supragenualNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraoculomotorCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraoculomotorPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticNucleusRetrochiasmaticPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tectospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tereteHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_transverseFibersOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_triangularNucleusLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_triangularSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalSolitaryTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNucluesShellRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tuberalRegionOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_uncinateFasciculusDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_uncinateFasciculusOfTheCerebellum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vagusNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vascularOrganOfTheLaminaTerminalis"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vein"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralAnteriorThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusGranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusPosteriorPartOctopusCellArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralGeniculateNucleusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralIntermediateEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralLinearNucleusOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralNucleusOfTheLatLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPallidum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPartOfClaustrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosteriorNucleusOfTheThalamusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosterolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralReuniensThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSpinocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSpinocerebellarTractDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalAreaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTeniaTecta"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTeniaTectaLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralHypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialNucleusOfTheHypothalamusShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vertebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibularRootOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocochlearGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulomesencephalicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vomeronasalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vomeronasalNerveLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_xiphoidThalamicNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncerta"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaLimitans"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonalLayerOfTheSuperiorColliculus"
+            },
+        ],
+        "ontologyIdentifier": None,
+    },
+    how_to_cite="Paxinos, G. and Watson, C. (2006) The Rat Brain in Stereotaxic Coordinates. 6th Edition, Academic Press, San Diego.",
+    release_date="2006-11-02",
+    short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
+    type={"@id": "https://openminds.ebrains.eu/instances/atlasType/deterministicAtlas"},
+    version_identifier="6th ed. (Bregma, RIA)",
+    version_innovation="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
+)
+BrainAtlasVersion.pw_rbsc_cor_6th_ed__interaural_lsa = BrainAtlasVersion(
+    id="https://openminds.ebrains.eu/instances/brainAtlasVersion/PW-RBSC-cor_6th-ed-Interaural-LSA",
+    abbreviation="PW-RBSC-cor",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/paidAccess"},
+    coordinate_space={
+        "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-LSA"
+    },
+    digital_identifier={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_documentation={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
+    has_terminology={
+        "@type": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion",
+        "dataLocation": None,
+        "hasEntity": [
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_10thCerebellarLobuleNodule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_1stCerebellarLobuleLingula"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2bCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2ndAnd3rdCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2ndCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdAnd4thCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thAnd5thCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_5thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6aCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6bCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6cCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_7thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_8thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleAAndB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleC"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A11dopamineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A13DopamineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A1NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A1NoradrenalineCellsC1AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A2NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A5NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A7NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_B9SerotoninCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_BarringtonsNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_BotzingerComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C1AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C1AdrenalineCellsAndA1NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C2AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C3AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_EdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_FCellGroupOfTheVestibularComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_KillikerFuseNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_PurkinjeCellLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_abducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_abducensNucleusRetractorBulbiPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryAbducensFacialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryNerveNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryNeurosecretoryNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleusCore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleusShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexVentralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_alarNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_alveusOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusLoosePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusSubcompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaAnterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaPosterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaPosteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdaloidFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdaloidIntramedullaryGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalopiriformTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalostriatalTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_angularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ansoparamedianFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorAmygdaloidArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissuralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissureAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissureIntrabulbarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissurePosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusVentroposteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPerifornicalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorSpinalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteromedialThalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventThalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralPeriventricularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralThalamicNucleusVentrolateralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_aqueduct"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusLateroposteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusMedialPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_areaPostrema"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_artery"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ascendingFibersOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_azygousAnteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_azygousPericallosalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basalNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basalNucleusMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basilarArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basomedialAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basomedialAmygdaloidNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisFusiformPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivisionLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivisionMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheAccessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheAnteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisIntermediateDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisIntraamygdaloidDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionJuxtacapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosterointermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_brachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_brachiumOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalInterstitialNucleusOfTheMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalLinearNucleusOfTheRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudatePutamenStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudomedialEntothinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudoventrolateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cellBridgesOfTheVentralStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralCanal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralCervicalNucleusOfTheSpinalCord"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGray"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayBetaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayGammaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayNucleusO"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralMedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralNucleusOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centrolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellarCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellarWhiteMatter"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebralCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebralPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_choroidPlexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulateCortexArea1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulateCortexArea2"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_circularNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_claustrum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cochlearRootOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissuralNucleusOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissuralStriaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_conterminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_copulaOfThePyramis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_corpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cortexAmygdalaTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cortexAmygdalaTransitionZoneLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_crus1OfTheAnsiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_crus2OfTheAnsiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateNucleusRotundusPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_decussationOfTheSuperiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_decussationOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepCerebralWhiteMatter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepWhiteLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsal3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalAcousticStria"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusDeepCore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusFusiformLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusGranularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCortexOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCorticospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalFornix"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalIntermediateEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalLateralGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalLateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalMotorNucleusOfVagus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalNucleusOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalParagigantocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPartOfClaustrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeduncularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeduncularPontineNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeriolivaryRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSpinocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSpinocerebellarTractAndOlivocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalNucleusPericentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTeniaTecta"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTeniaTectaLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialSpinalTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialTegmentalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dysgranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ectorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ectotrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_entopeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_entorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ependymaAndSubependymalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ependymalAndSubendymalLayerOlfactoryVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epifascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epilemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epipeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epirubrospinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_episupraopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ethmoidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCapsule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCortexOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCortexOfTheInferiorColliculusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCuneateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalMedullaryLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalPlexiformLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalPlexiformLayerOfTheOlfactoryBulb"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsalIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsolateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusStylohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusVentralIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusVentromedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fasciculusRetroflexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fasciolaCinereum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA1OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA2OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA3OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fimbriaOfTheHippocampus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_flocculus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_forcepsMajorOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_forcepsMinorOfTheCorpusCallosum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fornix"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_frontalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_frontalCortexArea3"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gelatinousLayerOfTheCaudalSpinalTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_geminiHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_genuOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_genuOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_globusPallidus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glomerularLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glomerularLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glossopharyngealNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gracileFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gracileNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularCellLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfCochlearNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_habenularCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hilusOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hippocampalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hypoglossalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hypoglossalNucleusGeniohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_indusiumGriseum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorCerebellarPeduncleDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorCerebellarPeduncleRestiformBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveBetaSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveCapOfKooyOfTheMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveDorsalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveDorsomedialCellGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOlivePrincipalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusAOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusBOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusCOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveVentrolateralProtrusion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infralimbicCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infundibularRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infundibularStem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interanterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interanteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedAmygdaloidNucleusMainPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedNucleiOfTheAmygdala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercruralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interfascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intergeniculateLeaf"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateInterstitialNucleusOfTheMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateNucleusOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateWhiteLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediolateralCellColumnOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermedioventralThalamicCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediusNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalArcuateFibers"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalCapsule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalCarotidArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalMedullaryLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalPlexiformLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularFossa"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusApicalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusCaudalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusDorsolateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusRostralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusDorsolateralHump"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusDorsomedialCrest"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusPosteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfCajalShellRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheDecussationOfTheSuperiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissureLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissureMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interventricularForamen"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intramedullaryThalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_islandsOfCalleja"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_islandsOfCallejaMajorIsland"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_isthmicPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_isthmicReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_juxtaolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_juxtaparaventricularPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lacunosumMoleculareLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lambdoidSeptalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAccumbensShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusVentromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralCerebellarNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralCervicalNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralDentateCerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralMammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOrbitofrontalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusCrescentPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusInternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusSuperiorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParietalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusLaterocaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusLaterorostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusMediocaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusMediorostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralRecessOfThe4thVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleusSubtrigeminalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSpinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralStripeOfTheStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSuperiorOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateroanteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalTegmentalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateroventralPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer1OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer1bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer2OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer3OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer4OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5aOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6aOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_leminaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_linearNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lithoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_locusCoeruleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_longitudinalFasciculusOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularNucleusOfTheLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularNucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillaryPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillaryRecessOfThe3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillotegmentalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_marginalZoneOfTheMedialGeniculate"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_matrixRegionOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAccessoryOculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusPosterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusPosteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusCaudomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusDorsolateralProtuberance"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCorticohypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEminenceExternalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEminenceInternalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEntorhinalCortexVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialFastigialCerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundleAComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundleBComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialHabenularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLemniscusDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusMedianPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialOrbitofrontalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParabrachialNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParalemniscialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParietalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialSuperiorOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialTuberalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianAccessoryNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianEminence"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medioventralPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medullaryReticularNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medullaryReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicTrigeminalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_microcellularTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_middleCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_middleCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mitralCellLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mitralCellLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorRootOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusAnteriorDigastricPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusMasseterPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusMylohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusTemporalisPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusTensorTympaniPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_navicularNucleusOfTheBasalForebrain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nervusIntermediusComponentOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nigrostriatalBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfDarkschewitsch"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfOriginOfEfferentsOfTheVestibularNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfRoller"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheAnsaLenticularis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheBrachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheCentralAcousticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheCommissuralStriaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheFieldsOfForel"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheHorizontalLimbOfTheDiagonalBand"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheLateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheLateralOlfactoryTractLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractCommissuralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractGelatinousPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractInterstitialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractRostrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheStriaMedullaris"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheVerticalLimbOfTheDiagonalBand"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusX"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusY"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusZ"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_obex"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryNerveLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryTubercle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryVentricleOlfactoryPartOfLateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivaryPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivocochlearBundle"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticChiasm"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticNerveLayerOfTheSuperiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticTract"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oriensLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ovalParacentralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_p1PeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraabducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parabigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parabrachialPigmentedNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracentralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracochlearGlialSubstance"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracommissuralNucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parafascicularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parafloccularSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraflocculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parainterfascicularNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paralambdoidSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paralemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paranigralNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parapyramidalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pararubralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasolitaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parastrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasubthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratenialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratereteNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratrochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusDorsalCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusLateralMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusMedialMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusMedialParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraxiphoidNucleusOfThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parvicellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parvicellularReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peduncularPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pedunculopontineTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifacialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifornicalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifornicalPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perilemniscalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periolivaryHorn"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peripeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perirhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peritrigeminalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pinealGland"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pinealStalk"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_piriformCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_piriformCortexLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pleomorphicPartOfPeriaqueductaiGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_polymorphLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorIntralaminarThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorLimitansThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorSuperiorFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorThalamicNuclearGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorThalamicNuclearGroupTriangularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralCorticalAmygdaloidNucleusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteromedialCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteromedianThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_postsubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preBotzingerComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preEdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_precommissuralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preculminateFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_precuneiformArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prelimbicCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_premammillaryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_premammillaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preopticRecessOfThe3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prepositusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prepyramidalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prerubralField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_presubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryAuditoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryMotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexBarrelField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexDysgranularZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexForelimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexHindlimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexJawRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexOralDysgranularZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexShoulderRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexTrunkRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexUpperLipRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortexBinocularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortexMonocularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalMammillaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalCellLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r1ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r2ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r3ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_radiatumLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheInterpositusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheMagnusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheObscurusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_raphePallidusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_recessOfTheInferiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_regionWhereVAAndVLOverlap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticluostrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePonsLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePonsPericentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroambiguusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrochiasmaticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrochiasmaticAreaLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroendopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroethmoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrolemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroparafascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrorubralField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrorubralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialDysgranularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexARegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexBRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexCRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrouniensArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reuniensThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhabdoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhinalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhinalIncisure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhomboidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfAbducensNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfAccessoryNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfHypoglossalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralAmygdalopiriformArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralInterstitialNucleusOfMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralLinearNucleusOfTheRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralVentralRespiratoryGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostroventrolateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostrumOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rubrospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sagulumNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_scaphoidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryAuditoryCortexDorsalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryAuditoryCortexVentralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryMotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondarySomatosensoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexLateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexMediolateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexMediomedialArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sensoryRootOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septofimbrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septohippocampalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septohypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobuleA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobuleB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simplexFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sphenoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusInterpolarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spleniumOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_stigmoidHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_stratumLucidumOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striaMedullarisOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_strialPartOfThePreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striohypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subbrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcommissuralOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subfornicalOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subgeniculateNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subiculum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subiculumTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subincertalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdalaCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdalaMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submammillothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparafascicularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparafascicularThalamicNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparaventricularZoneOfTheHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subpeduncularTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subpostremaArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaInnominata"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaInnominataBasalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactPartDorsalTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactPartMedialTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactaPartVentralTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraReticularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superficialGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorCerebellarPeduncleBrachiumConjunctivum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorCerebellarPeduncleDescendingLimb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorMedullaryVelum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorParaolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorThalamicRadiation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleusVentromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprageniculateThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supragenualNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraoculomotorCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraoculomotorPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticNucleusRetrochiasmaticPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tectospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tereteHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_transverseFibersOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_triangularNucleusLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_triangularSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalSolitaryTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNucluesShellRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tuberalRegionOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_uncinateFasciculusDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_uncinateFasciculusOfTheCerebellum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vagusNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vascularOrganOfTheLaminaTerminalis"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vein"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralAnteriorThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusGranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusPosteriorPartOctopusCellArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralGeniculateNucleusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralIntermediateEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralLinearNucleusOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralNucleusOfTheLatLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPallidum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPartOfClaustrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosteriorNucleusOfTheThalamusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosterolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralReuniensThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSpinocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSpinocerebellarTractDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalAreaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTeniaTecta"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTeniaTectaLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralHypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialNucleusOfTheHypothalamusShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vertebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibularRootOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocochlearGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulomesencephalicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vomeronasalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vomeronasalNerveLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_xiphoidThalamicNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncerta"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaLimitans"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonalLayerOfTheSuperiorColliculus"
+            },
+        ],
+        "ontologyIdentifier": None,
+    },
+    how_to_cite="Paxinos, G. and Watson, C. (2006) The Rat Brain in Stereotaxic Coordinates. 6th Edition, Academic Press, San Diego.",
+    release_date="2006-11-02",
+    short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
+    type={"@id": "https://openminds.ebrains.eu/instances/atlasType/deterministicAtlas"},
+    version_identifier="6th ed. (Interaural, LSA)",
+    version_innovation="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
+)
+BrainAtlasVersion.pw_rbsc_cor_6th_ed__interaural_rsa = BrainAtlasVersion(
+    id="https://openminds.ebrains.eu/instances/brainAtlasVersion/PW-RBSC-cor_6th-ed-Interaural-RSA",
+    abbreviation="PW-RBSC-cor",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/paidAccess"},
+    coordinate_space={
+        "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-RSA"
+    },
+    digital_identifier={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_documentation={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
+    has_terminology={
+        "@type": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion",
+        "dataLocation": None,
+        "hasEntity": [
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_10thCerebellarLobuleNodule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_1stCerebellarLobuleLingula"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2bCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2ndAnd3rdCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_2ndCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdAnd4thCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thAnd5thCerebellarLobules"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_4thVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_5thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6aCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6bCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6cCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_6thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_7thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_8thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleAAndB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_9thCerebellarLobuleC"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A11dopamineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A13DopamineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A1NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A1NoradrenalineCellsC1AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A2NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A5NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_A7NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_B9SerotoninCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_BarringtonsNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_BotzingerComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C1AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C1AdrenalineCellsAndA1NoradrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C2AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_C3AdrenalineCells"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_EdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_FCellGroupOfTheVestibularComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_KillikerFuseNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_PurkinjeCellLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_abducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_abducensNucleusRetractorBulbiPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryAbducensFacialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryNerveNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryNeurosecretoryNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleusCore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_accumbensNucleusShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_agranularInsularCortexVentralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_alarNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_alveusOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusLoosePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ambiguusNucleusSubcompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaAnterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaPosterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalohippocampalAreaPosteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdaloidFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdaloidIntramedullaryGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalopiriformTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_amygdalostriatalTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_angularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ansoparamedianFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorAmygdaloidArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissuralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissureAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissureIntrabulbarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCommissurePosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorHypothalamicAreaPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorOlfactoryNucleusVentroposteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPerifornicalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorPretectalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorSpinalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteriorTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteromedialThalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventThalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralPeriventricularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_anteroventralThalamicNucleusVentrolateralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_aqueduct"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusLateroposteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_arcuateHypothalamicNucleusMedialPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_areaPostrema"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_artery"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ascendingFibersOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_azygousAnteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_azygousPericallosalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basalNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basalNucleusMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basilarArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basolateralAmygdaloidNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basomedialAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_basomedialAmygdaloidNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisFusiformPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivisionLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfStriaTerminalisSupracapsularDivisionMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheAccessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheAnteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisIntermediateDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisIntraamygdaloidDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionJuxtacapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisLateralDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionAnteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosterointermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosterolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionPosteromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_bedNucleusOfTheStriaTerminalisMedialDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_brachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_brachiumOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalInterstitialNucleusOfTheMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalLinearNucleusOfTheRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudalPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudatePutamenStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudomedialEntothinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_caudoventrolateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cellBridgesOfTheVentralStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralAmygdaloidNucleusMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralCanal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralCervicalNucleusOfTheSpinalCord"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGray"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayBetaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayGammaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayNucleusO"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralGrayOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralMedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centralNucleusOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_centrolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellarCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellarWhiteMatter"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebellum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebralCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cerebralPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_choroidPlexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulateCortexArea1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulateCortexArea2"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cingulum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_circularNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_claustrum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cochlearRootOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissuralNucleusOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissuralStriaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_commissureOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_conterminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_copulaOfThePyramis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_corpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cortexAmygdalaTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cortexAmygdalaTransitionZoneLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_crus1OfTheAnsiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_crus2OfTheAnsiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneateNucleusRotundusPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_cuneiformNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_decussationOfTheSuperiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_decussationOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepCerebralWhiteMatter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_deepWhiteLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsal3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalAcousticStria"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusDeepCore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusFusiformLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusGranularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCochlearNucleusMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCortexOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalCorticospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalFornix"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalIntermediateEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalLateralGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalLateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalMotorNucleusOfVagus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalNucleusOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalParagigantocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPartOfClaustrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeduncularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeduncularPontineNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalPeriolivaryRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalRapheNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSpinocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSpinocerebellarTractAndOlivocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTegmentalNucleusPericentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTeniaTecta"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTeniaTectaLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsalTuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsolateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialHypothalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialSpinalTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dorsomedialTegmentalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_dysgranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ectorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ectotrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_entopeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_entorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ependymaAndSubependymalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ependymalAndSubendymalLayerOlfactoryVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epifascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epilemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epipeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_epirubrospinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_episupraopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ethmoidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCapsule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCortexOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCortexOfTheInferiorColliculusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalCuneateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalMedullaryLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalPlexiformLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_externalPlexiformLayerOfTheOlfactoryBulb"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsalIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsolateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusStylohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusVentralIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_facialNucleusVentromedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fasciculusRetroflexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fasciolaCinereum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA1OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA2OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fieldCA3OfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fimbriaOfTheHippocampus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_flocculus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_forcepsMajorOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_forcepsMinorOfTheCorpusCallosum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_fornix"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_frontalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_frontalCortexArea3"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gelatinousLayerOfTheCaudalSpinalTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_geminiHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_genuOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_genuOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gigantocellularReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_globusPallidus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glomerularLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glomerularLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_glossopharyngealNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gracileFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_gracileNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularCellLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granularLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfCochlearNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_granuleCellLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_habenularCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hilusOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hippocampalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hypoglossalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_hypoglossalNucleusGeniohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_indusiumGriseum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorCerebellarPeduncleDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorCerebellarPeduncleRestiformBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveBetaSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveCapOfKooyOfTheMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveDorsalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveDorsomedialCellGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOlivePrincipalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusAOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusBOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveSubnucleusCOfMedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorOliveVentrolateralProtrusion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_inferiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infralimbicCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infundibularRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_infundibularStem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interanterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interanteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedAmygdaloidNucleusMainPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedNucleiOfTheAmygdala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercalatedNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intercruralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interfascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intergeniculateLeaf"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateInterstitialNucleusOfTheMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateNucleusOfTheLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediateWhiteLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediolateralCellColumnOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermedioventralThalamicCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intermediusNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalArcuateFibers"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalCapsule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalCarotidArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalMedullaryLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_internalPlexiformLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularFossa"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusApicalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusCaudalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusDorsolateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interpeduncularNucleusRostralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusDorsolateralHump"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusDorsomedialCrest"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interposedCerebellarNucleusPosteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfCajalShellRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheDecussationOfTheSuperiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissureLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfThePosteriorLimbOfTheAnteriorCommissureMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interstitialNucleusOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_interventricularForamen"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_intramedullaryThalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_islandsOfCalleja"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_islandsOfCallejaMajorIsland"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_isthmicPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_isthmicReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_juxtaolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_juxtaparaventricularPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lacunosumMoleculareLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lambdoidSeptalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAccumbensShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralAmygdaloidNucleusVentromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralCerebellarNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralCervicalNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralDentateCerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHabenularNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralMammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralOrbitofrontalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusCrescentPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusInternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusSuperiorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParabrachialNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParagigantocellularNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralParietalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusLaterocaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusLaterorostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusMediocaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPosteriorThalamicNucleusMediorostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralRecessOfThe4thVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralReticularNucleusSubtrigeminalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSeptalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSpinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralStripeOfTheStriatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralSuperiorOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateralVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateroanteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalTegmentalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_laterodorsalThalamicNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lateroventralPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer1OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer1bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer2OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer3OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer4OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5aOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer5bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6OfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6aOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_layer6bOfCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_leminaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_linearNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_lithoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_locusCoeruleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_longitudinalFasciculusOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularNucleusOfTheLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularNucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_magnocellularPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillaryPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillaryRecessOfThe3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillotegmentalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mammillothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_marginalZoneOfTheMedialGeniculate"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_matrixRegionOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAccessoryOculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusAnteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusPosterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialAmygdaloidNucleusPosteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusCaudomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusDorsolateralProtuberance"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCerebellarNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialCorticohypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEminenceExternalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEminenceInternalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialEntorhinalCortexVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialFastigialCerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundleAComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialForebrainBundleBComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialGeniculateNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialHabenularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLemniscusDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialMammillaryNucleusMedianPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialOrbitofrontalArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParabrachialNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParalemniscialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialParietalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPreopticNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialSuperiorOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialTerminalNucleusOfTheAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialTuberalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medialVestibularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianAccessoryNucleusOfTheMedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianEminence"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medianRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mediodorsalThalamicNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medioventralPeriolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medullaryReticularNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_medullaryReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mesencephalicTrigeminalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_microcellularTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_middleCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_middleCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mitralCellLayerOfTheAccessoryOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_mitralCellLayerOfTheOlfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_molecularLayerOfTheSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorRootOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusAnteriorDigastricPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusMasseterPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusMylohyoidPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusTemporalisPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_motorTrigeminalNucleusTensorTympaniPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_navicularNucleusOfTheBasalForebrain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nervusIntermediusComponentOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nigrostriatalBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfDarkschewitsch"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfOriginOfEfferentsOfTheVestibularNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfRoller"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheAnsaLenticularis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheBrachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheCentralAcousticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheCommissuralStriaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheFieldsOfForel"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheHorizontalLimbOfTheDiagonalBand"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheLateralOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheLateralOlfactoryTractLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractCommissuralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractGelatinousPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractInterstitialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractRostrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheSolitaryTractVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheStriaMedullaris"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusOfTheVerticalLimbOfTheDiagonalBand"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusX"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusY"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_nucleusZ"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_obex"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oculomotorNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryBulb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryNerveLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryTubercle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olfactoryVentricleOlfactoryPartOfLateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivaryPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_olivocochlearBundle"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticChiasm"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticNerveLayerOfTheSuperiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_opticTract"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_oriensLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ovalParacentralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_p1PeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraabducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parabigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parabrachialPigmentedNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracentralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracochlearGlialSubstance"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paracommissuralNucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parafascicularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parafloccularSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraflocculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parainterfascicularNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paralambdoidSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paralemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paramedianSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paranigralNucleusOfTheVTA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parapyramidalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pararubralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasolitaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parastrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parasubthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratenialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratereteNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paratrochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusDorsalCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusLateralMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusMedialMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusMedialParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularHypothalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraventricularThalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_paraxiphoidNucleusOfThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parietalCortexPosteriorAreaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parvicellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_parvicellularReticularNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peduncularPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pedunculopontineTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifacialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifornicalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perifornicalPartOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perilemniscalNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periolivaryHorn"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peripeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_perirhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_peritrigeminalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_periventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pinealGland"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pinealStalk"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_piriformCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_piriformCortexLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pleomorphicPartOfPeriaqueductaiGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_polymorphLayerOfTheDentateGyrus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pontineReticularNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorCerebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorIntralaminarThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorLimitansThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorLobeOfPituitary"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorSuperiorFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorThalamicNuclearGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteriorThalamicNuclearGroupTriangularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalRapheNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralCorticalAmygdaloidNucleusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posterolateralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteromedialCorticalAmygdaloidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_posteromedianThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_postsubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preBotzingerComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preEdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_precommissuralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preculminateFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_precuneiformArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prelimbicCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_premammillaryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_premammillaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_preopticRecessOfThe3rdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prepositusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prepyramidalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_prerubralField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_presubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryAuditoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryMotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexBarrelField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexDysgranularZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexForelimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexHindlimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexJawRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexOralDysgranularZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexShoulderRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexTrunkRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primarySomatosensoryCortexUpperLipRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortexBinocularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_primaryVisualCortexMonocularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalMammillaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_principalSensoryTrigeminalNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalCellLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_pyramidalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r1ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r2ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_r3ReticularFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_radiatumLayerOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheInterpositusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheMagnusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rapheObscurusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_raphePallidusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_recessOfTheInferiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_redNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_regionWhereVAAndVLOverlap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticluostrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePonsLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reticulotegmentalNucleusOfThePonsPericentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroambiguusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrochiasmaticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrochiasmaticAreaLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroendopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroethmoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrolemniscalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retroparafascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrorubralField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrorubralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialDysgranularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexARegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexBRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrosplenialGranularCortexCRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_retrouniensArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_reuniensThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhabdoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhinalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhinalIncisure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rhomboidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfAbducensNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfAccessoryNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rootOfHypoglossalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralAmygdalopiriformArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralInterstitialNucleusOfMedialLongitudinalFasciculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralLinearNucleusOfTheRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostralVentralRespiratoryGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostroventrolateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rostrumOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_rubrospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sagulumNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_scaphoidThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryAuditoryCortexDorsalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryAuditoryCortexVentralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryMotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondarySomatosensoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexLateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexMediolateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_secondaryVisualCortexMediomedialArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sensoryRootOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septofimbrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septohippocampalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_septohypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobuleA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simpleLobuleB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_simplexFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_solitaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sphenoidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusInterpolarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalNucleusOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalTrigeminalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spinalVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_spleniumOfTheCorpusCallosum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_stigmoidHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_stratumLucidumOfTheHippocampus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striaMedullarisOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_strialPartOfThePreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_striohypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subbrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusAlphaPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcoeruleusNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subcommissuralOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subfornicalOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subgeniculateNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subiculum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subiculumTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subincertalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdalaCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_sublenticularExtendedAmygdalaMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submammillothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_submediusThalamicNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparafascicularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparafascicularThalamicNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subparaventricularZoneOfTheHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subpeduncularTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subpostremaArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaInnominata"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaInnominataBasalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactPartDorsalTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactPartMedialTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraCompactaPartVentralTier"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_substantiaNigraReticularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_subthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superficialGrayLayerOfTheSuperiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorCerebellarPeduncleBrachiumConjunctivum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorCerebellarPeduncleDescendingLimb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorMedullaryVelum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorParaolivaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorThalamicRadiation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_superiorVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleusDorsolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprachiasmaticNucleusVentromedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_suprageniculateThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supragenualNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supramammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraoculomotorCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraoculomotorPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supraopticNucleusRetrochiasmaticPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_supratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tectospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tereteHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_transverseFibersOfThePons"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_triangularNucleusLateralLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_triangularSeptalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalSolitaryTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminalTransitionZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trigeminothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_trochlearNucluesShellRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tuberalRegionOfLateralHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_uncinateFasciculusDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_uncinateFasciculusOfTheCerebellum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vagusNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vascularOrganOfTheLaminaTerminalis"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vein"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralAnteriorThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusGranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralCochlearNucleusPosteriorPartOctopusCellArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralEndopiriformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralGeniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralGeniculateNucleusLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralIntermediateEntorhinalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralLinearNucleusOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralNucleusOfTheLatLemniscus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralOrbitalCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPallidum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPartOfClaustrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosteriorNucleusOfTheThalamusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosterolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralPosteromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralReuniensThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSpinocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSpinocerebellarTractDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralSubiculum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalAreaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTeniaTecta"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTeniaTectaLayer1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventralTuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralHypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralPeriaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventrolateralThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialHypothalamicNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialNucleusOfTheHypothalamusShell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_ventromedialThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vertebralArtery"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibularRootOfTheVestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocochlearGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulomesencephalicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vestibulospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vomeronasalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_vomeronasalNerveLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_xiphoidThalamicNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncerta"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaIncertaVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonaLimitans"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_zonalLayerOfTheSuperiorColliculus"
+            },
+        ],
+        "ontologyIdentifier": None,
+    },
+    how_to_cite="Paxinos, G. and Watson, C. (2006) The Rat Brain in Stereotaxic Coordinates. 6th Edition, Academic Press, San Diego.",
+    release_date="2006-11-02",
+    short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
+    type={"@id": "https://openminds.ebrains.eu/instances/atlasType/deterministicAtlas"},
+    version_identifier="6th ed. (Interaural, RSA)",
+    version_innovation="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
+)
 BrainAtlasVersion.schaefer_400p_2018_fs_lr32k_kong17n = BrainAtlasVersion(
     id="https://openminds.ebrains.eu/instances/brainAtlasVersion/Schaefer-400p_2018-fsLR32k-kong17n",
     abbreviation="Schaefer-400p",
@@ -19591,6 +30924,3343 @@ BrainAtlasVersion.schaefer_400p_2018_fsl_mni152_yeo7n = BrainAtlasVersion(
     short_name="Schaefer Atlas (400p)",
     type={"@id": "https://openminds.ebrains.eu/instances/atlasType/deterministicAtlas"},
     version_identifier="2018, FSL-MNI152, yeo7n",
+)
+BrainAtlasVersion.swanson_bm_3rd_ed = BrainAtlasVersion(
+    id="https://openminds.ebrains.eu/instances/brainAtlasVersion/SwansonBM_3rd-ed",
+    abbreviation="SwansonBM",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
+    coordinate_space={"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/SwansonSRB_v1992"},
+    digital_identifier={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-126-10582-0"},
+    full_documentation={"@id": "https://larrywswanson.com/?page_id=164"},
+    full_name="Swanson's Brain Maps: Structure of the Rat Brain",
+    has_terminology={
+        "@type": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion",
+        "dataLocation": None,
+        "hasEntity": [
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_AmmonsHornNoguez"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_BarringtonsNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_EdingerWestphalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_KollikerFuseSubnucleusOfPB"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_OnufsNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_abducensNerveEustachius"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_abducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryAbducensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryFacialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryOlfactoryBulbBalogh"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryOlfactoryBulbGlomerularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryOlfactoryBulbGranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryOlfactoryBulbMitralLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryOlfactoryNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessorySpinalNerveWillis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_accessorySupraopticGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_agranularInsularArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_agranularInsularAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_agranularInsularAreaPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_agranularInsularAreaVentralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_alveusBurdach"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_amygdalaBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_amygdalarCapsule"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_angularBundle"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ansaPeduncularisGratiolet"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ansiformLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ansiformLobuleCrus1SublobulesAd"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ansiformLobuleCrus2SublobulesAb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ansoparamedianFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorAmygdalarArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorCingulateArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorCingulateAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorCingulateAreaVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorCommissureOlfactoryLimb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorCommissureRiolan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorCommissureTemporalLimb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorHypothalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorHypothalamicNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorHypothalamicNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorHypothalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorLaterolateralVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorLevelHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorLobeCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorNucleiDorsalThalamusNissl"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusDorsalPartMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusDorsalPartPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusExternalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusExternalPartMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusExternalPartPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusKolliker"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusLateralPartMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusLateralPartPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusMedialPartMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusMedialPartPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusPosteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusPosteroventralPartMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorOlfactoryNucleusPosteroventralPartPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteriorTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anterodorsalNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anterodorsalPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anterolateralVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteromedialNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteromedialNucleusThalamusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteromedialNucleusThalamusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteromedialVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteroventralNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteroventralPeriventricularNucleusHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_anteroventralPreopticNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_arachnoid"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_arborVitae"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_arcuateHypothalamicNucleusClark"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_areaPostrema"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_auditoryAreas"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_autonomicGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_autonomicNervousSystemLangley"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_basalNucleusOfTheDorsalHorn"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_basalNucleusOfTheDorsalHornGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_basolateralAmygdalarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_basolateralAmygdalarNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_basolateralAmygdalarNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_basomedialAmygdalarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_basomedialAmygdalarNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_basomedialAmygdalarNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionAnterolateralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionAnteromedialArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionDorsomedialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionFusiformNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionJuxtacapsularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionMagnocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionOvalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionRhomboidNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionSubcommissuralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisAnteriorDivisionVentralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisJohnston"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisPosteriorDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisPosteriorDivisionCellsparseZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisPosteriorDivisionDorsalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisPosteriorDivisionInterfascicularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisPosteriorDivisionPremedullaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisPosteriorDivisionPrincipalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisPosteriorDivisionStrialExtension"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleiStriaTerminalisPosteriorDivisionTransverseNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleusAccessoryOlfactoryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleusAnteriorCommissureGurdjian"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bedNucleusOfTheStriaMedullarisCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_behaviorControlColumn"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_behavioralStateSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_brachialPlexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_brachiumOfTheInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_brachiumOfTheSuperiorColliculus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_brain"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_brainstem"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_bulbocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_caudalIntracentralFissure"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_caudoputamen"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_celiacGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralAmygdalarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralAmygdalarNucleusCapsularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralAmygdalarNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralAmygdalarNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralCanalSpinalCordmedulla"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralCervicalNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralGray"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralGrayBrain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralLateralNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralLinearNucleusRaphe"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralLobule"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralLobuleLobuleIIISublobulesAb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralLobuleLobuleIISublobulesAb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralMedialNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralNervousSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralNervousSystemGrayMatter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralNervousSystemWhiteMatter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_centralTegmentalBundleBechterew"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellarCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellarCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellarCortexGranuleCellLayerInner"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellarCortexGrooves"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellarCortexMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellarCortexPurkinjeLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellarNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellarPeduncles"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellumHerophilusErasistratus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebellumRelatedFiberTracts"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralAqueductCollicularRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralAqueductGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralAqueductProperSylvius"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralCortexCorticalPlate"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralCortexGrooves"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralCortexPolymodalAssociationCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralCortexSensorymotorCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralCortexSubplateRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebralPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebrospinalFluid"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebrospinalTrunk"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cerebrumCerebralHemispheresEndbrainTelencephalon"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cervicalPlexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cervicalSpinalGanglia18"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cervicothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidFissureFourthVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidFissureLateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidFissureThirdVentricle"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidPlexus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidPlexusFourthVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidPlexusLateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidPlexusThirdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_choroidalFissureEye"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ciliaryGanglion"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ciliaryNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cingulateRegionBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cingulumBundleReil"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_claustrumBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_coccygealSpinalGanglia13"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_coccygealSympatheticGanglion"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cochlearNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cochlearNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cochlearNucleiGranularLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cochlearNucleiSubpeduncularGranularRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_columnsOfTheFornix"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_commissuralNucleusPeriaqueductalGrayPaxinosWatson"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_copulaPyramidisSublobulesAb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corpusCallosumAnteriorForcepsArnold"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corpusCallosumBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corpusCallosumGalen"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corpusCallosumGenu"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corpusCallosumPosteriorForcepsArnold"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corpusCallosumRostrum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corpusCallosumSpleniumBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticalAmygdalarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticalAmygdalarNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticalAmygdalarNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticalAmygdalarNucleusPosteriorPartLateralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticalAmygdalarNucleusPosteriorPartMedialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticobulbarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticopontineTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticorubralTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticospinalTractUncrossedBurdachTurck"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_corticotectalTract"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cranialNerves"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cranialParasympatheticGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cranialPlexuses"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cranialSensoryGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_crus1Fissures13"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_crus2Fissure"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_culmen"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_culmenLobulesIVV"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cuneateFascicleBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cuneateNucleusBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cuneiformNucleusCastaldi"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_cuneocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_declivalFissure2"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_decliveVISublobulesAd"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_decussationOfTheTrochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_deepCerebellarNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusCrest"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusCrestgranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusCrestmolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusCrestpolymorphLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusLateralBlade"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusLateralBladegranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusLateralBlademolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusLateralBladepolymorphLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusMedialBlade"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusMedialBladegranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusMedialBlademolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusMedialBladepolymorphLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateGyrusTarin"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dentateNucleusVicqDAzyr"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_diagonalBandBroca"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_diagonalBandNucleusBroca"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_diencephalon"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_distalGlossopharyngealGanglionAndersch"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_distalGlossopharyngeovagalPlacode"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_distalVagalGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalAcousticStriaMonakow"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalAuditoryAreas"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalCochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalColumnNuclei"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalColumns"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalCommissuralNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalCommissureSpinalCord"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalFornix"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalHornSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalLongitudinalFascicleSchutz"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalMedianSeptum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalMotorNucleusVagusNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalNucleusRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalNucleusSpinalCordCaudalPartStilling"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalNucleusSpinalCordGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalNucleusSpinalCordStillingClarke"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalPremammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalPropriohypothalamicPathways"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalRootsCoiter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalSpinocerebellarTractFlechsig"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalTegmentalDecussationMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalTegmentalNucleusGudden"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalTegmentalTractLindvallBjorklund"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalTerminalNucleusAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalThalamusPolymodalAssociationCortexRelate"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsalThalamusSensorymotorCortexRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsolateralFascicleLissauer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsomedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsomedialHypothalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsomedialHypothalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dorsomedialHypothalamicNucleusVentralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_dura"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ectorhinalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_efferentCochlearGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_efferentCochleovestibularBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_efferentVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_endopiriformNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_endopiriformNucleusLoo"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_endopiriformNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_endorhinalGroove"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_entericNervousSystemLangley"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_entorhinalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_entorhinalAreaLateralPartLayers16"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_entorhinalAreaMedialPartDorsalZoneLayers16"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_entorhinalAreaMedialPartVentralZoneHaug"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_epithalamus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_externalCapsuleBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_externalCuneateNucleusMonakowBlumenau"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_externalMedullaryLaminaThalamusBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_extrapyramidalFiberSystems"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_extrapyramidalFiberSystemsCerebralNucleiRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_extremeCapsule"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_facialNerve"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_facialNucleus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fasciculusProprius"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fasciculusRetroflexusMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fasciolaCinereaReilArnold"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fastigialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA1AmmonsHornLorenteDeNo"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA1PyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA1PyramidalLayerDeep"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA1PyramidalLayerSuperficial"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA1StratumLacunosummoleculareMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA1StratumOriensSala"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA1StratumRadiatumMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA2AmmonsHornLorenteDeNo"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA2PyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA2StratumLacunosummoleculare"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA2StratumOriens"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA2StratumRadiatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA3AmmonsHornLorenteDeNo"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA3PyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA3StratumLacunosummoleculare"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA3StratumLucidumHonegger"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA3StratumOriens"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldCA3StratumRadiatum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fieldsOfForel"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_filumTerminale"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fimbriaVieussens"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_flocculonodularLobeCerebellum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_flocculus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_foliumtuberVermisVII"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_forebrain"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fornixSystemGalen"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fourthVentricleGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fourthVentricleLateralRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_fourthVentricleProper"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_frontalPoleCerebralCortex"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_frontalRegion"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ganglia"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_geniculateGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_geniculateGroupOfTheDorsalThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_geniculateGroupOfTheVentralThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_genuOfTheFacialNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_gigantocellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_globusPallidusBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_globusPallidusExternalSegment"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_globusPallidusInternalSegment"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_glossopharyngealNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_gracileFascicleGoll"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_gracileNucleusGeneralGoll"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_gracileNucleusMedianPartBischoff"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_gracileNucleusPrincipalPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_grooves"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_gustatoryArea"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_habenularCommissureHaller"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hemisphericRegionCerebellum"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hindbrain"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hippocampalCommissuresDavid"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hippocampalFissureGratiolet"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hippocampalFormation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hippocampalRegionAranzi"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hypoglossalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hypoglossalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hypothalamicLateralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hypothalamicLateralZoneMotorRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hypothalamicLateralZoneStateRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hypothalamicPeriventricularRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hypothalamohypophysialTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_hypothalamusHis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_induseumGriseumValentin"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorCerebellarPeduncleRidley"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorColliculusCentralNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorColliculusCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorColliculusDorsalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorColliculusExternalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorMesentericGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorOlivaryComplexDorsalAccessoryOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorOlivaryComplexMedialAccessoryOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorOlivaryComplexPrincipalOlive"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorOlivaryComplexVieussens"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_inferiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_infracerebellarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_infralimbicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_infundibulumExternalLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_infundibulumGalen"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_infundibulumInternalLamina"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_insularRegion"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interanterodorsalNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interanteromedialNucleusThalamus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interbrain"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intercalatedAmygdalarNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intercalatedNucleusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intercruralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interfascicularNucleusRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediateAcousticStriaHeld"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediateGraySpinalCordGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediateGraySpinalCordProper"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediateNerveWrisberg"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediodorsalNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediolateralSpinalColumn"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediolateralSpinalColumnSacralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediolateralSpinalColumnThoracolumbarDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediolateralVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intermediomedialSpinalColumn"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_internalArcuateFibers"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_internalCapsuleBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_internalMedullaryLaminaThalamusBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_internuclearAreaHypothalamicPeriventricularRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusApicalSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusCentralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusDorsomedialSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusGudden"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusIntermediateSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusLateralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusLateralSubnucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusLateralSubnucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusLateralSubnucleusRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusLateralSubnucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interpeduncularNucleusRostralSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interposedNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interposedNucleusMainPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interposedNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interstitialNucleusAuditoryNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interstitialNucleusOfCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interstitialNucleusVestibularNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_interventricularForamenMonro"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intracentralFissure2"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intraculminateFissure1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intralaminarNucleiDorsalThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_intraparafloccularFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_islandsOfCallejaOlfactoryTubercle"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_isocortex"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_isocortexDeepSupragranularPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_isocortexGranularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_isocortexInfragranularPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_isocortexMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_isocortexPolymorphLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_isocortexSuperficialSupragranularPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_juxtarestiformBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralAmygdalarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralApertureFourthVentricleLuschka"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralCervicalNucleusRexedBrodal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralDorsalNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralForebrainBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralForebrainBundleSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralForebrainBundleSystemThalamusRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralFuniculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralGeniculateComplexDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralGeniculateComplexIntergeniculateLeaflet"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralGeniculateComplexSantorini"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralGeniculateComplexVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralGeniculateComplexVentralPartLateralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralGeniculateComplexVentralPartMedialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHabenulaNissl"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaAnteriorRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaAnteriorRegionDorsalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaAnteriorRegionIntermediateZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaAnteriorRegionVentralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaDorsalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaJuxtadorsomedialRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaJuxtaparaventricularRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaJuxtaventromedialRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaJuxtaventromedialRegionDorsalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaJuxtaventromedialRegionVentralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaMagnocellularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaMotorRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaNissl"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaParvicellularRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaPosteriorRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaSubfornicalRegionAnteriorZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaSubfornicalRegionPosteriorZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaSubfornicalRegionPremammillaryZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaSuprafornicalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaVentralRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaVentralRegionLateralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralHypothalamicAreaVentralRegionMedialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralLemniscusReil"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralMammillaryNucleusGudden"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralNucleiDorsalThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralOlfactoryTractBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralOlfactoryTractDorsalLimb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralOlfactoryTractGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralPosteriorNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralPropriohypothalamicPathways"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralReticularNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralReticularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalComplexRisoldSwanson"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalCaudodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartDorsalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartDorsalZoneDorsalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartDorsalZoneLateralRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartDorsalZoneRostralRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartDorsalZoneVentralRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartVentralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartVentralZoneIntermediateRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartVentralZoneLateralRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartVentralZoneLateralRegionDorsalDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartVentralZoneLateralRegionVentralDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartVentralZoneMedialRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartVentralZoneMedialRegionDorsalDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusCaudalPartVentralZoneMedialRegionVentralDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartDorsolateralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartDorsolateralZoneLateralRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartDorsolateralZoneLateralRegionDorsalDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartDorsolateralZoneLateralRegionVentralDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartDorsolateralZoneMedialRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartDorsolateralZoneMedialRegionDorsalDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartDorsolateralZoneMedialRegionVentralDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartMedialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartMedialZoneDorsalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartMedialZoneVentralRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartMedialZoneVentralRegionCaudalDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartMedialZoneVentralRegionRostralDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartVentrolateralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartVentrolateralZoneDorsalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartVentrolateralZoneDorsalRegionLateralDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartVentrolateralZoneDorsalRegionMedialDomain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralPartVentrolateralZoneVentralRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusRostralRostroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSeptalNucleusVentralPartRisoldSwanson"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSpinalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralSpinothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralTerminalNucleusAccessoryOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lateralVestibularNucleusDeiters"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_laterodorsalTegmentalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_laterolateralVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_linearNucleusMedulla"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lingulaI"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_locusCeruleusVicqDAzyr"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_longitudinalAssociationBundle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lumbarSpinalGanglia16"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lumbarSympatheticGanglia16"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_lumbosacralPlexus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_magnocellularNucleusLoo"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_magnocellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mainOlfactoryBulbGlomerularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mainOlfactoryBulbGranuleCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mainOlfactoryBulbInnerPlexiformLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mainOlfactoryBulbMitralLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mainOlfactoryBulbOuterPlexiformLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mainOlfactoryBulbSoemmerring"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_majorIslandOfCallejaOlfactoryTubercle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mammillaryBodyGallSpurzheim"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mammillaryPeduncleMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mammillotegmentalTractGudden"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mammillothalamicTractVicqDAzyr"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_marginalZoneSpinalCordWaldeyer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialAccessoryOculomotorNucleusBechterew"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialAmygdalarNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialAmygdalarNucleusAnterodorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialAmygdalarNucleusAnteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialAmygdalarNucleusPosterodorsalPartSublayersAc"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialAmygdalarNucleusPosteroventralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialCorticohypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialForebrainBundleEdinger"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialForebrainBundleSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialForebrainBundleSystemCerebrumRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialForebrainBundleSystemEpithalamusRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialForebrainBundleSystemHypothalamusRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialForebrainBundleSystemMammillaryRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialForebrainBundleSystemMidbrainRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialForebrainBundleSystemThalamusRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialGeniculateComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialGeniculateComplexDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialGeniculateComplexMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialGeniculateComplexVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialHabenulaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialHabenulaNissl"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialHabenulaVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialLemniscusReil"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialLongitudinalFascicle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialMammillaryNucleusBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialMammillaryNucleusGeneralGudden"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialMammillaryNucleusMedianPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialNucleiDorsalThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialPreopticArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialPreopticNucleusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialPreopticNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialPreopticNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialPretectalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialPropriohypothalamicPathways"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialSeptalComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialSeptalNucleusCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialTerminalNucleusAccessoryOpticTractEdinger"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medialVestibularNucleusSchwalbe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medianApertureFourthVentricleMagendie"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medianEminence"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medianEminenceExternalLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medianEminenceInternalLamina"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medianPreopticNucleusLoo"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mediodorsalNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mediodorsalNucleusThalamusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mediodorsalNucleusThalamusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mediodorsalNucleusThalamusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_mediolateralVisualArea"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medulla"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medullaryReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medullaryReticularNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_medullaryReticularNucleusVentralPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_meninges"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midbrain"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midbrainReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midbrainReticularNucleusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midbrainReticularNucleusMagnocellularPartGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midbrainReticularNucleusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midbrainReticularNucleusRetrorubralArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midbrainTractOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midbrainTrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_middleCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_middleCervicalGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_middleCommissureOfTheThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midlineGroupDorsalThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_midlineNucleiDorsalThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_motoneuronGroups"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_motorNucleusOfTheTrigeminalMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_motorNucleusOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_motorNucleusOfTheTrigeminalNerveParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_motorRootOfTheTrigeminalNerve"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_motorSystem"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_myentericPlexusAuerbach"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nerveFibers"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nervePlexuses"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nerves"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nervousSystem"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_neuroendocrineMotorZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_neuroendocrineMotorZoneMagnocellular"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_neuroendocrineMotorZoneParvicellular"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nigrostriatalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nigrothalamicFibers"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nodularFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nodulusXSublobulesAb"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusAccumbens"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusAmbiguusDorsalDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusAmbiguusVentralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusBrachiumInferiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusCircularis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusIncertusCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusIncertusDiffusePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusIncertusStreeter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusIntercalatusStaderini"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfDarkschewitsch"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfRoller"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheBulbocavernosus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheLateralLemniscusBechterew"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheLateralLemniscusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheLateralLemniscusHorizontalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheLateralLemniscusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheLateralOlfactoryTractDorsalCap"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheLateralOlfactoryTractGanser"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheLateralOlfactoryTractMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheLateralOlfactoryTractPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheOpticTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfThePosteriorCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheSolitaryTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheSolitaryTractCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheSolitaryTractCommissuralPartCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheSolitaryTractGelatinousPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheSolitaryTractLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheSolitaryTractMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheSpinalAccessoryNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusOfTheTrapezoidBody"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusPrepositusMarburg"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusPropriusOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusRapheMagnus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusRapheObscurus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusRaphePallidus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusRaphePontis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensCaudalDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensCaudalDivisionDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensCaudalDivisionMedianPartGurdjian"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensCaudalDivisionPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensMalone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensRostralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensRostralDivisionAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensRostralDivisionDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensRostralDivisionLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensRostralDivisionMedianPartGurdjian"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusReuniensRostralDivisionVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusSagulum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusXBrodalPompeiano"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusYBrodalPompeiano"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_nucleusZBrodalPompeiano"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_occipitalPoleCerebralCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_occipitalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_oculomotorNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_oculomotorNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_olfactoryCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_olfactoryNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_olfactoryTubercleGanser"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_olfactoryTubercleMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_olfactoryTuberclePolymorphLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_olfactoryTuberclePyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_olivaryPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_olivocerebellarTract"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_opticChiasm"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_opticNerve"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_opticTract"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_orbitalArea"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_orbitalAreaLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_orbitalAreaMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_orbitalAreaVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_orbitalAreaVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_oticGanglionArnold"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pallidotegmentalFascicle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pallidothalamicPathway"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pallidum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabigeminalNucleusBechterew"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusCentralLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusDorsalLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusExternalLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusExternalMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusExtremeLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusInternalLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusMedialMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusSuperiorLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusVentralLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parabrachialNucleusVentralMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paracentralNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parafascicularNucleusVogt"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parafloccularSulcus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraflocculus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paragigantocellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paragigantocellularReticularNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paragigantocellularReticularNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paramedianLobule"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paramedianReticularNucleusMislawsky"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paramedianSulcus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parapyramidalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parapyramidalNucleusDeepPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parapyramidalNucleusSuperficialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parasolitaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parastrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parasubiculumLayers16"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parasubthalamicNucleusZhangWang"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parasympatheticGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parasympatheticPlexuses"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parasympatheticSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paratenialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusAnteriorMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusAnteriorParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusDescendingDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusDorsalParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusFornicealPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusLateralParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusMagnocellularDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusMalone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusMedialMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusMedialParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusMedialParvicellularPartDorsalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusMedialParvicellularPartVentralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusNeuroendocrineComponent"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusParvicellularDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusPeriventricularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusPosteriorMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusPosteriorMagnocellularPartLateralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularHypothalamicNucleusPosteriorMagnocellularPartMedialZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paraventricularThalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_paravertebralSympatheticGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parietalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parietalRegionPosteriorAssociationAreas"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_parvicellularReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pedunculopontineNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pelvicGanglion"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_perforantPath"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periaqueductalGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periaqueductalGrayDorsalDivisionBeitz"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periaqueductalGrayDorsolateralDivisionBeitz"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periaqueductalGrayMedialDivisionBeitz"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periaqueductalGrayRostrolateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periaqueductalGrayRostromedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periaqueductalGrayVentrolateralDivisionBeitz"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_perihypoglossalNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periolivaryRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_peripeduncularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_peripheralNervousSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_perireuniensNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_perirhinalArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periventricularBundleHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periventricularBundleThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periventricularHypothalamicNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periventricularHypothalamicNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periventricularHypothalamicNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_periventricularRegionHypothalamus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_phrenicNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_phrenicNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pia"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pinealGlandGalen"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pinealStalk"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_piriformArea"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_piriformAreaMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_piriformAreaPolymorphLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_piriformAreaPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_piriformamygdalarArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pituitaryGlandAnteriorLobe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pituitaryGlandGalen"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pituitaryGlandIntermediateLobe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pituitaryGlandNeuralLobe"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ponsVarolio"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pontineCentralGray"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pontineCentralGrayGeneral"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pontineGray"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pontineGrayGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pontineReticularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pontineReticularNucleusCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pontineReticularNucleusRostralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_postAndPrecerebellarNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_postcommissuralFornixElliotSmith"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorAmygdalarNucleusCanterasSwanson"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorAuditoryArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorCommissureLieutaud"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorComplexThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorLimitingNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorLobeCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorPretectalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorSeptalComplex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteriorSuperiorFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posterodorsalIntraculminateFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posterodorsalPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posterolateralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posterolateralVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_posteromedialVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_postpiriformTransitionArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_postsubiculumLayers16"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_precentralFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_precentralFissureA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_precentralFissureB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_precommissuralFornixElliotSmith"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_precommissuralFornixGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_precommissuralNucleusPeriaqueductalGrayPaxinosWatson"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_preculminateFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_prefrontalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_preganglionicAutonomicPools"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_preganglionicAutonomicPoolsParasympathetic"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_preganglionicAutonomicPoolsSympathetic"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_prelimbicArea"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_premammillaryCommissureRisoldEtAl"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_preopticCommissureRisoldEtAl"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_preopticLevelHypothalamusEdinger"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_preopticPeriventricularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_preparasubthalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_prepyramidalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_presubiculumLayers16Cajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pretectalRegionEdinger"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_prevertebralSympatheticGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primaryAuditoryArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primarySomatomotorArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primarySomatosensoryArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primarySomatosensoryAreaBarrelField"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primarySomatosensoryAreaLowerLimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primarySomatosensoryAreaMouthRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primarySomatosensoryAreaNoseRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primarySomatosensoryAreaTrunkRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primarySomatosensoryAreaUpperLimbRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_primaryVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_principalMammillaryTractKolliker"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_principalSensoryNucleusOfTheTrigeminal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_propriohypothalamicPathways"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_proximalGlossopharyngealGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_proximalGlossopharyngeovagalPlacode"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_proximalVagalGanglionEhrenritter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pterygopalatineGanglionMeckel"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pudentalPlexus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pyramidWillis"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pyramidalDecussationPourfourDuPetit"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pyramidalFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_pyramusVIIISublobulesAb"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rapheNuclei"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_redNucleusBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_reticularFormationJLenhossek"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_reticularNucleusSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_reticularNucleusThalamusArnold"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_reticulocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_reticulospinalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_reticulospinalTractLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_reticulospinalTractMedialPart"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retina"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retinaGanglionCellLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retinaInnerNuclearLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retinaInnerPlexiformLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retinaOuterNuclearLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retinaOuterPlexiformLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retrochiasmaticAreaLateralHypothalamicArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retrohippocampalRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retrosplenialArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retrosplenialAreaDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retrosplenialAreaLateralAgranularPartRisoldSwanson"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retrosplenialAreaVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retrosplenialAreaVentralPartZoneA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_retrosplenialAreaVentralPartZoneBc"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rhinalFissure"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rhinalIncisure"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rhinalRegion"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rhinocele"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rhomboidNucleusCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rostralLinearNucleusRaphe"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rostralMedullaryVelumVieussens"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rostralNeuropore"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rostrolateralVisualArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rubroreticularTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_rubrospinalTractMonakow"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sacralParasympatheticGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sacralSpinalGanglia14"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sacralSympatheticGanglia14"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_secondaryFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_secondarySomatomotorAreas"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensoryGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensoryRootOfTheTrigeminalNerve"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensorySystem"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensorySystemAuditory"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensorySystemGustatory"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensorySystemHumorosensory"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensorySystemSomatosensory"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensorySystemVisceral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sensorySystemVisual"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_septalRegionMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_septofimbrialNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_septohippocampalNucleus"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_simpleFissure"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_simpleLobuleSublobulesAb"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_solitaryTract"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_somaticNervousSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_somatomotorAreas"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_somatomotorMotoneuronPools"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_somatosensoryAreas"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalCentralGray"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalCord"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalCordCervicalLevelSegments18"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalCordCoccygealLevelSegments13"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalCordGrooves"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalCordLumbarLevelSegments16"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalCordSacralLevelSegments14"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalCordThoracicLevelSegments113"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNerves"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminalCaudalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminalInterpolarPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminalOralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminalOralPartCaudalDorsomedialRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminalOralPartMiddleDorsomedialRegionDorsalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminalOralPartMiddleDorsomedialRegionVentralZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminalOralPartRostralDorsomedialRegion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalNucleusOfTheTrigeminalOralPartVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalPlexuses"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalSensoryGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalTractOfTheTrigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinalVestibularNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinocerebellarTracts"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinocervicalTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinohypothalamicPathway"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinoolivaryPathway"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinoreticularPathway"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinotectalPathway"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinotelencephalicPathway"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinothalamicTractThieleHorsley"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spinovestibularPathway"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_spiralGanglionCorti"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_splanchnicNerves"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_stellateGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_stratumZonaleThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_striaMedullaris"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_striaTerminalisWenzelWenzel"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_striatalFundus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_striatonigralPathway"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_striatum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subceruleusNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subcommissuralOrgan"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subependymalZone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subfornicalOrganPines"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumBurdach"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumDorsalPartMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumDorsalPartPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumDorsalPartStratumRadiatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumVentralPartMolecularLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumVentralPartPyramidalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subiculumVentralPartStratumRadiatum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sublaterodorsalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_submandibularGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_submedialNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_submucosalPlexusMeissner"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subparafascicularNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subparafascicularNucleusThalamusMagnocellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subparafascicularNucleusThalamusParvicellularPartLateralDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subparafascicularNucleusThalamusParvicellularPartMedialDivision"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subparaventricularZoneHypothalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_substantiaGelatinosaSpinalCordRolando"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_substantiaInnominataReilReichert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_substantiaNigraCompactPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_substantiaNigraReticularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_substantiaNigraSoemmerringVicqDAzyr"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subthalamicFascicle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_subthalamicNucleusLuys"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorCentralNucleusRapheBechterew"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorCentralNucleusRapheLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorCentralNucleusRapheMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorCerebellarPeduncle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorCerebellarPeduncleWernekinck"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorCervicalGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusDeepGrayLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusDeepWhiteLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusIntermediateGrayLayerSublayerA"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusIntermediateGrayLayerSublayerB"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusIntermediateGrayLayerSublayerC"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusIntermediateWhiteLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusMotorRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusOpticLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusSensoryRelated"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusSuperficialGrayLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorColliculusZonalLayer"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorMesentericGanglion"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorOlivaryComplexLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorOlivaryComplexMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorOlivaryComplexSchroederVanDerKolk"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorSalivatoryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_superiorVestibularNucleusBechterew"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supplementalSomatosensoryArea"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_suprachiasmaticNucleusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_suprachiasmaticNucleusSpiegelZwieg"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_suprachiasmaticNucleusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_suprachiasmaticPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_suprageniculateNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supragenualNucleusMeessenOlszewski"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supramammillaryDecussation"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supramammillaryNucleusCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supramammillaryNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supramammillaryNucleusMedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supraopticCommissures"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supraopticCommissuresAnteriorGanser"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supraopticCommissuresDorsalMeynert"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supraopticCommissuresVentralGudden"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supraopticNucleusGeneralLenhossek"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supraopticNucleusProper"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supraopticNucleusRetrochiasmaticPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_supratrigeminalNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sympatheticChain"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sympatheticGanglia"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sympatheticPlexuses"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_sympatheticSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tectospinalPathway"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tectospinalPathwayCrossedEdinger"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tectospinalPathwayDirect"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tectothalamicPathway"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tectum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tegmentalReticularNucleusPontineGrayBechterew"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tegmentum"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_telencephalicRoofPlate"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_telencephalon"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_temporalAssociationAreas"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_temporalPoleCerebralCortex"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_temporalRegion"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_teniaTecta"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_teniaTectaDorsalPartLayers14"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_teniaTectaVentralPartLayers13"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_terminalGanglion"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_terminalNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thalamicPeduncles"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thalamus"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thirdVentricle"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thirdVentricleHypothalamicPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thirdVentricleInfundibularRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thirdVentricleMammillaryRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thirdVentriclePeriventricularRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thirdVentriclePinealRecess"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thirdVentriclePreopticRecessEdinger"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thirdVentricleThalamicPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thoracicSpinalGanglia113"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_thoracicSympatheticGanglia313"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_trapezoidBodyTreviranus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_triangularNucleusSeptumCajal"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_trigeminalGanglionVieussensGasser"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_trigeminalNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_trigeminocerebellarTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_trochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_trochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tuberalNucleusIntermediatePart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tuberalNucleusLateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tuberalNucleusMalone"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tuberalNucleusSubventricularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tuberalNucleusTereteSubnucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tuberomammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tuberomammillaryNucleusDorsalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_tuberomammillaryNucleusVentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_uncinateFascicleRussell"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_uvulaIXSublobulesAbc"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_uvularFissure1"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vagalCommissure"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vagusNerve"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vascularOrganOfTheLaminaTerminalis"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralAnteriorlateralComplexThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralAuditoryAreas"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralCochlearNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralCochlearNucleusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralCochlearNucleusPosteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralCommissureOfTheSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralCommissureSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralFuniculus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralHippocampalCommissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralHornSpinalCord"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralHornSpinalCordGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralMedialNucleusThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralMedianFissure"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralNucleiDorsalThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPosteriorComplexThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPosterolateralNucleusThalamusGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPosterolateralNucleusThalamusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPosterolateralNucleusThalamusPrincipalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPosteromedialNucleusThalamusGeneral"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPosteromedialNucleusThalamusParvicellularPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPosteromedialNucleusThalamusPrincipalPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPremammillaryNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralPropriohypothalamicPathways"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralRootsCoiter"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralSpinocerebellarTractGowers"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralSpinothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralTegmentalAreaTsai"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralTegmentalDecussationForel"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralTegmentalNucleusGudden"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventralThalamus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventricularSystem"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventrolateralHypothalamicTract"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventrolateralPreopticNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventromedialHypothalamicNucleus"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventromedialNucleusHypothalamusAnteriorPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventromedialNucleusHypothalamusCentralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventromedialNucleusHypothalamusDorsomedialPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_ventromedialNucleusHypothalamusVentrolateralPart"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vermalRegionsCerebellum"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vestibularGanglionScarpa"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vestibularNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vestibularNuclei"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vestibulocochlearNerve"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vestibulomotorRegions"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vestibulospinalPathway"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_visceralArea"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_visceralSensorymotorAreas"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_visualAreas"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_vomeronasalNerve"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_zonaIncerta"},
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_zonaIncertaDopaminergicGroup"
+            },
+            {
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_zonaIncertaGeneral"
+            },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/SwansonBM_3rd-ed_zonaLimitans"},
+        ],
+        "ontologyIdentifier": None,
+    },
+    homepage=IRI("https://larrywswanson.com/?page_id=164"),
+    how_to_cite="Swanson, L.W. (2004) Brain maps: structure of the rat brain, 3rd edition.",
+    license={"@id": "https://openminds.ebrains.eu/instances/licenses/ccByNc4.0"},
+    release_date="2003-11-24",
+    short_name="Swanson's Brain Maps",
+    type={"@id": "https://openminds.ebrains.eu/instances/atlasType/deterministicAtlas"},
+    version_identifier="3rd ed.",
+    version_innovation="The book’s third edition has returned to the large format of the first, and its photo of each atlas level with accompanying drawing of gray and white matter distribution. The new feature is a second drawing that illustrates major features of gray matter regionalization in a color-coded way that is carried through the flatmaps of the rat CNS (Frontispiece, Fig. 11, and poster) and the hierarchical nomenclature tables of section VIII. Changes to the Original Atlas: Two general types of change have been made to the second [editor note: 3rd] edition of the atlas. New architectonic information has been incorporated, and these changes are reflected in the annotated nomenclature tables, whose general organization has been improved. The following structures have been added or modified significantly: auditory areas (cortex), bed nuclei of the stria terminalis (simplified), capsular part of the central amygdalar nucleus, caudoputamen, ventral part of the dorsomedial hypothalamic nucleus, globus pallidus, internuclear area of the hypothalamic periventricular region, lateral hypothalamic area (parcelled), midbrain reticular nucleus, nucleus of the lateral lemniscus (parcelled), nucleus of the solitary tract, parasolitary nucleus, ventral premammillary nucleus, peripeduncular nucleus, parastrial nucleus, preparasubthalamic nucleus, parasubthalamic nucleus, anterior parvicellular part of the paraventricular hypothalamic nucleus, subparaventricular zone of the hypothalamus, substantia innominata, stria medullaris, parvicellular part of the subparafascicular nucleus (parcelled), temporal association areas (renamed), tuberal nucleus (parcelled), ventrolateral preoptic nucleus, ventrolateral hypothalamic tract. In addition, a limited number of spelling changes have been made. The American spelling of words like “taenia” has been adopted (“tenia”), and “amygdalar” has been substituted for “amygdaloid” and “amygdala”. For earlier versions of the atlas see CD-ROM files C1-3. See [full documentation](https://larrywswanson.com/?page_id=164), section: Preface and Chapter III: Preparation and Use of the Atlas.",
 )
 BrainAtlasVersion.swma_2018 = BrainAtlasVersion(
     id="https://openminds.ebrains.eu/instances/brainAtlasVersion/SWMA_2018",

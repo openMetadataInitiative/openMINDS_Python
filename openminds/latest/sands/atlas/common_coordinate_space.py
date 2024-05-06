@@ -280,6 +280,33 @@ CommonCoordinateSpace.mni_icbm152 = CommonCoordinateSpace(
     short_name="MNI ICBM152",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
 )
+CommonCoordinateSpace.pw_rbsc_cor_t = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/PW-RBSC-corT",
+    abbreviation="PW-RBSC-corT",
+    description="Stereotactic coordinate space of the coronal plane.",
+    full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-LIA"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-RIA"},
+        {
+            "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-LSA"
+        },
+        {
+            "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-RSA"
+        },
+    ],
+    short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/rattusNorvegicus"},
+)
+CommonCoordinateSpace.swanson_srb = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/SwansonSRB",
+    abbreviation="SwansonSRB",
+    description="Stereotactic coordinate system derived from the atlas by Paxinos and Watson (1986; ISBN: 0-12-547621-3).",
+    full_name="Swanson's Stereotactic Brain of the Sprague Dawley Rat",
+    has_versions=[{"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/SwansonSRB_v1992"}],
+    short_name="Swanson's Stereotactic Rat Brain",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/rattusNorvegicus"},
+)
 CommonCoordinateSpace.whssd = CommonCoordinateSpace(
     id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/WHSSD",
     abbreviation="WHSSD",

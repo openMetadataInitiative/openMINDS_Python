@@ -1,2 +1,2 @@
 from .device import SlicingDevice, SlicingDeviceUsage
-from .activity import CranialWindowPreparation, TissueCulturePreparation, TissueSampleSlicing
+from .activity import TissueCulturePreparation, CranialWindowPreparation, TissueSampleSlicing

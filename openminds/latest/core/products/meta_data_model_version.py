@@ -74,7 +74,12 @@ class MetaDataModelVersion(LinkedMetadata):
         ),
         Property(
             "full_documentation",
-            ["openminds.latest.core.DOI", "openminds.latest.core.File", "openminds.latest.core.WebResource"],
+            [
+                "openminds.latest.core.DOI",
+                "openminds.latest.core.File",
+                "openminds.latest.core.ISBN",
+                "openminds.latest.core.WebResource",
+            ],
             "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
