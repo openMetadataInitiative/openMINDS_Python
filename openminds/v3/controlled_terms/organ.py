@@ -77,7 +77,7 @@ class Organ(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
