@@ -52,7 +52,7 @@ jobs:
         git config --global user.name "openMINDS pipeline"
         if [[ $(git add . --dry-run | wc -l) -gt 0 ]]; then
             git add .
-            git commit -m "build triggered by changes to openMINDS schemas and/or instances"
+            git commit -m "build triggered by ${{ github.event_name }}"
             git push -f
         else
             echo "Nothing to commit"
