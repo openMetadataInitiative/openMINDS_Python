@@ -78,12 +78,13 @@ for schema_version in schema_loader.get_schema_versions():
 
 # Step 5 - create additional files, e.g. __init__.py
 openminds_modules = defaultdict(set)
-for path, classes in python_modules.items():
+for path in sorted(python_modules):
+    classes = python_modules[path]
     dir_path = ["target", "openminds"] + path.split(".")
     openminds_modules[dir_path[2]].add(dir_path[3])
     init_file_path = os.path.join(*(dir_path + ["__init__.py"]))
     with open(init_file_path, "w") as fp:
-        for class_module, class_name in classes:
+        for class_module, class_name in sorted(classes):
             fp.write(f"from .{class_module} import {class_name}\n")
     while len(dir_path) > 3:
         child_dir = dir_path[-1]
@@ -91,7 +92,7 @@ for path, classes in python_modules.items():
         init_file_path = os.path.join(*(dir_path + ["__init__.py"]))
         with open(init_file_path, "a") as fp:
             if len(dir_path) > 3:
-                class_names = ", ".join(class_name for _, class_name in classes)
+                class_names = ", ".join(sorted(class_name for _, class_name in classes))
                 fp.write(f"from .{child_dir} import ({class_names})\n")
 
 for version, module_list in openminds_modules.items():
