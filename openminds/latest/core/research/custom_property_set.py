@@ -44,6 +44,7 @@ class CustomPropertySet(EmbeddedMetadata):
             "relevant_for",
             [
                 "openminds.latest.controlled_terms.AnalysisTechnique",
+                "openminds.latest.controlled_terms.MRIPulseSequence",
                 "openminds.latest.controlled_terms.StimulationApproach",
                 "openminds.latest.controlled_terms.StimulationTechnique",
                 "openminds.latest.controlled_terms.Technique",

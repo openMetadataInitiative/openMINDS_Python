@@ -323,6 +323,11 @@ Terminology.molecular_entity = Terminology(
     name="molecular entity",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_23367"),
 )
+Terminology.mri_pulse_sequence = Terminology(
+    id="https://openminds.ebrains.eu/instances/terminology/MRIPulseSequence",
+    definition="An 'MRI pulse sequence' is a particular setting of pulse sequences and pulsed field gradients, resulting in a particular image appearance [adapted from [Wikipedia](https://en.wikipedia.org/wiki/MRI_pulse_sequence)].",
+    name="MRI pulse sequence",
+)
 Terminology.olfactory_stimulus_type = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/olfactoryStimulusType",
     definition="An 'olfactory stimulus type' groups similar olfactory stimuli used across olfactory stimulation techniques.",

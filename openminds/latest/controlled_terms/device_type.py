@@ -125,6 +125,16 @@ DeviceType.c_tscanner = DeviceType(
     name="CT scanner",
     synonyms=["CAT scanner", "computed axial tomography scanner", "computed tomography scanner"],
 )
+DeviceType.closed_bore_mri_scanner = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/closedBoreMRIScanner",
+    definition="'Closed-bore MRI scanners' are high-field scanners which feature a magnet surrounding the patient creating a capsule-like space (standard or wide) where the patient lies on.",
+    name="closed-bore MRI scanner",
+    synonyms=[
+        "closed-bore magnetic resonance imaging scanner",
+        "closed magnetic resonance imaging scanner",
+        "closed MRI scanner",
+    ],
+)
 DeviceType.electronic_amplifier = DeviceType(
     id="https://openminds.ebrains.eu/instances/deviceType/electronicAmplifier",
     definition="An 'electronic amplifier' is a device that increases the power (voltage or current) of a time-varying signal.",
@@ -155,10 +165,40 @@ DeviceType.mr_iscanner = DeviceType(
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2100"),
     synonyms=["magnetic resonance imaging scanner"],
 )
+DeviceType.open_bore_mri_scanner = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/openBoreMRIScanner",
+    definition="'Open-bore MRI scanners' are low-field scanners which have a magnetic top and bottom, but are otherwise open, increasing patient's comfort and unobstructed view of the scanning area.",
+    name="open-bore MRI scanner",
+    synonyms=[
+        "open-bore magnetic resonance imaging scanner",
+        "open magnetic resonance imaging scanner",
+        "open MRI scanner",
+    ],
+)
+DeviceType.standard_bore_mri_scanner = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/standardBoreMRIScanner",
+    definition="A 'standard-bore MRI scanner' is a closed high-field scanner which features a magnet surrounding the patient creating a capsule-like space where the patient lies on.",
+    name="standard-bore MRI scanner",
+    synonyms=[
+        "standard-bore magnetic resonance imaging scanner",
+        "standard-bore closed magnetic resonance imaging scanner",
+        "standard-bore closed MRI scanner",
+    ],
+)
 DeviceType.vibrating_microtome = DeviceType(
     id="https://openminds.ebrains.eu/instances/deviceType/vibratingMicrotome",
     definition="A 'vibrating microtome' is an mechanical instrument with a vibrating steel blade used to cut (typically) biological specimens into thin segments for further treatment and ultimately microscopic or histologic examination.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0780522"),
     name="vibrating microtome",
     synonyms=["vibratome"],
+)
+DeviceType.wide_bore_mri_scanner = DeviceType(
+    id="https://openminds.ebrains.eu/instances/deviceType/wideBoreMRIScanner",
+    definition="A 'wide-bore MRI scanner' is a closed high-field scanner which features a widened bore compared to the standard-bore MRI scanner.",
+    name="wide-bore MRI scanner",
+    synonyms=[
+        "wide-bore magnetic resonance imaging scanner",
+        "wide-bore closed magnetic resonance imaging scanner",
+        "wide-bore closed MRI scanner",
+    ],
 )

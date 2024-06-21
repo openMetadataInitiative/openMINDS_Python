@@ -2661,7 +2661,7 @@ BrainAtlas.pw_rbsc_cor = BrainAtlas(
             },
             {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_supratrigeminalNucleus"},
             {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_tectospinalTract"},
-            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_temporalAssociatinCortex"},
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_temporalAssociationCortex"},
             {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_tereteHypothalamicNucleus"},
             {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_transverseFibersOfThePons"},
             {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_trapezoidBody"},

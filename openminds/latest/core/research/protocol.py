@@ -67,6 +67,7 @@ class Protocol(LinkedMetadata):
             "techniques",
             [
                 "openminds.latest.controlled_terms.AnalysisTechnique",
+                "openminds.latest.controlled_terms.MRIPulseSequence",
                 "openminds.latest.controlled_terms.StimulationApproach",
                 "openminds.latest.controlled_terms.StimulationTechnique",
                 "openminds.latest.controlled_terms.Technique",

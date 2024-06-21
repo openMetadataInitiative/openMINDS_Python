@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class OrganismSubstance(LinkedMetadata):
+class MRIPulseSequence(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
+    type_ = "https://openminds.ebrains.eu/controlledTerms/MRIPulseSequence"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class OrganismSubstance(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the organism substance.",
+            description="Longer statement or account giving the characteristics of the m r i pulse sequence.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class OrganismSubstance(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the organism substance.",
+            description="Word or phrase that constitutes the distinctive designation of the m r i pulse sequence.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -119,43 +119,47 @@ class OrganismSubstance(LinkedMetadata):
         return cls._instance_lookup[name]
 
 
-OrganismSubstance.arterial_blood = OrganismSubstance(
-    id="https://openminds.ebrains.eu/instances/organismSubstance/arterialBlood",
-    definition="'Arterial blood' is the oxygenated portion of blood which occupies the pulmonary vein, the left chambers of the heart, and the arteries of the circulatory system.",
-    description="Blood that flows through an artery.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0725460"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013755#arterial-blood"),
-    name="arterial blood",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013755"),
-    synonyms=["arterial blood", "blood in artery", "portion of arterial blood"],
+MRIPulseSequence.echo_planar_pulse_sequence = MRIPulseSequence(
+    id="https://openminds.ebrains.eu/instances/MRIPulseSequence/echoPlanarPulseSequence",
+    definition="In magnetic resonance imaging, an 'echo-planar pulse sequence' is a contrasting technique where each radio frequency field (RF) excitation is followed by a train of gradient echoes with different spatial encoding allowing for very rapid scanning. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Physics_of_magnetic_resonance_imaging#Echo-planar_imaging)]",
+    name="echo planar pulse sequence",
+    synonyms=["echo-planar imaging"],
 )
-OrganismSubstance.blood = OrganismSubstance(
-    id="https://openminds.ebrains.eu/instances/organismSubstance/blood",
-    definition="''Blood' is a body fluid in the circulatory system of vertebrates that transports substances to and from cells (e.g. nutrients, oxygen or metabolic waste products). [[adapted from Wikipedia](https://en.wikipedia.org/wiki/Blood)]",
-    description="A bodily fluid that is composed of blood plasma and erythrocytes (blood cells).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101354"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000178#blood"),
-    name="blood",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000178"),
-    synonyms=["portion of blood", "vertebrate blood"],
+MRIPulseSequence.gradient_echo_pulse_sequence = MRIPulseSequence(
+    id="https://openminds.ebrains.eu/instances/MRIPulseSequence/gradientEchoPulseSequence",
+    definition="In magnetic resonance imaging, a 'gradient-echo pulse sequence' is a contrast generation technique that rapidly induces bulk changes in the spin magnetization of a sample by applying a series of carefully constructed pulses so that the change in the gradient of the magnetic field is maximized, trading contrast for speed (cf. [Hargreaves (2012)](https://doi.org/10.1002/jmri.23742)).",
+    name="gradient-echo pulse sequence",
+    synonyms=["GRE pulse sequence"],
 )
-OrganismSubstance.cerebrospinal_fluid = OrganismSubstance(
-    id="https://openminds.ebrains.eu/instances/organismSubstance/cerebrospinalFluid",
-    definition="'cerebrospinal fluid' is a clear, colorless, bodily fluid, that occupies the subarachnoid space and the ventricular system around and inside the brain and spinal cord [WP, modified]. [http://en.wikipedia.org/wiki/Cerebrospinal_fluid]",
-    description="The fluid that is contained within the brain ventricles, the subarachnoid space and the central canal of the spinal cord (NCI). Transudate contained in the subarachnoid space (UWDA). Clear colorless liquid secreted by the choroid plexus of the lateral, third, and fourth ventricles, and contained within the ventricular system of the brain and spinal cord and within the subarachnoid space (CSP).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101997"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/#cerebral-spinal-fluid"),
-    name="cerebrospinal fluid",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001359"),
-    synonyms=["CSF", "cerebral spinal fluid", "liquor cerebrospinalis", "spinal fluid"],
+MRIPulseSequence.spin_echo_pulse_sequence = MRIPulseSequence(
+    id="https://openminds.ebrains.eu/instances/MRIPulseSequence/spinEchoPulseSequence",
+    definition="In magnetic resonance imaging, a 'spin echo pulse sequence' is a contrast generation technique that induces bulk changes in the spin magnetization of a sample by applying sequential pulses of resonant electromagnetic waves at different angles (cf. [Fonseca (2013)](https://doi.org/10.5772/53693)).",
+    name="spin echo pulse sequence",
+    synonyms=["SE pulse sequence"],
 )
-OrganismSubstance.venous_blood = OrganismSubstance(
-    id="https://openminds.ebrains.eu/instances/organismSubstance/venousBlood",
-    definition="'Venous blood' is deoxygenated blood which travels from the peripheral vessels, through the venous system into the right atrium of the heart.",
-    description="Blood that flows through a vein.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0734397"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013756#venous-blood"),
-    name="venous blood",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013756"),
-    synonyms=["blood in vein", "portion of venous blood", "venous blood"],
+MRIPulseSequence.t1_pulse_sequence = MRIPulseSequence(
+    id="https://openminds.ebrains.eu/instances/MRIPulseSequence/T1PulseSequence",
+    definition="In magnetic resonance imaging, a 'T1 pulse sequence' is a contrasting technique that allows the magnetization of the specimen or object to recover (spin-lattice relaxation) before measuring the magnetic resonance signal by changing the repetition time. [adapted from [wikipedia](https://en.wikipedia.org/wiki/MRI_sequence)]",
+    name="T1 pulse sequence",
+    synonyms=[
+        "T1 weighted imaging",
+        "T1 weighted magnetic resonance imaging",
+        "T1 weighted MRI",
+        "T1w imaging",
+        "T1w magnetic resonance imaging",
+        "T1w MRI",
+    ],
+)
+MRIPulseSequence.t2_pulse_sequence = MRIPulseSequence(
+    id="https://openminds.ebrains.eu/instances/MRIPulseSequence/T2PulseSequence",
+    definition="In magnetic resonance imaging, a 'T2 pulse sequence' is a contrasting technique that allows the magnetization of the specimen or object to decay (spin-spin relaxation) before measuring the magnetic resonance signal by changing the echo time. [adapted from [wikipedia](https://en.wikipedia.org/wiki/MRI_sequence)]",
+    name="T2 pulse sequence",
+    synonyms=[
+        "T2 weighted imaging",
+        "T2 weighted magnetic resonance imaging",
+        "T2 weighted MRI",
+        "T2w imaging",
+        "T2w magnetic resonance imaging",
+        "T2w MRI",
+    ],
 )

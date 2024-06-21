@@ -203,6 +203,7 @@ class BrainAtlasVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.Language",
                 "openminds.latest.controlled_terms.Laterality",
                 "openminds.latest.controlled_terms.LearningResourceType",
+                "openminds.latest.controlled_terms.MRIPulseSequence",
                 "openminds.latest.controlled_terms.MeasuredQuantity",
                 "openminds.latest.controlled_terms.MeasuredSignalType",
                 "openminds.latest.controlled_terms.MetaDataModelType",
@@ -22085,7 +22086,7 @@ BrainAtlasVersion.pw_rbsc_cor_6th_ed__bregma_lia = BrainAtlasVersion(
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tectospinalTract"
             },
             {
-                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociationCortex"
             },
             {
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tereteHypothalamicNucleus"
@@ -24917,7 +24918,7 @@ BrainAtlasVersion.pw_rbsc_cor_6th_ed__bregma_ria = BrainAtlasVersion(
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tectospinalTract"
             },
             {
-                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociationCortex"
             },
             {
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tereteHypothalamicNucleus"
@@ -27749,7 +27750,7 @@ BrainAtlasVersion.pw_rbsc_cor_6th_ed__interaural_lsa = BrainAtlasVersion(
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tectospinalTract"
             },
             {
-                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociationCortex"
             },
             {
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tereteHypothalamicNucleus"
@@ -30581,7 +30582,7 @@ BrainAtlasVersion.pw_rbsc_cor_6th_ed__interaural_rsa = BrainAtlasVersion(
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tectospinalTract"
             },
             {
-                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+                "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociationCortex"
             },
             {
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_tereteHypothalamicNucleus"

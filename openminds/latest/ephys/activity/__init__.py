@@ -1,3 +1,3 @@
 from .electrode_placement import ElectrodePlacement
-from .recording_activity import RecordingActivity
 from .cell_patching import CellPatching
+from .recording_activity import RecordingActivity

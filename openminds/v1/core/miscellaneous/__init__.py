@@ -1,5 +1,5 @@
+from .funding import Funding
 from .digital_identifier_schema import DigitalIdentifierSchema
 from .digital_identifier import DigitalIdentifier
-from .quantitative_value_range import QuantitativeValueRange
 from .quantitative_value import QuantitativeValue
-from .funding import Funding
+from .quantitative_value_range import QuantitativeValueRange

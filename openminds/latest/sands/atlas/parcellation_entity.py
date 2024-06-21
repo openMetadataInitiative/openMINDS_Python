@@ -17453,16 +17453,16 @@ ParcellationEntity.pw_rbsc_cor_tectospinal_tract = ParcellationEntity(
     lookup_label="PW-RBSC-cor_tectospinalTract",
     name="tectospinal tract",
 )
-ParcellationEntity.pw_rbsc_cor_temporal_associatin_cortex = ParcellationEntity(
-    id="https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_temporalAssociatinCortex",
+ParcellationEntity.pw_rbsc_cor_temporal_association_cortex = ParcellationEntity(
+    id="https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_temporalAssociationCortex",
     abbreviation="TeA",
     has_versions=[
         {
-            "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociatinCortex"
+            "@id": "https://openminds.ebrains.eu/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_temporalAssociationCortex"
         }
     ],
-    lookup_label="PW-RBSC-cor_temporalAssociatinCortex",
-    name="temporal associatin cortex",
+    lookup_label="PW-RBSC-cor_temporalAssociationCortex",
+    name="temporal association cortex",
 )
 ParcellationEntity.pw_rbsc_cor_terete_hypothalamic_nucleus = ParcellationEntity(
     id="https://openminds.ebrains.eu/instances/parcellationEntity/PW-RBSC-cor_tereteHypothalamicNucleus",

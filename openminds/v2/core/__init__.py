@@ -1,40 +1,40 @@
-from .actors import Organization, Affiliation, Contribution, Person, ContactInformation
-from .data import License, FileBundle, ContentType, Copyright, Hash, FileRepository, File
+from .actors import ContactInformation, Person, Contribution, Organization, Affiliation
+from .research import (
+    Protocol,
+    ProtocolExecution,
+    TissueSampleState,
+    TissueSample,
+    SubjectGroup,
+    Subject,
+    TissueSampleCollection,
+    SubjectState,
+    SubjectGroupState,
+    StringParameter,
+    NumericalParameter,
+    ParameterSet,
+    TissueSampleCollectionState,
+)
+from .data import File, Hash, License, Copyright, FileRepository, FileBundle, ContentType
 from .products import (
-    MetaDataModel,
-    MetaDataModelVersion,
-    ModelVersion,
-    DatasetVersion,
     Model,
     Software,
     SoftwareVersion,
-    Project,
+    DatasetVersion,
     Dataset,
+    ModelVersion,
+    MetaDataModelVersion,
+    MetaDataModel,
+    Project,
 )
 from .miscellaneous import (
-    RORID,
-    DOI,
+    Funding,
+    GRIDID,
     ORCID,
+    RORID,
     SWHID,
     ISBN,
-    GRIDID,
-    QuantitativeValueRange,
-    URL,
+    DOI,
     QuantitativeValue,
-    Funding,
-)
-from .research import (
-    SubjectGroupState,
-    StringParameter,
-    Protocol,
-    Subject,
-    TissueSample,
-    NumericalParameter,
-    ProtocolExecution,
-    TissueSampleCollectionState,
-    SubjectState,
-    TissueSampleCollection,
-    ParameterSet,
-    TissueSampleState,
-    SubjectGroup,
+    URL,
+    QuantitativeValueRange,
 )

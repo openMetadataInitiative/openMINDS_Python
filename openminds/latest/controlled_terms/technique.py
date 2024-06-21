@@ -450,12 +450,6 @@ Technique.dual_view_inverted_selective_plane_illumination_microscopy = Technique
         "dual-view inverted light sheet microscopy",
     ],
 )
-Technique.echo_planar_pulse_sequence = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/echoPlanarPulseSequence",
-    definition="In magnetic resonance imaging, a 'echo-planar pulse sequence' is a contrasting technique where each radio frequency field (RF) excitation is followed by a train of gradient echoes with different spatial encoding allowing for very rapid scanning. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Physics_of_magnetic_resonance_imaging#Echo-planar_imaging)]",
-    name="echo planar pulse sequence",
-    synonyms=["echo-planar imaging"],
-)
 Technique.electrocardiography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/electrocardiography",
     definition="Electrocardiography is a non-invasive technique used to record the electrical activity of a heart using electrodes placed on the skin. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Electrocardiography)]",
@@ -646,12 +640,6 @@ Technique.golgi_staining = Technique(
     name="Golgi staining",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2243"),
     synonyms=["Golgi method", "black reaction"],
-)
-Technique.gradient_echo_pulse_sequence = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/gradientEchoPulseSequence",
-    definition="In magnetic resonance imaging, a 'gradient-echo pulse sequence' is a contrast generation technique that rapidly induces bulk changes in the spin magnetization of a sample by applying a series of carefully constructed pulses so that the change in the gradient of the magnetic field is maximized, trading contrast for speed (cf. [Hargreaves (2012)](https://doi.org/10.1002/jmri.23742)).",
-    name="gradient-echo pulse sequence",
-    synonyms=["GRE pulse sequence"],
 )
 Technique.grubbs_test = Technique(
     id="https://openminds.ebrains.eu/instances/technique/GrubbsTest",
@@ -1501,11 +1489,12 @@ Technique.spike_sorting = Technique(
     name="spike sorting",
     synonyms=["spike sorting technique"],
 )
-Technique.spin_echo_pulse_sequence = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/spinEchoPulseSequence",
-    definition="In magnetic resonance imaging, a 'spin echo pulse sequence' is a contrast generation technique that induces bulk changes in the spin magnetization of a sample by applying sequential pulses of resonant electromagnetic waves at different angles (cf. [Fonseca (2013)](https://doi.org/10.5772/53693)).",
-    name="spin echo pulse sequence",
-    synonyms=["SE pulse sequence"],
+Technique.standardization = Technique(
+    id="https://openminds.ebrains.eu/instances/technique/standardization",
+    definition="'Standardization' is the process of providing (meta)data according to a consensus of different parties (e.g., firms, users, interest groups, organizations and governments).",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0479520"),
+    name="standardization",
+    preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0018674"),
 )
 Technique.stereoelectroencephalography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/stereoelectroencephalography",
@@ -1540,6 +1529,12 @@ Technique.stochastic_online_matrix_factorization = Technique(
 Technique.structural_covariance_analysis = Technique(
     id="https://openminds.ebrains.eu/instances/technique/structuralCovarianceAnalysis",
     name="structural covariance analysis",
+)
+Technique.structural_magnetic_resonance_imaging = Technique(
+    id="https://openminds.ebrains.eu/instances/technique/structuralMagneticResonanceImaging",
+    definition="A magnetic resonance imaging technique that uses strong magnetic fields, magnetic field gradients, and radio waves to generate images with static information of the scanned body.",
+    name="structural magnetic resonance imaging",
+    synonyms=["sMRI"],
 )
 Technique.structural_neuroimaging = Technique(
     id="https://openminds.ebrains.eu/instances/technique/structuralNeuroimaging",
@@ -1602,32 +1597,6 @@ Technique.susceptibility_weighted_imaging = Technique(
 Technique.switch_immunohistochemistry = Technique(
     id="https://openminds.ebrains.eu/instances/technique/SWITCHImmunohistochemistry",
     name="SWITCH immunohistochemistry",
-)
-Technique.t1_pulse_sequence = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/T1PulseSequence",
-    definition="In magnetic resonance imaging, a 'T1 pulse sequence' is a contrasting technique that allows the magnetization of the specimen or object to recover (spin-lattice relaxation) before measuring the magnetic resonance signal by changing the repetition time. [adapted from [wikipedia](https://en.wikipedia.org/wiki/MRI_sequence)]",
-    name="T1 pulse sequence",
-    synonyms=[
-        "T1 weighted imaging",
-        "T1 weighted magnetic resonance imaging",
-        "T1 weighted MRI",
-        "T1w imaging",
-        "T1w magnetic resonance imaging",
-        "T1w MRI",
-    ],
-)
-Technique.t2_pulse_sequence = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/T2PulseSequence",
-    definition="In magnetic resonance imaging, a 'T2 pulse sequence' is a contrasting technique that allows the magnetization of the specimen or object to decay (spin-spin relaxation) before measuring the magnetic resonance signal by changing the echo time. [adapted from [wikipedia](https://en.wikipedia.org/wiki/MRI_sequence)]",
-    name="T2 pulse sequence",
-    synonyms=[
-        "T2 weighted imaging",
-        "T2 weighted magnetic resonance imaging",
-        "T2 weighted MRI",
-        "T2w imaging",
-        "T2w magnetic resonance imaging",
-        "T2w MRI",
-    ],
 )
 Technique.tde_clearing = Technique(
     id="https://openminds.ebrains.eu/instances/technique/TDEClearing",

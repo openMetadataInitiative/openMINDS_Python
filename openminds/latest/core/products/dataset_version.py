@@ -239,6 +239,7 @@ class DatasetVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.Language",
                 "openminds.latest.controlled_terms.Laterality",
                 "openminds.latest.controlled_terms.LearningResourceType",
+                "openminds.latest.controlled_terms.MRIPulseSequence",
                 "openminds.latest.controlled_terms.MeasuredQuantity",
                 "openminds.latest.controlled_terms.MeasuredSignalType",
                 "openminds.latest.controlled_terms.MetaDataModelType",
@@ -434,6 +435,7 @@ class DatasetVersion(LinkedMetadata):
             "techniques",
             [
                 "openminds.latest.controlled_terms.AnalysisTechnique",
+                "openminds.latest.controlled_terms.MRIPulseSequence",
                 "openminds.latest.controlled_terms.StimulationApproach",
                 "openminds.latest.controlled_terms.StimulationTechnique",
                 "openminds.latest.controlled_terms.Technique",
