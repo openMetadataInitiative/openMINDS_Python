@@ -3,10 +3,9 @@ name: openMINDS_Python_build_pipeline
 
 on:
   push:
-      branches:
-        - pipeline
+    branches:
+      - pipeline
   workflow_dispatch: # This triggers the workflow when a webhook is received
-
 
 jobs:
   build:
@@ -53,7 +52,7 @@ jobs:
         git config --global user.name "openMINDS pipeline"
         if [[ $(git add . --dry-run | wc -l) -gt 0 ]]; then
             git add .
-            git commit -m "build triggered by submodule ${{ inputs.repository }} version ${{ inputs.branch }}"
+            git commit -m "build triggered by changes to openMINDS schemas and/or instances"
             git push -f
         else
             echo "Nothing to commit"
