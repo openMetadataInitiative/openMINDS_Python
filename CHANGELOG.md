@@ -43,3 +43,8 @@ For more detail see #29.
     - passing an integer to a property of type "number" produced a validation error
     - when validating collections the "ignore" argument wasn't being passed down
     - type hints were producing an error with Python 3.8
+
+## Release 0.2.3 (2024-06-21)
+
+- Update to latest openMINDS schemas and instances
+- Internal import statements are now sorted alphabetically
