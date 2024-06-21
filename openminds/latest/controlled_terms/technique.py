@@ -873,6 +873,20 @@ Technique.magnetic_resonance_spectroscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/magneticResonanceSpectroscopy",
     name="magnetic resonance spectroscopy",
 )
+Technique.magnetization_transfer_imaging = Technique(
+    id="https://openminds.ebrains.eu/instances/technique/magnetizationTransferImaging",
+    definition="A magnetic resonance imaging technique that exploits the contrast between tissues where 1H protons are (i) bound to macromolecules, (ii) in free water, and (iii) in water of hydration layer between macromolecules and free water.",
+    name="magnetization transfer imaging",
+    synonyms=["MTI", "MT imaging"],
+)
+Technique.magnetization_transfer_ratio_image_processing = Technique(
+    id="https://openminds.ebrains.eu/instances/technique/magnetizationTransferRatioImageProcessing",
+    name="magnetization transfer ratio image processing",
+)
+Technique.magnetization_transfer_saturation_image_processing = Technique(
+    id="https://openminds.ebrains.eu/instances/technique/magnetizationTransferSaturationImageProcessing",
+    name="magnetization transfer saturation image processing",
+)
 Technique.magnetoencephalography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/magnetoencephalography",
     definition="'Magnetoencephalography' is a noninvasive neuroimaging technique for studying brain activity by recording magnetic fields produced by electrical currents occurring naturally in the brain, using very sensitive magnetometers. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Magnetoencephalography)]",
@@ -1014,6 +1028,16 @@ Technique.myelin_staining = Technique(
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0107265"),
     name="myelin staining",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2248"),
+)
+Technique.myelin_water_fraction_image_processing = Technique(
+    id="https://openminds.ebrains.eu/instances/technique/myelinWaterFractionImageProcessing",
+    name="myelin water fraction image processing",
+)
+Technique.myelin_water_imaging = Technique(
+    id="https://openminds.ebrains.eu/instances/technique/myelinWaterImaging",
+    definition="A magnetic resonance imaging technique that provides in vivo measurement of myelin.",
+    name="myelin water imaging",
+    synonyms=["MWI"],
 )
 Technique.near_infrared_spectroscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/nearInfraredSpectroscopy",
