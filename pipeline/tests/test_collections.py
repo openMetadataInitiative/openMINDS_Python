@@ -65,6 +65,7 @@ def test_round_trip_multi_file():
     new_collection.load(test_output_dir)
 
     assert len(collection) == len(new_collection)
+    assert collection==new_collection
 
     for node in new_collection:
         if node.id == person.id:
