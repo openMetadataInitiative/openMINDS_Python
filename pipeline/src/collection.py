@@ -37,16 +37,15 @@ class Collection:
     
     def __eq__(self, other):
 
-        eq = True
         # The current implementation assumes that nodes in both graphs are connected with the same link number.
-        for key in self.nodes.keys():
-            if key in other.nodes.keys():
-                if self.nodes[key] != other.nodes[key]:
-                    eq = False
+        for node_id in self.nodes:
+            if node_id in other.nodes.keys():
+                if self.nodes[node_id] != other.nodes[node_id]:
+                    return False
             else:
-                eq = False
+                return False
 
-        return eq
+        return True
 
     def add(self, *nodes):
         """
