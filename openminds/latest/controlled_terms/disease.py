@@ -149,6 +149,23 @@ Disease.congenital_blindness = Disease(
     definition="Congenital blindness is caused by a group of diseases, disorders or injuries that led to permanent severely impaired vision or irreversible lack of vision before/during birth or in early childhood.",
     name="congenital blindness",
 )
+Disease.covid_19 = Disease(
+    id="https://openminds.ebrains.eu/instances/disease/COVID-19",
+    definition="A coronavirus infectious disease that is characterized by fever, cough and shortness of breath and caused by the coronavirus strain SARS-CoV-2.",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739370"),
+    name="COVID-19",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_0080600"),
+    synonyms=[
+        "coronavirus disease 2019",
+        "severe acute respiratory syndrome coronavirus 2",
+        "2019 Novel Coronavirus (2019-nCoV)",
+        "2019-nCoV infection",
+        "COVID19",
+        "SARS-CoV-2 infection",
+        "Wuhan coronavirus infection",
+        "Wuhan seafood market pneumonia virus infection",
+    ],
+)
 Disease.disorder_of_consciousness = Disease(
     id="https://openminds.ebrains.eu/instances/disease/disorderOfConsciousness",
     definition="A 'disorder of consciousness' is a state where a subject's consciousness has been affected by damage to the brain.",
@@ -187,6 +204,14 @@ Disease.glioma = Disease(
         "tumor of neuroglia",
         "tumor of the neuroglia",
     ],
+)
+Disease.long_covid = Disease(
+    id="https://openminds.ebrains.eu/instances/disease/longCOVID",
+    definition="A long-term disease originally caused by the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) with symptoms persisting beyond three to four weeks.",
+    description="A Coronavirus infectious disease that is characterized by long-term persistent and fluctuating symptoms, in individuals with COVID-19, persisting beyond three to four weeks, including the loss of the ability to smell and taste, breathlessness, fatigue, difficulty in breathing, difficulty concentrating, memory loss, confusion, headache, heart palpitations, chest pain, pain with deep breaths, dizziness, and tachycardia.",
+    name="long COVID",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_0080848"),
+    synonyms=["chronic COVID-19", "PASC", "post-acute sequelae of SARS-CoV-2 infection", "post-COVID syndrome"],
 )
 Disease.malignant_neoplasm = Disease(
     id="https://openminds.ebrains.eu/instances/disease/malignantNeoplasm",

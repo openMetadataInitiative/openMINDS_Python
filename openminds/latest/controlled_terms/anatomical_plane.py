@@ -135,5 +135,5 @@ AnatomicalPlane.longitudinal_plane = AnatomicalPlane(
     id="https://openminds.ebrains.eu/instances/anatomicalPlane/longitudinalPlane",
     definition="The 'longitudinal plane' is always perpendicular to the axial and frontal plane of an organism, extremity or organ, running parallel to the 'median plane' and dividing it into a left and right part.",
     name="longitudinal plane",
-    synonyms=["sagittal plane"],
+    synonyms=["sagittal plane", "parasagittal plane"],
 )

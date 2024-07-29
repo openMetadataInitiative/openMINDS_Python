@@ -843,6 +843,25 @@ ContentType.application_vnd_igorpro = ContentType(
     name="application/vnd.igorpro",
     synonyms=["Igor Binary Waves, Packed Experiment files"],
 )
+ContentType.application_vnd_ilastik_object_featurespluscsv = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.ilastik.object-features+csv",
+    file_extensions=[".csv"],
+    name="application/vnd.ilastik.object-features+csv",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/csv"),
+    synonyms=["ilastik object features CSV"],
+)
+ContentType.application_vnd_ilastik_object_featuresplushdf5 = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.ilastik.object-features+hdf5",
+    file_extensions=[".hdf5", ".h5"],
+    name="application/vnd.ilastik.object-features+hdf5",
+    synonyms=["ilastik object features HDF5"],
+)
+ContentType.application_vnd_ilastik_projectplushdf5 = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.ilastik.project+hdf5",
+    file_extensions=[".ilp"],
+    name="application/vnd.ilastik.project+hdf5",
+    synonyms=["ilastik project", "ilastik project file", "ILP"],
+)
 ContentType.application_vnd_imacon = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.imacon",
     file_extensions=[".fff"],
@@ -1023,6 +1042,12 @@ ContentType.application_vnd_libreoffice = ContentType(
     name="application/vnd.libreoffice",
     synonyms=["Open Document Spreadsheet"],
 )
+ContentType.application_vnd_localizoom_lz = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.localizoom.lz",
+    file_extensions=[".lz"],
+    name="application/vnd.localizoom.lz",
+    synonyms=["LZ file"],
+)
 ContentType.application_vnd_ls_dyna = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.ls-dyna",
     file_extensions=[".d3plot"],
@@ -1191,11 +1216,28 @@ ContentType.application_vnd_nest = ContentType(
     file_extensions=[".gdf", ".dat"],
     name="application/vnd.nest",
 )
+ContentType.application_vnd_nest_simulator_modelpluspython = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.nest-simulator.model+python",
+    file_extensions=[".py"],
+    name="application/vnd.nest-simulator.model+python",
+    synonyms=["Python:NEST"],
+)
+ContentType.application_vnd_nest_simulator_recording = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.nest-simulator.recording",
+    file_extensions=[".gdf", ".dat"],
+    name="application/vnd.nest-simulator.recording",
+)
 ContentType.application_vnd_nest_simulatorpluspython = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.nest-simulator+python",
     file_extensions=[".py"],
     name="application/vnd.nest-simulator+python",
     synonyms=["Python:NEST"],
+)
+ContentType.application_vnd_nestml = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.nestml",
+    file_extensions=[".nestml"],
+    name="application/vnd.nestml",
+    synonyms=["NESTML"],
 )
 ContentType.application_vnd_netpbm_portableanymap = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.netpbm.portableanymap",
@@ -1548,6 +1590,13 @@ ContentType.application_vnd_princeton_instruments = ContentType(
     name="application/vnd.princeton-instruments",
     synonyms=["Princeton Instruments SPE"],
 )
+ContentType.application_vnd_qcalignplusjson = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.qcalign+json",
+    file_extensions=[".json"],
+    name="application/vnd.qcalign+json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
+    synonyms=["QCAlign JavaScript Object Notation", "QCAlign JSON"],
+)
 ContentType.application_vnd_quesant = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.quesant",
     file_extensions=[".afm"],
@@ -1858,6 +1907,12 @@ ContentType.application_vnd_visitechinternational_xys = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.visitechinternational.xys",
     file_extensions=[".html", ".xys"],
     name="application/vnd.visitechinternational.xys",
+)
+ContentType.application_vnd_visualign_flat = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.visualign.flat",
+    file_extensions=[".flat"],
+    name="application/vnd.visualign.flat",
+    synonyms=["VisuAlign flat file"],
 )
 ContentType.application_vnd_visualignplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.visualign+json",
@@ -2232,6 +2287,46 @@ ContentType.image_vnd_compix_simplepcihcimage = ContentType(
     name="image/vnd.compix.simplepcihcimage",
     synonyms=["SimplePCI, HCImage"],
 )
+ContentType.image_vnd_ilastik_pixelclassificationplushdf5 = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/image_vnd.ilastik.pixelclassification+hdf5",
+    file_extensions=[".hdf5", ".h5"],
+    name="image/vnd.ilastik.pixelclassification+hdf5",
+    synonyms=["ilastik pixel classification image (HDF5)"],
+)
+ContentType.image_vnd_ilastik_pixelclassificationplusn5 = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/image_vnd.ilastik.pixelclassification+n5",
+    file_extensions=[".n5"],
+    name="image/vnd.ilastik.pixelclassification+n5",
+    synonyms=["ilastik pixel classification image (N5)"],
+)
+ContentType.image_vnd_ilastik_pixelclassificationplusneuroglancer_precomputed = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/image_vnd.ilastik.pixelclassification+neuroglancer.precomputed",
+    name="image/vnd.ilastik.pixelclassification+neuroglancer.precomputed",
+    synonyms=["ilastik pixel classification image (neuroglancer precomputed)"],
+)
+ContentType.image_vnd_ilastik_segmentationplusdzi = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/image_vnd.ilastik.segmentation+dzi",
+    file_extensions=[".dzi", ".xml"],
+    name="image/vnd.ilastik.segmentation+dzi",
+    synonyms=["ilastik segmentation image (DZI)"],
+)
+ContentType.image_vnd_ilastik_segmentationplusdzip = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/image_vnd.ilastik.segmentation+dzip",
+    file_extensions=[".dzip"],
+    name="image/vnd.ilastik.segmentation+dzip",
+    synonyms=["ilastik segmentation image (DZIP)"],
+)
+ContentType.image_vnd_ilastik_segmentationplusn5 = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/image_vnd.ilastik.segmentation+n5",
+    file_extensions=[".n5"],
+    name="image/vnd.ilastik.segmentation+n5",
+    synonyms=["ilastik segmentation image (N5)"],
+)
+ContentType.image_vnd_ilastik_segmentationplusneuroglancer_precomputed = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/image_vnd.ilastik.segmentation+neuroglancer.precomputed",
+    name="image/vnd.ilastik.segmentation+neuroglancer.precomputed",
+    synonyms=["ilastik segmentation image (neuroglancer precomputed)"],
+)
 ContentType.image_vnd_silicongraphicsimage = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/image_vnd.silicongraphicsimage",
     file_extensions=[".bw", ".rgb", ".rgba"],
@@ -2243,6 +2338,12 @@ ContentType.image_x_eps = ContentType(
     file_extensions=[".epsf", ".ps", ".epsi", ".eps"],
     name="image/x-eps",
     synonyms=["Encapsulated PostScript", "EPS"],
+)
+ContentType.image_x_hdf = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/image_x-hdf",
+    file_extensions=[".hdf5", ".h5"],
+    name="image/x-hdf",
+    synonyms=["HDF5 image"],
 )
 ContentType.image_x_panasonic_rw = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/image_x-panasonic-rw",
@@ -2304,6 +2405,20 @@ ContentType.text_tab_separated_values = ContentType(
     name="text/tab-separated-values",
     related_media_type=IRI("https://www.iana.org/assignments/media-types/text/tab-separated-values"),
     synonyms=["Tab-Separated Value", "TSV"],
+)
+ContentType.text_vnd_fsl_bval = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/text_vnd.fsl.bval",
+    description="The FSL bval format is an ASCII text file that contains a list of b-values applied during each volume acquisition. The b-values are assumed to be in s/mm^2 units. The order of entries in this file must match the order of volumes in the diffusion weighted input data (4D NIFTI file) and entries in the gradient directions text file (FSL bvec format).",
+    file_extensions=[".bval"],
+    name="text/vnd.fsl.bval",
+    synonyms=["FSL bval format", "FSL b-value format"],
+)
+ContentType.text_vnd_fsl_bvec = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/text_vnd.fsl.bvec",
+    description="The FSL bvec format is an ASCII text file that contains a list of gradient directions applied during diffusion weighted imaging. The values are listed in three rows, representing the x, y, and z axis. The order of entries in this file must match the order of volumes in the input data (4D NIFTI file).",
+    file_extensions=[".bvec"],
+    name="text/vnd.fsl.bvec",
+    synonyms=["FSL bvec format", "FSL b-vector format"],
 )
 ContentType.text_x_cmlplusxml = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/text_x-cml+xml",

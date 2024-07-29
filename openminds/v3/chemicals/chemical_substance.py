@@ -26,7 +26,7 @@ class ChemicalSubstance(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
-            instructions="Enter any additional remarks concerning this chemical substance.",
+            instructions="Enter any additional remarks concering this chemical substance.",
         ),
         Property(
             "lookup_label",

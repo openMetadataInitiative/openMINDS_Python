@@ -119,31 +119,9 @@ class Technique(LinkedMetadata):
         return cls._instance_lookup[name]
 
 
-Technique.activation_likelihood_estimation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/activationLikelihoodEstimation",
-    definition="An 'activation likelihood estimation' is a coordinate-based meta-analysis of neuroimaging data that determines the above-chance convergence of activation probabilities between experiments (i.e., not between foci). [adapted from [Eickhoff et al., 2011](https://dx.doi.org/10.1016%2Fj.neuroimage.2011.09.017)]",
-    name="activation likelihood estimation",
-    synonyms=[
-        "activation likelihood estimation analysis",
-        "activation likelihood estimation meta-analysis",
-        "ALE",
-        "ALE analysis",
-        "ALE meta-analysis",
-    ],
-)
 Technique.activity_modulation_technique = Technique(
     id="https://openminds.ebrains.eu/instances/technique/activityModulationTechnique",
     name="activity modulation technique",
-)
-Technique.affine_image_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/affineImageRegistration",
-    definition="A 'affine image registration' is a process of bringing a set of images into the same coordinate system using affine transformation.",
-    name="affine image registration",
-)
-Technique.affine_transformation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/affineTransformation",
-    definition="An 'affine transformation' is a specific linear transformation using combinations of rotations, translations, reflections, scaling and shearing to map coordinates between two coordinate spaces.",
-    name="affine transformation",
 )
 Technique.anaesthesia_administration = Technique(
     id="https://openminds.ebrains.eu/instances/technique/anaesthesiaAdministration",
@@ -156,10 +134,6 @@ Technique.anaesthesia_monitoring = Technique(
 Technique.anaesthesia_technique = Technique(
     id="https://openminds.ebrains.eu/instances/technique/anaesthesiaTechnique",
     name="anaesthesia technique",
-)
-Technique.anatomical_delineation_technique = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/anatomicalDelineationTechnique",
-    name="anatomical delineation technique",
 )
 Technique.angiography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/angiography",
@@ -181,10 +155,6 @@ Technique.autoradiography = Technique(
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0439300"),
     name="autoradiography",
 )
-Technique.average_linkage_clustering = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/averageLinkageClustering",
-    name="average linkage clustering",
-)
 Technique.avidin_biotin_complex_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/avidinBiotinComplexStaining",
     name="avidin-biotin complex staining",
@@ -193,12 +163,6 @@ Technique.avidin_biotin_complex_staining = Technique(
 Technique.beta_galactosidase_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/beta-galactosidaseStaining",
     name="beta-galactosidase staining",
-)
-Technique.bias_field_correction = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/biasFieldCorrection",
-    definition="A 'bias field correction' is a mathematical technique to remove a corrupting, low frequency signal from magnetic resonance images. This bias field signal is typically caused by inhomogeneities in the magnetic ﬁelds of the magnetic resonance imaging machine.",
-    name="bias field correction",
-    synonyms=["BFC"],
 )
 Technique.biocytin_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/biocytinStaining",
@@ -214,16 +178,6 @@ Technique.blood_sampling = Technique(
     name="blood sampling",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/OBI_1110095"),
     synonyms=["blood collection", "blood harvesting"],
-)
-Technique.bootstrapping = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/bootstrapping",
-    name="bootstrapping",
-)
-Technique.boundary_based_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/boundaryBasedRegistration",
-    definition="The term 'boundary-based registration' refers to feature based image registration methods which utilize a boundary which can be identified in the source and target image.",
-    name="boundary-based registration",
-    synonyms=["BBR"],
 )
 Technique.brightfield_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/brightfieldMicroscopy",
@@ -250,10 +204,6 @@ Technique.clarity_tde = Technique(
     id="https://openminds.ebrains.eu/instances/technique/CLARITY_TDE",
     name="CLARITY/TDE",
 )
-Technique.cluster_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/clusterAnalysis",
-    name="cluster analysis",
-)
 Technique.coherent_anti_stokes_raman_spectroscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/coherentAntiStokesRamanSpectroscopy",
     definition="A nonlinear Raman spectroscopy technique that employs multiple photons to address molecular vibrations, and produces a coherent signal. It uses a Stokes frequency stimulation beam and an anti-Stokes frequency beam is observed [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Coherent_anti-Stokes_Raman_spectroscopy)].",
@@ -265,16 +215,6 @@ Technique.coherent_stokes_raman_spectroscopy = Technique(
     definition="A nonlinear Raman spectroscopy technique that employs multiple photons to address molecular vibrations, and produces a coherent signal. It uses an anti-Stokes frequency stimulation beam and a Stokes frequency beam is observed [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Coherent_anti-Stokes_Raman_spectroscopy)].",
     name="coherent Stokes Raman spectroscopy",
     synonyms=["CSRS"],
-)
-Technique.combined_volume_surface_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/combinedVolumeSurfaceRegistration",
-    definition="The term 'combined volume-surface registration' refers to an image registration framework which utilizes information from the brain surface and the brain volume to perform the registration (cf. [Postelnicu et al. (2009)](https://doi.org/10.1109/TMI.2008.2004426)).",
-    name="combined volume–surface registration",
-    synonyms=["CVS registration"],
-)
-Technique.communication_profiling = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/communicationProfiling",
-    name="communication profiling",
 )
 Technique.computer_tomography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/computerTomography",
@@ -291,20 +231,6 @@ Technique.confocal_microscopy = Technique(
     preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/157"),
     synonyms=["confocal microscopy technique"],
 )
-Technique.conjunction_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/conjunctionAnalysis",
-    name="conjunction analysis",
-)
-Technique.connected_component_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/connected-componentAnalysis",
-    definition="'connected-component analysis' is an algorithmic application of graph theory, where subsets of connected components are uniquely labeled based on a given heuristic. [adapted from: [wikipedia](https://en.wikipedia.org/wiki/Connected-component_labeling)]",
-    name="connected-component analysis",
-    synonyms=["CCA", "CCL", "connected-component labeling"],
-)
-Technique.connectivity_based_parcellation_technique = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/connectivityBasedParcellationTechnique",
-    name="connectivity based parcellation technique",
-)
 Technique.contrast_agent_administration = Technique(
     id="https://openminds.ebrains.eu/instances/technique/contrastAgentAdministration",
     definition="A 'contrast agent administration' is a (typically) oral or intraveneous administration of a chemical compound to improve the visibility of internal body structures of a subject in a subsequent imaging technique.",
@@ -314,25 +240,11 @@ Technique.contrast_enhancement = Technique(
     id="https://openminds.ebrains.eu/instances/technique/contrastEnhancement",
     name="contrast enhancement",
 )
-Technique.convolution = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/convolution",
-    definition="In functional analysis, 'convolution' is a mathematical operation on two functions (f and g) producing a third function (f * g) that expresses how the shape of one is modified by the other. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Convolution)]",
-    name="convolution",
-    synonyms=["convolution technique"],
-)
-Technique.correlation_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/correlationAnalysis",
-    name="correlation analysis",
-)
 Technique.cortico_cortical_evoked_potential_mapping = Technique(
     id="https://openminds.ebrains.eu/instances/technique/cortico-corticalEvokedPotentialMapping",
     definition="Cortico-cortical evoked potential (CCEP) mapping is used to identify the effective connectivity between distinct neuronal populations based on multiple CCEP measurements across (parts of) the brain in response to direct electrical stimulation (typically at various locations).",
     name="cortico-cortical evoked potential mapping",
     synonyms=["CCEP mapping"],
-)
-Technique.covariance_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/covarianceAnalysis",
-    name="covariance analysis",
 )
 Technique.craniotomy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/craniotomy",
@@ -348,15 +260,6 @@ Technique.current_clamp = Technique(
     id="https://openminds.ebrains.eu/instances/technique/currentClamp",
     definition="Current clamp is a technique in which the amount of current injected into the cell is controlled, which allows for the detection of changes in the transmembrane voltage resulting from ion channel activity.",
     name="current clamp",
-)
-Technique.current_source_density_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/currentSourceDensityAnalysis",
-    name="current source density analysis",
-)
-Technique.cytoarchitectonic_mapping = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/cytoarchitectonicMapping",
-    definition="'Cytoarchitectonic mapping' is a delineation technique that defines regional borders based on histological analysis of the cellular composition of the studied tissue.",
-    name="cytoarchitectonic mapping",
 )
 Technique.da_pi_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/DAPiStaining",
@@ -377,26 +280,6 @@ Technique.darkfield_microscopy = Technique(
     description="Darkfield microscopy is an optical microscopy technique that generates contrast by differentially filtering scatter and unscattered light. Specifically it transmits scattered light and blocks unscattered light. The effect is to make the areas of a transparent sample that scatter light appear brighter than those that do not scatter light. A dark background is used (i.e. the light source is not directly behind the sample in the optical path) so that unscattered light does not overwhelm the scattered light.",
     name="darkfield microscopy",
     synonyms=["dark-field microscopy", "dark field microscopy"],
-)
-Technique.deep_learning = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/deepLearning",
-    name="deep learning",
-)
-Technique.density_measurement = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/densityMeasurement",
-    name="density measurement",
-)
-Technique.dictionary_learning = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/dictionaryLearning",
-    definition="'Dictionary learning' is a branch of signal processing and machine learning that aims at finding a frame (called dictionary) in which some training data admits a sparse representation.",
-    name="dictionary learning",
-    synonyms=["sparse dictionary learning"],
-)
-Technique.diffeomorphic_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/diffeomorphicRegistration",
-    definition="'Diffeomorphic registration' refers to a suite of algorithms that register or build correspondences between dense coordinate systems in medical imaging by ensuring the solutions are diffeomorphic.",
-    name="diffeomorphic registration",
-    synonyms=["diffeomorphic mapping", "large deformation diffeomorphic metric mapping"],
 )
 Technique.differential_interference_contrast_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/differentialInterferenceContrastMicroscopy",
@@ -538,7 +421,7 @@ Technique.extracellular_electrophysiology = Technique(
 )
 Technique.eye_movement_tracking = Technique(
     id="https://openminds.ebrains.eu/instances/technique/eyeMovementTracking",
-    definition="'Eye movement tracking' refers to a group of techniques used to measure the eye movement and/or position of a living specimen over a given period of time.",
+    definition="'Eye movement tracking' refers to a group of techniques used to record the eye movement and/or position of a living specimen over a given period of time.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0417680"),
     name="eye movement tracking",
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0493574"),
@@ -566,18 +449,6 @@ Technique.focused_ion_beam_scanning_electron_microscopy = Technique(
     preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/245"),
     synonyms=["FIB-SEM", "FIB/SEM", "FIBSEM", "focused ion beam scanning electron microscoscopy technique"],
 )
-Technique.four_points_congruent_sets_alignment = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/4PointsCongruentSetsAlignment",
-    definition="4-points congruent sets alignment is a fast and robust alignment technique for 3D point sets without pre-filtering or denoising the data, even if the data are noisy and/or contaminated with outliers ([Aiger et al., 2008](https://doi.org/10.1145/1360612.1360684)).",
-    name="4-points congruent sets alignment",
-    synonyms=[
-        "4-points congruent sets",
-        "4-points congruent sets registration",
-        "4PCS",
-        "4PCS alignment",
-        "4PCS registration",
-    ],
-)
 Technique.functional_magnetic_resonance_imaging = Technique(
     id="https://openminds.ebrains.eu/instances/technique/functionalMagneticResonanceImaging",
     name="functional magnetic resonance imaging",
@@ -593,21 +464,6 @@ Technique.gene_knockin = Technique(
 Technique.gene_knockout = Technique(
     id="https://openminds.ebrains.eu/instances/technique/geneKnockout",
     name="gene knockout",
-)
-Technique.general_linear_modeling = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/generalLinearModeling",
-    name="general linear modeling",
-)
-Technique.genetic_correlation_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/geneticCorrelationAnalysis",
-    name="genetic correlation analysis",
-)
-Technique.genetic_risk_score = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/geneticRiskScore",
-    definition="A genetic risk score is an estimate of the cumulative contribution of genetic factors to a specific outcome of interest in an individual (Igo et al, 2019).",
-    description="[described in: Igo, R. P., Jr, Kinzy, T. G., & Cooke Bailey, J. N. (2019). Genetic Risk Scores. Current protocols in human genetics, 104(1), e95. https://doi.org/10.1002/cphg.95]",
-    name="genetic risk score",
-    synonyms=["GRS"],
 )
 Technique.genome_wide_association_study = Technique(
     id="https://openminds.ebrains.eu/instances/technique/genomeWideAssociationStudy",
@@ -627,12 +483,6 @@ Technique.genome_wide_association_study = Technique(
         "WGAS",
     ],
 )
-Technique.global_signal_regression = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/globalSignalRegression",
-    definition="A 'global signal regression' is a denoising technique where the global signal is removed from the time series of each voxel through linear regression. [adapted from: [Murphy & Fox, 2017](https://dx.doi.org/10.1016%2Fj.neuroimage.2016.11.052)]",
-    name="global signal regression",
-    synonyms=["GSR"],
-)
 Technique.golgi_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/GolgiStaining",
     definition="'Golgi staining' includes several silver staining techniques in which fixed tissue is impregnated with silver nitrate and potassium dichromate resulting in the complete staining of some nerve cells while other cells are not stained at all. [adapted from InterLex](http://uri.interlex.org/ilx_0104713)",
@@ -640,12 +490,6 @@ Technique.golgi_staining = Technique(
     name="Golgi staining",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2243"),
     synonyms=["Golgi method", "black reaction"],
-)
-Technique.grubbs_test = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/GrubbsTest",
-    definition="The 'Grubbs test' is a statistical test, first published by [Grubbs (1950)](https://doi.org/10.1214/aoms/1177729885), used to detect outliers in univariate data that are assumed to come from a normally distributed population. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Grubbs%27s_test)]",
-    name="Grubbs' test",
-    synonyms=["extreme studentized deviate test", "Grubbs test", "maximum normalized residual test"],
 )
 Technique.he_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/HEStaining",
@@ -658,18 +502,6 @@ Technique.heavy_metal_negative_staining = Technique(
     definition="In a 'heavy metal negative staining', a thin and amorphous film of heavy metal salts (e.g. uranyl acetate) is applied on a sample to reveal its structural details for electron microscopy.",
     name="heavy metal negative staining",
     synonyms=["heavy metal salt staining", "heavy metal staining", "negative staining"],
-)
-Technique.hierarchical_agglomerative_clustering = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/hierarchicalAgglomerativeClustering",
-    name="hierarchical agglomerative clustering",
-)
-Technique.hierarchical_clustering = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/hierarchicalClustering",
-    name="hierarchical clustering",
-)
-Technique.hierarchical_divisive_clustering = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/hierarchicalDivisiveClustering",
-    name="hierarchical divisive clustering",
 )
 Technique.high_density_electroencephalography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/highDensityElectroencephalography",
@@ -713,30 +545,6 @@ Technique.hpc_simulation = Technique(
     name="HPC simulation",
     synonyms=["High Performance Computing simulation"],
 )
-Technique.ica_based_denoising_technique = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/ICABasedDenoisingTechnique",
-    definition="An 'ICA based denoising technique' removes independent components from input data to reduce noise while preserving the features of interest in the data.",
-    name="ICA based denoising technique",
-    synonyms=[
-        "ICA based denoising",
-        "ICA based denoising method",
-        "ICA-based denoising",
-        "ICA-based denoising method",
-        "ICA-based denoising technique",
-        "independent component analysis based denoising technique",
-    ],
-)
-Technique.image_distortion_correction = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/imageDistortionCorrection",
-    definition="'Image distortion correction' is the general term for any image processing technique correcting optical or perspective aberrations of an image.",
-    name="image distortion correction",
-)
-Technique.image_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/imageRegistration",
-    definition="An 'image registration' is a process of bringing a set of images into the same coordinate system.",
-    name="image registration",
-    synonyms=["spatial registration"],
-)
 Technique.immunohistochemistry = Technique(
     id="https://openminds.ebrains.eu/instances/technique/immunohistochemistry",
     definition="In 'immunohistochemistry' antigens or haptens are detected and visualized in cells of a tissue sections by exploiting the principle of antibodies binding specifically to antigens in biological tissues.",
@@ -755,10 +563,6 @@ Technique.in_situ_hybridisation = Technique(
     id="https://openminds.ebrains.eu/instances/technique/inSituHybridisation",
     name="in situ hybridisation",
 )
-Technique.independent_component_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/independentComponentAnalysis",
-    name="independent component analysis",
-)
 Technique.infrared_differential_interference_contrast_video_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/infraredDifferentialInterferenceContrastVideoMicroscopy",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0739494"),
@@ -769,19 +573,6 @@ Technique.infrared_differential_interference_contrast_video_microscopy = Techniq
 Technique.injection = Technique(
     id="https://openminds.ebrains.eu/instances/technique/injection",
     name="injection",
-)
-Technique.inter_subject_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/interSubjectAnalysis",
-    name="inter-subject analysis",
-)
-Technique.interpolation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/interpolation",
-    definition="An 'interpolation' is an analysis technique that delivers estimates for new data points based on a range of a discrete set of known data points.",
-    name="interpolation",
-)
-Technique.intra_subject_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/intraSubjectAnalysis",
-    name="intra-subject analysis",
 )
 Technique.intracellular_electrophysiology = Technique(
     id="https://openminds.ebrains.eu/instances/technique/intracellularElectrophysiology",
@@ -820,12 +611,6 @@ Technique.iontophoretic_microinjection = Technique(
     id="https://openminds.ebrains.eu/instances/technique/iontophoreticMicroinjection",
     name="iontophoretic microinjection",
 )
-Technique.k_means_clustering = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/k-meansClustering",
-    definition="'k-means clustering' is a centroid-based cluster analysis technique that aims to partition n observations into a pre-defined number of k clusters by assigning each observation to the cluster with the nearest mean (centroid).",
-    name="k-means clustering",
-    synonyms=["k-means", "k-means cluster analysis"],
-)
 Technique.light_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/lightMicroscopy",
     definition="Light microscopy, also referred to as optical microscopy, comprises any type of microscopy technique that uses visible light to generate magnified images of small objects.",
@@ -844,25 +629,6 @@ Technique.light_sheet_fluorescence_microscopy = Technique(
     ),
     synonyms=["light sheet microscopy", "LSFM", "selective plane illumination microscopy", "SPIM"],
 )
-Technique.linear_image_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/linearImageRegistration",
-    definition="A 'linear image registration' is a process of bringing a set of images into the same coordinate system using linear transformation.",
-    name="linear image registration",
-)
-Technique.linear_regression = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/linearRegression",
-    definition="A 'linear regression' is an analysis approach for modelling the linear relationship between a scalar response and one or more explanatory variables.",
-    name="linear regression",
-)
-Technique.linear_transformation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/linearTransformation",
-    definition="A 'linear transformation' is a linear mathematical function to map coordinates between two different coordinate systems while preserving straight lines.",
-    name="linear transformation",
-)
-Technique.literature_mining = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/literatureMining",
-    name="literature mining",
-)
 Technique.magnetic_resonance_imaging = Technique(
     id="https://openminds.ebrains.eu/instances/technique/magneticResonanceImaging",
     definition="'Magnetic resonance imaging' is a medical imaging technique that uses strong magnetic fields, magnetic field gradients, and radio waves to generate images of the anatomy and the physiological processes of the body.",
@@ -879,14 +645,6 @@ Technique.magnetization_transfer_imaging = Technique(
     name="magnetization transfer imaging",
     synonyms=["MTI", "MT imaging"],
 )
-Technique.magnetization_transfer_ratio_image_processing = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/magnetizationTransferRatioImageProcessing",
-    name="magnetization transfer ratio image processing",
-)
-Technique.magnetization_transfer_saturation_image_processing = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/magnetizationTransferSaturationImageProcessing",
-    name="magnetization transfer saturation image processing",
-)
 Technique.magnetoencephalography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/magnetoencephalography",
     definition="'Magnetoencephalography' is a noninvasive neuroimaging technique for studying brain activity by recording magnetic fields produced by electrical currents occurring naturally in the brain, using very sensitive magnetometers. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Magnetoencephalography)]",
@@ -895,54 +653,9 @@ Technique.magnetoencephalography = Technique(
     preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/163"),
     synonyms=["MEG"],
 )
-Technique.manifold_learning = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/manifoldLearning",
-    definition="'manifold learning' refers to a group of machine learning algorithms for non-linear dimensionality reduction of high-dimensionalty data.",
-    name="manifold learning",
-)
-Technique.mann_whitney_u_test = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/MannWhitneyUTest",
-    definition="The 'Mann–Whitney U test' is a nonparametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater than X. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test)]",
-    name="Mann–Whitney U test",
-    synonyms=[
-        "Mann–Whitney–Wilcoxon test",
-        "MWU test",
-        "MWW test",
-        "Wilcoxon rank-sum test",
-        "Wilcoxon–Mann–Whitney test",
-        "WMW test",
-    ],
-)
 Technique.mass_spectrometry = Technique(
     id="https://openminds.ebrains.eu/instances/technique/massSpectrometry",
     name="mass spectrometry",
-)
-Technique.mass_univariate_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/massUnivariateAnalysis",
-    definition="A 'mass univariate analysis' is the statistical analysis of a massive number of simultaneously measured dependent variables via the performance of univariate hypothesis tests.",
-    name="mass univariate analysis",
-)
-Technique.maximum_likelihood_estimation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/maximumLikelihoodEstimation",
-    definition="'Maximum likelihood estimation' is a statistical analysis technique that estimates the parameters of an assumed probability distribution for some observed data by maximizing a likelihood function so that, under the assumed statistical model, the observed data is most probable. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)]",
-    name="maximum likelihood estimation technique",
-    synonyms=["MLE", "maximum likelihood estimation technique"],
-)
-Technique.maximum_probability_projection = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/maximumProbabilityProjection",
-    name="maximum probability projection",
-)
-Technique.meta_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/metaAnalysis",
-    name="meta-analysis",
-)
-Technique.meta_analytic_connectivity_modeling = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/metaAnalyticConnectivityModeling",
-    name="meta-analytic connectivity modeling",
-)
-Technique.metadata_parsing = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/metadataParsing",
-    name="metadata parsing",
 )
 Technique.micro_computed_tomography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/microComputedTomography",
@@ -961,30 +674,11 @@ Technique.microtome_sectioning = Technique(
     preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/212"),
     synonyms=["microtomy"],
 )
-Technique.model_based_stimulation_artifact_correction = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/modelBasedStimulationArtifactCorrection",
-    definition="The 'model-based stimulation artifact correction' is a model-based analysis technique for removing stimulation artifacts from intracranial electroencephalography signals to uncover the cortico-cortical evoked potentials caused by the stimulation (cf. [Trebaul et al. (2016)](https://doi.org/10.1016/j.jneumeth.2016.03.002)).",
-    name="model-based stimulation artifact correction",
-    synonyms=["model-based artifact correction"],
-)
-Technique.morphometric_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/morphometricAnalysis",
-    name="morphometric analysis",
-)
-Technique.morphometry = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/morphometry",
-    name="morphometry",
-)
 Technique.motion_capture = Technique(
     id="https://openminds.ebrains.eu/instances/technique/motionCapture",
     definition="'Motion capture' refers to a group of techniques used to measure the movement and/or position of an object, specimen, or anatomical parts of a specimen over a given period of time.",
     name="motion capture",
     synonyms=["motion tracking", "movement tracking"],
-)
-Technique.motion_correction = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/motionCorrection",
-    definition="'Motion correction' is the general term for any preprocessing analysis technique used to correct for motion artifacts in imaging time-series.",
-    name="motion correction",
 )
 Technique.multi_compartment_modeling = Technique(
     id="https://openminds.ebrains.eu/instances/technique/multi-compartmentModeling",
@@ -1000,24 +694,6 @@ Technique.multi_photon_fluorescence_microscopy = Technique(
     name="multi photon fluorescence microscopy",
     synonyms=["multi photon microscopy", "multi-photon microscopy", "MPM", "multi-photon fluorescence microscopy"],
 )
-Technique.multi_scale_individual_component_clustering = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/multi-scaleIndividualComponentClustering",
-    definition="'multi-scale individual component clustering' is a multi-scale, unsupervised cluster analysis technique to group individual, independent components of a single-object/single-subject independent component analysis (ICA) from an object-pool/subject-pool (cf. [Naveau et al, 2012](https://doi.org/10.1007/s12021-012-9145-2)).",
-    name="multi-scale individual component clustering",
-    synonyms=["MICCA", "multi-scale individual component cluster algorithm"],
-)
-Technique.multi_voxel_pattern_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/multiVoxelPatternAnalysis",
-    definition="A 'multi-voxel pattern analysis' is considered as a supervised classification problem where a classifier attempts to capture the relationships between spatial patterns of functional magnetic resonance imaging activity and experimental conditions ([Mahmoudi et al., 2012](https://doi.org/10.1155/2012/961257), [Davatzikos et al., 2005](https://doi.org/10.1016/j.neuroimage.2005.08.009)).",
-    name="multi-voxel pattern analysis",
-    synonyms=["MVPA"],
-)
-Technique.multiple_linear_regression = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/multipleLinearRegression",
-    definition="A 'multiple linear regression' is a linear approach for modelling the relationship between a scalar response and multiple explanatory variables. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Linear_regression)]",
-    name="multiple linear regression",
-    synonyms=["MLR", "multi-linear regression", "multilinear regression", "multiple regression"],
-)
 Technique.multiple_whole_cell_patch_clamp = Technique(
     id="https://openminds.ebrains.eu/instances/technique/multipleWholeCellPatchClamp",
     name="multiple whole cell patch clamp",
@@ -1028,10 +704,6 @@ Technique.myelin_staining = Technique(
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0107265"),
     name="myelin staining",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2248"),
-)
-Technique.myelin_water_fraction_image_processing = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/myelinWaterFractionImageProcessing",
-    name="myelin water fraction image processing",
 )
 Technique.myelin_water_imaging = Technique(
     id="https://openminds.ebrains.eu/instances/technique/myelinWaterImaging",
@@ -1056,12 +728,6 @@ Technique.nissl_staining = Technique(
     name="Nissl staining",
     synonyms=["Nissl", "Nissl method"],
 )
-Technique.nonlinear_image_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/nonlinearImageRegistration",
-    definition="A 'nonlinear image registration' is a process of bringing a set of images into the same coordinate system using nonlinear transformation.",
-    name="nonlinear image registration",
-    synonyms=["non-linear image registration"],
-)
 Technique.nonlinear_optical_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/nonlinearOpticalMicroscopy",
     definition="Microscopic imaging techniques that utilize nonlinear responses of light-matter interactions which occur with high-intensity illumination, such as from lasers, and specialized light signal detection instrumentation to produce images without the need for dyes or fluorescent labels. [taken from [Interlex](http://uri.interlex.org/base/ilx_0436517)].",
@@ -1069,39 +735,10 @@ Technique.nonlinear_optical_microscopy = Technique(
     name="nonlinear optical microscopy",
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M000623844"),
 )
-Technique.nonlinear_transformation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/nonlinearTransformation",
-    definition="A 'nonlinear transformation' is a mathematical function to map coordinates between two different coordinate systems, not preserving straight lines.",
-    name="nonlinear transformation",
-    synonyms=["non-linear transformation"],
-)
-Technique.nonrigid_image_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/nonrigidImageRegistration",
-    definition="A 'nonrigid image registration' is a process of bringing a set of images into the same coordinate system using nonrigid transformation.",
-    name="nonrigid image registration",
-    synonyms=["non-rigid image registration"],
-)
-Technique.nonrigid_motion_correction = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/nonrigidMotionCorrection",
-    name="nonrigid motion correction",
-    synonyms=["non-rigid motion correction"],
-)
-Technique.nonrigid_transformation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/nonrigidTransformation",
-    definition="A 'nonrigid transformation' is a specific linear transformation using combinations of rotations, translations, reflections, scaling, shearing, and perspective projections to map coordinates between two coordinate spaces.",
-    name="nonrigid transformation",
-    synonyms=["non-rigid transformation"],
-)
 Technique.nucleic_acid_extraction = Technique(
     id="https://openminds.ebrains.eu/instances/technique/nucleicAcidExtraction",
     definition="'Nucleic acid extraction' refers to a group of techniques that all separate nucleic acids from proteins and lipids using three major processes: isolation, purification, and concentration.",
     name="nucleic acid extraction",
-)
-Technique.nuisance_regression = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/nuisanceRegression",
-    definition="'Nuisance regression' is an image processing technique which seeks to attenuate non-neural BOLD fluctuations from measurable noise sources such as scanner drift and head motion, as well as periodic physiological signals. [adapted from [Hallquist et al. 2013](https://doi.org/10.1016%2Fj.neuroimage.2013.05.116)]",
-    name="nuisance regression",
-    synonyms=["NR"],
 )
 Technique.optical_coherence_tomography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/opticalCoherenceTomography",
@@ -1133,28 +770,6 @@ Technique.organ_extraction = Technique(
 Technique.patch_clamp = Technique(
     id="https://openminds.ebrains.eu/instances/technique/patchClamp",
     name="patch clamp",
-)
-Technique.pathway_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/pathwayAnalysis",
-    definition="A 'pathway analysis' refers to a group of techniques that aim to discover what biological themes, and which biomolecules, are crucial to understand biological pathways of (typically) high-throughput biological data (adapted from [García-Campos et al., 2015](https://doi.org/10.3389/fphys.2015.00383)).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0778897"),
-    name="pathway analysis",
-    preferred_ontology_identifier=IRI("http://edamontology.org/operation_3928"),
-    synonyms=[
-        "biological pathway modelling",
-        "biological pathway prediction",
-        "functional enrichment analysis",
-        "functional pathway analysis",
-        "PA",
-        "pathway comparison",
-        "pathway modelling",
-        "pathway prediction",
-        "pathway simulation",
-    ],
-)
-Technique.performance_profiling = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/performanceProfiling",
-    name="performance profiling",
 )
 Technique.perfusion_fixation_technique = Technique(
     id="https://openminds.ebrains.eu/instances/technique/perfusionFixationTechnique",
@@ -1197,12 +812,6 @@ Technique.phase_contrast_x_ray_imaging = Technique(
     name="phase-contrast x-ray imaging",
     synonyms=["phase-sensitive x-ray imaging"],
 )
-Technique.phase_synchronization_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/phaseSynchronizationAnalysis",
-    definition="A 'phase synchronization analysis' detects and quantifies synchronization between two time series.",
-    name="phase synchronization analysis",
-    synonyms=["PS analysis", "PSA"],
-)
 Technique.photoactivation = Technique(
     id="https://openminds.ebrains.eu/instances/technique/photoactivation",
     name="photoactivation",
@@ -1244,20 +853,6 @@ Technique.primary_antibody_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/primaryAntibodyStaining",
     name="primary antibody staining",
 )
-Technique.principal_component_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/principalComponentAnalysis",
-    definition="A 'principal component analysis' is a statistical technique for reducing the dimensionality of a dataset by linearly transforming the data into a new coordinate system where (most of) the variation in the data can be described with fewer dimensions than the initial data. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Principal_component_analysis)]",
-    name="principal component analysis",
-    synonyms=["PCA"],
-)
-Technique.probabilistic_anatomical_parcellation_technique = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/probabilisticAnatomicalParcellationTechnique",
-    name="probabilistic anatomical parcellation technique",
-)
-Technique.probabilistic_diffusion_tractography = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/probabilisticDiffusionTractography",
-    name="probabilistic diffusion tractography",
-)
 Technique.pseudo_continuous_arterial_spin_labeling = Technique(
     id="https://openminds.ebrains.eu/instances/technique/pseudoContinuousArterialSpinLabeling",
     name="pseudo-continuous arterial spin labeling",
@@ -1272,18 +867,9 @@ Technique.pupillometry = Technique(
     definition="Pupillometry is the measurement of minute fluctuations in pupil diameter in response to a stimulus.",
     name="pupillometry",
 )
-Technique.qualitative_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/qualitativeAnalysis",
-    definition="'Qualitative analysis' uses subjective judgment to analyze data based on non-quantifiable information. The resulting data are typically nonnumerical.",
-    name="qualitative analysis",
-)
 Technique.quantification = Technique(
     id="https://openminds.ebrains.eu/instances/technique/quantification",
     name="quantification",
-)
-Technique.quantitative_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/quantitativeAnalysis",
-    name="quantitative analysis",
 )
 Technique.quantitative_magnetic_resonance_imaging = Technique(
     id="https://openminds.ebrains.eu/instances/technique/quantitativeMagneticResonanceImaging",
@@ -1306,11 +892,6 @@ Technique.receptive_field_mapping = Technique(
     name="receptive field mapping",
     synonyms=["RF mapping"],
 )
-Technique.reconstruction_technique = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/reconstructionTechnique",
-    definition="A 'reconstruction technique' is able to re-build, re-assemble, re-create, or re-imagine something by applying (often mathematical) principles to physical evidence.",
-    name="reconstruction technique",
-)
 Technique.reporter_gene_based_expression_measurement = Technique(
     id="https://openminds.ebrains.eu/instances/technique/reporterGeneBasedExpressionMeasurement",
     name="reporter gene based expression measurement",
@@ -1330,20 +911,6 @@ Technique.retrograde_tracing = Technique(
     definition="Retrograde tracing is a technique used to trace neural connections from their point of termination (the synapse) to their source (the cell body).",
     description="In 'retrograde tracing' a tracer substance is taken up by synaptic terminals (and sometimes by axons) of neurons in the region where it is injected. Retrograde tracing techniques allow for a detailed assessment of neuronal connections between a target population of neurons and their inputs throughout the nervous system.",
     name="retrograde tracing",
-)
-Technique.rigid_image_registration = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/rigidImageRegistration",
-    definition="A 'rigid image registration' is a process of bringing a set of images into the same coordinate system using rigid transformation.",
-    name="rigid image registration",
-)
-Technique.rigid_motion_correction = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/rigidMotionCorrection",
-    name="rigid motion correction",
-)
-Technique.rigid_transformation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/rigidTransformation",
-    definition="A 'rigid transformation' is a specific linear transformation using combinations of rotations, translations, and reflections to map coordinates between two coordinate spaces, leaving the object congruent.",
-    name="rigid transformation",
 )
 Technique.rna_sequencing = Technique(
     id="https://openminds.ebrains.eu/instances/technique/RNASequencing",
@@ -1379,19 +946,6 @@ Technique.secondary_antibody_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/secondaryAntibodyStaining",
     name="secondary antibody staining",
 )
-Technique.seed_based_correlation_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/seed-basedCorrelationAnalysis",
-    name="seed-based correlation analysis",
-)
-Technique.semantic_anchoring = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/semanticAnchoring",
-    name="semantic anchoring",
-)
-Technique.semiquantitative_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/semiquantitativeAnalysis",
-    definition="An analysis technique which constitutes or involves less than quantitative precision.",
-    name="semiquantitative analysis",
-)
 Technique.serial_block_face_scanning_electron_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/serialBlockFaceScanningElectronMicroscopy",
     definition="Serial block face scanning electron microscopy is a serial section scanning electron microscopy technique where an ultramicrotome is used to remove the surface layer of a specimen.",
@@ -1402,12 +956,6 @@ Technique.serial_section_transmission_electron_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/serialSectionTransmissionElectronMicroscopy",
     definition="Serial section transmission electron microscopy is a microscopy technique in which a beam of electrons is transmitted through multiple successive slices of a volumetric sample to produce images of the slices (e.g. for later 3D reconstruction).",
     name="serial section transmission electron microscopy",
-)
-Technique.shapiro_wilk_test = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/ShapiroWilkTest",
-    definition="The 'Shapiro–Wilk test' is a statistical test of normality of a complete sample, first described by [Shapiro and Wilk (1965)](https://doi.org/10.1093/biomet/52.3-4.591). [adapted from [wikipedia](https://en.wikipedia.org/wiki/Shapiro%E2%80%93Wilk_test)]",
-    name="Shapiro-Wilk test",
-    synonyms=["Shapiro-Wilk normality test"],
 )
 Technique.sharp_electrode_intracellular_electrophysiology = Technique(
     id="https://openminds.ebrains.eu/instances/technique/sharpElectrodeIntracellularElectrophysiology",
@@ -1422,22 +970,6 @@ Technique.sharp_electrode_intracellular_electrophysiology = Technique(
         "sharp electrode recording",
         "sharp intracellular electrode recording",
     ],
-)
-Technique.signal_filtering_technique = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/signalFilteringTechnique",
-    definition="'Signal filtering' is a signal processing technique used to remove or suppress unwanted components or features (e.g., certain frequencies) from a measured signal. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Filter_(signal_processing))]",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739623"),
-    name="signal filtering technique",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/151"),
-    synonyms=["filtering", "signal filtering"],
-)
-Technique.signal_processing_technique = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/signalProcessingTechnique",
-    definition="'Signal processing' refers to a class of analysis techniques used to improve transmission, storage efficiency and subjective quality as well as to emphasize or detect components of interest in a measured signal. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Signal_processing)]",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739633"),
-    name="signal processing technique",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/technique/sigproc"),
-    synonyms=["signal processing"],
 )
 Technique.silver_staining = Technique(
     id="https://openminds.ebrains.eu/instances/technique/silverStaining",
@@ -1478,12 +1010,6 @@ Technique.single_nucleotide_polymorphism_detection = Technique(
     preferred_ontology_identifier=IRI("http://edamontology.org/operation_0484"),
     synonyms=["SNP calling", "SNP detection", "SNP discovery"],
 )
-Technique.slice_timing_correction = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/sliceTimingCorrection",
-    definition="'Slice timing correction' is a preprocessing technique applied to functional magnetic resonance image data in order to correct for temporal offsets between 2D image slices during the data acquisition. [adapted from [Parker and Razlighi, 2019](https://doi.org/10.3389/fnins.2019.00821)]",
-    name="slice timing correction",
-    synonyms=["STC"],
-)
 Technique.sodium_mri = Technique(
     id="https://openminds.ebrains.eu/instances/technique/sodiumMRI",
     definition="'Sodium MRI' is a specialised magnetic resonance imaging technique that uses strong magnetic fields, magnetic field gradients, and radio waves to generate images of the distribution of sodium in the body. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Sodium_MRI)]",
@@ -1493,25 +1019,6 @@ Technique.sodium_mri = Technique(
 Technique.sonography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/sonography",
     name="sonography",
-)
-Technique.spearmans_rank_order_correlation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/SpearmansRankOrderCorrelation",
-    definition="The 'Spearman's rank-order correlation' is the nonparametric version of the Pearson product-moment correlation measuring the strength and direction of association between a set of two ranked variables. [adapted from [Laerd.com](https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php)]",
-    name="Spearman's rank-order correlation",
-    synonyms=["Spearman’s correlation", "Spearman’s correlation test", "Spearman’s rank correlation"],
-)
-Technique.spectral_power_auto_segmentation_technique = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/spectralPowerAutoSegmentationTechnique",
-    definition="A 'spectral power auto-segmentation technique' makes use of the power spectrum along the time axis of individual pixels or voxels in an image to automatically generate a segmentation.",
-    name="spectral power auto-segmentation technique",
-    synonyms=["spectral power image auto-segmentation technique"],
-)
-Technique.spike_sorting = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/spikeSorting",
-    definition="'Spike sorting' is a class of techniques used in the analysis of extracellular electrophysiological data to extract the activity of one or more neurons from the background electrical noise by making use of the typical waveforms action potentials (spikes) create in the recorded neuronal signal.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739628"),
-    name="spike sorting",
-    synonyms=["spike sorting technique"],
 )
 Technique.standardization = Technique(
     id="https://openminds.ebrains.eu/instances/technique/standardization",
@@ -1544,16 +1051,6 @@ Technique.stereotactic_surgery = Technique(
     id="https://openminds.ebrains.eu/instances/technique/stereotacticSurgery",
     name="stereotactic surgery",
 )
-Technique.stochastic_online_matrix_factorization = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/stochasticOnlineMatrixFactorization",
-    definition="'Stochastic online matrix factorization' is a matrix-factorization algorithm that scales to input matrices with both huge number of rows and columns [(Mensch et al., 2018)](https://doi.org/10.1109/TSP.2017.2752697).",
-    name="stochastic online matrix factorization",
-    synonyms=["SOMF"],
-)
-Technique.structural_covariance_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/structuralCovarianceAnalysis",
-    name="structural covariance analysis",
-)
 Technique.structural_magnetic_resonance_imaging = Technique(
     id="https://openminds.ebrains.eu/instances/technique/structuralMagneticResonanceImaging",
     definition="A magnetic resonance imaging technique that uses strong magnetic fields, magnetic field gradients, and radio waves to generate images with static information of the scanned body.",
@@ -1582,36 +1079,6 @@ Technique.super_resolution_microscopy = Technique(
     preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/218"),
     synonyms=["super-resolution microscopy"],
 )
-Technique.support_vector_machine_classifier = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/supportVectorMachineClassifier",
-    definition="A 'support-vector machine classifier' is a supervised machine learning technique that analyzes data for classification.",
-    name="support-vector machine classifier",
-    synonyms=[
-        "support-vector machine",
-        "support-vector machine learning",
-        "SVC",
-        "SVM",
-        "SVM classifier",
-        "SVM learning",
-    ],
-)
-Technique.support_vector_machine_regression = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/supportVectorMachineRegression",
-    definition="A 'Support-Vector Regression Algorithm' is a supervised machine learning technique used to estimate the relationship between a dependent and a number of independent variables.",
-    name="support-vector regression algorithm",
-    synonyms=[
-        "support vector regression",
-        "support vector regression algorithm",
-        "support-vector regression",
-        "SVR",
-        "SVR algorithm",
-    ],
-)
-Technique.surface_projection = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/surfaceProjection",
-    name="surface projection",
-    synonyms=["surface texture projection"],
-)
 Technique.susceptibility_weighted_imaging = Technique(
     id="https://openminds.ebrains.eu/instances/technique/susceptibilityWeightedImaging",
     definition="MRI sequence, used with fully flow compensated, long echo, gradient recalled echo (GRE) pulse sequence. Acquires images sensitive to venous blood, hemorrhage and iron storage. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Susceptibility_weighted_imaging)].",
@@ -1625,12 +1092,6 @@ Technique.switch_immunohistochemistry = Technique(
 Technique.tde_clearing = Technique(
     id="https://openminds.ebrains.eu/instances/technique/TDEClearing",
     name="TDE clearing",
-)
-Technique.temporal_filtering = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/temporalFiltering",
-    definition="'Temporal filtering' is a functional image signal processing technique that aims to remove or attenuate frequencies that vary along the time axis of the raw signal. [adapted from [Wikibooks](https://en.wikibooks.org/wiki/Neuroimaging_Data_Processing/Processing/Steps/Temporal_Filtering)]",
-    name="temporal filtering",
-    synonyms=["temporal filtering technique", "temporal image filtering", "temporal image filtering technique"],
 )
 Technique.tetrode_extracellular_electrophysiology = Technique(
     id="https://openminds.ebrains.eu/instances/technique/tetrodeExtracellularElectrophysiology",
@@ -1681,10 +1142,6 @@ Technique.tract_tracing = Technique(
     id="https://openminds.ebrains.eu/instances/technique/tractTracing",
     name="tract tracing",
 )
-Technique.tractography = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/tractography",
-    name="tractography",
-)
 Technique.transcardial_perfusion_fixation_technique = Technique(
     id="https://openminds.ebrains.eu/instances/technique/transcardialPerfusionFixationTechnique",
     definition="Transcardial perfusion fixation is a technique to distribute fixatives throughout tissue via the heart.",
@@ -1698,11 +1155,6 @@ Technique.transcardial_perfusion_technique = Technique(
     name="transcardial perfusion technique",
     preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/167"),
     synonyms=["intracardiac perfusion technique", "intracardial perfusion technique"],
-)
-Technique.transformation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/transformation",
-    definition="A 'transformation' is a mathematical function to map coordinates between two different coordinate systems.",
-    name="transformation",
 )
 Technique.transmission_electron_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/transmissionElectronMicroscopy",
@@ -1747,10 +1199,6 @@ Technique.vibratome_sectioning = Technique(
     id="https://openminds.ebrains.eu/instances/technique/vibratomeSectioning",
     name="vibratome sectioning",
 )
-Technique.video_annotation = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/videoAnnotation",
-    name="video annotation",
-)
 Technique.video_oculography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/video-oculography",
     name="video-oculography",
@@ -1772,10 +1220,6 @@ Technique.voltage_sensitive_dye_imaging = Technique(
     id="https://openminds.ebrains.eu/instances/technique/voltageSensitiveDyeImaging",
     definition="'Voltage sensitive dye imaging' is an experimental technique to measure neuronal population activity from in vivo brains or live brain slices by transducing changes in the cell membrane potential into changes of fluorescence emission by an employed exogenous chemical agent.",
     name="voltage sensitive dye imaging",
-)
-Technique.voxel_based_morphometry = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/voxel-basedMorphometry",
-    name="voxel-based morphometry",
 )
 Technique.weighted_correlation_network_analysis = Technique(
     id="https://openminds.ebrains.eu/instances/technique/weightedCorrelationNetworkAnalysis",
@@ -1800,10 +1244,4 @@ Technique.widefield_fluorescence_microscopy = Technique(
     id="https://openminds.ebrains.eu/instances/technique/widefieldFluorescenceMicroscopy",
     definition="'Widefield fluorescence microscopy' comprises all microscopy techniques in which fluorescent molecules of an entire sample are excited through a permanent exposure of a light source of a specific wavelength.",
     name="widefield fluorescence microscopy",
-)
-Technique.z_score_analysis = Technique(
-    id="https://openminds.ebrains.eu/instances/technique/zScoreAnalysis",
-    definition="The 'z-score analysis' is a statistical normalization technique where the z-score is calculated by subtracting the population mean from an individual raw score (observed data point) and dividing the difference by the population standard deviation. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Standard_score)]",
-    name="z-score analysis",
-    synonyms=["standard score analysis"],
 )
