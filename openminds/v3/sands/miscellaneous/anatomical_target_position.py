@@ -26,7 +26,7 @@ class AnatomicalTargetPosition(EmbeddedMetadata):
             formatting="text/markdown",
             multiline=True,
             description="Mention of what deserves additional attention or notice.",
-            instructions="Enter any additional remarks concerning this anatomical target position.",
+            instructions="Enter any additional remarks concering this anatomical target position.",
         ),
         Property(
             "anatomical_targets",

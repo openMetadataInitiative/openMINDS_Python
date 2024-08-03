@@ -25,7 +25,7 @@ class QuantitativeValue(EmbeddedMetadata):
             "openminds.v3.controlled_terms.TypeOfUncertainty",
             "typeOfUncertainty",
             description="Distinct technique used to quantify the uncertainty of a measurement.",
-            instructions="Add the type of uncertainty used to determine the uncertainty for this quantitative value.",
+            instructions="Add the type of uncertainty used to determine the uncertainity for this quantitative value.",
         ),
         Property(
             "uncertainties",

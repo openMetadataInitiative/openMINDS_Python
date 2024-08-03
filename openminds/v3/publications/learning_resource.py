@@ -257,7 +257,7 @@ class LearningResource(LinkedMetadata):
             date,
             "modificationDate",
             description="no description available",
-            instructions="Enter the date on which this creative work was last modified, formatted as '2023-02-07'.",
+            instructions="Enter the date on which this creative work was last modfied, formatted as '2023-02-07'.",
         ),
         Property(
             "name",
