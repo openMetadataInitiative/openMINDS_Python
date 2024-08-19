@@ -780,7 +780,7 @@ ContentType.application_vnd_geomview_oogl = ContentType(
 )
 ContentType.application_vnd_gifti = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.gifti",
-    file_extensions=[".gii"],
+    file_extensions=[".gii", ".gii.gz"],
     name="application/vnd.gifti",
 )
 ContentType.application_vnd_hamamatsu_aquacosmos = ContentType(

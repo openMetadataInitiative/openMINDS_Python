@@ -208,6 +208,12 @@ UnitOfMeasurement.kilogram = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/kilogram",
     name="kilogram",
 )
+UnitOfMeasurement.kilohertz = UnitOfMeasurement(
+    id="https://openminds.ebrains.eu/instances/unitOfMeasurement/kilohertz",
+    definition="Unit of frequency equivalent to one thousand events per second",
+    name="kilohertz",
+    synonyms=["kHz", "kilocycles per second", "kiloevents per second"],
+)
 UnitOfMeasurement.liter = UnitOfMeasurement(
     id="https://openminds.ebrains.eu/instances/unitOfMeasurement/liter",
     name="liter",
