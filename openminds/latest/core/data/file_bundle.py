@@ -53,6 +53,7 @@ class FileBundle(LinkedMetadata):
                 "openminds.latest.controlled_terms.GustatoryStimulusType",
                 "openminds.latest.controlled_terms.Handedness",
                 "openminds.latest.controlled_terms.MRIPulseSequence",
+                "openminds.latest.controlled_terms.MRIWeighting",
                 "openminds.latest.controlled_terms.MolecularEntity",
                 "openminds.latest.controlled_terms.OlfactoryStimulusType",
                 "openminds.latest.controlled_terms.OpticalStimulusType",

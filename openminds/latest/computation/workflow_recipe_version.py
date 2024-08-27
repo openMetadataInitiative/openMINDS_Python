@@ -203,6 +203,7 @@ class WorkflowRecipeVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.Laterality",
                 "openminds.latest.controlled_terms.LearningResourceType",
                 "openminds.latest.controlled_terms.MRIPulseSequence",
+                "openminds.latest.controlled_terms.MRIWeighting",
                 "openminds.latest.controlled_terms.MeasuredQuantity",
                 "openminds.latest.controlled_terms.MeasuredSignalType",
                 "openminds.latest.controlled_terms.MetaDataModelType",
