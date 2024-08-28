@@ -1,3 +1,7 @@
 target
 __pycache__
 test_tmp
+dist
+*.egg-info
+*.orig
+.coverage

@@ -1,0 +1,59 @@
+# MIT licensed
+name: openMINDS_Python_dev_build_pipeline
+
+on:
+  push:
+    branches:
+      - pipeline
+  workflow_dispatch: # This triggers the workflow when a webhook is received
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.12"]
+    steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Run build
+      run: |
+        pip install -r requirements.txt
+        python build.py --branch=development
+
+    - name: Test built package
+      run: |
+        pip install pytest
+        pip install ./target
+        pytest -v pipeline/tests
+
+    - name: Checkout development branch
+      uses: actions/checkout@v4
+      with:
+        ref: development
+        path: development
+        token: ${{ secrets.GITHUB_TOKEN }}
+      if: ${{  matrix.python-version == 3.12 }}
+
+    - name: Push to development
+      if: ${{  matrix.python-version == 3.12 }}
+      run: |
+        cp -R target/* development
+        cd development
+        rm -rf build openMINDS.egg-info
+        git config --global user.email "openminds@ebrains.eu"
+        git config --global user.name "openMINDS pipeline"
+        if [[ $(git add . --dry-run | wc -l) -gt 0 ]]; then
+            git add .
+            git commit -m "build triggered by ${{ github.event_name }}"
+            git push -f
+        else
+            echo "Nothing to commit"
+        fi

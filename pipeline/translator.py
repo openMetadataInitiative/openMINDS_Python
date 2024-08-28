@@ -95,6 +95,7 @@ class PythonBuilder(object):
                 "iri": "IRI",
                 "email": "str",  # todo: add an Email class for validation?
                 "ECMA262": "str",  #       ...
+                "boolean": "bool"
             }
             if "_linkedTypes" in property:
                 types = []
@@ -165,7 +166,11 @@ class PythonBuilder(object):
         for iri, property in self._schema_payload["properties"].items():
             allow_multiple = property.get("type", "") == "array"
             if allow_multiple:
-                property_name = property['namePlural']
+                if "namePlural" in property:
+                    property_name = property['namePlural']
+                else:
+                    print(f"Missing plural name for '{property['name']}'")
+                    property_name = property['name'] + "s"
             else:
                 property_name = property['name']
             pythonic_name = generate_python_name(property_name)

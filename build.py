@@ -1,3 +1,4 @@
+import argparse
 from collections import defaultdict
 import json
 import os.path
@@ -11,11 +12,16 @@ from jinja2 import Environment, select_autoescape, FileSystemLoader
 from pipeline.translator import PythonBuilder
 from pipeline.utils import clone_sources, SchemaLoader, InstanceLoader
 
+
 include_instances = True  # to speed up the build during development, set this to False
 
-print("*********************************************************")
-print(f"Triggering the generation of Python package for openMINDS")
-print("*********************************************************")
+parser = argparse.ArgumentParser(prog=sys.argv[0], description="Generate Python package for openMINDS")
+parser.add_argument('--branch', help="The branch to build from ('main' or 'development')", default="main")
+args = parser.parse_args()
+
+print("*******************************************************************************")
+print(f"Triggering the generation of Python package for openMINDS, from the {args.branch} branch")
+print("*******************************************************************************")
 
 # Step 0 - read code for additional methods
 additional_methods = {}
@@ -23,8 +29,8 @@ with open("pipeline/src/additional_methods/by_name.py.txt") as fp:
     code = fp.read()
 additional_methods["by_name"] = code
 
-# Step 1 - clone central repository in main branch to get the latest sources
-clone_sources()
+# Step 1 - clone central repository in main or development branch to get the latest sources
+clone_sources(args.branch)
 schema_loader = SchemaLoader()
 instance_loader = InstanceLoader()
 if os.path.exists("target"):
@@ -105,8 +111,11 @@ env = Environment(
     autoescape=select_autoescape()
 )
 context = {
-    "version": "0.2.3",
+    "version": "0.3.0",
 }
+if args.branch == "development":
+    context["version"] += ".dev"
+
 with open("target/pyproject.toml", "w") as fp:
     contents = env.get_template("pipeline/src/pyproject_template.toml.txt").render(context)
     fp.write(contents)

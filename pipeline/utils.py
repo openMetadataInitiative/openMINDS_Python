@@ -6,18 +6,21 @@ from typing import List
 from git import Repo, GitCommandError
 
 
-def clone_sources():
+def clone_sources(branch="main"):
     if os.path.exists("_sources"):
         shutil.rmtree("_sources")
     Repo.clone_from(
         "https://github.com/openMetadataInitiative/openMINDS.git",
         to_path="_sources/schemas",
         depth=1,
+        branch=branch,
+        single_branch=True
     )
     Repo.clone_from(
         "https://github.com/openMetadataInitiative/openMINDS_instances.git",
         to_path="_sources/instances",
         depth=1,
+        single_branch=True
     )
 
 
