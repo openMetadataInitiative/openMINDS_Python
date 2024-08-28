@@ -5,7 +5,7 @@ description = "Python library for interacting with openMINDS metadata schemas"
 readme = "README.md"
 authors = [
     { name="Andrew P. Davison", email="andrew.davison@cnrs.fr" },
-    { name="Lyuba Zehl", email="l.zehl@fz-juelich.de" },
+    { name="Lyuba Zehl", email="lyuba.zehl@ebrains.eu" },
     { name="Louisa Köhnen" }
 
 ]

@@ -112,7 +112,9 @@ class Collection:
             if not os.path.exists(path):
                 os.makedirs(path, exist_ok=True)
             if not os.path.isdir(path):
-                raise OSError("if saving to multiple files, `path` must be a directory")
+                raise OSError(
+                    f"If saving to multiple files, `path` must be a directory. path={path}, pwd={os.getcwd()}"
+                )
             output_paths = []
             for node in self:
                 if node.id.startswith("http"):

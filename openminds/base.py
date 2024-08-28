@@ -17,6 +17,33 @@ import rfc3987
 from .registry import Registry
 
 
+def value_to_jsonld(value, include_empty_properties=True, embed_linked_nodes=True):
+    if isinstance(value, LinkedMetadata):
+        if embed_linked_nodes:
+            item = value.to_jsonld(
+                with_context=False,
+                include_empty_properties=include_empty_properties,
+                embed_linked_nodes=embed_linked_nodes,
+            )
+        else:
+            if hasattr(value, "id") and value.id is None:
+                raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
+            item = {"@id": value.id}
+    elif isinstance(value, EmbeddedMetadata):
+        item = value.to_jsonld(
+            with_context=False,
+            include_empty_properties=include_empty_properties,
+            embed_linked_nodes=embed_linked_nodes,
+        )
+    elif hasattr(value, "to_jsonld"):  # e.g. IRI
+        item = value.to_jsonld()
+    elif isinstance(value, (date, datetime)):
+        item = value.isoformat()
+    else:
+        item = value
+    return item
+
+
 class Node(metaclass=Registry):
     """
     Base class for a metadata node
@@ -40,32 +67,6 @@ class Node(metaclass=Registry):
         Return a represention of this metadata node as a dictionary that can be directly serialized to JSON-LD.
         """
 
-        def value_to_jsonld(value):
-            if isinstance(value, LinkedMetadata):
-                if embed_linked_nodes:
-                    item = value.to_jsonld(
-                        with_context=False,
-                        include_empty_properties=include_empty_properties,
-                        embed_linked_nodes=embed_linked_nodes,
-                    )
-                else:
-                    if hasattr(value, "id") and value.id is None:
-                        raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
-                    item = {"@id": value.id}
-            elif isinstance(value, EmbeddedMetadata):
-                item = value.to_jsonld(
-                    with_context=False,
-                    include_empty_properties=include_empty_properties,
-                    embed_linked_nodes=embed_linked_nodes,
-                )
-            elif hasattr(value, "to_jsonld"):  # e.g. IRI
-                item = value.to_jsonld()
-            elif isinstance(value, (date, datetime)):
-                item = value.isoformat()
-            else:
-                item = value
-            return item
-
         data = {"@type": self.type_}
         if with_context:
             data["@context"] = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
@@ -80,9 +81,20 @@ class Node(metaclass=Registry):
                     else:
                         if not isinstance(value, (tuple, list)):
                             value = [value]
-                        data[property.path] = [value_to_jsonld(item) for item in value]
+                        data[property.path] = [
+                            value_to_jsonld(
+                                item,
+                                include_empty_properties=include_empty_properties,
+                                embed_linked_nodes=embed_linked_nodes,
+                            )
+                            for item in value
+                        ]
                 else:
-                    data[property.path] = value_to_jsonld(value)
+                    data[property.path] = value_to_jsonld(
+                        value,
+                        include_empty_properties=include_empty_properties,
+                        embed_linked_nodes=embed_linked_nodes,
+                    )
         return {key: data[key] for key in sorted(data)}
 
     @classmethod
