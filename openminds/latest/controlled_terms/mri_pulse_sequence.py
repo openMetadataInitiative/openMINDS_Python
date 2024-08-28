@@ -155,29 +155,3 @@ MRIPulseSequence.spin_echo_pulse_sequence = MRIPulseSequence(
     name="spin echo pulse sequence",
     synonyms=["SE pulse sequence"],
 )
-MRIPulseSequence.t1_pulse_sequence = MRIPulseSequence(
-    id="https://openminds.ebrains.eu/instances/MRIPulseSequence/T1PulseSequence",
-    definition="In magnetic resonance imaging, a 'T1 pulse sequence' is a contrasting technique that allows the magnetization of the specimen or object to recover (spin-lattice relaxation) before measuring the magnetic resonance signal by changing the repetition time. [adapted from [wikipedia](https://en.wikipedia.org/wiki/MRI_sequence)]",
-    name="T1 pulse sequence",
-    synonyms=[
-        "T1 weighted imaging",
-        "T1 weighted magnetic resonance imaging",
-        "T1 weighted MRI",
-        "T1w imaging",
-        "T1w magnetic resonance imaging",
-        "T1w MRI",
-    ],
-)
-MRIPulseSequence.t2_pulse_sequence = MRIPulseSequence(
-    id="https://openminds.ebrains.eu/instances/MRIPulseSequence/T2PulseSequence",
-    definition="In magnetic resonance imaging, a 'T2 pulse sequence' is a contrasting technique that allows the magnetization of the specimen or object to decay (spin-spin relaxation) before measuring the magnetic resonance signal by changing the echo time. [adapted from [wikipedia](https://en.wikipedia.org/wiki/MRI_sequence)]",
-    name="T2 pulse sequence",
-    synonyms=[
-        "T2 weighted imaging",
-        "T2 weighted magnetic resonance imaging",
-        "T2 weighted MRI",
-        "T2w imaging",
-        "T2w magnetic resonance imaging",
-        "T2w MRI",
-    ],
-)

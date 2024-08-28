@@ -328,6 +328,11 @@ Terminology.mri_pulse_sequence = Terminology(
     definition="An 'MRI pulse sequence' is a particular setting of pulse sequences and pulsed field gradients, resulting in a particular image appearance [adapted from [Wikipedia](https://en.wikipedia.org/wiki/MRI_pulse_sequence)].",
     name="MRI pulse sequence",
 )
+Terminology.mri_weighting = Terminology(
+    id="https://openminds.ebrains.eu/instances/terminology/MRIWeighting",
+    definition="Class of imaging techniques where the image contrast is generated from a specific intrinsic tissue parameter (T1, T2, etc.).",
+    name="MRI weighting",
+)
 Terminology.olfactory_stimulus_type = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/olfactoryStimulusType",
     definition="An 'olfactory stimulus type' groups similar olfactory stimuli used across olfactory stimulation techniques.",
