@@ -25,7 +25,7 @@ def generate_python_name(json_name, allow_multiple=False):
     python_name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", json_name.strip())
     python_name = re.sub("([a-z0-9])([A-Z])", r"\1_\2", python_name).lower()
     replacements = [
-        ("-", "_"), (".", "_"), ("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
+        ("-", "_"), (".", "_"), ("'",""),("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
     ]
     for before, after in replacements:
         python_name = python_name.replace(before, after)
@@ -100,7 +100,7 @@ class PythonBuilder(object):
             if "_linkedTypes" in property:
                 types = []
                 for item in property["_linkedTypes"]:
-                    openminds_module, class_name = item.split("/")[-2:]
+                    openminds_module, class_name = item.split(":")[-2:]
                     openminds_module = generate_python_name(openminds_module)
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
@@ -109,7 +109,7 @@ class PythonBuilder(object):
             elif "_embeddedTypes" in property:
                 types = []
                 for item in property["_embeddedTypes"]:
-                    openminds_module, class_name = item.split("/")[-2:]
+                    openminds_module, class_name = item.split(":")[-2:]
                     openminds_module = generate_python_name(openminds_module)
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
@@ -133,7 +133,7 @@ class PythonBuilder(object):
             else:
                 raise NotImplementedError
 
-        class_name = self._schema_payload["name"]
+        class_name = self._schema_payload["name"].split(":")[-1]
         openminds_type = self._schema_payload["_type"]
         if openminds_type in embedded:
             base_class = "EmbeddedMetadata"
