@@ -25,7 +25,7 @@ def generate_python_name(json_name, allow_multiple=False):
     python_name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", json_name.strip())
     python_name = re.sub("([a-z0-9])([A-Z])", r"\1_\2", python_name).lower()
     replacements = [
-        ("-", "_"), (".", "_"), ("'",""),("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
+        ("-", "_"), (".", "_"), ("'","_prime_"),("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
     ]
     for before, after in replacements:
         python_name = python_name.replace(before, after)
