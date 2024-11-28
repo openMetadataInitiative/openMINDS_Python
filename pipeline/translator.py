@@ -25,7 +25,7 @@ def generate_python_name(json_name, allow_multiple=False):
     python_name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", json_name.strip())
     python_name = re.sub("([a-z0-9])([A-Z])", r"\1_\2", python_name).lower()
     replacements = [
-        ("-", "_"), (".", "_"), ("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
+        ("-", "_"), (".", "_"),("'","_prime_"), ("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
     ]
     for before, after in replacements:
         python_name = python_name.replace(before, after)
@@ -83,7 +83,7 @@ class PythonBuilder(object):
     def _target_file_without_extension(self) -> str:
         return os.path.join(self._version_module, "/".join(self.relative_path_without_extension))
 
-    def translate(self, embedded=None):
+    def translate(self, embedded=None, class_module_dict=None):
         def get_type(property):
             type_map = {
                 "string": "str",
@@ -100,8 +100,11 @@ class PythonBuilder(object):
             if "_linkedTypes" in property:
                 types = []
                 for item in property["_linkedTypes"]:
-                    openminds_module, class_name = item.split("/")[-2:]
-                    openminds_module = generate_python_name(openminds_module)
+                    openminds_module_from_type, class_name = item.split("/")[-2:]
+                    if isinstance(class_module_dict,dict) and (class_name in class_module_dict):
+                        openminds_module = generate_python_name(class_module_dict[class_name])
+                    else:
+                        openminds_module = generate_python_name(openminds_module_from_type)
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
                     types = f'"{types[0]}"'
@@ -109,8 +112,11 @@ class PythonBuilder(object):
             elif "_embeddedTypes" in property:
                 types = []
                 for item in property["_embeddedTypes"]:
-                    openminds_module, class_name = item.split("/")[-2:]
-                    openminds_module = generate_python_name(openminds_module)
+                    openminds_module_from_type, class_name = item.split("/")[-2:]
+                    if isinstance(class_module_dict,dict) and (class_name in class_module_dict):
+                        openminds_module = generate_python_name(class_module_dict[class_name])
+                    else:
+                        openminds_module = generate_python_name(openminds_module_from_type)
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
                     types = f'"{types[0]}"'
@@ -233,11 +239,11 @@ class PythonBuilder(object):
             if extra_imports:
                 self.context["preamble"] = "\n".join(sorted(extra_imports))
 
-    def build(self, embedded=None):
+    def build(self, embedded=None, class_module_dict=None):
         target_file_path = os.path.join("target", "openminds", f"{self._target_file_without_extension()}.py")
         os.makedirs(os.path.dirname(target_file_path), exist_ok=True)
 
-        self.translate(embedded=embedded)
+        self.translate(embedded=embedded, class_module_dict=class_module_dict)
 
         with open(target_file_path, "w") as target_file:
             contents = self.env.get_template(self.template_name).render(self.context)
@@ -252,3 +258,16 @@ class PythonBuilder(object):
             embedded.update(property.get("_embeddedTypes", []))
             linked.update(property.get("_linkedTypes", []))
         return embedded, linked
+
+    def get_module_dict(self,class_module_dict):
+
+        schema_type=self._schema_payload["_type"]
+        class_name=schema_type.split("/")[-1]
+        if "_module" in self._schema_payload:
+            module=self._schema_payload["_module"]
+        else:
+            module=schema_type.split("/")[-2]
+
+        class_module_dict[class_name]=module
+
+        return class_module_dict
