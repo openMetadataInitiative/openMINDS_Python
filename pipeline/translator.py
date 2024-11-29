@@ -57,7 +57,6 @@ class PythonBuilder(object):
 
     def __init__(self, schema_file_path: str, root_path: str, instances: Optional[dict] = None,
                  additional_methods: Optional[dict] = None):
-        self.template_name = "src/module_template.py.txt"
         self.env = Environment(
             loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))), autoescape=select_autoescape()
         )
@@ -65,6 +64,10 @@ class PythonBuilder(object):
             schema_file_path[len(root_path) + 1 :].replace(".schema.omi.json", "").split("/")
         )
         self.version = _relative_path_without_extension[0]
+        if self.version in ["v3.0" , "v2.0" , "v1.0"]:
+            self.template_name = "src/module_template_old.py.txt"
+        else:
+            self.template_name = "src/module_template.py.txt"
         self.relative_path_without_extension = [
             generate_python_name(part) for part in _relative_path_without_extension[1:]
         ]
