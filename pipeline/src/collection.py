@@ -62,6 +62,11 @@ class Collection:
         identifier = len(self.nodes)
         return fmt.format(identifier=identifier)
 
+    def _sort_nodes_by_id(self):
+        sorted_nodes=dict(sorted(self.nodes.items()))
+        self.nodes=sorted_nodes
+
+
     def save(self, path, individual_files=False, include_empty_properties=False):
         """
         Save the node collection to disk in JSON-LD format.
@@ -96,6 +101,7 @@ class Collection:
                 parent_dir = os.path.dirname(path)
                 if parent_dir:
                     os.makedirs(parent_dir, exist_ok=True)
+            self._sort_nodes_by_id()
             data = {
                 "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
                 "@graph": [
@@ -113,6 +119,7 @@ class Collection:
                 os.makedirs(path, exist_ok=True)
             if not os.path.isdir(path):
                 raise OSError(f"If saving to multiple files, `path` must be a directory. path={path}, pwd={os.getcwd()}")
+            self._sort_nodes_by_id()
             output_paths = []
             for node in self:
                 if node.id.startswith("http"):
