@@ -118,7 +118,7 @@ def test_issue0007():
 
     with open(output_paths[0]) as fp:
         saved_data = json.load(fp)
-    #os.remove("issue0007.jsonld")
+    os.remove("issue0007.jsonld")
     expected_saved_data = {
         "@context": {"@vocab": "https://openminds.om-i.org/vocab/"},
         "@graph": [
