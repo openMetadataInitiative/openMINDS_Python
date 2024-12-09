@@ -85,6 +85,12 @@ class Collection:
         # we first re-add all child nodes to the collection.
         # This is probably not the most elegant or fast way to do this, but it is simple and robust.
         for node in tuple(self.nodes.values()):
+            
+            if node.type_.startswith("https://openminds.ebrains.eu/"):
+                data_context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+            else:
+                data_context = {"@vocab": "https://openminds.om-i.org/vocab/"}
+            
             for linked_node in node.links:
                 self._add_node(linked_node)
         # Now we can actually save the nodes
@@ -97,7 +103,7 @@ class Collection:
                 if parent_dir:
                     os.makedirs(parent_dir, exist_ok=True)
             data = {
-                "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
+                "@context": data_context,
                 "@graph": [
                     node.to_jsonld(
                         embed_linked_nodes=False, include_empty_properties=include_empty_properties, with_context=False
