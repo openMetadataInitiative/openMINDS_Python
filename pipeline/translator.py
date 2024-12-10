@@ -263,7 +263,23 @@ class PythonBuilder(object):
         return embedded, linked
 
     def get_module_dict(self,class_module_dict):
-
+        """
+        Updates a dictionary with the class name and its corresponding module based on the schemas.
+        
+        This method extracts the class name and module from the `_schema_payload` attribute 
+        and updates the provided dictionary (`class_module_dict`) with a mapping of 
+        the class name to its module. If the `_module` key exists in `_schema_payload` 
+        (which was introduced in version 4 of openMINDS), its value is used as the module. 
+        Otherwise, the module is derived from the second-to-last component of the `_type` 
+        field in `_schema_payload`.
+        
+        Args:
+            class_module_dict (dict): A dictionary where keys are class names and values 
+                                      are their corresponding modules.
+        
+        Returns:
+            dict: The updated dictionary with the class name and module mapping.
+        """
         schema_type=self._schema_payload["_type"]
         class_name=schema_type.split("/")[-1]
         if "_module" in self._schema_payload:
