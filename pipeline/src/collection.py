@@ -160,9 +160,13 @@ class Collection:
             with open(path, "r") as fp:
                 data = json.load(fp)
             if "@graph" in data:
+                if data["@context"]["@vocab"].startswith("https://openminds.ebrains.eu/"):
+                    version="v3"
+                else:
+                    version="latest"
                 for item in data["@graph"]:
                     if "@type" in item:
-                        cls = lookup_type(item["@type"])
+                        cls = lookup_type(item["@type"],version=version)
                         node = cls.from_jsonld(item)
                     else:
                         # allow links to metadata instances outside this collection
