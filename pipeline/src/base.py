@@ -76,7 +76,7 @@ class Node(metaclass=Registry):
             if self.type_.startswith("https://openminds.ebrains.eu/"):
                 data["@context"] = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
             else:
-                data["@context"] = {"@vocab": "https://openminds.om-i.org/vocab/"}
+                data["@context"] = {"@vocab": "https://openminds.om-i.org/props/"}
         if hasattr(self, "id") and self.id:
             data["@id"] = self.id
         for property in self.__class__.properties:

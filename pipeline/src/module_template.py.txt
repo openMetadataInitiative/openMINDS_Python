@@ -16,7 +16,7 @@ class {{ class_name }}({{ base_class }}):
     """
     type_ = "{{ openminds_type }}"
     context = {
-        "@vocab": "https://openminds.om-i.org/vocab/"
+        "@vocab": "https://openminds.om-i.org/props/"
     }
     schema_version = "{{ schema_version }}"
 

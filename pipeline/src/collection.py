@@ -89,7 +89,7 @@ class Collection:
             if node.type_.startswith("https://openminds.ebrains.eu/"):
                 data_context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
             else:
-                data_context = {"@vocab": "https://openminds.om-i.org/vocab/"}
+                data_context = {"@vocab": "https://openminds.om-i.org/props/"}
             
             for linked_node in node.links:
                 self._add_node(linked_node)

@@ -262,19 +262,19 @@ class PythonBuilder(object):
             linked.update(property.get("_linkedTypes", []))
         return embedded, linked
 
-    def get_module_dict(self,class_module_dict):
+    def update_class_to_module_map(self,class_to_module_map):
         """
         Updates a dictionary with the class name and its corresponding module based on the schemas.
         
         This method extracts the class name and module from the `_schema_payload` attribute 
-        and updates the provided dictionary (`class_module_dict`) with a mapping of 
+        and updates the provided dictionary (`class_to_module_map`) with a mapping of 
         the class name to its module. If the `_module` key exists in `_schema_payload` 
         (which was introduced in version 4 of openMINDS), its value is used as the module. 
         Otherwise, the module is derived from the second-to-last component of the `_type` 
         field in `_schema_payload`.
         
         Args:
-            class_module_dict (dict): A dictionary where keys are class names and values 
+            class_to_module_map (dict): A dictionary where keys are class names and values 
                                       are their corresponding modules.
         
         Returns:
@@ -287,6 +287,6 @@ class PythonBuilder(object):
         else:
             module=schema_type.split("/")[-2]
 
-        class_module_dict[class_name]=module
+        class_to_module_map[class_name]=module
 
-        return class_module_dict
+        return class_to_module_map
