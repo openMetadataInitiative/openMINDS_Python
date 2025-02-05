@@ -64,10 +64,12 @@ class PythonBuilder(object):
             schema_file_path[len(root_path) + 1 :].replace(".schema.omi.json", "").split("/")
         )
         self.version = _relative_path_without_extension[0]
+        self.template_name = "src/module_template.py.txt"
         if self.version in ["v3.0" , "v2.0" , "v1.0"]:
-            self.template_name = "src/module_template_old.py.txt"
+            self.context_vocab = "https://openminds.ebrains.eu/vocab/"
         else:
-            self.template_name = "src/module_template.py.txt"
+            self.context_vocab = "https://openminds.om-i.org/props/"
+
         self.relative_path_without_extension = [
             generate_python_name(part) for part in _relative_path_without_extension[1:]
         ]
@@ -86,7 +88,7 @@ class PythonBuilder(object):
     def _target_file_without_extension(self) -> str:
         return os.path.join(self._version_module, "/".join(self.relative_path_without_extension))
 
-    def translate(self, embedded=None, class_module_dict=None):
+    def translate(self, embedded=None, class_to_module_map=None):
         def get_type(property):
             type_map = {
                 "string": "str",
@@ -104,8 +106,8 @@ class PythonBuilder(object):
                 types = []
                 for item in property["_linkedTypes"]:
                     openminds_module_from_type, class_name = item.split("/")[-2:]
-                    if isinstance(class_module_dict,dict) and (class_name in class_module_dict):
-                        openminds_module = generate_python_name(class_module_dict[class_name])
+                    if isinstance(class_to_module_map,dict) and (class_name in class_to_module_map):
+                        openminds_module = generate_python_name(class_to_module_map[class_name])
                     else:
                         openminds_module = generate_python_name(openminds_module_from_type)
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
@@ -116,8 +118,8 @@ class PythonBuilder(object):
                 types = []
                 for item in property["_embeddedTypes"]:
                     openminds_module_from_type, class_name = item.split("/")[-2:]
-                    if isinstance(class_module_dict,dict) and (class_name in class_module_dict):
-                        openminds_module = generate_python_name(class_module_dict[class_name])
+                    if isinstance(class_to_module_map,dict) and (class_name in class_to_module_map):
+                        openminds_module = generate_python_name(class_to_module_map[class_name])
                     else:
                         openminds_module = generate_python_name(openminds_module_from_type)
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
@@ -210,6 +212,7 @@ class PythonBuilder(object):
             "class_name": class_name,
             "openminds_type": openminds_type,
             "schema_version": self.version,
+            "context_vocab": self.context_vocab,
             "properties": properties,
             "additional_methods": "",
             "instances": instances
@@ -242,11 +245,11 @@ class PythonBuilder(object):
             if extra_imports:
                 self.context["preamble"] = "\n".join(sorted(extra_imports))
 
-    def build(self, embedded=None, class_module_dict=None):
+    def build(self, embedded=None, class_to_module_map=None):
         target_file_path = os.path.join("target", "openminds", f"{self._target_file_without_extension()}.py")
         os.makedirs(os.path.dirname(target_file_path), exist_ok=True)
 
-        self.translate(embedded=embedded, class_module_dict=class_module_dict)
+        self.translate(embedded=embedded, class_to_module_map=class_to_module_map)
 
         with open(target_file_path, "w") as target_file:
             contents = self.env.get_template(self.template_name).render(self.context)

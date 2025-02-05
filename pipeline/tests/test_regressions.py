@@ -38,7 +38,7 @@ def test_issue_0003():
     )
     # on export, a single item should be wrapped in a list, where the property expects an array
     expected = {
-        "@context": {"@vocab": "https://openminds.om-i.org/vocab/"},
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@type": "https://openminds.om-i.org/types/FileArchive",
         "IRI": "http://example.com/archive.zip",
         "format": {
@@ -90,7 +90,7 @@ def test_issue0007():
 
     actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
-        "@context": {"@vocab": "https://openminds.om-i.org/vocab/"},
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@id": "_:001",
         "@type": "https://openminds.om-i.org/types/Person",
         "familyName": "Professor",
@@ -120,7 +120,7 @@ def test_issue0007():
         saved_data = json.load(fp)
     os.remove("issue0007.jsonld")
     expected_saved_data = {
-        "@context": {"@vocab": "https://openminds.om-i.org/vocab/"},
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@graph": [
             {
                 "@id": "_:001",
@@ -171,7 +171,7 @@ def test_issue0008():
     )
     actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
-        "@context": {"@vocab": "https://openminds.om-i.org/vocab/"},
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@id": "_:002",
         "@type": "https://openminds.om-i.org/types/Person",
         "affiliation": [
