@@ -4,6 +4,7 @@ Tests of the Collection class.
 
 import os.path
 import shutil
+import json
 
 from openminds.collection import Collection
 import openminds.latest.controlled_terms
@@ -74,3 +75,60 @@ def test_round_trip_multi_file():
     p = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=True)
     np = new_person.to_jsonld(include_empty_properties=False, embed_linked_nodes=True)
     assert p == np
+
+
+def test_collection_sort_by_id():
+    person = omcore.Person(given_name="A", family_name="Professor", id="_:004")
+    uni1 = omcore.Organization(full_name="University of This Place", id="_:002")
+    uni2 = omcore.Organization(full_name="University of That Place", id="_:001")
+    person.affiliations = [
+        omcore.Affiliation(member_of = uni1),
+        omcore.Affiliation(member_of = uni2),
+    ]
+
+    c = Collection(person,uni1,uni2)
+    output_paths = c.save("test_collection_sort_by_id.jsonld", individual_files=False, include_empty_properties=False)
+    
+    assert output_paths == ["test_collection_sort_by_id.jsonld"]
+
+    with open(output_paths[0]) as fp:
+        saved_data = json.load(fp)
+    os.remove("test_collection_sort_by_id.jsonld")
+
+    expected_saved_data={
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
+        "@graph": [
+            {
+                "@id": "_:001",
+                "@type": "https://openminds.om-i.org/types/Organization",
+                "fullName": "University of That Place"
+            },
+            {
+                "@id": "_:002",
+                "@type": "https://openminds.om-i.org/types/Organization",
+                "fullName": "University of This Place"
+            },
+            {
+                "@id": "_:004",
+                "@type": "https://openminds.om-i.org/types/Person",
+                "affiliation": [
+                    {
+                        "@type": "https://openminds.om-i.org/types/Affiliation",
+                        "memberOf": {
+                            "@id": "_:002"
+                        }
+                    },
+                    {
+                        "@type": "https://openminds.om-i.org/types/Affiliation",
+                        "memberOf": {
+                            "@id": "_:001"
+                        }
+                    }
+                ],
+                "familyName": "Professor",
+                "givenName": "A"
+            }
+        ]
+    }
+
+    assert saved_data == expected_saved_data
