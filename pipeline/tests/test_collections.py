@@ -4,6 +4,7 @@ Tests of the Collection class.
 
 import os.path
 import shutil
+import json
 
 from openminds.collection import Collection
 import openminds.latest.controlled_terms
@@ -95,30 +96,30 @@ def test_collection_sort_by_id():
     os.remove("test_collection_sort_by_id.jsonld")
 
     expected_saved_data={
-        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@graph": [
             {
                 "@id": "_:001",
-                "@type": "https://openminds.ebrains.eu/core/Organization",
+                "@type": "https://openminds.om-i.org/types/Organization",
                 "fullName": "University of That Place"
             },
             {
                 "@id": "_:002",
-                "@type": "https://openminds.ebrains.eu/core/Organization",
+                "@type": "https://openminds.om-i.org/types/Organization",
                 "fullName": "University of This Place"
             },
             {
                 "@id": "_:004",
-                "@type": "https://openminds.ebrains.eu/core/Person",
+                "@type": "https://openminds.om-i.org/types/Person",
                 "affiliation": [
                     {
-                        "@type": "https://openminds.ebrains.eu/core/Affiliation",
+                        "@type": "https://openminds.om-i.org/types/Affiliation",
                         "memberOf": {
                             "@id": "_:002"
                         }
                     },
                     {
-                        "@type": "https://openminds.ebrains.eu/core/Affiliation",
+                        "@type": "https://openminds.om-i.org/types/Affiliation",
                         "memberOf": {
                             "@id": "_:001"
                         }
