@@ -25,7 +25,7 @@ def generate_python_name(json_name, allow_multiple=False):
     python_name = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", json_name.strip())
     python_name = re.sub("([a-z0-9])([A-Z])", r"\1_\2", python_name).lower()
     replacements = [
-        ("-", "_"), (".", "_"), ("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
+        ("-", "_"), (".", "_"),("'","_prime_"), ("+", "plus"), ("#", "sharp"), (",", "comma"), ("(", ""), (")", "")
     ]
     for before, after in replacements:
         python_name = python_name.replace(before, after)
@@ -57,7 +57,6 @@ class PythonBuilder(object):
 
     def __init__(self, schema_file_path: str, root_path: str, instances: Optional[dict] = None,
                  additional_methods: Optional[dict] = None):
-        self.template_name = "src/module_template.py.txt"
         self.env = Environment(
             loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))), autoescape=select_autoescape()
         )
@@ -65,6 +64,12 @@ class PythonBuilder(object):
             schema_file_path[len(root_path) + 1 :].replace(".schema.omi.json", "").split("/")
         )
         self.version = _relative_path_without_extension[0]
+        self.template_name = "src/module_template.py.txt"
+        if self.version in ["v3.0" , "v2.0" , "v1.0"]:
+            self.context_vocab = "https://openminds.ebrains.eu/vocab/"
+        else:
+            self.context_vocab = "https://openminds.om-i.org/props/"
+
         self.relative_path_without_extension = [
             generate_python_name(part) for part in _relative_path_without_extension[1:]
         ]
@@ -83,7 +88,7 @@ class PythonBuilder(object):
     def _target_file_without_extension(self) -> str:
         return os.path.join(self._version_module, "/".join(self.relative_path_without_extension))
 
-    def translate(self, embedded=None):
+    def translate(self, embedded=None, class_to_module_map=None):
         def get_type(property):
             type_map = {
                 "string": "str",
@@ -100,8 +105,11 @@ class PythonBuilder(object):
             if "_linkedTypes" in property:
                 types = []
                 for item in property["_linkedTypes"]:
-                    openminds_module, class_name = item.split("/")[-2:]
-                    openminds_module = generate_python_name(openminds_module)
+                    openminds_module_from_type, class_name = item.split("/")[-2:]
+                    if isinstance(class_to_module_map,dict) and (class_name in class_to_module_map):
+                        openminds_module = generate_python_name(class_to_module_map[class_name])
+                    else:
+                        openminds_module = generate_python_name(openminds_module_from_type)
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
                     types = f'"{types[0]}"'
@@ -109,8 +117,11 @@ class PythonBuilder(object):
             elif "_embeddedTypes" in property:
                 types = []
                 for item in property["_embeddedTypes"]:
-                    openminds_module, class_name = item.split("/")[-2:]
-                    openminds_module = generate_python_name(openminds_module)
+                    openminds_module_from_type, class_name = item.split("/")[-2:]
+                    if isinstance(class_to_module_map,dict) and (class_name in class_to_module_map):
+                        openminds_module = generate_python_name(class_to_module_map[class_name])
+                    else:
+                        openminds_module = generate_python_name(openminds_module_from_type)
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
                     types = f'"{types[0]}"'
@@ -201,6 +212,7 @@ class PythonBuilder(object):
             "class_name": class_name,
             "openminds_type": openminds_type,
             "schema_version": self.version,
+            "context_vocab": self.context_vocab,
             "properties": properties,
             "additional_methods": "",
             "instances": instances
@@ -233,11 +245,11 @@ class PythonBuilder(object):
             if extra_imports:
                 self.context["preamble"] = "\n".join(sorted(extra_imports))
 
-    def build(self, embedded=None):
+    def build(self, embedded=None, class_to_module_map=None):
         target_file_path = os.path.join("target", "openminds", f"{self._target_file_without_extension()}.py")
         os.makedirs(os.path.dirname(target_file_path), exist_ok=True)
 
-        self.translate(embedded=embedded)
+        self.translate(embedded=embedded, class_to_module_map=class_to_module_map)
 
         with open(target_file_path, "w") as target_file:
             contents = self.env.get_template(self.template_name).render(self.context)
@@ -252,3 +264,32 @@ class PythonBuilder(object):
             embedded.update(property.get("_embeddedTypes", []))
             linked.update(property.get("_linkedTypes", []))
         return embedded, linked
+
+    def update_class_to_module_map(self,class_to_module_map):
+        """
+        Updates a dictionary with the class name and its corresponding module based on the schemas.
+        
+        This method extracts the class name and module from the `_schema_payload` attribute 
+        and updates the provided dictionary (`class_to_module_map`) with a mapping of 
+        the class name to its module. If the `_module` key exists in `_schema_payload` 
+        (which was introduced in version 4 of openMINDS), its value is used as the module. 
+        Otherwise, the module is derived from the second-to-last component of the `_type` 
+        field in `_schema_payload`.
+        
+        Args:
+            class_to_module_map (dict): A dictionary where keys are class names and values 
+                                      are their corresponding modules.
+        
+        Returns:
+            dict: The updated dictionary with the class name and module mapping.
+        """
+        schema_type=self._schema_payload["_type"]
+        class_name=schema_type.split("/")[-1]
+        if "_module" in self._schema_payload:
+            module=self._schema_payload["_module"]
+        else:
+            module=schema_type.split("/")[-2]
+
+        class_to_module_map[class_name]=module
+
+        return class_to_module_map
