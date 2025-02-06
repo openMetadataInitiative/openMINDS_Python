@@ -12,7 +12,7 @@ def test_issue_0002():
 
     node = build_fake_node(omcore.Person)
     data = node.to_jsonld()
-    assert data["@type"] == "https://openminds.ebrains.eu/core/Person"
+    assert data["@type"] == "https://openminds.om-i.org/types/Person"
 
 
 def test_issue_0003():
@@ -38,21 +38,22 @@ def test_issue_0003():
     )
     # on export, a single item should be wrapped in a list, where the property expects an array
     expected = {
-        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
-        "@type": "https://openminds.ebrains.eu/core/FileArchive",
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
+        "@type": "https://openminds.om-i.org/types/FileArchive",
         "IRI": "http://example.com/archive.zip",
         "format": {
-            "@type": "https://openminds.ebrains.eu/core/ContentType",
+            "@type": "https://openminds.om-i.org/types/ContentType",
             "name": "application/zip",
         },
         "sourceData": [
             {
-                "@type": "https://openminds.ebrains.eu/core/File",
+                "@type": "https://openminds.om-i.org/types/File",
                 "IRI": "http://example.com/some_file.txt",
                 "name": "some_file.txt",
             }
         ],
     }
+
     assert (
         node1.to_jsonld(include_empty_properties=False) == node2.to_jsonld(include_empty_properties=False) == expected
     )
@@ -89,23 +90,19 @@ def test_issue0007():
 
     actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
-        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@id": "_:001",
-        "@type": "https://openminds.ebrains.eu/core/Person",
+        "@type": "https://openminds.om-i.org/types/Person",
         "familyName": "Professor",
         "givenName": "A",
         "affiliation": [
             {
-                "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                "memberOf": {
-                    "@id": "_:002"
-                },
+                "@type": "https://openminds.om-i.org/types/Affiliation",
+                "memberOf": {"@id": "_:002"},
             },
             {
-                "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                "memberOf": {
-                    "@id": "_:003"
-                },
+                "@type": "https://openminds.om-i.org/types/Affiliation",
+                "memberOf": {"@id": "_:003"},
             },
         ],
     }
@@ -119,23 +116,19 @@ def test_issue0007():
         saved_data = json.load(fp)
     os.remove("issue0007.jsonld")
     expected_saved_data = {
-        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@graph": [
             {
                 "@id": "_:001",
-                "@type": "https://openminds.ebrains.eu/core/Person",
+                "@type": "https://openminds.om-i.org/types/Person",
                 "affiliation": [
                     {
-                        "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                        "memberOf": {
-                            "@id": "_:002"
-                        },
+                        "@type": "https://openminds.om-i.org/types/Affiliation",
+                        "memberOf": {"@id": "_:002"},
                     },
                     {
-                        "@type": "https://openminds.ebrains.eu/core/Affiliation",
-                        "memberOf": {
-                            "@id": "_:003"
-                        },
+                        "@type": "https://openminds.om-i.org/types/Affiliation",
+                        "memberOf": {"@id": "_:003"},
                     },
                 ],
                 "familyName": "Professor",
@@ -143,12 +136,12 @@ def test_issue0007():
             },
             {
                 "@id": "_:002",
-                "@type": "https://openminds.ebrains.eu/core/Organization",
+                "@type": "https://openminds.om-i.org/types/Organization",
                 "fullName": "University of This Place",
             },
             {
                 "@id": "_:003",
-                "@type": "https://openminds.ebrains.eu/core/Organization",
+                "@type": "https://openminds.om-i.org/types/Organization",
                 "fullName": "University of That Place",
             },
         ],
@@ -170,16 +163,14 @@ def test_issue0008():
     )
     actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
     expected = {
-        "@context": {"@vocab": "https://openminds.ebrains.eu/vocab/"},
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@id": "_:002",
-        "@type": "https://openminds.ebrains.eu/core/Person",
+        "@type": "https://openminds.om-i.org/types/Person",
         "affiliation": [
             {
-                "@type": "https://openminds.ebrains.eu/core/Affiliation",
+                "@type": "https://openminds.om-i.org/types/Affiliation",
                 "endDate": "2023-09-30",
-                "memberOf": {
-                    "@id": "_:001"
-                },
+                "memberOf": {"@id": "_:001"},
             }
         ],
         "familyName": "Professor",
@@ -195,10 +186,7 @@ def test_issue0026():
 
     uni1 = omcore.Organization(full_name="University of This Place", id="_:uthisp")
     person = omcore.Person(
-        given_name="A",
-        family_name="Professor",
-        affiliations = [omcore.Affiliation(member_of=uni1)],
-        id="_:ap"
+        given_name="A", family_name="Professor", affiliations=[omcore.Affiliation(member_of=uni1)], id="_:ap"
     )
 
     c = Collection(person)
@@ -223,16 +211,9 @@ def test_issue0023():
 
     uni1 = omcore.Organization(full_name="University of This Place", id="_:uthisp")
     person = omcore.Person(
-        given_name="A",
-        family_name="Professor",
-        affiliations = [omcore.Affiliation(member_of=uni1)],
-        id="_:ap"
+        given_name="A", family_name="Professor", affiliations=[omcore.Affiliation(member_of=uni1)], id="_:ap"
     )
-    dv = omcore.DatasetVersion(
-        full_name="The name of the dataset version",
-        custodians=[person],
-        id="_:dv"
-    )
+    dv = omcore.DatasetVersion(full_name="The name of the dataset version", custodians=[person], id="_:dv")
 
     c = Collection(dv)
 

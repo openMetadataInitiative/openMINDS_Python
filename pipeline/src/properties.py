@@ -118,7 +118,7 @@ class Property:
                             failures["type"].append(
                                 f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
                                 f"value contains {type(item)}"
-                        )
+                            )
                     elif isinstance(item, (Node, IRI)):
                         failures.update(item.validate(ignore=ignore))
                 if self.min_items:
@@ -148,7 +148,8 @@ class Property:
             elif not isinstance(value, self.types):
                 if "type" not in ignore:
                     failures["type"].append(
-                        f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, " f"value is {type(value)}"
+                        f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
+                        f"value is {type(value)}"
                     )
             elif isinstance(value, (Node, IRI)):
                 failures.update(value.validate(ignore=ignore))

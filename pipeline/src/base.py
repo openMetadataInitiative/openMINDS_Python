@@ -27,9 +27,7 @@ def value_to_jsonld(value, include_empty_properties=True, embed_linked_nodes=Tru
             )
         else:
             if hasattr(value, "id") and value.id is None:
-                raise ValueError(
-                    "Exporting as a stand-alone JSON-LD document requires @id to be defined."
-                )
+                raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
             item = {"@id": value.id}
     elif isinstance(value, EmbeddedMetadata):
         item = value.to_jsonld(
@@ -64,16 +62,17 @@ class Node(metaclass=Registry):
                 return True
         return False
 
-    def to_jsonld(
-        self, include_empty_properties=True, embed_linked_nodes=True, with_context=True
-    ):
+    def to_jsonld(self, include_empty_properties=True, embed_linked_nodes=True, with_context=True):
         """
         Return a represention of this metadata node as a dictionary that can be directly serialized to JSON-LD.
         """
 
         data = {"@type": self.type_}
         if with_context:
-            data["@context"] = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+            if self.type_.startswith("https://openminds.ebrains.eu/"):
+                data["@context"] = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+            else:
+                data["@context"] = {"@vocab": "https://openminds.om-i.org/props/"}
         if hasattr(self, "id") and self.id:
             data["@id"] = self.id
         for property in self.__class__.properties:

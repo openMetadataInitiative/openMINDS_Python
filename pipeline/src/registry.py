@@ -68,6 +68,7 @@ Args
 
 class Registry(type):
     """Metaclass for registering Knowledge Graph classes."""
+
     properties: List[Property] = []
     type_: Union[str, List[str]]
     context: Dict[str, str]
@@ -107,4 +108,3 @@ class Registry(type):
     @property
     def required_property_names(cls) -> List[str]:
         return [p.name for p in cls.properties if p.required]
-

@@ -55,10 +55,7 @@ def test_json_roundtrip():
 
 
 def test_IRI():
-    valid_iris = [
-        "https://example.com/path/to/my/file.txt",
-        "file:///path/to/my/file.txt"
-    ]
+    valid_iris = ["https://example.com/path/to/my/file.txt", "file:///path/to/my/file.txt"]
     for value in valid_iris:
         iri = IRI(value)
         assert iri.value == value
@@ -67,9 +64,7 @@ def test_IRI():
             assert not failures
         else:
             assert failures["value"][0] == "IRI points to a local file path"
-    invalid_iris = [
-        "/path/to/my/file.txt"
-    ]
+    invalid_iris = ["/path/to/my/file.txt"]
     for value in invalid_iris:
         with pytest.raises(ValueError) as exc_info:
             iri = IRI(value)

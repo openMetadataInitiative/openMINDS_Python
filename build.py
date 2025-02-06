@@ -16,7 +16,7 @@ from pipeline.utils import clone_sources, SchemaLoader, InstanceLoader
 include_instances = True  # to speed up the build during development, set this to False
 
 parser = argparse.ArgumentParser(prog=sys.argv[0], description="Generate Python package for openMINDS")
-parser.add_argument('--branch', help="The branch to build from ('main' or 'development')", default="main")
+parser.add_argument("--branch", help="The branch to build from ('main' or 'development')", default="main")
 args = parser.parse_args()
 
 print("*******************************************************************************")
@@ -47,6 +47,7 @@ if include_instances:
             instances[version][instance_data["@type"]].append(instance_data)
 
 python_modules = defaultdict(list)
+
 for schema_version in schema_loader.get_schema_versions():
 
     # Step 3 - find all involved schemas for the current version
@@ -55,14 +56,17 @@ for schema_version in schema_loader.get_schema_versions():
     # Step 4a - figure out which schemas are embedded and which are linked
     embedded = set()
     linked = set()
+    class_to_module_map = {}
     for schema_file_path in schemas_file_paths:
         emb, lnk = PythonBuilder(schema_file_path, schema_loader.schemas_sources).get_edges()
+        class_to_module_map = PythonBuilder(
+            schema_file_path, schema_loader.schemas_sources
+        ).update_class_to_module_map(class_to_module_map)
         embedded.update(emb)
         linked.update(lnk)
     conflicts = linked.intersection(embedded)
     if conflicts:
-        print(f"Found schema(s) in version {schema_version} "
-              f"that are both linked and embedded: {conflicts}")
+        print(f"Found schema(s) in version {schema_version} " f"that are both linked and embedded: {conflicts}")
         # conflicts should not happen in new versions.
         # There is one conflict in v1.0, QuantitativeValue,
         # which we treat as embedded
@@ -76,7 +80,7 @@ for schema_version in schema_loader.get_schema_versions():
             schema_loader.schemas_sources,
             instances=instances.get(schema_version, None),
             additional_methods=additional_methods,
-        ).build(embedded=embedded)
+        ).build(embedded=embedded, class_to_module_map=class_to_module_map)
 
         parts = module_path.split(".")
         parent_path = ".".join(parts[:-1])
@@ -106,10 +110,7 @@ for version, module_list in openminds_modules.items():
     with open(init_file_path, "w") as fp:
         fp.write(f"from . import ({', '.join(sorted(module_list))})\n")
 
-env = Environment(
-    loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))),
-    autoescape=select_autoescape()
-)
+env = Environment(loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))), autoescape=select_autoescape())
 context = {
     "version": "0.3.0",
 }

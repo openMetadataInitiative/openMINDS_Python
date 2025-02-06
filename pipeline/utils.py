@@ -14,13 +14,13 @@ def clone_sources(branch="main"):
         to_path="_sources/schemas",
         depth=1,
         branch=branch,
-        single_branch=True
+        single_branch=True,
     )
     Repo.clone_from(
         "https://github.com/openMetadataInitiative/openMINDS_instances.git",
         to_path="_sources/instances",
         depth=1,
-        single_branch=True
+        single_branch=True,
     )
 
 
@@ -42,9 +42,7 @@ class SchemaLoader:
 class InstanceLoader:
     def __init__(self):
         self._root_directory = os.path.realpath(".")
-        self.instances_sources = os.path.join(
-            self._root_directory, "_sources/instances", "instances"
-        )
+        self.instances_sources = os.path.join(self._root_directory, "_sources/instances", "instances")
 
     def get_instance_versions(self) -> List[str]:
         return os.listdir(self.instances_sources)

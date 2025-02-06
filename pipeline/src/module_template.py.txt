@@ -16,7 +16,7 @@ class {{ class_name }}({{ base_class }}):
     """
     type_ = "{{ openminds_type }}"
     context = {
-        "@vocab": "https://openminds.ebrains.eu/vocab/"
+        "@vocab": "{{ context_vocab }}"
     }
     schema_version = "{{ schema_version }}"
 
