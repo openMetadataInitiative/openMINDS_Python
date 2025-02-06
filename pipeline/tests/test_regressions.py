@@ -44,7 +44,7 @@ def test_issue_0003():
         "format": {
             "@type": "https://openminds.om-i.org/types/ContentType",
             "name": "application/zip",
-            },
+        },
         "sourceData": [
             {
                 "@type": "https://openminds.om-i.org/types/File",
@@ -98,15 +98,11 @@ def test_issue0007():
         "affiliation": [
             {
                 "@type": "https://openminds.om-i.org/types/Affiliation",
-                "memberOf": {
-                    "@id": "_:002"
-                },
+                "memberOf": {"@id": "_:002"},
             },
             {
                 "@type": "https://openminds.om-i.org/types/Affiliation",
-                "memberOf": {
-                    "@id": "_:003"
-                },
+                "memberOf": {"@id": "_:003"},
             },
         ],
     }
@@ -128,15 +124,11 @@ def test_issue0007():
                 "affiliation": [
                     {
                         "@type": "https://openminds.om-i.org/types/Affiliation",
-                        "memberOf": {
-                            "@id": "_:002"
-                        },
+                        "memberOf": {"@id": "_:002"},
                     },
                     {
                         "@type": "https://openminds.om-i.org/types/Affiliation",
-                        "memberOf": {
-                            "@id": "_:003"
-                        },
+                        "memberOf": {"@id": "_:003"},
                     },
                 ],
                 "familyName": "Professor",
@@ -178,9 +170,7 @@ def test_issue0008():
             {
                 "@type": "https://openminds.om-i.org/types/Affiliation",
                 "endDate": "2023-09-30",
-                "memberOf": {
-                    "@id": "_:001"
-                },
+                "memberOf": {"@id": "_:001"},
             }
         ],
         "familyName": "Professor",
@@ -196,10 +186,7 @@ def test_issue0026():
 
     uni1 = omcore.Organization(full_name="University of This Place", id="_:uthisp")
     person = omcore.Person(
-        given_name="A",
-        family_name="Professor",
-        affiliations = [omcore.Affiliation(member_of=uni1)],
-        id="_:ap"
+        given_name="A", family_name="Professor", affiliations=[omcore.Affiliation(member_of=uni1)], id="_:ap"
     )
 
     c = Collection(person)
@@ -224,16 +211,9 @@ def test_issue0023():
 
     uni1 = omcore.Organization(full_name="University of This Place", id="_:uthisp")
     person = omcore.Person(
-        given_name="A",
-        family_name="Professor",
-        affiliations = [omcore.Affiliation(member_of=uni1)],
-        id="_:ap"
+        given_name="A", family_name="Professor", affiliations=[omcore.Affiliation(member_of=uni1)], id="_:ap"
     )
-    dv = omcore.DatasetVersion(
-        full_name="The name of the dataset version",
-        custodians=[person],
-        id="_:dv"
-    )
+    dv = omcore.DatasetVersion(full_name="The name of the dataset version", custodians=[person], id="_:dv")
 
     c = Collection(dv)
 
