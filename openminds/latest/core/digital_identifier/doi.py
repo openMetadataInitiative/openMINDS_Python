@@ -14,8 +14,8 @@ class DOI(LinkedMetadata):
     Structured information about a digital object identifier, as standardized by the International Organization for Standardization.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/DOI"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/DOI"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

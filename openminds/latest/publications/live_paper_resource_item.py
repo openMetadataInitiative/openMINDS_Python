@@ -15,8 +15,8 @@ class LivePaperResourceItem(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/publications/LivePaperResourceItem"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/LivePaperResourceItem"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -30,15 +30,11 @@ class LivePaperResourceItem(LinkedMetadata):
         ),
         Property(
             "hosted_by",
-            [
-                "openminds.latest.core.Organization",
-                "openminds.latest.core.WebService",
-                "openminds.latest.controlled_terms.Service",
-            ],
+            "openminds.latest.core.Organization",
             "hostedBy",
             required=True,
             description="Reference to an organization that provides facilities and services for something.",
-            instructions="Add the web service or organization that hosts this live paper resource item.",
+            instructions="Add the host organization of this live paper resource item.",
         ),
         Property(
             "is_part_of",

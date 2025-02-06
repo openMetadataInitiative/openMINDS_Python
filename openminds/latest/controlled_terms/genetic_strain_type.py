@@ -15,8 +15,8 @@ class GeneticStrainType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/GeneticStrainType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/GeneticStrainType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,30 +120,30 @@ class GeneticStrainType(LinkedMetadata):
 
 
 GeneticStrainType.conditional_knockin_ready = GeneticStrainType(
-    id="https://openminds.ebrains.eu/instances/geneticStrainType/conditionalKnockinReady",
+    id="https://openminds.om-i.org/instances/geneticStrainType/conditionalKnockinReady",
     name="conditional knockin ready",
 )
 GeneticStrainType.conditional_knockout_ready = GeneticStrainType(
-    id="https://openminds.ebrains.eu/instances/geneticStrainType/conditionalKnockoutReady",
+    id="https://openminds.om-i.org/instances/geneticStrainType/conditionalKnockoutReady",
     name="conditional knockout ready",
 )
 GeneticStrainType.conditional_ready = GeneticStrainType(
-    id="https://openminds.ebrains.eu/instances/geneticStrainType/conditionalReady",
+    id="https://openminds.om-i.org/instances/geneticStrainType/conditionalReady",
     name="conditional ready",
 )
 GeneticStrainType.knockin = GeneticStrainType(
-    id="https://openminds.ebrains.eu/instances/geneticStrainType/knockin",
+    id="https://openminds.om-i.org/instances/geneticStrainType/knockin",
     name="knockin",
 )
 GeneticStrainType.knockout = GeneticStrainType(
-    id="https://openminds.ebrains.eu/instances/geneticStrainType/knockout",
+    id="https://openminds.om-i.org/instances/geneticStrainType/knockout",
     name="knockout",
 )
 GeneticStrainType.transgenic = GeneticStrainType(
-    id="https://openminds.ebrains.eu/instances/geneticStrainType/transgenic",
+    id="https://openminds.om-i.org/instances/geneticStrainType/transgenic",
     name="transgenic",
 )
 GeneticStrainType.wildtype = GeneticStrainType(
-    id="https://openminds.ebrains.eu/instances/geneticStrainType/wildtype",
+    id="https://openminds.om-i.org/instances/geneticStrainType/wildtype",
     name="wildtype",
 )

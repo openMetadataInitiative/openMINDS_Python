@@ -162,3 +162,161 @@ class CommonCoordinateSpace(LinkedMetadata):
             short_name=short_name,
             used_species=used_species,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+CommonCoordinateSpace.amb_ccf = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/AMB-CCF",
+    abbreviation="AMB CCF",
+    description="The 'Allen Mouse Brain Common Coordinate Framework' is a 3D reconstruction of an averaged adult mouse brain.",
+    full_name="Allen Mouse Brain Common Coordinate Framework",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v3-RAS"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v3"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v2"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v1"},
+    ],
+    homepage=IRI("https://portal.brain-map.org/"),
+    short_name="Allen Mouse Brain CCF",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/musMusculus"},
+)
+CommonCoordinateSpace.big_brain = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/BigBrain",
+    abbreviation="BigBrain",
+    description="The 'BigBrain Whole-Brain Model' is a 3D reconstruction of a human brain in extremely high resolution.",
+    full_name="BigBrain Whole-Brain Model",
+    has_versions=[{"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/BigBrain_2015"}],
+    homepage=IRI("https://bigbrainproject.org/"),
+    short_name="BigBrain Model",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
+)
+CommonCoordinateSpace.fs_lr = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/fsLR",
+    abbreviation="fsLR",
+    description="The 'Unbiased FsAverage Left–Right Hybrid Surface Space' (fsLR) brings the left and right fsaverage surfaces into geographic correspondence using Landmark-SBR ([Van Essen et al. 2011](https://doi.org/10.1093/cercor/bhr291)).",
+    full_name="Unbiased FsAverage Left–Right Hybrid Surface Space",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsLR_32k"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsLR_164k"},
+    ],
+    short_name="fsLR Surface Space",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
+)
+CommonCoordinateSpace.fsaverage = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/fsaverage",
+    abbreviation="fsaverage",
+    full_name="FsAverage Surface Space",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_3"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_4"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_5"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_6"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_7"},
+    ],
+    short_name="FsAverage Surface Space",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
+)
+CommonCoordinateSpace.mebrain_stemplate = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/MEBRAINStemplate",
+    abbreviation="MEBRAINStemplate",
+    description="The 'MEBRAINS population-based monkey brain template' is a multi-subject based, multi-modal, volume and surface brain template for macaque monkeys.",
+    full_name="MEBRAINS population-based monkey brain template",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MEBRAINStemplate_v1.0"}
+    ],
+    short_name="MEBRAINS brain template",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/macacaMulatta"},
+)
+CommonCoordinateSpace.mni__colin27 = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/MNI-Colin27",
+    abbreviation="MNI-Colin27",
+    description="The 'MNI Colin 27 Average Brain Stereotaxic Registration Model' is a stereotaxic average of 27 T1-weighted MRI scans of the same individual. It was created at the Montreal Neurological Institute (MNI) in a two step process: (1) each of the 27 T1-weighted scans were registered to stereotaxic space using MRITOTAL (an automated volumetric registration procedure) and resampled onto a 1mm grid. All 27 scans were averaged together to create an initial average. (2) The initial average volume was used as a target for a second phase of registration where each original T1-weighted MRI was re-registered in stereotaxic space. This two-step procedure has the advantage of removing the small variance in intra-subject mapping in stereotaxic space associated with the use of a multi-subject average resulting in an average brain stereotaxic registration model with high signal-to-noise ratio and structure definition.",
+    full_name="MNI Colin27 Average Brain Stereotaxic Registration Model",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-Colin27_1998"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-Colin27_2008"},
+    ],
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
+    how_to_cite="Holmes CJ, Hoge R, Collins L, Woods R, Toga AW, and Evans AC; 'Enhancement of MR images using registration for signal averaging.'; J Comput Assist Tomogr; 1998 Mar-Apr; 22(2):324–33. [doi: 10.1097/00004728-199803000-00032](http://dx.doi.org/10.1097/00004728-199803000-00032) Aubert-Broche B, Evans AC, and Collins DL; 'A new improved version of the realistic digital brain phantom'; NeuroImage; 2006 Aug;32(1):138–45. [doi: 10.1016/j.neuroimage.2006.03.052](https://doi.org/10.1016/j.neuroimage.2006.03.052)",
+    short_name="MNI Colin27 Average Brain",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
+)
+CommonCoordinateSpace.mni_icbm152 = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/MNI-ICBM152",
+    abbreviation="ICBM152",
+    description="The 'MNI ICBM152 Average Brain Stereotaxic Registration Model' is an average of T1-weighted magnetic resonance imaging (MRI) scans from 152 normative young adults.",
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_linear-2001-sym"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-6G-sym"},
+        {
+            "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009a-asym"
+        },
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009a-sym"},
+        {
+            "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009b-asym"
+        },
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009b-sym"},
+        {
+            "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009c-asym"
+        },
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009c-sym"},
+    ],
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
+    short_name="MNI ICBM152",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
+)
+CommonCoordinateSpace.pw_rbsc_cor_t = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/PW-RBSC-corT",
+    abbreviation="PW-RBSC-corT",
+    description="Stereotactic coordinate space of the coronal plane.",
+    full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-LIA"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-RIA"},
+        {
+            "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-LSA"
+        },
+        {
+            "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-RSA"
+        },
+    ],
+    short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/rattusNorvegicus"},
+)
+CommonCoordinateSpace.swanson_srb = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/SwansonSRB",
+    abbreviation="SwansonSRB",
+    description="Stereotactic coordinate system derived from the atlas by Paxinos and Watson (1986; ISBN: 0-12-547621-3).",
+    full_name="Swanson's Stereotactic Brain of the Sprague Dawley Rat",
+    has_versions=[{"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/SwansonSRB_v1992"}],
+    short_name="Swanson's Stereotactic Rat Brain",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/rattusNorvegicus"},
+)
+CommonCoordinateSpace.whssd = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/WHSSD",
+    abbreviation="WHSSD",
+    description="The 'Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)' employs a continuous three- dimensional Cartesian coordinate system, with its origin set at the decussation of the anterior commissure.",
+    full_name="Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)",
+    has_versions=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/WHSSD_v1.01"},
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/WHSSD_v1"},
+    ],
+    homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
+    short_name="WHS of the SD Rat Brain",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/rattusNorvegicus"},
+)

@@ -48,6 +48,7 @@ class WorkflowExecution(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
+            required=True,
             description="no description available",
             instructions="Add all stages that were performed in this workflow execution.",
         ),

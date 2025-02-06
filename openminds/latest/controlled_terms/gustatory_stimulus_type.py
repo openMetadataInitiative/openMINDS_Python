@@ -15,8 +15,8 @@ class GustatoryStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/GustatoryStimulusType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,22 +120,22 @@ class GustatoryStimulusType(LinkedMetadata):
 
 
 GustatoryStimulusType.bitter_substance = GustatoryStimulusType(
-    id="https://openminds.ebrains.eu/instances/gustatoryStimulusType/bitterSubstance",
+    id="https://openminds.om-i.org/instances/gustatoryStimulusType/bitterSubstance",
     definition="Any chemical compound that tastes bitter.",
     name="bitter substance",
 )
 GustatoryStimulusType.salty_substance = GustatoryStimulusType(
-    id="https://openminds.ebrains.eu/instances/gustatoryStimulusType/saltySubstance",
+    id="https://openminds.om-i.org/instances/gustatoryStimulusType/saltySubstance",
     definition="Any chemical compound that tastes salty.",
     name="salty substance",
 )
 GustatoryStimulusType.sour_substance = GustatoryStimulusType(
-    id="https://openminds.ebrains.eu/instances/gustatoryStimulusType/sourSubstance",
+    id="https://openminds.om-i.org/instances/gustatoryStimulusType/sourSubstance",
     definition="Any chemical compound that tastes sour.",
     name="sour substance",
 )
 GustatoryStimulusType.sweet_substance = GustatoryStimulusType(
-    id="https://openminds.ebrains.eu/instances/gustatoryStimulusType/sweetSubstance",
+    id="https://openminds.om-i.org/instances/gustatoryStimulusType/sweetSubstance",
     definition="Any chemical compound that tastes sweet.",
     name="sweet substance",
 )

@@ -58,6 +58,7 @@ class TermSuggestion(LinkedMetadata):
             "terminology",
             "openminds.v1.controlled_terms.Terminology",
             "terminology",
+            required=True,
             description="Nomenclature for a particular field of study.",
             instructions="Add the terminology in which the suggested term should be integrated in.",
         ),

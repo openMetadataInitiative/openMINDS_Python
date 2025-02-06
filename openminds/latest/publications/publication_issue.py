@@ -14,8 +14,8 @@ class PublicationIssue(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/publications/PublicationIssue"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/PublicationIssue"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

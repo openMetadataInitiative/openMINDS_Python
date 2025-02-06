@@ -15,8 +15,8 @@ class OperatingSystem(LinkedMetadata):
     Structured information on the operating system.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/OperatingSystem"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/OperatingSystem"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,47 +120,47 @@ class OperatingSystem(LinkedMetadata):
 
 
 OperatingSystem.android = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/Android",
+    id="https://openminds.om-i.org/instances/operatingSystem/Android",
     name="Android",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q94"),
 )
 OperatingSystem.i_os = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/iOS",
+    id="https://openminds.om-i.org/instances/operatingSystem/iOS",
     name="iOS",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q48493"),
 )
 OperatingSystem.linux = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/Linux",
+    id="https://openminds.om-i.org/instances/operatingSystem/Linux",
     name="Linux",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q388"),
 )
 OperatingSystem.mac_os = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/MacOS",
+    id="https://openminds.om-i.org/instances/operatingSystem/MacOS",
     name="MacOS",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q43627"),
 )
 OperatingSystem.platform_independent = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/platformIndependent",
+    id="https://openminds.om-i.org/instances/operatingSystem/platformIndependent",
     name="platform independent",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q174666"),
 )
 OperatingSystem.solaris = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/Solaris",
+    id="https://openminds.om-i.org/instances/operatingSystem/Solaris",
     name="Solaris",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q14646"),
 )
 OperatingSystem.unix = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/Unix",
+    id="https://openminds.om-i.org/instances/operatingSystem/Unix",
     name="Unix",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q11368"),
 )
 OperatingSystem.windows = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/Windows",
+    id="https://openminds.om-i.org/instances/operatingSystem/Windows",
     name="Windows",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q1406"),
 )
 OperatingSystem.windows_phone = OperatingSystem(
-    id="https://openminds.ebrains.eu/instances/operatingSystem/WindowsPhone",
+    id="https://openminds.om-i.org/instances/operatingSystem/WindowsPhone",
     name="Windows Phone",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q4885200"),
 )

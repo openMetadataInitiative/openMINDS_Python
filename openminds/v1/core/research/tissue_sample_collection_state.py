@@ -36,6 +36,14 @@ class TissueSampleCollectionState(LinkedMetadata):
             instructions="Add the age of the specimen (set) in this state.",
         ),
         Property(
+            "lookup_label",
+            str,
+            "lookupLabel",
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter a lookup label for this specimen (set) state that may help you to more easily find it again.",
+        ),
+        Property(
             "pathologies",
             ["openminds.v1.controlled_terms.Disease", "openminds.v1.controlled_terms.DiseaseModel"],
             "pathology",
@@ -54,11 +62,12 @@ class TissueSampleCollectionState(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, additional_remarks=None, age=None, pathologies=None, weight=None):
+    def __init__(self, id=None, additional_remarks=None, age=None, lookup_label=None, pathologies=None, weight=None):
         return super().__init__(
             id=id,
             additional_remarks=additional_remarks,
             age=age,
+            lookup_label=lookup_label,
             pathologies=pathologies,
             weight=weight,
         )

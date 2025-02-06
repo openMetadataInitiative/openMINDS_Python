@@ -15,8 +15,8 @@ class OlfactoryStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/OlfactoryStimulusType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class OlfactoryStimulusType(LinkedMetadata):
 
 
 OlfactoryStimulusType.floral_odor = OlfactoryStimulusType(
-    id="https://openminds.ebrains.eu/instances/olfactoryStimulusType/floralOdor",
+    id="https://openminds.om-i.org/instances/olfactoryStimulusType/floralOdor",
     definition="Any chemical compound that smells floral.",
     name="floral odor",
 )

@@ -15,8 +15,8 @@ class CellType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/CellType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/CellType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,25 +120,25 @@ class CellType(LinkedMetadata):
 
 
 CellType.aromatase_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/aromataseExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/aromataseExpressingNeuron",
     definition="Any neuron that expresses aromatase.",
     name="aromatase expressing neuron",
     synonyms=["aromatase expressing cell", "aromatase-positive cell", "aromatase-positive neuron"],
 )
 CellType.astrocyte = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/astrocyte",
+    id="https://openminds.om-i.org/instances/cellType/astrocyte",
     definition="'Astrocytes' are a class of large, star-shaped neuroglial (macroglial) cells in the central nervous system.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100947"),
     name="astrocyte",
     synonyms=["astroglial cell"],
 )
 CellType.basket_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/basketCell",
+    id="https://openminds.om-i.org/instances/cellType/basketCell",
     definition="An inhibitory GABAergic interneurons of the brain, enmeshing the cell body of another neuron with its terminal axon ramifications.",
     name="basket cell",
 )
 CellType.calbindin_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/calbindinExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/calbindinExpressingNeuron",
     definition="Any neuron that expresses calbindin.",
     name="calbindin expressing neuron",
     synonyms=[
@@ -154,7 +154,7 @@ CellType.calbindin_expressing_neuron = CellType(
     ],
 )
 CellType.calretinin_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/calretininExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/calretininExpressingNeuron",
     definition="Any neuron that expresses calretinin.",
     name="calretinin expressing neuron",
     synonyms=[
@@ -166,11 +166,11 @@ CellType.calretinin_expressing_neuron = CellType(
     ],
 )
 CellType.cerebellar_interneuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cerebellarInterneuron",
+    id="https://openminds.om-i.org/instances/cellType/cerebellarInterneuron",
     name="cerebellar interneuron",
 )
 CellType.cerebellum_basket_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cerebellumBasketCell",
+    id="https://openminds.om-i.org/instances/cellType/cerebellumBasketCell",
     definition="An inhibitory GABAergic interneurons of the cerebellum, enmeshing the cell body of another neuron with its terminal axon ramifications.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101964"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:666951243#cerebellum-basket-cell"),
@@ -179,7 +179,7 @@ CellType.cerebellum_basket_cell = CellType(
     synonyms=["cerebellar basket cell"],
 )
 CellType.cerebellum_golgi_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cerebellumGolgiCell",
+    id="https://openminds.om-i.org/instances/cellType/cerebellumGolgiCell",
     definition="An inhibitory interneuron found within the granular layer of the cerebellum.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101966"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:129#golgi-cell"),
@@ -194,7 +194,7 @@ CellType.cerebellum_golgi_cell = CellType(
     ],
 )
 CellType.cerebellum_granule_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cerebellumGranuleCell",
+    id="https://openminds.om-i.org/instances/cellType/cerebellumGranuleCell",
     definition="'Cerebellum granule cells' form the thick granular layer of the cerebellar cortex and typically have small cell bodies but varying functions.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0101967"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:128#cerebellum-granule-cell"),
@@ -203,7 +203,7 @@ CellType.cerebellum_granule_cell = CellType(
     synonyms=["cerebellar granule cell", "cerebellar granule neuron", "cerebellum granule neuron"],
 )
 CellType.cerebellum_stellate_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cerebellumStellateNeuron",
+    id="https://openminds.om-i.org/instances/cellType/cerebellumStellateNeuron",
     definition="Any cerebellar neuron that has a star-like shape formed by dendritic processes radiating from the cell body.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0101975"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:130#cerebellum-stellate-cell"),
@@ -212,7 +212,7 @@ CellType.cerebellum_stellate_neuron = CellType(
     synonyms=["cerebellar stellate cell", "cerebellar stellate neuron", "cerebellum stellate cell"],
 )
 CellType.cholecystokinin_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cholecystokininExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/cholecystokininExpressingNeuron",
     definition="Any neuron that expresses cholecystokinin.",
     name="cholecystokinin expressing neuron",
     synonyms=[
@@ -224,7 +224,7 @@ CellType.cholecystokinin_expressing_neuron = CellType(
     ],
 )
 CellType.choline_acetyltransferase_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cholineAcetyltransferaseExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/cholineAcetyltransferaseExpressingNeuron",
     definition="Any neuron that expresses choline acetyltransferase.",
     name="choline acetyltransferase expressing neuron",
     synonyms=[
@@ -240,13 +240,13 @@ CellType.choline_acetyltransferase_expressing_neuron = CellType(
     ],
 )
 CellType.cholinergic_interneuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cholinergicInterneuron",
+    id="https://openminds.om-i.org/instances/cellType/cholinergicInterneuron",
     definition="An inhibitory interneuron which mainly uses the neurotrasmitter acetylcholine (ACh).",
     name="cholinergic interneuron",
     synonyms=["CIN"],
 )
 CellType.cholinergic_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/cholinergicNeuron",
+    id="https://openminds.om-i.org/instances/cellType/cholinergicNeuron",
     definition="Any neuron that releases some acetylcholine as a neurotransmitter",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0102131"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXNEURNT:090802#cholinergic-neuron"),
@@ -255,7 +255,7 @@ CellType.cholinergic_neuron = CellType(
     synonyms=["ACh neuron"],
 )
 CellType.cortical_basket_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/corticalBasketCell",
+    id="https://openminds.om-i.org/instances/cellType/corticalBasketCell",
     definition="An inhibitory GABAergic interneurons of the cortex, enmeshing the cell body of another neuron with its terminal axon ramifications.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107351"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:56#neocortex-basket-cell"),
@@ -264,11 +264,11 @@ CellType.cortical_basket_cell = CellType(
     synonyms=["basket cell", "cortical basket neuron", "neocortex basket cell", "neocortical basket cell"],
 )
 CellType.cortical_interneuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/corticalInterneuron",
+    id="https://openminds.om-i.org/instances/cellType/corticalInterneuron",
     name="cortical interneuron",
 )
 CellType.d1_receptor_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/D1ReceptorExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/D1ReceptorExpressingNeuron",
     definition="Any neuron that expresses D1 receptors.",
     name="D1 receptor expressing neuron",
     synonyms=[
@@ -284,7 +284,7 @@ CellType.d1_receptor_expressing_neuron = CellType(
     ],
 )
 CellType.d2_receptor_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/D2ReceptorExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/D2ReceptorExpressingNeuron",
     definition="Any neuron that expresses D2 receptors.",
     name="D2 receptor expressing neuron",
     synonyms=[
@@ -300,7 +300,7 @@ CellType.d2_receptor_expressing_neuron = CellType(
     ],
 )
 CellType.dopaminergic_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/dopaminergicNeuron",
+    id="https://openminds.om-i.org/instances/cellType/dopaminergicNeuron",
     definition="Any neuron that releases some dopamine as a neurotransmitter",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0103395"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXNEURNT:090806#dopaminergic-neuron"),
@@ -309,32 +309,32 @@ CellType.dopaminergic_neuron = CellType(
     synonyms=["DA neuron"],
 )
 CellType.excitatory_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/excitatoryNeuron",
+    id="https://openminds.om-i.org/instances/cellType/excitatoryNeuron",
     definition="An 'excitatory neuron' releases neurotransmitters (e.g. glutamate) that have a deperpolarizing effect on the post-synaptic neuron, facilitating the generation of an action potential.",
     name="excitatory neuron",
     synonyms=["excitatory cell"],
 )
 CellType.fast_spiking_interneuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/fastSpikingInterneuron",
+    id="https://openminds.om-i.org/instances/cellType/fastSpikingInterneuron",
     definition="A parvalbumin positive GABAergic interneuron with a high-frequency firing pattern.",
     name="fast spiking interneuron",
     synonyms=["FSI"],
 )
 CellType.glial_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/glialCell",
+    id="https://openminds.om-i.org/instances/cellType/glialCell",
     definition="A 'glial cell' is a non-neuronal cell of the nervous system. Glial cells provide physical support, respond to injury, regulate the ionic and chemical composition of the extracellular milieu, guide neuronal migration during development, and exchange metabolites with neurons.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104634"),
     name="glial cell",
     synonyms=["neuroglial cell"],
 )
 CellType.granule_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/granuleNeuron",
+    id="https://openminds.om-i.org/instances/cellType/granuleNeuron",
     definition="The term 'granule neuron' refers to a set of neuron types typically found in granular layers across brain regions whose only common feature is that they all have very small cell bodies [[adapted from Wikipedia](https://en.wikipedia.org/wiki/Granule_cell)].",
     name="granule neuron",
     synonyms=["granule cell"],
 )
 CellType.hippocampus_ca1_pyramidal_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/hippocampusCA1PyramidalNeuron",
+    id="https://openminds.om-i.org/instances/cellType/hippocampusCA1PyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body that is located in the cornu ammonis 1 (CA1) of the hippocampus.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105031"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:830368389#hippocampus-ca1-pyramidal-cell"),
@@ -348,34 +348,142 @@ CellType.hippocampus_ca1_pyramidal_neuron = CellType(
     ],
 )
 CellType.inhibitory_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/inhibitoryNeuron",
+    id="https://openminds.om-i.org/instances/cellType/inhibitoryNeuron",
     definition="An 'inhibitory neuron' releases neurotransmitters (e.g. GABA) that have a hyperpolarizing effect on the post-synaptic neuron, making it difficult to generate an action potential.",
     name="inhibitory neuron",
     synonyms=["inhibitory cell"],
 )
 CellType.interneuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/interneuron",
+    id="https://openminds.om-i.org/instances/cellType/interneuron",
     definition="An 'interneuron' is neuron that cannot be classified as sensory receptor or motor neuron.",
     name="interneuron",
 )
 CellType.macroglial_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/macroglialCell",
+    id="https://openminds.om-i.org/instances/cellType/macroglialCell",
     definition="'Macroglial cells' are large glial cells in the central nervous system.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106438"),
     name="macroglial cell",
 )
+CellType.main_olfactory_bulb_deep_tufted_neuron = CellType(
+    id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbDeepTuftedNeuron",
+    definition="A subclass of neurons situated in the innermost (deep) layer of the external plexiform layer of the main olfactory bulb.",
+    name="main olfactory bulb deep tufted neuron",
+    synonyms=[
+        "deep tufted cell of the main olfactory bulb",
+        "main olfactory bulb deep tufted cell",
+        "deep tufted neuron of the main olfactory bulb",
+    ],
+)
+CellType.main_olfactory_bulb_external_tufted_neuron = CellType(
+    id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbExternalTuftedNeuron",
+    definition="An excitatory neuron type found predominately at the glomerular layer of the main olfactory bulb.",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107943"),
+    name="main olfactory bulb external tufted neuron",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_82555"),
+    synonyms=[
+        "olfactory bulb main tufted cell external",
+        "olfactory bulb external tufted cell",
+        "external tuftes cell of the main olfactory bulb",
+        "main olfactory bulb external tufted cell",
+        "external tuftes neuron of the main olfactory bulb",
+    ],
+)
+CellType.main_olfactory_bulb_granule_neuron = CellType(
+    id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbGranuleNeuron",
+    definition="Axonless inhibitory interneurons and form the majority of neurons in the vertebrate main olfactory bulb [adapted from [Egger et al. (2003)](https://doi.org/10.1523/JNEUROSCI.23-20-07551.2003)].",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107930"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:123#olfactory-bulb-main-granule-cell"),
+    name="main olfactory bulb granule neuron",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_123"),
+    synonyms=[
+        "granule cell of the olfactory bulb",
+        "olfactory bulb granule neuron",
+        "granule neuron of the olfactory bulb",
+        "olfactory bulb (main) granule cell",
+        "main olfactory bulb granule cell",
+        "granule cell of the main olfactory bulb",
+        "granule neuron of the main olfactory bulb",
+    ],
+)
+CellType.main_olfactory_bulb_middle_tufted_neuron = CellType(
+    id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbMiddleTuftedNeuron",
+    definition="A subclass of neurons situated in the middle layer of the external plexiform layer of the main olfactory bulb.",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107935"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:121#olfactory-bulb-main-tufted-cell"),
+    name="main olfactory bulb middle tufted neuron",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_121"),
+    synonyms=[
+        "olfactory bulb (main) tufted cell (middle)",
+        "middle tufted cell of the main olfactory bulb",
+        "main olfactory bulb middle tufted cell",
+        "middle tufted neuron of the main olfactory bulb",
+    ],
+)
+CellType.main_olfactory_bulb_mitral_neuron = CellType(
+    id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbMitralNeuron",
+    definition="Neuronal cell type in the mammalian olfactory bulb, distinguished by the position of their somata located in an orderly row in the mitral cell layer of the bulb. [from [Wikipedia](https://en.wikipedia.org/wiki/Mitral_cell#Structure)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107933"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:120#olfactory-bulb-main-mitral-cell"),
+    name="main olfactory bulb mitral neuron",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_120"),
+    synonyms=[
+        "olfactory bulb (main) mitral cell",
+        "olfactory bulb (main) mitral neuron",
+        "mitral neuron",
+        "main olfactory bulb mitral cell",
+        "mitral neuron of the main olfactory bulb",
+    ],
+)
+CellType.main_olfactory_bulb_periglomerular_neuron = CellType(
+    id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbPeriglomerularNeuron",
+    definition="Small intrinsic neurons in the glomerular layer of the main olfactory bulb, with cell bodies surrounding the olfactory glomerulus. [adapted from [InterLex](http://uri.interlex.org/base/ilx_0107934)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107934"),
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/NLXCELL:091202#olfactory-bulb-main-periglomerular-cell"
+    ),
+    name="main olfactory bulb periglomerular neuron",
+    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_cell_091202"),
+    synonyms=[
+        "periglomerular neuron",
+        "PGC",
+        "PG cell",
+        "main olfactory bulb periglomerular cell",
+        "periglomerular cell of the main olfactory bulb",
+        "periglomerular neuron of the main olfactory bulb",
+    ],
+)
+CellType.main_olfactory_bulb_superficial_tufted_neuron = CellType(
+    id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbSuperficialTuftedNeuron",
+    definition="A subclass of neurons situated in the outermost (superficial) layer of the external plexiform layer of the main olfactory bulb.",
+    name="main olfactory bulb superficial tufted neuron",
+    synonyms=[
+        "main olfactory bulb superficial tufted cell",
+        "superficial tufted neuron of the main olfactory bulb",
+        "superficial tufted cell of the main olfactory bulb",
+    ],
+)
+CellType.main_olfactory_bulb_tufted_neuron = CellType(
+    id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbTuftedNeuron",
+    definition="Principle neurons of the mammalian main olfactory bulb.",
+    name="main olfactory bulb tufted neuron",
+    synonyms=[
+        "main olfactory bulb tufted cell",
+        "tufted cell of the main olfactory bulb",
+        "tufted neuron of the main olfactory bulb",
+    ],
+)
 CellType.microglial_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/microglialCell",
+    id="https://openminds.om-i.org/instances/cellType/microglialCell",
     definition="'Microglial cells' are small, migratory, phagocytic, interstitial glial cells in the central nervous system.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106919"),
     name="microglial cell",
 )
 CellType.motor_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/motorNeuron",
+    id="https://openminds.om-i.org/instances/cellType/motorNeuron",
     name="motor neuron",
 )
 CellType.neocortex_layer2_3_pyramidal_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/neocortexLayer2-3PyramidalNeuron",
+    id="https://openminds.om-i.org/instances/cellType/neocortexLayer2-3PyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body that is located in layer 2/3 of the neocortex.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107387"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:49#neocortex-pyramidal-cell-layer-2-3"),
@@ -391,7 +499,7 @@ CellType.neocortex_layer2_3_pyramidal_neuron = CellType(
     ],
 )
 CellType.neocortex_layer5_tufted_pyramidal_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/neocortexLayer5TuftedPyramidalNeuron",
+    id="https://openminds.om-i.org/instances/cellType/neocortexLayer5TuftedPyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body found in layer 5 of the neocortex and projects to subcortical areas.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0738209"),
     name="neocortex layer 5 tufted pyramidal neuron",
@@ -404,7 +512,7 @@ CellType.neocortex_layer5_tufted_pyramidal_neuron = CellType(
     ],
 )
 CellType.neostriatum_cholinergic_interneuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/neostriatumCholinergicInterneuron",
+    id="https://openminds.om-i.org/instances/cellType/neostriatumCholinergicInterneuron",
     definition="An inhibitory interneuron in the caudate nucleus and putamen which mainly uses the neurotrasmitter acetylcholine (ACh).",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0107403"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:1866881837#neostriatum-cholinergic-cell"),
@@ -422,7 +530,7 @@ CellType.neostriatum_cholinergic_interneuron = CellType(
     ],
 )
 CellType.neostriatum_direct_pathway_spiny_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/neostriatumDirectPathwaySpinyNeuron",
+    id="https://openminds.om-i.org/instances/cellType/neostriatumDirectPathwaySpinyNeuron",
     definition="The principal projection neuron of the caudate and putamen that excite their output structure.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0107404"),
     name="neostriatum direct pathway spiny neuron",
@@ -436,7 +544,7 @@ CellType.neostriatum_direct_pathway_spiny_neuron = CellType(
     ],
 )
 CellType.neostriatum_indirect_pathway_spiny_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/neostriatumIndirectPathwaySpinyNeuron",
+    id="https://openminds.om-i.org/instances/cellType/neostriatumIndirectPathwaySpinyNeuron",
     definition="The principal projection neuron of the caudate and putamen that inhibit their output structure.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0107405"),
     name="neostriatum indirect pathway spiny neuron",
@@ -450,14 +558,14 @@ CellType.neostriatum_indirect_pathway_spiny_neuron = CellType(
     ],
 )
 CellType.neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/neuron",
+    id="https://openminds.om-i.org/instances/cellType/neuron",
     definition="A 'neuron' is a basic cellular unit of nervous tissue which can receive, conduct, and transmit electrical impulses.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107497"),
     name="neuron",
     synonyms=["nerve cell", "neurone"],
 )
 CellType.neuropeptide_y_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/neuropeptideYExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/neuropeptideYExpressingNeuron",
     definition="Any neuron that expresses neuropeptide Y.",
     name="neuropeptide Y expressing neuron",
     synonyms=[
@@ -473,7 +581,7 @@ CellType.neuropeptide_y_expressing_neuron = CellType(
     ],
 )
 CellType.nitric_oxide_synthase_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/nitricOxideSynthaseExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/nitricOxideSynthaseExpressingNeuron",
     definition="Any neuron that expresses nitric oxide synthase.",
     name="nitric oxide synthase expressing neuron",
     synonyms=[
@@ -489,23 +597,23 @@ CellType.nitric_oxide_synthase_expressing_neuron = CellType(
     ],
 )
 CellType.parvalbumin_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/parvalbuminExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/parvalbuminExpressingNeuron",
     definition="Any neuron that expresses parvalbumin.",
     name="parvalbumin expressing neuron",
     synonyms=["parvalbumin expressing cell", "PV+ cell", "PV+ neuron", "PV-positive cell", "PV-positive neuron"],
 )
 CellType.postmitotic_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/postmitoticCell",
+    id="https://openminds.om-i.org/instances/cellType/postmitoticCell",
     definition="A 'postmitotic cell' is a fully differentiated, non-dividing mature cell that no longer undergoes mitosis.",
     name="postmitotic cell",
 )
 CellType.progenitor_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/progenitorCell",
+    id="https://openminds.om-i.org/instances/cellType/progenitorCell",
     definition="A 'progenitor cell' is a descendent of a stem cell that further differentiate to create specialized cell types.",
     name="progenitor cell",
 )
 CellType.purkinje_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/PurkinjeCell",
+    id="https://openminds.om-i.org/instances/cellType/PurkinjeCell",
     definition="A class of GABAergic inhibitory neurons located in the cerebellum with pear-shape cell bodies arranged in a single layer, typically one primary dendrites and an elaborate dendritic tree heavily invested with dendritic spines.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0101974"),
     name="Purkinje cell",
@@ -522,17 +630,17 @@ CellType.purkinje_cell = CellType(
     ],
 )
 CellType.pyramidal_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/pyramidalNeuron",
+    id="https://openminds.om-i.org/instances/cellType/pyramidalNeuron",
     definition="A 'pyramidal neuron' is a type of multipolar neuron that is characterized by a pyramidal shaped cell body (soma) and two distinct dendritic trees.",
     name="pyramidal neuron",
     synonyms=["pyramidal cell"],
 )
 CellType.sensory_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/sensoryNeuron",
+    id="https://openminds.om-i.org/instances/cellType/sensoryNeuron",
     name="sensory neuron",
 )
 CellType.somatostatin_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/somatostatinExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/somatostatinExpressingNeuron",
     definition="Any neuron that expresses somatostatin.",
     name="somatostatin expressing neuron",
     synonyms=[
@@ -546,27 +654,27 @@ CellType.somatostatin_expressing_neuron = CellType(
     ],
 )
 CellType.spinal_interneuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/spinalInterneuron",
+    id="https://openminds.om-i.org/instances/cellType/spinalInterneuron",
     name="spinal interneuron",
 )
 CellType.spiny_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/spinyNeuron",
+    id="https://openminds.om-i.org/instances/cellType/spinyNeuron",
     definition="Any neuron characterized by a high density of dendritic spines on the dendrites.",
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXCELL:100601#spiny-neuron"),
     name="spiny neuron",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_100601"),
 )
 CellType.stellate_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/stellateNeuron",
+    id="https://openminds.om-i.org/instances/cellType/stellateNeuron",
     definition="Any neuron in the central nervous system that has a star-like shape formed by dendritic processes radiating from the cell body.",
     name="stellate neuron",
 )
 CellType.striatal_interneuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/striatalInterneuron",
+    id="https://openminds.om-i.org/instances/cellType/striatalInterneuron",
     name="striatal interneuron",
 )
 CellType.striatum_medium_spiny_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/striatumMediumSpinyNeuron",
+    id="https://openminds.om-i.org/instances/cellType/striatumMediumSpinyNeuron",
     definition="A special type of GABAergic neuron with large dendritic trees that is located in the striatum.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0784362"),
     name="striatum medium spiny neuron",
@@ -574,7 +682,7 @@ CellType.striatum_medium_spiny_neuron = CellType(
     synonyms=["MSN", "spiny projection neuron", "SPN", "striatal medium spiny neuron"],
 )
 CellType.vascular_endothelial_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/vascularEndothelialCell",
+    id="https://openminds.om-i.org/instances/cellType/vascularEndothelialCell",
     definition="Cells that constitute the inner cellular lining of arteries, veins and capillaries.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0112265"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:1543450574#vascular-endothelial-cell"),
@@ -583,14 +691,14 @@ CellType.vascular_endothelial_cell = CellType(
     synonyms=["endothelial cell"],
 )
 CellType.vascular_smooth_muscle_cell = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/vascularSmoothMuscleCell",
+    id="https://openminds.om-i.org/instances/cellType/vascularSmoothMuscleCell",
     definition="A smooth muscle cell assocatiated with the vasculature.",
     name="vascular smooth muscle cell",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CL_0000359"),
     synonyms=["vascular associated smooth muscle cell", "VSMC"],
 )
 CellType.vasoactive_intestinal_peptide_expressing_neuron = CellType(
-    id="https://openminds.ebrains.eu/instances/cellType/vasoactiveIntestinalPeptideExpressingNeuron",
+    id="https://openminds.om-i.org/instances/cellType/vasoactiveIntestinalPeptideExpressingNeuron",
     definition="Any neuron that expresses vasoactive-intestinal peptide.",
     name="vasoactive-intestinal peptide expressing neuron",
     synonyms=[

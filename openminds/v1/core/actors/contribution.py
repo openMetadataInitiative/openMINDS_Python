@@ -5,11 +5,11 @@ Structured information on the contribution made to a research product.
 # this file was auto-generated!
 
 
-from openminds.base import LinkedMetadata
+from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 
 
-class Contribution(LinkedMetadata):
+class Contribution(EmbeddedMetadata):
     """
     Structured information on the contribution made to a research product.
     """
@@ -40,9 +40,8 @@ class Contribution(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, contribution_types=None, contributor=None):
+    def __init__(self, contribution_types=None, contributor=None):
         return super().__init__(
-            id=id,
             contribution_types=contribution_types,
             contributor=contributor,
         )

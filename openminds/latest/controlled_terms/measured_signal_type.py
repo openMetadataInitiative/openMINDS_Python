@@ -15,8 +15,8 @@ class MeasuredSignalType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/MeasuredSignalType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/MeasuredSignalType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -102,3 +102,44 @@ class MeasuredSignalType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+MeasuredSignalType.alpha_activity = MeasuredSignalType(
+    id="https://openminds.om-i.org/instances/measuredSignalType/alphaActivity",
+    definition="A neural oscillation in the low frequency range (typically between 8-12 Hz) arising from synchronous and coherent electrical activity in the brain. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Alpha_wave)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100494"),
+    name="alpha activity",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0100494"),
+    synonyms=["alpha-wave", "alpha wave", "alpha", "alpha oscillation", "alpha rhythm"],
+)
+MeasuredSignalType.beta_activity = MeasuredSignalType(
+    id="https://openminds.om-i.org/instances/measuredSignalType/betaActivity",
+    definition="A neural oscillation in the mid frequency range (typically between 12-30 Hz) arising from synchronous and coherent electrical activity in the brain. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Beta_wave)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101243"),
+    name="beta activity",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0101243"),
+    synonyms=["beta-wave", "beta wave", "beta", "beta oscillation", "beta rhythm"],
+)
+MeasuredSignalType.gamma_activity = MeasuredSignalType(
+    id="https://openminds.om-i.org/instances/measuredSignalType/gammaActivity",
+    definition="A neural oscillation in the high frequency range (typically between 30-150 Hz) arising from synchronous and coherent electrical activity in the brain. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Gamma_wave)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104539"),
+    name="gamma activity",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0104539"),
+    synonyms=["gamma-wave", "gamma wave", "gamma", "gamma oscillation", "gamma rhythm"],
+)

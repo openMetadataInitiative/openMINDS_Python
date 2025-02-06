@@ -1,5 +1,5 @@
 """
-Structured information on the general type of the study target.
+<description not available>
 """
 
 # this file was auto-generated!
@@ -9,12 +9,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class StudyTargetType(LinkedMetadata):
+class Terminology(LinkedMetadata):
     """
-    Structured information on the general type of the study target.
+    <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/StudyTargetType"
+    type_ = "https://openminds.ebrains.eu/controlledTerms/Terminology"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
     schema_version = "v1.0"
 
@@ -34,7 +34,7 @@ class StudyTargetType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the study target type.",
+            description="Longer statement or account giving the characteristics of the terminology.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -43,7 +43,7 @@ class StudyTargetType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the study target type.",
+            description="Word or phrase that constitutes the distinctive designation of the terminology.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -51,7 +51,7 @@ class StudyTargetType(LinkedMetadata):
             str,
             "ontologyIdentifier",
             formatting="text/plain",
-            description="Term or code used to identify the study target type registered within a particular ontology.",
+            description="Term or code used to identify the terminology registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the related ontological term.",
         ),
     ]

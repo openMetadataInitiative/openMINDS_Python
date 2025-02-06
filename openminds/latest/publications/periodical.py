@@ -14,8 +14,8 @@ class Periodical(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/publications/Periodical"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Periodical"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -39,6 +39,7 @@ class Periodical(LinkedMetadata):
             str,
             "name",
             formatting="text/plain",
+            required=True,
             description="Word or phrase that constitutes the distinctive designation of the periodical.",
             instructions="Enter the name (or title) of this periodical (e.g., Journal of Physiology).",
         ),

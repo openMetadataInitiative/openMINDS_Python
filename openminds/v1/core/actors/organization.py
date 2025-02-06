@@ -1,5 +1,5 @@
 """
-Structured information on an organization.
+An entity comprised of one or more natural persons with a particular purpose. [adapted from Wikipedia](https://en.wikipedia.org/wiki/Organization)
 """
 
 # this file was auto-generated!
@@ -11,7 +11,7 @@ from openminds.properties import Property
 
 class Organization(LinkedMetadata):
     """
-    Structured information on an organization.
+    An entity comprised of one or more natural persons with a particular purpose. [adapted from Wikipedia](https://en.wikipedia.org/wiki/Organization)
     """
 
     type_ = "https://openminds.ebrains.eu/core/Organization"
@@ -21,7 +21,7 @@ class Organization(LinkedMetadata):
     properties = [
         Property(
             "digital_identifiers",
-            "openminds.v1.core.DigitalIdentifier",
+            ["openminds.v1.core.GRIDID", "openminds.v1.core.RORID"],
             "digitalIdentifier",
             multiple=True,
             unique_items=True,
@@ -47,11 +47,10 @@ class Organization(LinkedMetadata):
         ),
         Property(
             "homepage",
-            str,
+            "openminds.v1.core.URL",
             "homepage",
-            formatting="text/plain",
             description="Main website of the organization.",
-            instructions="Enter a internationalized resource identifier (IRI) to the homepage of this organization.",
+            instructions="Add the uniform resource locator (URL) to the homepage of this organization.",
         ),
         Property(
             "short_name",

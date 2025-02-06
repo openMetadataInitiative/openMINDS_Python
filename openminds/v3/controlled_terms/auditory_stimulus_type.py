@@ -77,7 +77,7 @@ class AuditoryStimulusType(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,25 @@ class AuditoryStimulusType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+AuditoryStimulusType.real_spoken_word = AuditoryStimulusType(
+    id="https://openminds.ebrains.eu/instances/auditoryStimulusType/realSpokenWord",
+    definition="A speech sound or series of speech sounds that symbolizes and communicates a meaning (usually) without being divisible into smaller units capable of independent use. [adapted from [Merriam-Webster](https://www.merriam-webster.com/dictionary/word)]",
+    name="real spoken word",
+)

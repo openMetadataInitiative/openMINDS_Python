@@ -16,8 +16,8 @@ class ModelVersion(LinkedMetadata):
     Structured information on a computational model (version level).
     """
 
-    type_ = "https://openminds.ebrains.eu/core/ModelVersion"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/ModelVersion"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -71,6 +71,14 @@ class ModelVersion(LinkedMetadata):
             "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this research product version.",
+        ),
+        Property(
+            "entry_point",
+            str,
+            "entryPoint",
+            formatting="text/plain",
+            description="no description available",
+            instructions="Add the entry point for this model version (for example, the path of the main script file within the repository).",
         ),
         Property(
             "formats",
@@ -372,6 +380,7 @@ class ModelVersion(LinkedMetadata):
         description=None,
         developers=None,
         digital_identifier=None,
+        entry_point=None,
         formats=None,
         full_documentation=None,
         full_name=None,
@@ -401,6 +410,7 @@ class ModelVersion(LinkedMetadata):
             description=description,
             developers=developers,
             digital_identifier=digital_identifier,
+            entry_point=entry_point,
             formats=formats,
             full_documentation=full_documentation,
             full_name=full_name,

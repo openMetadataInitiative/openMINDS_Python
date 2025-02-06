@@ -9,12 +9,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class productAccessibility(LinkedMetadata):
+class ProductAccessibility(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/productAccessibility"
+    type_ = "https://openminds.ebrains.eu/controlledTerms/ProductAccessibility"
     context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
     schema_version = "v1.0"
 

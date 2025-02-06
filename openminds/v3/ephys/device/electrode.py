@@ -1,5 +1,5 @@
 """
-<description not available>
+Structured information on an electrode.
 """
 
 # this file was auto-generated!
@@ -11,7 +11,7 @@ from openminds.properties import Property
 
 class Electrode(LinkedMetadata):
     """
-    <description not available>
+    Structured information on an electrode.
     """
 
     type_ = "https://openminds.ebrains.eu/ephys/Electrode"

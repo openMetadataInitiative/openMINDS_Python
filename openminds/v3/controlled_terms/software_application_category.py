@@ -77,7 +77,7 @@ class SoftwareApplicationCategory(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,50 @@ class SoftwareApplicationCategory(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+SoftwareApplicationCategory.application = SoftwareApplicationCategory(
+    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/application",
+    name="application",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q166142"),
+)
+SoftwareApplicationCategory.library = SoftwareApplicationCategory(
+    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/library",
+    name="library",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q188860"),
+)
+SoftwareApplicationCategory.middleware = SoftwareApplicationCategory(
+    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/middleware",
+    name="middleware",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q146768"),
+)
+SoftwareApplicationCategory.module = SoftwareApplicationCategory(
+    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/module",
+    name="module",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q11883090"),
+)
+SoftwareApplicationCategory.notebook = SoftwareApplicationCategory(
+    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/notebook",
+    name="notebook",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q28405706"),
+)
+SoftwareApplicationCategory.plugin = SoftwareApplicationCategory(
+    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/plugin",
+    name="plugin",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q184148"),
+)

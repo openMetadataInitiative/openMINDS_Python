@@ -15,8 +15,8 @@ class DeviceType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/DeviceType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/DeviceType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,13 +120,13 @@ class DeviceType(LinkedMetadata):
 
 
 DeviceType.c_tscanner = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/CTscanner",
+    id="https://openminds.om-i.org/instances/deviceType/CTscanner",
     definition="A 'CT scanner' is an x-ray machine that creates and combines serial two-dimensional x-ray images (sections) with the aid of a computer to generate cross-sectional views and/or three-dimensional images of internal body structures (e.g., bones, blood vessels or soft tissues).",
     name="CT scanner",
     synonyms=["CAT scanner", "computed axial tomography scanner", "computed tomography scanner"],
 )
 DeviceType.closed_bore_mri_scanner = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/closedBoreMRIScanner",
+    id="https://openminds.om-i.org/instances/deviceType/closedBoreMRIScanner",
     definition="'Closed-bore MRI scanners' are high-field scanners which feature a magnet surrounding the patient creating a capsule-like space (standard or wide) where the patient lies on.",
     name="closed-bore MRI scanner",
     synonyms=[
@@ -136,7 +136,7 @@ DeviceType.closed_bore_mri_scanner = DeviceType(
     ],
 )
 DeviceType.electronic_amplifier = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/electronicAmplifier",
+    id="https://openminds.om-i.org/instances/deviceType/electronicAmplifier",
     definition="An 'electronic amplifier' is a device that increases the power (voltage or current) of a time-varying signal.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100567"),
     name="electronic amplifier",
@@ -144,21 +144,21 @@ DeviceType.electronic_amplifier = DeviceType(
     synonyms=["amp", "amplifier"],
 )
 DeviceType.microscope = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/microscope",
+    id="https://openminds.om-i.org/instances/deviceType/microscope",
     definition="A 'microscope' is an instrument used to obtain a magnified image of small objects and reveal details of structures not otherwise distinguishable.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106921"),
     name="microscope",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2106"),
 )
 DeviceType.microtome = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/microtome",
+    id="https://openminds.om-i.org/instances/deviceType/microtome",
     definition="A 'microtome' is a mechanical instrument with a steel, glass or diamond blade used to cut (typically) biological specimens into very thin segments for further treatment and ultimately microscopic or histologic examination.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106925"),
     name="microtome",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/OBI_0400168"),
 )
 DeviceType.mr_iscanner = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/MRIscanner",
+    id="https://openminds.om-i.org/instances/deviceType/MRIscanner",
     definition="An 'MRI scanner' is a machine that uses strong magnetic fields, magnetic field gradients, and radio waves to generate static or time-resolved three-dimensional images of the anatomy and physiological processes of the body.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106463"),
     name="MRI scanner",
@@ -166,7 +166,7 @@ DeviceType.mr_iscanner = DeviceType(
     synonyms=["magnetic resonance imaging scanner"],
 )
 DeviceType.open_bore_mri_scanner = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/openBoreMRIScanner",
+    id="https://openminds.om-i.org/instances/deviceType/openBoreMRIScanner",
     definition="'Open-bore MRI scanners' are low-field scanners which have a magnetic top and bottom, but are otherwise open, increasing patient's comfort and unobstructed view of the scanning area.",
     name="open-bore MRI scanner",
     synonyms=[
@@ -176,7 +176,7 @@ DeviceType.open_bore_mri_scanner = DeviceType(
     ],
 )
 DeviceType.standard_bore_mri_scanner = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/standardBoreMRIScanner",
+    id="https://openminds.om-i.org/instances/deviceType/standardBoreMRIScanner",
     definition="A 'standard-bore MRI scanner' is a closed high-field scanner which features a magnet surrounding the patient creating a capsule-like space where the patient lies on.",
     name="standard-bore MRI scanner",
     synonyms=[
@@ -186,14 +186,14 @@ DeviceType.standard_bore_mri_scanner = DeviceType(
     ],
 )
 DeviceType.vibrating_microtome = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/vibratingMicrotome",
+    id="https://openminds.om-i.org/instances/deviceType/vibratingMicrotome",
     definition="A 'vibrating microtome' is an mechanical instrument with a vibrating steel blade used to cut (typically) biological specimens into thin segments for further treatment and ultimately microscopic or histologic examination.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0780522"),
     name="vibrating microtome",
     synonyms=["vibratome"],
 )
 DeviceType.wide_bore_mri_scanner = DeviceType(
-    id="https://openminds.ebrains.eu/instances/deviceType/wideBoreMRIScanner",
+    id="https://openminds.om-i.org/instances/deviceType/wideBoreMRIScanner",
     definition="A 'wide-bore MRI scanner' is a closed high-field scanner which features a widened bore compared to the standard-bore MRI scanner.",
     name="wide-bore MRI scanner",
     synonyms=[

@@ -15,8 +15,8 @@ class AuditoryStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/AuditoryStimulusType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class AuditoryStimulusType(LinkedMetadata):
 
 
 AuditoryStimulusType.real_spoken_word = AuditoryStimulusType(
-    id="https://openminds.ebrains.eu/instances/auditoryStimulusType/realSpokenWord",
+    id="https://openminds.om-i.org/instances/auditoryStimulusType/realSpokenWord",
     definition="A speech sound or series of speech sounds that symbolizes and communicates a meaning (usually) without being divisible into smaller units capable of independent use. [adapted from [Merriam-Webster](https://www.merriam-webster.com/dictionary/word)]",
     name="real spoken word",
 )

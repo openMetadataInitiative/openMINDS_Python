@@ -14,8 +14,8 @@ class RRID(LinkedMetadata):
     A persistent identifier for a research resource provided by the Resource Identification Initiative.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/RRID"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/RRID"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

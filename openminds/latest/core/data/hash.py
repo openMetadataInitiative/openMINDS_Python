@@ -14,8 +14,8 @@ class Hash(EmbeddedMetadata):
     Structured information on a hash.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/Hash"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Hash"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

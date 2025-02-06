@@ -20,6 +20,16 @@ class Project(LinkedMetadata):
 
     properties = [
         Property(
+            "coordinators",
+            ["openminds.v1.core.Organization", "openminds.v1.core.Person"],
+            "coordinator",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="Legal person who organizes the collaborative work of people or groups.",
+            instructions="Add one or several project coordinators (person or organization).",
+        ),
+        Property(
             "description",
             str,
             "description",
@@ -60,21 +70,10 @@ class Project(LinkedMetadata):
         ),
         Property(
             "homepage",
-            str,
+            "openminds.v1.core.URL",
             "homepage",
-            formatting="text/plain",
             description="Main website of the project.",
-            instructions="Enter the internationalized resource identifier (IRI) to the homepage of this model version.",
-        ),
-        Property(
-            "project_leaders",
-            ["openminds.v1.core.Organization", "openminds.v1.core.Person"],
-            "projectLeader",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="no description available",
-            instructions="Add one or several project leader (person or organization).",
+            instructions="Add the uniform resource locator (URL) to the homepage of this project.",
         ),
         Property(
             "short_name",
@@ -90,19 +89,19 @@ class Project(LinkedMetadata):
     def __init__(
         self,
         id=None,
+        coordinators=None,
         description=None,
         full_name=None,
         has_research_products=None,
         homepage=None,
-        project_leaders=None,
         short_name=None,
     ):
         return super().__init__(
             id=id,
+            coordinators=coordinators,
             description=description,
             full_name=full_name,
             has_research_products=has_research_products,
             homepage=homepage,
-            project_leaders=project_leaders,
             short_name=short_name,
         )

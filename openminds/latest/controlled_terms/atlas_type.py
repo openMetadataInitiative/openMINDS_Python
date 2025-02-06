@@ -15,8 +15,8 @@ class AtlasType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/AtlasType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/AtlasType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,12 +120,12 @@ class AtlasType(LinkedMetadata):
 
 
 AtlasType.deterministic_atlas = AtlasType(
-    id="https://openminds.ebrains.eu/instances/atlasType/deterministicAtlas",
+    id="https://openminds.om-i.org/instances/atlasType/deterministicAtlas",
     definition="A 'deterministic atlas' is an anatomical or anatomopathological atlases based on a definite composite of a single specimen.",
     name="deterministic atlas",
 )
 AtlasType.parcellation_scheme = AtlasType(
-    id="https://openminds.ebrains.eu/instances/atlasType/parcellationScheme",
+    id="https://openminds.om-i.org/instances/atlasType/parcellationScheme",
     definition="A 'parcellation scheme' is a set of parcels occupying a part or all of an anatomical entity that has been delineated or annotated using a common approach or set of criteria.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0108526"),
     name="parcellation scheme",
@@ -133,7 +133,7 @@ AtlasType.parcellation_scheme = AtlasType(
     synonyms=["partition scheme"],
 )
 AtlasType.probabilistic_atlas = AtlasType(
-    id="https://openminds.ebrains.eu/instances/atlasType/probabilisticAtlas",
+    id="https://openminds.om-i.org/instances/atlasType/probabilisticAtlas",
     definition="A 'probabilistic atlas' is an anatomical or anatomopathological atlases based on statistically-weighted composites of many specimens.",
     name="probabilistic atlas",
     synonyms=["probability map"],

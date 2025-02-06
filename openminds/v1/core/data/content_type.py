@@ -4,6 +4,7 @@ Structured information on the content type of a file instance, bundle or reposit
 
 # this file was auto-generated!
 
+from openminds.base import IRI
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -20,25 +21,24 @@ class ContentType(LinkedMetadata):
 
     properties = [
         Property(
-            "associated_file_extensions",
+            "description",
             str,
-            "associatedFileExtension",
+            "description",
+            formatting="text/markdown",
+            multiline=True,
+            description="Longer statement or account giving the characteristics of the content type.",
+            instructions="Enter a description of the content type specification. May be left blank if a public specification can be linked in 'specification'.",
+        ),
+        Property(
+            "file_extensions",
+            str,
+            "fileExtension",
             multiple=True,
             unique_items=True,
             min_items=1,
             formatting="text/plain",
-            required=True,
-            description="no description available",
+            description="String of characters attached as suffix to the names of files of a particular format.",
             instructions="Enter one or several file extensions associated with this content type.",
-        ),
-        Property(
-            "category",
-            str,
-            "category",
-            formatting="text/plain",
-            required=True,
-            description="no description available",
-            instructions="Enter the category to which this content type belongs to.",
         ),
         Property(
             "name",
@@ -51,11 +51,17 @@ class ContentType(LinkedMetadata):
         ),
         Property(
             "related_media_type",
-            str,
+            IRI,
             "relatedMediaType",
-            formatting="text/plain",
             description="Reference to an official two-part identifier for file formats and format contents.",
-            instructions="Enter the iternationalized resource identifier (IRI) to a registered media type (e.g. on IANA.org) matching this content type.",
+            instructions="Enter the iternationalized resource identifier (IRI) of the official registered media type (e.g. on IANA.org) matching this content type.",
+        ),
+        Property(
+            "specification",
+            IRI,
+            "specification",
+            description="Detailed and precise presentation of, or proposal for something.",
+            instructions="Enter the iternationalized resource identifier (IRI) of the official specification of this content type. Leave blank and use 'description' to provide some specification if an official specification is not available.",
         ),
         Property(
             "synonyms",
@@ -73,17 +79,19 @@ class ContentType(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        associated_file_extensions=None,
-        category=None,
+        description=None,
+        file_extensions=None,
         name=None,
         related_media_type=None,
+        specification=None,
         synonyms=None,
     ):
         return super().__init__(
             id=id,
-            associated_file_extensions=associated_file_extensions,
-            category=category,
+            description=description,
+            file_extensions=file_extensions,
             name=name,
             related_media_type=related_media_type,
+            specification=specification,
             synonyms=synonyms,
         )

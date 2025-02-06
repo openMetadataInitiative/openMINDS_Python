@@ -15,8 +15,8 @@ class WorkflowRecipe(LinkedMetadata):
     Structured information about the description of a prospective workflow.
     """
 
-    type_ = "https://openminds.ebrains.eu/computation/WorkflowRecipe"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/WorkflowRecipe"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

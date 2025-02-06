@@ -16,8 +16,8 @@ class SoftwareVersion(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/core/SoftwareVersion"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/SoftwareVersion"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -138,7 +138,12 @@ class SoftwareVersion(LinkedMetadata):
         ),
         Property(
             "has_parts",
-            "openminds.latest.core.SoftwareVersion",
+            [
+                "openminds.latest.core.ModelVersion",
+                "openminds.latest.core.SoftwareVersion",
+                "openminds.latest.sands.BrainAtlasVersion",
+                "openminds.latest.sands.CommonCoordinateSpaceVersion",
+            ],
             "hasPart",
             multiple=True,
             unique_items=True,

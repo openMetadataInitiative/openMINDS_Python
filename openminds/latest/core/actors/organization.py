@@ -1,5 +1,5 @@
 """
-Structured information on an organization.
+An entity comprised of one or more natural persons with a particular purpose. [adapted from Wikipedia](https://en.wikipedia.org/wiki/Organization)
 """
 
 # this file was auto-generated!
@@ -12,11 +12,11 @@ from openminds.properties import Property
 
 class Organization(LinkedMetadata):
     """
-    Structured information on an organization.
+    An entity comprised of one or more natural persons with a particular purpose. [adapted from Wikipedia](https://en.wikipedia.org/wiki/Organization)
     """
 
-    type_ = "https://openminds.ebrains.eu/core/Organization"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Organization"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

@@ -15,8 +15,8 @@ class LearningResourceType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/LearningResourceType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/LearningResourceType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,33 +120,33 @@ class LearningResourceType(LinkedMetadata):
 
 
 LearningResourceType.developer_documentation = LearningResourceType(
-    id="https://openminds.ebrains.eu/instances/learningResourceType/developerDocumentation",
+    id="https://openminds.om-i.org/instances/learningResourceType/developerDocumentation",
     definition="Documentation for the developers of a resource.",
     name="developer documentation",
 )
 LearningResourceType.interactive_tutorial = LearningResourceType(
-    id="https://openminds.ebrains.eu/instances/learningResourceType/interactiveTutorial",
+    id="https://openminds.om-i.org/instances/learningResourceType/interactiveTutorial",
     definition="A tutorial presented in an interactive format, for example a Jupyter notebook.",
     name="interactive tutorial",
 )
 LearningResourceType.slide_deck = LearningResourceType(
-    id="https://openminds.ebrains.eu/instances/learningResourceType/slideDeck",
+    id="https://openminds.om-i.org/instances/learningResourceType/slideDeck",
     definition="A set of slides for a visual presentation.",
     name="slide deck",
     synonyms=["slides", "presentation slides"],
 )
 LearningResourceType.user_documentation = LearningResourceType(
-    id="https://openminds.ebrains.eu/instances/learningResourceType/userDocumentation",
+    id="https://openminds.om-i.org/instances/learningResourceType/userDocumentation",
     definition="Documentation for the users of a resource.",
     name="user documentation",
 )
 LearningResourceType.video_presentation = LearningResourceType(
-    id="https://openminds.ebrains.eu/instances/learningResourceType/videoPresentation",
+    id="https://openminds.om-i.org/instances/learningResourceType/videoPresentation",
     definition="A video recorded presentation.",
     name="video presentation",
 )
 LearningResourceType.video_tutorial = LearningResourceType(
-    id="https://openminds.ebrains.eu/instances/learningResourceType/videoTutorial",
+    id="https://openminds.om-i.org/instances/learningResourceType/videoTutorial",
     definition="A tutorial presented as a video.",
     name="video tutorial",
 )

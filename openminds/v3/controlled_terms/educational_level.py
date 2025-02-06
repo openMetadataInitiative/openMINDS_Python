@@ -77,7 +77,7 @@ class EducationalLevel(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,35 @@ class EducationalLevel(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+EducationalLevel.advanced = EducationalLevel(
+    id="https://openminds.ebrains.eu/instances/educationalLevel/advanced",
+    definition="The learner has extensive knowledge of the given topic.",
+    name="advanced",
+)
+EducationalLevel.beginner = EducationalLevel(
+    id="https://openminds.ebrains.eu/instances/educationalLevel/beginner",
+    definition="The learner has no or minimal knowledge or experience of the given topic.",
+    name="beginner",
+)
+EducationalLevel.intermediate = EducationalLevel(
+    id="https://openminds.ebrains.eu/instances/educationalLevel/intermediate",
+    definition="The learner has knowledge of the given topic, but is not an expert.",
+    name="intermediate",
+)

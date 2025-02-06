@@ -14,8 +14,8 @@ class AmountOfChemical(EmbeddedMetadata):
     Structured information about the amount of a given chemical that was used.
     """
 
-    type_ = "https://openminds.ebrains.eu/chemicals/AmountOfChemical"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/AmountOfChemical"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

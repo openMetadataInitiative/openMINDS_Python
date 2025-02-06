@@ -15,8 +15,8 @@ class ContributionType(LinkedMetadata):
     Structured information on the type of contribution a person or organization performed.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/ContributionType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/ContributionType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,34 +120,34 @@ class ContributionType(LinkedMetadata):
 
 
 ContributionType.coordination = ContributionType(
-    id="https://openminds.ebrains.eu/instances/contributionType/coordination",
+    id="https://openminds.om-i.org/instances/contributionType/coordination",
     name="coordination",
 )
 ContributionType.data_collection = ContributionType(
-    id="https://openminds.ebrains.eu/instances/contributionType/dataCollection",
+    id="https://openminds.om-i.org/instances/contributionType/dataCollection",
     name="data collection",
 )
 ContributionType.data_managment = ContributionType(
-    id="https://openminds.ebrains.eu/instances/contributionType/dataManagment",
+    id="https://openminds.om-i.org/instances/contributionType/dataManagment",
     name="data management",
 )
 ContributionType.data_processing = ContributionType(
-    id="https://openminds.ebrains.eu/instances/contributionType/dataProcessing",
+    id="https://openminds.om-i.org/instances/contributionType/dataProcessing",
     name="data processing",
 )
 ContributionType.information_technology_support = ContributionType(
-    id="https://openminds.ebrains.eu/instances/contributionType/informationTechnologySupport",
+    id="https://openminds.om-i.org/instances/contributionType/informationTechnologySupport",
     name="information technology support",
 )
 ContributionType.laboratory_assistance = ContributionType(
-    id="https://openminds.ebrains.eu/instances/contributionType/laboratoryAssistance",
+    id="https://openminds.om-i.org/instances/contributionType/laboratoryAssistance",
     name="laboratory assistance",
 )
 ContributionType.marketing = ContributionType(
-    id="https://openminds.ebrains.eu/instances/contributionType/marketing",
+    id="https://openminds.om-i.org/instances/contributionType/marketing",
     name="marketing",
 )
 ContributionType.metadata_managment = ContributionType(
-    id="https://openminds.ebrains.eu/instances/contributionType/metadataManagment",
+    id="https://openminds.om-i.org/instances/contributionType/metadataManagment",
     name="metadata management",
 )

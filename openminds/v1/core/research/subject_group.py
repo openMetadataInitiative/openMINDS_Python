@@ -20,6 +20,15 @@ class SubjectGroup(LinkedMetadata):
 
     properties = [
         Property(
+            "additional_remarks",
+            str,
+            "additionalRemarks",
+            formatting="text/markdown",
+            multiline=True,
+            description="Mention of what deserves additional attention or notice.",
+            instructions="Enter additional remarks about the specimen set.",
+        ),
+        Property(
             "biological_sexes",
             "openminds.v1.controlled_terms.BiologicalSex",
             "biologicalSex",
@@ -31,22 +40,20 @@ class SubjectGroup(LinkedMetadata):
             instructions="Add the biological sex of all specimen in this set.",
         ),
         Property(
-            "genotypes",
-            "openminds.v1.controlled_terms.Genotype",
-            "genotype",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="Genetic constitution of an individual or group.",
-            instructions="Add the genotype of all specimen in this set.",
-        ),
-        Property(
             "internal_identifier",
             str,
             "internalIdentifier",
             formatting="text/plain",
             description="Term or code that identifies the subject group within a particular product.",
             instructions="Enter the identifier of this specimen set that is used within the corresponding data.",
+        ),
+        Property(
+            "lookup_label",
+            str,
+            "lookupLabel",
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter a lookup label for this specimen set that may help you to more easily find it again.",
         ),
         Property(
             "phenotypes",
@@ -102,9 +109,10 @@ class SubjectGroup(LinkedMetadata):
     def __init__(
         self,
         id=None,
+        additional_remarks=None,
         biological_sexes=None,
-        genotypes=None,
         internal_identifier=None,
+        lookup_label=None,
         phenotypes=None,
         quantity=None,
         species=None,
@@ -113,9 +121,10 @@ class SubjectGroup(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
+            additional_remarks=additional_remarks,
             biological_sexes=biological_sexes,
-            genotypes=genotypes,
             internal_identifier=internal_identifier,
+            lookup_label=lookup_label,
             phenotypes=phenotypes,
             quantity=quantity,
             species=species,

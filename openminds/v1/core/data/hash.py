@@ -5,11 +5,11 @@ Structured information on a hash.
 # this file was auto-generated!
 
 
-from openminds.base import LinkedMetadata
+from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 
 
-class Hash(LinkedMetadata):
+class Hash(EmbeddedMetadata):
     """
     Structured information on a hash.
     """
@@ -39,9 +39,8 @@ class Hash(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, algorithm=None, digest=None):
+    def __init__(self, algorithm=None, digest=None):
         return super().__init__(
-            id=id,
             algorithm=algorithm,
             digest=digest,
         )

@@ -15,8 +15,8 @@ class OrganismSystem(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/OrganismSystem"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/OrganismSystem"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class OrganismSystem(LinkedMetadata):
 
 
 OrganismSystem.cardiovascular_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/cardiovascularSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/cardiovascularSystem",
     definition="'The 'cardiovascular system' is an anatomical organ system where the heart pumps blood through blood vessels to and from all parts of the body.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101670"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004535#cardiovascular-system"),
@@ -128,7 +128,7 @@ OrganismSystem.cardiovascular_system = OrganismSystem(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004535"),
 )
 OrganismSystem.central_nervous_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/centralNervousSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/centralNervousSystem",
     definition="The 'central nervous system' is the main processing center in most organisms. Its function is to take in sensory information, process information, and send out motor signals.",
     description="In vertebrates, the central nervous system (CNS) consists of the brain and the spinal cord. In invertebrates, it includes the central ganglia and the nerve cord.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101901"),
@@ -138,7 +138,7 @@ OrganismSystem.central_nervous_system = OrganismSystem(
     synonyms=["systema nervosum centrale", "CNS"],
 )
 OrganismSystem.cholinergic_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/cholinergicSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/cholinergicSystem",
     definition="The cholinergic system is composed of any molecule, protein, cell, tissue or organ that is related to acetylcholine.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102133"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025595#cholinergic-system-1"),
@@ -149,7 +149,7 @@ OrganismSystem.cholinergic_system = OrganismSystem(
     synonyms=["acetylcholine system", "ach system", "ACh system"],
 )
 OrganismSystem.digestive_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/digestiveSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/digestiveSystem",
     definition="The 'digestive system' is an anatomical organ system composed of organs devoted to the ingestion, digestion, the assimilation of food and the discharge of residual wastes.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0729362"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001007#digestive-system"),
@@ -157,7 +157,7 @@ OrganismSystem.digestive_system = OrganismSystem(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001007"),
 )
 OrganismSystem.gabaergic_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/gabaergicSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/gabaergicSystem",
     definition="The gabaergic system is composed of any molecule, protein, cell, tissue or organ that is related to GABA.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104506"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXANAT:1005024#gabaergic-system"),
@@ -166,14 +166,14 @@ OrganismSystem.gabaergic_system = OrganismSystem(
     synonyms=["GABAergic system"],
 )
 OrganismSystem.glutamatergic_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/glutamatergicSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/glutamatergicSystem",
     definition="The glutamatergic system is composed of any molecule, protein, cell, tissue or organ that is related to glutamate (when in the role of a neurotransmitter).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104682"),
     name="glutamatergic system",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025592"),
 )
 OrganismSystem.musculoskeletal_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/musculoskeletalSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/musculoskeletalSystem",
     definition="The 'musculoskeletal system' is an anatomical organ system composed of organs providing the body with movement, stability, shape and support.",
     description="The musculoskeletal system (sometimes also called locomotor system) is subdivided into two broader systems, the skeletal system and the muscular system. The skeletal system includes bones and joints. The muscular system includes all muscles in the body.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0728294"),
@@ -183,7 +183,7 @@ OrganismSystem.musculoskeletal_system = OrganismSystem(
     synonyms=["musculo-skeletal system"],
 )
 OrganismSystem.noradrenergic_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/noradrenergicSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/noradrenergicSystem",
     definition="The noradrenergic system is composed of any molecule, protein, cell, tissue or organ that is related to norepinephrine (also known as noradrenaline).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107679"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXANAT:1005027#noradrenergic-system"),
@@ -191,7 +191,7 @@ OrganismSystem.noradrenergic_system = OrganismSystem(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0027225"),
 )
 OrganismSystem.serotonergic_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/serotonergicSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/serotonergicSystem",
     definition="The serotonergic system is composed of any molecule, protein, cell, tissue or organ that is related to serotonin.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0110555"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025593#serotonergic-system-1"),
@@ -200,7 +200,7 @@ OrganismSystem.serotonergic_system = OrganismSystem(
     synonyms=["serotonin system", "5HT system", "5-HT system", "5-ht system", "5ht system"],
 )
 OrganismSystem.vascular_system = OrganismSystem(
-    id="https://openminds.ebrains.eu/instances/organismSystem/vascularSystem",
+    id="https://openminds.om-i.org/instances/organismSystem/vascularSystem",
     definition="The 'vascular system' is an anatomical system that consists of all vessels in the body, and carries blood and lymph through all parts of the body.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0726589"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007798#vascular-system"),

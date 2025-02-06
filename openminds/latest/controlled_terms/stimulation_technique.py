@@ -15,8 +15,8 @@ class StimulationTechnique(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/StimulationTechnique"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/StimulationTechnique"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,12 +120,12 @@ class StimulationTechnique(LinkedMetadata):
 
 
 StimulationTechnique.abstract_image_visual_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/abstractImageVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/abstractImageVisualStimulation",
     definition="In an 'abstract image visual stimulation' a subject is visually stimulated with a static image that does not show a natural scene but reduced information or forms (e.g., colored symbols or outlines of faces).",
     name="abstract image visual stimulation",
 )
 StimulationTechnique.checkerboard_visual_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/checkerboardVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/checkerboardVisualStimulation",
     definition="Stimulation technique that uses a checkerboard as visual stimulus.",
     name="checkerboard visual stimulation",
     synonyms=[
@@ -136,83 +136,83 @@ StimulationTechnique.checkerboard_visual_stimulation = StimulationTechnique(
     ],
 )
 StimulationTechnique.current_step_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/currentStepStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/currentStepStimulation",
     definition="Current step stimulation is a technique in which an amount of current is applied in predefined steps, whilst measuring changes in neural/muscular activity.",
     name="current step stimulation",
 )
 StimulationTechnique.drifting_grating_visual_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/driftingGratingVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/driftingGratingVisualStimulation",
     name="drifting grating visual stimulation",
 )
 StimulationTechnique.electrical_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/electricalStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/electricalStimulation",
     definition="A technique used to elicit a reaction by an electrical stimulus.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0739699"),
     name="electrical stimulation",
     preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/188"),
 )
 StimulationTechnique.figure_ground_visual_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/figure-groundVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/figure-groundVisualStimulation",
     name="figure-ground visual stimulation",
 )
 StimulationTechnique.gestalt_visual_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/GestaltVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/GestaltVisualStimulation",
     name="Gestalt visual stimulation",
 )
 StimulationTechnique.microstimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/microstimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/microstimulation",
     name="microstimulation",
 )
 StimulationTechnique.natural_image_visual_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/naturalImageVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/naturalImageVisualStimulation",
     definition="In a 'natural image visual stimulation' a subject is visually stimulated with a static image that shows a natural scene (e.g., landscape or a person).",
     name="natural image visual stimulation",
 )
 StimulationTechnique.natural_sound_auditory_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/naturalSoundAuditoryStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/naturalSoundAuditoryStimulation",
     name="natural sound auditory stimulation",
 )
 StimulationTechnique.optogenetic_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/optogeneticStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/optogeneticStimulation",
     definition="Using light of a particular wavelength, 'optogenetic stimulation' increases or inhibits the activity of neuron populations that express (typically due to genetic manipulation) light-sensitive ion channels, pumps or enzymes.",
     name="optogenetic stimulation",
 )
 StimulationTechnique.photon_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/photonStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/photonStimulation",
     name="photon stimulation",
 )
 StimulationTechnique.random_dot_motion_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/randomDotMotionStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/randomDotMotionStimulation",
     definition="In a 'random dot motion stimulation' a subject is visually stimulated with a video where simulated randomly distributed dot(s) are re-positioned at a new random location with each video frame [[Newsome & Paré, 1988](https://doi.org/10.1523/jneurosci.08-06-02201.1988).",
     name="random dot motion stimulation",
     synonyms=["random dot visual stimulation", "random dot visual stimulation technique"],
 )
 StimulationTechnique.single_pulse_electrical_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/singlePulseElectricalStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/singlePulseElectricalStimulation",
     definition="A 'single pulse electrical stimulation' is a cortical stimulation technique typically used in the field of epilepsy surgery.",
     name="single pulse electrical stimulation",
     synonyms=["SPES"],
 )
 StimulationTechnique.static_grating_visual_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/staticGratingVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/staticGratingVisualStimulation",
     name="static grating visual stimulation",
 )
 StimulationTechnique.subliminal_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/technique/subliminalStimulation",
+    id="https://openminds.om-i.org/instances/technique/subliminalStimulation",
     definition="'Subliminal stimulation' is a technique providing any sensory stimuli below an individual's threshold for conscious perception (adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli))",
     name="subliminal stimulation",
 )
-StimulationTechnique.subliminal_visual_simulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/technique/subliminalVisualSimulation",
-    definition="'Subliminal visual simulation' is a technique providing visual stimuli below an indivdual's threshold for conscious perception [adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli)]",
-    name="subliminal visual simulation",
+StimulationTechnique.subliminal_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/technique/subliminalVisualStimulation",
+    definition="Stimulation technique that is providing visual stimuli below an indivdual's threshold for conscious perception [adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli)]",
+    name="subliminal visual stimulation",
 )
 StimulationTechnique.transcranial_magnetic_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/transcranialMagneticStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/transcranialMagneticStimulation",
     name="transcranial magnetic stimulation",
 )
 StimulationTechnique.whisker_stimulation = StimulationTechnique(
-    id="https://openminds.ebrains.eu/instances/stimulationTechnique/whiskerStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/whiskerStimulation",
     definition="'Whisker stimulation' comprises all stimulation techniques in which a single whisker or a group of whiskers is deflected in repeatable manner.",
     name="whisker stimulation",
 )

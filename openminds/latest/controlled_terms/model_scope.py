@@ -15,8 +15,8 @@ class ModelScope(LinkedMetadata):
     Structured information on the scope of the computational model.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/ModelScope"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/ModelScope"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,52 +120,52 @@ class ModelScope(LinkedMetadata):
 
 
 ModelScope.network = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/network",
+    id="https://openminds.om-i.org/instances/modelScope/network",
     definition="A model of a neuronal network",
     name="network",
 )
 ModelScope.network_brain_region = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/network-brainRegion",
+    id="https://openminds.om-i.org/instances/modelScope/network-brainRegion",
     definition="A model of one or more brain regions",
     name="network: brain region",
 )
 ModelScope.network_microcircuit = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/network-microcircuit",
+    id="https://openminds.om-i.org/instances/modelScope/network-microcircuit",
     definition="A model of a neuronal microcircuit",
     name="network: microcircuit",
 )
 ModelScope.network_whole_brain = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/network-wholeBrain",
+    id="https://openminds.om-i.org/instances/modelScope/network-wholeBrain",
     definition="A model of an entire brain",
     name="network: whole brain",
 )
 ModelScope.single_cell = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/singleCell",
+    id="https://openminds.om-i.org/instances/modelScope/singleCell",
     definition="A model of a single cell",
     name="single cell",
 )
 ModelScope.subcellular = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/subcellular",
+    id="https://openminds.om-i.org/instances/modelScope/subcellular",
     definition="A model of an entity or process contained within a cell",
     name="subcellular",
 )
 ModelScope.subcellular_ion_channel = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/subcellular-ionChannel",
+    id="https://openminds.om-i.org/instances/modelScope/subcellular-ionChannel",
     definition="A model of an ion channel",
     name="subcellular: ion channel",
 )
 ModelScope.subcellular_molecular = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/subcellular-molecular",
+    id="https://openminds.om-i.org/instances/modelScope/subcellular-molecular",
     definition="A model of the structure or behaviour of molecules",
     name="subcellular: molecular",
 )
 ModelScope.subcellular_signalling = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/subcellular-signalling",
+    id="https://openminds.om-i.org/instances/modelScope/subcellular-signalling",
     definition="A model of sub-cellular signalling pathways",
     name="subcellular: signalling",
 )
 ModelScope.subcellular_spine = ModelScope(
-    id="https://openminds.ebrains.eu/instances/modelScope/subcellular-spine",
+    id="https://openminds.om-i.org/instances/modelScope/subcellular-spine",
     definition="A model of a dendritic spine, or of a dendritic region containing several spines",
     name="subcellular: spine",
 )

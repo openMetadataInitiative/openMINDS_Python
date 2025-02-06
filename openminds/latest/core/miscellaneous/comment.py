@@ -15,8 +15,8 @@ class Comment(LinkedMetadata):
     Structured information about a short text expressing an opinion on, or giving information about some entity.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/Comment"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Comment"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

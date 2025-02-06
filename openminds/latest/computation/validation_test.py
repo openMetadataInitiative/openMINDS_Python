@@ -15,8 +15,8 @@ class ValidationTest(LinkedMetadata):
     Structured information about the definition of a process for validating a computational model.
     """
 
-    type_ = "https://openminds.ebrains.eu/computation/ValidationTest"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/ValidationTest"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

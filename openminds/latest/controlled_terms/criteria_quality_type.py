@@ -15,8 +15,8 @@ class CriteriaQualityType(LinkedMetadata):
     Structured information on the quality type of the defined criteria for a measurement.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/CriteriaQualityType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,12 +120,12 @@ class CriteriaQualityType(LinkedMetadata):
 
 
 CriteriaQualityType.asserted = CriteriaQualityType(
-    id="https://openminds.ebrains.eu/instances/criteriaQualityType/asserted",
+    id="https://openminds.om-i.org/instances/criteriaQualityType/asserted",
     definition="If a criteria is 'asserted' it is based on an opinion or claim, usually made by an expert.",
     name="asserted",
 )
 CriteriaQualityType.processive = CriteriaQualityType(
-    id="https://openminds.ebrains.eu/instances/criteriaQualityType/processive",
+    id="https://openminds.om-i.org/instances/criteriaQualityType/processive",
     definition="If a criteria is 'processive' it is based on a repeatable and often automated process.",
     name="processive",
 )

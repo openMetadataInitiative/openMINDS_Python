@@ -16,8 +16,8 @@ class WorkflowRecipeVersion(LinkedMetadata):
     Structured information about a specific implemented version of a workflow recipe.
     """
 
-    type_ = "https://openminds.ebrains.eu/computation/WorkflowRecipeVersion"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/WorkflowRecipeVersion"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

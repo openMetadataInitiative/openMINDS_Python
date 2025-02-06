@@ -15,8 +15,8 @@ class GenericComputation(LinkedMetadata):
     Structured information about a computation whose type is unknown or unspecified.
     """
 
-    type_ = "https://openminds.ebrains.eu/computation/GenericComputation"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/GenericComputation"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

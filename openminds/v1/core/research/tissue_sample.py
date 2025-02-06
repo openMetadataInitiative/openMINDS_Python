@@ -20,19 +20,26 @@ class TissueSample(LinkedMetadata):
 
     properties = [
         Property(
+            "anatomical_locations",
+            [
+                "openminds.v1.controlled_terms.UBERONParcellation",
+                "openminds.v1.sands.CustomAnatomicalEntity",
+                "openminds.v1.sands.ParcellationEntity",
+            ],
+            "anatomicalLocation",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all anatomical entities to which this tissue sample belongs.",
+        ),
+        Property(
             "biological_sex",
             "openminds.v1.controlled_terms.BiologicalSex",
             "biologicalSex",
             required=True,
             description="Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce.",
             instructions="Add the biological sex of this specimen.",
-        ),
-        Property(
-            "genotype",
-            "openminds.v1.controlled_terms.Genotype",
-            "genotype",
-            description="Genetic constitution of an individual or group.",
-            instructions="Add the genotype of this specimen.",
         ),
         Property(
             "internal_identifier",
@@ -44,6 +51,16 @@ class TissueSample(LinkedMetadata):
             instructions="Enter the identifier of this specimen that is used within the corresponding data.",
         ),
         Property(
+            "is_part_of",
+            "openminds.v1.core.TissueSampleCollection",
+            "isPartOf",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="Reference to the ensemble of multiple things or beings.",
+            instructions="Add all tissue sample collections of which this tissue sample is part of.",
+        ),
+        Property(
             "lateralities",
             "openminds.v1.controlled_terms.Laterality",
             "laterality",
@@ -53,6 +70,14 @@ class TissueSample(LinkedMetadata):
             max_items=2,
             description="Differentiation between a pair of lateral homologous parts of the body.",
             instructions="Add one or both hemisphere sides from which this tissue sample originates from.",
+        ),
+        Property(
+            "lookup_label",
+            str,
+            "lookupLabel",
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter a lookup label for this specimen that may help you to more easily find it again.",
         ),
         Property(
             "origin",
@@ -108,10 +133,12 @@ class TissueSample(LinkedMetadata):
     def __init__(
         self,
         id=None,
+        anatomical_locations=None,
         biological_sex=None,
-        genotype=None,
         internal_identifier=None,
+        is_part_of=None,
         lateralities=None,
+        lookup_label=None,
         origin=None,
         phenotype=None,
         species=None,
@@ -121,10 +148,12 @@ class TissueSample(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
+            anatomical_locations=anatomical_locations,
             biological_sex=biological_sex,
-            genotype=genotype,
             internal_identifier=internal_identifier,
+            is_part_of=is_part_of,
             lateralities=lateralities,
+            lookup_label=lookup_label,
             origin=origin,
             phenotype=phenotype,
             species=species,

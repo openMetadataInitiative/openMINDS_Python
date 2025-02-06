@@ -14,8 +14,8 @@ class FileBundle(LinkedMetadata):
     Structured information on a bundle of file instances.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/FileBundle"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/FileBundle"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

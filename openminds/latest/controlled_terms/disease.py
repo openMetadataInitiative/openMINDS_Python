@@ -15,8 +15,8 @@ class Disease(LinkedMetadata):
     Structured information on a disease.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/Disease"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Disease"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,24 +120,24 @@ class Disease(LinkedMetadata):
 
 
 Disease.acquired_blindness = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/acquiredBlindness",
+    id="https://openminds.om-i.org/instances/disease/acquiredBlindness",
     definition="Acquired blindness is caused by a group of diseases, disorders or injuries that led to permanent severely impaired vision or irreversible lack of vision during adulthood.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0499758"),
     name="acquired blindness",
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0336554"),
 )
 Disease.alzheimers_disease = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/alzheimersDisease",
+    id="https://openminds.om-i.org/instances/disease/alzheimersDisease",
     name="Alzheimer's disease",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_10652"),
 )
 Disease.autism_spectrum_disorder = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/autismSpectrumDisorder",
+    id="https://openminds.om-i.org/instances/disease/autismSpectrumDisorder",
     name="autism sprectrum disorder",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_0060041"),
 )
 Disease.cerebral_atrophy = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/cerebralAtrophy",
+    id="https://openminds.om-i.org/instances/disease/cerebralAtrophy",
     definition="Cerebral atrophy describes the pathological process of wasting or decrease in size of the cells or tissue of the cerebrum.",
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/HP:0012444#brain-atrophy"),
     name="cerebral atrophy",
@@ -145,12 +145,12 @@ Disease.cerebral_atrophy = Disease(
     synonyms=["atrophy of cerebrum", "brain atrophy", "degeneration of cerebrum", "degeneration of brain"],
 )
 Disease.congenital_blindness = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/congenitalBlindness",
+    id="https://openminds.om-i.org/instances/disease/congenitalBlindness",
     definition="Congenital blindness is caused by a group of diseases, disorders or injuries that led to permanent severely impaired vision or irreversible lack of vision before/during birth or in early childhood.",
     name="congenital blindness",
 )
 Disease.covid_19 = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/COVID-19",
+    id="https://openminds.om-i.org/instances/disease/COVID-19",
     definition="A coronavirus infectious disease that is characterized by fever, cough and shortness of breath and caused by the coronavirus strain SARS-CoV-2.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739370"),
     name="COVID-19",
@@ -167,30 +167,30 @@ Disease.covid_19 = Disease(
     ],
 )
 Disease.disorder_of_consciousness = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/disorderOfConsciousness",
+    id="https://openminds.om-i.org/instances/disease/disorderOfConsciousness",
     definition="A 'disorder of consciousness' is a state where a subject's consciousness has been affected by damage to the brain.",
     name="disorder of consciousness",
     synonyms=["DOC", "impaired consciousness"],
 )
 Disease.epilepsy = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/epilepsy",
+    id="https://openminds.om-i.org/instances/disease/epilepsy",
     definition="Epilepsy describes a group of central nervous system disorders characterized by recurrent unprovoked seizures.",
     name="epilepsy",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_1826"),
 )
 Disease.focal_cerebral_ischemia = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/focalCerebralIschemia",
+    id="https://openminds.om-i.org/instances/disease/focalCerebralIschemia",
     definition="A 'focal brain ischemia' occurs when a blood clot has occluded a cerebral vessel reducing the blood flow to a specific brain region which increases the risk of cell death in that particular area. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Brain_ischemia#Focal_brain_ischemia)]",
     name="focal cerebral ischemia",
     synonyms=["focal brain ischemia", "focal ischemic brain injury"],
 )
 Disease.fragile_xsyndrome = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/fragileXsyndrome",
+    id="https://openminds.om-i.org/instances/disease/fragileXsyndrome",
     name="fragile X syndrome",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_14261"),
 )
 Disease.glioma = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/glioma",
+    id="https://openminds.om-i.org/instances/disease/glioma",
     definition="A benign or malignant brain and spinal cord tumor that arises from glial cells (astrocytes, oligodendrocytes, ependymal cells).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104647"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12618#glioma"),
@@ -206,7 +206,7 @@ Disease.glioma = Disease(
     ],
 )
 Disease.long_covid = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/longCOVID",
+    id="https://openminds.om-i.org/instances/disease/longCOVID",
     definition="A long-term disease originally caused by the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) with symptoms persisting beyond three to four weeks.",
     description="A Coronavirus infectious disease that is characterized by long-term persistent and fluctuating symptoms, in individuals with COVID-19, persisting beyond three to four weeks, including the loss of the ability to smell and taste, breathlessness, fatigue, difficulty in breathing, difficulty concentrating, memory loss, confusion, headache, heart palpitations, chest pain, pain with deep breaths, dizziness, and tachycardia.",
     name="long COVID",
@@ -214,7 +214,7 @@ Disease.long_covid = Disease(
     synonyms=["chronic COVID-19", "PASC", "post-acute sequelae of SARS-CoV-2 infection", "post-COVID syndrome"],
 )
 Disease.malignant_neoplasm = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/malignantNeoplasm",
+    id="https://openminds.om-i.org/instances/disease/malignantNeoplasm",
     definition="A 'malignant neoplasm' is composed of atypical, often pleomorphic cells that uncontrollably grow and multiply, spreading into surrounding tissue and even invading distant anatomic sites (metastasis). Many malignant neoplasm form solid tumors, but cancers of the blood generally do not. [(adapted from [NCI](https://www.cancer.gov/about-cancer/understanding/what-is-cancer)].",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0752652"),
     name="malignant neoplasm",
@@ -222,7 +222,7 @@ Disease.malignant_neoplasm = Disease(
     synonyms=["cancer"],
 )
 Disease.meningioma = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/meningioma",
+    id="https://openminds.om-i.org/instances/disease/meningioma",
     definition="A generally slow growing tumor attached to the dura mater and composed of neoplastic meningothelial (arachnoidal) cells.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106789"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12601#meningioma"),
@@ -237,7 +237,7 @@ Disease.meningioma = Disease(
     ],
 )
 Disease.mental_disorder = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/mentalDisorder",
+    id="https://openminds.om-i.org/instances/disease/mentalDisorder",
     definition="A 'mental disorder' is characterized by a clinically significant disturbance in an individual’s cognition, emotional regulation, or behaviour and is usually associated with distress or impairment in important areas of functioning. [adapted from [WHO fact-sheets](https://www.who.int/news-room/fact-sheets/detail/mental-disorders)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106792"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12669#mental-disorder"),
@@ -246,13 +246,13 @@ Disease.mental_disorder = Disease(
     synonyms=["mental disease", "mental illness", "psychiatric disease", "psychiatric disorder"],
 )
 Disease.minimally_conscious_state = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/minimallyConsciousState",
+    id="https://openminds.om-i.org/instances/disease/minimallyConsciousState",
     definition="A 'minimally conscious state' (MCS) is a disorder of consciousness with partial preservation of conscious awareness. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Minimally_conscious_state)]",
     name="minimally conscious state",
     synonyms=["MCS"],
 )
 Disease.multiple_sclerosis = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/multipleSclerosis",
+    id="https://openminds.om-i.org/instances/disease/multipleSclerosis",
     definition="'Multiple sclerosis' is a disorder in which the body's immune system attacks the protective meylin covering of the nerve cells in the brain, optic nerve and spinal cord (adapted from the [Mayo clinic](https://www.mayoclinic.org/diseases-conditions/multiple-sclerosis/symptoms-causes/syc-20350269#:~:text=Multiple%20sclerosis%20is%20a%20disorder,insulation%20on%20an%20electrical%20wire.))",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0756481"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12514#multiple-sclerosis-1"),
@@ -261,13 +261,13 @@ Disease.multiple_sclerosis = Disease(
     synonyms=["MS", "generalized multiple sclerosis"],
 )
 Disease.parkinsons_disease = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/parkinsonsDisease",
+    id="https://openminds.om-i.org/instances/disease/parkinsonsDisease",
     definition="Parkinson's is a progressive central nervous system disorder that affects the motor system.",
     name="Parkinson's disease",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_14330"),
 )
 Disease.stroke = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/stroke",
+    id="https://openminds.om-i.org/instances/disease/stroke",
     definition="A sudden loss of neurological function secondary to hemorrhage or ischemia in the brain parenchyma due to a vascular event.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0738754"),
     name="stroke",
@@ -275,13 +275,13 @@ Disease.stroke = Disease(
     synonyms=["cerebral infaction", "cerebrovascular accident", "cerebrovascular disease", "CVA", "stroke disorder"],
 )
 Disease.unresponsive_wakefulness_syndrome = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/unresponsiveWakefulnessSyndrome",
+    id="https://openminds.om-i.org/instances/disease/unresponsiveWakefulnessSyndrome",
     definition="The 'unresponsive wakefulness syndrome' (UWS) is a disorder of consciousness, formerly known as vegetative state, with only reflexive behavior and no sign of conscious awareness [[Laureys et al. 2010](https://doi.org/10.1186/1741-7015-8-68)].",
     name="unresponsive wakefulness syndrome",
     synonyms=["UWS", "vegetative state", "VS"],
 )
 Disease.williams_beuren_syndrome = Disease(
-    id="https://openminds.ebrains.eu/instances/disease/williamsBeurenSyndrome",
+    id="https://openminds.om-i.org/instances/disease/williamsBeurenSyndrome",
     name="Williams-Beuren syndrome",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_1928"),
 )

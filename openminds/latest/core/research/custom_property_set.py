@@ -14,8 +14,8 @@ class CustomPropertySet(EmbeddedMetadata):
     Structured information about properties of an entity that are not represented in an openMINDS schema.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/CustomPropertySet"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/CustomPropertySet"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

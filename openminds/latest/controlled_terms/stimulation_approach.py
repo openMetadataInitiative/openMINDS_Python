@@ -15,8 +15,8 @@ class StimulationApproach(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/StimulationApproach"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/StimulationApproach"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class StimulationApproach(LinkedMetadata):
 
 
 StimulationApproach.auditory_stimulation = StimulationApproach(
-    id="https://openminds.ebrains.eu/instances/stimulationApproach/auditoryStimulation",
+    id="https://openminds.om-i.org/instances/stimulationApproach/auditoryStimulation",
     definition="A stimulation of the auditory (hearing) system.",
     description="The sensory modality that pertains to the sense of hearing. It usually arises from an audible stimulation of the auditory (hearing) system, such as from a sound.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0101001"),
@@ -129,7 +129,7 @@ StimulationApproach.auditory_stimulation = StimulationApproach(
     synonyms=["auditory modality", "auditory stimulus"],
 )
 StimulationApproach.gustatory_stimulation = StimulationApproach(
-    id="https://openminds.ebrains.eu/instances/stimulationApproach/gustatoryStimulation",
+    id="https://openminds.om-i.org/instances/stimulationApproach/gustatoryStimulation",
     definition="A stimulation of the gustatory (taste and flavor perception) system.",
     description="The sensory modality that pertains to the sense of taste or flavor. It usually but not always arises through stimulation of the gustatory system (e.g., tastebuds, nasal receptors).",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0104834"),
@@ -138,7 +138,7 @@ StimulationApproach.gustatory_stimulation = StimulationApproach(
     synonyms=["gustatory modality", "gustatory stimulus"],
 )
 StimulationApproach.interoceptive_stimulation = StimulationApproach(
-    id="https://openminds.ebrains.eu/instances/stimulationApproach/interoceptiveStimulation",
+    id="https://openminds.om-i.org/instances/stimulationApproach/interoceptiveStimulation",
     definition="A stimulation that arises from inside an organism.",
     description="The sensory modality that pertains to the sense of interoception, or internal sensations.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0105596"),
@@ -147,7 +147,7 @@ StimulationApproach.interoceptive_stimulation = StimulationApproach(
     synonyms=["interoceptive modality", "interoceptive stimulus"],
 )
 StimulationApproach.olfactory_stimulation = StimulationApproach(
-    id="https://openminds.ebrains.eu/instances/stimulationApproach/olfactoryStimulation",
+    id="https://openminds.om-i.org/instances/stimulationApproach/olfactoryStimulation",
     definition="A stimulation of the olfactory (smelling) system.",
     description="The sensory modality that pertains to the sense of smelling. It usually but not always arises from the stimulation of the olfactory system by chemicals.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0107962"),
@@ -156,7 +156,7 @@ StimulationApproach.olfactory_stimulation = StimulationApproach(
     synonyms=["olfactory modality", "olfactory stimulus"],
 )
 StimulationApproach.tactile_stimulation = StimulationApproach(
-    id="https://openminds.ebrains.eu/instances/stimulationApproach/tactileStimulation",
+    id="https://openminds.om-i.org/instances/stimulationApproach/tactileStimulation",
     definition="A stimulation of the tactile (touch) system.",
     description="The sensory modality that pertains to the sense of touch or contact via the skin. It usually but not always arises from a tactile stimulation via contact of the skin to other external objects.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0111485"),
@@ -165,7 +165,7 @@ StimulationApproach.tactile_stimulation = StimulationApproach(
     synonyms=["tactile modality", "tactile stimulus"],
 )
 StimulationApproach.visual_stimulation = StimulationApproach(
-    id="https://openminds.ebrains.eu/instances/stimulationApproach/visualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationApproach/visualStimulation",
     definition="A stimulation of the visual (sight) system.",
     description="The sensory modality that pertains to the sense of sight. It usually but not always arises from the stimulation of the visual system with a light source of sufficient brightness to be visible.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0112525"),

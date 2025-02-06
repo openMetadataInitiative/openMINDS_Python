@@ -77,7 +77,7 @@ class FileUsageRole(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,40 @@ class FileUsageRole(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+FileUsageRole.data_descriptor = FileUsageRole(
+    id="https://openminds.ebrains.eu/instances/fileUsageRole/dataDescriptor",
+    definition="A 'data descriptor' describes the provenance, the structure, the applied quality assessment, and possible (re)usage of the data. It should not present hypotheses tests, new interpretations, new methods or in-depth analyses.",
+    name="data descriptor",
+)
+FileUsageRole.logo = FileUsageRole(
+    id="https://openminds.ebrains.eu/instances/fileUsageRole/logo",
+    definition="A logo is a graphic used to aid and promote public identification and recognition.used to aid and promote public identification and recognition. ",
+    name="logo",
+)
+FileUsageRole.preview = FileUsageRole(
+    id="https://openminds.ebrains.eu/instances/fileUsageRole/preview",
+    definition="A preview is a representative image or short movie used to peak interest for a product.",
+    name="preview",
+)
+FileUsageRole.screenshot = FileUsageRole(
+    id="https://openminds.ebrains.eu/instances/fileUsageRole/screenshot",
+    definition="A screenshot is an image of the content displayed on the screen of a computer or mobile device.",
+    name="screenshot",
+)

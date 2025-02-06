@@ -77,7 +77,7 @@ class TissueSampleType(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,72 @@ class TissueSampleType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+TissueSampleType.biopsy_sample = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/biopsySample",
+    definition="Typically very small sample of tissue that was excised from a living or deceased multicellular organism body.",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0782394"),
+    name="biopsy sample",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/OBI_0002650"),
+)
+TissueSampleType.fluid_specimen = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/fluidSpecimen",
+    definition="A fluid sample either taken directly from a living or deceased multicellular organism body (i.e. body fluids) or produced in a laboratory.",
+    name="fluid specimen",
+)
+TissueSampleType.hemisphere = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/hemisphere",
+    definition="One of the symmetric halves excised from a bilateral organ tissue sample (e.g., a brain) from a living or deceased multicellular organism body.",
+    name="hemisphere",
+)
+TissueSampleType.heterogeneous_cell_population = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/heterogeneousCellPopulation",
+    definition="A sample of multiple cells/a population of cells that are of two or more different cell types.",
+    name="heterogeneous cell population",
+)
+TissueSampleType.homogeneous_cell_population = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/homogeneousCellPopulation",
+    definition="A sample of multiple cells/a population of cells that are of the same cell type.",
+    name="homogeneous cell population",
+)
+TissueSampleType.nerve = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/nerve",
+    definition="A nerve sample (i.e. a whole nerve or a part of a nerve) from a living or deceased multicellular organism body.",
+    name="nerve",
+)
+TissueSampleType.single_cell = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/singleCell",
+    definition="A single cell sample from a living or deceased multicellular organism body.",
+    name="single cell",
+)
+TissueSampleType.tissue_block = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/tissueBlock",
+    definition="A cube-like sample of tissue that was excised from a larger tissue sample (e.g., a whole organ) from a living or deceased multicellular organism body.",
+    name="tissue block",
+)
+TissueSampleType.tissue_slice = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/tissueSlice",
+    definition="A thin and often flat sample of tissue that was excised from a larger tissue sample (e.g., a tissue block or a whole organ) from a living or deceased multicellular organism body.",
+    name="tissue slice",
+)
+TissueSampleType.whole_organ = TissueSampleType(
+    id="https://openminds.ebrains.eu/instances/tissueSampleType/wholeOrgan",
+    definition="A whole organ sample from a living or deceased multicellular organism body.",
+    name="whole organ",
+)

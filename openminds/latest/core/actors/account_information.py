@@ -14,8 +14,8 @@ class AccountInformation(LinkedMetadata):
     Structured information about a user account for a web service.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/AccountInformation"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/AccountInformation"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

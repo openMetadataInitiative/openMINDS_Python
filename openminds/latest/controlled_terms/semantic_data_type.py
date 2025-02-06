@@ -15,8 +15,8 @@ class SemanticDataType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/SemanticDataType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/SemanticDataType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,18 +120,18 @@ class SemanticDataType(LinkedMetadata):
 
 
 SemanticDataType.derived_data = SemanticDataType(
-    id="https://openminds.ebrains.eu/instances/semanticDataType/derivedData",
+    id="https://openminds.om-i.org/instances/semanticDataType/derivedData",
     name="derived data",
 )
 SemanticDataType.experimental_data = SemanticDataType(
-    id="https://openminds.ebrains.eu/instances/semanticDataType/experimentalData",
+    id="https://openminds.om-i.org/instances/semanticDataType/experimentalData",
     name="experimental data",
 )
 SemanticDataType.raw_data = SemanticDataType(
-    id="https://openminds.ebrains.eu/instances/semanticDataType/rawData",
+    id="https://openminds.om-i.org/instances/semanticDataType/rawData",
     name="raw data",
 )
 SemanticDataType.simulated_data = SemanticDataType(
-    id="https://openminds.ebrains.eu/instances/semanticDataType/simulatedData",
+    id="https://openminds.om-i.org/instances/semanticDataType/simulatedData",
     name="simulated data",
 )

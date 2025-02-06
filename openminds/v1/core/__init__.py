@@ -1,11 +1,31 @@
-from .actors import Contribution, Organization, Person
-from .data import ContentType, Copyright, FileBundle, FileInstance, FileRepository, Hash, License
+from .actors import Affiliation, ContactInformation, Contribution, Organization, Person
+from .data import (
+    ContentType,
+    ContentTypePattern,
+    Copyright,
+    File,
+    FileBundle,
+    FileInstance,
+    FilePathPattern,
+    FileRepository,
+    FileRepositoryStructure,
+    Hash,
+    License,
+    ServiceLink,
+)
 from .miscellaneous import (
+    DOI,
     DigitalIdentifier,
     DigitalIdentifierSchema,
     Funding,
+    GRIDID,
+    ISBN,
+    ORCID,
     QuantitativeValue,
     QuantitativeValueRange,
+    RORID,
+    SWHID,
+    URL,
 )
 from .products import (
     Dataset,
@@ -19,9 +39,13 @@ from .products import (
     SoftwareVersion,
 )
 from .research import (
+    BehavioralTask,
+    NumericalParameter,
+    ParameterSet,
     ParameterSetting,
     Protocol,
     ProtocolExecution,
+    StringParameter,
     Subject,
     SubjectGroup,
     SubjectGroupState,

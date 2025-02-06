@@ -14,8 +14,8 @@ class Contribution(EmbeddedMetadata):
     Structured information on the contribution made to a research product.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/Contribution"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Contribution"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

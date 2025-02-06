@@ -15,8 +15,8 @@ class File(LinkedMetadata):
     Structured information on a file instance that is accessible via a URL.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/File"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/File"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

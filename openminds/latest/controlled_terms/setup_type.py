@@ -15,8 +15,8 @@ class SetupType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/SetupType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/SetupType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,17 +120,17 @@ class SetupType(LinkedMetadata):
 
 
 SetupType.acquisition_system = SetupType(
-    id="https://openminds.ebrains.eu/instances/setupType/acquisitionSystem",
+    id="https://openminds.om-i.org/instances/setupType/acquisitionSystem",
     definition="An 'acquisition system' is a setup type with the purpose of collecting data.",
     name="acquisition system",
 )
 SetupType.computing_system = SetupType(
-    id="https://openminds.ebrains.eu/instances/setupType/computingSystem",
+    id="https://openminds.om-i.org/instances/setupType/computingSystem",
     definition="A 'computing system' is a setup type with the purpose of performing computations.",
     name="computing system",
 )
 SetupType.stimulation_system = SetupType(
-    id="https://openminds.ebrains.eu/instances/setupType/stimulationSystem",
+    id="https://openminds.om-i.org/instances/setupType/stimulationSystem",
     definition="A 'stimulation system' is a setup type with the purpose of stimulating a specimen.",
     name="stimulation system",
 )

@@ -15,8 +15,8 @@ class SubcellularEntity(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/SubcellularEntity"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,12 +120,12 @@ class SubcellularEntity(LinkedMetadata):
 
 
 SubcellularEntity.asymmetric_synapse = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/asymmetricSynapse",
+    id="https://openminds.om-i.org/instances/subcellularEntity/asymmetricSynapse",
     definition="An 'asymmetric synapse' is characterized by rounded vesicles in the presynaptic cell and a prominent postsynaptic density. Asymmetric synapses are typically excitatory.",
     name="asymmetric synapse",
 )
 SubcellularEntity.axon = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/axon",
+    id="https://openminds.om-i.org/instances/subcellularEntity/axon",
     definition="An 'axon' is the long process of a neuron that conducts nerve impulses, usually away from the cell body to the terminals which are the site of storage and release of neurotransmitter (Gene Ontology).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101043"),
     name="axon",
@@ -133,7 +133,7 @@ SubcellularEntity.axon = SubcellularEntity(
     synonyms=["fiber"],
 )
 SubcellularEntity.axon_terminal = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/axonTerminal",
+    id="https://openminds.om-i.org/instances/subcellularEntity/axonTerminal",
     definition="The distal terminations of axons which are specialized for the release of neurotransmitters.",
     description="Also included are varicosities along the course of axons which have similar specializations and also release transmitters. Presynaptic terminals in both the central and peripheral nervous systems are included (MSH).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101049"),
@@ -143,7 +143,7 @@ SubcellularEntity.axon_terminal = SubcellularEntity(
     synonyms=["axon terminus"],
 )
 SubcellularEntity.dendrite = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/dendrite",
+    id="https://openminds.om-i.org/instances/subcellularEntity/dendrite",
     definition="A 'dendrite' is a branching protoplasmic process of a neuron that receives and integrates signals coming from axons of other neurons, and conveys the resulting signal to the body of the cell (Gene Ontology).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0103021"),
     name="dendrite",
@@ -151,21 +151,21 @@ SubcellularEntity.dendrite = SubcellularEntity(
     synonyms=["dendritic branch"],
 )
 SubcellularEntity.dendritic_spine = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/dendriticSpine",
+    id="https://openminds.om-i.org/instances/subcellularEntity/dendriticSpine",
     definition="A 'dendritic spine' is a protrusion from a dendrite. Spines are specialised subcellular compartments involved in the synaptic transmission.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0103030"),
     name="dendritic spine",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1799103720"),
 )
 SubcellularEntity.mitochondrion = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/mitochondrion",
+    id="https://openminds.om-i.org/instances/subcellularEntity/mitochondrion",
     definition="A 'mitochondrion' is a semiautonomous, self replicating organelle that occurs in varying numbers, shapes, and sizes in the cytoplasm of virtually all eukaryotic cells. It is notably the site of tissue respiration (Gene Ontology).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107028"),
     name="mitochondrion",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1860313010"),
 )
 SubcellularEntity.nerve_fiber = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/nerveFiber",
+    id="https://openminds.om-i.org/instances/subcellularEntity/nerveFiber",
     definition="A threadlike extension of a nerve cell within the nervous system which consists of an axon and, if myelinated, a myelin sheath.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0485634"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006134#nerve-fiber"),
@@ -174,13 +174,13 @@ SubcellularEntity.nerve_fiber = SubcellularEntity(
     synonyms=["neurofibra", "neurofibrum"],
 )
 SubcellularEntity.neurite = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/neurite",
+    id="https://openminds.om-i.org/instances/subcellularEntity/neurite",
     definition="A 'neurite' is a small neuronal process on developing neurons that ultimately grow out into axons or dendrites under the control of growth stimulating or inhibiting factors from their direct extracellular environment.",
     name="neurite",
     synonyms=["neurite outgrowth", "neuronal process"],
 )
 SubcellularEntity.neurofilament = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/neurofilament",
+    id="https://openminds.om-i.org/instances/subcellularEntity/neurofilament",
     definition="A 'neurofilament' is a type of intermediate filament found in the core of neuronal axons. Neurofilaments are responsible for the radial growth of an axon and determine axonal diameter.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107475"),
     name="neurofilament",
@@ -188,7 +188,7 @@ SubcellularEntity.neurofilament = SubcellularEntity(
     synonyms=["type IV intermediate filament"],
 )
 SubcellularEntity.nucleus = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/nucleus",
+    id="https://openminds.om-i.org/instances/subcellularEntity/nucleus",
     definition="A 'nucleus' is a membrane-bounded organelle of eukaryotic cells that contains the chromosomes. It is the primary site of DNA replication and RNA synthesis in the cell (Gene Ontology)",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107735"),
     name="nucleus",
@@ -196,12 +196,12 @@ SubcellularEntity.nucleus = SubcellularEntity(
     synonyms=["cell nucleus"],
 )
 SubcellularEntity.symmetric_synapse = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/symmetricSynapse",
+    id="https://openminds.om-i.org/instances/subcellularEntity/symmetricSynapse",
     definition="A 'symmetric synapse' has flattened or elongated vesicles, and does not contain a prominent postsynaptic density. Symmetric synapses are typically inhibitory.",
     name="symmetric synapse",
 )
 SubcellularEntity.synaptic_bouton = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/synapticBouton",
+    id="https://openminds.om-i.org/instances/subcellularEntity/synapticBouton",
     definition="A 'synaptic bouton' is a terminal pre-synaptic ending of an axon or axon collateral.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111400"),
     name="synaptic bouton",
@@ -209,7 +209,7 @@ SubcellularEntity.synaptic_bouton = SubcellularEntity(
     synonyms=["pre-synaptic bouton"],
 )
 SubcellularEntity.synaptic_protein = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/synapticProtein",
+    id="https://openminds.om-i.org/instances/subcellularEntity/synapticProtein",
     definition="A 'synaptic protein' belongs to a family of neuron-specific phosphoric proteins associated with synaptic vesicles. Synaptic proteins are present on the surface of almost all synaptic particles and bind to the cytoskeleton.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111412"),
     name="synaptic protein",
@@ -217,7 +217,7 @@ SubcellularEntity.synaptic_protein = SubcellularEntity(
     synonyms=["synaptic vesicle associated protein"],
 )
 SubcellularEntity.synaptic_vesicle = SubcellularEntity(
-    id="https://openminds.ebrains.eu/instances/subcellularEntity/synapticVesicle",
+    id="https://openminds.om-i.org/instances/subcellularEntity/synapticVesicle",
     definition="A 'synaptic vesicle' is a secretory organelle (~ 50 nm in diameter) released from the pre-synaptic nerve terminal. It accumulates high concentrations of neurotransmitters and secretes these into the synaptic cleft by fusion with the 'active zone' of the pre-synaptic plasma membrane (modified from Gene Ontology).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111411"),
     name="synaptic vesicle",

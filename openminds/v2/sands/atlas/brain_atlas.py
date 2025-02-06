@@ -1,5 +1,5 @@
 """
-Structured information on a brain atlas (concept level).
+<description not available>
 """
 
 # this file was auto-generated!
@@ -11,7 +11,7 @@ from openminds.properties import Property
 
 class BrainAtlas(LinkedMetadata):
     """
-    Structured information on a brain atlas (concept level).
+    <description not available>
     """
 
     type_ = "https://openminds.ebrains.eu/sands/BrainAtlas"

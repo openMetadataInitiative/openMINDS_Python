@@ -16,8 +16,8 @@ class ValidationTestVersion(LinkedMetadata):
     Structured information about a specific implementation of a validation test.
     """
 
-    type_ = "https://openminds.ebrains.eu/computation/ValidationTestVersion"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/ValidationTestVersion"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

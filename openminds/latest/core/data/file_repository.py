@@ -15,8 +15,8 @@ class FileRepository(LinkedMetadata):
     Structured information on a file repository.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/FileRepository"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/FileRepository"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

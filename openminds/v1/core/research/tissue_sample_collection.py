@@ -20,6 +20,15 @@ class TissueSampleCollection(LinkedMetadata):
 
     properties = [
         Property(
+            "additional_remarks",
+            str,
+            "additionalRemarks",
+            formatting="text/markdown",
+            multiline=True,
+            description="Mention of what deserves additional attention or notice.",
+            instructions="Enter additional remarks about the specimen set.",
+        ),
+        Property(
             "biological_sexes",
             "openminds.v1.controlled_terms.BiologicalSex",
             "biologicalSex",
@@ -29,16 +38,6 @@ class TissueSampleCollection(LinkedMetadata):
             required=True,
             description="Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce.",
             instructions="Add the biological sex of all specimen in this set.",
-        ),
-        Property(
-            "genotypes",
-            "openminds.v1.controlled_terms.Genotype",
-            "genotype",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="Genetic constitution of an individual or group.",
-            instructions="Add the genotype of all specimen in this set.",
         ),
         Property(
             "internal_identifier",
@@ -58,6 +57,14 @@ class TissueSampleCollection(LinkedMetadata):
             max_items=2,
             description="Differentiation between a pair of lateral homologous parts of the body.",
             instructions="Add one or both hemisphere sides from which the tissue samples in this collection originate from.",
+        ),
+        Property(
+            "lookup_label",
+            str,
+            "lookupLabel",
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter a lookup label for this specimen set that may help you to more easily find it again.",
         ),
         Property(
             "origins",
@@ -135,10 +142,11 @@ class TissueSampleCollection(LinkedMetadata):
     def __init__(
         self,
         id=None,
+        additional_remarks=None,
         biological_sexes=None,
-        genotypes=None,
         internal_identifier=None,
         lateralities=None,
+        lookup_label=None,
         origins=None,
         phenotypes=None,
         quantity=None,
@@ -149,10 +157,11 @@ class TissueSampleCollection(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
+            additional_remarks=additional_remarks,
             biological_sexes=biological_sexes,
-            genotypes=genotypes,
             internal_identifier=internal_identifier,
             lateralities=lateralities,
+            lookup_label=lookup_label,
             origins=origins,
             phenotypes=phenotypes,
             quantity=quantity,

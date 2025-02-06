@@ -14,8 +14,8 @@ class HardwareSystem(LinkedMetadata):
     Structured information about computing hardware.
     """
 
-    type_ = "https://openminds.ebrains.eu/computation/HardwareSystem"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/HardwareSystem"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

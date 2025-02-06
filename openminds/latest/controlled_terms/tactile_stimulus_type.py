@@ -15,8 +15,8 @@ class TactileStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/TactileStimulusType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/TactileStimulusType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,14 +120,14 @@ class TactileStimulusType(LinkedMetadata):
 
 
 TactileStimulusType.textured_surface = TactileStimulusType(
-    id="https://openminds.ebrains.eu/instances/tactileStimulusType/texturedSurface",
+    id="https://openminds.om-i.org/instances/tactileStimulusType/texturedSurface",
     name="textured surface",
 )
 TactileStimulusType.vibrating_object = TactileStimulusType(
-    id="https://openminds.ebrains.eu/instances/tactileStimulusType/vibratingObject",
+    id="https://openminds.om-i.org/instances/tactileStimulusType/vibratingObject",
     name="vibrating object",
 )
 TactileStimulusType.vibrating_surface = TactileStimulusType(
-    id="https://openminds.ebrains.eu/instances/tactileStimulusType/vibratingSurface",
+    id="https://openminds.om-i.org/instances/tactileStimulusType/vibratingSurface",
     name="vibrating surface",
 )

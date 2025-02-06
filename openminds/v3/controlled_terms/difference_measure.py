@@ -77,7 +77,7 @@ class DifferenceMeasure(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,53 @@ class DifferenceMeasure(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+DifferenceMeasure.chi_squared_statistic = DifferenceMeasure(
+    id="https://openminds.ebrains.eu/instances/differenceMeasure/chiSquaredStatistic",
+    definition="Test statistic resulting from a chi-squared test.",
+    name="chi-squared statistic",
+    synonyms=["χ2-statistic"],
+)
+DifferenceMeasure.kolmogorov_smirnov_statistic = DifferenceMeasure(
+    id="https://openminds.ebrains.eu/instances/differenceMeasure/kolmogorovSmirnovStatistic",
+    definition="Quantification of a distance between the empirical distribution function of the sample and the cumulative distribution function of the reference distribution, or between the empirical distribution functions of two samples.",
+    name="Kolmogorov-Smirnov statistic",
+    synonyms=["KS-statistic"],
+)
+DifferenceMeasure.kullback_leibler_divergence = DifferenceMeasure(
+    id="https://openminds.ebrains.eu/instances/differenceMeasure/kullbackLeiblerDivergence",
+    definition="A measure of how one probability distribution is different from a second, reference probability distribution.",
+    name="Kullback-Leibler divergence",
+    synonyms=["KL divergence"],
+)
+DifferenceMeasure.mean_squared_error = DifferenceMeasure(
+    id="https://openminds.ebrains.eu/instances/differenceMeasure/meanSquaredError",
+    definition="The mean squared difference between two series of values.",
+    name="mean squared error",
+)
+DifferenceMeasure.t_statistic = DifferenceMeasure(
+    id="https://openminds.ebrains.eu/instances/differenceMeasure/t_statistic",
+    definition="The ratio of the departure of the estimated value of a parameter from its hypothesized value to its standard error.",
+    name="t-statistic",
+)
+DifferenceMeasure.z_score = DifferenceMeasure(
+    id="https://openminds.ebrains.eu/instances/differenceMeasure/z_score",
+    definition="The number of standard deviations by which an observed value is above or below the mean value.",
+    name="z-score",
+)

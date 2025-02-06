@@ -15,8 +15,8 @@ class OpticalStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/OpticalStimulusType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class OpticalStimulusType(LinkedMetadata):
 
 
 OpticalStimulusType.infrared_neural_stimulus = OpticalStimulusType(
-    id="https://openminds.ebrains.eu/instances/opticalStimulusType/infraredNeuralStimulus",
+    id="https://openminds.om-i.org/instances/opticalStimulusType/infraredNeuralStimulus",
     definition="An 'infrared neural stimulus' is a pulsed IR light (between the wavelength of 1400–2100 nm) used to generate a highly controlled temperature transients in neurons (dT/dz or dT/dt), leading them to fire action potentials. [adapted from [Horváth et al., (2020)](https://doi.org/10.1038/s41378-020-0153-3)]",
     name="infrared neural stimulus",
 )

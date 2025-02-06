@@ -14,8 +14,8 @@ class PipetteUsage(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/ephys/PipetteUsage"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/PipetteUsage"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

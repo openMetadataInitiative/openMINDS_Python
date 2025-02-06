@@ -14,8 +14,8 @@ class Configuration(LinkedMetadata):
     Structured information about the properties or parameters of an entity or process.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/Configuration"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Configuration"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

@@ -45,7 +45,7 @@ class Funding(LinkedMetadata):
         ),
         Property(
             "funder",
-            "openminds.v1.core.Organization",
+            ["openminds.v1.core.Organization", "openminds.v1.core.Person"],
             "funder",
             required=True,
             description="Legal person that provides money for a particular purpose.",

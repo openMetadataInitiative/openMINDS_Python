@@ -1,5 +1,5 @@
 """
-Structured information on a coordinate point.
+<description not available>
 """
 
 # this file was auto-generated!
@@ -11,7 +11,7 @@ from openminds.properties import Property
 
 class CoordinatePoint(EmbeddedMetadata):
     """
-    Structured information on a coordinate point.
+    <description not available>
     """
 
     type_ = "https://openminds.ebrains.eu/sands/CoordinatePoint"

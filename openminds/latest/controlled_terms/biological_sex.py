@@ -15,8 +15,8 @@ class BiologicalSex(LinkedMetadata):
     Structured information on the biological sex of a subject.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/BiologicalSex"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class BiologicalSex(LinkedMetadata):
 
 
 BiologicalSex.female = BiologicalSex(
-    id="https://openminds.ebrains.eu/instances/biologicalSex/female",
+    id="https://openminds.om-i.org/instances/biologicalSex/female",
     definition="Biological sex that produces egg cells (ova).",
     description="A female organism typically has the capacity to produce relatively large, usually immobile gametes (reproductive cells), called egg cells (or ova). In the process of fertilization, an egg cell (ovum) fuses with a smaller, usually mobile male gametes, called sperm cells (or spermatozoa).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104150"),
@@ -128,7 +128,7 @@ BiologicalSex.female = BiologicalSex(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/PATO_0000383"),
 )
 BiologicalSex.hermaphrodite = BiologicalSex(
-    id="https://openminds.ebrains.eu/instances/biologicalSex/hermaphrodite",
+    id="https://openminds.om-i.org/instances/biologicalSex/hermaphrodite",
     definition="Biological sex with both male and female reproductive organs.",
     description="A hermaphrodite is an animal or plant that can produce gametes (reproductive cells) of both, male and female sexes. In sexually dimorphic organisms, hermaphroditism may occur because of variations in the genetic code. The term *hermaphrodite* is considered to be misleading, stigmatizing, and scientifically specious in reference to humans. For this reason, in humans the term *intersex* is typically used.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104963"),
@@ -137,7 +137,7 @@ BiologicalSex.hermaphrodite = BiologicalSex(
     synonyms=["intersex"],
 )
 BiologicalSex.male = BiologicalSex(
-    id="https://openminds.ebrains.eu/instances/biologicalSex/male",
+    id="https://openminds.om-i.org/instances/biologicalSex/male",
     definition="Biological sex that produces sperm cells (spermatozoa).",
     description="A male organism typically has the capacity to produce relatively small, usually mobile gametes (reproductive cells), called sperm cells (or spermatozoa). In the process of fertilization, these sperm cells fuse with a larger, usually immobile female gamete, called egg cell (or ovum).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106489"),
@@ -145,7 +145,7 @@ BiologicalSex.male = BiologicalSex(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/PATO_0000384"),
 )
 BiologicalSex.not_detectable = BiologicalSex(
-    id="https://openminds.ebrains.eu/instances/biologicalSex/notDetectable",
+    id="https://openminds.om-i.org/instances/biologicalSex/notDetectable",
     definition="Can be stated if the biological sex in visually not detectable at a specific point in time.",
     name="not detectable",
 )

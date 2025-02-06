@@ -15,8 +15,8 @@ class AnatomicalPlane(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/AnatomicalPlane"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,19 +120,19 @@ class AnatomicalPlane(LinkedMetadata):
 
 
 AnatomicalPlane.axial_plane = AnatomicalPlane(
-    id="https://openminds.ebrains.eu/instances/anatomicalPlane/axialPlane",
+    id="https://openminds.om-i.org/instances/anatomicalPlane/axialPlane",
     definition="The 'axial plane' is always perpendicular to the longitudinal and the frontal plane of an organism, extremity or organ, dividing it into a dorsal, superior, above or top part, and a ventral, inferior, below or bottom part.",
     name="axial plane",
     synonyms=["transverse plane", "horizontal plane"],
 )
 AnatomicalPlane.frontal_plane = AnatomicalPlane(
-    id="https://openminds.ebrains.eu/instances/anatomicalPlane/frontalPlane",
+    id="https://openminds.om-i.org/instances/anatomicalPlane/frontalPlane",
     definition="The 'frontal plane' is always perpendicular to the axial and longitudinal plane of an organism, extremity or organ, dividing it into an anterior, rostral or front part, and a posterior, caudal or back part.",
     name="frontal plane",
     synonyms=["coronal plane"],
 )
 AnatomicalPlane.longitudinal_plane = AnatomicalPlane(
-    id="https://openminds.ebrains.eu/instances/anatomicalPlane/longitudinalPlane",
+    id="https://openminds.om-i.org/instances/anatomicalPlane/longitudinalPlane",
     definition="The 'longitudinal plane' is always perpendicular to the axial and frontal plane of an organism, extremity or organ, running parallel to the 'median plane' and dividing it into a left and right part.",
     name="longitudinal plane",
     synonyms=["sagittal plane", "parasagittal plane"],

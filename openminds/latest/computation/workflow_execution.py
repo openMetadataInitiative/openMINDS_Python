@@ -14,8 +14,8 @@ class WorkflowExecution(LinkedMetadata):
     Structured information about an execution of a computational workflow.
     """
 
-    type_ = "https://openminds.ebrains.eu/computation/WorkflowExecution"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/WorkflowExecution"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -48,6 +48,7 @@ class WorkflowExecution(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
+            required=True,
             description="no description available",
             instructions="Add all stages that were performed in this workflow execution.",
         ),

@@ -15,8 +15,8 @@ class OperatingDevice(LinkedMetadata):
     Structured information on the operating device.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/OperatingDevice"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,38 +120,38 @@ class OperatingDevice(LinkedMetadata):
 
 
 OperatingDevice.desktop = OperatingDevice(
-    id="https://openminds.ebrains.eu/instances/operatingDevice/desktop",
+    id="https://openminds.om-i.org/instances/operatingDevice/desktop",
     name="desktop",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q56155"),
 )
 OperatingDevice.embedded_system = OperatingDevice(
-    id="https://openminds.ebrains.eu/instances/operatingDevice/embeddedSystem",
+    id="https://openminds.om-i.org/instances/operatingDevice/embeddedSystem",
     name="embedded system",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q193040"),
 )
 OperatingDevice.high_performance_computer = OperatingDevice(
-    id="https://openminds.ebrains.eu/instances/operatingDevice/highPerformanceComputer",
+    id="https://openminds.om-i.org/instances/operatingDevice/highPerformanceComputer",
     name="high-performance computer",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q121117"),
 )
 OperatingDevice.mobile = OperatingDevice(
-    id="https://openminds.ebrains.eu/instances/operatingDevice/mobile",
+    id="https://openminds.om-i.org/instances/operatingDevice/mobile",
     name="mobile",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q5082128"),
 )
 OperatingDevice.neuromorphic_computer = OperatingDevice(
-    id="https://openminds.ebrains.eu/instances/operatingDevice/neuromorphicComputer",
+    id="https://openminds.om-i.org/instances/operatingDevice/neuromorphicComputer",
     definition="Very-large-scale integration (VLSI) systems containing electronic circuits used to mimic neuro-biological architectures present in the nervous system.",
     name="neuromorphic computer",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q56270917"),
 )
 OperatingDevice.server = OperatingDevice(
-    id="https://openminds.ebrains.eu/instances/operatingDevice/server",
+    id="https://openminds.om-i.org/instances/operatingDevice/server",
     name="server",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q64729893"),
 )
 OperatingDevice.web = OperatingDevice(
-    id="https://openminds.ebrains.eu/instances/operatingDevice/web",
+    id="https://openminds.om-i.org/instances/operatingDevice/web",
     name="web",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q6368"),
 )

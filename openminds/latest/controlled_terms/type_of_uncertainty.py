@@ -15,8 +15,8 @@ class TypeOfUncertainty(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/TypeOfUncertainty"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,10 +120,10 @@ class TypeOfUncertainty(LinkedMetadata):
 
 
 TypeOfUncertainty.standard_deviation = TypeOfUncertainty(
-    id="https://openminds.ebrains.eu/instances/typeOfUncertainty/standardDeviation",
+    id="https://openminds.om-i.org/instances/typeOfUncertainty/standardDeviation",
     name="standard deviation",
 )
 TypeOfUncertainty.standard_error = TypeOfUncertainty(
-    id="https://openminds.ebrains.eu/instances/typeOfUncertainty/standardError",
+    id="https://openminds.om-i.org/instances/typeOfUncertainty/standardError",
     name="standard error",
 )

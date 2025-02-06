@@ -1,0 +1,47 @@
+"""
+Structured information on the contribution made to a research product.
+"""
+
+# this file was auto-generated!
+
+
+from openminds.base import EmbeddedMetadata
+from openminds.properties import Property
+
+
+class Contribution(EmbeddedMetadata):
+    """
+    Structured information on the contribution made to a research product.
+    """
+
+    type_ = "https://openminds.om-i.org/types/Contribution"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
+    schema_version = "v4.0"
+
+    properties = [
+        Property(
+            "contributor",
+            ["openminds.v4.core.Consortium", "openminds.v4.core.Organization", "openminds.v4.core.Person"],
+            "contributor",
+            required=True,
+            description="Legal person that gave or supplied something as a part or share.",
+            instructions="Add all types of contribution made by the stated 'contributor'.",
+        ),
+        Property(
+            "types",
+            "openminds.v4.controlled_terms.ContributionType",
+            "type",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            required=True,
+            description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",
+            instructions="Add the party that performed the contribution.",
+        ),
+    ]
+
+    def __init__(self, contributor=None, types=None):
+        return super().__init__(
+            contributor=contributor,
+            types=types,
+        )

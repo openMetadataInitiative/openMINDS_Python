@@ -14,8 +14,8 @@ class GRIDID(LinkedMetadata):
     A GRID (Global Research Identifier Database) identifier.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/GRIDID"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/GRIDID"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

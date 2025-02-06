@@ -14,8 +14,8 @@ class HANDLE(LinkedMetadata):
     A persistent identifier for an information resource provided by the Handle System of the Corporation for National Research Initiatives.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/HANDLE"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/HANDLE"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

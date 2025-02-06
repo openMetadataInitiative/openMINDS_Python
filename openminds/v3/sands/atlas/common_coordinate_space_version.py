@@ -112,7 +112,12 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
         ),
         Property(
             "full_documentation",
-            ["openminds.v3.core.DOI", "openminds.v3.core.File", "openminds.v3.core.WebResource"],
+            [
+                "openminds.v3.core.DOI",
+                "openminds.v3.core.File",
+                "openminds.v3.core.ISBN",
+                "openminds.v3.core.WebResource",
+            ],
             "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
@@ -450,3 +455,451 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             version_identifier=version_identifier,
             version_innovation=version_innovation,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+CommonCoordinateSpaceVersion.amb_ccf_v1 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v1",
+    abbreviation="AMB CCF",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/PIR"},
+    full_name="Allen Mouse Brain Common Coordinate Framework",
+    homepage=IRI("https://portal.brain-map.org/"),
+    how_to_cite="Lein E, Hawrylycz M, Ao N, et al.; 'Genome-wide atlas of gene expression in the adult mouse brain.'; Nature; Jan 2007; 445(7124):168–176. [doi: 10.1038/nature05453](https://doi.org/10.1038/nature05453)",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
+    short_name="Allen Mouse Brain CCF",
+    version_identifier="v1",
+    version_innovation="The first version of the 'Allen Mouse Brain Common Coordinate Framework' (CCFv1) is a 3D reconstruction of one brain hemisphere at 200µm resolution.",
+)
+CommonCoordinateSpaceVersion.amb_ccf_v2 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v2",
+    abbreviation="AMB CCF",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/PIR"},
+    full_name="Allen Mouse Brain Common Coordinate Framework",
+    homepage=IRI("https://portal.brain-map.org/"),
+    how_to_cite="Oh S, Harris J, Ng L, et al.; 'A mesoscale connectome of the mouse brain.'; Nature; Apr 2014; 508(7495):207–214. [doi: 10.1038/nature13186](https://doi.org/10.1038/nature13186)",
+    is_new_version_of={"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v1"},
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
+    short_name="Allen Mouse Brain CCF",
+    version_identifier="v2",
+    version_innovation="The second version of the 'Allen Mouse Brain Common Coordinate Framework' (CCFv2) is a 3D reconstruction of a whole brain at 100µm resolution.",
+)
+CommonCoordinateSpaceVersion.amb_ccf_v3 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v3",
+    abbreviation="AMB CCF",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/PIR"},
+    axes_origins=[
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 0.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 0.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 0.0},
+    ],
+    full_name="Allen Mouse Brain Common Coordinate Framework",
+    homepage=IRI("https://portal.brain-map.org/"),
+    how_to_cite="Wang Q, Ding S-L, Li Y, et al.; 'The Allen Mouse Brain Common Coordinate Framework: A 3D Reference Atlas.'; Cell; May 2020; 181(4):936-953.e20. [doi: 10.1016/j.cell.2020.04.007](https://doi.org/10.1016/j.cell.2020.04.007)",
+    is_alternative_version_of=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v3-RAS"}
+    ],
+    is_new_version_of={"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v2"},
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
+    release_date="2015-05-01",
+    short_name="Allen Mouse Brain CCF",
+    version_identifier="v3",
+    version_innovation="The third version of the 'Allen Mouse Brain Common Coordinate Framework' (CCFv3) is a 3D reconstruction of a whole brain at 10µm resolution.",
+)
+CommonCoordinateSpaceVersion.amb_ccf_v3_ras = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v3-RAS",
+    abbreviation="AMB CCF",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RAS"},
+    axes_origins=[
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 0.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 0.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 0.0},
+    ],
+    full_name="Allen Mouse Brain Common Coordinate Framework",
+    homepage=IRI("https://portal.brain-map.org/"),
+    how_to_cite="Wang Q, Ding S-L, Li Y, et al.; 'The Allen Mouse Brain Common Coordinate Framework: A 3D Reference Atlas.'; Cell; May 2020; 181(4):936-953.e20. [doi: 10.1016/j.cell.2020.04.007](https://doi.org/10.1016/j.cell.2020.04.007)",
+    is_alternative_version_of=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v3"}
+    ],
+    is_new_version_of={"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/AMB-CCF_v2"},
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
+    release_date="2015-05-01",
+    short_name="Allen Mouse Brain CCF",
+    version_identifier="v3-RAS",
+    version_innovation="The third version of the 'Allen Mouse Brain Common Coordinate Framework' (CCFv3-RAS) is a 3D reconstruction of a whole brain at 10µm resolution. This alternative CCFv3 version was transformed to RAS axes orientation.",
+)
+CommonCoordinateSpaceVersion.big_brain_2015 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/BigBrain_2015",
+    abbreviation="BigBrain",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RAS"},
+    axes_origins=[
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 3338.5795590551184},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 3500.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 2776.899244094488},
+    ],
+    custodians=[
+        {"@id": "https://openminds.ebrains.eu/instances/person/evansAlanC"},
+        {"@id": "https://openminds.ebrains.eu/instances/person/amuntsKatrin"},
+    ],
+    full_name="BigBrain Whole-Brain Model",
+    homepage=IRI("https://bigbrainproject.org/"),
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
+    release_date="2013-06-21",
+    short_name="BigBrain Model",
+    version_identifier="2015",
+    version_innovation="The 'BigBrain Whole-Brain Model' (2015) is an ultrahigh-resolution three-dimensional (3D) model of a brain from a male human subject, deceased at the age of 65 years, at nearly cellular resolution of 20 micrometers. The model is based on a full 3D reconstruction from digital scans of 7404 histological coronal sections, which were stained for cell bodies.",
+)
+CommonCoordinateSpaceVersion.fs_lr_164k = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsLR_164k",
+    abbreviation="fsLR",
+    full_name="Unbiased FsAverage Left–Right Hybrid Surface Space",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    short_name="fsLR Surface Space",
+    version_identifier="164k",
+    version_innovation="This fsLR Surface Space version has about 163842 (164k) vertices per hemisphere.",
+)
+CommonCoordinateSpaceVersion.fs_lr_32k = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsLR_32k",
+    abbreviation="fsLR",
+    full_name="Unbiased FsAverage Left–Right Hybrid Surface Space",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    short_name="fsLR Surface Space",
+    version_identifier="32k",
+    version_innovation="This fsLR Surface Space version has about 32492 (32k) vertices per hemisphere.",
+)
+CommonCoordinateSpaceVersion.fsaverage_3 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_3",
+    abbreviation="fsaverage",
+    full_name="FsAverage Surface Space",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    short_name="FsAverage Surface Space",
+    version_identifier="3",
+    version_innovation="This FsAverage Surface Space version has about 1k vertices per hemisphere.",
+)
+CommonCoordinateSpaceVersion.fsaverage_4 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_4",
+    abbreviation="fsaverage",
+    full_name="FsAverage Surface Space",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    short_name="FsAverage Surface Space",
+    version_identifier="4",
+    version_innovation="This FsAverage Surface Space version has about 3k vertices per hemisphere.",
+)
+CommonCoordinateSpaceVersion.fsaverage_5 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_5",
+    abbreviation="fsaverage",
+    full_name="FsAverage Surface Space",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    short_name="FsAverage Surface Space",
+    version_identifier="5",
+    version_innovation="This FsAverage Surface Space version has about 10k vertices per hemisphere.",
+)
+CommonCoordinateSpaceVersion.fsaverage_6 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_6",
+    abbreviation="fsaverage",
+    full_name="FsAverage Surface Space",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    short_name="FsAverage Surface Space",
+    version_identifier="6",
+    version_innovation="This FsAverage Surface Space version has about 41k vertices per hemisphere.",
+)
+CommonCoordinateSpaceVersion.fsaverage_7 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/fsaverage_7",
+    abbreviation="fsaverage",
+    full_name="FsAverage Surface Space",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    short_name="FsAverage Surface Space",
+    version_identifier="7",
+    version_innovation="This FsAverage Surface Space version has about 164k vertices per hemisphere.",
+)
+CommonCoordinateSpaceVersion.mebrain_stemplate_v1_0 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MEBRAINStemplate_v1.0",
+    abbreviation="MEBRAINStemplate",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RAS"},
+    axes_origins=[
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 108.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 128.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 70.0},
+    ],
+    full_name="MEBRAINS population-based monkey brain template",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
+    short_name="MEBRAINS brain template",
+    version_identifier="v1.0",
+    version_innovation="The first version of the 'MEBRAINS population-based monkey brain template' (v1.0) is a population average brain of T1- and T2-weighted MRI scans from 10 macaque brains. In addition, 9 CT scans of the same monkeys (one missing) are registered to the T1 modality and co-registered to the population average.",
+)
+CommonCoordinateSpaceVersion.mni__colin27_1998 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-Colin27_1998",
+    abbreviation="MNI-Colin27",
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RAS"},
+    axes_origins=[
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 75.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 111.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 67.0},
+    ],
+    full_name="MNI Colin27 Average Brain Stereotaxic Registration Model",
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
+    is_alternative_version_of=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-Colin27_2008"}
+    ],
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="1998-06-01",
+    short_name="MNI Colin27 Average Brain",
+    version_identifier="1998",
+)
+CommonCoordinateSpaceVersion.mni__colin27_2008 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-Colin27_2008",
+    abbreviation="MNI-Colin27",
+    full_name="MNI Colin27 Average Brain Stereotaxic Registration Model",
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
+    is_alternative_version_of=[
+        {"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNIColin27_1998"}
+    ],
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2006-08-01",
+    short_name="MNI Colin27 Average Brain",
+    version_identifier="2008",
+)
+CommonCoordinateSpaceVersion.mni_icbm152_linear_2001_sym = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_linear-2001-sym",
+    abbreviation="ICBM152",
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    homepage={"@id": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152lin"},
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2009-07-01",
+    short_name="MNI ICBM152",
+    version_identifier="2001 linear symmetric",
+)
+CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009a_asym = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009a-asym",
+    abbreviation="ICBM152",
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    homepage={
+        "@id": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    },
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2009-07-01",
+    short_name="MNI ICBM152",
+    version_identifier="2009a nonlinear asymmetric",
+)
+CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009a_sym = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009a-sym",
+    abbreviation="ICBM152",
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    homepage={
+        "@id": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    },
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2009-07-01",
+    short_name="MNI ICBM152",
+    version_identifier="2009a nonlinear symmetric",
+)
+CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009b_asym = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009b-asym",
+    abbreviation="ICBM152",
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2009-07-01",
+    short_name="MNI ICBM152",
+    version_identifier="2009b nonlinear asymmetric",
+)
+CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009b_sym = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009b-sym",
+    abbreviation="ICBM152",
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2009-07-01",
+    short_name="MNI ICBM152",
+    version_identifier="2009b nonlinear symmetric",
+)
+CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009c_asym = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009c-asym",
+    abbreviation="ICBM152",
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RAS"},
+    axes_origins=[
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 96.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 132.0},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 78.0},
+    ],
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2009-07-01",
+    short_name="MNI ICBM152",
+    version_identifier="2009c nonlinear asymmetric",
+)
+CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009c_sym = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009c-sym",
+    abbreviation="ICBM152",
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2009-07-01",
+    short_name="MNI ICBM152",
+    version_identifier="2009c nonlinear symmetric",
+)
+CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_6_g_sym = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-6G-sym",
+    abbreviation="ICBM152",
+    full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear"),
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2009-07-01",
+    short_name="MNI ICBM152",
+    version_identifier="nonlinear 6th generation symmetric",
+)
+CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__bregma_lia = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-LIA",
+    abbreviation="PW-RBSC-corT",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/paidAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/LIA"},
+    description="This coordinate space of the coronal plates from Paxinos and Watson's 'Rat Brain in Stereotaxic Coordinates' uses Bregma as its origin. The coordinates of the origin in the physical coordinate system of the rat brain could not be determined from the information provided in the atlas publication. Since the mediolateral axis of the coordinate system has positive values in either directions, two different coordinate systems were used - one left oriented and one right oriented. The X, Y and Z axes of this coordinate system are oriented towards the left, inferior, anterior (positive mediolateral values describe the rat's left hemisphere), respectively.",
+    full_documentation={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
+    how_to_cite="Paxinos, G. and Watson, C. (2004) The Rat Brain in Stereotaxic Coordinates. 5th Edition, Academic Press, San Diego.",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2004-11-10",
+    short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
+    version_identifier="v2004 (Bregma, LIA)",
+    version_innovation="This is the second version of the common coordinate space for the coronal plane atlas. From the 4th to the 5th edition of the Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates, the reference data (template) was changed (new adult male Wistar rat with a more complete coronal series) which resulted in a new common coordinate space version.",
+)
+CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__bregma_ria = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-RIA",
+    abbreviation="PW-RBSC-corT",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/paidAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RIA"},
+    description="This coordinate space of the coronal plates from Paxinos and Watson's 'Rat Brain in Stereotaxic Coordinates' uses Bregma as its origin. The coordinates of the origin in the physical coordinate system of the rat brain could not be determined from the information provided in the atlas publication. Since the mediolateral axis of the coordinate system has positive values in either directions, two different coordinate systems were used - one left oriented and one right oriented. The X, Y and Z axes of this coordinate system are oriented towards the right, anterior, inferior (positive mediolateral values describe the rat's right hemisphere), respectively.",
+    full_documentation={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
+    how_to_cite="Paxinos, G. and Watson, C. (2004) The Rat Brain in Stereotaxic Coordinates. 5th Edition, Academic Press, San Diego.",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2004-11-10",
+    short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
+    version_identifier="v2004 (Bregma, RIA)",
+    version_innovation="This is the second version of the common coordinate space for the coronal plane atlas. From the 4th to the 5th edition of the Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates, the reference data (template) was changed (new adult male Wistar rat with a more complete coronal series) which resulted in a new common coordinate space version.",
+)
+CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__interaural_lsa = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-LSA",
+    abbreviation="PW-RBSC-corT",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/paidAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/LSA"},
+    description="This coordinate space of the coronal plates from Paxinos and Watson's 'Rat Brain in Stereotaxic Coordinates' uses the midpoint of the interaural line as its origin. The coordinates of the origin in the physical coordinate system of the rat brain could not be determined from the information provided in the atlas publication. Since the mediolateral axis of the coordinate system has positive values in either directions, two different coordinate systems were used - one left oriented and one right oriented. The X, Y and Z axes of this coordinate system are oriented towards the left, superior, anterior (positive mediolateral values describe the rat's left hemisphere), respectively.",
+    full_documentation={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
+    how_to_cite="Paxinos, G. and Watson, C. (2004) The Rat Brain in Stereotaxic Coordinates. 5th Edition, Academic Press, San Diego.",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2004-11-10",
+    short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
+    version_identifier="v2004 (Interaural, LSA)",
+    version_innovation="This is the second version of the common coordinate space for the coronal plane atlas. From the 4th to the 5th edition of the Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates, the reference data (template) was changed (new adult male Wistar rat with a more complete coronal series) which resulted in a new common coordinate space version.",
+)
+CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__interaural_rsa = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-RSA",
+    abbreviation="PW-RBSC-corT",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/paidAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RSA"},
+    description="This coordinate space of the coronal plates from Paxinos and Watson's 'Rat Brain in Stereotaxic Coordinates' uses the midpoint of the interaural line as its origin. The coordinates of the origin in the physical coordinate system of the rat brain could not be determined from the information provided in the atlas publication. Since the mediolateral axis of the coordinate system has positive values in either directions, two different coordinate systems were used - one left oriented and one right oriented. The X, Y and Z axes of this coordinate system are oriented towards the right, superior, anterior (positive mediolateral values describe the rat's right hemisphere), respectively.",
+    full_documentation={"@id": "https://openminds.ebrains.eu/instances/ISBN/0-12-547612-4"},
+    full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
+    how_to_cite="Paxinos, G. and Watson, C. (2004) The Rat Brain in Stereotaxic Coordinates. 5th Edition, Academic Press, San Diego.",
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="2004-11-10",
+    short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
+    version_identifier="v2004 (Interaural, RSA)",
+    version_innovation="This is the second version of the common coordinate space for the coronal plane atlas. From the 4th to the 5th edition of the Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates, the reference data (template) was changed (new adult male Wistar rat with a more complete coronal series) which resulted in a new common coordinate space version.",
+)
+CommonCoordinateSpaceVersion.swanson_srb_v1992 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/SwansonSRB_v1992",
+    abbreviation="SwansonSRB",
+    accessibility={"@id": "https://openminds.ebrains.eu/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RIA"},
+    axes_origins=[
+        {
+            "@type": "https://openminds.ebrains.eu/core/QuantitativeValue",
+            "typeOfUncertainty": None,
+            "uncertainty": None,
+            "unit": {"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+            "value": 0,
+        },
+        {
+            "@type": "https://openminds.ebrains.eu/core/QuantitativeValue",
+            "typeOfUncertainty": None,
+            "uncertainty": None,
+            "unit": {"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+            "value": 12,
+        },
+        {
+            "@type": "https://openminds.ebrains.eu/core/QuantitativeValue",
+            "typeOfUncertainty": None,
+            "uncertainty": None,
+            "unit": {"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+            "value": 8.11,
+        },
+    ],
+    description="The coordinate space of Swanson’s ‘Brain Maps: Structure of the Rat Brain’ uses Bregma as its origin. The coordinates stated under ‘axesOrigin’ are the coordinates of the origin in the physical coordinate system of the rat brain. The coordinates, AP = 8.11 mm, DV = 12 mm and ML = 0 mm, were obtained by combining the information provided in the physical book and the pdf version of the 3rd edition of Brain Maps: (1) 'In the physical coordinate system, the z axis begins (= 0) at the rostral tip of the olfactory bulb, the y axis begins along an imaginary line that corresponds approximately to a surface that the extracted brain is lying upon, and the x axis begins at the midline.' (quoted from chapter [‘B. Coordinate Systems: Stereotaxic Surgery and Databases’ of the 3rd edition of Brain Maps (pdf version from Swanson’s homepage)](http://larrywswanson.com/wp-content/uploads/2015/03/2-Atlas-prep-BrainMaps3-20041.pdf)). (2) 'The rostrocaudal coordinate is given in parentheses after the corresponding physical coordinates, and the other two (dorsoventral and mediolateral) can be obtained with the transparent overlay provided in Appendix B.' (quoted from chapter ‘D. How to Use this Atlas’ of the 3rd edition of Brain Maps, p. 15; ISBN: 0-126-10582-0). Based on Figure 4 from chapter [‘A. Histology and Map Production’ of the 3rd edition of Brain Maps (pdf version from Swanson’s homepage)](http://larrywswanson.com/wp-content/uploads/2015/03/2-Atlas-prep-BrainMaps3-20041.pdf)), the coordinate system is oriented towards the right since the rat’s right hemisphere has been used to draw the atlas. Thus, giving Swanson’s coordinate system RIA orientation (X, Y, Z axes are oriented towards right, inferior and anterior, respectively). Note: More detailed descriptions were provided in the 3rd edition of the atlas (digital and book combined) compared to the 1st edition, but both describe the exact same coordinate system.",
+    full_documentation={"@id": "https://larrywswanson.com/?page_id=164"},
+    full_name="Swanson's Stereotactic Brain of the Sprague Dawley Rat",
+    how_to_cite="Swanson, L.W. (1992) 'Coordinate Systems' Brain maps: structure of the rat brain, 1st edition.",
+    license={"@id": "https://openminds.ebrains.eu/instances/licenses/ccByNc4.0"},
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/millimeter"},
+    release_date="1992-12-24",
+    short_name="Swanson's Stereotactic Rat Brain",
+    version_identifier="v1992",
+    version_innovation="This is the first version of this common coordinate space.",
+)
+CommonCoordinateSpaceVersion.whssd_v1 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/WHSSD_v1",
+    abbreviation="WHSSD",
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/ALS"},
+    full_name="Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)",
+    homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
+    release_date="2014-07-16",
+    short_name="WHS of the SD Rat Brain",
+    version_identifier="v1",
+)
+CommonCoordinateSpaceVersion.whssd_v1_01 = CommonCoordinateSpaceVersion(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/WHSSD_v1.01",
+    abbreviation="WHSSD",
+    anatomical_axes_orientation={"@id": "https://openminds.ebrains.eu/instances/anatomicalAxesOrientation/RAS"},
+    axes_origins=[
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 243.9999936},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 622.9999808},
+        {"@type": "https://openminds.ebrains.eu/core/QuantitativeValue", "value": 247.9999936},
+    ],
+    full_name="Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)",
+    homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
+    is_new_version_of={"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/WHSSD_v1"},
+    native_unit={"@id": "https://openminds.ebrains.eu/instances/unitOfMeasurement/micrometer"},
+    release_date="2014-07-16",
+    short_name="WHS of the SD Rat Brain",
+    version_identifier="v1.01",
+)

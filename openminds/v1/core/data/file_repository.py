@@ -4,6 +4,7 @@ Structured information on a file repository.
 
 # this file was auto-generated!
 
+from openminds.base import IRI
 
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
@@ -21,19 +22,28 @@ class FileRepository(LinkedMetadata):
     properties = [
         Property(
             "iri",
-            str,
+            IRI,
             "IRI",
-            formatting="text/plain",
             required=True,
             description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
             instructions="Enter the internationalized resource identifier (IRI) of this file repository.",
+        ),
+        Property(
+            "content_type_patterns",
+            "openminds.v1.core.ContentTypePattern",
+            "contentTypePattern",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all content type patterns that would identify matching content types for files within this file repository.",
         ),
         Property(
             "format",
             "openminds.v1.core.ContentType",
             "format",
             description="Method of digitally organizing and structuring data or information.",
-            instructions="Add the content type of this file repository.",
+            instructions="If file instances and bundles within the repository are organized and formatted according to a formal data structure use the appropriate contentType. Leave blank otherwise.",
         ),
         Property(
             "hash",
@@ -60,21 +70,50 @@ class FileRepository(LinkedMetadata):
             instructions="Enter the name of this file repository.",
         ),
         Property(
+            "repository_type",
+            "openminds.v1.controlled_terms.FileRepositoryType",
+            "repositoryType",
+            description="no description available",
+            instructions="Add the type of this file repository.",
+        ),
+        Property(
             "storage_size",
             "openminds.v1.core.QuantitativeValue",
             "storageSize",
             description="Quantitative value defining how much disk space is used by an object on a computer system.",
             instructions="Enter the storage size this file repository allocates.",
         ),
+        Property(
+            "structure_pattern",
+            "openminds.v1.core.FileRepositoryStructure",
+            "structurePattern",
+            description="no description available",
+            instructions="Add a file repository structure which identifies the file path patterns used in this file repository.",
+        ),
     ]
 
-    def __init__(self, id=None, iri=None, format=None, hash=None, hosted_by=None, name=None, storage_size=None):
+    def __init__(
+        self,
+        id=None,
+        iri=None,
+        content_type_patterns=None,
+        format=None,
+        hash=None,
+        hosted_by=None,
+        name=None,
+        repository_type=None,
+        storage_size=None,
+        structure_pattern=None,
+    ):
         return super().__init__(
             id=id,
             iri=iri,
+            content_type_patterns=content_type_patterns,
             format=format,
             hash=hash,
             hosted_by=hosted_by,
             name=name,
+            repository_type=repository_type,
             storage_size=storage_size,
+            structure_pattern=structure_pattern,
         )

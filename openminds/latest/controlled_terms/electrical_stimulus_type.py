@@ -15,8 +15,8 @@ class ElectricalStimulusType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/ElectricalStimulusType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class ElectricalStimulusType(LinkedMetadata):
 
 
 ElectricalStimulusType.direct_current = ElectricalStimulusType(
-    id="https://openminds.ebrains.eu/instances/electricalStimulusType/directCurrent",
+    id="https://openminds.om-i.org/instances/electricalStimulusType/directCurrent",
     name="direct current",
     synonyms=["DC"],
 )

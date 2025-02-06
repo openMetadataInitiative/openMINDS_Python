@@ -15,8 +15,8 @@ class Service(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/Service"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Service"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,19 +120,19 @@ class Service(LinkedMetadata):
 
 
 Service.allen_institute_cell_types_data_portal = Service(
-    id="https://openminds.ebrains.eu/instances/service/AllenInstituteCellTypesDataPortal",
+    id="https://openminds.om-i.org/instances/service/AllenInstituteCellTypesDataPortal",
     definition="Web application for visualizing and browsing the Allen Cell Types Database.",
     description="The Allen Cell Types Database contains a multimodal characterization of single brain cells by electrophysiology and morphology, as well as single-cell transcriptional data from nuclei or whole cells, with search and visualization tools for exploring the single cell transcriptomics for LGd, and single cell electrophysiology, morphology, and modeling data.",
     name="Allen Institute Cell Types Data Portal",
 )
 Service.ebrains_collaboratory_lab = Service(
-    id="https://openminds.ebrains.eu/instances/service/EBRAINSCollaboratoryLab",
+    id="https://openminds.om-i.org/instances/service/EBRAINSCollaboratoryLab",
     definition="The Collaboratory Lab is a web-based JupyterLab service provided by the EBRAINS research infrastructure.",
     description="The Lab gives EBRAINS users the ability to develop and run programs in the cloud from their web browser, without needing to install anything on their local machine. The Lab offers a readily installed programming environment and all of the EBRAINS tools and libraries which can be run from it.",
     name="EBRAINS Collaboratory Lab",
 )
 Service.ebrains_knowledge_graph_search_ui = Service(
-    id="https://openminds.ebrains.eu/instances/service/EBRAINSKnowledgeGraphSearchUI",
+    id="https://openminds.om-i.org/instances/service/EBRAINSKnowledgeGraphSearchUI",
     definition="The EBRAINS Knowledge Graph Search User Interface is a web application for searching the EBRAINS Knowledge Graph.",
     description="The Knowledge Graph Search User Interface makes data, models and software discoverable and easy to use. The user interface allows for free text searches and provides filters to narrow searches based on metadata that classifies data according to experimental method, data modality and species among other options. The query results are displayed as Dataset cards containing key information about the dataset, e.g. its metadata, terms of use, and how to cite and reuse the data. Datasets that have undergone spatial registration to an atlas contain links to 3D or 2D viewers for navigating the data in atlas space.",
     name="EBRAINS Knowledge Graph Search UI",
@@ -146,56 +146,56 @@ Service.ebrains_knowledge_graph_search_ui = Service(
     ],
 )
 Service.ebrains_model_catalog = Service(
-    id="https://openminds.ebrains.eu/instances/service/EBRAINSModelCatalog",
+    id="https://openminds.om-i.org/instances/service/EBRAINSModelCatalog",
     definition="The EBRAINS Model Catalog contains information about models developed and/or used within the EBRAINS research infrastructure.",
     description="The Model Catalog app provides a more in-depth view of computational models than is available in the KG Search UI, including tools for visualizing model structure, exploring how models have been validated against experimental data, and comparing different models.",
     name="EBRAINS Model Catalog",
 )
 Service.erbains_collaboratory_wiki = Service(
-    id="https://openminds.ebrains.eu/instances/service/ERBAINSCollaboratoryWiki",
+    id="https://openminds.om-i.org/instances/service/ERBAINSCollaboratoryWiki",
     definition="The Collaboratory Wiki is the main interface to access all other Collaboratory service provided by the EBRAINS research infrastructure.",
     description="The Wiki service of the Collaboratory hosts the main interface to access all the other Collaboratory services. As such, it embodies the full concept of collab workspaces and most users consider it to be the collab service. Wiki pages are a convenient way of publishing content on the web, either addressing the Team of the collab or making the content completely public, that is, also accessible to visitors who do not have an EBRAINS account.",
     name="EBRAINS Collaboratory Wiki",
 )
 Service.locali_zoom = Service(
-    id="https://openminds.ebrains.eu/instances/service/LocaliZoom",
+    id="https://openminds.om-i.org/instances/service/LocaliZoom",
     definition="Web application for viewing of series of high-resolution 2D images that have been anchored to reference atlases.",
     description="LocaliZoom allows the viewing and exploring of high-resolution images with superimposed atlas overlays. For more information see: https://localizoom.readthedocs.io/en/latest/index.html.",
     name="LocaliZoom",
 )
 Service.model_db = Service(
-    id="https://openminds.ebrains.eu/instances/service/ModelDB",
+    id="https://openminds.om-i.org/instances/service/ModelDB",
     definition="ModelDB is a curated database of published models in the broad domain of computational neuroscience.",
     description="ModelDB provides an accessible location for storing and efficiently retrieving computational neuroscience models. A ModelDB entry contains a model's source code, concise description, and a citation of the article that published it. The source code can be in any language for any environment, can be viewed before downloading, and optionally can be auto-launched on download.",
     name="ModelDB",
 )
 Service.multi__image_o_sd = Service(
-    id="https://openminds.ebrains.eu/instances/service/Multi-Image-OSd",
+    id="https://openminds.om-i.org/instances/service/Multi-Image-OSd",
     definition="Web application for viewing of series of high-resolution 2D images.",
     description="Multi-Image-OSd allows the viewing and exploring of high-resolution images. For more information see: https://github.com/Neural-Systems-at-UIO/Multi-Image-OSd",
     name="Multi-Image-OSd",
     synonyms=["Multi-Image OpenSeadragon viewer"],
 )
 Service.neuro_morpho_dot_org = Service(
-    id="https://openminds.ebrains.eu/instances/service/NeuroMorphoDotOrg",
+    id="https://openminds.om-i.org/instances/service/NeuroMorphoDotOrg",
     definition="A web-based inventory dedicated to densely archive and organize all publicly shared digital reconstructions of neuronal morphology.",
     description="Digital reconstructions are a parsimonious and efficient representation of neuronal morphology. They allow extensive analysis and implementation of biophysical models of electrophysiology. However, reconstructing cells is a very labor-intensive and time-consuming process. A collection of such data is an invaluable resource for the neuroscience community. This inventory is meant to encourage data sharing among neuroscientists, enabling further use of this data and to prevent data loss.",
     name="NeuroMorpho.Org",
 )
 Service.neuroglancer = Service(
-    id="https://openminds.ebrains.eu/instances/service/Neuroglancer",
+    id="https://openminds.om-i.org/instances/service/Neuroglancer",
     definition="'Neuroglancer' is a WebGL-based viewer for volumetric data.",
     description="'Neuroglancer' is capable of displaying arbitrary (non axis-aligned) cross-sectional views of volumetric data, as well as 3-D meshes and line-segment based models (skeletons). A live demo without any preloaded datasets is hosted at https://neuroglancer-demo.appspot.com.",
     name="Neuroglancer",
 )
 Service.siibra_explorer = Service(
-    id="https://openminds.ebrains.eu/instances/service/siibraExplorer",
+    id="https://openminds.om-i.org/instances/service/siibraExplorer",
     definition="'siibra-explorer' is an interactive viewer for multilevel brain atlases",
     description="siibra-explorer is an frontend module wrapping around nehuba for visualizing volumetric brain volumes at possible high resolutions, and connecting to siibra-api for offering access to brain atlases of different species, including to navigate their brain region hierarchies, maps in different coordinate spaces, and linked regional data features. It provides metadata integration with the EBRAINS knowledge graph, different forms of data visualisation, and a structured plugin system for implementing custom extensions. For more information see: https://github.com/FZJ-INM1-BDA/siibra-explorer",
     name="siibra-explorer",
 )
 Service.zenodo = Service(
-    id="https://openminds.ebrains.eu/instances/service/Zenodo",
+    id="https://openminds.om-i.org/instances/service/Zenodo",
     definition="Zenodo is a general-purpose open repository developed under the European OpenAIRE program and operated by CERN.",
     description="Zenodo allows researchers to deposit research papers, data sets, research software, reports, and any other research related digital artefacts.",
     name="Zenodo",

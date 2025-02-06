@@ -81,6 +81,8 @@ class StimulationActivity(LinkedMetadata):
         Property(
             "outputs",
             [
+                "openminds.v3.core.File",
+                "openminds.v3.core.FileBundle",
                 "openminds.v3.core.SubjectGroupState",
                 "openminds.v3.core.SubjectState",
                 "openminds.v3.core.TissueSampleCollectionState",
@@ -92,7 +94,7 @@ class StimulationActivity(LinkedMetadata):
             min_items=1,
             required=True,
             description="Something or someone that comes out of, is delivered or produced by a process or machine.",
-            instructions="Add all states of the specimen(s) that were stimulated as a result of this activity.",
+            instructions="Add all states of the specimen(s) that were stimulated as a result of this activity, and all files or file bundles generated.",
         ),
         Property(
             "performed_by",
@@ -138,7 +140,7 @@ class StimulationActivity(LinkedMetadata):
         ),
         Property(
             "stimuli",
-            [],
+            "openminds.v3.stimulation.EphysStimulus",
             "stimulus",
             multiple=True,
             unique_items=True,

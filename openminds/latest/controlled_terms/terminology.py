@@ -15,8 +15,8 @@ class Terminology(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/Terminology"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Terminology"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,30 +120,30 @@ class Terminology(LinkedMetadata):
 
 
 Terminology.action_status_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/actionStatusType",
+    id="https://openminds.om-i.org/instances/terminology/actionStatusType",
     name="action status type",
 )
 Terminology.age_category = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/ageCategory",
+    id="https://openminds.om-i.org/instances/terminology/ageCategory",
     definition="The age category describes a specific spatiotemporal part of the life cycle of an organism.",
     name="age category",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000105"),
 )
 Terminology.analysis_technique = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/analysisTechnique",
+    id="https://openminds.om-i.org/instances/terminology/analysisTechnique",
     name="analysis technique",
 )
 Terminology.anatomical_axes_orientation = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/anatomicalAxesOrientation",
+    id="https://openminds.om-i.org/instances/terminology/anatomicalAxesOrientation",
     name="anatomical axes orientation",
 )
 Terminology.anatomical_identification_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/anatomicalIdentificationType",
+    id="https://openminds.om-i.org/instances/terminology/anatomicalIdentificationType",
     definition="The type of identiciation that was used to determine an anatomical location.",
     name="anatomical identification type",
 )
 Terminology.anatomical_plane = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/anatomicalPlane",
+    id="https://openminds.om-i.org/instances/terminology/anatomicalPlane",
     definition="A flat anatomical 2D surface that bisects an anatomical structure or an anatomical space.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0725051"),
     name="anatomical plane",
@@ -151,172 +151,177 @@ Terminology.anatomical_plane = Terminology(
     synonyms=["fiat anatomical surface"],
 )
 Terminology.annotation_criteria_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/annotationCriteriaType",
+    id="https://openminds.om-i.org/instances/terminology/annotationCriteriaType",
     definition="General classification of how data were annotated.",
     name="annotation criteria type",
 )
 Terminology.annotation_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/annotationType",
+    id="https://openminds.om-i.org/instances/terminology/annotationType",
     definition="Geometrical classification of annotations into types.",
     name="annotation type",
 )
 Terminology.atlas_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/atlasType",
+    id="https://openminds.om-i.org/instances/terminology/atlasType",
     name="atlas type",
 )
 Terminology.auditory_stimulus_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/auditoryStimulusType",
+    id="https://openminds.om-i.org/instances/terminology/auditoryStimulusType",
     definition="An 'auditory stimulus type' groups similar auditory stimuli used across auditory stimulation techniques.",
     name="auditory stimulus type",
 )
 Terminology.biological_order = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/biologicalOrder",
+    id="https://openminds.om-i.org/instances/terminology/biologicalOrder",
     name="biological order",
 )
 Terminology.biological_sex = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/biologicalSex",
+    id="https://openminds.om-i.org/instances/terminology/biologicalSex",
     name="biological sex",
 )
 Terminology.breeding_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/breedingType",
+    id="https://openminds.om-i.org/instances/terminology/breedingType",
     definition="The breeding type describes how plants or animals have been sexually propagated.",
     name="breeding type",
 )
 Terminology.cell_culture_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/cellCultureType",
+    id="https://openminds.om-i.org/instances/terminology/cellCultureType",
     definition="The type of a cell culture (e.g. primary, secondary)",
     name="cell culture type",
 )
 Terminology.cell_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/cellType",
+    id="https://openminds.om-i.org/instances/terminology/cellType",
     name="cell type",
 )
 Terminology.chemical_mixture_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/chemicalMixtureType",
+    id="https://openminds.om-i.org/instances/terminology/chemicalMixtureType",
     definition="A 'chemical mixture type' groups all mixtures with the same chemical and physical characteristics under a general term.",
     name="chemicalMixtureType",
 )
 Terminology.colormap = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/colormap",
+    id="https://openminds.om-i.org/instances/terminology/colormap",
     definition="A colormap is a lookup table specifying the colors to be used in rendering a palettized image, [adapted from [Wiktionary](https://en.wiktionary.org/wiki/colormap)].",
     name="colormap",
 )
 Terminology.contribution_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/contributionType",
+    id="https://openminds.om-i.org/instances/terminology/contributionType",
     name="contribution type",
 )
 Terminology.cranial_window_construction_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/CranialWindowConstructionType",
+    id="https://openminds.om-i.org/instances/terminology/CranialWindowConstructionType",
     definition="The construction type of a cranial window.",
     name="cranial window construction type",
 )
 Terminology.cranial_window_reinforcement_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/CranialWindowReinforcementType",
+    id="https://openminds.om-i.org/instances/terminology/CranialWindowReinforcementType",
     definition="The reinforcement type of a cranial window.",
     name="cranial window reinforcement type",
 )
 Terminology.criteria_quality_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/criteriaQualityType",
+    id="https://openminds.om-i.org/instances/terminology/criteriaQualityType",
     name="criteria quality type",
 )
 Terminology.data_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/dataType",
+    id="https://openminds.om-i.org/instances/terminology/dataType",
     name="data type",
 )
 Terminology.device_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/deviceType",
+    id="https://openminds.om-i.org/instances/terminology/deviceType",
     name="device type",
 )
 Terminology.difference_measure = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/differenceMeasure",
+    id="https://openminds.om-i.org/instances/terminology/differenceMeasure",
     definition="A measure of the difference between two things",
     description="This may be a numerical or physical quantity, a set of categories, etc. Examples include 'mean squared error', 't-statistic', 'p-value'.",
     name="difference measure",
 )
 Terminology.disease = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/disease",
+    id="https://openminds.om-i.org/instances/terminology/disease",
     name="disease",
 )
 Terminology.disease_model = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/diseaseModel",
+    id="https://openminds.om-i.org/instances/terminology/diseaseModel",
     name="disease model",
 )
 Terminology.educational_level = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/educationalLevel",
+    id="https://openminds.om-i.org/instances/terminology/educationalLevel",
     definition="An 'educational level' defines the developmental stage of a student and how learning environments are structured. ",
     name="educational level",
 )
 Terminology.electrical_stimulus_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/electricalStimulusType",
+    id="https://openminds.om-i.org/instances/terminology/electricalStimulusType",
     definition="An 'electrical stimulus type' groups similar electrical stimuli used across electrical stimulation techniques.",
     name="electrical stimulus type",
 )
 Terminology.ethics_assessment = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/ethicsAssessment",
+    id="https://openminds.om-i.org/instances/terminology/ethicsAssessment",
     name="ethics assessment",
 )
 Terminology.experimental_approach = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/experimentalApproach",
+    id="https://openminds.om-i.org/instances/terminology/experimentalApproach",
     name="experimental approach",
 )
 Terminology.file_bundle_grouping = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/fileBundleGrouping",
+    id="https://openminds.om-i.org/instances/terminology/fileBundleGrouping",
     name="file bundle grouping",
 )
 Terminology.file_repository_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/fileRepositoryType",
+    id="https://openminds.om-i.org/instances/terminology/fileRepositoryType",
     name="file repository type",
 )
 Terminology.file_usage_role = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/fileUsageRole",
+    id="https://openminds.om-i.org/instances/terminology/fileUsageRole",
     name="file usage role",
 )
 Terminology.genetic_strain_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/geneticStrainType",
+    id="https://openminds.om-i.org/instances/terminology/geneticStrainType",
     definition="The genetic strain type describes the genetic background type of a strain.",
     name="genetic strain type",
 )
 Terminology.gustatory_stimulus_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/gustatoryStimulusType",
+    id="https://openminds.om-i.org/instances/terminology/gustatoryStimulusType",
     definition="A 'gustatory stimulus type' groups similar gustatory stimuli used across gustatory stimulation techniques.",
     name="gustatory stimulus type",
 )
 Terminology.handedness = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/handedness",
+    id="https://openminds.om-i.org/instances/terminology/handedness",
     name="handedness",
 )
 Terminology.language = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/language",
+    id="https://openminds.om-i.org/instances/terminology/language",
     name="language",
 )
 Terminology.laterality = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/laterality",
+    id="https://openminds.om-i.org/instances/terminology/laterality",
     name="laterality",
 )
 Terminology.learning_resource_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/learningResourceType",
+    id="https://openminds.om-i.org/instances/terminology/learningResourceType",
     definition="A 'learning resource type' groups persistent resources that explicitly entail learning activities or learning experiences in a certain format (e.g., in a physical or digital presentation).",
     name="learning resource type",
 )
 Terminology.measured_quantity = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/measuredQuantity",
+    id="https://openminds.om-i.org/instances/terminology/measuredQuantity",
     definition="A qualified physical quantity that was measured/recorded",
     name="measured quantity",
 )
+Terminology.measured_signal_type = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/measuredSignalType",
+    definition="The types of biological electrical and non-electrical signals that vary in time and/or space and can be measured.",
+    name="measured signal type",
+)
 Terminology.meta_data_model_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/metaDataModelType",
+    id="https://openminds.om-i.org/instances/terminology/metaDataModelType",
     name="(meta)data model type",
 )
 Terminology.model_abstraction_level = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/modelAbstractionLevel",
+    id="https://openminds.om-i.org/instances/terminology/modelAbstractionLevel",
     name="model abstraction level",
 )
 Terminology.model_scope = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/modelScope",
+    id="https://openminds.om-i.org/instances/terminology/modelScope",
     name="model scope",
 )
 Terminology.molecular_entity = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/molecularEntity",
+    id="https://openminds.om-i.org/instances/terminology/molecularEntity",
     definition="Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107064"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:23367#molecular-entity"),
@@ -324,107 +329,107 @@ Terminology.molecular_entity = Terminology(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_23367"),
 )
 Terminology.mri_pulse_sequence = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/MRIPulseSequence",
+    id="https://openminds.om-i.org/instances/terminology/MRIPulseSequence",
     definition="An 'MRI pulse sequence' is a particular setting of pulse sequences and pulsed field gradients, resulting in a particular image appearance [adapted from [Wikipedia](https://en.wikipedia.org/wiki/MRI_pulse_sequence)].",
     name="MRI pulse sequence",
 )
 Terminology.mri_weighting = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/MRIWeighting",
+    id="https://openminds.om-i.org/instances/terminology/MRIWeighting",
     definition="Class of imaging techniques where the image contrast is generated from a specific intrinsic tissue parameter (T1, T2, etc.).",
     name="MRI weighting",
 )
 Terminology.olfactory_stimulus_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/olfactoryStimulusType",
+    id="https://openminds.om-i.org/instances/terminology/olfactoryStimulusType",
     definition="An 'olfactory stimulus type' groups similar olfactory stimuli used across olfactory stimulation techniques.",
     name="olfactory stimulus type",
 )
 Terminology.operating_device = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/operatingDevice",
+    id="https://openminds.om-i.org/instances/terminology/operatingDevice",
     name="operating device",
 )
 Terminology.operating_system = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/operatingSystem",
+    id="https://openminds.om-i.org/instances/terminology/operatingSystem",
     name="operating system",
 )
 Terminology.optical_stimulus_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/opticalStimulusType",
+    id="https://openminds.om-i.org/instances/terminology/opticalStimulusType",
     definition="An 'optical stimulus type' groups similar optical stimuli used across optical stimulation techniques.",
     name="optical stimulus type",
 )
 Terminology.organ = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/organ",
+    id="https://openminds.om-i.org/instances/terminology/organ",
     definition="Anatomical structure that performs a specific function or group of functions.",
     description="The preferred ontology for 'organ' is UBERON.",
     name="organ",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000062"),
 )
 Terminology.organism_substance = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/organismSubstance",
+    id="https://openminds.om-i.org/instances/terminology/organismSubstance",
     definition="Any material anatomical entity in a gaseous, liquid, semisolid or solid state produced by or derived from an organism or parts of an organism.",
     description="The preferred ontology for 'organism substance' is UBERON.",
     name="organism substance",
 )
 Terminology.organism_system = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/organismSystem",
+    id="https://openminds.om-i.org/instances/terminology/organismSystem",
     definition="Any anatomical or functional system in an organism, regardless of scale.",
     name="organism system",
 )
 Terminology.patch_clamp_variation = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/patchClampVariation",
+    id="https://openminds.om-i.org/instances/terminology/patchClampVariation",
     definition="A variation of the patch clamp technique",
     name="patch clamp variation",
 )
 Terminology.preparation_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/preparationType",
+    id="https://openminds.om-i.org/instances/terminology/preparationType",
     name="preparation type",
 )
 Terminology.product_accessibility = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/productAccessibility",
+    id="https://openminds.om-i.org/instances/terminology/productAccessibility",
     name="product accessibility",
 )
 Terminology.programming_language = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/programmingLanguage",
+    id="https://openminds.om-i.org/instances/terminology/programmingLanguage",
     name="programming language",
 )
 Terminology.qualitative_overlap = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/qualitativeOverlap",
+    id="https://openminds.om-i.org/instances/terminology/qualitativeOverlap",
     name="qualitative overlap",
 )
 Terminology.semantic_data_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/semanticDataType",
+    id="https://openminds.om-i.org/instances/terminology/semanticDataType",
     name="semantic data type",
 )
 Terminology.service = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/service",
+    id="https://openminds.om-i.org/instances/terminology/service",
     name="service",
 )
 Terminology.setup_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/setupType",
+    id="https://openminds.om-i.org/instances/terminology/setupType",
     definition="The setup type describes the overall purpose of arranging equipment in a certain way (setup).",
     name="setup type",
 )
 Terminology.software_application_category = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/softwareApplicationCategory",
+    id="https://openminds.om-i.org/instances/terminology/softwareApplicationCategory",
     name="software application category",
 )
 Terminology.software_feature = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/softwareFeature",
+    id="https://openminds.om-i.org/instances/terminology/softwareFeature",
     name="software feature",
 )
 Terminology.species = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/species",
+    id="https://openminds.om-i.org/instances/terminology/species",
     name="species",
 )
 Terminology.stimulation_approach = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/stimulationApproach",
+    id="https://openminds.om-i.org/instances/terminology/stimulationApproach",
     name="stimulation approach",
 )
 Terminology.stimulation_technique = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/stimulationTechnique",
+    id="https://openminds.om-i.org/instances/terminology/stimulationTechnique",
     name="stimulation technique",
 )
 Terminology.subcellular_entity = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/subcellularEntity",
+    id="https://openminds.om-i.org/instances/terminology/subcellularEntity",
     definition="Entity derived from a cell or cells. The anatomical scale of these objects roughly corresponds to that which would be visible in high resolution light microscopy or conventional electron microscopy, e.g., nanometers to microns",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111157"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/GO:0005575#iJ6UjX8BxpaxvvQA_2ri"),
@@ -433,40 +438,40 @@ Terminology.subcellular_entity = Terminology(
     synonyms=["cellular component"],
 )
 Terminology.subject_attribute = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/subjectAttribute",
+    id="https://openminds.om-i.org/instances/terminology/subjectAttribute",
     name="subject attribute",
 )
 Terminology.tactile_stimulus_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/tactileStimulusType",
+    id="https://openminds.om-i.org/instances/terminology/tactileStimulusType",
     definition="A 'tactile stimulus type' groups similar tactile stimuli used across tactile stimulation techniques.",
     name="tactile stimulus type",
 )
 Terminology.technique = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/technique",
+    id="https://openminds.om-i.org/instances/terminology/technique",
     name="technique",
 )
 Terminology.tissue_sample_attribute = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/tissueSampleAttribute",
+    id="https://openminds.om-i.org/instances/terminology/tissueSampleAttribute",
     name="tissue sample attribute",
 )
 Terminology.tissue_sample_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/tissueSampleType",
+    id="https://openminds.om-i.org/instances/terminology/tissueSampleType",
     name="tissue sample type",
 )
 Terminology.type_of_uncertainty = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/typeOfUncertainty",
+    id="https://openminds.om-i.org/instances/terminology/typeOfUncertainty",
     name="type of uncertainty",
 )
 Terminology.uberon_parcellation = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/UBERONParcellation",
+    id="https://openminds.om-i.org/instances/terminology/UBERONParcellation",
     name="UBERON parcellation",
 )
 Terminology.unit_of_measurement = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/unitOfMeasurement",
+    id="https://openminds.om-i.org/instances/terminology/unitOfMeasurement",
     name="unit of measurement",
 )
 Terminology.visual_stimulus_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/visualStimulusType",
+    id="https://openminds.om-i.org/instances/terminology/visualStimulusType",
     definition="A 'visual stimulus type' groups similar visual stimuli used across visual stimulation techniques.",
     name="visual stimulus type",
 )

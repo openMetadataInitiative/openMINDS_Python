@@ -15,8 +15,8 @@ class AnatomicalIdentificationType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/AnatomicalIdentificationType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/AnatomicalIdentificationType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,12 +120,12 @@ class AnatomicalIdentificationType(LinkedMetadata):
 
 
 AnatomicalIdentificationType.landmark_based = AnatomicalIdentificationType(
-    id="https://openminds.ebrains.eu/instances/anatomicalIdentificationType/landmarkBased",
+    id="https://openminds.om-i.org/instances/anatomicalIdentificationType/landmarkBased",
     definition="'Landmark based' identification makes use of distinct anatomical structures as a point of orientation in locating other structures in the body.",
     name="landmark based",
 )
 AnatomicalIdentificationType.stereotactic = AnatomicalIdentificationType(
-    id="https://openminds.ebrains.eu/instances/anatomicalIdentificationType/stereotactic",
+    id="https://openminds.om-i.org/instances/anatomicalIdentificationType/stereotactic",
     definition="'Stereotactic' identification makes use of three-dimensional coordinate system to locate specific targets inside the body. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Stereotactic_surgery)]",
     name="stereotactic",
 )

@@ -14,8 +14,8 @@ class EphysStimulus(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/stimulation/EphysStimulus"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/EphysStimulus"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

@@ -77,7 +77,7 @@ class ProductAccessibility(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,50 @@ class ProductAccessibility(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+ProductAccessibility.controlled_access = ProductAccessibility(
+    id="https://openminds.ebrains.eu/instances/productAccessibility/controlledAccess",
+    definition="With 'controlled access' selected, data and metadata are both released and available free of charge, but users must logged in and authenticated themselves to access the data.",
+    name="controlled access",
+)
+ProductAccessibility.free_access = ProductAccessibility(
+    id="https://openminds.ebrains.eu/instances/productAccessibility/freeAccess",
+    definition="With 'free access' selected, data and metadata are both released and become immediately available without any access restrictions.",
+    name="free access",
+)
+ProductAccessibility.paid_access = ProductAccessibility(
+    id="https://openminds.ebrains.eu/instances/productAccessibility/paidAccess",
+    definition="With 'paid access' selected, data and metadata are both released, but users paid to gain access to the data (e.g., a one-time fee).",
+    name="paid access",
+)
+ProductAccessibility.restricted_access = ProductAccessibility(
+    id="https://openminds.ebrains.eu/instances/productAccessibility/restrictedAccess",
+    definition="With 'restricted access' selected, metadata are released, but data remain on an access restricted server.",
+    name="restricted access",
+)
+ProductAccessibility.retracted = ProductAccessibility(
+    id="https://openminds.ebrains.eu/instances/productAccessibility/retracted",
+    definition="With 'retracted' selected, metadata are released, but data are retracted.",
+    name="retracted",
+)
+ProductAccessibility.under_embargo = ProductAccessibility(
+    id="https://openminds.ebrains.eu/instances/productAccessibility/underEmbargo",
+    definition="With 'under embargo' selected, metadata are released, but data remain unavailable for the public until the embargo is lifted.",
+    name="under embargo",
+)

@@ -20,20 +20,37 @@ class FileBundle(LinkedMetadata):
 
     properties = [
         Property(
-            "iri",
+            "content",
             str,
-            "IRI",
+            "content",
             formatting="text/plain",
-            required=True,
-            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier (IRI) of this file bundle.",
+            description="Something that is contained.",
+            instructions="Enter a short content description for this file bundle.",
+        ),
+        Property(
+            "descended_from",
+            [
+                "openminds.v1.controlled_terms.BehavioralTask",
+                "openminds.v1.core.File",
+                "openminds.v1.core.FileBundle",
+                "openminds.v1.core.SubjectGroupState",
+                "openminds.v1.core.SubjectState",
+                "openminds.v1.core.TissueSampleCollectionState",
+                "openminds.v1.core.TissueSampleState",
+            ],
+            "descendedFrom",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all entities that played a role in the production of this file bundle (must be true for all grouped files).",
         ),
         Property(
             "format",
             "openminds.v1.core.ContentType",
             "format",
             description="Method of digitally organizing and structuring data or information.",
-            instructions="Add the content type of this file bundle.",
+            instructions="If file instances within this bundle are organized and formatted according to a formal data structure use the appropriate contentType. Leave blank otherwise.",
         ),
         Property(
             "grouped_by",
@@ -67,6 +84,14 @@ class FileBundle(LinkedMetadata):
             instructions="Enter the name of this file bundle.",
         ),
         Property(
+            "pattern_of_filenames",
+            str,
+            "patternOfFilenames",
+            formatting="text/plain",
+            description="Reliable sample / structure of characters valid for all names in a particular collection of files.",
+            instructions="Enter a regular expression (syntax: ECMA 262) which is valid for all filenames of the file instances that should be grouped into this file bundle.",
+        ),
+        Property(
             "storage_size",
             "openminds.v1.core.QuantitativeValue",
             "storageSize",
@@ -76,15 +101,27 @@ class FileBundle(LinkedMetadata):
     ]
 
     def __init__(
-        self, id=None, iri=None, format=None, grouped_by=None, hash=None, is_part_of=None, name=None, storage_size=None
+        self,
+        id=None,
+        content=None,
+        descended_from=None,
+        format=None,
+        grouped_by=None,
+        hash=None,
+        is_part_of=None,
+        name=None,
+        pattern_of_filenames=None,
+        storage_size=None,
     ):
         return super().__init__(
             id=id,
-            iri=iri,
+            content=content,
+            descended_from=descended_from,
             format=format,
             grouped_by=grouped_by,
             hash=hash,
             is_part_of=is_part_of,
             name=name,
+            pattern_of_filenames=pattern_of_filenames,
             storage_size=storage_size,
         )

@@ -48,13 +48,21 @@ class SubjectGroupState(LinkedMetadata):
         ),
         Property(
             "handedness",
-            "openminds.v1.controlled_terms.Laterality",
+            "openminds.v1.controlled_terms.Handedness",
             "handedness",
             multiple=True,
             unique_items=True,
             min_items=1,
             description="Degree to which an organism prefers one hand or foot over the other hand or foot during the performance of a task.",
             instructions="Add the preferred hand of the subject in this state.",
+        ),
+        Property(
+            "lookup_label",
+            str,
+            "lookupLabel",
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter a lookup label for this specimen (set) state that may help you to more easily find it again.",
         ),
         Property(
             "pathologies",
@@ -82,6 +90,7 @@ class SubjectGroupState(LinkedMetadata):
         age=None,
         age_categories=None,
         handedness=None,
+        lookup_label=None,
         pathologies=None,
         weight=None,
     ):
@@ -91,6 +100,7 @@ class SubjectGroupState(LinkedMetadata):
             age=age,
             age_categories=age_categories,
             handedness=handedness,
+            lookup_label=lookup_label,
             pathologies=pathologies,
             weight=weight,
         )

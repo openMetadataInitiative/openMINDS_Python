@@ -15,8 +15,8 @@ class SoftwareApplicationCategory(LinkedMetadata):
     Structured information on the category of the software application.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/SoftwareApplicationCategory"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,32 +120,32 @@ class SoftwareApplicationCategory(LinkedMetadata):
 
 
 SoftwareApplicationCategory.application = SoftwareApplicationCategory(
-    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/application",
+    id="https://openminds.om-i.org/instances/softwareApplicationCategory/application",
     name="application",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q166142"),
 )
 SoftwareApplicationCategory.library = SoftwareApplicationCategory(
-    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/library",
+    id="https://openminds.om-i.org/instances/softwareApplicationCategory/library",
     name="library",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q188860"),
 )
 SoftwareApplicationCategory.middleware = SoftwareApplicationCategory(
-    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/middleware",
+    id="https://openminds.om-i.org/instances/softwareApplicationCategory/middleware",
     name="middleware",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q146768"),
 )
 SoftwareApplicationCategory.module = SoftwareApplicationCategory(
-    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/module",
+    id="https://openminds.om-i.org/instances/softwareApplicationCategory/module",
     name="module",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q11883090"),
 )
 SoftwareApplicationCategory.notebook = SoftwareApplicationCategory(
-    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/notebook",
+    id="https://openminds.om-i.org/instances/softwareApplicationCategory/notebook",
     name="notebook",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q28405706"),
 )
 SoftwareApplicationCategory.plugin = SoftwareApplicationCategory(
-    id="https://openminds.ebrains.eu/instances/softwareApplicationCategory/plugin",
+    id="https://openminds.om-i.org/instances/softwareApplicationCategory/plugin",
     name="plugin",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q184148"),
 )

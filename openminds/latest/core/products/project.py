@@ -15,8 +15,8 @@ class Project(LinkedMetadata):
     Structured information on a research project.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/Project"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Project"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

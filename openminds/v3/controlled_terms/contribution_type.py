@@ -77,7 +77,7 @@ class ContributionType(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,52 @@ class ContributionType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+ContributionType.coordination = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/coordination",
+    name="coordination",
+)
+ContributionType.data_collection = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/dataCollection",
+    name="data collection",
+)
+ContributionType.data_managment = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/dataManagment",
+    name="data management",
+)
+ContributionType.data_processing = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/dataProcessing",
+    name="data processing",
+)
+ContributionType.information_technology_support = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/informationTechnologySupport",
+    name="information technology support",
+)
+ContributionType.laboratory_assistance = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/laboratoryAssistance",
+    name="laboratory assistance",
+)
+ContributionType.marketing = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/marketing",
+    name="marketing",
+)
+ContributionType.metadata_managment = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/metadataManagment",
+    name="metadata management",
+)

@@ -15,8 +15,8 @@ class Optimization(LinkedMetadata):
     Structured information about a process of optimizing a model or a piece of code.
     """
 
-    type_ = "https://openminds.ebrains.eu/computation/Optimization"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Optimization"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

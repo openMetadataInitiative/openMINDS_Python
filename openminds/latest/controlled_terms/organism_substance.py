@@ -15,8 +15,8 @@ class OrganismSubstance(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/OrganismSubstance"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class OrganismSubstance(LinkedMetadata):
 
 
 OrganismSubstance.arterial_blood = OrganismSubstance(
-    id="https://openminds.ebrains.eu/instances/organismSubstance/arterialBlood",
+    id="https://openminds.om-i.org/instances/organismSubstance/arterialBlood",
     definition="'Arterial blood' is the oxygenated portion of blood which occupies the pulmonary vein, the left chambers of the heart, and the arteries of the circulatory system.",
     description="Blood that flows through an artery.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0725460"),
@@ -130,7 +130,7 @@ OrganismSubstance.arterial_blood = OrganismSubstance(
     synonyms=["arterial blood", "blood in artery", "portion of arterial blood"],
 )
 OrganismSubstance.blood = OrganismSubstance(
-    id="https://openminds.ebrains.eu/instances/organismSubstance/blood",
+    id="https://openminds.om-i.org/instances/organismSubstance/blood",
     definition="''Blood' is a body fluid in the circulatory system of vertebrates that transports substances to and from cells (e.g. nutrients, oxygen or metabolic waste products). [[adapted from Wikipedia](https://en.wikipedia.org/wiki/Blood)]",
     description="A bodily fluid that is composed of blood plasma and erythrocytes (blood cells).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101354"),
@@ -140,7 +140,7 @@ OrganismSubstance.blood = OrganismSubstance(
     synonyms=["portion of blood", "vertebrate blood"],
 )
 OrganismSubstance.cerebrospinal_fluid = OrganismSubstance(
-    id="https://openminds.ebrains.eu/instances/organismSubstance/cerebrospinalFluid",
+    id="https://openminds.om-i.org/instances/organismSubstance/cerebrospinalFluid",
     definition="'cerebrospinal fluid' is a clear, colorless, bodily fluid, that occupies the subarachnoid space and the ventricular system around and inside the brain and spinal cord [WP, modified]. [http://en.wikipedia.org/wiki/Cerebrospinal_fluid]",
     description="The fluid that is contained within the brain ventricles, the subarachnoid space and the central canal of the spinal cord (NCI). Transudate contained in the subarachnoid space (UWDA). Clear colorless liquid secreted by the choroid plexus of the lateral, third, and fourth ventricles, and contained within the ventricular system of the brain and spinal cord and within the subarachnoid space (CSP).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101997"),
@@ -150,7 +150,7 @@ OrganismSubstance.cerebrospinal_fluid = OrganismSubstance(
     synonyms=["CSF", "cerebral spinal fluid", "liquor cerebrospinalis", "spinal fluid"],
 )
 OrganismSubstance.venous_blood = OrganismSubstance(
-    id="https://openminds.ebrains.eu/instances/organismSubstance/venousBlood",
+    id="https://openminds.om-i.org/instances/organismSubstance/venousBlood",
     definition="'Venous blood' is deoxygenated blood which travels from the peripheral vessels, through the venous system into the right atrium of the heart.",
     description="Blood that flows through a vein.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0734397"),

@@ -21,6 +21,13 @@ class QuantitativeValue(EmbeddedMetadata):
 
     properties = [
         Property(
+            "type_of_uncertainty",
+            "openminds.v1.controlled_terms.TypeOfUncertainty",
+            "typeOfUncertainty",
+            description="Distinct technique used to quantify the uncertainty of a measurement.",
+            instructions="Add the type of uncertainty used for this quantitative value.",
+        ),
+        Property(
             "uncertainties",
             Real,
             "uncertainty",
@@ -48,8 +55,9 @@ class QuantitativeValue(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, uncertainties=None, unit=None, value=None):
+    def __init__(self, type_of_uncertainty=None, uncertainties=None, unit=None, value=None):
         return super().__init__(
+            type_of_uncertainty=type_of_uncertainty,
             uncertainties=uncertainties,
             unit=unit,
             value=value,

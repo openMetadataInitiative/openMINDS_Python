@@ -15,8 +15,8 @@ class ProgrammingLanguage(LinkedMetadata):
     Structured information on the programming language.
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/ProgrammingLanguage"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,103 +120,109 @@ class ProgrammingLanguage(LinkedMetadata):
 
 
 ProgrammingLanguage.ampl = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/controlledTerms/programmingLanguage/AMPL",
+    id="https://openminds.om-i.org/instances/programmingLanguage/AMPL",
     name="AMPL",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q295250"),
     synonyms=["A Mathematical Programming Language"],
 )
 ProgrammingLanguage.bash = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/Bash",
+    id="https://openminds.om-i.org/instances/programmingLanguage/Bash",
     name="Bash",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q189248"),
 )
 ProgrammingLanguage.c = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/C",
+    id="https://openminds.om-i.org/instances/programmingLanguage/C",
     name="C",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q15777"),
 )
 ProgrammingLanguage.cplusplus = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/C++",
+    id="https://openminds.om-i.org/instances/programmingLanguage/C++",
     name="C++",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q2407"),
 )
 ProgrammingLanguage.csharp = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/C#",
+    id="https://openminds.om-i.org/instances/programmingLanguage/C#",
     name="C#",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q2370"),
 )
 ProgrammingLanguage.fortran = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/Fortran",
+    id="https://openminds.om-i.org/instances/programmingLanguage/Fortran",
     name="Fortran",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q83303"),
 )
 ProgrammingLanguage.glsl = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/GLSL",
+    id="https://openminds.om-i.org/instances/programmingLanguage/GLSL",
     name="GLSL",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q779819"),
 )
 ProgrammingLanguage.html = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/HTML",
+    id="https://openminds.om-i.org/instances/programmingLanguage/HTML",
     name="HTML",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q8811"),
 )
+ProgrammingLanguage.igor_pro = ProgrammingLanguage(
+    id="https://openminds.om-i.org/instances/programmingLanguage/IGORPro",
+    definition="C-like programming language of the correspondent scientific data analysis software and numerical computing environment IGOR Pro available for Windows or Mac operating systems.",
+    name="IGOR Pro",
+    synonyms=["IGOR Pro programming language"],
+)
 ProgrammingLanguage.java = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/Java",
+    id="https://openminds.om-i.org/instances/programmingLanguage/Java",
     name="Java",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q251"),
 )
 ProgrammingLanguage.java_script = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/JavaScript",
+    id="https://openminds.om-i.org/instances/programmingLanguage/JavaScript",
     name="JavaScript",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q2005"),
 )
 ProgrammingLanguage.matlab = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/MATLAB",
+    id="https://openminds.om-i.org/instances/programmingLanguage/MATLAB",
     name="MATLAB",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q37805571"),
 )
 ProgrammingLanguage.pascal = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/Pascal",
+    id="https://openminds.om-i.org/instances/programmingLanguage/Pascal",
     name="Pascal",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q81571"),
 )
 ProgrammingLanguage.php = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/PHP",
+    id="https://openminds.om-i.org/instances/programmingLanguage/PHP",
     name="PHP",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q59"),
 )
 ProgrammingLanguage.python = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/Python",
+    id="https://openminds.om-i.org/instances/programmingLanguage/Python",
     name="Python",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q28865"),
 )
 ProgrammingLanguage.r = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/R",
+    id="https://openminds.om-i.org/instances/programmingLanguage/R",
     name="R",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q206904"),
 )
 ProgrammingLanguage.ruby = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/Ruby",
+    id="https://openminds.om-i.org/instances/programmingLanguage/Ruby",
     name="Ruby",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q161053"),
 )
 ProgrammingLanguage.scala = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/Scala",
+    id="https://openminds.om-i.org/instances/programmingLanguage/Scala",
     name="Scala",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q460584"),
 )
 ProgrammingLanguage.shell = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/shell",
+    id="https://openminds.om-i.org/instances/programmingLanguage/shell",
     name="Shell",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q14663"),
 )
 ProgrammingLanguage.t_sql = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/T-SQL",
+    id="https://openminds.om-i.org/instances/programmingLanguage/T-SQL",
     name="T-SQL",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q1411245"),
 )
 ProgrammingLanguage.type_script = ProgrammingLanguage(
-    id="https://openminds.ebrains.eu/instances/programmingLanguage/TypeScript",
+    id="https://openminds.om-i.org/instances/programmingLanguage/TypeScript",
     name="TypeScript",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q978185"),
 )

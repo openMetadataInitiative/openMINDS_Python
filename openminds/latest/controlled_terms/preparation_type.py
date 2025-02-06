@@ -15,8 +15,8 @@ class PreparationType(LinkedMetadata):
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/PreparationType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/PreparationType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [
@@ -120,7 +120,7 @@ class PreparationType(LinkedMetadata):
 
 
 PreparationType.ex_vivo = PreparationType(
-    id="https://openminds.ebrains.eu/instances/preparationType/exVivo",
+    id="https://openminds.om-i.org/instances/preparationType/exVivo",
     definition="Something happening or existing outside a living body.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739736"),
     name="ex vivo",
@@ -128,14 +128,14 @@ PreparationType.ex_vivo = PreparationType(
     synonyms=["ex vivo technique"],
 )
 PreparationType.in_silico = PreparationType(
-    id="https://openminds.ebrains.eu/instances/preparationType/inSilico",
+    id="https://openminds.om-i.org/instances/preparationType/inSilico",
     definition="Conducted or produced by means of computer modelling or simulation.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0494742"),
     name="in silico",
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0572590"),
 )
 PreparationType.in_situ = PreparationType(
-    id="https://openminds.ebrains.eu/instances/preparationType/inSitu",
+    id="https://openminds.om-i.org/instances/preparationType/inSitu",
     definition="Something happening or being examined in the original place instead of being moved to another place",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0739593"),
     name="in situ",
@@ -143,7 +143,7 @@ PreparationType.in_situ = PreparationType(
     synonyms=["in situ technique"],
 )
 PreparationType.in_utero = PreparationType(
-    id="https://openminds.ebrains.eu/instances/preparationType/inUtero",
+    id="https://openminds.om-i.org/instances/preparationType/inUtero",
     definition="Something happening in, within, or while inside the uterus.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0739675"),
     name="in utero",
@@ -151,7 +151,7 @@ PreparationType.in_utero = PreparationType(
     synonyms=["in utero technique"],
 )
 PreparationType.in_vitro = PreparationType(
-    id="https://openminds.ebrains.eu/instances/preparationType/inVitro",
+    id="https://openminds.om-i.org/instances/preparationType/inVitro",
     definition="Something happening outside the body in artificial conditions (e.g., in a test tube or culture dish).",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739568"),
     name="in vitro",
@@ -159,7 +159,7 @@ PreparationType.in_vitro = PreparationType(
     synonyms=["in vitro technique"],
 )
 PreparationType.in_vivo = PreparationType(
-    id="https://openminds.ebrains.eu/instances/preparationType/inVivo",
+    id="https://openminds.om-i.org/instances/preparationType/inVivo",
     definition="Something happening or existing inside a living body.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739622"),
     name="in vivo",

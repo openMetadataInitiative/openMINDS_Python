@@ -107,7 +107,12 @@ class SoftwareVersion(LinkedMetadata):
         ),
         Property(
             "full_documentation",
-            ["openminds.v3.core.DOI", "openminds.v3.core.File", "openminds.v3.core.WebResource"],
+            [
+                "openminds.v3.core.DOI",
+                "openminds.v3.core.File",
+                "openminds.v3.core.ISBN",
+                "openminds.v3.core.WebResource",
+            ],
             "fullDocumentation",
             required=True,
             description="Non-abridged instructions, comments, and information for using a particular product.",
@@ -133,7 +138,12 @@ class SoftwareVersion(LinkedMetadata):
         ),
         Property(
             "has_parts",
-            "openminds.v3.core.SoftwareVersion",
+            [
+                "openminds.v3.core.ModelVersion",
+                "openminds.v3.core.SoftwareVersion",
+                "openminds.v3.sands.BrainAtlasVersion",
+                "openminds.v3.sands.CommonCoordinateSpaceVersion",
+            ],
             "hasPart",
             multiple=True,
             unique_items=True,

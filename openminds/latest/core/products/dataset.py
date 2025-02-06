@@ -15,8 +15,8 @@ class Dataset(LinkedMetadata):
     Structured information on data originating from human/animal studies or simulations (concept level).
     """
 
-    type_ = "https://openminds.ebrains.eu/core/Dataset"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Dataset"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

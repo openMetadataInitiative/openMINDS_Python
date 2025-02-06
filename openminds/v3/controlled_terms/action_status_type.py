@@ -77,7 +77,7 @@ class ActionStatusType(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,66 @@ class ActionStatusType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+ActionStatusType.active = ActionStatusType(
+    id="https://openminds.ebrains.eu/instances/actionStatusType/active",
+    definition="An in-progress action.",
+    name="active",
+    preferred_ontology_identifier=IRI("https://schema.org/ActiveActionStatus"),
+    synonyms=["active action status", "active action"],
+)
+ActionStatusType.completed = ActionStatusType(
+    id="https://openminds.ebrains.eu/instances/actionStatusType/completed",
+    definition="An action that has already taken place with a successful outcome.",
+    name="completed",
+    preferred_ontology_identifier=IRI("https://schema.org/CompletedActionStatus"),
+    synonyms=["completed action status", "completed action", "finished successfully"],
+)
+ActionStatusType.failed = ActionStatusType(
+    id="https://openminds.ebrains.eu/instances/actionStatusType/failed",
+    definition="An action that failed to complete or completed but produced an error.",
+    name="failed",
+    preferred_ontology_identifier=IRI("https://schema.org/FailedActionStatus"),
+    synonyms=["failed action status", "failed action", "finished unsuccessfully", "error"],
+)
+ActionStatusType.inactive = ActionStatusType(
+    id="https://openminds.ebrains.eu/instances/actionStatusType/inactive",
+    definition="A pending or suspended action.",
+    name="inactive",
+    synonyms=["inactive action status", "inactive action"],
+)
+ActionStatusType.paused = ActionStatusType(
+    id="https://openminds.ebrains.eu/instances/actionStatusType/paused",
+    definition="A temporarily stopped action that can be resumed at a later point in time.",
+    name="paused",
+    synonyms=["paused action type", "paused action", "suspended"],
+)
+ActionStatusType.pending = ActionStatusType(
+    id="https://openminds.ebrains.eu/instances/actionStatusType/pending",
+    definition="An action which is awaiting execution.",
+    name="pending",
+    synonyms=["queued", "pending action type", "pending action"],
+)
+ActionStatusType.potential = ActionStatusType(
+    id="https://openminds.ebrains.eu/instances/actionStatusType/potential",
+    definition="A description of an action that is supported.",
+    name="potential",
+    preferred_ontology_identifier=IRI("https://schema.org/PotentialActionStatus"),
+    synonyms=["potential action type", "potential action"],
+)

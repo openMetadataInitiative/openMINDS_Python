@@ -14,8 +14,8 @@ class Person(LinkedMetadata):
     Structured information on a person.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/Person"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/Person"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

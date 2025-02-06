@@ -77,7 +77,7 @@ class MeasuredQuantity(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,65 @@ class MeasuredQuantity(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+MeasuredQuantity.chloride_reversal_potential = MeasuredQuantity(
+    id="https://openminds.ebrains.eu/instances/measuredQuantity/chlorideReversalPotential",
+    definition="The reversal potential for chloride ions.",
+    name="chloride reversal potential",
+)
+MeasuredQuantity.compensation_current = MeasuredQuantity(
+    id="https://openminds.ebrains.eu/instances/measuredQuantity/compensationCurrent",
+    definition="Current injected into a cell to maintain the membrane potential at a target value.",
+    name="compensation current",
+)
+MeasuredQuantity.holding_potential = MeasuredQuantity(
+    id="https://openminds.ebrains.eu/instances/measuredQuantity/holdingPotential",
+    definition="Measured membrane potential during a voltage-clamp protocol.",
+    name="holding potential",
+    synonyms=["measured holding potential"],
+)
+MeasuredQuantity.input_resistance = MeasuredQuantity(
+    id="https://openminds.ebrains.eu/instances/measuredQuantity/inputResistance",
+    definition="Total resistance observed by the amplifier during an electrophysiological recording.",
+    name="input resistance",
+    synonyms=["access resistance"],
+)
+MeasuredQuantity.liquid_junction_potential = MeasuredQuantity(
+    id="https://openminds.ebrains.eu/instances/measuredQuantity/liquidJunctionPotential",
+    definition="A potential difference that develops when two solutions of electrolytes of different concentrations are in contact with each other.",
+    name="liquid junction potential",
+)
+MeasuredQuantity.membrane_potential = MeasuredQuantity(
+    id="https://openminds.ebrains.eu/instances/measuredQuantity/membranePotential",
+    definition="A quality inhering in a cell's plasma membrane by virtue of the electric potential difference across it.",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106774"),
+    name="membrane potential",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0106774"),
+)
+MeasuredQuantity.seal_resistance = MeasuredQuantity(
+    id="https://openminds.ebrains.eu/instances/measuredQuantity/sealResistance",
+    definition="Resistance of the seal between the pipette tip and cell membrane in patch-clamp recording.",
+    name="seal resistance",
+)
+MeasuredQuantity.series_resistance = MeasuredQuantity(
+    id="https://openminds.ebrains.eu/instances/measuredQuantity/seriesResistance",
+    definition="Resistance of the electrode during an electrophysiological recording.",
+    name="series resistance",
+    synonyms=["access resistance", "electrode resistance"],
+)

@@ -15,8 +15,8 @@ class QuantitativeValueArray(LinkedMetadata):
     A representation of an array of quantitative values, optionally with uncertainties.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/QuantitativeValueArray"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/QuantitativeValueArray"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

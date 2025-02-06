@@ -77,7 +77,7 @@ class SetupType(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,35 @@ class SetupType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+SetupType.acquisition_system = SetupType(
+    id="https://openminds.ebrains.eu/instances/setupType/acquisitionSystem",
+    definition="An 'acquisition system' is a setup type with the purpose of collecting data.",
+    name="acquisition system",
+)
+SetupType.computing_system = SetupType(
+    id="https://openminds.ebrains.eu/instances/setupType/computingSystem",
+    definition="A 'computing system' is a setup type with the purpose of performing computations.",
+    name="computing system",
+)
+SetupType.stimulation_system = SetupType(
+    id="https://openminds.ebrains.eu/instances/setupType/stimulationSystem",
+    definition="A 'stimulation system' is a setup type with the purpose of stimulating a specimen.",
+    name="stimulation system",
+)

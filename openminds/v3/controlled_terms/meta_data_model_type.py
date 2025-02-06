@@ -77,7 +77,7 @@ class MetaDataModelType(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,40 @@ class MetaDataModelType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+MetaDataModelType.common_data_elements = MetaDataModelType(
+    id="https://openminds.ebrains.eu/instances/metaDataModelType/commonDataElements",
+    definition="Common Data Elements (CDEs) define standardized key terms or concepts for diseases in form of a data dictionary that can be used in both relational and graph metadata models.",
+    name="common data elements",
+)
+MetaDataModelType.data_repository_model = MetaDataModelType(
+    id="https://openminds.ebrains.eu/instances/metaDataModelType/dataRepositoryModel",
+    definition="A data repository model defines the file and folder naming and structure as well as partially the file content (metadata definitions) and preferred format.",
+    name="data repository model",
+)
+MetaDataModelType.graph_metadata_model = MetaDataModelType(
+    id="https://openminds.ebrains.eu/instances/metaDataModelType/graphMetadataModel",
+    definition="A graph metadata model defines a set of modular metadata schemas (including their relations) as architectural base of a graph database for describing the products represented in that database.",
+    name="graph metadata model",
+)
+MetaDataModelType.relational_metadata_model = MetaDataModelType(
+    id="https://openminds.ebrains.eu/instances/metaDataModelType/relationalMetadataModel",
+    definition="A relational metadata model defines a set of tabular metadata schemas (including their relations) as architectural base of a relational database for describing the products represented in that database.",
+    name="relational metadata model",
+)

@@ -20,23 +20,31 @@ class Person(LinkedMetadata):
 
     properties = [
         Property(
+            "affiliations",
+            "openminds.v1.core.Affiliation",
+            "affiliation",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="Declaration of a person being closely associated to an organization.",
+            instructions="Add the current and, if necessary, past affiliations of this person",
+        ),
+        Property(
+            "contact_information",
+            "openminds.v1.core.ContactInformation",
+            "contactInformation",
+            description="Any available way used to contact a person or business (e.g., address, phone number, email address, etc.).",
+            instructions="Add the contact information of this person.",
+        ),
+        Property(
             "digital_identifiers",
-            "openminds.v1.core.DigitalIdentifier",
+            "openminds.v1.core.ORCID",
             "digitalIdentifier",
             multiple=True,
             unique_items=True,
             min_items=1,
             description="Digital handle to identify objects or legal persons.",
             instructions="Add one or several globally unique and persistent digital identifier for this person.",
-        ),
-        Property(
-            "email",
-            str,
-            "email",
-            formatting="text/plain",
-            required=True,
-            description="Address to which or from which an electronic mail can be sent.",
-            instructions="Enter the email address of this person.",
         ),
         Property(
             "family_name",
@@ -57,11 +65,20 @@ class Person(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, digital_identifiers=None, email=None, family_name=None, given_name=None):
+    def __init__(
+        self,
+        id=None,
+        affiliations=None,
+        contact_information=None,
+        digital_identifiers=None,
+        family_name=None,
+        given_name=None,
+    ):
         return super().__init__(
             id=id,
+            affiliations=affiliations,
+            contact_information=contact_information,
             digital_identifiers=digital_identifiers,
-            email=email,
             family_name=family_name,
             given_name=given_name,
         )

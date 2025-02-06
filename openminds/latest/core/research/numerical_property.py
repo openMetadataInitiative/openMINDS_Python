@@ -14,8 +14,8 @@ class NumericalProperty(EmbeddedMetadata):
     Structured information about a property of some entity or process whose value is a number.
     """
 
-    type_ = "https://openminds.ebrains.eu/core/NumericalProperty"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
+    type_ = "https://openminds.om-i.org/types/NumericalProperty"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
     properties = [

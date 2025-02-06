@@ -23,7 +23,7 @@ from .operating_system import OperatingSystem
 from .organ import Organ
 from .phenotype import Phenotype
 from .preparation_type import PreparationType
-from .product_accessibility import productAccessibility
+from .product_accessibility import ProductAccessibility
 from .programming_language import ProgrammingLanguage
 from .qualitative_overlap import QualitativeOverlap
 from .software_application_category import SoftwareApplicationCategory
@@ -33,6 +33,6 @@ from .species import Species
 from .strain import Strain
 from .technique import Technique
 from .term_suggestion import TermSuggestion
-from .terminology import StudyTargetType
+from .terminology import Terminology
 from .tissue_sample_type import TissueSampleType
 from .unit_of_measurement import UnitOfMeasurement

@@ -77,7 +77,7 @@ class EthicsAssessment(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
-            instructions="Enter one or several synonyms (inlcuding abbreviations) for this controlled term.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
         ),
     ]
 
@@ -102,3 +102,38 @@ class EthicsAssessment(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(cls, name):
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                cls._instance_lookup[instance.name] = instance
+                if instance.synonyms:
+                    for synonym in instance.synonyms:
+                        cls._instance_lookup[synonym] = instance
+        return cls._instance_lookup[name]
+
+
+EthicsAssessment.eu_compliant = EthicsAssessment(
+    id="https://openminds.ebrains.eu/instances/ethicsAssessment/EUCompliant",
+    definition="Data are ethically approved in compliance with EU law. No additional ethics assessment was made by the data sharing initiative.",
+    description="Data are ethically approved in compliance with EU law. No additional ethics assessment was made by the data sharing initiative. This is typically true for all, human post-mortem data, human cross-subject statistics, non-primate vertebrate animals as well as cephalopods.",
+    name="EU compliant",
+)
+EthicsAssessment.eu_compliantplus = EthicsAssessment(
+    id="https://openminds.ebrains.eu/instances/ethicsAssessment/EUCompliant+",
+    definition="Data are ethically approved in compliance with EU law and an additional assessment was made by the data sharing initiative.",
+    description="Data are ethically approved in compliance with EU law and an additional assessment was made by the data sharing initiative. This is typically true for all living human single-subject data as well as all non-human primate data.",
+    name="EU compliant +",
+)
+EthicsAssessment.not_required = EthicsAssessment(
+    id="https://openminds.ebrains.eu/instances/ethicsAssessment/notRequired",
+    definition="An ethics assessment is 'not required' when no ethics approval was needed to conduct the study.",
+    description="An ethics assessment is 'not required' when no ethics approval was needed to conduct the study. This is typically true for all simulated and invertebrate data (except cephalopods).",
+    name="not required",
+)
