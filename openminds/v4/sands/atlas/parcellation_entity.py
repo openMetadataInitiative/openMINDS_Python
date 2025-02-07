@@ -6959,6 +6959,12 @@ ParcellationEntity.jba_temporal_insula = ParcellationEntity(
     lookup_label="JBA_temporalInsula",
     name="temporal insula",
 )
+ParcellationEntity.jba_temporal_lobe = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/JBA_temporalLobe",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/JBA_cerebralCortex"}],
+    lookup_label="JBA_temporalLobe",
+    name="temporal lobe",
+)
 ParcellationEntity.jba_temporo_parietal_junction = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/JBA_temporo-parietalJunction",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/JBA_temporalLobe"}],
