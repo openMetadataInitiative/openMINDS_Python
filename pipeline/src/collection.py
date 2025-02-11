@@ -34,6 +34,18 @@ class Collection:
 
     def __iter__(self):
         return iter(self.nodes.values())
+    
+    def __eq__(self, other):
+
+        # The current implementation assumes that nodes in both graphs are connected with the same link number.
+        for node_id in self.nodes:
+            if node_id in other.nodes.keys():
+                if self.nodes[node_id] != other.nodes[node_id]:
+                    return False
+            else:
+                return False
+
+        return True
 
     def add(self, *nodes):
         """
