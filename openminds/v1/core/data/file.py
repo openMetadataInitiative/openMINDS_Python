@@ -39,7 +39,7 @@ class File(LinkedMetadata):
         Property(
             "descended_from",
             [
-                "openminds.v1.controlled_terms.BehavioralTask",
+                "openminds.v1.core.BehavioralTask",
                 "openminds.v1.core.File",
                 "openminds.v1.core.FileBundle",
                 "openminds.v1.core.SubjectGroupState",
