@@ -53,6 +53,8 @@ def build_fake_node(cls, depth=0):
                 value = datetime.now()
             elif date in property.types:
                 value = date.today()
+            elif bool in property.types:
+                value = random.choice([True, False])
             else:
                 raise TypeError(f"unexpected type(s): {property.types}")
     return cls(**data)
