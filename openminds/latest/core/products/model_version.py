@@ -30,6 +30,18 @@ class ModelVersion(LinkedMetadata):
             instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
+            "configuration",
+            [
+                "openminds.latest.core.Configuration",
+                "openminds.latest.core.File",
+                "openminds.latest.core.PropertyValueList",
+                "openminds.latest.core.WebResource",
+            ],
+            "configuration",
+            description="no description available",
+            instructions="Add the configuration information for this model version.",
+        ),
+        Property(
             "copyright",
             "openminds.latest.core.Copyright",
             "copyright",
@@ -376,6 +388,7 @@ class ModelVersion(LinkedMetadata):
         self,
         id=None,
         accessibility=None,
+        configuration=None,
         copyright=None,
         custodians=None,
         description=None,
@@ -406,6 +419,7 @@ class ModelVersion(LinkedMetadata):
         return super().__init__(
             id=id,
             accessibility=accessibility,
+            configuration=configuration,
             copyright=copyright,
             custodians=custodians,
             description=description,
