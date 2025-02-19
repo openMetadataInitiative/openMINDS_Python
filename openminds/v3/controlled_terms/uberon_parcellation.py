@@ -528,36 +528,33 @@ UBERONParcellation.anterior_column_of_fornix = UBERONParcellation(
 )
 UBERONParcellation.anterior_commissure = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/anteriorCommissure",
-    definition="A bundle of myelinated nerve fibers passing transversely through the lamina terminalis and connecting symmetrical parts of the two cerebral hemispheres; it consists of a smaller anterior part (pars anterior commissurae anterioris) and a larger posterior part (pars posterior commissurae anterioris).",
-    description="'Anterior commissure' is an intercerebral commissure and ventral commissure.",
+    definition="Is an intercerebral commissure and ventral commissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000935)]",
+    description="A bundle of myelinated nerve fibers passing transversely through the lamina terminalis and connecting symmetrical parts of the two cerebral hemispheres; it consists of a smaller anterior part (pars anterior commissurae anterioris) and a larger posterior part (pars posterior commissurae anterioris). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000935)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100692"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000935#anterior-commissure-1"),
     name="anterior commissure",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000935"),
+    synonyms=["anterior cerebral commissure", "commissura anterior cerebri", "commissura rostralis"],
 )
 UBERONParcellation.anterior_commissure_anterior_part = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/anteriorCommissureAnteriorPart",
-    definition="'Anterior commissure anterior part' is a commissure of telencephalon. It is part of the anterior commissure.",
-    description="The part of the anterior commissure that contains fibers interconnecting the anterior olfactory nucleus in each hemisphere.  The fibers extend from the commissural region of the anterior commissure anteriorly into the olfactory bulb.  Within the commissural portion, the fibers lie in the anterior portion, but cannot be easily distinguished from the posterior fibers on gross dissection.  (Adapted from Heimer, 1996)",
+    definition="Is a commissure of telencephalon. Is part of the anterior commissure. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003039) ('is_a' and 'relationship')]",
+    description="The horseshoe-shaped tract that connects the two olfactory bulbs. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003039)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100693"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003039#anterior-commissure-anterior-part-1"),
     name="anterior commissure anterior part",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003039"),
     synonyms=[
-        "anterior commissure",
-        "anterior commissure olfactory limb",
         "anterior commissure pars anterior",
-        "anterior part",
+        "anterior commissure, anterior part",
         "anterior part of anterior commissure",
-        "commissura anterior",
-        "commissura rostralis",
-        "crus anterius",
-        "olfactory limb",
+        "commissura anterior, crus anterius",
+        "commissura anterior, pars anterior",
+        "commissura anterior, pars olfactoria",
+        "commissura rostralis, pars anterior",
         "olfactory limb of anterior commissure",
         "olfactory part of anterior commissure",
-        "pars anterior",
         "pars anterior commissurae anterioris",
-        "pars olfactoria",
         "pars olfactoria commissurae anterioris",
     ],
 )
@@ -579,6 +576,14 @@ UBERONParcellation.anterior_horn_of_lateral_ventricle = UBERONParcellation(
         "frontal horn of lateral ventricle",
         "ventriculus lateralis",
     ],
+)
+UBERONParcellation.anterior_hypothalamic_commissure = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/anteriorHypothalamicCommissure",
+    definition="Is a commissure of diencephalon. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002694)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002694#anterior-hypothalamic-commissure-1"),
+    name="anterior hypothalamic commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002694"),
+    synonyms=["anterior hypothalamic commissure (Ganser)", "anterior hypothalamic decussation of Ganser"],
 )
 UBERONParcellation.anterior_hypothalamic_region = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/anteriorHypothalamicRegion",
@@ -1514,6 +1519,14 @@ UBERONParcellation.brain_blood_vessel = UBERONParcellation(
     name="brain blood vessel",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003499"),
     synonyms=["blood vessel of brain"],
+)
+UBERONParcellation.brain_commissure = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainCommissure",
+    definition="Is a nervous system commissure and tract of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005970)]",
+    description="Any of the nerve fiber tracts that span the longitudinal fissure between the cerebral and/or cerebellar hemispheres of the brain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005970)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005970#brain-commissure"),
+    name="brain commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005970"),
 )
 UBERONParcellation.brain_endothelium = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainEndothelium",
@@ -3211,6 +3224,22 @@ UBERONParcellation.collection_of_basal_ganglia = UBERONParcellation(
     name="collection of basal ganglia",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010011"),
 )
+UBERONParcellation.commissura_rostral_pars_dorsalis = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/commissuraRostralParsDorsalis",
+    definition="Is a cerebral hemisphere white matter. Is part of the anterior commissure. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000638) ('is_a' and 'relationship')]",
+    description="Part of the anterior commissure which is located immediately ventral to the supracommissural nucleus of area ventralis telencephali.. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000638)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000638#commissura-rostral-pars-dorsalis"),
+    name="commissura rostral, pars dorsalis",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000638"),
+)
+UBERONParcellation.commissura_rostral_pars_ventralis = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/commissuraRostralParsVentralis",
+    definition="Is a cerebral hemisphere white matter. Is part of the anterior commissure. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000185) ('is_a' and 'relationship')]",
+    description="Part of the anterior commissure which abuts the preoptic region dorsally. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000185)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000185#commissura-rostral-pars-ventralis"),
+    name="commissura rostral, pars ventralis",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000185"),
+)
 UBERONParcellation.commissural_nucleus_of_the_solitary_tract = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/commissuralNucleusOfTheSolitaryTract",
     definition="'Commissural nucleus of the solitary tract' is a nucleus of solitary tract.",
@@ -3239,6 +3268,46 @@ UBERONParcellation.commissural_nucleus_of_vagus_nerve = UBERONParcellation(
         "nucleus commissuralis nervi vagi",
         "nucleus of inferior commissure",
         "nucleus of inferior commisure",
+    ],
+)
+UBERONParcellation.commissure_of_inferior_colliculus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/commissureOfInferiorColliculus",
+    definition="Is a brain commissure. Is part of the inferior colliculus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003028) ('is_a' and 'relationship')]",
+    description="A commissure that is part of a inferior colliculus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003028)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003028#commissure-of-inferior-colliculus-1"),
+    name="commissure of inferior colliculus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003028"),
+    synonyms=[
+        "caudal colliculus commissure",
+        "commissure of caudal colliculus",
+        "commissure of inferior colliculi",
+        "commissure of posterior colliculus",
+        "commissure of posterior corpus quadrigeminum",
+        "inferior collicular commissure",
+        "inferior colliculus commissure",
+        "posterior colliculus commissure",
+        "posterior corpus quadrigeminum commissure",
+    ],
+)
+UBERONParcellation.commissure_of_superior_colliculus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/commissureOfSuperiorColliculus",
+    definition="Is a brain commissure. Is part of the white matter of superior colliculus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002583) ('is_a' and 'relationship')]",
+    description="A commissure that is part of a superior colliculus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002583)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002583#commissure-of-superior-colliculus-1"),
+    name="commissure of superior colliculus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002583"),
+    synonyms=[
+        "anterior colliculus commissure",
+        "anterior corpus quadrigeminum commissure",
+        "commissure of anterior colliculus",
+        "commissure of anterior corpus quadrigeminum",
+        "commissure of cranial colliculus",
+        "commissure of optic tectum",
+        "commissure of superior colliculi",
+        "cranial colliculus commissure",
+        "intertectal commissure",
+        "optic tectum commissure",
+        "superior colliculus commissure",
     ],
 )
 UBERONParcellation.composite_part_spanning_multiple_base_regional_parts_of_brain = UBERONParcellation(
@@ -4316,6 +4385,15 @@ UBERONParcellation.dorsal_tegmental_nucleus_pars_ventralis = UBERONParcellation(
         "TDV",
     ],
 )
+UBERONParcellation.dorsal_telencephalic_commissure = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/dorsalTelencephalicCommissure",
+    definition="Is a commissure of telencephalon. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005340)]",
+    description="A fiber tracts that connect the dorsal region of the two cerebral hemispheres and span the longitudinal fissure, including the corpus callosum and hippocampal commissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005340)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005340#dorsal-telencephalic-commissure"),
+    name="dorsal telencephalic commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005340"),
+    synonyms=["dorsal commissure"],
+)
 UBERONParcellation.dorsal_trigeminal_tract = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/dorsalTrigeminalTract",
     definition="'Dorsal trigeminal tract' is a trigeminothalamic tract and tract of brain. It is part of the pontine tegmentum.",
@@ -5112,12 +5190,13 @@ UBERONParcellation.habenula = UBERONParcellation(
 )
 UBERONParcellation.habenular_commissure = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/habenularCommissure",
-    definition="'Habenular commissure' is a ventral commissure, commissure of diencephalon and thalamic fiber tract. It is part of the habenula and diencephalic white matter.",
-    description="A brain commissure that is situated in front of the pineal gland and connects the habenular nucleus on one side of the diencephalon with that on the other side.",
+    definition="Is a ventral commissure, commissure of diencephalon and thalamic fiber tract. Is part of the habenula and the diencephalic white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001909) ('is_a' and 'relationship')]",
+    description="A brain commissure that is situated in front of the pineal gland and connects the habenular nucleus on one side of the diencephalon with that on the other side. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001909)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104855"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001909#habenular-commissure-1"),
     name="habenular commissure",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001909"),
+    synonyms=["commissura habenularum", "commissure habenularum"],
 )
 UBERONParcellation.habenulointerpeduncular_tract_of_diencephalon = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/habenulointerpeduncularTractOfDiencephalon",
@@ -5214,8 +5293,8 @@ UBERONParcellation.hindbrain = UBERONParcellation(
 )
 UBERONParcellation.hindbrain_commissure = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/hindbrainCommissure",
-    definition="'Hindbrain commissure' is a brain commissure. It is part of the hindbrain.",
-    description="Any commissure within the hindbrain.",
+    definition="Is a brain commissure. Is part of the hindbrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034763) ('is_a' and 'relationship')]",
+    description="Any commissure within the hindbrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034763)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0732568"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034763#hindbrain-commissure"),
     name="hindbrain commissure",
@@ -5536,6 +5615,13 @@ UBERONParcellation.inferior_occipitofrontal_fasciculus = UBERONParcellation(
         "inferior fronto-occipital fasciculus",
     ],
 )
+UBERONParcellation.inferior_olivary_commissure = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/inferiorOlivaryCommissure",
+    definition="Is a hindbrain commissure. Is part of the medulla oblongata and the brainstem white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0015250) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0015250#inferior-olivary-commissure"),
+    name="inferior olivary commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0015250"),
+)
 UBERONParcellation.inferior_olivary_complex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/inferiorOlivaryComplex",
     definition="'Inferior olivary complex' is a nuclear complex of neuraxis and gray matter of hindbrain. It is part of the olivary body.",
@@ -5714,6 +5800,14 @@ UBERONParcellation.intercalated_amygdaloid_nuclei = UBERONParcellation(
         "nucleus amygdalae intercalatus",
         "nucleus intercalatus amygdalae",
     ],
+)
+UBERONParcellation.intercerebral_commissure = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/intercerebralCommissure",
+    definition="Is a commissure of telencephalon. Is part of the cerebral hemisphere white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002473) ('is_a' and 'relationship')]",
+    description="A commissure that connects the two cerebral hemispheres. Examples: anterior commissure, corpus callosum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002473)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002473#intercerebral-commissure"),
+    name="intercerebral commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002473"),
 )
 UBERONParcellation.intergeniculate_leaflet_of_the_lateral_geniculate_complex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/intergeniculateLeafletOfTheLateralGeniculateComplex",
@@ -10315,19 +10409,13 @@ UBERONParcellation.postcentral_sulcus_of_parietal_lobe = UBERONParcellation(
 )
 UBERONParcellation.postcommissural_fornix_of_brain = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/postcommissuralFornixOfBrain",
-    definition="'Postcommissural fornix of brain' is a tract of diencephalon. It is part of the fornix of brain and lateral hypothalamic area.",
-    description="The posterior fibers of the fornix, which continue through the hypothalamus to the mammillary bodies; then to the anterior nuclei of thalamus, which project to the cingulate cortex.",
+    definition="Is a tract of diencephalon. Is part of the fornix of brain and the lateral hypothalamic area. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003016) ('is_a' and 'relationship')]",
+    description="The posterior fibers of the fornix, which continue through the hypothalamus to the mammillary bodies; then to the anterior nuclei of thalamus, which project to the cingulate cortex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003016)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109072"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003016#postcommissural-fornix"),
     name="postcommissural fornix of brain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003016"),
-    synonyms=[
-        "columna posterior fornicis",
-        "fornix (entering Corpus mamillare)",
-        "fornix postcommissuralis",
-        "pofx",
-        "postcommissural fornix",
-    ],
+    synonyms=["fornix (entering Corpus mamillare)", "postcommissural fornix"],
 )
 UBERONParcellation.posterior_cingulate_cortex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/posteriorCingulateCortex",
@@ -10383,12 +10471,13 @@ UBERONParcellation.posterior_column_of_fornix = UBERONParcellation(
 )
 UBERONParcellation.posterior_commissure = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/posteriorCommissure",
-    definition="'Posterior commissure' is a commissure of diencephalon. It is part of the diencephalic white matter.",
-    description="Rounded band of white fibers crossing the middle line on the dorsal aspect of the upper end of the cerebral aqueduct. It is important in the bilateral pupillary light reflex. Its fibers acquire their medullary sheaths early, but their connections have not been definitely determined. Most of them have their origin in a nucleus, the nucleus of the posterior commissure (nucleus of Darkschewitsch), which lies in the central gray substance of the upper end of the cerebral aqueduct, in front of the nucleus of the oculomotor nerve. Some are probably derived from the posterior part of the thalamus and from the superior colliculus, whereas others are believed to be continued downward into the medial longitudinal fasciculus. The posterior commissure interconnects the pretectal nuclei, mediating the consensual pupillary light reflex[WP]. Diencephalic tract which is located in the vicinity of the dorsal diencephalon and mesencephalon and connects the pretectal nuclei. From Neuroanatomy of the Zebrafish Brain[ZFA].",
+    definition="Is a commissure of diencephalon. Is part of the diencephalic white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000936) ('is_a' and 'relationship')]",
+    description="Rounded band of white fibers crossing the middle line on the dorsal aspect of the upper end of the cerebral aqueduct. It is important in the bilateral pupillary light reflex. Its fibers acquire their medullary sheaths early, but their connections have not been definitely determined. Most of them have their origin in a nucleus, the nucleus of the posterior commissure (nucleus of Darkschewitsch), which lies in the central gray substance of the upper end of the cerebral aqueduct, in front of the nucleus of the oculomotor nerve. Some are probably derived from the posterior part of the thalamus and from the superior colliculus, whereas others are believed to be continued downward into the medial longitudinal fasciculus. The posterior commissure interconnects the pretectal nuclei, mediating the consensual pupillary light reflex. Diencephalic tract which is located in the vicinity of the dorsal diencephalon and mesencephalon and connects the pretectal nuclei. From Neuroanatomy of the Zebrafish Brain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000936)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109090"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000936#posterior-commissure-1"),
     name="posterior commissure",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000936"),
+    synonyms=["caudal commissure", "epithalamic commissure"],
 )
 UBERONParcellation.posterior_horn_lateral_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/posteriorHornLateralVentricle",
@@ -10573,8 +10662,8 @@ UBERONParcellation.posterior_parahippocampal_gyrus = UBERONParcellation(
 )
 UBERONParcellation.posterior_part_of_anterior_commissure = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/posteriorPartOfAnteriorCommissure",
-    definition="'Posterior part of anterior commissure' is a commissure of telencephalon. It is part of the anterior commissure.",
-    description="The main part of the anterior commissure, distinct from the anterior olfactory part, that interconnects the temporal lobes. (Maryann Martone)",
+    definition="Is a commissure of telencephalon. Is part of the anterior commissure. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003043) ('is_a' and 'relationship')]",
+    description="The major forebrain commissure that connects the two temporal lobes of the cortex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003043)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109121"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0003043#posterior-part-of-anterior-commissure-1"
@@ -10582,16 +10671,13 @@ UBERONParcellation.posterior_part_of_anterior_commissure = UBERONParcellation(
     name="posterior part of anterior commissure",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003043"),
     synonyms=[
-        "anterior commissure",
         "anterior commissure pars posterior",
         "anterior commissure temporal limb",
-        "commissura anterior",
-        "commissura rostralis",
-        "crus posterius",
-        "pars posterior",
+        "anterior commissure, posterior part",
+        "commissura anterior, crus posterius",
+        "commissura anterior, pars posterior",
+        "commissura rostralis, pars posterior",
         "pars posterior commissurae anterioris",
-        "posterior part",
-        "temporal limb",
         "temporal limb of anterior commissure",
     ],
 )
@@ -10717,6 +10803,14 @@ UBERONParcellation.postnatal_subventricular_zone = UBERONParcellation(
         "SVZ",
     ],
 )
+UBERONParcellation.postoptic_commissure = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/postopticCommissure",
+    definition="Is a commissure of diencephalon. Is part of the diencephalic white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003936) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003936#postoptic-commissure"),
+    name="postoptic commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003936"),
+    synonyms=["POC", "post optic commissure", "post-optic commissure"],
+)
 UBERONParcellation.postsubiculum = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/postsubiculum",
     definition="'Postsubiculum' is a regional part of brain. It is part of the retrohippocampal region.",
@@ -10756,13 +10850,13 @@ UBERONParcellation.precentral_operculum = UBERONParcellation(
 )
 UBERONParcellation.precommissural_fornix_of_forebrain = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/precommissuralFornixOfForebrain",
-    definition="'Precommissural fornix of forebrain' is a tract of brain. It is part of the fornix of brain.",
-    description="Part of fornix extending from the body that curves ventrally rostral to the crossing of the anterior commissure ending in the septal nuclei",
+    definition="Is a tract of brain. Is part of the fornix of brain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014539) ('is_a' and 'relationship')]",
+    description="Part of fornix extending from the body that curves ventrally rostral to the crossing of the anterior commissure ending in the septal nuclei. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014539)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109197"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014539#precommissural-fornix"),
     name="precommissural fornix of forebrain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014539"),
-    synonyms=["fornix precommissuralis", "pcf", "precommissural fornix"],
+    synonyms=["fornix precommissuralis", "precommissural fornix"],
 )
 UBERONParcellation.precuneus_cortex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/precuneusCortex",
@@ -12542,6 +12636,20 @@ UBERONParcellation.suprageniculate_nucleus_of_thalamus = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003033"),
     synonyms=["nucleus suprageniculatus", "SG", "suprageniculate nucleus", "suprageniculate thalamic nucleus"],
 )
+UBERONParcellation.supramammillary_commissure = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/supramammillaryCommissure",
+    definition="Is a commissure of diencephalon. Is part of the posterior hypothalamic region. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002991) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002991#supramammillary-commissure-1"),
+    name="supramammillary commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002991"),
+    synonyms=[
+        "commissure of forel",
+        "commissure y",
+        "decussation supramamilaris",
+        "postmammillary decussation",
+        "supramammillary decussation",
+    ],
+)
 UBERONParcellation.supramammillary_nucleus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/supramammillaryNucleus",
     definition="'Supramammillary nucleus' is a hypothalamic nucleus. It is part of the mammillary body.",
@@ -13233,6 +13341,14 @@ UBERONParcellation.ventral_cochlear_nucleus = UBERONParcellation(
         "ventral division of cochlear nucleus",
     ],
 )
+UBERONParcellation.ventral_commissure = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/ventralCommissure",
+    definition="Is a commissure of telencephalon. Is part of the ventral part of telencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005341) ('is_a' and 'relationship')]",
+    description="The fiber tracts that connect the ventral region of the two cerebral hemispheres and span the longitudinal fissure, including the anterior and the habenular commissures. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005341)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005341#ventral-commissure"),
+    name="ventral commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005341"),
+)
 UBERONParcellation.ventral_external_arcuate_fiber_bundle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/ventralExternalArcuateFiberBundle",
     definition="'Ventral external arcuate fiber bundle' is a neuron projection bundle and central nervous system cell part cluster. It is part of the medulla oblongata.",
@@ -13592,6 +13708,15 @@ UBERONParcellation.ventral_posteromedial_nucleus_of_thalamus = UBERONParcellatio
         "ventroposteromedial nucleus of the thalamus",
         "VPM",
     ],
+)
+UBERONParcellation.ventral_rhombencephalic_commissure_medulla_oblongata = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/ventralRhombencephalicCommissureMedullaOblongata",
+    definition="Is a white matter of medulla oblongata. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000985)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:2000985#ventral-rhombencephalic-commissure-medulla-oblongata"
+    ),
+    name="ventral rhombencephalic commissure medulla oblongata",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000985"),
 )
 UBERONParcellation.ventral_striatum = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/ventralStriatum",
