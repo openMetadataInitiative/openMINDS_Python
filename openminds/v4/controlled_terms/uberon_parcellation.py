@@ -608,11 +608,18 @@ UBERONParcellation.anterior_limb_of_internal_capsule = UBERONParcellation(
 )
 UBERONParcellation.anterior_lobe_of_cerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorLobeOfCerebellum",
-    definition="The region of the cerebellum that is anterior to the primary fissure.",
-    description="'Anterior lobe of cerebellum' is a cerebellum lobe.",
+    definition="Is a cerebellum lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002131)]",
+    description="The region of the cerebellum that is anterior to the primary fissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002131)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100713"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002131#anterior-lobe-of-cerebellum"),
     name="anterior lobe of cerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002131"),
+    synonyms=[
+        "anterior cerebellar lobe",
+        "anterior lobe of the cerebellum",
+        "cerebellar anterior lobe",
+        "cerebellum anterior lobe",
+    ],
 )
 UBERONParcellation.anterior_median_eminence = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorMedianEminence",
@@ -822,6 +829,15 @@ UBERONParcellation.anterior_quadrangular_lobule = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003015#anterior-quadrangular-lobule-1"),
     name="anterior quadrangular lobule",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003015"),
+)
+UBERONParcellation.anterior_spinocerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorSpinocerebellarTract",
+    definition="Is a tract of brain. Is part of the medulla oblongata and the spinocerebellar tract. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002987) ('is_a' and 'relationship')]",
+    description="Runs through the ventrolateral surface of the spinal cord. It enters the cerebellum through the superior cerebellar peduncle. It crosses the midline at the segmental level and recrosses in the cerebellum. Its terminals are distributed in the cerebellar anterior lobe, preferentially in the ipsilateral intermediate cortex. Rostrally, it extends to lobule II. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002987)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002987#anterior-spinocerebellar-tract-1"),
+    name="anterior spinocerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002987"),
+    synonyms=["Gower's tract", "Gowers' tract", "ventral spinocerebellar tract"],
 )
 UBERONParcellation.anterior_thalamic_radiation = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorThalamicRadiation",
@@ -1827,6 +1843,20 @@ UBERONParcellation.caudal_central_oculomotor_nucleus = UBERONParcellation(
         "oculomotor nerve central caudal nucleus",
     ],
 )
+UBERONParcellation.caudal_cerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/caudalCerebellarTract",
+    definition="Is a white matter of cerebellum. Is part of the brainstem and spinal white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000174) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000174#caudal-cerebellar-tract"),
+    name="caudal cerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000174"),
+)
+UBERONParcellation.caudal_mesencephalo_cerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/caudalMesencephaloCerebellarTract",
+    definition="Is a regional part of nervous system. Is part of the brainstem and spinal white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000479) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000479#caudal-mesencephalo-cerebellar-tract"),
+    name="caudal mesencephalo-cerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000479"),
+)
 UBERONParcellation.caudal_middle_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/caudalMiddleFrontalGyrus",
     definition="'Caudal middle frontal gyrus' is a frontal gyrus. It is part of the middle frontal gyrus.",
@@ -1999,15 +2029,14 @@ UBERONParcellation.central_artery = UBERONParcellation(
 )
 UBERONParcellation.central_cervical_spinocerebellar_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/centralCervicalSpinocerebellarTract",
-    definition="'Central cervical spinocerebellar tract' is an axon tract. It is part of the spinocerebellar tract.",
-    description="Afferents from the neck and head to the cerebellum.",
+    definition="Is an axon tract. Is part of the spinocerebellar tract. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023983) ('is_a' and 'relationship')]",
+    description="Central cervical spinocerebellar tract. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023983)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101890"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0023983#central-cervical-spinocerebellar-tract-1"
     ),
     name="central cervical spinocerebellar tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023983"),
-    synonyms=["central cervical spinocerebellar tract"],
 )
 UBERONParcellation.central_dorsal_nucleus_of_thalamus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/centralDorsalNucleusOfThalamus",
@@ -2272,6 +2301,15 @@ UBERONParcellation.cerebellar_central_artery = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005021"),
     synonyms=["CCtA"],
 )
+UBERONParcellation.cerebellar_commissure = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarCommissure",
+    definition="Is a nervous system commissure. Is part of the white matter of cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006847) ('is_a' and 'relationship')]",
+    description="A nervous system commissure that connects a left hemisphere of cerebellum and connects a right hemisphere of cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006847)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006847#cerebellar-commissure"),
+    name="cerebellar commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006847"),
+    synonyms=["commissura cerebelli", "commissure of cerebellum"],
+)
 UBERONParcellation.cerebellar_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarCortex",
     definition="'Cerebellar cortex' is a gray matter of hindbrain. It is part of the cerebellum.",
@@ -2281,6 +2319,36 @@ UBERONParcellation.cerebellar_cortex = UBERONParcellation(
     name="cerebellar cortex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002129"),
     synonyms=["cortex cerebellaris", "cortex cerebelli", "cortex of cerebellar hemisphere", "cortex of cerebellum"],
+)
+UBERONParcellation.cerebellar_crest = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarCrest",
+    definition="Is part of the medial octavolateralis nucleus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000636)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000636#cerebellar-crest"),
+    name="cerebellar crest",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000636"),
+)
+UBERONParcellation.cerebellar_glomerulus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarGlomerulus",
+    definition="Is a neural glomerulus. Is part of the granular layer of cerebellar cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011915) ('is_a' and 'relationship')]",
+    description="An intertwined cluster of nerve fibers surrounded by glia where mossy fibers from the pontine nuclei in the white matter synapse with granule cell axons, Golgi cell axons and unipolar brush interneuron axons. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011915)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0011915#cerebellar-glomerulus"),
+    name="cerebellar glomerulus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0011915"),
+)
+UBERONParcellation.cerebellar_hemisphere = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarHemisphere",
+    definition="Is a regional part of cerebellar cortex. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002245)]",
+    description="A paired regions of the cerebellum that lie outside and lateral to the central vermis. The cerebellum consists of three parts, a median and two lateral, which are continuous with each other, and are substantially the same in structure. The median portion is constricted, and is called the vermis, from its annulated appearance which it owes to the transverse ridges and furrows upon it; the lateral expanded portions are named the hemispheres. The lateral hemisphere is considered the portion of the cerebellum to develop most recently. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002245)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002245#cerebellar-hemisphere-1"),
+    name="cerebellar hemisphere",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002245"),
+    synonyms=[
+        "cerebellum hemisphere",
+        "hemisphere of cerebellum",
+        "hemisphere of cerebellum [H II - H X]",
+        "hemispherium cerebelli [H II - H X]",
+        "hemispherium cerebelli [hII-hX]",
+    ],
 )
 UBERONParcellation.cerebellar_layer = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarLayer",
@@ -2292,8 +2360,8 @@ UBERONParcellation.cerebellar_layer = UBERONParcellation(
 )
 UBERONParcellation.cerebellar_nuclear_complex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarNuclearComplex",
-    definition="'Cerebellar nuclear complex' is a nuclear complex of neuraxis and gray matter of hindbrain. It is part of the cerebellum.",
-    description="The gray matter nuclei located in the center of the cerebellum, embedded in the white matter, which receive inhibitory (GABAergic) inputs from Purkinje cells in the cerebellar cortex and excitatory (glutamatergic) inputs from mossy fiber pathways; all output fibers of the cerebellum originate from these nuclei[MP]",
+    definition="Is a nuclear complex of neuraxis and gray matter of hindbrain. Is part of the cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002130) ('is_a' and 'relationship')]",
+    description="The gray matter nuclei located in the center of the cerebellum, embedded in the white matter, which receive inhibitory (GABAergic) inputs from Purkinje cells in the cerebellar cortex and excitatory (glutamatergic) inputs from mossy fiber pathways; all output fibers of the cerebellum originate from the these nuclei. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002130)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102971"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002130#deep-cerebellar-nuclear-complex"),
     name="cerebellar nuclear complex",
@@ -2305,39 +2373,88 @@ UBERONParcellation.cerebellar_nuclear_complex = UBERONParcellation(
         "deep cerebellar nuclei",
         "intracerebellar nuclei",
         "intrinsic nuclei of cerebellum",
-        "nuclei cerebellares",
-        "nuclei cerebellaris",
         "nuclei cerebelli",
         "roof nuclei-2",
-        "set of cerebellar nuclei",
+    ],
+)
+UBERONParcellation.cerebellar_peduncle = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarPeduncle",
+    definition="Is a peduncle of neuraxis and brainstem white matter. Is part of the cerebellar peduncular complex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007416) ('is_a' and 'relationship')]",
+    description="Any of the three large paired bundles of nerve fibers that connect the cerebellum to the brain stem. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007416)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007416#cerebellar-peduncle"),
+    name="cerebellar peduncle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007416"),
+)
+UBERONParcellation.cerebellar_peduncular_complex = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarPeduncularComplex",
+    definition="Is a regional part of brain. Is part of the white matter of cerebellum and the brainstem white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002474) ('is_a' and 'relationship')]",
+    description="A composite structure of the brain stem, which is subdivided into the superior cerebellar peduncle of pons, the decussation of superior cerebellar peduncle and the superior cerebellar peduncle of midbrain (MM). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002474)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002474#cerebellar-penducular-complex"),
+    name="cerebellar peduncular complex",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002474"),
+    synonyms=[
+        "cerebellar peduncles",
+        "cerebellar peduncles and decussations",
+        "cerebellar peduncles set",
+        "cerebellum peduncles",
+        "pedunculi cerebellares",
     ],
 )
 UBERONParcellation.cerebellar_plate = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarPlate",
-    definition="'Cerebellar plate' is part of the cerebellum.",
-    description="The embryonic pseudostratified epithelium of the fourth cerebellar ventricle that eventually forms the vermis and ventral neuroepithelium.",
+    definition="Is part of the cerebellum. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004008)]",
+    description="The embryonic pseudostratified epithelium of the fourth cerebellar ventricle that eventually forms the vermis and ventral neuroepithelium. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004008)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0729245"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004008#cerebellar-plate"),
     name="cerebellar plate",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004008"),
+    synonyms=["cerebellum plate"],
 )
 UBERONParcellation.cerebellar_vermis = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellarVermis",
-    definition="A subregion of the cerebellar cortex, consisting of the most medial zone of the cerebellar cortex, stradding the midline. May be continuous with the lateral cerebellar hemispheres in some areas of the cerebellum, e.g., dorsally, or separated by deeper fissures in others (e.g., ventrally).",
-    description="'Cerebellar vermis' is a regional part of cerebellar cortex.",
+    definition="Is a regional part of cerebellar cortex. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004720)]",
+    description="A subregion of the cerebellar cortex, consisting of the most medial zone of the cerebellar cortex, stradding the midline. May be continuous with the lateral cerebellar hemispheres in some areas of the cerebellum, e.g., dorsally, or separated by deeper fissures in others (e.g., ventrally) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004720)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0112392"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004720#vermis"),
     name="cerebellar vermis",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004720"),
+    synonyms=[
+        "cerebellum vermis",
+        "vermal parts of the cerebellum",
+        "vermal regions",
+        "vermis cerebelli [I-X]",
+        "vermis of cerebellum",
+        "vermis of cerebellum [I-X]",
+    ],
 )
 UBERONParcellation.cerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellum",
-    definition="'Cerebellum' is a regional part of brain. It is part of the metencephalon.",
-    description="Part of the rhombencephalon that lies in the posterior cranial fossa behind the brain stem, consisting of the cerebellar cortex, deep cerebellar nuclei and cerebellar white matter.A portion of the brain that helps regulate posture, balance, and coordination. (NIDA Media Guide Glossary)The dorsal topographic division of the hindbrain, connected to the ventral  division-the pons-by a white matter tract, the middle cerebellar peduncle. The cerebellum was discovered and named by Aristotle (De Partibus Animalium) based on macrodissection of a variety of animals not including humans; see translation by Thompson (1910, 494b 30). Older synonyms include parencephalon (Aristotle), hindbrain (Galen, c192).",
+    definition="Is a regional part of brain. Is part of the metencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002037) ('is_a' and 'relationship')]",
+    description="Part of the metencephalon that lies in the posterior cranial fossa behind the brain stem. It is concerned with the coordination of movement. A large dorsally projecting part of the brain concerned especially with the coordination of muscles and the maintenance of bodily equilibrium, situated between the brain stem and the back of the cerebrum , and formed in humans of two lateral lobes and a median lobe. Brain structure derived from the anterior hindbrain, and perhaps including posterior midbrain. The cerebellum plays a role in somatic motor function, the control of muscle tone, and balance. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002037)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101963"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002037#cerebellum-1"),
     name="cerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002037"),
-    synonyms=["corpus cerebelli", "epencephalon-1", "infratentorial region", "Parencephalon"],
+    synonyms=["epencephalon-1"],
+)
+UBERONParcellation.cerebellum_anterior_vermis = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumAnteriorVermis",
+    definition="Is a cerebellar vermis. Is part of the anterior lobe of cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003941) ('is_a' and 'relationship')]",
+    description="The anterior portion of the narrow middle zone between the two hemispheres of the cerebellum that is located anterior to the primary fissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003941)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0003941#vermis-of-the-anterior-lobe-of-the-cerebellum"
+    ),
+    name="cerebellum anterior vermis",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003941"),
+    synonyms=[
+        "anterior cerebellum vermis",
+        "anterior vermis of cerebellum",
+        "part of vermal region",
+        "vermis lobus anterior",
+        "vermis of anterior lobe",
+        "vermis of anterior lobe of cerebellum",
+        "vermis of the anterior lobe of the cerebellum",
+    ],
 )
 UBERONParcellation.cerebellum_fissure = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumFissure",
@@ -2371,18 +2488,78 @@ UBERONParcellation.cerebellum_globose_nucleus = UBERONParcellation(
         "posterior interpositus nucleus",
     ],
 )
+UBERONParcellation.cerebellum_hemisphere_lobule = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumHemisphereLobule",
+    definition="Is a cerebellum lobule. Is part of the cerebellar hemisphere. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004003) ('is_a' and 'relationship')]",
+    description="The region of a cerebellar lobule that resides in either of the lateral sections of the cerebellum outside the vermis; in mammals, the vermis portion of the cerebellum has a foliation pattern along the AP axis that is distinct from the lateral cerebellar hemispheres. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004003)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004003#cerebellum-hemisphere-lobule"),
+    name="cerebellum hemisphere lobule",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004003"),
+    synonyms=["cerebellar hemisphere lobule", "lobule of cerebellar hemisphere", "lobule of hemisphere of cerebellum"],
+)
+UBERONParcellation.cerebellum_hemispheric_lobule_ii = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumHemisphericLobuleII",
+    definition="Is a cerebellum hemisphere lobule and hemisphere part of cerebellar anterior lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023998)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0023998#cerebellum-hemispheric-lobule-ii"),
+    name="cerebellum hemispheric lobule II",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023998"),
+    synonyms=[
+        "hemispheric lobule ii",
+        "lobule H II of Larsell",
+        "lobule II of cerebellar hemisphere",
+        "lobule II of hemisphere of cerebellum",
+    ],
+)
+UBERONParcellation.cerebellum_hemispheric_lobule_iii = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumHemisphericLobuleIII",
+    definition="Is a cerebellum hemisphere lobule and hemisphere part of cerebellar anterior lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023999)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0023999#cerebellum-hemispheric-lobule-iii"),
+    name="cerebellum hemispheric lobule III",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023999"),
+    synonyms=[
+        "hemispheric lobule III",
+        "lobule H III of Larsell",
+        "lobule III of cerbellar hemisphere",
+        "lobule III of hemisphere of cerebellum",
+    ],
+)
+UBERONParcellation.cerebellum_hemispheric_lobule_iv = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumHemisphericLobuleIV",
+    definition="Is a cerebellum hemisphere lobule and hemisphere part of cerebellar anterior lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024000)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0024000#cerebellum-hemispheric-lobule-iv"),
+    name="cerebellum hemispheric lobule IV",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024000"),
+    synonyms=["hemispheric lobule IV", "lobule H IV of Larsell", "lobule IV of cerebellar hemisphere"],
+)
+UBERONParcellation.cerebellum_hemispheric_lobule_v = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumHemisphericLobuleV",
+    definition="Is a cerebellum hemisphere lobule and hemisphere part of cerebellar anterior lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024001)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0024001#cerebellum-hemispheric-lobule-v"),
+    name="cerebellum hemispheric lobule V",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024001"),
+    synonyms=["hemispheric lobule V", "lobule H V of Larsell", "lobule V of cerebellar hemisphere"],
+)
+UBERONParcellation.cerebellum_hemispheric_lobule_vii = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumHemisphericLobuleVII",
+    definition="Is a cerebellum hemisphere lobule. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024003)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0024003#cerebellum-hemispheric-lobule-vii"),
+    name="cerebellum hemispheric lobule VII",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024003"),
+    synonyms=["hemispheric lobule VII"],
+)
 UBERONParcellation.cerebellum_hemispheric_lobule_x = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumHemisphericLobuleX",
-    description="'Cerebellum hemispheric lobule X' is a cerebellum hemisphere lobule and flocculonodular lobe, hemisphere portion.",
+    definition="Is a cerebellum hemisphere lobule and flocculonodular lobe, hemisphere portion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024009)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104945"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0024009#cerebellum-hemispheric-lobule-x"),
     name="cerebellum hemispheric lobule X",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024009"),
+    synonyms=["hemispheric lobule X"],
 )
 UBERONParcellation.cerebellum_intermediate_zone = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumIntermediateZone",
-    definition="'Cerebellum intermediate zone' is a regional part of cerebellar cortex. It is part of the cerebellar hemisphere and spinocerebellum.",
-    description="A region on either side of the midline of the cerebellum that lies lateral to the vermis and medial to the hemisphere. It contains the cerebellar cortical zones C1, C2 and C3 and receives climbing fibre input from the inferior olive and projects to the nucleus interpositus. Here, the term is used to denote the functionally related C1, C3 and Y (but not the C2) zones (Nature glossary: http://www.nature.com/nrn/journal/v6/n4/glossary/nrn1646.html#df1).",
+    definition="Is a regional part of cerebellar cortex. Is part of the cerebellar hemisphere and the spinocerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004006) ('is_a' and 'relationship')]",
+    description="The paired regions of the cerebellar hemisphere that lie adjacent to the vermis and are between the vermis and lateral regions of the hemispheres; it receives input from the corticopontocerebellar fibers that originate from the motor cortex, and also receives sensory feedback from the muscles; these signals are integrated by this region, to coordinate muscle activity with motor inputs. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004006)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101956"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004006#cerebellar-paravermis"),
     name="cerebellum intermediate zone",
@@ -2392,10 +2569,7 @@ UBERONParcellation.cerebellum_intermediate_zone = UBERONParcellation(
         "cerebellum intermediate hemisphere",
         "intermediate part of spinocerebellum",
         "intermediate zone",
-        "paleocerebellum",
-        "paravermal zone of the cerebellum",
         "paravermis",
-        "spinocerebellum",
     ],
 )
 UBERONParcellation.cerebellum_interpositus_nucleus = UBERONParcellation(
@@ -2416,6 +2590,24 @@ UBERONParcellation.cerebellum_interpositus_nucleus = UBERONParcellation(
         "interpositus nucleus",
     ],
 )
+UBERONParcellation.cerebellum_lobe = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumLobe",
+    definition="Is a regional part of cerebellar cortex. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005293)]",
+    description="A major subdivision of the cerebellum: anterior, posterior and flocculonodular. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005293)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005293#lobe-parts-of-the-cerebellar-cortex"),
+    name="cerebellum lobe",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005293"),
+    synonyms=["cerebellar lobe", "lobe of cerebellum", "lobe parts of the cerebellar cortex"],
+)
+UBERONParcellation.cerebellum_lobule = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumLobule",
+    definition="Is a regional part of cerebellar cortex. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004004)]",
+    description="One of the the ten gyri of the cerebellar cortex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004004)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004004#lobular-parts-of-the-cerebellar-cortex"),
+    name="cerebellum lobule",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004004"),
+    synonyms=["lobular parts of the cerebellar cortex"],
+)
 UBERONParcellation.cerebellum_marginal_layer = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumMarginalLayer",
     definition="'Cerebellum marginal layer' is a hindbrain marginal layer. It is part of the cerebellum.",
@@ -2423,6 +2615,21 @@ UBERONParcellation.cerebellum_marginal_layer = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034708#cerebellum-marginal-layer"),
     name="cerebellum marginal layer",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034708"),
+)
+UBERONParcellation.cerebellum_posterior_vermis = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumPosteriorVermis",
+    definition="Is a cerebellar vermis. Is part of the posterior lobe of cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004009) ('is_a' and 'relationship')]",
+    description="The posterior portion of the narrow middle zone between the two hemispheres of the cerebellum that is located posterior to the primary fissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004009)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004009#cerebellum-posterior-vermis"),
+    name="cerebellum posterior vermis",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004009"),
+    synonyms=[
+        "posterior cerebellum vermis",
+        "vermis lobus posterior",
+        "vermis of posterior lobe",
+        "vermis of posterior lobe of cerebellum",
+        "vermis of the posterior lobe of the cerebellum",
+    ],
 )
 UBERONParcellation.cerebellum_vasculature = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVasculature",
@@ -2435,43 +2642,189 @@ UBERONParcellation.cerebellum_vasculature = UBERONParcellation(
 )
 UBERONParcellation.cerebellum_vermis_culmen = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisCulmen",
-    definition="'Cerebellum vermis culmen' is a cerebellum vermis lobule. It is part of the cerebellum anterior vermis.",
-    description="The culmen is the portion of the anterior vermis adjacent to the primary fissure of cerebellum. The culmen and the anterior parts of the quadrangular lobules form the lobus culminis[WP].",
+    definition="Is a cerebellum vermis lobule. Is part of the cerebellum anterior vermis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007763) ('is_a' and 'relationship')]",
+    description="The culmen is the portion of the anterior vermis adjacent to the primary fissure of cerebellum. The culmen and the anterior parts of the quadrangular lobules form the lobus culminis. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007763)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102659"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007763#culmen"),
     name="cerebellum vermis culmen",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007763"),
+    synonyms=["cerebellum culmen", "culmen lobule", "neuraxis culmen"],
 )
 UBERONParcellation.cerebellum_vermis_lobule = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobule",
-    definition="'Cerebellum vermis lobule' is a cerebellum lobule. It is part of the cerebellar vermis.",
-    description="The region of a cerebellar lobule that resides in the central section of the cerebellum between the two hemispheres.",
+    definition="Is a cerebellum lobule. Is part of the cerebellar vermis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004070) ('is_a' and 'relationship')]",
+    description="The region of a cerebellar lobule that resides in the central section of the cerebellum between the two hemispheres. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004070)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109877"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004070#cerebellum-vermis-lobule"),
     name="cerebellum vermis lobule",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004070"),
+    synonyms=["lobule of vermis"],
 )
 UBERONParcellation.cerebellum_vermis_lobule_i = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleI",
-    definition="'Cerebellum vermis lobule I' is a cerebellum vermis lobule. It is part of the cerebellum anterior vermis.",
+    definition="Is a cerebellum vermis lobule. Is part of the cerebellum anterior vermis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004074) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0112394"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004074#vermic-lobule-i"),
     name="cerebellum vermis lobule I",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004074"),
+    synonyms=[
+        "lingula (I)",
+        "lingula of anterior cerebellum vermis",
+        "lingula of cerebellum",
+        "lobule I of cerebellum vermis",
+        "neuraxis lingula",
+        "vermic lobule I",
+    ],
+)
+UBERONParcellation.cerebellum_vermis_lobule_ii = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleII",
+    definition="Is a cerebellum vermis lobule. Is part of the central lobule. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004075) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004075#cerebellum-vermis-lobule-ii"),
+    name="cerebellum vermis lobule II",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004075"),
+    synonyms=["lobule II", "lobule II of cerebellum vermis", "vermic lobule II"],
+)
+UBERONParcellation.cerebellum_vermis_lobule_iii = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleIII",
+    definition="Is a cerebellum vermis lobule. Is part of the central lobule. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004076) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004076#cerebellum-vermis-lobule-iii"),
+    name="cerebellum vermis lobule III",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004076"),
+    synonyms=["lobule III", "lobule III of cerebellum vermis", "vermic lobule III"],
+)
+UBERONParcellation.cerebellum_vermis_lobule_iv = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleIV",
+    definition="Is a cerebellum vermis lobule. Is part of the cerebellum vermis culmen. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004077) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004077#cerebellum-vermis-lobule-iv"),
+    name="cerebellum vermis lobule IV",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004077"),
+    synonyms=["lobule IV of cerebellum vermis", "vermic lobule IV"],
 )
 UBERONParcellation.cerebellum_vermis_lobule_ix = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleIX",
-    definition="'Cerebellum vermis lobule IX' is a cerebellum vermis lobule. It is part of the flocculonodular lobe.",
-    description="The uvula (uvular lobe) forms a considerable portion of the inferior vermis; it is separated on either side from the tonsil by the sulcus valleculC&, at the bottom of which it is connected to the tonsil by a ridge of gray matter, indented on its surface by shallow furrows, and hence called the furrowed band.",
+    definition="Is a cerebellum vermis lobule. Is part of the flocculonodular lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004078) ('is_a' and 'relationship')]",
+    description="The uvula (uvular lobe) forms a considerable portion of the inferior vermis; it is separated on either side from the tonsil by the sulcus valleculC&, at the bottom of which it is connected to the tonsil by a ridge of gray matter, indented on its surface by shallow furrows, and hence called the furrowed band. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004078)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0112398"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004078#cerebellum-vermis-lobule-ix"),
     name="cerebellum vermis lobule IX",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004078"),
+    synonyms=[
+        "cerebellar posterior vermis lobule IX",
+        "lobule IX of cerebellar posterior vermis",
+        "lobule IX of cerebellum vermis",
+        "neuraxis uvula",
+        "uvula (IX)",
+        "uvula [vermis]",
+        "uvula of cerebellum",
+        "uvula of vermis of cerebellum",
+        "vermic lobule IX",
+    ],
+)
+UBERONParcellation.cerebellum_vermis_lobule_v = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleV",
+    definition="Is a cerebellum vermis lobule. Is part of the cerebellum vermis culmen. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004079) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004079#cerebellum-vermis-lobule-v"),
+    name="cerebellum vermis lobule V",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004079"),
+    synonyms=[
+        "lobule V",
+        "lobule V (culmen and quadrangular lobule, posterior part)",
+        "lobule V of cerebellum vermis",
+        "vermic lobule V",
+    ],
+)
+UBERONParcellation.cerebellum_vermis_lobule_vi = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleVI",
+    definition="Is a cerebellum vermis lobule. Is part of the cerebellum posterior vermis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004080) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004080#cerebellum-vermis-lobule-vi"),
+    name="cerebellum vermis lobule VI",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004080"),
+    synonyms=[
+        "declive (VI)",
+        "declive of cerebellum",
+        "declive of vermis of cerebellum",
+        "lobule VI (declive and simplex lobule)",
+        "lobule VI of cerebellum vermis",
+        "neuraxis declive",
+        "vermic lobule vi",
+    ],
+)
+UBERONParcellation.cerebellum_vermis_lobule_vii = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleVII",
+    definition="Is a cerebellum vermis lobule. Is part of the cerebellum posterior vermis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004081) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004081#cerebellum-vermis-lobule-vii"),
+    name="cerebellum vermis lobule VII",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004081"),
+    synonyms=["folium-tuber vermis (VII)", "lobule VII of cerebellum vermis", "vermic lobule VII"],
+)
+UBERONParcellation.cerebellum_vermis_lobule_vii_af = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleVIIAf",
+    definition="Is a regional part of cerebellar cortex. Is part of the cerebellum posterior vermis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036044) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0036044#cerebellum-vermis-lobule-viiaf"),
+    name="cerebellum vermis lobule VIIAf",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036044"),
+    synonyms=["lobule VIIAf/crus I (folium and superior semilunar lobule)", "VIIAf"],
+)
+UBERONParcellation.cerebellum_vermis_lobule_vii_at = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleVIIAt",
+    definition="Is a regional part of cerebellar cortex. Is part of the cerebellum posterior vermis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036065) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0036065#cerebellum-vermis-lobule-viiat"),
+    name="cerebellum vermis lobule VIIAt",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036065"),
+    synonyms=["lobule VIIAt/crus II (tuber and inferior semilunar lobule)", "VIIAt"],
+)
+UBERONParcellation.cerebellum_vermis_lobule_viia = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleVIIA",
+    definition="Is a cerebellum vermis lobule VII. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005345)]",
+    description="The folium vermis is a short, narrow, concealed band at the posterior extremity of the vermis, consisting apparently of a single folium, but in reality marked on its upper and under surfaces by secondary fissures. Laterally, it expands in either hemisphere into a considerable lobule, the superior semilunar lobule (lobulus semilunaris superior; postero-superior lobules), which occupies the posterior third of the upper surface of the hemisphere, and is bounded below by the horizontal sulcus. The superior semilunar lobules and the folium vermis form the lobus semilunaris. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005345)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005345#cerebellum-vermis-lobule-viia"),
+    name="cerebellum vermis lobule VIIA",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005345"),
+    synonyms=["folium of vermis of cerebellum", "vermic lobule VIIA"],
+)
+UBERONParcellation.cerebellum_vermis_lobule_viib = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleVIIB",
+    definition="Is a cerebellum vermis lobule VII. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005346)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005346#cerebellum-vermis-lobule-viib"),
+    name="cerebellum vermis lobule VIIB",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005346"),
+    synonyms=["lobule VII B of vermis", "neuraxis tuber", "tuber of vermis of cerebellum", "vermic lobule VIIb"],
+)
+UBERONParcellation.cerebellum_vermis_lobule_viii = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleVIII",
+    definition="Is a cerebellum vermis lobule. Is part of the cerebellum posterior vermis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004082) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004082#cerebellum-vermis-lobule-viii"),
+    name="cerebellum vermis lobule VIII",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004082"),
+    synonyms=[
+        "cerebellum lobule VIII",
+        "lobule VIII of cerebellum vermis",
+        "neuraxis pyramis",
+        "neuraxis pyramus",
+        "pyramis",
+        "pyramis of vermis of cerebellum",
+        "pyramus (VIII)",
+        "pyramus of cerebellum",
+        "pyramus of vermis of cerebellum",
+        "vermic lobule VIII",
+    ],
 )
 UBERONParcellation.cerebellum_vermis_lobule_x = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumVermisLobuleX",
-    definition="'Cerebellum vermis lobule X' is a cerebellum vermis lobule. It is part of the flocculonodular lobe.",
+    definition="Is a cerebellum vermis lobule. Is part of the flocculonodular lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004083) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0112405"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004083#vermic-lobule-x"),
     name="cerebellum vermis lobule X",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004083"),
+    synonyms=[
+        "lobule X of cerebellum vermis",
+        "neuraxis nodule",
+        "neuraxis nodulus",
+        "nodulus (X)",
+        "nodulus of cerebellum",
+        "nodulus of vermis of cerebellum",
+        "vermic lobule X",
+    ],
 )
 UBERONParcellation.cerebral_blood_vessel = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebralBloodVessel",
@@ -2610,6 +2963,15 @@ UBERONParcellation.cerebral_vein = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001663#cerebral-vein"),
     name="cerebral vein",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001663"),
+)
+UBERONParcellation.cerebrocerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cerebrocerebellum",
+    definition="Is a regional part of cerebellar cortex. Is part of the cerebellar hemisphere. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014644) ('is_a' and 'relationship')]",
+    description="The part of the cerebellar cortex that receives input from the cerebral cortex via axons from the pontine relay nuclei. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014644)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014644#cerebrocerebellum"),
+    name="cerebrocerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014644"),
+    synonyms=["cerebellum lateral hemisphere", "cerebellum lateral zone", "neocerebellum", "pontocerebellum"],
 )
 UBERONParcellation.chemoarchitectural_part_of_brain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/chemoarchitecturalPartOfBrain",
@@ -3238,13 +3600,13 @@ UBERONParcellation.cuneiform_nucleus = UBERONParcellation(
 )
 UBERONParcellation.cuneocerebellar_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cuneocerebellarTract",
-    definition="'Cuneocerebellar tract' is a tract of brain. It is part of the white matter of medulla oblongata.",
-    description="White matter tract that originates from the cuneate and external cuneate nuclei.  It relays ascending spinal fibers in the dorsal funiculus and conveys information from forelimbs to the cerebellum.",
+    definition="Is a tract of brain. Is part of the white matter of medulla oblongata. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002640) ('is_a' and 'relationship')]",
+    description="White matter tract that originates from the cuneate and external cuneate nuclei. It relays ascending spinal fibers in the dorsal funiculus and conveys information from forelimbs to the cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002640)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102673"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002640#cuneocerebellar-tract-1"),
     name="cuneocerebellar tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002640"),
-    synonyms=["CCT", "cuneocerebellar fibers", "tractus cuneocerebelli"],
+    synonyms=["cuneocerebellar fibers"],
 )
 UBERONParcellation.cuneus_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cuneusCortex",
@@ -3278,14 +3640,21 @@ UBERONParcellation.cytoarchitectural_part_of_dentate_gyrus = UBERONParcellation(
 )
 UBERONParcellation.decussation_of_superior_cerebellar_peduncle = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/decussationOfSuperiorCerebellarPeduncle",
-    definition="'Decussation of superior cerebellar peduncle' is a neural decussation. It is part of the midbrain tegmentum and superior cerebellar peduncle.",
-    description="Regional part of superior cerebellar peduncle located in the caudal midbrain, at the level of the inferior colliculus, consisting of a large bundle of fibers crossing the midline. It contains fibers projecting from the deep cerebellar nucleus to the midbrain and thalamus through the superior cerebellar peduncle (MM). The decussation of superior cerebellar peduncle is the portion of the superior cerebellar peduncle which crosses into the midbrain. [WP,unvetted].",
+    definition="Is a neural decussation. Is part of the midbrain tegmentum and the superior cerebellar peduncle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002588) ('is_a' and 'relationship')]",
+    description="Regional part of superior cerebellar peduncle located in the caudal midbrain, at the level of the inferior colliculus, consisting of a large bundle of fibers crossing the midline. It contains fibers projecting from the deep cerebellar nucleus to the midbrain and thalamus through the superior cerebellar peduncle (MM). The decussation of superior cerebellar peduncle is the portion of the superior cerebellar peduncle which crosses into the midbrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002588)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102963"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0002588#decussation-of-superior-cerebellar-peduncle-1"
     ),
     name="decussation of superior cerebellar peduncle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002588"),
+    synonyms=[
+        "decussatio pedunculorum cerebellarium superiorum",
+        "decussation of brachium conjunctivum",
+        "decussation of superior cerebellar peduncles",
+        "superior cerebellar peduncle decussation",
+        "Wernekink's decussation",
+    ],
 )
 UBERONParcellation.decussation_of_trochlear_nerve = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/decussationOfTrochlearNerve",
@@ -4784,6 +5153,36 @@ UBERONParcellation.head_of_caudate_nucleus = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002626"),
     synonyms=["caput (caudatus)", "caput nuclei caudati", "caudate nuclear head", "head of the caudate nucleus"],
 )
+UBERONParcellation.hemisphere_part_of_cerebellar_anterior_lobe = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/hemispherePartOfCerebellarAnteriorLobe",
+    definition="Is a regional part of cerebellar cortex. Is part of the anterior lobe of cerebellum and the cerebellar hemisphere. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014647) ('is_a' and 'relationship')]",
+    description="A multi-tissue structure that is part of a anterior lobe of cerebellum and is part of a cerebellar hemisphere. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014647)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0014647#hemispheric-part-of-the-anterior-lobe-of-the-cerebellum"
+    ),
+    name="hemisphere part of cerebellar anterior lobe",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014647"),
+    synonyms=[
+        "hemisphere of anterior lobe",
+        "hemisphere of anterior lobe of cerebellum",
+        "hemispherium lobus anterior",
+    ],
+)
+UBERONParcellation.hemisphere_part_of_cerebellar_posterior_lobe = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/hemispherePartOfCerebellarPosteriorLobe",
+    definition="Is a regional part of cerebellar cortex. Is part of the cerebellar hemisphere and the posterior lobe of cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014648) ('is_a' and 'relationship')]",
+    description="A multi-tissue structure that is part of a cerebellar hemisphere and is part of a posterior lobe of cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014648)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0014648#hemispheric-part-of-the-posterior-lobe-of-the-cerebellum"
+    ),
+    name="hemisphere part of cerebellar posterior lobe",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014648"),
+    synonyms=[
+        "hemisphere of posterior lobe",
+        "hemisphere of posterior lobe of cerebellum",
+        "hemispherium lobus posterior",
+    ],
+)
 UBERONParcellation.hilum_of_dentate_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/hilumOfDentateNucleus",
     definition="'Hilum of dentate nucleus' is a hilum of neuraxis. It is part of the dentate nucleus.",
@@ -5026,24 +5425,13 @@ UBERONParcellation.inferior_central_nucleus = UBERONParcellation(
 )
 UBERONParcellation.inferior_cerebellar_peduncle = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorCerebellarPeduncle",
-    definition="'Inferior cerebellar peduncle' is a cerebellar peduncle and white matter of medulla oblongata.",
-    description="Regional part of medullary white matter (according to Neuronames) primarily found at the level of the open medulla, consisting of a large bundle of fibers projecting to and projecting from the cerebellum.  The icp is continuous with the dorsal spinocerebellar tract and also contains a large number of fibers originating in the inferior olivary complex (MM).",
+    definition="Is a cerebellar peduncle and white matter of medulla oblongata. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002163)]",
+    description="Regional part of medullary white matter (according to Neuronames) primarily found at the level of the open medulla, consisting of a large bundle of fibers projecting to and projecting from the cerebellum. The icp is continuous with the dorsal spinocerebellar tract and also contains a large number of fibers originating in the inferior olivary complex (MM). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002163)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105435"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002163#inferior-cerebellar-peduncle-1"),
     name="inferior cerebellar peduncle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002163"),
-    synonyms=[
-        "corpus restiforme",
-        "crus cerebelli ad medullam oblongatam",
-        "crus medullo-cerebellare",
-        "icp",
-        "inferior cerebellar peduncle (restiform body)",
-        "inferior cerebellar peduncle (Ridley)",
-        "inferior peduncle",
-        "pedunculus cerebellaris caudalis",
-        "pedunculus cerebellaris inferior",
-        "restiform body",
-    ],
+    synonyms=["corpus restiforme", "restiform body"],
 )
 UBERONParcellation.inferior_cerebral_vein = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorCerebralVein",
@@ -6353,6 +6741,14 @@ UBERONParcellation.layer_of_hippocampus = UBERONParcellation(
         "hippocampus proper layer",
         "layer of cornu ammonis",
     ],
+)
+UBERONParcellation.left_hemisphere_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/leftHemisphereOfCerebellum",
+    definition="Is a cerebellar hemisphere. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014889)]",
+    description="A cerebellar hemisphere that is in the left side of a cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014889)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014889#left-hemisphere-of-cerebellum"),
+    name="left hemisphere of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014889"),
 )
 UBERONParcellation.lenticular_fasciculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lenticularFasciculus",
@@ -7739,23 +8135,13 @@ UBERONParcellation.midbrainhindbrain_boundary = UBERONParcellation(
 )
 UBERONParcellation.middle_cerebellar_peduncle = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/middleCerebellarPeduncle",
-    definition="'Middle cerebellar peduncle' is a cerebellar peduncle and white matter of pons. It is part of the basal part of pons.",
-    description="Regional part of medullary white matter (according to Neuronames) primarily found at the level of the pons,  consisting of a very large bundle of fibers originating in the pontine nuclei projecting to the cerebellum (MM).",
+    definition="Is a cerebellar peduncle and white matter of pons. Is part of the basal part of pons. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002152) ('is_a' and 'relationship')]",
+    description="Regional part of medullary white matter (according to Neuronames) primarily found at the level of the pons, consisting of a very large bundle of fibers originating in the pontine nuclei projecting to the cerebellum (MM). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002152)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106956"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002152#middle-cerebellar-peduncle-1"),
     name="middle cerebellar peduncle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002152"),
-    synonyms=[
-        "brachium pontis",
-        "brachium pontis (stem of middle cerebellar peduncle)",
-        "crus cerebelli ad pontem",
-        "crus ponto-cerebellare",
-        "mcp",
-        "mid-cerebellar peduncle",
-        "pedunculus cerebellaris medialis",
-        "pedunculus cerebellaris medius",
-        "pedunculus cerebellaris pontinus",
-    ],
+    synonyms=["brachium pontis"],
 )
 UBERONParcellation.middle_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/middleFrontalGyrus",
@@ -8528,6 +8914,14 @@ UBERONParcellation.olivary_pretectal_nucleus = UBERONParcellation(
         "pretectal olivary nucleus",
     ],
 )
+UBERONParcellation.olivocerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/olivocerebellarTract",
+    definition="Is a tract of brain. Is part of the white matter of medulla oblongata. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002752) ('is_a' and 'relationship')]",
+    description="The olivocerebellar tract (olivocerebellar fibers) leaves the olivary nucleus and pass out through the hilum and decussate with those from the opposite olive in the raphé, then as internal arcuate fibers they pass partly through and partly around the opposite olive and enter the inferior peduncle to be distributed to the cerebellar hemisphere of the opposite side from which they arise. They terminate directly on Purkinje cells as the climbing fiber input system. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002752)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002752#olivocerebellar-tract-1"),
+    name="olivocerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002752"),
+)
 UBERONParcellation.opercular_part_of_inferior_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/opercularPartOfInferiorFrontalGyrus",
     definition="'Opercular part of inferior frontal gyrus' is part of the inferior frontal gyrus.",
@@ -9289,6 +9683,26 @@ UBERONParcellation.paravermis_lobule_area = UBERONParcellation(
     name="paravermis lobule area",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0027285"),
 )
+UBERONParcellation.paravermis_of_the_anterior_lobe_of_the_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/paravermisOfTheAnteriorLobeOfTheCerebellum",
+    definition="Is a paravermis parts of the cerebellar cortex. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0027310)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0027310#paravermis-of-the-anterior-lobe-of-the-cerebellum"
+    ),
+    name="paravermis of the anterior lobe of the cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0027310"),
+    synonyms=["paravermis, anterior lobe portion"],
+)
+UBERONParcellation.paravermis_of_the_posterior_lobe_of_the_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/paravermisOfThePosteriorLobeOfTheCerebellum",
+    definition="Is a paravermis parts of the cerebellar cortex. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0027309)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0027309#paravermis-of-the-posterior-lobe-of-the-cerebellum"
+    ),
+    name="paravermis of the posterior lobe of the cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0027309"),
+    synonyms=["paravermis, posterior lobe portion"],
+)
 UBERONParcellation.paravermis_parts_of_the_cerebellar_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/paravermisPartsOfTheCerebellarCortex",
     definition="'Paravermis parts of the cerebellar cortex' is a regional part of cerebellar cortex. It is part of the cerebellum intermediate zone.",
@@ -9859,6 +10273,20 @@ UBERONParcellation.pontobulbar_nucleus = UBERONParcellation(
         "pontobulbar body",
     ],
 )
+UBERONParcellation.pontocerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/pontocerebellarTract",
+    definition="Is a tract of brain. Is part of the middle cerebellar peduncle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022421) ('is_a' and 'relationship')]",
+    description="The second order neuron fibers of the corticopontocerebellar tracts that cross to the other side of the pons and run within the middle cerebellar peduncles, from the pons to the contralateral cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022421)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022421#pontocerebellar-tract"),
+    name="pontocerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022421"),
+    synonyms=[
+        "fibrae pontocerebellaris",
+        "pontine crossing tract",
+        "pontocerebellar fibers",
+        "tractus pontocerebellaris",
+    ],
+)
 UBERONParcellation.postcentral_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/postcentralGyrus",
     definition="'Postcentral gyrus' is a gyrus. It is part of the parietal lobe.",
@@ -10021,11 +10449,20 @@ UBERONParcellation.posterior_limb_of_internal_capsule = UBERONParcellation(
 )
 UBERONParcellation.posterior_lobe_of_cerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorLobeOfCerebellum",
-    definition="The region of the cerebellum that is posterior to the primary fissure and anterior to the posteriolateral fissure.",
-    description="'Posterior lobe of cerebellum' is a cerebellum lobe.",
+    definition="Is a cerebellum lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004002)]",
+    description="The region of the cerebellum that is posterior to the primary fissure and anterior to the posteriolateral fissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004002)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109103"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004002#posterior-lobe-of-the-cerebellum"),
     name="posterior lobe of cerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004002"),
+    synonyms=[
+        "cerebellar posterior lobe",
+        "cerebellum posterior lobe",
+        "middle lobe-1 of cerebellum",
+        "posterior cerebellar lobe",
+        "posterior lobe of the cerebellum",
+        "posterior lobe-1 of cerebellum",
+    ],
 )
 UBERONParcellation.posterior_median_eminence = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorMedianEminence",
@@ -10180,6 +10617,15 @@ UBERONParcellation.posterior_periventricular_nucleus = UBERONParcellation(
         "posterior subdivision",
         "PPe",
     ],
+)
+UBERONParcellation.posterior_spinocerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorSpinocerebellarTract",
+    definition="Is an axon tract. Is part of the spinocerebellar tract. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002753) ('is_a' and 'relationship')]",
+    description="It ascends the dorsal part of the lateral funiculus and enters the cerebellum via the restiform body. Within the cerebellum, its axons terminate in the ipsilateral hindlimb area of the anterior lobe and in the pyramis and the paramedian lobule predominantly ipsilaterally. Rostrally, it extends to lobules I and II. Afferents from the upper trunk, forelimbs, and the neck to the cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002753)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002753#posterior-spinocerebellar-tract-1"),
+    name="posterior spinocerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002753"),
+    synonyms=["dorsal spinocerebellar tract", "flechsig's tract"],
 )
 UBERONParcellation.posterior_thalamic_radiation = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorThalamicRadiation",
@@ -10942,6 +11388,14 @@ UBERONParcellation.rhomboidal_nucleus = UBERONParcellation(
         "rhomboid thalamic nucleus",
     ],
 )
+UBERONParcellation.right_hemisphere_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/rightHemisphereOfCerebellum",
+    definition="Is a cerebellar hemisphere. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014890)]",
+    description="A cerebellar hemisphere that is in the right side of a cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014890)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014890#right-hemisphere-of-cerebellum"),
+    name="right hemisphere of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014890"),
+)
 UBERONParcellation.root_of_abducens_nerve = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rootOfAbducensNerve",
     definition="'Root of abducens nerve' is a root of cranial nerve. It is part of the medulla oblongata.",
@@ -11013,6 +11467,13 @@ UBERONParcellation.rostral_anterior_cingulate_cortex = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022438"),
     synonyms=["rostral anterior cingulate cortex"],
 )
+UBERONParcellation.rostral_cerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/rostralCerebellarTract",
+    definition="Is a white matter. Is part of the brainstem and spinal white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000643) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000643#rostral-cerebellar-tract"),
+    name="rostral cerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000643"),
+)
 UBERONParcellation.rostral_interstitial_nucleus_of_medial_longitudinal_fasciculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rostralInterstitialNucleusOfMedialLongitudinalFasciculus",
     definition="'Rostral interstitial nucleus of medial longitudinal fasciculus' is a brainstem nucleus, nucleus of midbrain tegmentum and midbrain nucleus. It is part of the midbrain tegmentum.",
@@ -11059,6 +11520,13 @@ UBERONParcellation.rostral_linear_nucleus = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013734"),
     synonyms=["anterior linear nucleus", "RLi", "rostral linear nucleus of the raphe"],
 )
+UBERONParcellation.rostral_mesencephalo_cerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/rostralMesencephaloCerebellarTract",
+    definition="Is a white matter. Is part of the brainstem and spinal white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000579) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000579#rostral-mesencephalo-cerebellar-tract"),
+    name="rostral mesencephalo-cerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000579"),
+)
 UBERONParcellation.rostral_middle_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rostralMiddleFrontalGyrus",
     definition="'Rostral middle frontal gyrus' is a regional part of brain and frontal gyrus. It is part of the middle frontal gyrus.",
@@ -11097,13 +11565,12 @@ UBERONParcellation.rostral_portion_of_the_medial_accessory_olive = UBERONParcell
 )
 UBERONParcellation.rostral_spinocerebellar_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rostralSpinocerebellarTract",
-    definition="'Rostral spinocerebellar tract' is an axon tract. It is part of the spinocerebellar tract.",
-    description="Cervical equivalent to the ventral spinocerebellar tract (Heimer, L:  The Human Brain and Spinal Cord, 1995, pg 370).  Originates from cells rostral to Clarke's column and sends uncrossed axons through the lateral funiculus to the cerebellum.  It reaches the cerebellum partly through the brachium conjunctivum and partly through the restiform body, terminating bilaterally in the anterior lobe of the cerebellum.",
+    definition="Is an axon tract. Is part of the spinocerebellar tract. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023984) ('is_a' and 'relationship')]",
+    description="Originates from cells rostral to Clarke's column and sends uncrossed axons through the lateral funiculus to the cerebellum. It reaches the cerebellum partly through the brachium conjunctivum and partly through the restiform body, terminating bilaterally in the anterior lobe of the cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023984)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0110223"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0023984#rostral-spinocerebellar-tract-1"),
     name="rostral spinocerebellar tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023984"),
-    synonyms=["rostral spinocerebellar tract"],
 )
 UBERONParcellation.rostrum_of_corpus_callosum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rostrumOfCorpusCallosum",
@@ -11295,14 +11762,23 @@ UBERONParcellation.spinal_trigeminal_tract_of_pons = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002800"),
     synonyms=["spinal trigeminal tract of the pons", "tractus spinalis nervi trigemini (pontis)"],
 )
+UBERONParcellation.spinocerebellar_tract = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/spinocerebellarTract",
+    definition="Is an axon tract. Is part of the white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005413) ('is_a' and 'relationship')]",
+    description="This tract conveys interoceptive, proprioceptive, and exteroceptive information from the body's internal organs, and from the trunk, extremities, and neck region to the Cerebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005413)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005413#spinocerebellar-tract"),
+    name="spinocerebellar tract",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005413"),
+)
 UBERONParcellation.spinocerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/spinocerebellum",
-    definition="'Spinocerebellum' is a regional part of brain. It is part of the cerebellum.",
-    description="A phylogenetic subdivision of the cerebellum, the intermediate part, which regulates body and limb movements. It receives proprioception input from the dorsal columns of the spinal cord (including the spinocerebellar tract) and the trigeminal nerve, as well as from visual and auditory systems. It sends fibres to deep cerebellar nuclei which in turn project to both the cerebral cortex and the brain stem, thus providing modulation of descending motor systems.",
+    definition="Is a regional part of brain. Is part of the cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014643) ('is_a' and 'relationship')]",
+    description="A phylogenetic subdivision of the cerebellum, the intermediate part, which regulates body and limb movements. It receives proprioception input from the dorsal columns of the spinal cord (including the spinocerebellar tract) and the trigeminal nerve, as well as from visual and auditory systems. It sends fibres to deep cerebellar nuclei which in turn project to both the cerebral cortex and the brain stem, thus providing modulation of descending motor systems. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014643)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0734938"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014643#spinocerebellum"),
     name="spinocerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014643"),
+    synonyms=["paleocerebellum"],
 )
 UBERONParcellation.spinothalamic_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/spinothalamicTract",
@@ -11782,7 +12258,7 @@ UBERONParcellation.superficial_feature_part_of_occipital_lobe = UBERONParcellati
 )
 UBERONParcellation.superficial_feature_part_of_the_cerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superficialFeaturePartOfTheCerebellum",
-    definition="'Superficial feature part of the cerebellum' is a regional part of brain. It is part of the cerebellum.",
+    definition="Is a regional part of brain. Is part of the cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024046) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111271"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0024046#superficial-feature-part-of-the-cerebellum"
@@ -11801,60 +12277,34 @@ UBERONParcellation.superficial_middle_cerebral_vein = UBERONParcellation(
 )
 UBERONParcellation.superior_cerebellar_peduncle = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorCerebellarPeduncle",
-    definition="'Superior cerebellar peduncle' is a cerebellar peduncle.",
-    description="A composite structure of the brain stem, which in NeuroNames is subdivided into the superior cerebellar peduncle of pons, the decussation of superior cerebellar peduncle and the superior cerebellar peduncle of midbrain (MM).",
+    definition="Is a cerebellar peduncle. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002150)]",
+    description="A composite structure of the brain stem, which in NeuroNames is subdivided into the superior cerebellar peduncle of pons, the decussation of superior cerebellar peduncle and the superior cerebellar peduncle of midbrain (MM). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002150)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111279"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002150#superior-cerebellar-peduncle-1"),
     name="superior cerebellar peduncle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002150"),
-    synonyms=[
-        "brachium conjunctivum",
-        "crus cerebello-cerebrale",
-        "pedunculus cerebellaris cranialis",
-        "pedunculus cerebellaris rostralis",
-        "pedunculus cerebellaris superior",
-        "scp",
-        "Stilling)",
-        "superior cerebelar peduncles",
-        "superior cerebellar peduncle (brachium conjuctivum)",
-        "superior cerebellar peduncle (brachium conjunctivum)",
-        "superior cerebellar peduncle (Galen",
-        "superior peduncle",
-        "tractus cerebello-rubralis",
-        "tractus cerebello-tegmentalis mesencephali",
-    ],
+    synonyms=["brachium conjunctivum"],
 )
 UBERONParcellation.superior_cerebellar_peduncle_of_midbrain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorCerebellarPeduncleOfMidbrain",
-    definition="'Superior cerebellar peduncle of midbrain' is a regional part of brain. It is part of the midbrain tegmentum and superior cerebellar peduncle.",
-    description="Regional part of superior cerebellar peduncle, located in the midbrain, consisting of a large bundle of fibers largely projecting from the deep cerebellar nuclei to the midbrain and thalamus.  It is continuous with the superior cerebellar peduncle of the pons. (MM).",
+    definition="Is a regional part of brain. Is part of the midbrain tegmentum and the superior cerebellar peduncle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007707) ('is_a' and 'relationship')]",
+    description="Regional part of superior cerebellar peduncle, located in the midbrain, consisting of a large bundle of fibers largely projecting from the deep cerebellar nuclei to the midbrain and thalamus. It is continuous with the superior cerebellar peduncle of the pons. (MM). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007707)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111280"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0007707#superior-cerebellar-peduncle-of-midbrain-1"
     ),
     name="superior cerebellar peduncle of midbrain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007707"),
-    synonyms=[
-        "pedunculus cerebellaris superior (mesencephalon)",
-        "scpmb",
-        "superior cerebellar peduncle of midbrain",
-        "superior cerebellar peduncle of the midbrain",
-    ],
+    synonyms=["SCPMB"],
 )
 UBERONParcellation.superior_cerebellar_peduncle_of_pons = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorCerebellarPeduncleOfPons",
-    definition="'Superior cerebellar peduncle of pons' is a regional part of brain. It is part of the superior cerebellar peduncle and pontine tegmentum.",
-    description="",
+    definition="Is a regional part of brain. Is part of the superior cerebellar peduncle and the pontine tegmentum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007709) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111281"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007709#superior-cerebellar-peduncle-of-pons-1"),
     name="superior cerebellar peduncle of pons",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007709"),
-    synonyms=[
-        "pedunculus cerebellaris superior (pontis)",
-        "scpp",
-        "superior cerebellar peduncle of pons",
-        "superior cerebellar peduncle of the pons",
-    ],
+    synonyms=["SCPP"],
 )
 UBERONParcellation.superior_cerebral_vein = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorCerebralVein",
@@ -12645,6 +13095,15 @@ UBERONParcellation.vagal_nerve_fiber_bundle = UBERONParcellation(
         "vagal nerve tract",
     ],
 )
+UBERONParcellation.vallecula_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/valleculaOfCerebellum",
+    definition="Is part of the medulla oblongata. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013166)]",
+    description="On the upper surface of the cerebellum the vermis is elevated above the level of the hemispheres, but on the under surface it is sunk almost out of sight in the bottom of a deep depression between them; this depression is called the vallecula of the cerebellum, and lodges the posterior part of the medulla oblongata. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013166)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013166#vallecula-of-cerebellum"),
+    name="vallecula of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013166"),
+    synonyms=["vallecula cerebelli"],
+)
 UBERONParcellation.valvula_cerebelli = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/valvulaCerebelli",
     definition="'Valvula cerebelli' is a regional part of brain. It is part of the cerebellum.",
@@ -13269,15 +13728,14 @@ UBERONParcellation.ventromedial_nucleus_of_hypothalamus = UBERONParcellation(
 )
 UBERONParcellation.vermis_of_the_flocculonodular_lobe_of_the_cerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/vermisOfTheFlocculonodularLobeOfTheCerebellum",
-    definition="'Vermis of the flocculonodular lobe of the cerebellum' is a cerebellar vermis.",
-    description="",
+    definition="Is a cerebellar vermis. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024037)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0112409"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0024037#vermis-of-the-flocculonodular-lobe-of-the-cerebellum-1"
     ),
     name="vermis of the flocculonodular lobe of the cerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024037"),
-    synonyms=["flocculonodular vermis", "vermis of the flocculonodular lobe of the cerebellum"],
+    synonyms=["flocculonodular vermis"],
 )
 UBERONParcellation.vertical_limb_of_the_diagonal_band = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/verticalLimbOfTheDiagonalBand",
@@ -13322,21 +13780,23 @@ UBERONParcellation.vestibular_nuclear_complex = UBERONParcellation(
 )
 UBERONParcellation.vestibulocerebellar_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/vestibulocerebellarTract",
-    definition="'Vestibulocerebellar tract' is a tract of brain. It is part of the pontine tegmentum.",
-    description="White matter tract containing axons arising in the vestibular ganglion primarily projecting to the ipsilateral cerebellum via the inferior cerebellar peduncle (Heimer, L. The Human Brain, 2nd ed., 1995, pg 370).",
+    definition="Is a tract of brain. Is part of the pontine tegmentum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002552) ('is_a' and 'relationship')]",
+    description="White matter tract containing axons arising in the vestibular ganglion primarily projecting to the ipsilateral cerebellum via the inferior cerebellar peduncle (Heimer, L. The Human Brain, 2nd ed., 1995, pg 370). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002552)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0112459"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002552#vestibulocerebellar-tract-1"),
     name="vestibulocerebellar tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002552"),
+    synonyms=["vestibulocerebellar fibers"],
 )
 UBERONParcellation.vestibulocerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/vestibulocerebellum",
-    definition="'Vestibulocerebellum' is a regional part of brain. It is part of the cerebellum.",
-    description="A phylogenetic subdivision of the cerebellum, the oldest part, which regulates balance and eye movements. It receives vestibular input from both the semicircular canals and from the vestibular nuclei, and sends fibres back to the medial and lateral vestibular nuclei. It also receives visual input from the superior colliculi and from the visual cortex (the latter via the pontine nuclei, forming a cortico-ponto-cerebellar pathway). Lesions of the vestibulocerebellum cause disturbances of balance and gait.",
+    definition="Is a regional part of brain. Is part of the cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014642) ('is_a' and 'relationship')]",
+    description="A phylogenetic subdivision of the cerebellum, the oldest part, which regulates balance and eye movements. It receives vestibular input from both the semicircular canals and from the vestibular nuclei, and sends fibres back to the medial and lateral vestibular nuclei. It also receives visual input from the superior colliculi and from the visual cortex (the latter via the pontine nuclei, forming a cortico-ponto-cerebellar pathway). Lesions of the vestibulocerebellum cause disturbances of balance and gait. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014642)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0725946"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014642#vestibulocerebellum"),
     name="vestibulocerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014642"),
+    synonyms=["archicerebellum"],
 )
 UBERONParcellation.vestibulocochlear_nerve_root = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/vestibulocochlearNerveRoot",
@@ -13360,30 +13820,20 @@ UBERONParcellation.vestibulocochlear_nerve_root = UBERONParcellation(
 )
 UBERONParcellation.white_matter_lamina_of_cerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/whiteMatterLaminaOfCerebellum",
-    definition="'White matter lamina of cerebellum' is a white matter lamina of neuraxis. It is part of the cerebellum.",
-    description="The white laminae of cerebellum is subdivision of the cerebellar cortex comprised of myelinated axons lying deep to the granule cell layer of the cerebellar cortex.",
+    definition="Is a white matter lamina of neuraxis. Is part of the cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014540) ('is_a' and 'relationship')]",
+    description="The white laminae of cerebellum is subdivision of the cerebellar cortex comprised of myelinated axons lying deep to the granule cell layer of the cerebellar cortex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014540)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0112629"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014540#white-laminae-of-cerebellum"),
     name="white matter lamina of cerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014540"),
-    synonyms=[
-        "isthmus cinguli",
-        "isthmus gyri cingulatus",
-        "isthmus gyri cinguli",
-        "isthmus of gyrus fornicatus",
-        "isthmus of the cingulate gyrus",
-        "isthmus-2",
-        "lamina alba of cerebellar cortex",
-        "laminae albae of cerebellar cortex",
-        "white lamina of cerebellum",
-        "white laminae of cerebellum",
-    ],
+    synonyms=["lamina alba of cerebellar cortex", "laminae albae of cerebellar cortex", "white lamina of cerebellum"],
 )
 UBERONParcellation.white_matter_of_cerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/whiteMatterOfCerebellum",
-    definition="'white matter of cerebellum' is a regional part of the cerebellum. It is a part of the overall brain white matter.",
-    description="Regional part of cerebellum consisting of the myelinated axons lying deep to the granule cell layer, excluding the deep cerebellar nuclei and the cerebellar peduncles. [BIRNLEX:1562]",
+    definition="Is a white matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002317)]",
+    description="Regional part of cerebellum consisting of the myelinated axons lying deep to the granule cell layer, excluding the deep cerebellar nuclei and the cerebellar peduncles. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002317)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101962"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002317#cerebellar-white-matter"),
     name="white matter of cerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002317"),
     synonyms=["cerebellar white matter", "cerebellum white matter"],
