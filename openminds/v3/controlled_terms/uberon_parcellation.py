@@ -236,6 +236,15 @@ UBERONParcellation.accessory_nerve_root = UBERONParcellation(
     name="accessory nerve root",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014615"),
 )
+UBERONParcellation.accessory_olfactory_bulb = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/accessoryOlfactoryBulb",
+    definition="Is a regional part of brain. Is part of the olfactory bulb. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004069) ('is_a' and 'relationship')]",
+    description="The forebrain region that coordinates sensory signaling arising from the vomeronasal organ; it is located on the dorsal-posterior portion of the main olfactory bulb, and the axons that leave the accessory olfactory bulb project to targets in the amygdala and hypothalamus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004069)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004069#accessory-olfactory-bulb"),
+    name="accessory olfactory bulb",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004069"),
+    synonyms=["accessory (vomeronasal) bulb", "olfactory bulb accessory nucleus"],
+)
 UBERONParcellation.adenohypophysis = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/adenohypophysis",
     definition="'Adenohypophysis' is part of the pituitary gland.",
@@ -5632,15 +5641,15 @@ UBERONParcellation.island_of_calleja = UBERONParcellation(
 )
 UBERONParcellation.islands_of_calleja_of_olfactory_tubercle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/islandsOfCallejaOfOlfactoryTubercle",
-    definition="'Islands of Calleja of olfactory tubercle' is a regional part of brain. It is part of the island of Calleja and olfactory tubercle.",
-    description="Part of olfactory tubercle defined by dense aggregations of granule cells",
+    definition="Is a regional part of brain. Is part of the island of Calleja and the olfactory tubercle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023867) ('is_a' and 'relationship')]",
+    description="Part of olfactory tubercle defined by dense aggregations of granule cells. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023867)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105732"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0023867#islands-of-calleja-of-olfactory-tubercle-1"
     ),
     name="islands of Calleja of olfactory tubercle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023867"),
-    synonyms=["Islets of Calleja", "islands of calleja of olfactory tubercle"],
+    synonyms=["islands of calleja of olfactory tubercle"],
 )
 UBERONParcellation.isthmus_of_cingulate_gyrus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/isthmusOfCingulateGyrus",
@@ -6023,12 +6032,13 @@ UBERONParcellation.lateral_occipital_cortex = UBERONParcellation(
 )
 UBERONParcellation.lateral_olfactory_stria = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralOlfactoryStria",
-    definition="White matter tract that contains projections from the olfactory bulb to the olfactory cortex (Maryann Martone).",
-    description="'Lateral olfactory stria' is an olfactory tract linking bulb to ipsilateral dorsal telencephalon.",
+    definition="Is an olfactory tract linking bulb to ipsilateral dorsal telencephalon. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001888)]",
+    description="White matter tract that contains projections from the olfactory bulb to the olfactory cortex (Maryann Martone). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001888)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106082"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001888#lateral-olfactory-stria-1"),
     name="lateral olfactory stria",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001888"),
+    synonyms=["tractus olfactorius lateralis"],
 )
 UBERONParcellation.lateral_orbital_frontal_cortex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralOrbitalFrontalCortex",
@@ -6644,6 +6654,14 @@ UBERONParcellation.magnocellular_preoptic_nucleus = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000248"),
     synonyms=[""],
 )
+UBERONParcellation.main_olfactory_bulb = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/mainOlfactoryBulb",
+    definition="Is a regional part of brain. Is part of the olfactory bulb. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009951) ('is_a' and 'relationship')]",
+    description="The main olfactory bulb has a multi-layered cellular architecture. In order from surface to the center the layers are: Glomerular layer, External plexiform layer, Mitral cell layer, Internal plexiform layer, Granule cell layer. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009951)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009951#main-olfactory-bulb"),
+    name="main olfactory bulb",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009951"),
+)
 UBERONParcellation.mammillary_body = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/mammillaryBody",
     definition="'Mammillary body' is part of the medial zone of hypothalamus and posterior hypothalamic region.",
@@ -7118,6 +7136,15 @@ UBERONParcellation.medial_olfactory_gyrus = UBERONParcellation(
     name="medial olfactory gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002599"),
     synonyms=["gyrus medius olfactorius", "gyrus olfactorius medialis"],
+)
+UBERONParcellation.medial_olfactory_stria = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/medialOlfactoryStria",
+    definition="Is a stria of neuraxis. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034734)]",
+    description="The medial olfactory stria turns medialward behind the parolfactory area and ends in the subcallosal gyrus; in some cases a small intermediate stria is seen running backward to the anterior perforated substance. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034734)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034734#medial-olfactory-stria"),
+    name="medial olfactory stria",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034734"),
+    synonyms=["stria olfactoria medialis"],
 )
 UBERONParcellation.medial_orbital_frontal_cortex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/medialOrbitalFrontalCortex",
@@ -8306,20 +8333,13 @@ UBERONParcellation.oculomotor_nuclear_complex = UBERONParcellation(
 )
 UBERONParcellation.olfactory_bulb = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryBulb",
-    definition="'Olfactory bulb' is a regional part of brain. It is part of the olfactory lobe.",
-    description="Structure of the vertebrate telencephalon involved in olfaction.",
+    definition="Is a regional part of brain. Is part of the olfactory lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002264) ('is_a' and 'relationship')]",
+    description="A bulbous anterior projection of the olfactory lobe that is the place of termination of the olfactory nerves and is especially well developed in lower vertebrates (as fishes). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002264)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107921"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002264#olfactory-bulb-1"),
     name="olfactory bulb",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002264"),
-    synonyms=[
-        "bulbus olfactorius",
-        "bulbus olfactorius (Morgagni)",
-        "main olfactory bulb",
-        "Olb",
-        "olfactory lobe",
-        "olfactory lobe (Barr & Kiernan)",
-    ],
+    synonyms=["bulbus olfactorius"],
 )
 UBERONParcellation.olfactory_bulb_granule_cell_layer = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryBulbGranuleCellLayer",
@@ -8371,6 +8391,14 @@ UBERONParcellation.olfactory_bulb_outer_nerve_layer = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005978"),
     synonyms=["olfactory bulb main olfactory nerve layer", "olfactory bulb olfactory nerve layer"],
 )
+UBERONParcellation.olfactory_bulb_subependymal_zone = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryBulbSubependymalZone",
+    definition="Is an olfactory bulb layer. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005380)]",
+    description="The region of mitotically active layer of cells surrounding the lateral brain ventricles that consists of migrating neuroblasts, astrocytes and transitory amplifying progenitor cells, that produce neurons that migrate to the olfactory bulb. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005380)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005380#olfactory-bulb-subependymal-zone"),
+    name="olfactory bulb subependymal zone",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005380"),
+)
 UBERONParcellation.olfactory_cortex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryCortex",
     definition="'Olfactory cortex' is a regional part of brain. It is part of the cerebral cortex and olfactory lobe.",
@@ -8391,34 +8419,92 @@ UBERONParcellation.olfactory_entorhinal_cortex = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022453"),
     synonyms=["EOl"],
 )
+UBERONParcellation.olfactory_epithelium = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryEpithelium",
+    definition="Is a sensory epithelium. Is part of the somatic nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001997) ('is_a' and 'relationship')]",
+    description="A sensory epithelium inside the nasal cavity that is responsible for detecting odors. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001997)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001997#olfactory-epithelium-1"),
+    name="olfactory epithelium",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001997"),
+    synonyms=[
+        "main olfactory epithelium",
+        "nasal cavity olfactory epithelium",
+        "olfactory membrane",
+        "olfactory sensory epithelium",
+        "sensory olfactory epithelium",
+    ],
+)
+UBERONParcellation.olfactory_glomerulus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryGlomerulus",
+    definition="Is a neural glomerulus. Is part of the olfactory bulb glomerular layer. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005387) ('is_a' and 'relationship')]",
+    description="One of the small globular masses of dense neuropil in the olfactory bulb, containing the first synapse in the olfactory pathway. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005387)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005387#olfactory-glomerulus"),
+    name="olfactory glomerulus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005387"),
+    synonyms=["glomerulus of olfactory bulb", "olfactory bulb glomerulus"],
+)
+UBERONParcellation.olfactory_lobe = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryLobe",
+    definition="Is a lobe of cerebral hemisphere. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005366)]",
+    description="The lobe at the anterior part of each cerebral hemisphere, responsible for olfactory functions. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005366)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005366#olfactory-lobe"),
+    name="olfactory lobe",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005366"),
+)
+UBERONParcellation.olfactory_pathway = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryPathway",
+    definition="Is a neuron projection bundle and central nervous system cell part cluster. Is part of the limbic system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013201) ('is_a' and 'relationship')]",
+    description="Set of nerve fibers conducting impulses from olfactory receptors to the cerebral cortex. It includes the olfactory nerve; olfactory bulb; olfactory tract, olfactory tubercle, anterior perforated substance, and olfactory cortex. The term rhinencephalon is restricted to structures in the CNS receiving fibers from the olfactory bulb. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013201)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013201#olfactory-pathway"),
+    name="olfactory pathway",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013201"),
+)
 UBERONParcellation.olfactory_tract = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryTract",
-    definition="'Olfactory tract' is a tract of brain. It is part of the white matter of telencephalon.",
-    description="White matter tract that contains projections from the olfactory bulb to other parts of the brain.",
+    definition="Is a tract of brain. Is part of the white matter of telencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002265) ('is_a' and 'relationship')]",
+    description="White matter tract that contains projections from the olfactory bulb to other parts of the brain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002265)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0724772"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002265#olfactory-tract-1"),
     name="olfactory tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002265"),
 )
+UBERONParcellation.olfactory_tract_linking_bulb_to_ipsilateral_dorsal_telencephalon = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryTractLinkingBulbToIpsilateralDorsalTelencephalon",
+    definition="Is an olfactory tract. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034730)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0034730#olfactory-tract-linking-bulb-to-ipsilateral-dorsal-telencephalon"
+    ),
+    name="olfactory tract linking bulb to ipsilateral dorsal telencephalon",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034730"),
+)
+UBERONParcellation.olfactory_tract_linking_bulb_to_ipsilateral_ventral_telencephalon = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryTractLinkingBulbToIpsilateralVentralTelencephalon",
+    definition="Is an olfactory tract. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000238)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:2000238#olfactory-tract-linking-bulb-to-ipsilateral-ventral-telencephalon"
+    ),
+    name="olfactory tract linking bulb to ipsilateral ventral telencephalon",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000238"),
+)
 UBERONParcellation.olfactory_trigone = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryTrigone",
-    definition="'Olfactory trigone' is a regional part of brain. It is part of the olfactory lobe.",
-    description="A small triangular area in front of the anterior perforated substance. Its apex, directed forward, occupies the posterior part of the olfactory sulcus, and is brought into view by throwing back the olfactory tract (adapted from Wikipedia)",
+    definition="Is a regional part of brain. Is part of the olfactory lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002922) ('is_a' and 'relationship')]",
+    description="A small triangular area in front of the anterior perforated substance. Its apex, directed forward, occupies the posterior part of the olfactory sulcus, and is brought into view by throwing back the olfactory tract (adapted from Wikipedia) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002922)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107973"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002922#olfactory-trigone-1"),
     name="olfactory trigone",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002922"),
-    synonyms=["olt", "trigonum olfactorium"],
+    synonyms=["trigonum olfactorium"],
 )
 UBERONParcellation.olfactory_tubercle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/olfactoryTubercle",
-    definition="'Olfactory tubercle' is a telencephalic nucleus. It is part of the olfactory cortex.",
-    description="Region in the ventral telencephalon, prominent in rodents, but present in all mammals, consisting of a laminated cortical part and the cap/hilus region.  It is traditionally viewed as part of the olfactory cortex but recognized by some as having a striatal character.  According to many authors, the structure of the OT transitions from cortical like to striatal like along the lateral medial axis.   (Maryann Martone)",
+    definition="Is a telencephalic nucleus. Is part of the olfactory cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001883) ('is_a' and 'relationship')]",
+    description="Region in the ventral telencephalon, prominent in rodents, but present in all mammals, consisting of a laminated cortical part and the cap/hilus region. It is traditionally viewed as part of the olfactory cortex but recognized by some as having a striatal character. According to many authors, the structure of the OT transitions from cortical like to striatal like along the lateral medial axis. (Maryann Martone) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001883)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107974"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001883#olfactory-tubercle-1"),
     name="olfactory tubercle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001883"),
-    synonyms=["anterior perforated space", "anterior perforated substance", "tuberculum olfactorium"],
+    synonyms=["tuberculum olfactorium"],
 )
 UBERONParcellation.olivary_pretectal_nucleus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/olivaryPretectalNucleus",
