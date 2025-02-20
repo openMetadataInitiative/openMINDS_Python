@@ -560,21 +560,19 @@ UBERONParcellation.anterior_commissure_anterior_part = UBERONParcellation(
 )
 UBERONParcellation.anterior_horn_of_lateral_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/anteriorHornOfLateralVentricle",
-    definition="'Anterior horn of lateral ventricle' is a telencephalic ventricle.",
-    description="Part of the lateral ventricle that extends anteriorly into the frontal lobes, bordered by the head of the caudate nucleus on the lateral side (Adapted from Heimer, 1996)",
+    definition="Is a telencephalic ventricle. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002651)]",
+    description="Part of the lateral ventricle that extends anteriorly into the frontal lobes, bordered by the head of the caudate nucleus on the lateral side (Adapted from Heimer, 1996) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002651)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100702"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002651#anterior-horn-of-lateral-ventricle-1"),
     name="anterior horn of lateral ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002651"),
     synonyms=[
-        "anterior horn of lateral ventricle",
-        "cornu anterius",
         "cornu anterius (ventriculi lateralis)",
         "cornu anterius ventriculi lateralis",
         "cornu frontale (ventriculi lateralis)",
         "cornu frontale ventriculi lateralis",
         "frontal horn of lateral ventricle",
-        "ventriculus lateralis",
+        "ventriculus lateralis, cornu anterius",
     ],
 )
 UBERONParcellation.anterior_hypothalamic_commissure = UBERONParcellation(
@@ -1451,21 +1449,20 @@ UBERONParcellation.body_of_fornix = UBERONParcellation(
 )
 UBERONParcellation.body_of_lateral_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/bodyOfLateralVentricle",
-    definition="'Body of lateral ventricle' is a telencephalic ventricle.",
-    description="Part of lateral ventricle consisting of the central portion that lies dorsally, bounded by the thalamus on the ventral side (Adapted from Heimer, 1996)",
+    definition="Is a telencephalic ventricle. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002655)]",
+    description="Part of lateral ventricle consisting of the central portion that lies dorsally, bounded by the thalamus on the ventral side (Adapted from Heimer, 1996) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002655)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101374"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002655#body-of-lateral-ventricle-1"),
     name="body of lateral ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002655"),
     synonyms=[
         "central part of lateral ventricle",
-        "corpus",
         "corpus ventriculi lateralis",
         "lateral ventricular body",
-        "pars centralis",
         "pars centralis (ventriculi lateralis)",
         "pars centralis ventriculi lateralis",
-        "ventriculus lateralis",
+        "ventriculus lateralis, corpus",
+        "ventriculus lateralis, pars centralis",
     ],
 )
 UBERONParcellation.brachium_of_inferior_colliculus = UBERONParcellation(
@@ -1573,17 +1570,20 @@ UBERONParcellation.brain_meninx = UBERONParcellation(
 )
 UBERONParcellation.brain_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainVentricle",
-    definition="'Brain ventricle' is a brain ventricle/choroid plexus and ventricle of nervous system. It is part of the ventricular system of brain.",
-    description="One of the system of communicating cavities in the brain that are continuous with the central canal of the spinal cord, that like it are derived from the medullary canal of the embryo, that are lined with an epithelial ependyma, and that contain a serous fluid.",
+    definition="Is a brain ventricle/choroid plexus and ventricle of nervous system. Is part of the ventricular system of brain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004086) ('is_a' and 'relationship')]",
+    description="One of the system of communicating cavities in the brain that are continuous with the central canal of the spinal cord, that like it are derived from the medullary canal of the embryo, that are lined with an epithelial ependyma, and that contain a serous fluid. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004086)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0730602"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004086#cerebral-ventricular-cavity"),
     name="brain ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004086"),
+    synonyms=["cerebral ventricle", "region of ventricular system of brain"],
 )
-UBERONParcellation.brain_ventriclechoroid_plexus = UBERONParcellation(
-    id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainVentriclechoroidPlexus",
-    definition="'Brain ventricle/choroid plexus' is part of the brain.",
-    description="The brain ventricles or their associated choroid plexuses.",
+UBERONParcellation.brain_ventricle_choroid_plexus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainVentricleChoroidPlexus",
+    definition="Is part of the brain. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003947)]",
+    description="The brain ventricles or their associated choroid plexuses. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003947)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0730467"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003947#brain-ventricle-choroid-plexus"),
     name="brain ventricle/choroid plexus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003947"),
 )
@@ -1780,6 +1780,15 @@ UBERONParcellation.ca4_field_of_hippocampus = UBERONParcellation(
         "region IV of ammon's horn",
         "region IV of hippocampus proper",
     ],
+)
+UBERONParcellation.calcar_avis_of_the_lateral_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/calcarAvisOfTheLateralVentricle",
+    definition="Is a regional part of brain. Is part of the telencephalic ventricle and the hippocampal formation. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035970) ('is_a' and 'relationship')]",
+    description="On the medial wall of the posterior cornu of the lateral ventricle is a longitudinal eminence, the calcar avis (hippocampus minor), which is an involution of the ventricular wall produced by the calcarine fissure. It is sometimes visible on ultrasonogram. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035970)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0035970#calcar-avis-of-the-lateral-ventricle"),
+    name="calcar avis of the lateral ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035970"),
+    synonyms=["hippocampus minor"],
 )
 UBERONParcellation.calcarine_sulcus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/calcarineSulcus",
@@ -3041,14 +3050,13 @@ UBERONParcellation.choroid_plexus_epithelium = UBERONParcellation(
 )
 UBERONParcellation.choroid_plexus_of_fourth_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/choroidPlexusOfFourthVentricle",
-    definition="'Choroid plexus of fourth ventricle' is a choroid plexus and cerebellum vasculature. It is part of the fourth ventricle.",
-    description="Choroid plexus of the fourth ventricle",
+    definition="Is a choroid plexus and cerebellum vasculature. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002290) ('is_a' and 'relationship')]",
+    description="Choroid plexus of the fourth ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002290)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102143"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002290#choroid-plexus-of-fourth-ventricle"),
     name="choroid plexus of fourth ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002290"),
     synonyms=[
-        "4th ventricle choroid plexus",
         "chorioid plexus of cerebral hemisphere of fourth ventricle",
         "chorioid plexus of fourth ventricle",
         "choroid plexus fourth ventricle",
@@ -3058,8 +3066,8 @@ UBERONParcellation.choroid_plexus_of_fourth_ventricle = UBERONParcellation(
 )
 UBERONParcellation.choroid_plexus_of_lateral_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/choroidPlexusOfLateralVentricle",
-    definition="'Choroid plexus of lateral ventricle' is a choroid plexus. It is part of the telencephalic ventricle.",
-    description="Part of choroid plexus contained in the lateral ventricle",
+    definition="Is a choroid plexus. Is part of the telencephalic ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002307) ('is_a' and 'relationship')]",
+    description="Part of choroid plexus contained in the lateral ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002307)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102144"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002307#choroid-plexus-of-lateral-ventricle"),
     name="choroid plexus of lateral ventricle",
@@ -3072,16 +3080,24 @@ UBERONParcellation.choroid_plexus_of_lateral_ventricle = UBERONParcellation(
         "lateral ventricle choroid plexus",
     ],
 )
+UBERONParcellation.choroid_plexus_of_tectal_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/choroidPlexusOfTectalVentricle",
+    definition="Is a choroid plexus. Is part of the midbrain cerebral aqueduct. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007299) ('is_a' and 'relationship')]",
+    description="A choroid plexus that is part of a cerebral aqueduct. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007299)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007299#choroid-plexus-of-tectal-ventricle"),
+    name="choroid plexus of tectal ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007299"),
+    synonyms=["choroid plexus tectal ventricle"],
+)
 UBERONParcellation.choroid_plexus_of_third_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/choroidPlexusOfThirdVentricle",
-    definition="'Choroid plexus of third ventricle' is a choroid plexus. It is part of the third ventricle.",
-    description="Part of choroid plexus contained in the third ventricle",
+    definition="Is a choroid plexus. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002288) ('is_a' and 'relationship')]",
+    description="Part of choroid plexus contained in the third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002288)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102145"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002288#choroid-plexus-of-third-ventricle"),
     name="choroid plexus of third ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002288"),
     synonyms=[
-        "3rd ventricle choroid plexus",
         "chorioid plexus of cerebral hemisphere of third ventricle",
         "chorioid plexus of third ventricle",
         "choroid plexus third ventricle",
@@ -4823,48 +4839,56 @@ UBERONParcellation.fornix_of_brain = UBERONParcellation(
 )
 UBERONParcellation.fourth_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/fourthVentricle",
-    definition="'Fourth ventricle' is a brain ventricle. It is part of the hindbrain.",
-    description="Part of the ventricular system of the brain, forming a single large irregularly shaped cavity located on the midline of the rhombencephalon, between the medulla, pons and the isthmus ventrally and the cerebellum dorsally. It is continuous with the cerebral aqueduct anteriorally and the central canal of the spinal cord posteriorly. It communicates with the subarachnoid space through its lateral and median apertures.",
+    definition="Is a brain ventricle. Is part of the hindbrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002422) ('is_a' and 'relationship')]",
+    description="Part of the ventricular system of the brain, forming a single large irregularly shaped cavity located on the midline of the rhombencephalon, between the medulla, pons and the isthmus ventrally and the cerebellum dorsally. It is continuous with the cerebral aqueduct anteriorally and the central canal of the spinal cord posteriorly. It communicates with the subarachnoid space through its lateral and median apertures. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002422)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104381"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002422#fourth-ventricle"),
     name="fourth ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002422"),
-    synonyms=[
-        "4th ventricle",
-        "fourth ventricle proper",
-        "hindbrain ventricle",
-        "IVth ventricle",
-        "rhombencephalic ventricle",
-        "rhombencephalic vesicle",
-        "ventricle IV",
-        "ventricle of hindbrain",
-        "ventricle of rhombencephalon",
-        "ventriculus quartus",
-    ],
+    synonyms=["ventricle IV"],
 )
 UBERONParcellation.fourth_ventricle_aperture = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/fourthVentricleAperture",
-    definition="'Fourth ventricle aperture' is part of the fourth ventricle.",
-    description="One of:  the 4th ventricle median or lateral apertures.",
+    definition="Is part of the fourth ventricle. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004668)]",
+    description="One of: the 4th ventricle median or lateral apertures. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004668)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0735066"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004668#fourth-ventricle-aperture"),
     name="fourth ventricle aperture",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004668"),
+    synonyms=["aperture of 4th ventricle", "aperture of fourth ventricle"],
 )
 UBERONParcellation.fourth_ventricle_choroid_plexus_epithelium = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/fourthVentricleChoroidPlexusEpithelium",
-    definition="'Fourth ventricle choroid plexus epithelium' is a choroid plexus epithelium. It is part of the choroid plexus of fourth ventricle.",
+    definition="Is a choroid plexus epithelium. Is part of the choroid plexus of fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004276) ('is_a' and 'relationship')]",
+    description="A choroid plexus epithelium that is part of a fourth ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004276)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0728876"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0004276#fourth-ventricle-choroid-plexus-epithelium"
     ),
     name="fourth ventricle choroid plexus epithelium",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004276"),
+    synonyms=[
+        "chorioid plexus of cerebral hemisphere epithelial tissue of fourth ventricle",
+        "chorioid plexus of cerebral hemisphere epithelium of fourth ventricle",
+        "choroid plexus epithelial tissue of fourth ventricle",
+        "choroid plexus epithelium of fourth ventricle",
+        "epithelial tissue of chorioid plexus of cerebral hemisphere of fourth ventricle",
+        "epithelial tissue of choroid plexus of fourth ventricle",
+        "epithelium of chorioid plexus of cerebral hemisphere of fourth ventricle",
+        "epithelium of choroid plexus of fourth ventricle",
+        "fourth ventricle chorioid plexus of cerebral hemisphere epithelial tissue",
+        "fourth ventricle chorioid plexus of cerebral hemisphere epithelium",
+        "fourth ventricle choroid plexus epithelial tissue",
+        "fourth ventricle epithelial tissue of chorioid plexus of cerebral hemisphere",
+        "fourth ventricle epithelial tissue of choroid plexus",
+        "fourth ventricle epithelium of chorioid plexus of cerebral hemisphere",
+        "fourth ventricle epithelium of choroid plexus",
+    ],
 )
 UBERONParcellation.fourth_ventricle_choroid_plexus_stroma = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/fourthVentricleChoroidPlexusStroma",
-    definition="'Fourth ventricle choroid plexus stroma' is a choroid plexus stroma. It is part of the choroid plexus of fourth ventricle.",
-    description="A choroid plexus stroma that is part of a fourth ventricle.",
+    definition="Is a choroid plexus stroma. Is part of the choroid plexus of fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006340) ('is_a' and 'relationship')]",
+    description="A choroid plexus stroma that is part of a fourth ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006340)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0726195"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006340#fourth-ventricle-choroid-plexus-stroma"),
     name="fourth ventricle choroid plexus stroma",
@@ -4872,11 +4896,38 @@ UBERONParcellation.fourth_ventricle_choroid_plexus_stroma = UBERONParcellation(
 )
 UBERONParcellation.fourth_ventricle_ependyma = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/fourthVentricleEpendyma",
-    definition="'Fourth ventricle ependyma' is a brain ependyma. It is part of the fourth ventricle.",
+    definition="Is a brain ependyma. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004644) ('is_a' and 'relationship')]",
+    description="An ependyma that is part of a fourth ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004644)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0729148"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004644#fourth-ventricle-ependyma"),
     name="fourth ventricle ependyma",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004644"),
+    synonyms=["ependyma of fourth ventricle"],
+)
+UBERONParcellation.fourth_ventricle_lateral_aperture = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/fourthVentricleLateralAperture",
+    definition="Is a fourth ventricle aperture. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003992)]",
+    description="One of the two lateral openings of the fourth ventricle into the subarachnoid space at the cerebellopontine angle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003992)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003992#fourth-ventricle-lateral-aperture"),
+    name="fourth ventricle lateral aperture",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003992"),
+    synonyms=[
+        "apertura lateralis",
+        "foramen of key and retzius",
+        "foramen of Key-Retzius",
+        "foramen of Luschka",
+        "foramen of Retzius",
+        "lateral aperture of fourth ventricle",
+    ],
+)
+UBERONParcellation.fourth_ventricle_median_aperture = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/fourthVentricleMedianAperture",
+    definition="Is a fourth ventricle aperture. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003991)]",
+    description="The large midline opening of the posterior inferior part of the roof of the fourth ventricle that connects the fourth ventricle to the posterior cerebromedullary cistern and the spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003991)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003991#fourth-ventricle-median-aperture"),
+    name="fourth ventricle median aperture",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003991"),
+    synonyms=["apertura mediana", "foramen of Magendie", "foramen of Majendie", "median aperture of fourth ventricle"],
 )
 UBERONParcellation.frontal_cortex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/frontalCortex",
@@ -5560,8 +5611,8 @@ UBERONParcellation.inferior_frontal_gyrus = UBERONParcellation(
 )
 UBERONParcellation.inferior_horn_of_the_lateral_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/inferiorHornOfTheLateralVentricle",
-    definition="'Inferior horn of the lateral ventricle' is part of the telencephalic ventricle.",
-    description="The part of the lateral ventricle extending downward and anteriorly in the temporal lobe.",
+    definition="Is part of the telencephalic ventricle. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006091)]",
+    description="The part of the lateral ventricle extending downward and anteriorly in the temporal lobe. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006091)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105444"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0006091#inferior-horn-of-the-lateral-ventricle-1"
@@ -5569,16 +5620,14 @@ UBERONParcellation.inferior_horn_of_the_lateral_ventricle = UBERONParcellation(
     name="inferior horn of the lateral ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006091"),
     synonyms=[
-        "cornu inferius",
         "cornu inferius (ventriculi lateralis)",
         "cornu inferius ventriculi lateralis",
-        "cornu temporale",
         "cornu temporale (ventriculi lateralis)",
         "cornu temporale ventriculi lateralis",
         "inferior horn of lateral ventricle",
-        "inferior horn of the lateral ventricle",
         "temporal horn of lateral ventricle",
-        "ventriculus lateralis",
+        "ventriculus lateralis, cornu inferius",
+        "ventriculus lateralis, cornu temporale",
     ],
 )
 UBERONParcellation.inferior_longitudinal_fasciculus = UBERONParcellation(
@@ -5711,6 +5760,20 @@ UBERONParcellation.inferior_vestibular_nucleus = UBERONParcellation(
     name="inferior vestibular nucleus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001721"),
     synonyms=["descending vestibular nucleus", "nucleus vestibularis inferior", "spinal vestibular nucleus"],
+)
+UBERONParcellation.infundibular_recess_of3rd_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/infundibularRecessOf3rdVentricle",
+    definition="Is part of the third ventricle and the future neurohypophysis. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006250)]",
+    description="A funnel-shaped diverticulum that extends downward from the anterior aspect of the floor of the third ventricle into the infundibulum of the hypophysis; the embryonic structure gives rise the neural component of the pituitary (pas nervosa). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006250)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006250#infundibular-recess-of-3rd-ventricle"),
+    name="infundibular recess of 3rd ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006250"),
+    synonyms=[
+        "infundibular recess",
+        "infundibular recess of third ventricle",
+        "recessus infundibularis",
+        "recessus infundibuli",
+    ],
 )
 UBERONParcellation.insect_protocerebrum = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/insectProtocerebrum",
@@ -6249,7 +6312,7 @@ UBERONParcellation.lateral_cervical_nucleus = UBERONParcellation(
 )
 UBERONParcellation.lateral_eminence_of_fourth_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralEminenceOfFourthVentricle",
-    definition="'Lateral eminence of fourth ventricle' is part of the fourth ventricle.",
+    definition="Is part of the fourth ventricle. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034672)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0734681"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034672#lateral-eminence-of-fourth-ventricle"),
     name="lateral eminence of fourth ventricle",
@@ -6689,12 +6752,13 @@ UBERONParcellation.lateral_pulvinar_nucleus = UBERONParcellation(
 )
 UBERONParcellation.lateral_recess_of_fourth_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralRecessOfFourthVentricle",
-    definition="'Lateral recess of fourth ventricle' is an anatomical entity. It is part of the fourth ventricle.",
-    description="The lateral recess is a projection of the fourth ventricle which extends into the inferior cerebellar peduncle of the brainstem. The lateral aperture, an opening in each extremity of the lateral recess, provides a conduit for cerebrospinal fluid to flow from the brain's ventricular system into the subarachnoid space.",
+    definition="Is an anatomical entity. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007656) ('is_a' and 'relationship')]",
+    description="The lateral recess is a projection of the fourth ventricle which extends into the inferior cerebellar peduncle of the brainstem. The lateral aperture, an opening in each extremity of the lateral recess, provides a conduit for cerebrospinal fluid to flow from the brain's ventricular system into the subarachnoid space. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007656)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0736090"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007656#lateral-recess-of-fourth-ventricle"),
     name="lateral recess of fourth ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007656"),
+    synonyms=["recessus lateralis (ventriculi quarti)"],
 )
 UBERONParcellation.lateral_reticular_nucleus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralReticularNucleus",
@@ -6800,6 +6864,52 @@ UBERONParcellation.lateral_tuberal_nucleus = UBERONParcellation(
         "nucleus tuberis lateralis",
     ],
 )
+UBERONParcellation.lateral_ventricle_choroid_plexus_epithelium = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralVentricleChoroidPlexusEpithelium",
+    definition="Is a choroid plexus epithelium. Is part of the choroid plexus of lateral ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004274) ('is_a' and 'relationship')]",
+    description="A choroid plexus epithelium that is part of a lateral ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004274)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0004274#lateral-ventricle-choroid-plexus-epithelium"
+    ),
+    name="lateral ventricle choroid plexus epithelium",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004274"),
+    synonyms=[
+        "chorioid plexus of cerebral hemisphere epithelial tissue of lateral ventricle",
+        "chorioid plexus of cerebral hemisphere epithelium of lateral ventricle",
+        "choroid plexus epithelial tissue of lateral ventricle",
+        "choroid plexus epithelium of lateral ventricle",
+        "epithelial tissue of chorioid plexus of cerebral hemisphere of lateral ventricle",
+        "epithelial tissue of choroid plexus of lateral ventricle",
+        "epithelium of chorioid plexus of cerebral hemisphere of lateral ventricle",
+        "epithelium of choroid plexus of lateral ventricle",
+        "lateral ventricle chorioid plexus of cerebral hemisphere epithelial tissue",
+        "lateral ventricle chorioid plexus of cerebral hemisphere epithelium",
+        "lateral ventricle choroid plexus epithelial tissue",
+        "lateral ventricle epithelial tissue of chorioid plexus of cerebral hemisphere",
+        "lateral ventricle epithelial tissue of choroid plexus",
+        "lateral ventricle epithelium of chorioid plexus of cerebral hemisphere",
+        "lateral ventricle epithelium of choroid plexus",
+    ],
+)
+UBERONParcellation.lateral_ventricle_choroid_plexus_stroma = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralVentricleChoroidPlexusStroma",
+    definition="Is a choroid plexus stroma. Is part of the choroid plexus of lateral ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006338) ('is_a' and 'relationship')]",
+    description="A choroid plexus stroma that is part of a lateral ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006338)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0006338#lateral-ventricle-choroid-plexus-stroma"
+    ),
+    name="lateral ventricle choroid plexus stroma",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006338"),
+)
+UBERONParcellation.lateral_ventricle_ependyma = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralVentricleEpendyma",
+    definition="Is a brain ependyma. Is part of the telencephalic ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004643) ('is_a' and 'relationship')]",
+    description="An ependyma that is part of a lateral ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004643)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004643#lateral-ventricle-ependyma"),
+    name="lateral ventricle ependyma",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004643"),
+    synonyms=["ependyma of lateral ventricle"],
+)
 UBERONParcellation.lateral_vestibular_nucleus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/lateralVestibularNucleus",
     definition="'Lateral vestibular nucleus' is a vestibular nucleus.",
@@ -6843,6 +6953,15 @@ UBERONParcellation.left_hemisphere_of_cerebellum = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014889#left-hemisphere-of-cerebellum"),
     name="left hemisphere of cerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014889"),
+)
+UBERONParcellation.left_lateral_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/leftLateralVentricle",
+    definition="Is a telencephalic ventricle. Is part of the left cerebral hemisphere. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013161) ('is_a' and 'relationship')]",
+    description="A telencephalic ventricle that is in the left side of a telencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013161)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013161#left-lateral-ventricle"),
+    name="left lateral ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013161"),
+    synonyms=["left telencephalic ventricle"],
 )
 UBERONParcellation.lenticular_fasciculus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/lenticularFasciculus",
@@ -9058,21 +9177,13 @@ UBERONParcellation.optic_chiasma = UBERONParcellation(
 )
 UBERONParcellation.optic_recess_of_third_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/opticRecessOfThirdVentricle",
-    definition="'Optic recess of third ventricle' is an anatomical entity. It is part of the third ventricle.",
-    description="Recess in third ventricle lying in front of the optic chiasm at the base of the lamina terminalis",
+    definition="Is an anatomical entity. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002287) ('is_a' and 'relationship')]",
+    description="Recess in third ventricle lying in front of the optic chiasm at the base of the lamina terminalis. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002287)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0108073"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002287#optic-recess-of-third-ventricle-1"),
     name="optic recess of third ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002287"),
-    synonyms=[
-        "optic recess",
-        "optic recesses",
-        "preoptic recess",
-        "recessus opticus",
-        "recessus praeopticus",
-        "recessus supraopticus",
-        "supraoptic recess",
-    ],
+    synonyms=["optic recess", "preoptic recess", "recessus supraopticus", "supraoptic recess"],
 )
 UBERONParcellation.optic_tract = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/opticTract",
@@ -10150,6 +10261,15 @@ UBERONParcellation.pineal_body = UBERONParcellation(
     name="pineal body",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001905"),
 )
+UBERONParcellation.pineal_recess_of_third_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/pinealRecessOfThirdVentricle",
+    definition="Is an anatomical entity. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022283) ('is_a' and 'relationship')]",
+    description="The diverticulum of the thin roof of the dorsocaudal third ventricle that projects into the stalk of the pineal gland. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022283)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022283#pineal-recess-of-third-ventricle"),
+    name="pineal recess of third ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022283"),
+    synonyms=["pineal recess", "pineal recess of 3V", "recessus pinealis"],
+)
 UBERONParcellation.piriform_cortex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/piriformCortex",
     definition="Prepyriform area (or prepiriform cortex) is a portion of the rhinencephalon consisting of paleocortex. Some sources state that it is part of the primary olfactory cortex.",
@@ -10481,25 +10601,23 @@ UBERONParcellation.posterior_commissure = UBERONParcellation(
 )
 UBERONParcellation.posterior_horn_lateral_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/posteriorHornLateralVentricle",
-    definition="'Posterior horn lateral ventricle' is a telencephalic ventricle.",
-    description="Part of the lateral ventricle that extends posteriorly into the occipital lobe.",
+    definition="Is a telencephalic ventricle. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004672)]",
+    description="Part of the lateral ventricle that extends posteriorly into the occipital lobe. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004672)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109097"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004672#posterior-horn-lateral-ventricle-1"),
     name="posterior horn lateral ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004672"),
     synonyms=[
-        "cornu occipitale",
         "cornu occipitale (ventriculi lateralis)",
         "cornu occipitale ventriculi lateralis",
-        "cornu posterius",
         "cornu posterius (ventriculi lateralis)",
         "cornu posterius ventriculi lateralis",
         "occipital horn",
         "occipital horn of lateral ventricle",
-        "posterior horn lateral ventricle",
         "posterior horn of lateral ventricle",
         "posterior horn of the lateral ventricle",
-        "ventriculus lateralis",
+        "ventriculus lateralis, cornu occipitale",
+        "ventriculus lateralis, cornu posterius",
     ],
 )
 UBERONParcellation.posterior_hypothalamic_region = UBERONParcellation(
@@ -11489,6 +11607,15 @@ UBERONParcellation.right_hemisphere_of_cerebellum = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014890#right-hemisphere-of-cerebellum"),
     name="right hemisphere of cerebellum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014890"),
+)
+UBERONParcellation.right_lateral_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rightLateralVentricle",
+    definition="Is a telencephalic ventricle. Is part of the right cerebral hemisphere. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013162) ('is_a' and 'relationship')]",
+    description="A telencephalic ventricle that is in the right side of a telencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013162)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013162#right-lateral-ventricle"),
+    name="right lateral ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013162"),
+    synonyms=["right telencephalic ventricle"],
 )
 UBERONParcellation.root_of_abducens_nerve = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rootOfAbducensNerve",
@@ -12760,33 +12887,62 @@ UBERONParcellation.tectopontine_tract = UBERONParcellation(
 )
 UBERONParcellation.tela_choroidea_of_fourth_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/telaChoroideaOfFourthVentricle",
-    definition="'Tela choroidea of fourth ventricle' is a tela choroidea. It is part of the fourth ventricle.",
-    description="Tela chorioidea that lines the fourth ventricle[ZFA]. The tela chorioidea of the fourth ventricle is the name applied to the triangular fold of pia mater which is carried upward between the cerebellum and the medulla oblongata. It consists of two layers, which are continuous with each other in front, and are more or less adherent throughout:  The posterior layer covers the antero-inferior surface of the cerebellum. The anterior layer is applied to the structures which form the lower part of the roof of the ventricle, and is continuous inferiorly with the pia mater on the inferior peduncles and closed part of the medulla[WP].",
+    definition="Is a tela choroidea. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005287) ('is_a' and 'relationship')]",
+    description="Tela chorioidea that lines the fourth ventricle. The tela chorioidea of the fourth ventricle is the name applied to the triangular fold of pia mater which is carried upward between the cerebellum and the medulla oblongata. It consists of two layers, which are continuous with each other in front, and are more or less adherent throughout: The posterior layer covers the antero-inferior surface of the cerebellum. The anterior layer is applied to the structures which form the lower part of the roof of the ventricle, and is continuous inferiorly with the pia mater on the inferior peduncles and closed part of the medulla. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005287)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0727490"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005287#tela-choroidea-of-fourth-ventricle"),
     name="tela choroidea of fourth ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005287"),
+    synonyms=[
+        "choroid membrane",
+        "choroid membrane of fourth ventricle",
+        "tela chorioidea fourth ventricle",
+        "tela choroidea fourth ventricle",
+        "tela choroidea ventriculi quarti",
+    ],
+)
+UBERONParcellation.tela_choroidea_of_telencephalic_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/telaChoroideaOfTelencephalicVentricle",
+    definition="Is a tela choroidea. Is part of the telencephalic ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005289) ('is_a' and 'relationship')]",
+    description="Tela chorioidea that lines the telencephalic ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005289)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0005289#tela-choroidea-of-telencephalic-ventricle"
+    ),
+    name="tela choroidea of telencephalic ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005289"),
+    synonyms=[
+        "tela chorioidea of lateral ventricle",
+        "tela chorioidea of telencephalic ventricle",
+        "tela chorioidea telencephalic ventricle",
+        "tela choroidea (ventriculi lateralis)",
+        "tela choroidea of lateral ventricle",
+        "tela choroidea telencephalic ventricle",
+    ],
+)
+UBERONParcellation.tela_choroidea_of_third_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/telaChoroideaOfThirdVentricle",
+    definition="Is a tela choroidea. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005288) ('is_a' and 'relationship')]",
+    description="Tela chorioidea that lines the third ventricle. The part of the choroid plexus in relation to the body of the ventricle forms the vascular fringed margin of a triangular process of pia mater, named the tela chorioidea of the third ventricle, and projects from under cover of the lateral edge of the fornix. Blood is supplied by branches from the superior cerebellar artery. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005288)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005288#tela-choroidea-of-third-ventricle"),
+    name="tela choroidea of third ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005288"),
+    synonyms=[
+        "choroid membrane of third ventricle",
+        "tela chorioidea of third ventricle",
+        "tela chorioidea third ventricle",
+        "tela choroidea third ventricle",
+        "tela choroidea ventriculi tertii",
+    ],
 )
 UBERONParcellation.telencephalic_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/telencephalicVentricle",
-    definition="'Telencephalic ventricle' is a brain ventricle. It is part of the telencephalon.",
-    description="Part of the ventricular system of the brain in each of the cerebral hemispheres. The lateral ventricle in each hemisphere is separated from the other by the septum and each communicates with the THIRD VENTRICLE by the foramen of Monro, In species, particularly those with well developed cortex, the lateral ventrical may be subdivided into anterior, posterior and temporal horns and a body",
+    definition="Is a brain ventricle. Is part of the telencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002285) ('is_a' and 'relationship')]",
+    description="A brain ventricle that is part of a telencephalon. In mammals and species with an evaginated telencephalon, this is one of a pair of lateral structures, one in each hemisphere. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002285)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106125"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002285#lateral-ventricle"),
     name="telencephalic ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002285"),
-    synonyms=[
-        "forebrain ventricle",
-        "lateral ventricle",
-        "lateral ventricle of brain",
-        "lateral ventricles",
-        "LV",
-        "tectal ventricle",
-        "telencephalic ventricle",
-        "telencephalic ventricles",
-        "telencephalic vesicle",
-        "telencephalon lateral ventricle",
-    ],
+    synonyms=["lateral ventricle", "telencephalon lateral ventricle"],
 )
 UBERONParcellation.telencephalon = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/telencephalon",
@@ -12906,20 +13062,57 @@ UBERONParcellation.thalamic_reticular_nucleus = UBERONParcellation(
 )
 UBERONParcellation.third_ventricle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/thirdVentricle",
-    definition="'Third ventricle' is a brain ventricle. It is part of the diencephalon.",
-    description="Part of the ventricular system of the brain, forming a single large cavity in the midline of the diencephalon;  it is continuous with the lateral ventricles through the interventricular foramen and the fourth ventricle through the cerebral aqueduct. (Maryann Martone.  It is bounded anteriorly by the lamina terminalis;  much of the medial surface is formed by the thalamus and hypothalamus;  part of the hypothalamus forms its floor (Nolte, the Human Brain, 6th ed., 2009, pg 101).",
+    definition="Is a brain ventricle. Is part of the diencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002286) ('is_a' and 'relationship')]",
+    description="Part of the ventricular system of the brain, forming a single large cavity in the midline of the diencephalon; it is continuous with the lateral ventricles through the interventricular foramen and the fourth ventricle through the cerebral aqueduct. (Maryann Martone) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002286)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111707"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002286#third-ventricle-1"),
     name="third ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002286"),
+    synonyms=["3rd ventricle", "ventriculus diencephali"],
+)
+UBERONParcellation.third_ventricle_choroid_plexus_epithelium = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/thirdVentricleChoroidPlexusEpithelium",
+    definition="Is a choroid plexus epithelium. Is part of the choroid plexus of third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004275) ('is_a' and 'relationship')]",
+    description="A choroid plexus epithelium that is part of a third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004275)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0004275#third-ventricle-choroid-plexus-epithelium"
+    ),
+    name="third ventricle choroid plexus epithelium",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004275"),
     synonyms=[
-        "3rd ventricle",
-        "3V",
-        "diencephalic ventricle",
-        "diencephalic vesicle",
-        "ventriculus diencephali",
-        "ventriculus tertius cerebri",
+        "chorioid plexus of cerebral hemisphere epithelial tissue of third ventricle",
+        "chorioid plexus of cerebral hemisphere epithelium of third ventricle",
+        "choroid plexus epithelial tissue of third ventricle",
+        "choroid plexus epithelium of third ventricle",
+        "epithelial tissue of chorioid plexus of cerebral hemisphere of third ventricle",
+        "epithelial tissue of choroid plexus of third ventricle",
+        "epithelium of chorioid plexus of cerebral hemisphere of third ventricle",
+        "epithelium of choroid plexus of third ventricle",
+        "third ventricle chorioid plexus of cerebral hemisphere epithelial tissue",
+        "third ventricle chorioid plexus of cerebral hemisphere epithelium",
+        "third ventricle choroid plexus epithelial tissue",
+        "third ventricle epithelial tissue of chorioid plexus of cerebral hemisphere",
+        "third ventricle epithelial tissue of choroid plexus",
+        "third ventricle epithelium of chorioid plexus of cerebral hemisphere",
+        "third ventricle epithelium of choroid plexus",
     ],
+)
+UBERONParcellation.third_ventricle_choroid_plexus_stroma = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/thirdVentricleChoroidPlexusStroma",
+    definition="Is a choroid plexus stroma. Is part of the choroid plexus of third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006339) ('is_a' and 'relationship')]",
+    description="A choroid plexus stroma that is part of a third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006339)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006339#third-ventricle-choroid-plexus-stroma"),
+    name="third ventricle choroid plexus stroma",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006339"),
+)
+UBERONParcellation.third_ventricle_ependyma = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/thirdVentricleEpendyma",
+    definition="Is a brain ependyma. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004642) ('is_a' and 'relationship')]",
+    description="An ependyma that is part of a third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004642)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004642#third-ventricle-ependyma"),
+    name="third ventricle ependyma",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004642"),
+    synonyms=["3rd ventricle ependyma", "ependyma of third ventricle"],
 )
 UBERONParcellation.tract_of_brain = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/tractOfBrain",
