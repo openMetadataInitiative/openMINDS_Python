@@ -130,6 +130,7 @@ UnitOfMeasurement.arcdegree = UnitOfMeasurement(
     id="https://openminds.om-i.org/instances/unitOfMeasurement/arcdegree",
     definition="An arcdegree is a measurement of a plane angle in which one full rotation is 360 degrees.",
     name="arcdegree",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UO_0000185"),
     synonyms=["arc degree", "degree", "degree of arc", "°"],
 )
 UnitOfMeasurement.bit = UnitOfMeasurement(

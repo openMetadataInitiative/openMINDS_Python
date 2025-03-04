@@ -40,7 +40,7 @@ class DatasetVersion(LinkedMetadata):
         ),
         Property(
             "behavioral_tasks",
-            "openminds.v1.core.BehavioralTask",
+            "openminds.v1.controlled_terms.BehavioralTask",
             "behavioralTask",
             multiple=True,
             unique_items=True,
