@@ -194,6 +194,11 @@ Service.neuroglancer = Service(
     description="'Neuroglancer' is capable of displaying arbitrary (non axis-aligned) cross-sectional views of volumetric data, as well as 3-D meshes and line-segment based models (skeletons). A live demo without any preloaded datasets is hosted at https://neuroglancer-demo.appspot.com.",
     name="Neuroglancer",
 )
+Service.neurosift = Service(
+    id="https://openminds.om-i.org/instances/service/Neurosift",
+    definition="Neurosift is a browser-based tool designed for the visualization of neuroscience data with a focus on NWB (Neurodata Without Borders) files.",
+    name="Neurosift",
+)
 Service.siibra_explorer = Service(
     id="https://openminds.om-i.org/instances/service/siibraExplorer",
     definition="'siibra-explorer' is an interactive viewer for multilevel brain atlases",

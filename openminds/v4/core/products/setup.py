@@ -37,7 +37,6 @@ class Setup(LinkedMetadata):
                 "openminds.v4.ephys.Electrode",
                 "openminds.v4.ephys.ElectrodeArray",
                 "openminds.v4.ephys.Pipette",
-                "openminds.v4.neuroimaging.MRIScanner",
                 "openminds.v4.specimen_prep.SlicingDevice",
             ],
             "hasPart",

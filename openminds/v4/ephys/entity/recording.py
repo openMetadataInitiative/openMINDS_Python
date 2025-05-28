@@ -76,7 +76,6 @@ class Recording(LinkedMetadata):
                 "openminds.v4.ephys.ElectrodeArrayUsage",
                 "openminds.v4.ephys.ElectrodeUsage",
                 "openminds.v4.ephys.PipetteUsage",
-                "openminds.v4.neuroimaging.MRIScannerUsage",
                 "openminds.v4.specimen_prep.SlicingDeviceUsage",
             ],
             "recordedWith",

@@ -153,6 +153,15 @@ ContentType.application_dicom = ContentType(
     related_media_type=IRI("https://www.iana.org/assignments/media-types/application/dicom"),
     synonyms=["Digital Imaging and Communications in Medicine", "DICOM"],
 )
+ContentType.application_gzip = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_gzip",
+    description="A gzip (.gz) file is a compressed archive using the GNU zip algorithm. Unlike the ZIP format, which packages multiple files along with directory structure, gzip typically compresses a single file or data stream. It uses the DEFLATE compression method for efficient lossless compression and is commonly combined with tar (as .tar.gz or .tgz) when multiple files need compression.",
+    file_extensions=[".gz", ".gzip"],
+    name="application/gzip",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/gzip"),
+    specification=IRI("https://www.ietf.org/rfc/rfc1952.txt"),
+    synonyms=["GZIP", "GZ file", "GZIP file", "GNU zip", "GNU zip file"],
+)
 ContentType.application_json = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_json",
     file_extensions=[".json"],

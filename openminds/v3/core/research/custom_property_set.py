@@ -40,6 +40,8 @@ class CustomPropertySet(EmbeddedMetadata):
             "relevant_for",
             [
                 "openminds.v3.controlled_terms.AnalysisTechnique",
+                "openminds.v3.controlled_terms.MRIPulseSequence",
+                "openminds.v3.controlled_terms.MRIWeighting",
                 "openminds.v3.controlled_terms.StimulationApproach",
                 "openminds.v3.controlled_terms.StimulationTechnique",
                 "openminds.v3.controlled_terms.Technique",
