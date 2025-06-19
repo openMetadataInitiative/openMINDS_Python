@@ -119,6 +119,13 @@ class SoftwareFeature(LinkedMetadata):
         return cls._instance_lookup[name]
 
 
+SoftwareFeature.application_programming_interface = SoftwareFeature(
+    id="https://openminds.om-i.org/instances/softwareFeature/applicationProgrammingInterface",
+    definition="A set of rules and protocols that allows different software applications to communicate with each other, enabling them to access specific functions or data.",
+    name="application programming interface",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q165194"),
+    synonyms=["API"],
+)
 SoftwareFeature.augmented_reality = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/augmentedReality",
     name="augmented reality",
@@ -126,8 +133,10 @@ SoftwareFeature.augmented_reality = SoftwareFeature(
 )
 SoftwareFeature.commandline_interface = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/commandlineInterface",
-    name="commandline interface",
+    definition="A text-based system that enables users to interact with a computer or software by entering commands, allowing them to perform specific tasks or operations.",
+    name="command line interface",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q189053"),
+    synonyms=["CLI"],
 )
 SoftwareFeature.control = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/control",
@@ -155,8 +164,10 @@ SoftwareFeature.graph_data_types = SoftwareFeature(
 )
 SoftwareFeature.graphical_user_interface = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/graphicalUserInterface",
+    definition="A visual system that enables users to interact with a computer or software through graphical elements like windows, icons, and menus, allowing them to perform specific tasks or operations.",
     name="graphical user interface",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/wiki/Q782543"),
+    synonyms=["GUI"],
 )
 SoftwareFeature.heterogeneous_architecture = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/heterogeneousArchitecture",

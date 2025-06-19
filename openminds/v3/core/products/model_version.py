@@ -205,8 +205,6 @@ class ModelVersion(LinkedMetadata):
                 "openminds.v3.controlled_terms.Language",
                 "openminds.v3.controlled_terms.Laterality",
                 "openminds.v3.controlled_terms.LearningResourceType",
-                "openminds.v3.controlled_terms.MRIPulseSequence",
-                "openminds.v3.controlled_terms.MRIWeighting",
                 "openminds.v3.controlled_terms.MeasuredQuantity",
                 "openminds.v3.controlled_terms.MeasuredSignalType",
                 "openminds.v3.controlled_terms.MetaDataModelType",

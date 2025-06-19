@@ -467,8 +467,8 @@ BrainAtlas.dwma = BrainAtlas(
     short_name="Deep White Matter Atlas",
     used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.julich__brain_atlas = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/Julich-BrainAtlas",
+BrainAtlas.jba = BrainAtlas(
+    id="https://openminds.om-i.org/instances/brainAtlas/JBA",
     abbreviation="JBA",
     description="The Julich-Brain Atlas is a three-dimensional atlas of the human brain. It integrates high-resolution cytoarchitectonic maps with microstructural and connectivity data as well as neurotransmitter receptor expression profiles and functional data. It is available in the common reference spaces MNI ICBM 152 (2009c Nonlinear Asymmetric), Colin 27 and FreeSurfer fsaverage surface space.  Furthermore, many maps are also available in the BigBrain high-resolution reference space. It is continuously expanded and openly accessible for researchers to systematically integrate multi-level data. It is interoperable in a way that it can be linked with other brain parcellations, databases and mapping projects. The Julich Brain Atlas offers a powerful tool for neuroscience and medicine alike and has been adopted as central element of the multilevel human brain atlas for the EBRAINS infrastructure, see [EBRAINS Human Brain Atlas](https://www.ebrains.eu/tools/human-brain-atlas).",
     digital_identifier={"@id": "https://scicrunch.org/resolver/RRID:SCR_023277"},

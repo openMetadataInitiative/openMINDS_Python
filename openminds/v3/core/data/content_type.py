@@ -2050,6 +2050,20 @@ ContentType.application_vnd_wavemetrics_igorpro = ContentType(
     file_extensions=[".igor"],
     name="application/vnd.wavemetrics.igorpro",
 )
+ContentType.application_vnd_webalign_walnplusjson = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.webalign.waln+json",
+    description="WebAlign waln is a JSON-based content type containing the linear image registration information for multiple tissue section images to a standard atlas space. It contains complete metadata for a collection of deepzoom images (mandatory), their storage location (mandatory), identifier of the standard atlas space (mandatory), and the actual linear image registration in the form of 3D vector triplets per image (optional).",
+    file_extensions=[".waln"],
+    name="application/vnd.webalign.waln+json",
+    synonyms=["WebAlign waln format"],
+)
+ContentType.application_vnd_webwarp_wwrpplusjson = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.webwarp.wwrp+json",
+    description="WebWarp wwrp is a JSON-based content type containing the linear and optionally non-linear image registration information for multiple tissue section images to a standard atlas space. It contains complete metadata for a collection of deepzoom images (mandatory), their storage location (mandatory), identifier of the standard atlas space (mandatory), the linear image registration in the form of 3D vector triplets per image (optional), and the non-linear image registration in form of a list of 2D deformation vectors per image (optional).",
+    file_extensions=[".wwrp"],
+    name="application/vnd.webwarp.wwrp+json",
+    synonyms=["WebWarp wwrp format"],
+)
 ContentType.application_vnd_winedr = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.winedr",
     file_extensions=[".edr"],

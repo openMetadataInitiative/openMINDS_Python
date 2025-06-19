@@ -170,7 +170,6 @@ class ProtocolExecution(LinkedMetadata):
                 "openminds.v3.controlled_terms.SubcellularEntity",
                 "openminds.v3.controlled_terms.TactileStimulusType",
                 "openminds.v3.controlled_terms.TermSuggestion",
-                "openminds.v3.controlled_terms.TissueSampleType",
                 "openminds.v3.controlled_terms.UBERONParcellation",
                 "openminds.v3.controlled_terms.VisualStimulusType",
                 "openminds.v3.sands.CustomAnatomicalEntity",
