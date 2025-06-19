@@ -127,8 +127,8 @@ ContributionType.data_collection = ContributionType(
     id="https://openminds.om-i.org/instances/contributionType/dataCollection",
     name="data collection",
 )
-ContributionType.data_managment = ContributionType(
-    id="https://openminds.om-i.org/instances/contributionType/dataManagment",
+ContributionType.data_management = ContributionType(
+    id="https://openminds.om-i.org/instances/contributionType/dataManagement",
     name="data management",
 )
 ContributionType.data_processing = ContributionType(
@@ -147,7 +147,7 @@ ContributionType.marketing = ContributionType(
     id="https://openminds.om-i.org/instances/contributionType/marketing",
     name="marketing",
 )
-ContributionType.metadata_managment = ContributionType(
-    id="https://openminds.om-i.org/instances/contributionType/metadataManagment",
+ContributionType.metadata_management = ContributionType(
+    id="https://openminds.om-i.org/instances/contributionType/metadataManagement",
     name="metadata management",
 )
