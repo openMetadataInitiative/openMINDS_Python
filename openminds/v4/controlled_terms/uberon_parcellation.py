@@ -447,6 +447,15 @@ UBERONParcellation.allocortex = UBERONParcellation(
     name="allocortex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014734"),
 )
+UBERONParcellation.ambient_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ambientGyrus",
+    definition="Is a regional part of brain. Is part of the uncus of parahippocampal gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036164) ('is_a' and 'relationship')]",
+    description="A rostral part of the parahippocampal gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036164)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0036164#ambient-gyrus"),
+    name="ambient gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036164"),
+    synonyms=["ambiens gyrus", "gyrus ambiens"],
+)
 UBERONParcellation.amiculum_of_dentate_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/amiculumOfDentateNucleus",
     definition="'Amiculum of dentate nucleus' is a white matter of metencephalon and amiculum. It is part of the dentate nucleus.",
@@ -512,30 +521,29 @@ UBERONParcellation.amygdalopiriform_transition_area = UBERONParcellation(
 )
 UBERONParcellation.angular_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/angularGyrus",
-    definition="'Angular gyrus' is a gyrus. It is part of the parietal lobe.",
-    description="Part of inferior parietal lobule formed by the cortex surrounding the upturned end of the superior temporal sulcus (Nolte, The Human Brain, 6th ed, 2009, pg 659)",
+    definition="Is a gyrus. Is part of the parietal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002686) ('is_a' and 'relationship')]",
+    description="Part of inferior parietal lobule formed by the cortex surrounding the upturned end of the superior temporal sulcus (Nolte, The Human Brain, 6th ed, 2009, pg 659) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002686)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100627"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002686#angular-gyrus-1"),
     name="angular gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002686"),
-    synonyms=[
-        "AG",
-        "gyrus angularis",
-        "gyrus parietalis inferior",
-        "middle part of inferior parietal lobule",
-        "prelunate gyrus",
-        "preoccipital gyrus",
-    ],
+    synonyms=["middle part of inferior parietal lobule", "preoccipital gyrus"],
+)
+UBERONParcellation.angular_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/angularSulcus",
+    definition="Is a temporal sulcus and sulcus of parietal lobe. Is part of the angular gyrus and the superior temporal sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026725) ('is_a' and 'relationship')]",
+    description="A superficial feature of the parietal lobe. It is the portion of the superior temporal sulcus that extends into the angular gyrus (Ono-90). (NN) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026725)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026725#angular-sulcus-1"),
+    name="angular sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026725"),
 )
 UBERONParcellation.annectant_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/annectantGyrus",
-    definition="'Annectant gyrus' is an occipital gyrus.",
-    description="",
+    definition="Is an occipital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026137)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100647"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026137#annectant-gyrus-1"),
     name="annectant gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026137"),
-    synonyms=["annectant gyrus"],
 )
 UBERONParcellation.ansa_lenticularis = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/ansaLenticularis",
@@ -610,6 +618,21 @@ UBERONParcellation.ansiform_lobule_crus_ii = UBERONParcellation(
         "semilunar lobule-2 (inferior)",
     ],
 )
+UBERONParcellation.ansoparamedian_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ansoparamedianFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014468)]",
+    description="Fissure between cerebellar hemispheric lobules VIIBi and VIIBii. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014468)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014468#ansoparamedian-fissure-of-cerebellum"),
+    name="ansoparamedian fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014468"),
+    synonyms=[
+        "ansoparamedian fissure",
+        "fissura ansoparamedianis",
+        "fissura lunogracilis",
+        "lunogracile fissure",
+        "lunogracile fissure of cerebellum",
+    ],
+)
 UBERONParcellation.anterior_amygdaloid_area = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorAmygdaloidArea",
     definition="Is a cerebral hemisphere gray matter. Is part of the corticomedial nuclear complex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002890) ('is_a' and 'relationship')]",
@@ -619,13 +642,33 @@ UBERONParcellation.anterior_amygdaloid_area = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002890"),
     synonyms=["anterior amygaloid area", "anterior amygdalar area"],
 )
+UBERONParcellation.anterior_ascending_limb_of_lateral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorAscendingLimbOfLateralSulcus",
+    definition="Is a subarachnoid sulcus and frontal sulcus. Is part of the lateral sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002670) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0002670#anterior-ascending-limb-of-lateral-sulcus-1"
+    ),
+    name="anterior ascending limb of lateral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002670"),
+    synonyms=[
+        "anterior ascending limb of lateral fissure",
+        "anterior ascending ramus of lateral sulcus",
+        "ascending branch of lateral sulcus",
+        "ascending ramus of lateral cerebral sulcus",
+        "ascending ramus of sylvian fissure",
+        "middle ramus of lateral fissure",
+        "ramus ascendens sulci lateralis cerebri",
+        "superior branch of lateral fissure",
+    ],
+)
 UBERONParcellation.anterior_calcarine_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorCalcarineSulcus",
-    description="'Anterior calcarine sulcus' is a sulcus of brain.",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002582)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100672"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002582#anterior-calcarine-sulcus-1"),
     name="anterior calcarine sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002582"),
+    synonyms=["anterior calcarine fissure", "sulcus calcarinus anterior"],
 )
 UBERONParcellation.anterior_cerebral_vein = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorCerebralVein",
@@ -645,22 +688,11 @@ UBERONParcellation.anterior_cingulate_cortex = UBERONParcellation(
 )
 UBERONParcellation.anterior_cingulate_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorCingulateGyrus",
-    definition="'Anterior cingulate gyrus' is a gyrus. It is part of the cingulate gyrus and anterior cingulate cortex.",
-    description="",
+    definition="Is a gyrus. Is part of the cingulate gyrus and the anterior cingulate cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002756) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100690"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002756#anterior-cingulate-gyrus-1"),
     name="anterior cingulate gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002756"),
-    synonyms=[
-        "ACG",
-        "anterior cingulate",
-        "anterior division",
-        "cGa",
-        "cingulate gyrus",
-        "cortex cingularis anterior",
-        "gyrus cinguli anterior",
-        "gyrus limbicus anterior",
-    ],
 )
 UBERONParcellation.anterior_column_of_fornix = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorColumnOfFornix",
@@ -709,6 +741,24 @@ UBERONParcellation.anterior_commissure_anterior_part = UBERONParcellation(
         "olfactory part of anterior commissure",
         "pars anterior commissurae anterioris",
         "pars olfactoria commissurae anterioris",
+    ],
+)
+UBERONParcellation.anterior_horizontal_limb_of_lateral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorHorizontalLimbOfLateralSulcus",
+    definition="Is a subarachnoid sulcus and frontal sulcus. Is part of the lateral sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002669) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0002669#anterior-horizontal-limb-of-lateral-sulcus-1"
+    ),
+    name="anterior horizontal limb of lateral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002669"),
+    synonyms=[
+        "anterior branch of lateral sulcus",
+        "anterior horizontal limb of lateral fissure",
+        "anterior horizontal ramus of lateral fissure",
+        "anterior ramus of lateral cerebral sulcus",
+        "horizontal limb of lateral fissure",
+        "horizontal ramus of sylvian fissure",
+        "ramus anterior sulci lateralis cerebri",
     ],
 )
 UBERONParcellation.anterior_horn_of_lateral_ventricle = UBERONParcellation(
@@ -787,6 +837,15 @@ UBERONParcellation.anterior_median_eminence = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002648"),
     synonyms=["AME", "eminentia mediana anterior"],
 )
+UBERONParcellation.anterior_median_fissure_of_spinal_cord = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorMedianFissureOfSpinalCord",
+    definition="Is a subarachnoid fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035319)]",
+    description="A fissure in the midline of the anterior surface of the spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035319)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0035319#anterior-median-fissure-of-spinal-cord"),
+    name="anterior median fissure of spinal cord",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035319"),
+    synonyms=["fissura mediana anterior medullae spinalis", "ventral median fissure of spinal cord"],
+)
 UBERONParcellation.anterior_median_oculomotor_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorMedianOculomotorNucleus",
     definition="'Anterior median oculomotor nucleus' is a brainstem nucleus and midbrain nucleus. It is part of the oculomotor nuclear complex.",
@@ -815,6 +874,13 @@ UBERONParcellation.anterior_mesencephalic_central_artery = UBERONParcellation(
     name="anterior mesencephalic central artery",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005052"),
     synonyms=["AMCtA", "rostral mesencephalic central artery"],
+)
+UBERONParcellation.anterior_middle_temporal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorMiddleTemporalSulcus",
+    definition="Is a temporal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0027113)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0027113#anterior-middle-temporal-sulcus-1"),
+    name="anterior middle temporal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0027113"),
 )
 UBERONParcellation.anterior_nuclear_group = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorNuclearGroup",
@@ -929,6 +995,20 @@ UBERONParcellation.anterior_nucleus_of_hypothalamus_posterior_part = UBERONParce
         "posterior part",
     ],
 )
+UBERONParcellation.anterior_occipital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorOccipitalSulcus",
+    definition="Is a subarachnoid sulcus and occipital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002906)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002906#anterior-occipital-sulcus-1"),
+    name="anterior occipital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002906"),
+    synonyms=[
+        "ascending limb of the inferior temporal sulcus",
+        "posterior inferior temporal sulcus",
+        "sulci occipitales superiores",
+        "sulcus annectans",
+        "sulcus occipitalis anterior",
+    ],
+)
 UBERONParcellation.anterior_olfactory_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorOlfactoryNucleus",
     definition="'Anterior olfactory nucleus' is a telencephalic nucleus. It is part of the olfactory cortex.",
@@ -938,13 +1018,35 @@ UBERONParcellation.anterior_olfactory_nucleus = UBERONParcellation(
     name="anterior olfactory nucleus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002266"),
 )
-UBERONParcellation.anterior_parietooccipital_sulcus = UBERONParcellation(
-    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorParietooccipitalSulcus",
-    definition="'Anterior parieto-occipital sulcus' is a sulcus of brain. It is part of the parieto-occipital sulcus.",
+UBERONParcellation.anterior_orbital_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorOrbitalGyrus",
+    definition="Is an orbital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022244)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022244#anterior-orbital-gyrus"),
+    name="anterior orbital gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022244"),
+)
+UBERONParcellation.anterior_paracentral_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorParacentralGyrus",
+    definition="Is a paracentral gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007191)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007191#anterior-paracentral-gyrus"),
+    name="anterior paracentral gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007191"),
+)
+UBERONParcellation.anterior_parieto_occipital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorParietoOccipitalSulcus",
+    definition="Is a sulcus of brain. Is part of the parieto-occipital sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025829) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100736"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025829#anterior-parieto-occipital-sulcus-1"),
     name="anterior parieto-occipital sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025829"),
+)
+UBERONParcellation.anterior_parolfactory_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorParolfactorySulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002919)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002919#anterior-parolfactory-sulcus-1"),
+    name="anterior parolfactory sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002919"),
+    synonyms=["paraolfactory sulcus", "sulcus parolfactorius anterior"],
 )
 UBERONParcellation.anterior_perforated_substance = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorPerforatedSubstance",
@@ -1016,6 +1118,28 @@ UBERONParcellation.anterior_spinocerebellar_tract = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002987"),
     synonyms=["Gower's tract", "Gowers' tract", "ventral spinocerebellar tract"],
 )
+UBERONParcellation.anterior_subcentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorSubcentralSulcus",
+    definition="Is a subarachnoid sulcus and frontal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002672)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002672#anterior-subcentral-sulcus-1"),
+    name="anterior subcentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002672"),
+)
+UBERONParcellation.anterior_superior_frontal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorSuperiorFrontalSulcus",
+    definition="Is an anatomical entity. Is part of the superior frontal sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0027716) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0027716#anterior-superior-frontal-sulcus-1"),
+    name="anterior superior frontal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0027716"),
+)
+UBERONParcellation.anterior_temporal_fusiform_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorTemporalFusiformGyrus",
+    definition="Is a regional part of brain. Is part of the fusiform gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022396) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022396#anterior-temporal-fusiform-gyrus"),
+    name="anterior temporal fusiform gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022396"),
+    synonyms=["occipitotemporal (fusiform) gyrus, anterior division"],
+)
 UBERONParcellation.anterior_thalamic_radiation = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorThalamicRadiation",
     definition="The 'anterior thalamic radiation' is a white matter fibre bundle. It is part of the thalamic complex.",
@@ -1053,23 +1177,17 @@ UBERONParcellation.anterior_transverse_temporal_area41 = UBERONParcellation(
 )
 UBERONParcellation.anterior_transverse_temporal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/anteriorTransverseTemporalGyrus",
-    definition="'Anterior transverse temporal gyrus' is a transverse gyrus of Heschl.",
-    description="The transverse temporal gyri (also called Heschl's gyri or Heschl's convolutions) are found in the area of primary auditory cortex in the superior temporal gyrus of the human brain, occupying Brodmann areas 41 and 42. It is the first cortical structure to process incoming auditory information. Anatomically, the transverse temporal gyri are distinct in that they run mediolaterally (towards the center of the brain) rather than dorsiventrally (front to back) as all other temporal lobe gyri run. The Heschl's gyri are named after Richard L. Heschl.",
+    definition="Is a transverse gyrus of Heschl. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002773)]",
+    description="The transverse temporal gyri (also called Heschl's gyri or Heschl's convolutions) are found in the area of primary auditory cortex in the superior temporal gyrus of the human brain, occupying Brodmann areas 41 and 42. It is the first cortical structure to process incoming auditory information. Anatomically, the transverse temporal gyri are distinct in that they run mediolaterally (towards the center of the brain) rather than dorsiventrally (front to back) as all other temporal lobe gyri run. The Heschl's gyri are named after Richard L. Heschl. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002773)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100750"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002773#anterior-transverse-temporal-gyrus-1"),
     name="anterior transverse temporal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002773"),
     synonyms=[
-        "anterior transverse convolution of Heschl",
         "anterior transverse convolution of heschl",
         "anterior transverse temporal convolution of heschl",
-        "Anterior transverse temporal convolution of Heschl",
         "first transverse gyrus of Heschl",
-        "First transverse gyrus of Heschl",
         "great transverse gyrus of Heschl",
-        "Great transverse gyrus of Heschl",
-        "gyrus temporalis transversus anterior",
-        "gyrus temporalis transversus primus",
     ],
 )
 UBERONParcellation.anterodorsal_nucleus_of_medial_geniculate_body = UBERONParcellation(
@@ -1333,6 +1451,14 @@ UBERONParcellation.arcuate_nucleus_of_medulla = UBERONParcellation(
         "nucleus arcuatus pyramidalis",
     ],
 )
+UBERONParcellation.arcuate_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/arcuateSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034671) ('is_a' and 'relationship')]",
+    description="Composite sulcus of the frontal lobe of the macaque. Located on the dorsolateral surface, it consists of the superior ramus of the arcuate sulcus (macaque), the inferior ramus of the arcuate sulcus and the spur of the arcuate sulcus (macaque) (http://braininfo.rprc.washington.edu/centraldirectory.aspx?ID=2379) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034671)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034671#arcuate-sulcus"),
+    name="arcuate sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034671"),
+)
 UBERONParcellation.area_postrema = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/areaPostrema",
     definition="Is a sensory circumventricular organ. Is part of the medulla oblongata and the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002162) ('is_a' and 'relationship')]",
@@ -1411,13 +1537,12 @@ UBERONParcellation.axon_tract = UBERONParcellation(
 )
 UBERONParcellation.banks_of_superior_temporal_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/banksOfSuperiorTemporalSulcus",
-    definition="'Banks of superior temporal sulcus' is an anatomical entity. It is part of the superior temporal sulcus.",
-    description="Component of the temporal lobe, lateral aspect.  The rostral boundary is the superior temporal gyrus and the caudal boundary the middle temporal gyrus.  Within the FreeSurfer definition, this reflects primarily the posterior aspect of the superior temporal sulcus (Christine Fennema-Notestine).",
+    definition="Is an anatomical entity. Is part of the superior temporal sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0028622) ('is_a' and 'relationship')]",
+    description="Component of the temporal lobe, lateral aspect. The rostral boundary is the superior temporal gyrus and the caudal boundary the middle temporal gyrus. Within the FreeSurfer definition, this reflects primarily the posterior aspect of the superior temporal sulcus (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0028622)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101088"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0028622#banks-of-superior-temporal-sulcus-1"),
     name="banks of superior temporal sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0028622"),
-    synonyms=["banks of superior temporal sulcus"],
 )
 UBERONParcellation.barrel_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/barrelCortex",
@@ -1769,6 +1894,14 @@ UBERONParcellation.brain_commissure = UBERONParcellation(
     name="brain commissure",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005970"),
 )
+UBERONParcellation.brain_coronal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/brainCoronalSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013596)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013596#brain-coronal-sulcus"),
+    name="brain coronal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013596"),
+    synonyms=["coronal sulcus of brain"],
+)
 UBERONParcellation.brain_endothelium = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/brainEndothelium",
     definition="'Brain endothelium' is part of the brain.",
@@ -2036,12 +2169,27 @@ UBERONParcellation.calcar_avis_of_the_lateral_ventricle = UBERONParcellation(
 )
 UBERONParcellation.calcarine_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/calcarineSulcus",
-    definition="'Calcarine sulcus' is a sulcus of brain. It is part of the cerebral cortex.",
-    description="The calcarine fissure is an anatomical landmark located at the caudal end of the medial surface of the brain. [WP,unvetted].",
+    definition="Is a sulcus of brain. Is part of the cerebral cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002586) ('is_a' and 'relationship')]",
+    description="The calcarine fissure is an anatomical landmark located at the caudal end of the medial surface of the brain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002586)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101552"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002586#calcarine-sulcus-1"),
     name="calcarine sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002586"),
+    synonyms=["calcarine fissure", "sulcus calcarinus"],
+)
+UBERONParcellation.calcarine_sulcus_dorsal = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/calcarineSulcusDorsal",
+    definition="Is an anatomical entity. Is part of the calcarine sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0028395) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0028395#calcarine-sulcus-dorsal-1"),
+    name="calcarine sulcus (dorsal)",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0028395"),
+)
+UBERONParcellation.calcarine_sulcus_ventral = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/calcarineSulcusVentral",
+    definition="Is an anatomical entity. Is part of the calcarine sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0028396) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0028396#calcarine-sulcus-ventral-1"),
+    name="calcarine sulcus (ventral)",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0028396"),
 )
 UBERONParcellation.calcified_structure_of_brain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/calcifiedStructureOfBrain",
@@ -2050,6 +2198,15 @@ UBERONParcellation.calcified_structure_of_brain = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0017631#calcified-structure-of-brain"),
     name="calcified structure of brain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0017631"),
+)
+UBERONParcellation.callosal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/callosalSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002920)]",
+    description="The callosal sulcus is a sulcus in the brain between the cingulate gyrus and corpus callosum, below the longitudinal cerebral fissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002920)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002920#callosal-sulcus-1"),
+    name="callosal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002920"),
+    synonyms=["sulcus corporis callosi", "sulcus of corpus callosum"],
 )
 UBERONParcellation.capsule_of_medial_geniculate_body = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/capsuleOfMedialGeniculateBody",
@@ -2124,17 +2281,13 @@ UBERONParcellation.caudal_mesencephalo_cerebellar_tract = UBERONParcellation(
 )
 UBERONParcellation.caudal_middle_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/caudalMiddleFrontalGyrus",
-    definition="'Caudal middle frontal gyrus' is a frontal gyrus. It is part of the middle frontal gyrus.",
-    description="Component of the middl frontal gyrus.  The rostral boundary of the middle frontal gyrus was the rostral extent of the middle frontal gyrus whereas the caudal boundary was the precentral gyrus. The medial and lateral boundaries were designated as the superior frontal sulcus and the inferior frontal sulcus respectively (Christine Fennema-Notestine).",
+    definition="Is a frontal gyrus. Is part of the middle frontal gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006445) ('is_a' and 'relationship')]",
+    description="Component of the middle frontal gyrus. The rostral boundary of the middle frontal gyrus was the rostral extent of the middle frontal gyrus whereas the caudal boundary was the precentral gyrus. The medial and lateral boundaries were designated as the superior frontal sulcus and the inferior frontal sulcus respectively (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006445)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101718"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006445#caudal-middle-frontal-gyrus-1"),
     name="caudal middle frontal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006445"),
-    synonyms=[
-        "caudal middle frontal gyrus",
-        "caudal part of middle frontal gyrus",
-        "posterior part of middle frontal gyrus",
-    ],
+    synonyms=["posterior part of middle frontal gyrus"],
 )
 UBERONParcellation.caudal_part_of_spinal_trigeminal_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/caudalPartOfSpinalTrigeminalNucleus",
@@ -2486,8 +2639,8 @@ UBERONParcellation.central_oculomotor_nucleus = UBERONParcellation(
 )
 UBERONParcellation.central_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/centralSulcus",
-    definition="The 'central sulcus' is a fold in the cerebral cortex of brains in vertebrates. [[WP,unvetted](http://en.wikipedia.org/wiki/Central_sulcus)]]",
-    description="The central sulcus is a prominent landmark of the brain, separating the parietal lobe from the frontal lobe and the primary motor cortex from the primary somatosensory cortex. [[WP,unvetted](http://en.wikipedia.org/wiki/Central_sulcus)]]",
+    definition="Is a sulcus of brain. Is part of the cerebral cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002916) ('is_a' and 'relationship')]",
+    description="The central sulcus is a fold in the cerebral cortex of brains in vertebrates. Also called the central fissure, it was originally called the fissure of Rolando or the Rolandic fissure, after Luigi Rolando. The central sulcus is a prominent landmark of the brain, separating the parietal lobe from the frontal lobe and the primary motor cortex from the primary somatosensory cortex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002916)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101916"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002916#central-sulcus-1"),
     name="central sulcus",
@@ -2496,13 +2649,27 @@ UBERONParcellation.central_sulcus = UBERONParcellation(
         "central cerebral sulcus",
         "central fissure",
         "central sulcus of Rolando",
-        "CS",
         "fissure of Rolando",
         "rolandic fissure",
         "sulcus centralis",
         "sulcus centralis (rolandi)",
         "sulcus centralis cerebri",
         "sulcus of Rolando",
+    ],
+)
+UBERONParcellation.central_sulcus_of_insula = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/centralSulcusOfInsula",
+    definition="Is a subarachnoid sulcus and occipital sulcus. Is part of the intralingual sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035925) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0035925#central-sulcus-of-insula"),
+    name="central sulcus of insula",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035925"),
+    synonyms=[
+        "central fissure of insula",
+        "central fissure of island",
+        "central insula sulcus",
+        "central insular sulcus",
+        "fissura centralis insulae",
+        "sulcus centralis insulae",
     ],
 )
 UBERONParcellation.central_tegmental_tract = UBERONParcellation(
@@ -2753,12 +2920,13 @@ UBERONParcellation.cerebellum_external_granule_cell_layer = UBERONParcellation(
 )
 UBERONParcellation.cerebellum_fissure = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumFissure",
-    definition="'Cerebellum fissure' is a subarachnoid fissure. It is part of the cerebellum.",
-    description="One of a set of deep furrows which divide the lobules of the cerebellum. Examples:  postcentral, primary and secondary furrows.",
+    definition="Is a subarachnoid fissure. Is part of the cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003980) ('is_a' and 'relationship')]",
+    description="One of a set of deep furrows which divide the lobules of the cerebellum. Examples: postcentral, primary and secondary furrows. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003980)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0728095"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003980#cerebellum-fissure"),
     name="cerebellum fissure",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003980"),
+    synonyms=["cerebellar fissure", "fissurae cerebelli"],
 )
 UBERONParcellation.cerebellum_globose_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cerebellumGloboseNucleus",
@@ -3452,30 +3620,31 @@ UBERONParcellation.cingulate_cortex_cingulum = UBERONParcellation(
 )
 UBERONParcellation.cingulate_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cingulateGyrus",
-    definition="'Cingulate gyrus' is a gyrus. It is part of the limbic system.",
-    description="One of the convolutions on the medial surface of the cerebral hemisphere. It surrounds the rostral part of the brain and interhemispheric commissure and forms part of the limbic system. (MSH)  One of three essential structures comprising the limbic lobe, the other two being the hippocampus and parahippocampal gyrus. (CSP)",
+    definition="Is a gyrus. Is part of the limbic system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002967) ('is_a' and 'relationship')]",
+    description="One of the convolutions on the medial surface of the cerebral hemisphere. It surrounds the rostral part of the brain and interhemispheric commissure and forms part of the limbic system. (MSH) One of three essential structures comprising the limbic lobe, the other two being the hippocampus and parahippocampal gyrus. (CSP) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002967)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102180"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002967#cingulate-gyrus-1"),
     name="cingulate gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002967"),
-    synonyms=[
-        "CG",
-        "cingular gyrus",
-        "cingulate area",
-        "cingulate region",
-        "falciform lobe",
-        "gyri cinguli",
-        "upper limbic gyrus",
-    ],
+    synonyms=["cingulate area", "cingulate region", "falciform lobe", "upper limbic gyrus"],
 )
 UBERONParcellation.cingulate_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cingulateSulcus",
-    definition="The cingulate sulcus is a sulcus (brain fold) on the medial wall of the cerebral cortex. The frontal and parietal lobes are separated by the cingulate sulcus from the cingulate gyrus. [WP,unvetted].",
-    description="'Cingulate sulcus' is a subarachnoid sulcus.",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002710)]",
+    description="The cingulate sulcus is a sulcus (brain fold) on the medial wall of the cerebral cortex. The frontal and parietal lobes are separated by the cingulate sulcus from the cingulate gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002710)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102181"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002710#cingulate-sulcus-1"),
     name="cingulate sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002710"),
+    synonyms=[
+        "calloso-marginal sulcus",
+        "callosomarginal fissure",
+        "callosomarginal sulcus",
+        "cingulate fissure",
+        "sulcus callosomarginalis",
+        "sulcus cingulatus",
+        "sulcus cinguli",
+    ],
 )
 UBERONParcellation.cingulum_of_brain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cingulumOfBrain",
@@ -3488,11 +3657,70 @@ UBERONParcellation.cingulum_of_brain = UBERONParcellation(
 )
 UBERONParcellation.circular_sulcus_of_insula = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/circularSulcusOfInsula",
-    definition="'Circular sulcus of insula' is a marginal sulcus. It is part of the insula.",
+    definition="Is a marginal sulcus. Is part of the insula. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002713) ('is_a' and 'relationship')]",
+    description="A marginal sulcus that is part of a insula. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002713)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102193"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002713#circular-sulcus-of-insula-1"),
     name="circular sulcus of insula",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002713"),
+    synonyms=[
+        "central lobe marginal branch of cingulate sulcus",
+        "central lobe marginal ramus of cingulate sulcus",
+        "central lobe marginal sulcus",
+        "circular fissure",
+        "circular sulcus (of reil)",
+        "circuminsular sulcus",
+        "circular insular sulcus",
+        "cortex of island marginal branch of cingulate sulcus",
+        "cortex of island marginal ramus of cingulate sulcus",
+        "cortex of island marginal sulcus",
+        "insula lobule marginal branch of cingulate sulcus",
+        "insula lobule marginal ramus of cingulate sulcus",
+        "insula lobule marginal sulcus",
+        "insula marginal branch of cingulate sulcus",
+        "insula marginal ramus of cingulate sulcus",
+        "insula marginal sulcus",
+        "insular cortex marginal branch of cingulate sulcus",
+        "insular cortex marginal ramus of cingulate sulcus",
+        "insular cortex marginal sulcus",
+        "insular lobe marginal branch of cingulate sulcus",
+        "insular lobe marginal ramus of cingulate sulcus",
+        "insular lobe marginal sulcus",
+        "insular region marginal branch of cingulate sulcus",
+        "insular region marginal ramus of cingulate sulcus",
+        "insular region marginal sulcus",
+        "island of reil marginal branch of cingulate sulcus",
+        "island of reil marginal ramus of cingulate sulcus",
+        "island of reil marginal sulcus",
+        "limiting fissure",
+        "marginal branch of cingulate sulcus of central lobe",
+        "marginal branch of cingulate sulcus of cortex of island",
+        "marginal branch of cingulate sulcus of insula",
+        "marginal branch of cingulate sulcus of insula lobule",
+        "marginal branch of cingulate sulcus of insular cortex",
+        "marginal branch of cingulate sulcus of insular lobe",
+        "marginal branch of cingulate sulcus of insular region",
+        "marginal branch of cingulate sulcus of island of reil",
+        "marginal insular sulcus",
+        "marginal ramus of cingulate sulcus of central lobe",
+        "marginal ramus of cingulate sulcus of cortex of island",
+        "marginal ramus of cingulate sulcus of insula",
+        "marginal ramus of cingulate sulcus of insula lobule",
+        "marginal ramus of cingulate sulcus of insular cortex",
+        "marginal ramus of cingulate sulcus of insular lobe",
+        "marginal ramus of cingulate sulcus of insular region",
+        "marginal ramus of cingulate sulcus of island of reil",
+        "marginal sulcus of central lobe",
+        "marginal sulcus of cortex of island",
+        "marginal sulcus of insula",
+        "marginal sulcus of insula lobule",
+        "marginal sulcus of insular cortex",
+        "marginal sulcus of insular lobe",
+        "marginal sulcus of insular region",
+        "marginal sulcus of island of reil",
+        "sulcus circularis insulae",
+        "sulcus marginalis insulae",
+    ],
 )
 UBERONParcellation.circumventricular_organ = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/circumventricularOrgan",
@@ -3542,12 +3770,13 @@ UBERONParcellation.cochlear_nuclear_complex = UBERONParcellation(
 )
 UBERONParcellation.collateral_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/collateralSulcus",
-    definition="The collateral fissure (or sulcus) is on the tentorial surface of the hemisphere and extends from near the occipital pole to within a short distance of the temporal pole. Behind, it lies below and lateral to the calcarine fissure, from which it is separated by the lingual gyrus; in front, it is situated between the hippocampal gyrus and the anterior part of the fusiform gyrus. [WP,unvetted].",
-    description="'Collateral sulcus' is a subarachnoid sulcus.",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002716)]",
+    description="The collateral fissure (or sulcus) is on the tentorial surface of the hemisphere and extends from near the occipital pole to within a short distance of the temporal pole. Behind, it lies below and lateral to the calcarine fissure, from which it is separated by the lingual gyrus; in front, it is situated between the hippocampal gyrus and the anterior part of the fusiform gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002716)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102361"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002716#collateral-sulcus-1"),
     name="collateral sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002716"),
+    synonyms=["collateral fissure", "sulcus collateralis"],
 )
 UBERONParcellation.collection_of_basal_ganglia = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/collectionOfBasalGanglia",
@@ -4035,6 +4264,14 @@ UBERONParcellation.crossed_tecto_bulbar_tract = UBERONParcellation(
     name="crossed tecto-bulbar tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000335"),
 )
+UBERONParcellation.cruciate_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/cruciateSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013590)]",
+    description="A deep groove which runs transversely across the rostro-dorsal surface of the cerebrum and which is one of the landmarks on the cerebral cortex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013590)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013590#cruciate-sulcus"),
+    name="cruciate sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013590"),
+)
 UBERONParcellation.cuneate_fasciculus_of_medulla = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/cuneateFasciculusOfMedulla",
     definition="'Cuneate fasciculus of medulla' is a cuneate fasciculus, fasciculus of brain and tract of brain. It is part of the medulla oblongata.",
@@ -4312,6 +4549,13 @@ UBERONParcellation.diagonal_band_of_broca = UBERONParcellation(
         "stria diagonalis",
         "stria diagonalis (Broca)",
     ],
+)
+UBERONParcellation.diagonal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/diagonalSulcus",
+    definition="Is a subarachnoid sulcus and frontal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002675)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002675#diagonal-sulcus-1"),
+    name="diagonal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002675"),
 )
 UBERONParcellation.diencephalon = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/diencephalon",
@@ -5005,6 +5249,20 @@ UBERONParcellation.dura_mater_lymph_vessel = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035608"),
     synonyms=["dural lymph vessel"],
 )
+UBERONParcellation.ectocalcarine_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ectocalcarineSulcus",
+    definition="Is an occipital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025104)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025104#ectocalcarine-sulcus-1"),
+    name="ectocalcarine sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025104"),
+)
+UBERONParcellation.ectosylvian_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ectosylvianSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013594)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013594#ectosylvian-sulcus"),
+    name="ectosylvian sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013594"),
+)
 UBERONParcellation.electrosensory_lateral_line_lobe = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/electrosensoryLateralLineLobe",
     definition="Is a hindbrain nucleus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2002105)]",
@@ -5260,23 +5518,13 @@ UBERONParcellation.fasciculus_of_brain = UBERONParcellation(
 )
 UBERONParcellation.fasciolar_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/fasciolarGyrus",
-    definition="'Fasciolar gyrus' is part of the limbic lobe.",
-    description="A small paired band that passes around the splenium of the corpus callosum from the lateral longitudinal stria to the dentate gyrus[Biology-Online]. A posterior and upward extension of the dentate gyrus, forming a transitional area between the dentate gyrus and the indusium griseum[BTO].",
+    definition="Is part of the limbic lobe. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002601)]",
+    description="A small paired band that passes around the splenium of the corpus callosum from the lateral longitudinal stria to the dentate gyrus. A posterior and upward extension of the dentate gyrus, forming a transitional area between the dentate gyrus and the indusium griseum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002601)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104114"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002601#fasciolar-gyrus-1"),
     name="fasciolar gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002601"),
-    synonyms=[
-        "Arnold)",
-        "fasciola cinerea",
-        "fasciola cinerea (Reil",
-        "fasciola cinereum",
-        "FC",
-        "gyrus fasciolaris",
-        "gyrus retrosplenialis hippocampi",
-        "retrosplenial gyrus of hippocampus",
-        "splenial gyrus",
-    ],
+    synonyms=["retrosplenial gyrus of hippocampus"],
 )
 UBERONParcellation.fastigial_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/fastigialNucleus",
@@ -5570,6 +5818,14 @@ UBERONParcellation.frontal_cortex = UBERONParcellation(
         "grey matter of frontal lobe",
     ],
 )
+UBERONParcellation.frontal_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/frontalGyrus",
+    definition="Is a gyrus. Is part of the frontal cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0015593) ('is_a' and 'relationship')]",
+    description="A gyrus that is part of a frontal cortex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0015593)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0015593#frontal-gyrus"),
+    name="frontal gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0015593"),
+)
 UBERONParcellation.frontal_lobe = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/frontalLobe",
     definition="Is a lobe of cerebral hemisphere. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016525)]",
@@ -5605,15 +5861,39 @@ UBERONParcellation.frontal_pole = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002795"),
     synonyms=["polus frontalis"],
 )
-UBERONParcellation.frontoorbital_gyrus = UBERONParcellation(
-    id="https://openminds.om-i.org/instances/UBERONParcellation/frontoorbitalGyrus",
-    definition="'Fronto-orbital gyrus' is an orbital gyrus and frontal gyrus. It is part of the orbitofrontal cortex.",
-    description="",
+UBERONParcellation.frontal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/frontalSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014639) ('is_a' and 'relationship')]",
+    description="A sulcus of brain that is part of a frontal cortex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014639)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014639#frontal-sulcus"),
+    name="frontal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014639"),
+    synonyms=["frontal lobe sulcus"],
+)
+UBERONParcellation.fronto_orbital_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/frontoOrbitalGyrus",
+    definition="Is an orbital gyrus and frontal gyrus. Is part of the orbitofrontal cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009836) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104458"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009836#fronto-orbital-gyrus-1"),
     name="fronto-orbital gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009836"),
-    synonyms=["fronto-orbital gyrus", "gyrus fronto-orbitalis", "orbito-frontal gyrus", "orbitofrontal gyrus"],
+    synonyms=["orbito-frontal gyrus", "orbitofrontal gyrus"],
+)
+UBERONParcellation.fronto_orbital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/frontoOrbitalSulcus",
+    definition="Is a subarachnoid sulcus and frontal sulcus. Is part of the orbitofrontal cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002799) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002799#fronto-orbital-sulcus-1"),
+    name="fronto-orbital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002799"),
+    synonyms=["fronto-orbital dimple", "orbito-frontal sulcus", "orbitofrontal sulcus"],
+)
+UBERONParcellation.frontomarginal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/frontomarginalSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014544) ('is_a' and 'relationship')]",
+    description="A superficial feature of the human frontal lobe; it is located at the rostral margin of the orbital surface of the lobe (Ono-90). (NN) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014544)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014544#frontomarginal-sulcus-1"),
+    name="frontomarginal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014544"),
 )
 UBERONParcellation.functional_part_of_brain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/functionalPartOfBrain",
@@ -5637,22 +5917,17 @@ UBERONParcellation.fundus_striati = UBERONParcellation(
 )
 UBERONParcellation.fusiform_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/fusiformGyrus",
-    definition="The fusiform gyrus is part of the temporal lobe. It is also known as the (discontinuous) occipitotemporal gyrus. Other sources have the fusiform gyrus above the occipitotemporal gyrus and underneath the parahippocampal gyrus. [WP,unvetted].",
-    description="'Fusiform gyrus' is a gyrus. It is part of the temporal lobe.",
+    definition="Is a gyrus. Is part of the temporal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002766) ('is_a' and 'relationship')]",
+    description="The fusiform gyrus is part of the temporal lobe. It is also known as the (discontinuous) occipitotemporal gyrus. Other sources have the fusiform gyrus above the occipitotemporal gyrus and underneath the parahippocampal gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002766)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104491"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002766#fusiform-gyrus-1"),
     name="fusiform gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002766"),
     synonyms=[
-        "gyrus fusiformis",
-        "gyrus occipito-temporalis lateralis",
         "gyrus occipitotemporalis lateralis",
-        "lateral occipito-temporal gyrus",
         "lateral occipitotemporal gyrus",
         "medial occipitotemporal gyrus-1 (heimer)",
-        "occipito-temporal gyrus",
         "occipitotemporal gyrus",
-        "t4",
     ],
 )
 UBERONParcellation.future_hindbrain_meninx = UBERONParcellation(
@@ -5929,21 +6204,13 @@ UBERONParcellation.gustatory_organ = UBERONParcellation(
 )
 UBERONParcellation.gyrus_rectus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/gyrusRectus",
-    definition="'Gyrus rectus' is a gyrus. It is part of the frontal lobe.",
-    description="The portion of the frontal lobe medial to the medial orbital gyrus is named the gyrus rectus (or straight gyrus), and is continuous with the superior frontal gyrus on the medial surface. A specific function for the gyrus rectus has not yet been elucidated.",
+    definition="Is a gyrus. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004671) ('is_a' and 'relationship')]",
+    description="The portion of the frontal lobe medial to the medial orbital gyrus is named the gyrus rectus (or straight gyrus), and is continuous with the superior frontal gyrus on the medial surface. A specific function for the gyrus rectus has not yet been elucidated. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004671)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104846"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004671#gyrus-rectus-1"),
     name="gyrus rectus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004671"),
-    synonyms=[
-        "gyrus rectus",
-        "medial part of gyri orbitales",
-        "rectal gyrus",
-        "rectus gyrus",
-        "RG",
-        "straight gyrus",
-        "ventromedial gyrus",
-    ],
+    synonyms=["medial part of gyri orbitales", "rectal gyrus", "rectus gyrus", "straight gyrus"],
 )
 UBERONParcellation.habenula = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/habenula",
@@ -6232,6 +6499,22 @@ UBERONParcellation.hippocampus_fimbria = UBERONParcellation(
         "neuraxis fimbria",
     ],
 )
+UBERONParcellation.horizontal_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/horizontalFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002815)]",
+    description="Fissure between cerebellar hemispheric lobules VIIA and VIIBi. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002815)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002815#horizontal-fissure-of-cerebellum"),
+    name="horizontal fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002815"),
+    synonyms=[
+        "fissura horizontalis cerebelli",
+        "fissura intercruralis",
+        "fissura intercruralis cerebelli",
+        "great horizontal fissure",
+        "horizontal sulcus",
+        "intercrural fissure of cerebellum",
+    ],
+)
 UBERONParcellation.horizontal_limb_of_the_diagonal_band = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/horizontalLimbOfTheDiagonalBand",
     definition="'Horizontal limb of the diagonal band' is a subdivision of diagonal band.",
@@ -6309,6 +6592,13 @@ UBERONParcellation.induseum_griseum = UBERONParcellation(
         "supracommissural hippocampus",
     ],
 )
+UBERONParcellation.inferior_calcarine_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorCalcarineSulcus",
+    definition="Is an occipital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025103)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025103#inferior-calcarine-sulcus-1"),
+    name="inferior calcarine sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025103"),
+)
 UBERONParcellation.inferior_central_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorCentralNucleus",
     definition="'Inferior central nucleus' is a nucleus of pontine reticular formation.",
@@ -6366,20 +6656,22 @@ UBERONParcellation.inferior_colliculus = UBERONParcellation(
 )
 UBERONParcellation.inferior_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorFrontalGyrus",
-    definition="'Inferior frontal gyrus' is a frontal gyrus.",
-    description="Component of the frontal lobe, lateral aspect.  The rostral boundary is the first appearance of the inferior frontal sulcus whereas the caudal boundary is the precentral gyrus. The medial and lateral boundaries are the lateral bank of the inferior frontal sulcus and the medial bank of the lateral orbital sulcus and/or the circular insular sulcus respectively (Christein Fennema-Notestine).",
+    definition="Is a frontal gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002998)]",
+    description="Component of the frontal lobe, lateral aspect. The rostral boundary is the first appearance of the inferior frontal sulcus whereas the caudal boundary is the precentral gyrus. The medial and lateral boundaries are the lateral bank of the inferior frontal sulcus and the medial bank of the lateral orbital sulcus and/or the circular insular sulcus respectively (Christein Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002998)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105442"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002998#inferior-frontal-gyrus-1"),
     name="inferior frontal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002998"),
-    synonyms=[
-        "gyrus F3",
-        "gyrus frontalis inferior",
-        "gyrus frontalis tertius",
-        "IFG",
-        "inferior frontal convolution",
-        "regio subfrontalis",
-    ],
+    synonyms=["inferior frontal convolution"],
+)
+UBERONParcellation.inferior_frontal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorFrontalSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002761)]",
+    description="The inferior frontal sulcus is a sulcus between the middle frontal gyrus and the inferior frontal gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002761)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002761#inferior-frontal-sulcus-1"),
+    name="inferior frontal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002761"),
+    synonyms=["inferior frontal fissure", "sulcus f2"],
 )
 UBERONParcellation.inferior_horn_of_the_lateral_ventricle = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorHornOfTheLateralVentricle",
@@ -6429,13 +6721,18 @@ UBERONParcellation.inferior_longitudinal_fasciculus = UBERONParcellation(
 )
 UBERONParcellation.inferior_occipital_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorOccipitalGyrus",
-    definition="'Inferior occipital gyrus' is an occipital gyrus.",
-    description="",
+    definition="Is an occipital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014608)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105446"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014608#inferior-occipital-gyrus-1"),
     name="inferior occipital gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014608"),
-    synonyms=["gyrus occipitalis inferior", "gyrus occipitalis tertius", "inferior occipital gyrus"],
+)
+UBERONParcellation.inferior_occipital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorOccipitalSulcus",
+    definition="Is an occipital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025102)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025102#inferior-occipital-sulcus-1"),
+    name="inferior occipital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025102"),
 )
 UBERONParcellation.inferior_occipitofrontal_fasciculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorOccipitofrontalFasciculus",
@@ -6493,42 +6790,87 @@ UBERONParcellation.inferior_parietal_cortex = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006088"),
     synonyms=["inferior parietal lobule"],
 )
+UBERONParcellation.inferior_parietal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorParietalSulcus",
+    definition="Is a sulcus of parietal lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026723)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026723#inferior-parietal-sulcus-1"),
+    name="inferior parietal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026723"),
+)
+UBERONParcellation.inferior_postcentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorPostcentralSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002914)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002914#inferior-postcentral-sulcus-1"),
+    name="inferior postcentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002914"),
+    synonyms=["sulcus postcentralis inferior"],
+)
+UBERONParcellation.inferior_precentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorPrecentralSulcus",
+    definition="Is a frontal sulcus. Is part of the precentral sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002764) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002764#inferior-precentral-sulcus-1"),
+    name="inferior precentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002764"),
+    synonyms=["inferior part of precentral fissure", "sulcus praecentralis inferior", "sulcus precentralis inferior"],
+)
+UBERONParcellation.inferior_ramus_of_arcuate_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorRamusOfArcuateSulcus",
+    definition="Is a sulcus of brain. Is part of the arcuate sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026382) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026382#inferior-ramus-of-arcuate-sulcus"),
+    name="inferior ramus of arcuate sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026382"),
+)
 UBERONParcellation.inferior_rostral_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorRostralGyrus",
-    definition="'Inferior rostral gyrus' is a regional part of brain. It is part of the rostral gyrus.",
-    description="",
+    definition="Is a regional part of brain. Is part of the rostral gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019278) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105460"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019278#inferior-rostral-gyrus-1"),
     name="inferior rostral gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019278"),
-    synonyms=[""],
+)
+UBERONParcellation.inferior_rostral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorRostralSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002767)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002767#inferior-rostral-sulcus-1"),
+    name="inferior rostral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002767"),
+    synonyms=["sulcus rostralis inferior"],
+)
+UBERONParcellation.inferior_sagittal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorSagittalSulcus",
+    definition="Is a sagittal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026760)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026760#inferior-sagittal-sulcus-1"),
+    name="inferior sagittal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026760"),
 )
 UBERONParcellation.inferior_temporal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorTemporalGyrus",
-    definition="'Inferior temporal gyrus' is a gyrus. It is part of the temporal lobe.",
-    description="Component of the temporal lobe, lateral aspect.  The rostral boundary is the rostral extent of the inferior temporal sulcus whereas the caudal boundary is designated as the temporo-occipital incisure on the cortical surface. The occipitotemporal sulcus is the medial boundary and the inferior temporal sulcus is the lateral boundary (Christine Fennema-Notestine).",
+    definition="Is a gyrus. Is part of the temporal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002751) ('is_a' and 'relationship')]",
+    description="Component of the temporal lobe, lateral aspect. The rostral boundary is the rostral extent of the inferior temporal sulcus whereas the caudal boundary is designated as the temporo-occipital incisure on the cortical surface. The occipitotemporal sulcus is the medial boundary and the inferior temporal sulcus is the lateral boundary (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002751)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105463"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002751#inferior-temporal-gyrus-1"),
     name="inferior temporal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002751"),
-    synonyms=[
-        "gyrus temporalis inferior",
-        "inferotemporal cortex",
-        "IT cortex",
-        "lateral occipitotemporal gyrus (heimer-83)",
-    ],
+    synonyms=["gyrus temporalis inferior", "lateral occipitotemporal gyrus (heimer-83)"],
+)
+UBERONParcellation.inferior_temporal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorTemporalSulcus",
+    definition="Is a temporal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002969)]",
+    description="The inferior surface of the temporal lobe is concave, and is continuous posteriorly with the tentorial surface of the occipital lobe. It is traversed by the inferior temporal sulcus, which extends from near the occipital pole behind, to within a short distance of the temporal pole in front, but is frequently subdivided by bridging gyri. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002969)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002969#inferior-temporal-sulcus-1"),
+    name="inferior temporal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002969"),
+    synonyms=["inferior temporal sulcus-1", "middle temporal sulcus (szikla)", "second temporal sulcus", "sulcus t2"],
 )
 UBERONParcellation.inferior_transverse_frontopolar_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorTransverseFrontopolarGyrus",
-    definition="'Inferior transverse frontopolar gyrus' is a regional part of brain. It is part of the transverse frontopolar gyri complex.",
-    description="",
+    definition="Is a regional part of brain. Is part of the transverse frontopolar gyri complex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024183) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105465"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0024183#inferior-transverse-frontopolar-gyrus-1"
     ),
     name="inferior transverse frontopolar gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024183"),
-    synonyms=["inferior transverse frontopolar gyrus"],
 )
 UBERONParcellation.inferior_vestibular_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/inferiorVestibularNucleus",
@@ -6699,6 +7041,13 @@ UBERONParcellation.intermediate_acoustic_stria = UBERONParcellation(
         "striae acusticae intermedius",
     ],
 )
+UBERONParcellation.intermediate_frontal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/intermediateFrontalSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026719) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026719#intermediate-frontal-sulcus-1"),
+    name="intermediate frontal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026719"),
+)
 UBERONParcellation.intermediate_hypothalamic_region = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/intermediateHypothalamicRegion",
     definition="'Intermediate hypothalamic region' is a regional part of brain. It is part of the hypothalamus.",
@@ -6738,13 +7087,11 @@ UBERONParcellation.intermediate_oculomotor_nucleus = UBERONParcellation(
 )
 UBERONParcellation.intermediate_orbital_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/intermediateOrbitalGyrus",
-    definition="'Intermediate orbital gyrus' is an orbital gyrus.",
-    description="",
+    definition="Is an orbital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002644)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105574"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002644#intermediate-orbital-gyrus-1"),
     name="intermediate orbital gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002644"),
-    synonyms=[""],
 )
 UBERONParcellation.intermediate_part_of_hypophysis = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/intermediatePartOfHypophysis",
@@ -6928,6 +7275,15 @@ UBERONParcellation.interthalamic_adhesion = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006681"),
     synonyms=["interthalamic connection", "massa intermedia", "middle commissure"],
 )
+UBERONParcellation.intraculminate_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/intraculminateFissureOfCerebellum",
+    definition="Is a cerebellum fissure. Is part of the cerebellum vermis culmen. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035922) ('is_a' and 'relationship')]",
+    description="A fissure that divides the culmen lobule (lobules IV and V) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035922)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0035922#intraculminate-fissure-of-cerebellum"),
+    name="intraculminate fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035922"),
+    synonyms=["fissura intraculminalis", "intraculminate fissure"],
+)
 UBERONParcellation.intralaminar_nuclear_group = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/intralaminarNuclearGroup",
     definition="'Intralaminar nuclear group' is a nucleus of dorsal thalamus.",
@@ -6951,23 +7307,24 @@ UBERONParcellation.intralaminar_nuclear_group = UBERONParcellation(
         "nuclei intralaminares thalami",
     ],
 )
+UBERONParcellation.intralingual_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/intralingualSulcus",
+    definition="Is a subarachnoid sulcus and occipital sulcus. Is part of the lingual gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002905) ('is_a' and 'relationship')]",
+    description="A groove located within the boundaries of the lingual gyrus in the human. Identified by dissection, it is oriented parallel to the inferior margin of the occipital lobe ( Ono-1990; Duvernoy-1992 ). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002905)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002905#intralingual-sulcus-1"),
+    name="intralingual sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002905"),
+    synonyms=["sulcus intralingualis"],
+)
 UBERONParcellation.intraparietal_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/intraparietalSulcus",
-    definition="The intraparietal sulcus is located on the lateral surface of the parietal lobe, and consists of an oblique and a horizontal portion.",
-    description="The intraparietal sulcus (IPS) contains a series of functionally distinct subregions that have been intensively investigated using both single cell neurophysiology in primates and human functional neuroimaging. Its principal functions are related to perceptual-motor coordination (for directing eye movements and reaching) and visual attention. The IPS is also thought to play a role in other functions, including processing symbolic numerical information, visuospatial working memory and interpreting the intent of others. [WP,unvetted].",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0105656"),
+    definition="Is a sulcus of parietal lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002913)]",
+    description="The intraparietal sulcus (IPS) is located on the lateral surface of the parietal lobe, and consists of an oblique and a horizontal portion. The IPS contains a series of functionally distinct subregions that have been intensively investigated using both single cell neurophysiology in primates and human functional neuroimaging. Its principal functions are related to perceptual-motor coordination (for directing eye movements and reaching) and visual attention. The IPS is also thought to play a role in other functions, including processing symbolic numerical information, visuospatial working memory and interpreting the intent of others. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002913)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105656"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002913#intraparietal-sulcus-1"),
     name="intraparietal sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002913"),
-    synonyms=[
-        "interparietal fissure",
-        "intraparietal sulcus of Turner",
-        "ips",
-        "itps",
-        "sulcus interparietalis",
-        "sulcus intraparietalis",
-        "Turner sulcus",
-    ],
+    synonyms=["interparietal fissure", "intraparietal fissure", "sulcus interparietalis"],
 )
 UBERONParcellation.isla_magna_of_calleja = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/islaMagnaOfCalleja",
@@ -7018,25 +7375,13 @@ UBERONParcellation.isthmus_of_cingulate_cortex = UBERONParcellation(
 )
 UBERONParcellation.isthmus_of_cingulate_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/isthmusOfCingulateGyrus",
-    definition="'Isthmus of cingulate gyrus' is part of the cingulate gyrus.",
-    description="Component of the cingulate cortex comprising the region linking the posterior cingulate gyrus and the parahippocampal gyrus. The rostral and caudal boundaries were the posterior division of the cingulate cortex and the parahippocampal gyrus respectively. The medial and lateral boundaries were the medial wall (area unknown) and the precuneus respectively (Christine Fennema-Notestine).",
+    definition="Is part of the cingulate gyrus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002738)]",
+    description="Component of the cingulate cortex. The rostral and caudal boundaries were the posterior division of the cingulate cortex and the parahippocampal gyrus respectively. The medial and lateral boundaries were the medial wall (area unknown) and the precuneus respectively (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002738)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105757"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002738#isthmus-of-cingulate-gyrus-1"),
     name="isthmus of cingulate gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002738"),
-    synonyms=[
-        "cingulate gyrus isthmus",
-        "isthmus cinguli",
-        "isthmus gyri cingulatus",
-        "isthmus gyri cinguli",
-        "isthmus of cingulate cortex",
-        "isthmus of fornicate gyrus",
-        "isthmus of gyrus fornicatus",
-        "isthmus of limbic lobe",
-        "isthmus of the cingulate gyrus",
-        "isthmus of the gyrus fornicatus",
-        "isthmus-2",
-    ],
+    synonyms=["cingulate gyrus isthmus", "isthmus of fornicate gyrus", "isthmus of limbic lobe"],
 )
 UBERONParcellation.juxtarestiform_body = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/juxtarestiformBody",
@@ -7296,6 +7641,13 @@ UBERONParcellation.lateral_hypothalamic_nucleus = UBERONParcellation(
         "nucleus hypothalamicus lateralis",
     ],
 )
+UBERONParcellation.lateral_inferior_limiting_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/lateralInferiorLimitingSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002737)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002737#lateral-inferior-limiting-sulcus-1"),
+    name="lateral inferior limiting sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002737"),
+)
 UBERONParcellation.lateral_lemniscus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lateralLemniscus",
     definition="'Lateral lemniscus' is a nervous system lemniscus.",
@@ -7423,6 +7775,15 @@ UBERONParcellation.lateral_occipital_cortex = UBERONParcellation(
         "lateral occipital gyrus",
     ],
 )
+UBERONParcellation.lateral_occipital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/lateralOccipitalSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002904)]",
+    description="In the occipital lobe, the lateral occipital sulcus extends from behind forward, and divides the lateral surface of the occipital lobe into a superior and an inferior gyrus, which are continuous in front with the parietal and temporal lobes. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002904)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002904#lateral-occipital-sulcus-1"),
+    name="lateral occipital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002904"),
+    synonyms=["sulcus occipitalis lateralis"],
+)
 UBERONParcellation.lateral_olfactory_stria = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lateralOlfactoryStria",
     definition="Is an olfactory tract linking bulb to ipsilateral dorsal telencephalon. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001888)]",
@@ -7444,13 +7805,18 @@ UBERONParcellation.lateral_orbital_frontal_cortex = UBERONParcellation(
 )
 UBERONParcellation.lateral_orbital_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lateralOrbitalGyrus",
-    definition="'Lateral orbital gyrus' is an orbital gyrus.",
-    description="",
+    definition="Is an orbital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002564)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106084"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002564#lateral-orbital-gyrus-1"),
     name="lateral orbital gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002564"),
-    synonyms=["gyrus orbitalis lateralis", "gyrus orbitalis longitudinalis externus"],
+)
+UBERONParcellation.lateral_orbital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/lateralOrbitalSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026384) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026384#lateral-orbital-sulcus"),
+    name="lateral orbital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026384"),
 )
 UBERONParcellation.lateral_parabrachial_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lateralParabrachialNucleus",
@@ -7661,12 +8027,28 @@ UBERONParcellation.lateral_spinal_nucleus = UBERONParcellation(
 )
 UBERONParcellation.lateral_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lateralSulcus",
-    definition="'Lateral sulcus' is a subarachnoid sulcus. It is part of the cerebral cortex.",
-    description="A sulcus that divides the frontal lobe and parietal lobe above from the temporal lobe below. It is in both hemispheres of the brain but is longer in the left hemisphere. The lateral sulcus is one of the earliest-developing sulci of the human brain. It first appears around the fourteenth gestational week[WP,modified].",
+    definition="Is a subarachnoid sulcus. Is part of the cerebral cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002721) ('is_a' and 'relationship')]",
+    description="A sulcus that divides the frontal lobe and parietal lobe above from the temporal lobe below. It is in both hemispheres of the brain but is longer in the left hemisphere. The lateral sulcus is one of the earliest-developing sulci of the human brain. It first appears around the fourteenth gestational week. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002721)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106115"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002721#lateral-sulcus-1"),
     name="lateral sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002721"),
+    synonyms=[
+        "fissura lateralis",
+        "fissura lateralis cerebri",
+        "fissura lateralis cerebri (sylvii)",
+        "fissura transversa cerebri",
+        "fissure of Sylvius",
+        "lateral cerebral fissure",
+        "lateral cerebral sulcus",
+        "lateral fissure",
+        "lateral fissure of Sylvius",
+        "sulcus lateralis",
+        "sulcus lateralis cerebri",
+        "Sylvian fissure",
+        "Sylvian sulcus",
+        "transverse cerebral fissure",
+    ],
 )
 UBERONParcellation.lateral_superior_olivary_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lateralSuperiorOlivaryNucleus",
@@ -8033,18 +8415,15 @@ UBERONParcellation.linear_nucleus = UBERONParcellation(
 )
 UBERONParcellation.lingual_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lingualGyrus",
-    definition="'Lingual gyrus' is an occipital gyrus.",
-    description="Component of the occipital lobe.  The rostral boundary of the lingual gyrus was the posterior extent of the parahippocampal gyrus whereas the caudal boundary was the most posterior coronal slice where the gyrus could be visualized. The medial and lateral boundaries were the medial portion of the temporal and occipital cortices and the medial bank of the collateral sulcus respectively (Christine Fennema-Notestine).",
+    definition="Is an occipital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002943)]",
+    description="Component of the occipital lobe. The rostral boundary of the lingual gyrus was the posterior extent of the parahippocampal gyrus whereas the caudal boundary was the most posterior coronal slice where the gyrus could be visualized. The medial and lateral boundaries were the medial portion of the temporal and occipital cortices and the medial bank of the collateral sulcus respectively (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002943)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106278"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002943#lingual-gyrus-1"),
     name="lingual gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002943"),
     synonyms=[
-        "gyrus lingualis",
         "gyrus occipitotemporalis medialis",
-        "lingula gyrus",
         "lingula of cerebral hemisphere",
-        "medial occipito-temporal gyrus",
         "medial occipitotemporal gyrus",
         "medial occipitotemporal gyrus-2",
     ],
@@ -8115,6 +8494,28 @@ UBERONParcellation.locus_ceruleus = UBERONParcellation(
         "substantia ferruginea",
     ],
 )
+UBERONParcellation.longitudinal_fissure = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/longitudinalFissure",
+    definition="Is a subarachnoid fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002921)]",
+    description="The deep groove which separates the two hemispheres of the vertebrate brain. The falx cerebri, a dural brain covering, lies within the medial longitudinal fissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002921)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002921#longitudinal-fissure-1"),
+    name="longitudinal fissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002921"),
+    synonyms=[
+        "fissura interhemispherica",
+        "fissura longitudinalis cerebrales",
+        "fissura longitudinalis cerebri",
+        "fissura longitudinalis magna",
+        "hemispheric sulcus",
+        "interhemispheric fissure",
+        "longitudinal cerebral fissure",
+        "longitudinal fissure of hemisphere",
+        "longitudinal fissure of the cerebrum",
+        "longitudinal sulcus",
+        "medial longitudinal fissure",
+        "sagittal fissure",
+    ],
+)
 UBERONParcellation.longitudinal_pontine_fibers = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/longitudinalPontineFibers",
     definition="'Longitudinal pontine fibers' is a tract of brain. It is part of the basal part of pons.",
@@ -8141,6 +8542,15 @@ UBERONParcellation.lower_rhombic_lip = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009840#lower-rhombic-lip"),
     name="lower rhombic lip",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009840"),
+)
+UBERONParcellation.lunate_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/lunateSulcus",
+    definition="Is a subarachnoid sulcus and occipital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002903)]",
+    description="The lunate sulcus is a structure in the occipital lobe. It is not present in all individuals. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002903)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002903#lunate-sulcus-1"),
+    name="lunate sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002903"),
+    synonyms=["lunate fissure", "sulcus lunatus", "sulcus simialis"],
 )
 UBERONParcellation.magnocellular_nucleus_of_medial_geniculate_body = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/magnocellularNucleusOfMedialGeniculateBody",
@@ -8355,6 +8765,21 @@ UBERONParcellation.mammillothalamic_tract_of_hypothalamus = UBERONParcellation(
     ),
     name="mammillothalamic tract of hypothalamus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002990"),
+)
+UBERONParcellation.marginal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/marginalSulcus",
+    definition="Is a subarachnoid sulcus. Is part of the cingulate sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002912) ('is_a' and 'relationship')]",
+    description="The marginal sulcus is the portion of the cingulate sulcus adjacent to the paracentral lobule and the precuneus. It is sometimes known as the 'marginal part of the cingulate sulcus'. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002912)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002912#marginal-sulcus-1"),
+    name="marginal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002912"),
+    synonyms=[
+        "marginal branch of cingulate sulcus",
+        "marginal ramus of cingulate sulcus",
+        "ramus marginalis sulci cingulati",
+        "ramus marginalis sulci cinguli",
+        "sulcus marginalis",
+    ],
 )
 UBERONParcellation.marginal_venous_sinus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/marginalVenousSinus",
@@ -8795,13 +9220,11 @@ UBERONParcellation.medial_oculomotor_nucleus = UBERONParcellation(
 )
 UBERONParcellation.medial_olfactory_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/medialOlfactoryGyrus",
-    definition="'Medial olfactory gyrus' is a gyrus.",
-    description="",
+    definition="Is a gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002599)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106671"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002599#medial-olfactory-gyrus-1"),
     name="medial olfactory gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002599"),
-    synonyms=["gyrus medius olfactorius", "gyrus olfactorius medialis"],
 )
 UBERONParcellation.medial_olfactory_stria = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/medialOlfactoryStria",
@@ -8824,13 +9247,18 @@ UBERONParcellation.medial_orbital_frontal_cortex = UBERONParcellation(
 )
 UBERONParcellation.medial_orbital_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/medialOrbitalGyrus",
-    definition="'Medial orbital gyrus' is an orbital gyrus.",
-    description="",
+    definition="Is an orbital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002570)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106673"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002570#medial-orbital-gyrus-1"),
     name="medial orbital gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002570"),
-    synonyms=["gyrus orbitalis longitudinalis internus", "gyrus orbitalis medialis", "gyrus orbitalis medius"],
+)
+UBERONParcellation.medial_orbital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/medialOrbitalSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026391) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026391#medial-orbital-sulcus"),
+    name="medial orbital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026391"),
 )
 UBERONParcellation.medial_parabrachial_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/medialParabrachialNucleus",
@@ -8943,6 +9371,14 @@ UBERONParcellation.medial_pes_lemniscus = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002662"),
     synonyms=["mpl", "pes lemniscus medialis", "superficial pes lemniscus"],
 )
+UBERONParcellation.medial_precentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/medialPrecentralSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026721) ('is_a' and 'relationship')]",
+    description="A superficial feature of the frontal lobe that extends from the dorsal surface onto the medial surface of the superior frontal gyrus (Ono-90). (NN) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026721)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026721#medial-precentral-sulcus-1"),
+    name="medial precentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026721"),
+)
 UBERONParcellation.medial_preoptic_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/medialPreopticNucleus",
     definition="'Medial preoptic nucleus' is a hypothalamic nucleus and preoptic nucleus. It is part of the medial preoptic region.",
@@ -9043,13 +9479,11 @@ UBERONParcellation.medial_superior_olivary_nucleus = UBERONParcellation(
 )
 UBERONParcellation.medial_transverse_frontopolar_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/medialTransverseFrontopolarGyrus",
-    definition="'Medial transverse frontopolar gyrus' is a regional part of brain. It is part of the transverse frontopolar gyri complex.",
-    description="",
+    definition="Is a regional part of brain. Is part of the transverse frontopolar gyri complex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024193) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106708"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0024193#medial-transverse-frontopolar-gyrus-1"),
     name="medial transverse frontopolar gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024193"),
-    synonyms=["medial transverse frontopolar gyrus"],
 )
 UBERONParcellation.medial_ventral_tegmental_area = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/medialVentralTegmentalArea",
@@ -9144,6 +9578,32 @@ UBERONParcellation.medulla_oblongata = UBERONParcellation(
         "Metencephalon",
         "metepencephalon",
     ],
+)
+UBERONParcellation.medulla_oblongata_anterior_median_fissure = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/medullaOblongataAnteriorMedianFissure",
+    definition="Is a sulcus of brain. Is part of the medulla oblongata. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003989) ('is_a' and 'relationship')]",
+    description="The longitudinal groove in the midline of the anterior aspect of the medulla oblongata. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003989)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0003989#medulla-oblongata-anterior-median-fissure"
+    ),
+    name="medulla oblongata anterior median fissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003989"),
+    synonyms=[
+        "anterior median fissure",
+        "anterior median fissure of medulla",
+        "anterior median fissure of medulla oblongata",
+        "fissura mediana anterior medullae oblongatae",
+        "ventral median fissure of medulla",
+        "ventral median sulcus",
+    ],
+)
+UBERONParcellation.medulla_oblongata_sulcus_limitans = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/medullaOblongataSulcusLimitans",
+    definition="Is part of the medulla oblongata. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009576)]",
+    description="A sulcus limitans of neural tube that is part of a future medulla oblongata. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009576)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009576#medulla-oblongata-sulcus-limitans"),
+    name="medulla oblongata sulcus limitans",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009576"),
 )
 UBERONParcellation.medulla_reticulospinal_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/medullaReticulospinalTract",
@@ -9327,8 +9787,8 @@ UBERONParcellation.metencephalon = UBERONParcellation(
 )
 UBERONParcellation.metencephalon_sulcus_limitans = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/metencephalonSulcusLimitans",
-    definition="'Metencephalon sulcus limitans' is part of the future metencephalon.",
-    description="A sulcus limitans of neural tube that is part of a future metencephalon.",
+    definition="Is part of the future metencephalon. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009577)]",
+    description="A sulcus limitans of neural tube that is part of a future metencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009577)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0729292"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009577#metencephalon-sulcus-limitans"),
     name="metencephalon sulcus limitans",
@@ -9464,24 +9924,20 @@ UBERONParcellation.middle_cerebellar_peduncle = UBERONParcellation(
 )
 UBERONParcellation.middle_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/middleFrontalGyrus",
-    definition="'Middle frontal gyrus' is a frontal gyrus.",
-    description="Component of the frontal lobe, lateral aspect (Christine Fennema-Notestine).",
+    definition="Is a frontal gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002702)]",
+    description="Component of the frontal lobe, lateral aspect (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002702)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106961"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002702#middle-frontal-gyrus-1"),
     name="middle frontal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002702"),
-    synonyms=[
-        "gyrus F2",
-        "gyrus frontalis medialis",
-        "gyrus frontalis medialis (Winters)",
-        "gyrus frontalis medius",
-        "gyrus frontalis secundus",
-        "intermediate frontal gyrus",
-        "medial frontal gyrus",
-        "medial frontal gyrus (Mai)",
-        "medial frontal gyrus x",
-        "middle (medial) frontal gyrus",
-    ],
+    synonyms=["gyrus frontalis medialis", "intermediate frontal gyrus", "medial frontal gyrus"],
+)
+UBERONParcellation.middle_frontal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/middleFrontalSulcus",
+    definition="Is a frontal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014618)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014618#middle-frontal-sulcus-1"),
+    name="middle frontal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014618"),
 )
 UBERONParcellation.middle_gray_layer_of_superior_colliculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/middleGrayLayerOfSuperiorColliculus",
@@ -9514,19 +9970,21 @@ UBERONParcellation.middle_mesencephalic_central_artery = UBERONParcellation(
 )
 UBERONParcellation.middle_temporal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/middleTemporalGyrus",
-    definition="'Middle temporal gyrus' is a gyrus. It is part of the temporal lobe.",
-    description="Component of the temporal lobe, lateral aspect.  The rostral boundary  is the rostral extent of the superior temporal sulcus whereas the caudal boundary is the temporo-occipital incisure on the cortical surface. The superior temporal sulcus is the medial boundary and the inferior temporal sulcus is the lateral boundary (Christine Fennema-Notestine).",
+    definition="Is a gyrus. Is part of the temporal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002771) ('is_a' and 'relationship')]",
+    description="Component of the temporal lobe, lateral aspect. The rostral boundary is the rostral extent of the superior temporal sulcus whereas the caudal boundary is the temporo-occipital incisure on the cortical surface. The superior temporal sulcus is the medial boundary and the inferior temporal sulcus is the lateral boundary (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002771)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106967"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002771#middle-temporal-gyrus-1"),
     name="middle temporal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002771"),
-    synonyms=[
-        "gyrus temporalis medius",
-        "inferior temporal gyrus (Seltzer)",
-        "intermediate temporal gyrus",
-        "medial temporal gyrus",
-        "middle (medial) temporal gyrus",
-    ],
+    synonyms=["gyrus temporalis medius", "intermediate temporal gyrus"],
+)
+UBERONParcellation.middle_temporal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/middleTemporalSulcus",
+    definition="Is a temporal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014689)]",
+    description="A groove or cleft that divides the outer surface of the temporal lobe running in the same direction but at a lower level to the superior temporal sulcus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014689)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014689#middle-temporal-sulcus"),
+    name="middle temporal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014689"),
 )
 UBERONParcellation.middle_white_layer_of_superior_colliculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/middleWhiteLayerOfSuperiorColliculus",
@@ -9659,8 +10117,8 @@ UBERONParcellation.myelencephalon_basal_plate = UBERONParcellation(
 )
 UBERONParcellation.myelencephalon_sulcus_limitans = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/myelencephalonSulcusLimitans",
-    definition="'Myelencephalon sulcus limitans' is part of the future myelencephalon.",
-    description="A sulcus limitans of neural tube that is part of a future myelencephalon.",
+    definition="Is part of the future myelencephalon. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009578)]",
+    description="A sulcus limitans of neural tube that is part of a future myelencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009578)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0734752"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009578#myelencephalon-sulcus-limitans"),
     name="myelencephalon sulcus limitans",
@@ -10050,15 +10508,22 @@ UBERONParcellation.occipital_cortex = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0016540"),
     synonyms=["cortex of occipital lobe", "occipital lobe cortex", "occipital neocortex"],
 )
+UBERONParcellation.occipital_fusiform_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/occipitalFusiformGyrus",
+    definition="Is a regional part of brain. Is part of the fusiform gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022364) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022364#occipital-fusiform-gyrus"),
+    name="occipital fusiform gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022364"),
+    synonyms=["occipital fusiform gyrus (OF)", "occipitotemporal (fusiform) gyrus, occipital part"],
+)
 UBERONParcellation.occipital_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/occipitalGyrus",
-    definition="A gyrus that is part of a occipital lobe.",
-    description="'Occipital gyrus' is a gyrus. It is part of the occipital lobe.",
+    definition="Is a gyrus. Is part of the occipital lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014640) ('is_a' and 'relationship')]",
+    description="A gyrus that is part of a occipital lobe. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014640)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107882"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014640#occipital-gyrus-1"),
     name="occipital gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014640"),
-    synonyms=["gyrus occipitalis"],
 )
 UBERONParcellation.occipital_lobe = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/occipitalLobe",
@@ -10070,13 +10535,31 @@ UBERONParcellation.occipital_lobe = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002021"),
     synonyms=["regio occipitalis"],
 )
+UBERONParcellation.occipital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/occipitalSulcus",
+    definition="Is a sulcus of brain. Is part of the occipital lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019303) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019303#occipital-sulcus"),
+    name="occipital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019303"),
+    synonyms=["occipital lobe sulcus"],
+)
 UBERONParcellation.occipitotemporal_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/occipitotemporalSulcus",
-    description="'Occipitotemporal sulcus' is a subarachnoid sulcus.",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002693)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107885"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002693#occipitotemporal-sulcus-1"),
     name="occipitotemporal sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002693"),
+    synonyms=[
+        "inferior temporal fissure",
+        "inferior temporal fissure (Crosby)",
+        "inferior temporal sulcus (roberts)",
+        "inferior temporal sulcus (szikla)",
+        "inferior temporal sulcus-2",
+        "lateral occipitotemporal sulcus",
+        "occipito-temporal sulcus",
+        "third temporal sulcus",
+    ],
 )
 UBERONParcellation.oculomotor_nerve_root = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/oculomotorNerveRoot",
@@ -10308,6 +10791,15 @@ UBERONParcellation.olfactory_pathway = UBERONParcellation(
     name="olfactory pathway",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013201"),
 )
+UBERONParcellation.olfactory_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/olfactorySulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002772)]",
+    description="The medial orbital gyrus presents a well-marked antero-posterior sulcus, the olfactory sulcus, for the olfactory tract. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002772)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002772#olfactory-sulcus-1"),
+    name="olfactory sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002772"),
+    synonyms=["olfactory groove", "sulcus olfactorius"],
+)
 UBERONParcellation.olfactory_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/olfactoryTract",
     definition="Is a tract of brain. Is part of the white matter of telencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002265) ('is_a' and 'relationship')]",
@@ -10387,8 +10879,8 @@ UBERONParcellation.olivocerebellar_tract = UBERONParcellation(
 )
 UBERONParcellation.opercular_part_of_inferior_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/opercularPartOfInferiorFrontalGyrus",
-    definition="'Opercular part of inferior frontal gyrus' is part of the inferior frontal gyrus.",
-    description="Component of the inferior frontal gyrus.defined as the first gyrus from the precentral gyrus.",
+    definition="Is part of the inferior frontal gyrus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002980)]",
+    description="Component of the inferior frontal gyrus. Defined as the first gyrus from the precentral gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002980)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0108057"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0002980#opercular-part-of-inferior-frontal-gyrus-1"
@@ -10396,9 +10888,7 @@ UBERONParcellation.opercular_part_of_inferior_frontal_gyrus = UBERONParcellation
     name="opercular part of inferior frontal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002980"),
     synonyms=[
-        "gyrus frontalis inferior",
-        "inferior frontal gyrus",
-        "opercular part",
+        "gyrus frontalis inferior, pars opercularis",
         "opercular portion of inferior frontal gyrus",
         "pars opercularis",
         "pars opercularis gyri frontalis inferioris",
@@ -10562,18 +11052,24 @@ UBERONParcellation.oral_pulvinar_nucleus = UBERONParcellation(
 )
 UBERONParcellation.orbital_gyri_complex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/orbitalGyriComplex",
-    definition="'Orbital gyri complex' is a regional part of brain. It is part of the frontal lobe.",
-    description="",
+    definition="Is a regional part of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022695) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0108111"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022695#orbital-gyri-complex-1"),
     name="orbital gyri complex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022695"),
-    synonyms=["Orgital_gyri", "orbital gyri complex"],
+)
+UBERONParcellation.orbital_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/orbitalGyrus",
+    definition="Is a gyrus. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007193) ('is_a' and 'relationship')]",
+    description="The inferior or orbital surface of the frontal lobe is concave, and rests on the orbital plate of the frontal bone. It is divided into four orbital gyri by a well-marked H-shaped orbital sulcus. These are named, from their position, the medial, anterior, lateral, and posterior orbital gyri. The medial orbital gyrus presents a well-marked antero-posterior sulcus, the olfactory sulcus, for the olfactory tract; the portion medial to this is named the straight gyrus, and is continuous with the superior frontal gyrus on the medial surface. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007193)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007193#orbital-gyrus"),
+    name="orbital gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007193"),
 )
 UBERONParcellation.orbital_part_of_inferior_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/orbitalPartOfInferiorFrontalGyrus",
-    definition="'Orbital part of inferior frontal gyrus' is a frontal gyrus. It is part of the inferior frontal gyrus.",
-    description="Component of the inferior frontal gyrus.defined as the first gyrus from the precentral gyrus.the remainder of the inferior frontal gyrus once the pars opercularis and triangularis have been defined (Christine Fennema-Notestine)., NeuroNames",
+    definition="Is a frontal gyrus. Is part of the inferior frontal gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002624) ('is_a' and 'relationship')]",
+    description="Component of. The inferior frontal gyrus.defined as. The first gyrus from. The precentral gyrus. The remainder of. The inferior frontal gyrus once. The pars opercularis and triangularis have been defined (Christine Fennema-Notestine)., NeuroNames. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002624)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0108113"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0002624#orbital-part-of-inferior-frontal-gyrus-1"
@@ -10581,13 +11077,19 @@ UBERONParcellation.orbital_part_of_inferior_frontal_gyrus = UBERONParcellation(
     name="orbital part of inferior frontal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002624"),
     synonyms=[
-        "brodmann's area 36",
-        "gyrus frontalis inferior",
-        "inferior frontal gyrus",
-        "orbital part",
-        "pars orbitalis",
+        "gyrus frontalis inferior, pars orbitalis",
+        "inferior frontal gyrus, orbital part",
         "pars orbitalis gyri frontalis inferioris",
     ],
+)
+UBERONParcellation.orbital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/orbitalSulcus",
+    definition="Is a subarachnoid sulcus. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002595) ('is_a' and 'relationship')]",
+    description="The inferior or orbital surface of the frontal lobe is concave, and rests on the orbital plate of the frontal bone. It is divided into four orbital gyri by a well-marked H-shaped orbital sulcus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002595)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002595#orbital-sulcus-1"),
+    name="orbital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002595"),
+    synonyms=["cruciate sulcus of campbell", "sulci orbitalis", "sulcus orbitalis"],
 )
 UBERONParcellation.orbitofrontal_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/orbitofrontalCortex",
@@ -10773,6 +11275,13 @@ UBERONParcellation.parabrachial_pigmental_nucleus = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013738"),
     synonyms=["PBP", "parabrachial pigmented nucleus"],
 )
+UBERONParcellation.paracentral_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/paracentralGyrus",
+    definition="Is a gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007190)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007190#paracentral-gyrus"),
+    name="paracentral gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007190"),
+)
 UBERONParcellation.paracentral_lobule = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/paracentralLobule",
     definition="Is a gyrus. Is part of the cerebral cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035933) ('is_a' and 'relationship')]",
@@ -10782,6 +11291,23 @@ UBERONParcellation.paracentral_lobule = UBERONParcellation(
     name="paracentral lobule",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035933"),
     synonyms=["lobulus paracentralis"],
+)
+UBERONParcellation.paracentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/paracentralSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002598)]",
+    description="The paracentral sulcus is a sulcus of the brain. It forms the paracentral lobule's anterior border. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002598)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002598#paracentral-sulcus-1"),
+    name="paracentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002598"),
+    synonyms=["sulcus subcentralis medialis"],
+)
+UBERONParcellation.paracingulate_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/paracingulateGyrus",
+    definition="Is a regional part of brain. Is part of the cerebral cortex and the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022398) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022398#paracingulate-gyrus"),
+    name="paracingulate gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022398"),
+    synonyms=["paracingulate gyrus (PAC)"],
 )
 UBERONParcellation.paraflocculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/paraflocculus",
@@ -10928,22 +11454,13 @@ UBERONParcellation.paratenial_nucleus = UBERONParcellation(
 )
 UBERONParcellation.paraterminal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/paraterminalGyrus",
-    definition="'Paraterminal gyrus' is a supracallosal gyrus.",
-    description="The paraterminal gyrus (subcallosal gyrus, peduncle of the corpus callosum) is a narrow lamina on the medial surface of the hemisphere in front of the lamina terminalis, behind the parolfactory area, and below the rostrum of the corpus callosum. It is continuous around the genu of the corpus callosum with the supracallosal gyrus. [WP,unvetted].",
+    definition="Is a supracallosal gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002603)]",
+    description="The paraterminal gyrus (subcallosal gyrus, peduncle of the corpus callosum) is a narrow lamina on the medial surface of the hemisphere in front of the lamina terminalis, behind the parolfactory area, and below the rostrum of the corpus callosum. It is continuous around the genu of the corpus callosum with the supracallosal gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002603)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0108484"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002603#paraterminal-gyrus-1"),
     name="paraterminal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002603"),
-    synonyms=[
-        "gyrus paraterminalis",
-        "gyrus subcallosus",
-        "hippocampus praecommissuralis",
-        "hippocampus precommissuralis",
-        "paraterminal body (Noback)",
-        "peduncle of the corpus callosum",
-        "precommissural hippocampus",
-        "subcallosal gyrus",
-    ],
+    synonyms=["precommissural hippocampus", "subcallosal gyrus"],
 )
 UBERONParcellation.paraventricular_nucleus_of_thalamus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/paraventricularNucleusOfThalamus",
@@ -11332,14 +11849,24 @@ UBERONParcellation.parietal_organ = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004869"),
     synonyms=["parietal eye"],
 )
-UBERONParcellation.parietooccipital_sulcus = UBERONParcellation(
-    id="https://openminds.om-i.org/instances/UBERONParcellation/parietooccipitalSulcus",
-    definition="Only a small part of the Parietooccipital Fissure (or parieto-occipital sulcus) is seen on the lateral surface of the hemisphere, its chief part being on the medial surface. The lateral part of the parietooccipital fissure (Fig. 726) is situated about 5 cm. in front of the occipital pole of the hemisphere, and measures about 1.25 cm. in length. The medial part of the parietooccipital fissure (Fig. 727) runs downward and forward as a deep cleft on the medial surface of the hemisphere, and joins the calcarine fissure below and behind the posterior end of the corpus callosum. In most cases it contains a submerged gyrus. [WP,unvetted].",
-    description="'Parieto-occipital sulcus' is a subarachnoid sulcus.",
+UBERONParcellation.parieto_occipital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/parietoOccipitalSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002695)]",
+    description="Only a small part of the Parietooccipital Fissure (or parieto-occipital sulcus) is seen on the lateral surface of the hemisphere, its chief part being on the medial surface. The lateral part of the parietooccipital fissure (Fig. 726) is situated about 5 cm. in front of the occipital pole of the hemisphere, and measures about 1.25 cm. in length. The medial part of the parietooccipital fissure (Fig. 727) runs downward and forward as a deep cleft on the medial surface of the hemisphere, and joins the calcarine fissure below and behind the posterior end of the corpus callosum. In most cases it contains a submerged gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002695)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0108536"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002695#parieto-occipital-sulcus-1"),
     name="parieto-occipital sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002695"),
+    synonyms=[
+        "fissura parieto-occipitalis",
+        "parieto-occipital fissure",
+        "parieto-occipital incisure",
+        "parietooccipital sulcus",
+        "sulcus parieto-occipitalis",
+        "sulcus parieto-occipitalis medialis",
+        "sulcus parietoccipitalis",
+        "sulcus parietooccipitalis",
+    ],
 )
 UBERONParcellation.pars_distalis_of_adenohypophysis = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/parsDistalisOfAdenohypophysis",
@@ -11934,31 +12461,44 @@ UBERONParcellation.pontocerebellar_tract = UBERONParcellation(
         "tractus pontocerebellaris",
     ],
 )
+UBERONParcellation.postcentral_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/postcentralFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014474)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014474#postcentral-fissure-of-cerebellum"),
+    name="postcentral fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014474"),
+    synonyms=[
+        "fissura postcentralis cerebelli",
+        "fissura praeculminata",
+        "post-central fissure of cerebellum",
+        "postcentral fissure-2",
+    ],
+)
 UBERONParcellation.postcentral_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/postcentralGyrus",
-    definition="'Postcentral gyrus' is a gyrus. It is part of the parietal lobe.",
-    description="Component of the parietal lobe.  The appearance and disappearance of the central sulcus were the rostral and caudal boundaries of the postcentral gyrus respectively.  The medial and lateral boundaries were the lateral bank of the precentral gyrus and the lateral fissure and/or the medial bank of the superior parietal gyrus respectively (Christine Fennema-Notestine).",
+    definition="Is a gyrus. Is part of the parietal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002581) ('is_a' and 'relationship')]",
+    description="Component of the parietal lobe. The appearance and disappearance of the central sulcus were the rostral and caudal boundaries of the postcentral gyrus respectively. The medial and lateral boundaries were the lateral bank of the precentral gyrus and the lateral fissure and/or the medial bank of the superior parietal gyrus respectively (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002581)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109070"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002581#postcentral-gyrus-1"),
     name="postcentral gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002581"),
-    synonyms=[
-        "gyrus centralis posterior",
-        "gyrus postcentralis",
-        "post central gyrus",
-        "postcentral convolution",
-        "posterior central gyrus",
-        "postrolandic gyrus",
-        "somatosensory cortex",
-    ],
+    synonyms=["gyrus postcentralis", "postcentral convolution", "posterior central gyrus", "postrolandic gyrus"],
 )
 UBERONParcellation.postcentral_sulcus_of_parietal_lobe = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/postcentralSulcusOfParietalLobe",
-    definition="The postcentral sulcus of the parietal lobe lies parallel to, and behind, the central sulcus in the human brain. (A sulcus is one of the prominent grooves on the surface of the brain. ) The postcentral sulcus divides the postcentral gyrus from the remainder of the parietal lobe. [WP,unvetted].",
-    description="'Postcentral sulcus of parietal lobe' is a sulcus of parietal lobe.",
+    definition="Is a sulcus of parietal lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002915)]",
+    description="The postcentral sulcus of the parietal lobe lies parallel to, and behind, the central sulcus in the human brain. (A sulcus is one of the prominent grooves on the surface of the brain. ) The postcentral sulcus divides the postcentral gyrus from the remainder of the parietal lobe. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002915)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109071"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002915#postcentral-sulcus"),
     name="postcentral sulcus of parietal lobe",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002915"),
+    synonyms=[
+        "postcentral fissure of cerebral hemisphere",
+        "postcentral fissure-1",
+        "postcentral sulcus",
+        "structure of postcentral sulcus",
+        "sulcus postcentralis",
+    ],
 )
 UBERONParcellation.postcommissural_fornix_of_brain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/postcommissuralFornixOfBrain",
@@ -11969,6 +12509,36 @@ UBERONParcellation.postcommissural_fornix_of_brain = UBERONParcellation(
     name="postcommissural fornix of brain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003016"),
     synonyms=["fornix (entering Corpus mamillare)", "postcommissural fornix"],
+)
+UBERONParcellation.posterior_ascending_limb_of_lateral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorAscendingLimbOfLateralSulcus",
+    definition="Is a subarachnoid sulcus. Is part of the lateral sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002910) ('is_a' and 'relationship')]",
+    description="One of two branches of the lateral fissure at its posterior terminus identified by dissection in the human. The other is the terminal descending limb of the lateral fissure ( Ono-1990 ). It is not found in the macaque ( Martin-2000 ), the rat ( Swanson-2004 ) or the mouse ( Hof-2000 ). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002910)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0002910#posterior-ascending-limb-of-lateral-sulcus-1"
+    ),
+    name="posterior ascending limb of lateral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002910"),
+    synonyms=[
+        "ascending terminal ramus of sylvian fissure",
+        "posterior ascending limb of lateral fissure",
+        "posterior ramus of lateral cerebral sulcus",
+        "ramus posterior ascendens fissurae lateralis",
+        "ramus posterior sulci lateralis cerebri",
+    ],
+)
+UBERONParcellation.posterior_calcarine_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorCalcarineSulcus",
+    definition="Is an occipital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002901)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002901#posterior-calcarine-sulcus-1"),
+    name="posterior calcarine sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002901"),
+    synonyms=[
+        "postcalcarine sulcus",
+        "posterior calcarine fissure",
+        "posterior part of calcarine sulcus",
+        "sulcus calcarinus posterior",
+    ],
 )
 UBERONParcellation.posterior_cingulate_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorCingulateCortex",
@@ -11981,20 +12551,12 @@ UBERONParcellation.posterior_cingulate_cortex = UBERONParcellation(
 )
 UBERONParcellation.posterior_cingulate_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorCingulateGyrus",
-    definition="'Posterior cingulate gyrus' is a gyrus. It is part of the cingulate gyrus.",
-    description="The posterior cingulate cortex is the backmost part of the cingulate cortex, lying behind the anterior cingulate cortex. This is the upper part of the 'limbic lobe'. The cingulate cortex is made up of an area around the midline of the brain. Surrounding areas include the retrosplenial cortex and the precuneus. Cytoarchitectonically posterior cingulate cortex is associated with Brodmann areas 23 and 31. [WP,unvetted].",
+    definition="Is a gyrus. Is part of the cingulate gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002740) ('is_a' and 'relationship')]",
+    description="The posterior cingulate cortex is the backmost part of the cingulate cortex, lying behind the anterior cingulate cortex. This is the upper part of the 'limbic lobe'. The cingulate cortex is made up of an area around the midline of the brain. Surrounding areas include the retrosplenial cortex and the precuneus. Cytoarchitectonically posterior cingulate cortex is associated with Brodmann areas 23 and 31. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002740)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109088"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002740#posterior-cingulate-gyrus-1"),
     name="posterior cingulate gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002740"),
-    synonyms=[
-        "cGp",
-        "gyrus cinguli posterior",
-        "gyrus limbicus posterior",
-        "PCgG",
-        "posterior cingulate",
-        "posterior cingulate gyrus",
-    ],
 )
 UBERONParcellation.posterior_column_of_fornix = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorColumnOfFornix",
@@ -12116,6 +12678,13 @@ UBERONParcellation.posterior_mesencephalic_central_artery = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005079"),
     synonyms=["caudal mesencephalic central artery", "PMCtA"],
 )
+UBERONParcellation.posterior_middle_temporal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorMiddleTemporalSulcus",
+    definition="Is a temporal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025768)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025768#posterior-middle-temporal-sulcus-1"),
+    name="posterior middle temporal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025768"),
+)
 UBERONParcellation.posterior_nuclear_complex_of_thalamus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorNuclearComplexOfThalamus",
     definition="'Posterior nuclear complex of thalamus' is a nuclear complex of neuraxis and gray matter of diencephalon. It is part of the dorsal thalamus.",
@@ -12177,13 +12746,18 @@ UBERONParcellation.posterior_nucleus_of_thalamus = UBERONParcellation(
 )
 UBERONParcellation.posterior_orbital_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorOrbitalGyrus",
-    definition="'Posterior orbital gyrus' is an orbital gyrus.",
-    description="",
+    definition="Is an orbital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002575)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109112"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002575#posterior-orbital-gyrus-1"),
     name="posterior orbital gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002575"),
-    synonyms=[""],
+)
+UBERONParcellation.posterior_paracentral_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorParacentralGyrus",
+    definition="Is a paracentral gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007192)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007192#posterior-paracentral-gyrus"),
+    name="posterior paracentral gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007192"),
 )
 UBERONParcellation.posterior_parahippocampal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorParahippocampalGyrus",
@@ -12218,6 +12792,13 @@ UBERONParcellation.posterior_parietal_cortex = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034889#posterior-parietal-cortex"),
     name="posterior parietal cortex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034889"),
+)
+UBERONParcellation.posterior_parolfactory_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorParolfactorySulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002923)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002923#posterior-parolfactory-sulcus-1"),
+    name="posterior parolfactory sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002923"),
 )
 UBERONParcellation.posterior_part_of_anterior_commissure = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorPartOfAnteriorCommissure",
@@ -12282,6 +12863,45 @@ UBERONParcellation.posterior_spinocerebellar_tract = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002753"),
     synonyms=["dorsal spinocerebellar tract", "flechsig's tract"],
 )
+UBERONParcellation.posterior_subcentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorSubcentralSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002909)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002909#posterior-subcentral-sulcus-1"),
+    name="posterior subcentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002909"),
+    synonyms=["sulcus subcentralis posterior"],
+)
+UBERONParcellation.posterior_superior_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorSuperiorFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002814)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0002814#posterior-superior-fissure-of-cerebellum"
+    ),
+    name="posterior superior fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002814"),
+    synonyms=[
+        "fissura post clivalis",
+        "post-clival fissure",
+        "postclival fissure",
+        "postlunate fissure",
+        "superior posterior cerebellar fissure",
+    ],
+)
+UBERONParcellation.posterior_superior_frontal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorSuperiorFrontalSulcus",
+    definition="Is an anatomical entity. Is part of the superior frontal sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0027513) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0027513#posterior-superior-frontal-sulcus-1"),
+    name="posterior superior frontal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0027513"),
+)
+UBERONParcellation.posterior_temporal_fusiform_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorTemporalFusiformGyrus",
+    definition="Is a regional part of brain. Is part of the fusiform gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022397) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022397#posterior-temporal-fusiform-gyrus"),
+    name="posterior temporal fusiform gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022397"),
+    synonyms=["occipitotemporal (fusiform) gyrus, posterior division"],
+)
 UBERONParcellation.posterior_thalamic_radiation = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorThalamicRadiation",
     definition="The 'posterior thalamic radiation' is a white matter fibre bundle. It is part of the radiation of thalamus.",
@@ -12319,17 +12939,12 @@ UBERONParcellation.posterior_transverse_temporal_area42 = UBERONParcellation(
 )
 UBERONParcellation.posterior_transverse_temporal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posteriorTransverseTemporalGyrus",
-    definition="'Posterior transverse temporal gyrus' is a transverse gyrus of Heschl.",
-    description="",
+    definition="Is a transverse gyrus of Heschl. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002774)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109134"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002774#posterior-transverse-temporal-gyrus-1"),
     name="posterior transverse temporal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002774"),
-    synonyms=[
-        "gyrus temporalis transversus posterior",
-        "posterior transverse convolution of Heschl",
-        "Posterior transverse temporal convolution of Heschl",
-    ],
+    synonyms=["posterior transverse convolution of heschl", "posterior transverse temporal convolution of heschl"],
 )
 UBERONParcellation.posterodorsal_nucleus_of_medial_geniculate_body = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posterodorsalNucleusOfMedialGeniculateBody",
@@ -12348,6 +12963,15 @@ UBERONParcellation.posterodorsal_nucleus_of_medial_geniculate_body = UBERONParce
         "posterodorsal nucleus of medial geniculate body",
         "posterodorsal nucleus of medial geniculate complex",
     ],
+)
+UBERONParcellation.posterolateral_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/posterolateralFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002818)]",
+    description="Fissure between cerebellar lobules IX and X. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002818)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002818#posterolateral-fissure-of-cerebellum"),
+    name="posterolateral fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002818"),
+    synonyms=["dorsolateral fissure of cerebellum", "prenodular fissure", "prenodular sulcus", "uvulonodular fissure"],
 )
 UBERONParcellation.posterolateral_visual_area = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/posterolateralVisualArea",
@@ -12402,6 +13026,13 @@ UBERONParcellation.posteroventral_cochlear_nucleus = UBERONParcellation(
         "ventral cochlear nucleus",
         "ventral coclear nucleus posterior part",
     ],
+)
+UBERONParcellation.postlateral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/postlateralSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013595)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013595#postlateral-sulcus"),
+    name="postlateral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013595"),
 )
 UBERONParcellation.postnatal_subventricular_zone = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/postnatalSubventricularZone",
@@ -12459,22 +13090,38 @@ UBERONParcellation.postsubiculum = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035971"),
     synonyms=["POST", "postsubicular cortex"],
 )
+UBERONParcellation.postsylvian_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/postsylvianSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013591)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013591#postsylvian-sulcus"),
+    name="postsylvian sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013591"),
+)
+UBERONParcellation.precentral_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/precentralFissureOfCerebellum",
+    definition="Is a cerebellum fissure. Is part of the anterior lobe of cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014473) ('is_a' and 'relationship')]",
+    description="Fissure between cerebellar lobules I and II. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014473)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014473#precentral-fissure-of-cerebellum"),
+    name="precentral fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014473"),
+    synonyms=[
+        "fissura postlingualis cerebelli",
+        "fissura praecentralis",
+        "fissura precentralis cerebelli",
+        "post-lingual fissure of cerebellum",
+        "postlingual fissure",
+        "precentral fissure",
+    ],
+)
 UBERONParcellation.precentral_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/precentralGyrus",
-    definition="'Precentral gyrus' is a frontal gyrus.",
-    description="Component of the frontal lobe.  The appearance and disappearance of the central sulcus is the rostral and caudal boundaries of the precentral gyrus respectively. The medial boundary is specific frontal gyri (superior, middle and inferior) whereas the lateral boundary is the medial bank of the central sulcus (Christine Fennema-Notestine).",
+    definition="Is a frontal gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002703)]",
+    description="Component of the frontal lobe. The appearance and disappearance of the central sulcus is the rostral and caudal boundaries of the precentral gyrus respectively. The medial boundary is specific frontal gyri (superior, middle and inferior) whereas the lateral boundary is the medial bank of the central sulcus (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002703)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109193"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002703#precentral-gyrus-1"),
     name="precentral gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002703"),
-    synonyms=[
-        "anterior central gyrus",
-        "gyrus centralis anterior",
-        "gyrus praecentralis",
-        "motor cortex (Noback)",
-        "precentral convolution",
-        "prerolandic gyrus",
-    ],
+    synonyms=["precentral convolution", "prerolandic gyrus"],
 )
 UBERONParcellation.precentral_operculum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/precentralOperculum",
@@ -12486,6 +13133,14 @@ UBERONParcellation.precentral_operculum = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002605"),
     synonyms=["brodmann's area 6", "operculum precentrale"],
 )
+UBERONParcellation.precentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/precentralSulcus",
+    definition="Is a subarachnoid sulcus and frontal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022252)]",
+    description="The precentral sulcus lies parallel to, and in front of, the central sulcus. (A sulcus is one of the prominent grooves on the surface of the human brain. ) The precentral sulcus divides the inferior, middle, and superior frontal gyri from the precentral gyrus. In the majority of brains, the precentral sulcus is divided into two parts: the inferior precentral sulcus and the superior precentral sulcus. However, the precentral sulcus may also be divided into three parts or form one continuous sulcus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022252)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022252#precentral-sulcus"),
+    name="precentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022252"),
+)
 UBERONParcellation.precommissural_fornix_of_forebrain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/precommissuralFornixOfForebrain",
     definition="Is a tract of brain. Is part of the fornix of brain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014539) ('is_a' and 'relationship')]",
@@ -12495,6 +13150,14 @@ UBERONParcellation.precommissural_fornix_of_forebrain = UBERONParcellation(
     name="precommissural fornix of forebrain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014539"),
     synonyms=["fornix precommissuralis", "precommissural fornix"],
+)
+UBERONParcellation.preculminate_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/preculminateFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035926)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0035926#preculminate-fissure-of-cerebellum"),
+    name="preculminate fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035926"),
+    synonyms=["fissura preculminalis", "preculminate fissure"],
 )
 UBERONParcellation.precuneus_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/precuneusCortex",
@@ -12629,6 +13292,24 @@ UBERONParcellation.preopticohypothalamic_tract = UBERONParcellation(
     name="preopticohypothalamic tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005344"),
 )
+UBERONParcellation.prepyramidal_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/prepyramidalFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002816)]",
+    description="Fissure between cerebellar lobules VIIBii and VIII. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002816)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002816#prepyramidal-fissure-of-cerebellum"),
+    name="prepyramidal fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002816"),
+    synonyms=[
+        "fissura inferior anterior",
+        "fissura parafloccularis",
+        "fissura praepyramidalis",
+        "fissura prebiventralis cerebelli",
+        "fissura prepyramidalis",
+        "fissura prepyramidalis cerebelli",
+        "prebiventral fissure of cerebellum",
+        "prepyramidal sulcus",
+    ],
+)
 UBERONParcellation.prepyriform_area = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/prepyriformArea",
     definition="Is a regional part of brain. Is part of the cerebral cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002590) ('is_a' and 'relationship')]",
@@ -12662,6 +13343,13 @@ UBERONParcellation.presubiculum = UBERONParcellation(
         "presubiculum (Cajal)",
         "PrS",
     ],
+)
+UBERONParcellation.presylvian_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/presylvianSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013592)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013592#presylvian-sulcus"),
+    name="presylvian sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013592"),
 )
 UBERONParcellation.pretectal_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/pretectalNucleus",
@@ -12708,6 +13396,22 @@ UBERONParcellation.primary_auditory_cortex = UBERONParcellation(
     name="primary auditory cortex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034751"),
     synonyms=["primary auditory cortex (core)"],
+)
+UBERONParcellation.primary_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/primaryFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014471)]",
+    description="The monticulus of the cerebellum is divided by the primary fissure (or preclival fissure) into an anterior, raised part, the culmen or summit, and a posterior sloped part, the clivus; the quadrangular lobule is similarly divided. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014471)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014471#primary-fissure-of-cerebellum"),
+    name="primary fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014471"),
+    synonyms=[
+        "fissura preclivalis",
+        "fissura prima",
+        "fissura prima cerebelli",
+        "fissura superior anterior",
+        "preclival fissure",
+        "primary sulcus of cerebellum",
+    ],
 )
 UBERONParcellation.primary_motor_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/primaryMotorCortex",
@@ -12942,6 +13646,14 @@ UBERONParcellation.principal_sensory_nucleus_of_trigeminal_nerve = UBERONParcell
     ),
     name="principal sensory nucleus of trigeminal nerve",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002597"),
+)
+UBERONParcellation.principal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/principalSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025903) ('is_a' and 'relationship')]",
+    description="Sulcus in the frontal lobe of the macaque. (Brain Info) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025903)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025903#principal-sulcus-1"),
+    name="principal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025903"),
 )
 UBERONParcellation.proisocortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/proisocortex",
@@ -13179,12 +13891,13 @@ UBERONParcellation.reuniens_nucleus = UBERONParcellation(
 )
 UBERONParcellation.rhinal_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rhinalSulcus",
-    definition="'Rhinal sulcus' is a sulcus of brain. It is part of the cerebral cortex.",
-    description="In the human brain, the rhinencephalon appears as a longitudinal elevation, with a corresponding internal furrow, on the under surface of the hemisphere close to the lamina terminalis; it is separated from the lateral surface of the hemisphere by a furrow, the external rhinal fissure (or rhinal sulcus), and is continuous behind with that part of the hemisphere, which will ultimately form the anterior end of the temporal lobe. [WP,unvetted].",
+    definition="Is a sulcus of brain. Is part of the cerebral cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002683) ('is_a' and 'relationship')]",
+    description="In the human brain, the rhinencephalon appears as a longitudinal elevation, with a corresponding internal furrow, on the under surface of the hemisphere close to the lamina terminalis; it is separated from the lateral surface of the hemisphere by a furrow, the external rhinal fissure (or rhinal sulcus), and is continuous behind with that part of the hemisphere, which will ultimately form the anterior end of the temporal lobe. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002683)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0110119"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002683#rhinal-sulcus-1"),
     name="rhinal sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002683"),
+    synonyms=["fissura rhinalis", "rhinal fissuer (Turner, Rezius)", "rhinal fissure", "sulcus rhinalis"],
 )
 UBERONParcellation.rhombic_lip = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rhombicLip",
@@ -13687,6 +14400,13 @@ UBERONParcellation.rostral_epiphyseal_tract = UBERONParcellation(
     name="rostral epiphyseal tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034716"),
 )
+UBERONParcellation.rostral_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/rostralGyrus",
+    definition="Is a gyrus. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019280) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019280#rostral-gyrus"),
+    name="rostral gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019280"),
+)
 UBERONParcellation.rostral_interstitial_nucleus_of_medial_longitudinal_fasciculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rostralInterstitialNucleusOfMedialLongitudinalFasciculus",
     definition="'Rostral interstitial nucleus of medial longitudinal fasciculus' is a brainstem nucleus, nucleus of midbrain tegmentum and midbrain nucleus. It is part of the midbrain tegmentum.",
@@ -13742,17 +14462,13 @@ UBERONParcellation.rostral_mesencephalo_cerebellar_tract = UBERONParcellation(
 )
 UBERONParcellation.rostral_middle_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rostralMiddleFrontalGyrus",
-    definition="'Rostral middle frontal gyrus' is a regional part of brain and frontal gyrus. It is part of the middle frontal gyrus.",
-    description="Component of the middl frontal gyrus  The rostral boundary is the first appearance of the superior frontal sulcus whereas the caudal boundary is the middle frontal gyrus. The medial and lateral boundaries are the superior frontal sulcus and the inferior frontal sulcus respectively (Christine Fennema-Notestine).",
+    definition="Is a regional part of brain and frontal gyrus. Is part of the middle frontal gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006446) ('is_a' and 'relationship')]",
+    description="Component of the middle frontal gyrus The rostral boundary is the first appearance of the superior frontal sulcus whereas the caudal boundary is the middle frontal gyrus. The medial and lateral boundaries are the superior frontal sulcus and the inferior frontal sulcus respectively (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006446)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0110215"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006446#rostral-middle-frontal-gyrus-1"),
     name="rostral middle frontal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006446"),
-    synonyms=[
-        "anterior part of middle frontal gyrus",
-        "rostral middle frontal gyrus",
-        "rostral part of middle frontal gyrus",
-    ],
+    synonyms=["anterior part of middle frontal gyrus"],
 )
 UBERONParcellation.rostral_migratory_stream = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rostralMigratoryStream",
@@ -13784,6 +14500,13 @@ UBERONParcellation.rostral_spinocerebellar_tract = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0023984#rostral-spinocerebellar-tract-1"),
     name="rostral spinocerebellar tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023984"),
+)
+UBERONParcellation.rostral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/rostralSulcus",
+    definition="Is a sulcus of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025763) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025763#rostral-sulcus-1"),
+    name="rostral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025763"),
 )
 UBERONParcellation.rostrolateral_area_layer5 = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/rostrolateralAreaLayer5",
@@ -13818,6 +14541,14 @@ UBERONParcellation.rubrospinal_tract = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002714"),
     synonyms=["Monakow's tract", "rubrospinal tract (Monakow)"],
 )
+UBERONParcellation.sagittal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/sagittalSulcus",
+    definition="Is a sulcus of brain. Is part of the longitudinal fissure. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034968) ('is_a' and 'relationship')]",
+    description="A sulcus that lies within the longitudinal fissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034968)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034968#sagittal-sulcus"),
+    name="sagittal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034968"),
+)
 UBERONParcellation.secondary_auditory_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/secondaryAuditoryCortex",
     definition="Is a regional part of brain. Is part of the auditory cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034752) ('is_a' and 'relationship')]",
@@ -13831,6 +14562,15 @@ UBERONParcellation.secondary_auditory_cortex = UBERONParcellation(
         "second auditory area",
         "secondary auditory cortex (belt, area 42)",
     ],
+)
+UBERONParcellation.secondary_fissure_of_cerebellum = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/secondaryFissureOfCerebellum",
+    definition="Is a cerebellum fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002817)]",
+    description="Fissure between cerebellar lobules VIII and IX. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002817)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002817#secondary-fissure-of-cerebellum"),
+    name="secondary fissure of cerebellum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002817"),
+    synonyms=["fissura postpyramidalis cerebelli", "post-pyramidal fissure of cerebellum", "postpyramidal fissure"],
 )
 UBERONParcellation.secondary_gustatory_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/secondaryGustatoryTract",
@@ -14051,6 +14791,15 @@ UBERONParcellation.spinal_cord_mantle_layer = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009583"),
     synonyms=["mantle layer lateral wall spinal cord", "spinal cord lateral wall mantle layer"],
 )
+UBERONParcellation.spinal_cord_sulcus_limitans = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/spinalCordSulcusLimitans",
+    definition="Is part of the future spinal cord. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009570)]",
+    description="A sulcus limitans of neural tube that is part of a future spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009570)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009570#spinal-cord-sulcus-limitans"),
+    name="spinal cord sulcus limitans",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009570"),
+    synonyms=["spinal cord lateral wall sulcus limitans"],
+)
 UBERONParcellation.spinal_cord_ventricular_layer = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/spinalCordVentricularLayer",
     definition="Is a neural tube ventricular layer. Is part of the future spinal cord. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034710) ('is_a' and 'relationship')]",
@@ -14171,6 +14920,13 @@ UBERONParcellation.splenium_of_the_corpus_callosum = UBERONParcellation(
         "splenium of corpus callosum",
     ],
 )
+UBERONParcellation.spur_of_arcuate_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/spurOfArcuateSulcus",
+    definition="Is a sulcus of brain. Is part of the arcuate sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025772) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025772#spur-of-arcuate-sulcus-1"),
+    name="spur of arcuate sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025772"),
+)
 UBERONParcellation.stratum_zonale_of_thalamus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/stratumZonaleOfThalamus",
     definition="'Stratum zonale of thalamus' is a diencephalic white matter. It is part of the dorsal plus ventral thalamus.",
@@ -14284,7 +15040,7 @@ UBERONParcellation.striosomal_part_of_putamen = UBERONParcellation(
 )
 UBERONParcellation.subarachnoid_fissure = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/subarachnoidFissure",
-    definition="'Subarachnoid fissure' is an anatomical entity. It is part of the subarachnoid space.",
+    definition="Is an anatomical entity. Is part of the subarachnoid space. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014466) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0735254"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014466#subarachnoid-fissure"),
     name="subarachnoid fissure",
@@ -14301,7 +15057,7 @@ UBERONParcellation.subarachnoid_space = UBERONParcellation(
 )
 UBERONParcellation.subarachnoid_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/subarachnoidSulcus",
-    definition="'Subarachnoid sulcus' is a sulcus of brain. It is part of the subarachnoid space.",
+    definition="Is a sulcus of brain. Is part of the subarachnoid space. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0008334) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0730861"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0008334#subarachnoid-sulcus"),
     name="subarachnoid sulcus",
@@ -14453,6 +15209,14 @@ UBERONParcellation.submedial_nucleus_of_thalamus = UBERONParcellation(
         "submedius thalamic nucleus",
     ],
 )
+UBERONParcellation.subparietal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/subparietalSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002908)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002908#subparietal-sulcus-1"),
+    name="subparietal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002908"),
+    synonyms=["splenial sulcus", "sulcus subparietalis", "suprasplenial sulcus"],
+)
 UBERONParcellation.substantia_gelatinosa = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/substantiaGelatinosa",
     definition="'Substantia gelatinosa' is a lamina of gray matter of spinal cord. It is part of the dorsal horn of spinal cord.",
@@ -14584,21 +15348,34 @@ UBERONParcellation.substantia_nigra_pars_reticulata = UBERONParcellation(
 )
 UBERONParcellation.sulcus_limitans_of_fourth_ventricle = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/sulcusLimitansOfFourthVentricle",
-    definition="'Sulcus limitans of fourth ventricle' is an anatomical entity. It is part of the fourth ventricle.",
-    description="In the floor of the fourth ventricle, the sulcus limitans separates the cranial nerve motor nuclei (medial) from the sensory nuclei (lateral). In the superior part of the rhomboid fossa, it corresponds with the lateral limit of the fossa and presents a bluish-gray area, the locus ceruleus (which owes its color to an underlying patch of deeply pigmented nerve cells, termed the substantia ferruginea). [WP].",
+    definition="Is an anatomical entity. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009573) ('is_a' and 'relationship')]",
+    description="In the floor of the fourth ventricle, the sulcus limitans separates the cranial nerve motor nuclei (medial) from the sensory nuclei (lateral). In the superior part of the rhomboid fossa, it corresponds with the lateral limit of the fossa and presents a bluish-gray area, the locus ceruleus (which owes its color to an underlying patch of deeply pigmented nerve cells, termed the substantia ferruginea). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009573)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0736901"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009573#sulcus-limitans-of-fourth-ventricle"),
     name="sulcus limitans of fourth ventricle",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009573"),
 )
-UBERONParcellation.sulcus_of_brain = UBERONParcellation(
-    id="https://openminds.om-i.org/instances/UBERONParcellation/sulcusOfBrain",
-    definition="'Sulcus of brain' is an anatomical entity. It is part of the brain.",
-    description="A depression or fissure in the surface of the brain. It surrounds the gyri, creating the characteristic appearance of the brain in humans and other large mammals.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0725590"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013118#sulcus-of-brain"),
-    name="sulcus of brain",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013118"),
+UBERONParcellation.sulcus_of_limbic_lobe = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/sulcusOfLimbicLobe",
+    definition="Is a sulcus of brain. Is part of the limbic lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034674) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034674#sulcus-of-limbic-lobe"),
+    name="sulcus of limbic lobe",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034674"),
+)
+UBERONParcellation.sulcus_of_parietal_lobe = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/sulcusOfParietalLobe",
+    definition="Is a sulcus of brain. Is part of the parietal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035927) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0035927#sulcus-of-parietal-lobe"),
+    name="sulcus of parietal lobe",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035927"),
+    synonyms=["parietal lobe sulcus"],
+)
+UBERONParcellation.sulcus_ypsiloniformis = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/sulcusYpsiloniformis",
+    definition="Is part of the pallium. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000589)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000589#sulcus-ypsiloniformis"),
+    name="sulcus ypsiloniformis",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000589"),
 )
 UBERONParcellation.superficial_cerebral_vein = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superficialCerebralVein",
@@ -14666,6 +15443,13 @@ UBERONParcellation.superficial_white_layer_of_superior_colliculus = UBERONParcel
         "optic layer of superior colliculus",
         "stratum opticum colliculi superioris",
     ],
+)
+UBERONParcellation.superior_calcarine_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/superiorCalcarineSulcus",
+    definition="Is an occipital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025096)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025096#superior-calcarine-sulcus-1"),
+    name="superior calcarine sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025096"),
 )
 UBERONParcellation.superior_cerebellar_peduncle = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorCerebellarPeduncle",
@@ -14762,19 +15546,22 @@ UBERONParcellation.superior_colliculus_superficial_gray_layer = UBERONParcellati
 )
 UBERONParcellation.superior_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorFrontalGyrus",
-    definition="'Superior frontal gyrus' is a frontal gyrus.",
-    description="Component of the frontal lobe, lateral aspect.  The rostral boundary is the first appearance of the superior frontal sulcus whereas the caudal boundary is the midpoint of the paracentral sulcus on the 'inflated' surface. The medial and lateral boundaries are  the medial aspect of the frontal lobe and the superior frontal sulcus respectively (Christine Fennema-Notestine).",
+    definition="Is a frontal gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002661)]",
+    description="Component of the frontal lobe, lateral aspect. The rostral boundary is the first appearance of the superior frontal sulcus whereas the caudal boundary is the midpoint of the paracentral sulcus on the \ [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002661)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111304"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002661#superior-frontal-gyrus-1"),
     name="superior frontal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002661"),
-    synonyms=[
-        "gyrus F1",
-        "gyrus frontalis primus",
-        "gyrus frontalis superior",
-        "marginal gyrus",
-        "superior frontal convolution",
-    ],
+    synonyms=["marginal gyrus", "superior frontal convolution"],
+)
+UBERONParcellation.superior_frontal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/superiorFrontalSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002562)]",
+    description="The superior frontal sulcus is a sulcus between the superior frontal gyrus and the middle frontal gyrus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002562)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002562#superior-frontal-sulcus-1"),
+    name="superior frontal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002562"),
+    synonyms=["sulcus f1", "sulcus frontalis primus", "sulcus frontalis superior", "superior frontal fissure"],
 )
 UBERONParcellation.superior_lateral_occipital_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorLateralOccipitalCortex",
@@ -14805,13 +15592,12 @@ UBERONParcellation.superior_medullary_velum = UBERONParcellation(
 )
 UBERONParcellation.superior_occipital_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorOccipitalGyrus",
-    definition="'Superior occipital gyrus' is an occipital gyrus.",
-    description="",
+    definition="Is an occipital gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002948)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111308"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002948#superior-occipital-gyrus-1"),
     name="superior occipital gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002948"),
-    synonyms=["gyrus occipitalis primus", "gyrus occipitalis superior"],
+    synonyms=["gyrus occipitalis primus"],
 )
 UBERONParcellation.superior_olivary_complex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorOlivaryComplex",
@@ -14840,15 +15626,64 @@ UBERONParcellation.superior_parietal_cortex = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006094"),
     synonyms=["superior parietal gyrus", "superior parietal lobule", "superior portion of parietal gyrus"],
 )
+UBERONParcellation.superior_parietal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/superiorParietalSulcus",
+    definition="Is a sulcus of parietal lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026724)]",
+    description="A superficial feature of the parietal lobe that extends from the dorsal surface of the superior parietal lobule across the margin of the parietal lobe into the precuneus (Ono-90). (NN) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026724)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026724#superior-parietal-sulcus-1"),
+    name="superior parietal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026724"),
+)
+UBERONParcellation.superior_postcentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/superiorPostcentralSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002907)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002907#superior-postcentral-sulcus-1"),
+    name="superior postcentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002907"),
+    synonyms=["postcentral dimple", "sulcus postcentralis superior"],
+)
+UBERONParcellation.superior_precentral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/superiorPrecentralSulcus",
+    definition="Is a sulcus of brain. Is part of the precentral fissure of cerebellum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002566) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002566#superior-precentral-sulcus-1"),
+    name="superior precentral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002566"),
+    synonyms=[
+        "precentral dimple",
+        "sulcus praecentralis superior",
+        "sulcus precentralis superior",
+        "superior part of precentral fissure",
+    ],
+)
+UBERONParcellation.superior_ramus_of_arcuate_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/superiorRamusOfArcuateSulcus",
+    definition="Is a sulcus of brain. Is part of the arcuate sulcus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025883) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025883#superior-ramus-of-arcuate-sulcus-1"),
+    name="superior ramus of arcuate sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025883"),
+)
 UBERONParcellation.superior_rostral_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorRostralGyrus",
-    definition="'Superior rostral gyrus' is a regional part of brain. It is part of the rostral gyrus.",
-    description="",
+    definition="Is a regional part of brain. Is part of the rostral gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019279) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111324"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019279#superior-rostral-gyrus-1"),
     name="superior rostral gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019279"),
-    synonyms=["superior rostral gyrus"],
+)
+UBERONParcellation.superior_rostral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/superiorRostralSulcus",
+    definition="Is a sulcus of brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002607)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002607#superior-rostral-sulcus-1"),
+    name="superior rostral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002607"),
+    synonyms=["sulcus rostralis superior"],
+)
+UBERONParcellation.superior_sagittal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/superiorSagittalSulcus",
+    definition="Is a sagittal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026761)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026761#superior-sagittal-sulcus-1"),
+    name="superior sagittal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026761"),
 )
 UBERONParcellation.superior_salivatory_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorSalivatoryNucleus",
@@ -14861,35 +15696,33 @@ UBERONParcellation.superior_salivatory_nucleus = UBERONParcellation(
 )
 UBERONParcellation.superior_temporal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorTemporalGyrus",
-    definition="'Superior temporal gyrus' is a gyrus. It is part of the temporal lobe.",
-    description="Component of the temporal lobe, lateral aspect.  The rostral boundary is the rostral extent of the ssuperior temporal sulcus.  The caudal boundary is the cauday portion of the superior temporal gyrus (posterior to becoming continuous with the supramarginal gyrus).  The medial boundary is the lateral fissure (and when present the supramarginal gyrus), and the lateral boundary is the superior temporal suclus (Christine Fennema-Notestine).",
+    definition="Is a gyrus. Is part of the temporal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002769) ('is_a' and 'relationship')]",
+    description="Component of the temporal lobe, lateral aspect. The rostral boundary is the rostral extent of the ssuperior temporal sulcus. The caudal boundary is the cauday portion of the superior temporal gyrus (posterior to becoming continuous with the supramarginal gyrus). The medial boundary is the lateral fissure (and when present the supramarginal gyrus), and the lateral boundary is the superior temporal suclus (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002769)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111328"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002769#superior-temporal-gyrus-1"),
     name="superior temporal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002769"),
-    synonyms=["STG", "gyrus temporalis superior"],
+    synonyms=["gyrus temporalis superior"],
 )
 UBERONParcellation.superior_temporal_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorTemporalSulcus",
-    definition="The 'superior temporal sulcus' is the sulcus separating the superior temporal gyrus from the middle temporal gyrus in the temporal lobe of the brain. [from [wikipedia](http://en.wikipedia.org/wiki/Superior_temporal_sulcus)]",
-    description="The superior temporal sulcus is the first sulcus inferior to the lateral fissure. It is involved in the perception of where others are gazing and is thus important in determining where others' emotions are being directed. It is also involved in the perception of biological motion. [from [wikipedia](http://en.wikipedia.org/wiki/Superior_temporal_sulcus)]",
+    definition="Is a temporal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002734)]",
+    description="The superior temporal sulcus is the sulcus separating the superior temporal gyrus from the middle temporal gyrus in the temporal lobe of the brain. The superior temporal sulcus is the first sulcus inferior to the lateral fissure. It is involved in the perception of where others are gazing and is thus important in determining where others' emotions are being directed. It is also involved in the perception of biological motion. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002734)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111329"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002734#superior-temporal-sulcus-1"),
     name="superior temporal sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002734"),
-    synonyms=["parallel sulcus", "STS", "sulcus t1", "sulcus temporalis superior", "superior temporal fissure"],
+    synonyms=["parallel sulcus", "sulcus t1", "superior temporal fissure"],
 )
 UBERONParcellation.superior_transverse_frontopolar_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/superiorTransverseFrontopolarGyrus",
-    definition="'Superior transverse frontopolar gyrus' is a regional part of brain. It is part of the transverse frontopolar gyri complex.",
-    description="",
+    definition="Is a regional part of brain. Is part of the transverse frontopolar gyri complex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024201) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111330"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0024201#superior-transverse-frontopolar-gyrus-1"
     ),
     name="superior transverse frontopolar gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024201"),
-    synonyms=["superior transverse frontopolar gyrus"],
 )
 UBERONParcellation.supplemental_motor_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/supplementalMotorCortex",
@@ -14901,18 +15734,12 @@ UBERONParcellation.supplemental_motor_cortex = UBERONParcellation(
 )
 UBERONParcellation.supracallosal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/supracallosalGyrus",
-    definition="'Supracallosal gyrus' is a gyrus. It is part of the limbic lobe.",
-    description="",
+    definition="Is a gyrus. Is part of the limbic lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002665) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111340"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002665#supracallosal-gyrus-1"),
     name="supracallosal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002665"),
-    synonyms=[
-        "gyrus supracallosus",
-        "hippocampus supracommissuralis",
-        "supracommissural hippocampal rudiment",
-        "supracommissural hippocampus",
-    ],
+    synonyms=["supracommissural hippocampal rudiment", "supracommissural hippocampus"],
 )
 UBERONParcellation.suprachiasmatic_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/suprachiasmaticNucleus",
@@ -14997,19 +15824,13 @@ UBERONParcellation.supramammillary_nucleus = UBERONParcellation(
 )
 UBERONParcellation.supramarginal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/supramarginalGyrus",
-    definition="'Supramarginal gyrus' is a gyrus. It is part of the parietal lobe.",
-    description="Component of the parietal lobe.  The first coronal slice between the superior temporal gyrus and the postcentral gyrus where the supramarginal gyrus appears was the rostral boundary whereas the slice where the supramarginal gyrus becomes continuous with the superior parietal gyrus was the caudal boundary. The medial and lateral boundaries were the lateral banks of the intraparietal sulcus and the medial banks of the lateral fissure and/or the superior temporal gyrus respectively (Christine Fennema-Notestine).",
+    definition="Is a gyrus. Is part of the parietal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002688) ('is_a' and 'relationship')]",
+    description="Component of the parietal lobe. The first coronal slice between the superior temporal gyrus and the postcentral gyrus where the supramarginal gyrus appears was the rostral boundary whereas the slice where the supramarginal gyrus becomes continuous with the superior parietal gyrus was the caudal boundary. The medial and lateral boundaries were the lateral banks of the intraparietal sulcus and the medial banks of the lateral fissure and/or the superior temporal gyrus respectively (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002688)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111355"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002688#supramarginal-gyrus-1"),
     name="supramarginal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002688"),
-    synonyms=[
-        "anterior part of inferior parietal lobule",
-        "BA40",
-        "Brodmann area 40",
-        "gyrus supramarginalis",
-        "inferior parietal lobule (krieg)",
-    ],
+    synonyms=["anterior part of inferior parietal lobule", "inferior parietal lobule (krieg)"],
 )
 UBERONParcellation.supraoptic_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/supraopticNucleus",
@@ -15062,6 +15883,13 @@ UBERONParcellation.supraspinal_nucleus = UBERONParcellation(
         "nucleus substantiae griseae ventralis",
         "nucleus supraspinalis",
     ],
+)
+UBERONParcellation.suprasylvian_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/suprasylvianSulcus",
+    definition="Is a subarachnoid sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013593)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013593#suprasylvian-sulcus"),
+    name="suprasylvian sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013593"),
 )
 UBERONParcellation.synencephalon = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/synencephalon",
@@ -15209,6 +16037,14 @@ UBERONParcellation.telencephalon = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001893"),
     synonyms=["cerebrum", "endbrain"],
 )
+UBERONParcellation.telodiencephalic_fissure = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/telodiencephalicFissure",
+    definition="Is a subarachnoid fissure. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002896)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002896#telodiencephalic-fissure-1"),
+    name="telodiencephalic fissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002896"),
+    synonyms=["telo-diencephalic fissure"],
+)
 UBERONParcellation.temporal_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/temporalCortex",
     definition="Is a cortex of cerebral lobe. Is part of the temporal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016538) ('is_a' and 'relationship')]",
@@ -15234,6 +16070,14 @@ UBERONParcellation.temporal_cortex_cingulum = UBERONParcellation(
     name="temporal cortex cingulum",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022429"),
     synonyms=["cingulum (temporal gyrus)", "cingulum bundle in temporal cortex", "cingulum bundle in temporal gyrus"],
+)
+UBERONParcellation.temporal_fusiform_gyrus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/temporalFusiformGyrus",
+    definition="Is a regional part of brain. Is part of the fusiform gyrus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022395) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022395#temporal-fusiform-gyrus"),
+    name="temporal fusiform gyrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022395"),
+    synonyms=["occipitotemporal (fusiform) gyrus, temporal part"],
 )
 UBERONParcellation.temporal_lobe = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/temporalLobe",
@@ -15264,6 +16108,15 @@ UBERONParcellation.temporal_pole = UBERONParcellation(
     name="temporal pole",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002576"),
     synonyms=["cerebral cortex", "polus temporalis", "temporal pole", "temporopolar cortex"],
+)
+UBERONParcellation.temporal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/temporalSulcus",
+    definition="Is a sulcus of brain. Is part of the temporal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014687) ('is_a' and 'relationship')]",
+    description="Any of three grooves in the temporal lobe including the inferior, middle, and superior temporal sulci. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014687)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014687#temporal-sulcus"),
+    name="temporal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014687"),
+    synonyms=["temporal lobe sulcus"],
 )
 UBERONParcellation.temporoparietal_junction = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/temporoparietalJunction",
@@ -15409,31 +16262,46 @@ UBERONParcellation.tractus_sacci_vasculosi = UBERONParcellation(
 )
 UBERONParcellation.transverse_frontopolar_gyri_complex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/transverseFrontopolarGyriComplex",
-    definition="'Transverse frontopolar gyri complex' is a regional part of brain. It is part of the frontal lobe.",
-    description="",
+    definition="Is a regional part of brain. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022730) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111902"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022730#transverse-frontopolar-gyri-complex"),
     name="transverse frontopolar gyri complex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022730"),
-    synonyms=["transverse frontopolar gyri", "transverse frontopolar gyri complex"],
 )
 UBERONParcellation.transverse_gyrus_of_heschl = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/transverseGyrusOfHeschl",
-    definition="'Transverse gyrus of Heschl' is a gyrus. It is part of the auditory cortex.",
-    description="Component of the temporal lobe, lateral aspect.  The rostral boundary is the first appearance of the transverse temporal sulcus whereas the caudal boundary is the last slice where the transverse temporal cortex could be identified before its merger into the insular cortex. The lateral fissure and the superior temporal gyrus are the medial and lateral boundaries respectively (Christine Fennema-Notestine).",
+    definition="Is a gyrus. Is part of the auditory cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003939) ('is_a' and 'relationship')]",
+    description="The area of the temporal lobe concerned with hearing. The transverse temporal gyri (also called Heschl's gyri or Heschl's convolutions) are found in the area of primary auditory cortex in the superior temporal gyrus of the human brain, occupying Brodmann areas 41 and 42. It is the first cortical structure to process incoming auditory information. Anatomically, the transverse temporal gyri are distinct in that they run mediolaterally (towards the center of the brain) rather than dorsiventrally (front to back) as all other temporal lobe gyri run. The Heschl's gyri are named after Richard L. Heschl. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003939)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111910"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003939#transverse-temporal-cortex"),
     name="transverse gyrus of Heschl",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003939"),
-    synonyms=[
-        "gyri temporales transversi",
-        "Heschl gyrus",
-        "Heschl's gyrus",
-        "Heshl's gyrus",
-        "transverse temporal cortex",
-        "transverse temporal gyri",
-        "transverse temporal gyrus",
-    ],
+    synonyms=["Heshl's gyrus", "transverse temporal gyrus"],
+)
+UBERONParcellation.transverse_occipital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/transverseOccipitalSulcus",
+    definition="Is an occipital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002900)]",
+    description="The transverse occipital sulcus is a structure in the occipital lobe. The transverse occipital sulcus is continuous with the posterior end of the occipital ramus of the intraparietal sulcus, and runs across the upper part of the lobe, a short distance behind the parietoC6ccipital fissure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002900)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002900#transverse-occipital-sulcus-1"),
+    name="transverse occipital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002900"),
+    synonyms=["sulcus occipitalis transversus"],
+)
+UBERONParcellation.transverse_orbital_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/transverseOrbitalSulcus",
+    definition="Is an orbital sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002612)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002612#transverse-orbital-sulcus-1"),
+    name="transverse orbital sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002612"),
+    synonyms=["sulcus orbitalis transversus"],
+)
+UBERONParcellation.transverse_parietal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/transverseParietalSulcus",
+    definition="Is a sulcus of parietal lobe. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026722)]",
+    description="A sulcus in the human parietal lobe that branches dorsally from the intraparietal sulcus (Savel'ev-96). (NN) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0026722)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0026722#transverse-parietal-sulcus-1"),
+    name="transverse parietal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0026722"),
 )
 UBERONParcellation.transverse_pontine_fibers = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/transversePontineFibers",
@@ -15455,6 +16323,13 @@ UBERONParcellation.transverse_pontine_fibers = UBERONParcellation(
         "transverse pontine tract",
     ],
 )
+UBERONParcellation.transverse_temporal_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/transverseTemporalSulcus",
+    definition="Is a subarachnoid sulcus and temporal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002569)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002569#transverse-temporal-sulcus-1"),
+    name="transverse temporal sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002569"),
+)
 UBERONParcellation.trapezoid_body = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/trapezoidBody",
     definition="'Trapezoid body' is a white matter of pontine tegmentum.",
@@ -15467,8 +16342,8 @@ UBERONParcellation.trapezoid_body = UBERONParcellation(
 )
 UBERONParcellation.triangular_part_of_inferior_frontal_gyrus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/triangularPartOfInferiorFrontalGyrus",
-    definition="'Triangular part of inferior frontal gyrus' is part of the inferior frontal gyrus.",
-    description="Component of the inferior frontal gyrus.defined as the second gyrus from the precentral gyrus (Christine Fennema-Notestine).",
+    definition="Is part of the inferior frontal gyrus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002629)]",
+    description="Component of the inferior frontal gyrus. Defined as the second gyrus from the precentral gyrus (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002629)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111954"),
     knowledge_space_link=IRI(
         "https://knowledge-space.org/wiki/UBERON:0002629#triangular-part-of-inferior-frontal-gyrus-1"
@@ -15476,12 +16351,10 @@ UBERONParcellation.triangular_part_of_inferior_frontal_gyrus = UBERONParcellatio
     name="triangular part of inferior frontal gyrus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002629"),
     synonyms=[
-        "gyrus frontalis inferior",
-        "inferior frontal gyrus",
+        "gyrus frontalis inferior, pars triangularis",
         "pars triangularis",
         "pars triangularis gyri frontalis inferioris",
         "pars triangularis of frontal operculum (Ono)",
-        "triangular part",
     ],
 )
 UBERONParcellation.triangular_septal_nucleus = UBERONParcellation(
@@ -16253,6 +17126,13 @@ UBERONParcellation.ventral_striatum = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005403"),
     synonyms=["striatum ventral region", "striatum ventrale"],
 )
+UBERONParcellation.ventral_sulcus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ventralSulcus",
+    definition="Is part of the hypothalamus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000305)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000305#ventral-sulcus"),
+    name="ventral sulcus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000305"),
+)
 UBERONParcellation.ventral_tegmental_area = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/ventralTegmentalArea",
     definition="Is a regional part of brain. Is part of the midbrain tegmentum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002691) ('is_a' and 'relationship')]",
@@ -16366,6 +17246,25 @@ UBERONParcellation.ventricular_zone = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003053#ventricular-zone"),
     name="ventricular zone",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003053"),
+)
+UBERONParcellation.ventrolateral_sulcus_of_medulla_oblongata = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ventrolateralSulcusOfMedullaOblongata",
+    definition="Is a subarachnoid sulcus. Is part of the medulla oblongata. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0008335) ('is_a' and 'relationship')]",
+    description="A longitudinal sulcus on the anterior surface of the medulla oblongata, lateral to the pyramid, from which emerge the fibers of the hypoglossal nerve. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0008335)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0008335#ventrolateral-sulcus-of-medulla-oblongata"
+    ),
+    name="ventrolateral sulcus of medulla oblongata",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0008335"),
+    synonyms=[
+        "anterolateral sulcus of medulla",
+        "sulcus anterolateralis",
+        "sulcus anterolateralis medullae oblongatae",
+        "sulcus ventrolateralis",
+        "ventrolateral fissure of medulla",
+        "ventrolateral sulcus",
+        "ventrolateral sulcus of medulla",
+    ],
 )
 UBERONParcellation.ventromedial_nucleus_of_hypothalamus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/ventromedialNucleusOfHypothalamus",
