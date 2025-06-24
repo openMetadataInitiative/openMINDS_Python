@@ -1966,12 +1966,19 @@ UBERONParcellation.brain_ventricle_choroid_plexus = UBERONParcellation(
 )
 UBERONParcellation.brain_white_matter = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainWhiteMatter",
-    definition="'Brain white matter' is a white matter. It is part of the brain.",
-    description="The regions of the brain that are largely or entirely composed of myelinated nerve cell axons and contain few or no neural cell bodies or dendrites.",
+    definition="Is a white matter. Is part of the brain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003544) ('is_a' and 'relationship')]",
+    description="The regions of the brain that are largely or entirely composed of myelinated nerve cell axons and contain few or no neural cell bodies or dendrites. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003544)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0736416"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003544#brain-white-matter"),
     name="brain white matter",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003544"),
+    synonyms=[
+        "brain white matter of neuraxis",
+        "brain white substance",
+        "white matter of brain",
+        "white matter of neuraxis of brain",
+        "white substance of brain",
+    ],
 )
 UBERONParcellation.brainstem = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainstem",
@@ -1991,6 +1998,22 @@ UBERONParcellation.brainstem = UBERONParcellation(
         "truncus encephali",
         "truncus encephalicus",
     ],
+)
+UBERONParcellation.brainstem_and_spinal_white_matter = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainstemAndSpinalWhiteMatter",
+    definition="Is a white matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000318)]",
+    description="CNS white matter that is part of the brain stem or spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000318)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:2000318#brainstem-and-spinal-white-matter"),
+    name="brainstem and spinal white matter",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000318"),
+)
+UBERONParcellation.brainstem_white_matter = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/brainstemWhiteMatter",
+    definition="Is a brain white matter. Is part of the brainstem. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014891) ('is_a' and 'relationship')]",
+    description="White matter that is part of a brainstem. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014891)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014891#brainstem-white-matter"),
+    name="brainstem white matter",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014891"),
 )
 UBERONParcellation.ca1_alveus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/CA1Alveus",
@@ -3406,20 +3429,13 @@ UBERONParcellation.cerebral_hemisphere = UBERONParcellation(
 )
 UBERONParcellation.cerebral_hemisphere_white_matter = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/cerebralHemisphereWhiteMatter",
-    definition="'Cerebral hemisphere white matter' is a white matter of telencephalon. It is part of the cerebral hemisphere.",
-    description="White matter is one of the two main solid components of the central nervous system. It is composed of myelinated nerve cell processes, or axons, which connect various grey matter areas (the locations of nerve cell bodies) of the brain to each other and carry nerve impulses between neurons. Cerebral and spinal white matter do not contain dendrites, which can only be found in grey matter along with neural cell bodies and shorter axons (Christine Fennema-Notestine).",
+    definition="Is a white matter of telencephalon. Is part of the cerebral hemisphere. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002437) ('is_a' and 'relationship')]",
+    description="White matter that is part of a cerebral hemisphere. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002437)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101998"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002437#cerebral-white-matter"),
     name="cerebral hemisphere white matter",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002437"),
-    synonyms=[
-        "cerebral hemisphere white matter",
-        "cerebral white matter",
-        "hemisphere white matter",
-        "region of cerebral white matter",
-        "substantia medullaris cerebri",
-        "white matter structure of cerebral hemisphere",
-    ],
+    synonyms=["cerebral white matter", "white matter structure of cerebral hemisphere"],
 )
 UBERONParcellation.cerebral_peduncle = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/cerebralPeduncle",
@@ -4556,6 +4572,21 @@ UBERONParcellation.diagonal_sulcus = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002675#diagonal-sulcus-1"),
     name="diagonal sulcus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002675"),
+)
+UBERONParcellation.diencephalic_white_matter = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/diencephalicWhiteMatter",
+    definition="Is a white matter of forebrain. Is part of the diencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003931) ('is_a' and 'relationship')]",
+    description="White matter that is part of a diencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003931)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0003931#predominantly-white-regional-part-of-diencephalon"
+    ),
+    name="diencephalic white matter",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003931"),
+    synonyms=[
+        "diencephalic tract/commissure",
+        "predominantly white regional part of diencephalon",
+        "white matter of diencephalon",
+    ],
 )
 UBERONParcellation.diencephalon = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/diencephalon",
@@ -12174,6 +12205,13 @@ UBERONParcellation.peritrigeminal_nucleus = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002879"),
     synonyms=["Pe5", "nucleus peritrigeminalis"],
 )
+UBERONParcellation.periventricular_white_matter = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/periventricularWhiteMatter",
+    definition="Is a white matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014932)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014932#periventricular-white-matter"),
+    name="periventricular white matter",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014932"),
+)
 UBERONParcellation.pineal_body = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/pinealBody",
     definition="'Pineal body' is a gland of diencephalon and secretory circumventricular organ. It is part of the pineal complex.",
@@ -17432,6 +17470,29 @@ UBERONParcellation.white_matter_lamina_of_cerebellum = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014540"),
     synonyms=["lamina alba of cerebellar cortex", "laminae albae of cerebellar cortex", "white lamina of cerebellum"],
 )
+UBERONParcellation.white_matter_lamina_of_cerebral_hemisphere = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterLaminaOfCerebralHemisphere",
+    definition="Is a white matter lamina of neuraxis. Is part of the cerebral hemisphere. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014532) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0014532#white-matter-lamina-of-cerebral-hemisphere"
+    ),
+    name="white matter lamina of cerebral hemisphere",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014532"),
+)
+UBERONParcellation.white_matter_lamina_of_diencephalon = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterLaminaOfDiencephalon",
+    definition="Is a white matter lamina of neuraxis. Is part of the diencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014531) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014531#white-matter-lamina-of-diencephalon"),
+    name="white matter lamina of diencephalon",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014531"),
+)
+UBERONParcellation.white_matter_lamina_of_neuraxis = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterLaminaOfNeuraxis",
+    definition="Is a central nervous system cell part cluster and nervous system cell part layer. Is part of the white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014530) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014530#white-matter-lamina-of-neuraxis"),
+    name="white matter lamina of neuraxis",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014530"),
+)
 UBERONParcellation.white_matter_of_cerebellum = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfCerebellum",
     definition="Is a white matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002317)]",
@@ -17449,6 +17510,14 @@ UBERONParcellation.white_matter_of_cerebral_lobe = UBERONParcellation(
     name="white matter of cerebral lobe",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0016527"),
 )
+UBERONParcellation.white_matter_of_forebrain = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfForebrain",
+    definition="Is a brain white matter. Is part of the forebrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019261) ('is_a' and 'relationship')]",
+    description="A white matter that is part of the forebrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019261)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019261#white-matter-of-forebrain"),
+    name="white matter of forebrain",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019261"),
+)
 UBERONParcellation.white_matter_of_frontal_lobe = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfFrontalLobe",
     definition="Is a white matter of cerebral lobe. Is part of the frontal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016528) ('is_a' and 'relationship')]",
@@ -17460,8 +17529,8 @@ UBERONParcellation.white_matter_of_frontal_lobe = UBERONParcellation(
 )
 UBERONParcellation.white_matter_of_hindbrain = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfHindbrain",
-    definition="'White matter of hindbrain' is a brain white matter. It is part of the hindbrain.",
-    description="A white matter that is part of the hindbrain.",
+    definition="Is a brain white matter. Is part of the hindbrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019258) ('is_a' and 'relationship')]",
+    description="A white matter that is part of the hindbrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019258)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0733772"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019258#white-matter-of-hindbrain"),
     name="white matter of hindbrain",
@@ -17477,18 +17546,38 @@ UBERONParcellation.white_matter_of_limbic_lobe = UBERONParcellation(
 )
 UBERONParcellation.white_matter_of_medulla_oblongata = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfMedullaOblongata",
-    definition="A white matter that is part of a medulla oblongata.",
-    description="'White matter of medulla oblongata' is a brainstem white matter and white matter of myelencephalon. It is part of the medulla oblongata.",
+    definition="Is a brainstem white matter and white matter of myelencephalon. Is part of the medulla oblongata. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014649) ('is_a' and 'relationship')]",
+    description="A white matter that is part of a medulla oblongata. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014649)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106748"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0014649#medullary-white-matter"),
     name="white matter of medulla oblongata",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014649"),
-    synonyms=[
-        "medullary white matter",
-        "substantia alba medullae oblongatae",
-        "white matter of medulla",
-        "white substance of medulla",
-    ],
+    synonyms=["substantia alba medullae oblongatae", "white matter of medulla", "white substance of medulla"],
+)
+UBERONParcellation.white_matter_of_metencephalon = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfMetencephalon",
+    definition="Is a white matter of hindbrain. Is part of the metencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019291) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019291#white-matter-of-metencephalon"),
+    name="white matter of metencephalon",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019291"),
+)
+UBERONParcellation.white_matter_of_midbrain = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfMidbrain",
+    definition="Is a brain white matter. Is part of the midbrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016554) ('is_a' and 'relationship')]",
+    description="A white matter that is part of the midbrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016554)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0016554#white-matter-of-midbrain"),
+    name="white matter of midbrain",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0016554"),
+    synonyms=["mesencephalic white matter"],
+)
+UBERONParcellation.white_matter_of_myelencephalon = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfMyelencephalon",
+    definition="Is a white matter of hindbrain. Is part of the myelencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019262) ('is_a' and 'relationship')]",
+    description="A white matter that is part of the myelencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019262)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019262#white-matter-of-myelencephalon"),
+    name="white matter of myelencephalon",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019262"),
+    synonyms=["myelencephalic white matter"],
 )
 UBERONParcellation.white_matter_of_occipital_lobe = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfOccipitalLobe",
@@ -17505,6 +17594,55 @@ UBERONParcellation.white_matter_of_parietal_lobe = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0016531#white-matter-of-parietal-lobe"),
     name="white matter of parietal lobe",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0016531"),
+)
+UBERONParcellation.white_matter_of_pons = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfPons",
+    definition="Is a brainstem white matter and white matter of metencephalon. Is part of the pons. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019292) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0019292#white-matter-of-pons"),
+    name="white matter of pons",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019292"),
+)
+UBERONParcellation.white_matter_of_pontine_tegmentum = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfPontineTegmentum",
+    definition="Is a white matter of pons. Is part of the pontine tegmentum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0019293) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0019293#predominantly-white-regional-part-of-pontine-tegmentum"
+    ),
+    name="white matter of pontine tegmentum",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019293"),
+    synonyms=[
+        "pontine white matter tracts",
+        "predominantly white regional part of pontine tegmentum",
+        "substantia alba tegmenti pontis",
+        "white matter of pontile tegmentum",
+        "white substance of pontile tegmentum",
+    ],
+)
+UBERONParcellation.white_matter_of_superior_colliculus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfSuperiorColliculus",
+    definition="Is a layer of superior colliculus and central nervous system white matter layer. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006786)]",
+    description="A central nervous system white matter layer that is part of a superior colliculus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006786)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0006786#predominantly-white-regional-part-of-superior-colliculus"
+    ),
+    name="white matter of superior colliculus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006786"),
+    synonyms=["predominantly white regional part of superior colliculus", "white matter layer of superior colliculus"],
+)
+UBERONParcellation.white_matter_of_telencephalon = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfTelencephalon",
+    definition="Is a white matter of forebrain. Is part of the telencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011299) ('is_a' and 'relationship')]",
+    description="A portion of white matter that is part of a telencephalon. This can be further subdivided in some species, for example, into hemisphere white matter and the corpus callosum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011299)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0011299#predominantly-white-regional-part-of-telencephalon"
+    ),
+    name="white matter of telencephalon",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0011299"),
+    synonyms=[
+        "predominantly white regional part of telencephalon",
+        "telencephalic tract/commissure",
+        "telencephalic white matter",
+    ],
 )
 UBERONParcellation.white_matter_of_temporal_lobe = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/whiteMatterOfTemporalLobe",
