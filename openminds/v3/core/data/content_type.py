@@ -1471,6 +1471,13 @@ ContentType.application_vnd_openephys = ContentType(
     name="application/vnd.openephys",
     synonyms=["Open Ephys Format"],
 )
+ContentType.application_vnd_openmetadatainitiative_openminds_schema_tplplusjson = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.openmetadatainitiative.openminds.schema-tpl+json",
+    description="Simplified openMINDS-specific schema template that defines properties and values of linked data. Has to be extended with additional information to become a fully valid openMINDS schema.",
+    file_extensions=[".schema.tpl.json"],
+    name="application/vnd.openmetadatainitiative.openminds.schema-tpl+json",
+    synonyms=["openMINDS schema template"],
+)
 ContentType.application_vnd_openmetadatainitiative_openminds_schemaplusjson = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/application_vnd.openmetadatainitiative.openminds.schema+json",
     description="openMINDS-specific schema syntax that defines properties and values of linked data, includes centrally managed vocabulary definitions, and provides configuration hints for possible adoptions.",
@@ -2461,6 +2468,14 @@ ContentType.text_tab_separated_values = ContentType(
     name="text/tab-separated-values",
     related_media_type=IRI("https://www.iana.org/assignments/media-types/text/tab-separated-values"),
     synonyms=["Tab-Separated Value", "TSV"],
+)
+ContentType.text_vnd_citation_file_format = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/text_vnd.citation-file-format",
+    description="CITATION.cff files are plain text files with human- and machine-readable citation information for research products. [adapted from [Citation File Format (CFF)](https://citation-file-format.github.io/)]",
+    file_extensions=[".cff"],
+    name="text/vnd.citation-file-format",
+    specification=IRI("https://github.com/citation-file-format/citation-file-format/blob/main/README.md"),
+    synonyms=["CITATION.cff"],
 )
 ContentType.text_vnd_fsl_bval = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/text_vnd.fsl.bval",
