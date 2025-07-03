@@ -1105,7 +1105,7 @@ ContentType.application_vnd_meshviewplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.meshview+json",
     description="Coordinate triplets for display of point clouds in MeshView (RRID:SCR_017222)",
     file_extensions=[".json"],
-    name="application_vnd.meshview+json",
+    name="application/vnd.meshview+json",
     related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["MeshView JavaScript Object Notation", "MeshView JSON"],
 )
