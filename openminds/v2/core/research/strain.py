@@ -32,7 +32,7 @@ class Strain(LinkedMetadata):
         ),
         Property(
             "background_strains",
-            "openminds.v2.controlled_terms.Strain",
+            "openminds.v2.core.Strain",
             "backgroundStrain",
             multiple=True,
             unique_items=True,

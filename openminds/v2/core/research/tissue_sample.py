@@ -90,7 +90,7 @@ class TissueSample(LinkedMetadata):
         ),
         Property(
             "strain",
-            "openminds.v2.controlled_terms.Strain",
+            "openminds.v2.core.Strain",
             "strain",
             description="Group of presumed common ancestry with physiological but usually not morphological distinctions.",
             instructions="Add the strain of this specimen.",

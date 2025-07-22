@@ -129,7 +129,7 @@ class Model(LinkedMetadata):
                 "openminds.v2.controlled_terms.Organ",
                 "openminds.v2.controlled_terms.Phenotype",
                 "openminds.v2.controlled_terms.Species",
-                "openminds.v2.controlled_terms.Strain",
+                "openminds.v2.core.Strain",
                 "openminds.v2.controlled_terms.TermSuggestion",
                 "openminds.v2.sands.CustomAnatomicalEntity",
                 "openminds.v2.sands.ParcellationEntity",

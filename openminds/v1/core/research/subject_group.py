@@ -85,7 +85,7 @@ class SubjectGroup(LinkedMetadata):
         ),
         Property(
             "strains",
-            "openminds.v1.controlled_terms.Strain",
+            "openminds.v1.core.Strain",
             "strain",
             multiple=True,
             unique_items=True,
