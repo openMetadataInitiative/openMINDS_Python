@@ -219,7 +219,6 @@ UBERONParcellation.accessory_abducens_nucleus = UBERONParcellation(
 UBERONParcellation.accessory_basal_amygdaloid_nucleus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/accessoryBasalAmygdaloidNucleus",
     definition="'Accessory basal amygdaloid nucleus' is a telencephalic nucleus. It is part of the basolateral amygdaloid nuclear complex.",
-    description="",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100209"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002885#accessory-basal-amygdaloid-nucleus-1"),
     name="accessory basal amygdaloid nucleus",

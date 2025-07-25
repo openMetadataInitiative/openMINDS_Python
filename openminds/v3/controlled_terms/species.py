@@ -138,6 +138,13 @@ Species.callithrix_jacchus = Species(
         "white-tufted-ear marmoset",
     ],
 )
+Species.cervus_elaphus = Species(
+    id="https://openminds.ebrains.eu/instances/species/cervusElaphus",
+    definition="The species *Cervus elaphus* (red deer) belongs to the family of *cervidae* (deers).",
+    name="Cervus elaphus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9860"),
+    synonyms=["red deer"],
+)
 Species.chlorocebus_aethiops_sabaeus = Species(
     id="https://openminds.ebrains.eu/instances/species/chlorocebusAethiopsSabaeus",
     definition="The species *Chlorocebus aethiops sabaeus* (green monkey) belongs to the family of *cercopithecidae* (old world monkeys).",

@@ -1340,12 +1340,12 @@ MolecularEntity.potassium_gluconate = MolecularEntity(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:32032#potassium-gluconate"),
     name="potassium gluconate",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_32032"),
-    synonyms=[],
+    synonyms=["E577", "D-Gluconic acid potassium salt", "Potassium D-gluconate"],
 )
 MolecularEntity.propofol = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/propofol",
     definition="An intravenous anesthetic agent which has the advantage of a very rapid onset after infusion or bolus injection plus a very short recovery period of a couple of minutes. (From Smith and Reynard, Textbook of Pharmacology, 1992, 1st ed, p206)",
-    description="Pharmacology: Propofol a sedative-hypnotic agent for use in the induction and maintenance of anesthesia or sedation. Intravenous injection of a therapeutic dose of propofol produces hypnosis rapidly with minimal excitation, usually within 40 seconds from the start of an injection (the time for one arm-brain circulation). Mechanism of action: The action of propofol involves a positive modulation of the inhibitory function of the neurotransmitter gama-aminobutyric acid(GABA) through GABA-A receptors. Drug type: Approved. Investigational. Small Molecule. Drug category: Anesthetics, Intravenous. Anticonvulsants. Antiemetics. Free Radical Scavengers. Hypnotics and Sedatives",
+    description="Pharmacology: Propofol a sedative-hypnotic agent for use in the induction and maintenance of anesthesia or sedation. Intravenous injection of a therapeutic dose of propofol produces hypnosis rapidly with minimal excitation, usually within 40 seconds from the start of an injection (the time for one arm-brain circulation). Mechanism of action: The action of propofol involves a positive modulation of the inhibitory function of the neurotransmitter gama-aminobutyric acid(GABA) through GABA-A receptors. Drug type: Approved. Investigational. Small Molecule. Drug category: Anesthetics, Intravenous. Anticonvulsants. Antiemetics. Free Radical Scavengers. Hypnotics and Sedatives.",
     interlex_identifier=IRI("http://uri.interlex.org/ilx_0109431"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:44915#propofol"),
     name="propofol",
