@@ -1619,6 +1619,22 @@ UBERONParcellation.autonomic_ganglion = UBERONParcellation(
         "visceral nervous system ganglion",
     ],
 )
+UBERONParcellation.autonomic_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/autonomicNervousSystem",
+    definition="Is an anatomical entity. Is part of the peripheral nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002410) ('is_a' and 'relationship')]",
+    description="The autonomic nervous system is composed of neurons that are not under conscious control, and is comprised of two antagonistic components, the sympathetic and parasympathetic nervous systems. The autonomic nervous system regulates key functions including the activity of the cardiac (heart) muscle, smooth muscles (e.g. of the gut), and glands. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002410)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002410#autonomic-nervous-system"),
+    name="autonomic nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002410"),
+    synonyms=[
+        "autonomic division of peripheral nervous system",
+        "autonomic part of peripheral nervous system",
+        "divisio autonomica systematis nervosi peripherici",
+        "pars autonomica systematis nervosi peripherici",
+        "peripheral autonomic nervous system",
+        "visceral nervous system",
+    ],
+)
 UBERONParcellation.axon_tract = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/axonTract",
     definition="Is a neuron projection bundle and central nervous system cell part cluster. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001018)]",
@@ -2816,6 +2832,53 @@ UBERONParcellation.central_medial_nucleus = UBERONParcellation(
         "nucleus centralis medialis thalami",
     ],
 )
+UBERONParcellation.central_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/centralNervousSystem",
+    definition="Is part of the nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001017)]",
+    description="The central nervous system is the core nervous system that serves an integrating and coordinating function. In vertebrates it consists of the neural tube derivatives: the brain and spinal cord. In invertebrates it includes central ganglia plus nerve cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001017)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001017#central-nervous-system-1"),
+    name="central nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001017"),
+    synonyms=["CNS", "systema nervosum centrale"],
+)
+UBERONParcellation.central_nervous_system_cell_part_cluster = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/centralNervousSystemCellPartCluster",
+    definition="Is an anatomical entity. Is part of the central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011215) ('is_a' and 'relationship')]",
+    description="A multi cell part structure that is part of a central nervous system. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011215)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0011215#central-nervous-system-cell-part-cluster"
+    ),
+    name="central nervous system cell part cluster",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0011215"),
+    synonyms=["cell part cluster of neuraxis", "neuraxis layer"],
+)
+UBERONParcellation.central_nervous_system_gray_matter_layer = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/centralNervousSystemGrayMatterLayer",
+    definition="Is a nervous system cell part layer. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016548)]",
+    description="A layer of of the central nervous system that is part of gray matter. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016548)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0016548#central-nervous-system-gray-matter-layer"
+    ),
+    name="central nervous system gray matter layer",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0016548"),
+    synonyms=[
+        "CNS gray matter layer",
+        "CNS grey matter layer",
+        "gray matter layer of neuraxis",
+        "grey matter layer of neuraxis",
+    ],
+)
+UBERONParcellation.central_nervous_system_white_matter_layer = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/centralNervousSystemWhiteMatterLayer",
+    definition="Is a nervous system cell part layer. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016549)]",
+    description="A layer of of the central nervous system that is composed of white matter. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016549)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0016549#central-nervous-system-white-matter-layer"
+    ),
+    name="central nervous system white matter layer",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0016549"),
+    synonyms=["CNS white matter layer", "white matter layer of neuraxis"],
+)
 UBERONParcellation.central_nucleus_of_inferior_colliculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/centralNucleusOfInferiorColliculus",
     definition="'Central nucleus of inferior colliculus' is a nucleus of midbrain tectum. It is part of the inferior colliculus.",
@@ -3897,6 +3960,16 @@ UBERONParcellation.cingulum_of_brain = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003961#cingulum-of-brain"),
     name="cingulum of brain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003961"),
+)
+UBERONParcellation.circuit_part_of_central_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/circuitPartOfCentralNervousSystem",
+    definition="Is a regional part of nervous system. Is part of the central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024914) ('is_a' and 'relationship')]",
+    description="A collection of neuronal components interacting in a functional circuit. A neural circuit is bounded by the nervous system regions in which its participating neuronal components are contained (BB). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024914)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0024914#circuit-part-of-central-nervous-system-1"
+    ),
+    name="circuit part of central nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024914"),
 )
 UBERONParcellation.circular_sulcus_of_insula = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/circularSulcusOfInsula",
@@ -5744,6 +5817,15 @@ UBERONParcellation.enteric_ganglion = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001809"),
     synonyms=["intramural ganglion"],
 )
+UBERONParcellation.enteric_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/entericNervousSystem",
+    definition="Is part of the autonomic nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002005)]",
+    description="The enteric nervous system is composed of two ganglionated neural plexuses in the gut wall which form one of the three major divisions of the autonomic nervous system. The enteric nervous system innervates the gastrointestinal tract, the pancreas, and the gall bladder. It contains sensory neurons, interneurons, and motor neurons. Thus the circuitry can autonomously sense the tension and the chemical environment in the gut and regulate blood vessel tone, motility, secretions, and fluid transport. The system is itself governed by the central nervous system and receives both parasympathetic and sympathetic innervation. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002005)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002005#enteric-nervous-system-1"),
+    name="enteric nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002005"),
+    synonyms=["enteric PNS", "PNS - enteric"],
+)
 UBERONParcellation.entorhinal_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/entorhinalCortex",
     definition="Is part of the parahippocampal gyrus and the piriform cortex. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002728)]",
@@ -5887,6 +5969,14 @@ UBERONParcellation.external_nucleus_of_inferior_colliculus = UBERONParcellation(
         "nucleus externus colliculi inferioris",
         "nucleus lateralis colliculi inferioris",
     ],
+)
+UBERONParcellation.extrapyramidal_tract_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/extrapyramidalTractSystem",
+    definition="Is a regional part of brain. Is part of the motor system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035803) ('is_a' and 'relationship')]",
+    description="A neural network located in the brain that is part of the motor system involved in the coordination of movement that is distinct from the pyramidal tract. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035803)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0035803#extrapyramidal-tract-system"),
+    name="extrapyramidal tract system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035803"),
 )
 UBERONParcellation.extrastriate_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/extrastriateCortex",
@@ -6490,6 +6580,33 @@ UBERONParcellation.future_myelencephalon = UBERONParcellation(
     name="future myelencephalon",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010096"),
 )
+UBERONParcellation.ganglion_of_central_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ganglionOfCentralNervousSystem",
+    definition="Is a ganglion. Is part of the central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003339) ('is_a' and 'relationship')]",
+    description="A ganglion that is part of a central nervous system. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003339)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003339#ganglion-of-central-nervous-system"),
+    name="ganglion of central nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003339"),
+    synonyms=["central nervous system ganglion", "ganglion of neuraxis", "neuraxis ganglion"],
+)
+UBERONParcellation.ganglion_of_peripheral_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ganglionOfPeripheralNervousSystem",
+    definition="Is a ganglion. Is part of the peripheral nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003338) ('is_a' and 'relationship')]",
+    description="A spatially aggregated collection of nerve cell bodies in the PNS, consisting of one or more subpopulations that share cell type, chemical phenotype, and connections. (CUMBO). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003338)]",
+    name="ganglion of peripheral nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003338"),
+    synonyms=["peripheral nervous system ganglion"],
+)
+UBERONParcellation.ganglion_part_of_peripheral_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ganglionPartOfPeripheralNervousSystem",
+    definition="Is a regional part of nervous system. Is part of the peripheral nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024940) ('is_a' and 'relationship')]",
+    description="A spatially aggregated collection of nerve cell bodies in the PNS, consisting of one or more subpopulations that share cell type, chemical phenotype, and connections. (CUMBO) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0024940)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0024940#ganglion-part-of-peripheral-nervous-system-1"
+    ),
+    name="ganglion part of peripheral nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024940"),
+)
 UBERONParcellation.ganglionic_eminence = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/ganglionicEminence",
     definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004023) ('is_a' and 'relationship')]",
@@ -6652,6 +6769,14 @@ UBERONParcellation.glossopharyngeal_vagus_ixx_preganglion_complex = UBERONParcel
     ),
     name="glossopharyngeal-vagus IX-X preganglion complex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013499"),
+)
+UBERONParcellation.glymphatic_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/glymphaticSystem",
+    definition="Is an anatomical entity and anatomical system. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036145) ('is_a' and 'relationship')]",
+    description="Macroscopic waste clearance system that utilizes a unique system of perivascular tunnels, formed by astroglial cells, to promote efficient elimination of soluble proteins and metabolites from the central nervous system. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036145)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0036145#glymphatic-system"),
+    name="glymphatic system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036145"),
 )
 UBERONParcellation.gracile_fasciculus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/gracileFasciculus",
@@ -9183,6 +9308,14 @@ UBERONParcellation.limbic_lobe = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002600"),
     synonyms=["fornicate gyrus", "grande lobe limbique of Broca", "limbic lobe (carpenter)"],
 )
+UBERONParcellation.limbic_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/limbicSystem",
+    definition="Is part of the forebrain. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000349)]",
+    description="A set of midline structures surrounding the brainstem of the mammalian brain, originally described anatomically, e.g., hippocampal formation, amygdala, hypothalamus, cingulate cortex. Although the original designation was anatomical, the limbic system has come to be associated with the system in the brain subserving emotional functions. As such, it is very poorly defined and doesn't correspond closely to the anatomical meaning any longer. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000349)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000349#limbic-system"),
+    name="limbic system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000349"),
+)
 UBERONParcellation.limen_of_insula = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/limenOfInsula",
     definition="'Limen of insula' is a gyrus. It is part of the insula.",
@@ -9366,6 +9499,15 @@ UBERONParcellation.lumbar_dorsal_root_ganglion = UBERONParcellation(
     name="lumbar dorsal root ganglion",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002836"),
     synonyms=["lumbar spinal ganglion"],
+)
+UBERONParcellation.lumen_of_central_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/lumenOfCentralNervousSystem",
+    definition="Is an anatomical entity. Is part of the central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002561) ('is_a' and 'relationship')]",
+    description="The cavity that is enclosed by the central nervous system. In vertebrates this is the cavity that includes as parts ventricular cavities and the central canal of the spinal cord that develops from the lumen of the neura tube. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002561)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002561#neuraxis-cavity"),
+    name="lumen of central nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002561"),
+    synonyms=["cavity of neuraxis", "cavity of ventricular system of neuraxis", "neuraxis cavity", "neuraxis lumen"],
 )
 UBERONParcellation.lunate_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/lunateSulcus",
@@ -10964,6 +11106,14 @@ UBERONParcellation.motor_root_of_trigeminal_nerve = UBERONParcellation(
         "radix motorius",
     ],
 )
+UBERONParcellation.motor_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/motorSystem",
+    definition="Is a neural system. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025525)]",
+    description="The part of the central nervous system that is involved with movement. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025525)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025525#motor-system"),
+    name="motor system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025525"),
+)
 UBERONParcellation.mushroom_body = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/mushroomBody",
     definition="'Mushroom body' is a material entity and anatomical entity. It is part of the brain.",
@@ -11039,6 +11189,41 @@ UBERONParcellation.neodentate_part_of_dentate_nucleus = UBERONParcellation(
         "pars neodentata",
     ],
 )
+UBERONParcellation.nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/nervousSystem",
+    definition="Is an anatomical entity and anatomical system. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001016)]",
+    description="The nervous system is an organ system containing predominantly neuron and glial cells. In bilaterally symmetrical organism, it is arranged in a network of tree-like structures connected to a central body. The main functions of the nervous system are to regulate and control body functions, and to receive sensory input, process this information, and generate behavior. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001016)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001016#nervous-system-1"),
+    name="nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001016"),
+    synonyms=["neurological system"],
+)
+UBERONParcellation.nervous_system_cell_part_layer = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/nervousSystemCellPartLayer",
+    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022303) ('is_a' and 'relationship')]",
+    description="Single layer of a laminar structure, identified by different density, arrangement or size of cells and processes arranged in flattened layers or lamina. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022303)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022303#nervous-system-cell-part-layer"),
+    name="nervous system cell part layer",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022303"),
+)
+UBERONParcellation.nervous_system_commissure = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/nervousSystemCommissure",
+    definition="Is an axon tract. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001020)]",
+    description="Axon tract that crosses the midline of the central nervous system. In the context of Drosophila refers to a broad band of axons connecting equivalent neuropils each side of the brain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001020)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001020#nervous-system-commissure"),
+    name="nervous system commissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001020"),
+    synonyms=["commissure of neuraxis", "neuraxis commissure"],
+)
+UBERONParcellation.nervous_system_lemniscus = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/nervousSystemLemniscus",
+    definition="Is a neuron projection bundle and central nervous system cell part cluster. Is part of the white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003001) ('is_a' and 'relationship')]",
+    description="A bundle or band of sensory nerve fibers. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003001)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003001#lemniscus"),
+    name="nervous system lemniscus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003001"),
+    synonyms=["lemniscus", "neuraxis lemniscus"],
+)
 UBERONParcellation.neural_lobe_of_neurohypophysis = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/neuralLobeOfNeurohypophysis",
     definition="Is a regional part of brain. Is part of the neurohypophysis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003217) ('is_a' and 'relationship')]",
@@ -11080,6 +11265,14 @@ UBERONParcellation.neural_nucleus = UBERONParcellation(
         "nucleus of CNS",
         "nucleus of neuraxis",
     ],
+)
+UBERONParcellation.neural_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/neuralSystem",
+    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023879) ('is_a' and 'relationship')]",
+    description="A set of neural structures that subserve a specific function, e.g., visual system. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0023879)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0023879#neural-system-1"),
+    name="neural system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023879"),
 )
 UBERONParcellation.neural_tube_mantle_layer = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/neuralTubeMantleLayer",
@@ -12323,6 +12516,19 @@ UBERONParcellation.parasympathetic_ganglion = UBERONParcellation(
     name="parasympathetic ganglion",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001808"),
 )
+UBERONParcellation.parasympathetic_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/parasympatheticNervousSystem",
+    definition="Is part of the autonomic nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000011)]",
+    description="The parasympathetic nervous system is one of the two divisions of the vertebrate autonomic nervous system. Parasympathetic nerves emerge cranially as pre ganglionic fibers from oculomotor, facial, glossopharyngeal and vagus and from the sacral region of the spinal cord. Most neurons are cholinergic and responses are mediated by muscarinic receptors. The parasympathetic system innervates, for example: salivary glands, thoracic and abdominal viscera, bladder and genitalia. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000011)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000011#parasympathetic-nervous-system-1"),
+    name="parasympathetic nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000011"),
+    synonyms=[
+        "parasympathetic part of autonomic division of nervous system",
+        "pars parasympathica divisionis autonomici systematis nervosi",
+        "PNS - parasympathetic",
+    ],
+)
 UBERONParcellation.paratenial_nucleus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/paratenialNucleus",
     definition="'Paratenial nucleus' is a nucleus of dorsal thalamus. It is part of the midline nuclear group.",
@@ -12726,6 +12932,15 @@ UBERONParcellation.paravertebral_ganglion = UBERONParcellation(
         "sympathetic chain ganglion",
     ],
 )
+UBERONParcellation.parenchyma_of_central_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/parenchymaOfCentralNervousSystem",
+    definition="Is part of the central nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005158)]",
+    description="The functional tissue of the central nervous system consisting of neurons and glial cells. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005158)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005158#parenchyma-of-central-nervous-system"),
+    name="parenchyma of central nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005158"),
+    synonyms=["central nervous system parenchyma", "CNS parenchyma", "parenchyma of CNS"],
+)
 UBERONParcellation.parietal_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/parietalCortex",
     definition="Is a cortex of cerebral lobe. Is part of the parietal lobe. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0016530) ('is_a' and 'relationship')]",
@@ -13083,6 +13298,15 @@ UBERONParcellation.peripeduncular_nucleus = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002144#peripeduncular-nucleus-1"),
     name="peripeduncular nucleus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002144"),
+)
+UBERONParcellation.peripheral_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/peripheralNervousSystem",
+    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000010) ('is_a' and 'relationship')]",
+    description="A major division of the nervous system that contains nerves which connect the central nervous system (CNS) with sensory organs, other organs, muscles, blood vessels and glands. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000010)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000010#peripheral-nervous-system-1"),
+    name="peripheral nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000010"),
+    synonyms=["pars peripherica", "systema nervosum periphericum"],
 )
 UBERONParcellation.perirhinal_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/perirhinalCortex",
@@ -14682,6 +14906,14 @@ UBERONParcellation.proisocortex = UBERONParcellation(
     name="proisocortex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014951"),
 )
+UBERONParcellation.proprioceptive_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/proprioceptiveSystem",
+    definition="Is a neural system. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025533)]",
+    description="The sensory system for the sense of proprioception. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025533)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025533#proprioceptive-system"),
+    name="proprioceptive system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025533"),
+)
 UBERONParcellation.pterygopalatine_ganglion = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/pterygopalatineGanglion",
     definition="Is a parasympathetic ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003962)]",
@@ -15746,6 +15978,23 @@ UBERONParcellation.segmental_subdivision_of_hindbrain = UBERONParcellation(
     name="segmental subdivision of hindbrain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004733"),
 )
+UBERONParcellation.segmental_subdivision_of_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/segmentalSubdivisionOfNervousSystem",
+    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004732) ('is_a' and 'relationship')]",
+    description="Any segmental subdivision of a nervous system. Includes metameric developmental segments, such as vertebrates neuromeres. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004732)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0004732#segmental-subdivision-of-nervous-system"
+    ),
+    name="segmental subdivision of nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004732"),
+)
+UBERONParcellation.sensorimotor_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/sensorimotorSystem",
+    definition="Is a neural system. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025534)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025534#sensorimotor-system"),
+    name="sensorimotor system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025534"),
+)
 UBERONParcellation.sensory_circumventricular_organ = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/sensoryCircumventricularOrgan",
     definition="Is a circumventricular organ. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010135)]",
@@ -15923,6 +16172,37 @@ UBERONParcellation.solitary_tract_nuclear_complex = UBERONParcellation(
     name="solitary tract nuclear complex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002126"),
     synonyms=["nuclei of solitary tract", "nucleus tractus solitarii", "solitary nuclei"],
+)
+UBERONParcellation.somatic_motor_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/somaticMotorSystem",
+    definition="Is an anatomical entity. Is part of the somatic nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003945) ('is_a' and 'relationship')]",
+    description="The neural tissue involved in the transmission of motor signals. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003945)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003945#somatic-motor-system"),
+    name="somatic motor system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003945"),
+)
+UBERONParcellation.somatic_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/somaticNervousSystem",
+    definition="Is an anatomical entity. Is part of the peripheral nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000012) ('is_a' and 'relationship')]",
+    description="Part of peripheral nervous system that includes the somatic parts of the cranial and spinal nerves and their ganglia and the peripheral sensory receptors. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000012)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000012#somatic-nervous-system"),
+    name="somatic nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000012"),
+    synonyms=[
+        "PNS - somatic",
+        "somatic nervous system, somatic division",
+        "somatic part of peripheral nervous system",
+        "somatic peripheral nervous system",
+    ],
+)
+UBERONParcellation.somatic_sensory_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/somaticSensorySystem",
+    definition="Is part of the somatic nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003942)]",
+    description="The sensory system for the sense of touch and pain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003942)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003942#somatosensory-system"),
+    name="somatic sensory system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003942"),
+    synonyms=["somatosensory system", "system for detection of somatic senses"],
 )
 UBERONParcellation.somatosensory_cortex = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/somatosensoryCortex",
@@ -17438,6 +17718,18 @@ UBERONParcellation.sympathetic_ganglion = UBERONParcellation(
         "ganglion sympatheticum",
         "sympathetic nervous system ganglion",
         "sympathetic part of autonomic division of nervous system ganglion",
+    ],
+)
+UBERONParcellation.sympathetic_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/sympatheticNervousSystem",
+    definition="Is an anatomical entity. Is part of the autonomic nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000013) ('is_a' and 'relationship')]",
+    description="The sympathetic nervous system is one of the two divisions of the vertebrate autonomic nervous system (the other being the parasympathetic nervous system). The sympathetic preganglionic neurons have their cell bodies in the thoracic and lumbar regions of the spinal cord and connect to the paravertebral chain of sympathetic ganglia. Innervate heart and blood vessels, sweat glands, viscera and the adrenal medulla. Most sympathetic neurons, but not all, use noradrenaline as a post-ganglionic neurotransmitter. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000013)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000013#sympathetic-nervous-system-1"),
+    name="sympathetic nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000013"),
+    synonyms=[
+        "pars sympathica divisionis autonomici systematis nervosi",
+        "sympathetic part of autonomic division of nervous system",
     ],
 )
 UBERONParcellation.synencephalon = UBERONParcellation(
@@ -18972,13 +19264,47 @@ UBERONParcellation.ventral_zone_of_medial_entorhinal_cortex = UBERONParcellation
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0018263"),
     synonyms=["entorhinal area, medial part, ventral zone"],
 )
+UBERONParcellation.ventricle_of_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ventricleOfNervousSystem",
+    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005358) ('is_a' and 'relationship')]",
+    description="A layer in the central nervous system that lines system of communicating cavities in the brain and spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005358)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005358#ventricle-of-nervous-system"),
+    name="ventricle of nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005358"),
+    synonyms=["ventricular layer"],
+)
+UBERONParcellation.ventricular_system_choroidal_fissure = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ventricularSystemChoroidalFissure",
+    definition="Is an anatomical entity. Is part of the ventricle of nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002192) ('is_a' and 'relationship')]",
+    description="The narrow cleft along the medial wall of the lateral ventricle along the margins of which the choroid plexus is attached; it lies between the upper surface of the thalamus and lateral edge of the fornix in the central part of the ventricle and between the terminal stria and fimbria hippocampi in the inferior horn. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002192)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002192#ventricular-system-choroidal-fissure"),
+    name="ventricular system choroidal fissure",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002192"),
+    synonyms=[
+        "choroidal fissure of lateral ventricle",
+        "lateral ventricle choroid fissure",
+        "ventricular system choroid fissure",
+    ],
+)
 UBERONParcellation.ventricular_system_of_brain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/ventricularSystemOfBrain",
-    definition="'Ventricular system of brain' is an anatomical system. It is part of the brain and ventricular system of central nervous system.",
+    definition="Is an anatomical system. Is part of the brain and the ventricular system of central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005282) ('is_a' and 'relationship')]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0731568"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005282#ventricular-system-of-brain"),
     name="ventricular system of brain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005282"),
+    synonyms=["brain ventricular system"],
+)
+UBERONParcellation.ventricular_system_of_central_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/ventricularSystemOfCentralNervousSystem",
+    definition="Is an anatomical system. Is part of the central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005281) ('is_a' and 'relationship')]",
+    description="A set of structures containing cerebrospinal fluid in the brain. It is continuous with the central canal of the spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005281)]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0005281#ventricular-system-of-central-nervous-system"
+    ),
+    name="ventricular system of central nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005281"),
+    synonyms=["CNS ventricular system", "ventricular system", "ventricular system of neuraxis"],
 )
 UBERONParcellation.ventricular_zone = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/ventricularZone",
@@ -19214,6 +19540,21 @@ UBERONParcellation.visual_cortex = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000411#visual-cortex"),
     name="visual cortex",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000411"),
+)
+UBERONParcellation.visual_processing_part_of_nervous_system = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/visualProcessingPartOfNervousSystem",
+    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006794) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0006794#visual-processing-part-of-nervous-system"
+    ),
+    name="visual processing part of nervous system",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006794"),
+)
+UBERONParcellation.wall_of_ventricular_system_of_brain = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/wallOfVentricularSystemOfBrain",
+    definition="Is a ventricle of nervous system. Is part of the ventricular system of brain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036661) ('is_a' and 'relationship')]",
+    name="wall of ventricular system of brain",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036661"),
 )
 UBERONParcellation.white_matter_lamina_of_cerebellum = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/whiteMatterLaminaOfCerebellum",
