@@ -6,6 +6,6 @@ openMINDS Python package
 
 __version__ = "0.3.0.dev"
 
-from .base import Node, EmbeddedMetadata, LinkedMetadata, IRI
+from .base import Node, EmbeddedMetadata, LinkedMetadata, IRI, Link
 from .collection import Collection
 from .properties import Property

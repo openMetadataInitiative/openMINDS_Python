@@ -232,8 +232,12 @@ class EmbeddedMetadata(Node):
 class Link:
     """Representation of a metadata node for which only the identifier is currently known."""
 
-    def __init__(self, identifier):
+    def __init__(self, identifier, allowed_types=None):
         self.identifier = identifier
+        self.allowed_types = allowed_types
+
+    def to_jsonld(self):
+        return {"@id": self.identifier}
 
 
 class IRI:

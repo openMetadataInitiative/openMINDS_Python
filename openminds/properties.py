@@ -10,7 +10,14 @@ from numbers import Real
 from typing import Optional, Union, Iterable
 
 from .registry import lookup
-from .base import Node, IRI, Link, Node
+from .base import Node, IRI, Link
+
+
+def _could_be_instance(value, types):
+    """
+    True if a Link's allowed types are consistent with the given types
+    """
+    return isinstance(value, Link) and value.allowed_types and set(value.allowed_types).issubset(types)
 
 
 class Property:
@@ -89,6 +96,10 @@ class Property:
             self._resolved_types = True
         return self._types
 
+    @property
+    def is_link(self) -> bool:
+        return issubclass(self.types[0], Node)
+
     def validate(self, value, ignore=None):
         """
         Check whether `value` satisfies all constraints.
@@ -113,7 +124,7 @@ class Property:
                 if not isinstance(value, (list, tuple)):
                     value = [value]
                 for item in value:
-                    if not isinstance(item, self.types):
+                    if not (isinstance(item, self.types) or _could_be_instance(item, self.types)):
                         if "type" not in ignore:
                             failures["type"].append(
                                 f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
@@ -145,7 +156,7 @@ class Property:
                     failures["multiplicity"].append(
                         f"{self.name} does not accept multiple values, but contains {len(value)}"
                     )
-            elif not isinstance(value, self.types):
+            elif not (isinstance(value, self.types) or _could_be_instance(value, self.types)):
                 if "type" not in ignore:
                     failures["type"].append(
                         f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
@@ -163,8 +174,9 @@ class Property:
         Args:
             data: the JSON-LD data
         """
-
         # todo: check data type
+        link_keys = set(("@id", "@type"))
+
         def deserialize_item(item):
             if self.types == (str,):
                 if self.formatting != "text/plain":
@@ -188,9 +200,18 @@ class Property:
                 if "@type" in item:
                     for cls in self.types:
                         if cls.type_ == item["@type"]:
-                            return cls.from_jsonld(item)
+                            if set(item.keys()) == link_keys:
+                                # if we only have @id and @type, it's a Link
+                                return Link(item["@id"], allowed_types=[cls])
+                            else:
+                                # otherwise it's a Node
+                                return cls.from_jsonld(item)
+                    raise TypeError(
+                        f"Mismatched types. Data has '{item['@type']}' "
+                        f"but property only allows {[cls.type_ for cls in self.types]}"
+                    )
                 else:
-                    return Link(item["@id"])
+                    return Link(item["@id"], allowed_types=self.types)
             else:
                 raise NotImplementedError()
 
