@@ -7027,6 +7027,1669 @@ ParcellationEntity.jba_vtm = ParcellationEntity(
     lookup_label="JBA_VTM",
     name="VTM (Amygdala)",
 )
+ParcellationEntity.marmoset_nma_agranular_insular_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_agranularInsularCortex",
+    abbreviation="AI",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_agranularInsularCortex"}
+    ],
+    lookup_label="MarmosetNMA_agranularInsularCortex",
+    name="agranular insular cortex",
+)
+ParcellationEntity.marmoset_nma_amygdalopiriform_transition_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_amygdalopiriformTransitionArea",
+    abbreviation="APir",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateropallialPart"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_amygdalopiriformTransitionArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_amygdalopiriformTransitionArea",
+    name="amygdalopiriform transition area",
+)
+ParcellationEntity.marmoset_nma_anterior_cingulate_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex",
+    abbreviation="ACC",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_anteriorCingulateCortex",
+    name="Anterior cingulate cortex",
+)
+ParcellationEntity.marmoset_nma_anterior_intraparietal_area_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorIntraparietalAreaOfCortex",
+    abbreviation="AIP",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_anteriorIntraparietalAreaOfCortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_anteriorIntraparietalAreaOfCortex",
+    name="anterior intraparietal area of cortex",
+)
+ParcellationEntity.marmoset_nma_area10_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area10OfCortex",
+    abbreviation="A10",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area10OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area10OfCortex",
+    name="area 10 of cortex",
+)
+ParcellationEntity.marmoset_nma_area11_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area11OfCortex",
+    abbreviation="A11",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area11OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area11OfCortex",
+    name="area 11 of cortex",
+)
+ParcellationEntity.marmoset_nma_area13_of_cortex_lateral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area13OfCortexLateralPart",
+    abbreviation="A13L",
+    alternate_names=["area 13 of cortex, lateral part"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13OfCortexLateralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area13OfCortexLateralPart",
+    name="area 13 of cortex lateral part",
+)
+ParcellationEntity.marmoset_nma_area13_of_cortex_medial_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area13OfCortexMedialPart",
+    abbreviation="A13M",
+    alternate_names=["area 13 of cortex, medial part"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13OfCortexMedialPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area13OfCortexMedialPart",
+    name="area 13 of cortex medial part",
+)
+ParcellationEntity.marmoset_nma_area13a_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area13aOfCortex",
+    abbreviation="A13a",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13aOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area13aOfCortex",
+    name="area 13a of cortex",
+)
+ParcellationEntity.marmoset_nma_area13b_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area13bOfCortex",
+    abbreviation="A13b",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13bOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area13bOfCortex",
+    name="area 13b of cortex",
+)
+ParcellationEntity.marmoset_nma_area14_of_cortex_caudal_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area14OfCortexCaudalPart",
+    abbreviation="A14C",
+    alternate_names=["area 14 of cortex, caudal part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area14OfCortexCaudalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area14OfCortexCaudalPart",
+    name="area 14 of cortex caudal part",
+)
+ParcellationEntity.marmoset_nma_area14_of_cortex_rostral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area14OfCortexRostralPart",
+    abbreviation="A14R",
+    alternate_names=["area 14 of cortex, rostral part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area14OfCortexRostralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area14OfCortexRostralPart",
+    name="area 14 of cortex rostral part",
+)
+ParcellationEntity.marmoset_nma_area19_of_cortex_dorsointermediate_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area19OfCortexDorsointermediatePart",
+    abbreviation="A19DI",
+    alternate_names=["area 19 of cortex, dorsointermediate part"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area19OfCortexDorsointermediatePart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area19OfCortexDorsointermediatePart",
+    name="area 19 of cortex dorsointermediate part",
+)
+ParcellationEntity.marmoset_nma_area19_of_cortex_medial_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area19OfCortexMedialPart",
+    abbreviation="A19M",
+    alternate_names=["area 19 of cortex, medial part"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area19OfCortexMedialPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area19OfCortexMedialPart",
+    name="area 19 of cortex medial part",
+)
+ParcellationEntity.marmoset_nma_area23_of_cortex_ventral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area23OfCortexVentralPart",
+    abbreviation="A23V",
+    alternate_names=["area 23 of cortex, ventral part"],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23OfCortexVentralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area23OfCortexVentralPart",
+    name="area 23 of cortex ventral part",
+)
+ParcellationEntity.marmoset_nma_area23a_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area23aOfCortex",
+    abbreviation="A23a",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23aOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area23aOfCortex",
+    name="area 23a of cortex",
+)
+ParcellationEntity.marmoset_nma_area23b_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area23bOfCortex",
+    abbreviation="A23b",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23bOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area23bOfCortex",
+    name="area 23b of cortex",
+)
+ParcellationEntity.marmoset_nma_area23c_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area23cOfCortex",
+    abbreviation="A23c",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23cOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area23cOfCortex",
+    name="area 23c of cortex",
+)
+ParcellationEntity.marmoset_nma_area24a_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area24aOfCortex",
+    abbreviation="A24a",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24aOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area24aOfCortex",
+    name="area 24a of cortex",
+)
+ParcellationEntity.marmoset_nma_area24b_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area24bOfCortex",
+    abbreviation="A24b",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24bOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area24bOfCortex",
+    name="area 24b of cortex",
+)
+ParcellationEntity.marmoset_nma_area24c_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area24cOfCortex",
+    abbreviation="A24c",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24cOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area24cOfCortex",
+    name="area 24c of cortex",
+)
+ParcellationEntity.marmoset_nma_area24d_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area24dOfCortex",
+    abbreviation="A24d",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24dOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area24dOfCortex",
+    name="area 24d of cortex",
+)
+ParcellationEntity.marmoset_nma_area25_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area25OfCortex",
+    abbreviation="A25",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area25OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area25OfCortex",
+    name="area 25 of cortex",
+)
+ParcellationEntity.marmoset_nma_area29a_c_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area29a-cOfCortex",
+    abbreviation="A29a-c",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area29a-cOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area29a-cOfCortex",
+    name="area 29a-c of cortex",
+)
+ParcellationEntity.marmoset_nma_area29d_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area29dOfCortex",
+    abbreviation="A29d",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area29dOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area29dOfCortex",
+    name="area 29d of cortex",
+)
+ParcellationEntity.marmoset_nma_area30_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area30OfCortex",
+    abbreviation="A30",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area30OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area30OfCortex",
+    name="area 30 of cortex",
+)
+ParcellationEntity.marmoset_nma_area31_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area31OfCortex",
+    abbreviation="A31",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area31OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area31OfCortex",
+    name="area 31 of cortex",
+)
+ParcellationEntity.marmoset_nma_area32_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area32OfCortex",
+    abbreviation="A32",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area32OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area32OfCortex",
+    name="area 32 of cortex",
+)
+ParcellationEntity.marmoset_nma_area32_of_cortex_ventral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area32OfCortexVentralPart",
+    abbreviation="A32V",
+    alternate_names=["area 32 of cortex, ventral part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area32OfCortexVentralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area32OfCortexVentralPart",
+    name="area 32 of cortex ventral part",
+)
+ParcellationEntity.marmoset_nma_area35_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area35OfCortex",
+    abbreviation="A35",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area35OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area35OfCortex",
+    name="area 35 of cortex",
+)
+ParcellationEntity.marmoset_nma_area36_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area36OfCortex",
+    abbreviation="A36",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area36OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area36OfCortex",
+    name="area 36 of cortex",
+)
+ParcellationEntity.marmoset_nma_area3a_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area3aOfCortex",
+    abbreviation="A3a",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area3aOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area3aOfCortex",
+    name="area 3a of cortex (somatosensory)",
+)
+ParcellationEntity.marmoset_nma_area3b_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area3bOfCortex",
+    abbreviation="A3b",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area3bOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area3bOfCortex",
+    name="area 3b of cortex (somatosensory)",
+)
+ParcellationEntity.marmoset_nma_area45_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area45OfCortex",
+    abbreviation="A45",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area45OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area45OfCortex",
+    name="area 45 of cortex",
+)
+ParcellationEntity.marmoset_nma_area46_of_cortex_dorsal_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area46OfCortexDorsalPart",
+    abbreviation="A46D",
+    alternate_names=["area 46 of cortex, dorsal part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area46OfCortexDorsalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area46OfCortexDorsalPart",
+    name="area 46 of cortex dorsal part",
+)
+ParcellationEntity.marmoset_nma_area46_of_cortex_ventral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area46OfCortexVentralPart",
+    abbreviation="A46V",
+    alternate_names=["area 46 of cortex, ventral part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area46OfCortexVentralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area46OfCortexVentralPart",
+    name="area 46 of cortex ventral part",
+)
+ParcellationEntity.marmoset_nma_area47_of_cortex_lateral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area47OfCortexLateralPart",
+    abbreviation="A47L(12L)",
+    alternate_names=["area 47 (old 12) of cortex, lateral part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexLateralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area47OfCortexLateralPart",
+    name="area 47 (old 12) of cortex lateral part",
+)
+ParcellationEntity.marmoset_nma_area47_of_cortex_medial_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area47OfCortexMedialPart",
+    abbreviation="A47M(12M)",
+    alternate_names=["area 47 (old 12) of cortex, medial part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexMedialPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area47OfCortexMedialPart",
+    name="area 47 (old 12) of cortex medial part",
+)
+ParcellationEntity.marmoset_nma_area47_of_cortex_orbital_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area47OfCortexOrbitalPart",
+    abbreviation="A47O(12O)",
+    alternate_names=["area 47 (old 12) of cortex, orbital part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexOrbitalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area47OfCortexOrbitalPart",
+    name="area 47 (old 12) of cortex orbital part",
+)
+ParcellationEntity.marmoset_nma_area4_of_cortex_part_c = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area4OfCortexPartC",
+    abbreviation="A4c",
+    alternate_names=["area 4 of cortex, part c (primary motor)"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area4OfCortexPartC"}
+    ],
+    lookup_label="MarmosetNMA_area4OfCortexPartC",
+    name="area 4 of cortex part c (primary motor)",
+)
+ParcellationEntity.marmoset_nma_area4_of_cortex_parts_a_and_b = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area4OfCortexPartsAAndB",
+    abbreviation="A4ab",
+    alternate_names=["area 4 of cortex, parts a and b (primary motor)"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area4OfCortexPartsAAndB"
+        }
+    ],
+    lookup_label="MarmosetNMA_area4OfCortexPartsAAndB",
+    name="area 4 of cortex parts a and b (primary motor)",
+)
+ParcellationEntity.marmoset_nma_area6_of_cortex_dorsocaudal_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area6OfCortexDorsocaudalPart",
+    abbreviation="A6DC",
+    alternate_names=["area 6 of cortex, dorsocaudal part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexDorsocaudalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area6OfCortexDorsocaudalPart",
+    name="area 6 of cortex dorsocaudal part",
+)
+ParcellationEntity.marmoset_nma_area6_of_cortex_dorsorostral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area6OfCortexDorsorostralPart",
+    abbreviation="A6DR",
+    alternate_names=["area 6 of cortex, dorsorostral part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexDorsorostralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area6OfCortexDorsorostralPart",
+    name="area 6 of cortex dorsorostral part",
+)
+ParcellationEntity.marmoset_nma_area6_of_cortex_medial_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area6OfCortexMedialPart",
+    abbreviation="A6M",
+    alternate_names=["area 6 of cortex, medial (supplementary motor) part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexMedialPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area6OfCortexMedialPart",
+    name="area 6 of cortex medial (supplementary motor) part",
+)
+ParcellationEntity.marmoset_nma_area6_of_cortex_ventral_part_a = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area6OfCortexVentralPartA",
+    abbreviation="A6Va",
+    alternate_names=["area 6 of cortex, ventral, part a"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexVentralPartA"
+        }
+    ],
+    lookup_label="MarmosetNMA_area6OfCortexVentralPartA",
+    name="area 6 of cortex ventral part a",
+)
+ParcellationEntity.marmoset_nma_area6_of_cortex_ventral_part_b = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area6OfCortexVentralPartB",
+    abbreviation="A6Vb",
+    alternate_names=["area 6 of cortex, ventral, part b"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexVentralPartB"
+        }
+    ],
+    lookup_label="MarmosetNMA_area6OfCortexVentralPartB",
+    name="area 6 of cortex ventral part b",
+)
+ParcellationEntity.marmoset_nma_area8_of_cortex_caudal_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area8OfCortexCaudalPart",
+    abbreviation="A8C",
+    alternate_names=["area 8 of cortex, caudal part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8OfCortexCaudalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area8OfCortexCaudalPart",
+    name="area 8 of cortex caudal part",
+)
+ParcellationEntity.marmoset_nma_area8a_of_cortex_dorsal_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area8aOfCortexDorsalPart",
+    abbreviation="A8aD",
+    alternate_names=["area 8a of cortex, dorsal part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8aOfCortexDorsalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area8aOfCortexDorsalPart",
+    name="area 8a of cortex dorsal part",
+)
+ParcellationEntity.marmoset_nma_area8a_of_cortex_ventral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area8aOfCortexVentralPart",
+    abbreviation="A8aV",
+    alternate_names=["area 8a of cortex, ventral part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8aOfCortexVentralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_area8aOfCortexVentralPart",
+    name="area 8a of cortex ventral part",
+)
+ParcellationEntity.marmoset_nma_area8b_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area8bOfCortex",
+    abbreviation="A8b",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8bOfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area8bOfCortex",
+    name="area 8b of cortex",
+)
+ParcellationEntity.marmoset_nma_area9_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_area9OfCortex",
+    abbreviation="A9",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area9OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_area9OfCortex",
+    name="area 9 of cortex",
+)
+ParcellationEntity.marmoset_nma_areas1_and2_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_areas1And2OfCortex",
+    abbreviation="A1/2",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_areas1And2OfCortex"}
+    ],
+    lookup_label="MarmosetNMA_areas1And2OfCortex",
+    name="areas 1 and 2 of cortex",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex",
+    abbreviation="AUD",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_auditoryCortex",
+    name="Auditory cortex",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_anterolateral_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexAnterolateralArea",
+    abbreviation="AuAL",
+    alternate_names=["auditory cortex, anterolateral area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexAnterolateralArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexAnterolateralArea",
+    name="auditory cortex anterolateral area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_caudal_parabelt_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexCaudalParabeltArea",
+    abbreviation="AuCPB",
+    alternate_names=["auditory cortex, caudal parabelt area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudalParabeltArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexCaudalParabeltArea",
+    name="auditory cortex caudal parabelt area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_caudolateral_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexCaudolateralArea",
+    abbreviation="AuCL",
+    alternate_names=["auditory cortex, caudolateral area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudolateralArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexCaudolateralArea",
+    name="auditory cortex caudolateral area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_caudomedial_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexCaudomedialArea",
+    abbreviation="AuCM",
+    alternate_names=["auditory cortex, caudomedial area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudomedialArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexCaudomedialArea",
+    name="auditory cortex caudomedial area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_middle_lateral_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexMiddleLateralArea",
+    abbreviation="AuML",
+    alternate_names=["auditory cortex, middle lateral area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexMiddleLateralArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexMiddleLateralArea",
+    name="auditory cortex middle lateral area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_primary_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexPrimaryArea",
+    abbreviation="AuA1",
+    alternate_names=["auditory cortex, primary area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexPrimaryArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexPrimaryArea",
+    name="auditory cortex primary area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_rostral_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexRostralArea",
+    abbreviation="AuR",
+    alternate_names=["auditory cortex, rostral area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostralArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexRostralArea",
+    name="auditory cortex rostral area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_rostral_parabelt = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexRostralParabelt",
+    abbreviation="AuRPB",
+    alternate_names=["auditory cortex, rostral parabelt"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostralParabelt"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexRostralParabelt",
+    name="auditory cortex rostral parabelt",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_rostromedial_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexRostromedialArea",
+    abbreviation="AuRM",
+    alternate_names=["auditory cortex, rostromedial area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostromedialArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexRostromedialArea",
+    name="auditory cortex rostromedial area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_rostrotemporal = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexRostrotemporal",
+    abbreviation="AuRT",
+    alternate_names=["auditory cortex, rostrotemporal"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporal"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexRostrotemporal",
+    name="auditory cortex rostrotemporal",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_rostrotemporal_lateral_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexRostrotemporalLateralArea",
+    abbreviation="AuRTL",
+    alternate_names=["auditory cortex, rostrotemporal lateral area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporalLateralArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexRostrotemporalLateralArea",
+    name="auditory cortex rostrotemporal lateral area",
+)
+ParcellationEntity.marmoset_nma_auditory_cortex_rostrotemporal_medial_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortexRostrotemporalMedialArea",
+    abbreviation="AuRTM",
+    alternate_names=["auditory cortex, rostrotemporal medial area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporalMedialArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_auditoryCortexRostrotemporalMedialArea",
+    name="auditory cortex rostrotemporal medial area",
+)
+ParcellationEntity.marmoset_nma_brain = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_brain",
+    abbreviation="Brain",
+    lookup_label="MarmosetNMA_brain",
+    name="Brain",
+)
+ParcellationEntity.marmoset_nma_dorsal_pallium = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium",
+    abbreviation="DPal",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_pallium"}],
+    lookup_label="MarmosetNMA_dorsalPallium",
+    name="Dorsal pallium",
+)
+ParcellationEntity.marmoset_nma_dorsolateral_prefrontal_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex",
+    abbreviation="DLP",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_dorsolateralPrefrontalCortex",
+    name="Dorsolateral prefrontal cortex",
+)
+ParcellationEntity.marmoset_nma_dysgranular_insular_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dysgranularInsularCortex",
+    abbreviation="DI",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_dysgranularInsularCortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_dysgranularInsularCortex",
+    name="dysgranular insular cortex",
+)
+ParcellationEntity.marmoset_nma_entorhinal_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_entorhinalCortex",
+    abbreviation="Ent",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_entorhinalCortex"}
+    ],
+    lookup_label="MarmosetNMA_entorhinalCortex",
+    name="entorhinal cortex",
+)
+ParcellationEntity.marmoset_nma_fundus_of_superior_temporal_sulcus_area_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_fundusOfSuperiorTemporalSulcusAreaOfCortex",
+    abbreviation="FST",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_fundusOfSuperiorTemporalSulcusAreaOfCortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_fundusOfSuperiorTemporalSulcusAreaOfCortex",
+    name="fundus of superior temporal sulcus area of cortex",
+)
+ParcellationEntity.marmoset_nma_granular_insular_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_granularInsularCortex",
+    abbreviation="GI",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_granularInsularCortex"}
+    ],
+    lookup_label="MarmosetNMA_granularInsularCortex",
+    name="granular insular cortex",
+)
+ParcellationEntity.marmoset_nma_gustatory_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_gustatoryCortex",
+    abbreviation="Gu",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_gustatoryCortex"}
+    ],
+    lookup_label="MarmosetNMA_gustatoryCortex",
+    name="gustatory cortex",
+)
+ParcellationEntity.marmoset_nma_insular_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex",
+    abbreviation="INS",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_insularCortex",
+    name="Insular cortex",
+)
+ParcellationEntity.marmoset_nma_insular_proisocortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularProisocortex",
+    abbreviation="IPro",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_insularProisocortex"}
+    ],
+    lookup_label="MarmosetNMA_insularProisocortex",
+    name="insular proisocortex",
+)
+ParcellationEntity.marmoset_nma_lateral_and_inferior_temporal_cortical_region = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion",
+    abbreviation="LIT",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_lateralAndInferiorTemporalCorticalRegion",
+    name="Lateral and inferior temporal cortical region",
+)
+ParcellationEntity.marmoset_nma_lateral_intraparietal_area_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralIntraparietalAreaOfCortex",
+    abbreviation="LIP",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_lateralIntraparietalAreaOfCortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_lateralIntraparietalAreaOfCortex",
+    name="lateral intraparietal area of cortex",
+)
+ParcellationEntity.marmoset_nma_lateropallial_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateropallialPart",
+    abbreviation="LatPal",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_pallium"}],
+    lookup_label="MarmosetNMA_lateropallialPart",
+    name="Lateropallial part",
+)
+ParcellationEntity.marmoset_nma_medial_intraparietal_area_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialIntraparietalAreaOfCortex",
+    abbreviation="MIP",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_medialIntraparietalAreaOfCortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_medialIntraparietalAreaOfCortex",
+    name="medial intraparietal area of cortex",
+)
+ParcellationEntity.marmoset_nma_medial_prefrontal_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex",
+    abbreviation="MPC",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_medialPrefrontalCortex",
+    name="Medial prefrontal cortex",
+)
+ParcellationEntity.marmoset_nma_medial_superior_temporal_area_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialSuperiorTemporalAreaOfCortex",
+    abbreviation="MST",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_medialSuperiorTemporalAreaOfCortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_medialSuperiorTemporalAreaOfCortex",
+    name="medial superior temporal area of cortex",
+)
+ParcellationEntity.marmoset_nma_motor_and_premotor_cortical_regions = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions",
+    abbreviation="PRM",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_motorAndPremotorCorticalRegions",
+    name="Motor and premotor cortical regions",
+)
+ParcellationEntity.marmoset_nma_occipito_parietal_transitional_area_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_occipito-parietalTransitionalAreaOfCortex",
+    abbreviation="OPt",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_occipito-parietalTransitionalAreaOfCortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_occipito-parietalTransitionalAreaOfCortex",
+    name="occipito-parietal transitional area of cortex",
+)
+ParcellationEntity.marmoset_nma_orbital_frontal_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex",
+    abbreviation="OFC",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_orbitalFrontalCortex",
+    name="Orbital frontal cortex",
+)
+ParcellationEntity.marmoset_nma_orbital_periallocortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalPeriallocortex",
+    abbreviation="OPAl",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_orbitalPeriallocortex"}
+    ],
+    lookup_label="MarmosetNMA_orbitalPeriallocortex",
+    name="orbital periallocortex",
+)
+ParcellationEntity.marmoset_nma_orbital_proisocortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalProisocortex",
+    abbreviation="OPro",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_orbitalProisocortex"}
+    ],
+    lookup_label="MarmosetNMA_orbitalProisocortex",
+    name="orbital proisocortex",
+)
+ParcellationEntity.marmoset_nma_pallial_amygdala = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_pallialAmygdala",
+    abbreviation="PalAmyg",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_pallium"}],
+    lookup_label="MarmosetNMA_pallialAmygdala",
+    name="Pallial amygdala",
+)
+ParcellationEntity.marmoset_nma_pallium = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_pallium",
+    abbreviation="Pal",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_telencephalon"}],
+    lookup_label="MarmosetNMA_pallium",
+    name="Pallium",
+)
+ParcellationEntity.marmoset_nma_parainsular_cortex_lateral_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parainsularCortexLateralPart",
+    abbreviation="PaIL",
+    alternate_names=["parainsular cortex, lateral part"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parainsularCortexLateralPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_parainsularCortexLateralPart",
+    name="parainsular cortex lateral part",
+)
+ParcellationEntity.marmoset_nma_parainsular_cortex_medial_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parainsularCortexMedialPart",
+    abbreviation="PaIM",
+    alternate_names=["parainsular cortex, medial part"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parainsularCortexMedialPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_parainsularCortexMedialPart",
+    name="parainsular cortex medial part",
+)
+ParcellationEntity.marmoset_nma_parietal_area_pe = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parietalAreaPE",
+    abbreviation="PE",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPE"}
+    ],
+    lookup_label="MarmosetNMA_parietalAreaPE",
+    name="parietal area PE",
+)
+ParcellationEntity.marmoset_nma_parietal_area_pe_caudal_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parietalAreaPECaudalPart",
+    abbreviation="PEC",
+    alternate_names=["parietal area PE, caudal part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPECaudalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_parietalAreaPECaudalPart",
+    name="parietal area PE caudal part",
+)
+ParcellationEntity.marmoset_nma_parietal_area_pf = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parietalAreaPF",
+    abbreviation="PF",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPF"}
+    ],
+    lookup_label="MarmosetNMA_parietalAreaPF",
+    name="parietal area PF (cortex)",
+)
+ParcellationEntity.marmoset_nma_parietal_area_pfg = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parietalAreaPFG",
+    abbreviation="PFG",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPFG"}
+    ],
+    lookup_label="MarmosetNMA_parietalAreaPFG",
+    name="parietal area PFG (cortex)",
+)
+ParcellationEntity.marmoset_nma_parietal_area_pg = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parietalAreaPG",
+    abbreviation="PG",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPG"}
+    ],
+    lookup_label="MarmosetNMA_parietalAreaPG",
+    name="parietal area PG",
+)
+ParcellationEntity.marmoset_nma_parietal_area_pg_medial_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parietalAreaPGMedialPart",
+    abbreviation="PGM",
+    alternate_names=["parietal area PG, medial part (cortex)"],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPGMedialPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_parietalAreaPGMedialPart",
+    name="parietal area PG medial part (cortex)",
+)
+ParcellationEntity.marmoset_nma_parietal_areas_p_ga_and_i_pa = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_parietalAreasPGaAndIPa",
+    abbreviation="PGa/IPa(FSTv)",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreasPGaAndIPa"}
+    ],
+    lookup_label="MarmosetNMA_parietalAreasPGaAndIPa",
+    name="parietal areas PGa and IPa (fundus of superior temporal ventral area)",
+)
+ParcellationEntity.marmoset_nma_piriform_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_piriformCortex",
+    abbreviation="Pir",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralPallium"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_piriformCortex"}
+    ],
+    lookup_label="MarmosetNMA_piriformCortex",
+    name="piriform cortex",
+)
+ParcellationEntity.marmoset_nma_posterior_cingulate_medial_and_retrosplenial_cortical_regions = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions",
+    abbreviation="PCR",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions",
+    name="Posterior cingulate medial and retrosplenial cortical regions",
+)
+ParcellationEntity.marmoset_nma_posterior_parietal_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex",
+    abbreviation="PPC",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_posteriorParietalCortex",
+    name="Posterior parietal cortex",
+)
+ParcellationEntity.marmoset_nma_primary_visual_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_primaryVisualCortex",
+    abbreviation="V1",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_primaryVisualCortex"}
+    ],
+    lookup_label="MarmosetNMA_primaryVisualCortex",
+    name="primary visual cortex",
+)
+ParcellationEntity.marmoset_nma_proisocortical_motor_region = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_proisocorticalMotorRegion",
+    abbreviation="ProM(PrCO)",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_proisocorticalMotorRegion"
+        }
+    ],
+    lookup_label="MarmosetNMA_proisocorticalMotorRegion",
+    name="proisocortical motor region (precentral opercular cortex)",
+)
+ParcellationEntity.marmoset_nma_prosencephalon = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_prosencephalon",
+    abbreviation="ProCeph",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_brain"}],
+    lookup_label="MarmosetNMA_prosencephalon",
+    name="Prosencephalon",
+)
+ParcellationEntity.marmoset_nma_prostriate_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_prostriateArea",
+    abbreviation="ProSt",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_prostriateArea"}
+    ],
+    lookup_label="MarmosetNMA_prostriateArea",
+    name="prostriate area",
+)
+ParcellationEntity.marmoset_nma_retroinsular_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_retroinsularArea",
+    abbreviation="ReI",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_retroinsularArea"}
+    ],
+    lookup_label="MarmosetNMA_retroinsularArea",
+    name="retroinsular area (cortex)",
+)
+ParcellationEntity.marmoset_nma_secondary_somatosensory_cortex_external_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_secondarySomatosensoryCortexExternalPart",
+    abbreviation="S2E",
+    alternate_names=["secondary somatosensory cortex, external part"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexExternalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_secondarySomatosensoryCortexExternalPart",
+    name="secondary somatosensory cortex external part",
+)
+ParcellationEntity.marmoset_nma_secondary_somatosensory_cortex_internal_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_secondarySomatosensoryCortexInternalPart",
+    abbreviation="S2I",
+    alternate_names=["secondary somatosensory cortex, internal part"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexInternalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_secondarySomatosensoryCortexInternalPart",
+    name="secondary somatosensory cortex internal part",
+)
+ParcellationEntity.marmoset_nma_secondary_somatosensory_cortex_parietal_rostral_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_secondarySomatosensoryCortexParietalRostralArea",
+    abbreviation="S2PR",
+    alternate_names=["secondary somatosensory cortex, parietal rostral area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexParietalRostralArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_secondarySomatosensoryCortexParietalRostralArea",
+    name="secondary somatosensory cortex parietal rostral area",
+)
+ParcellationEntity.marmoset_nma_secondary_somatosensory_cortex_parietal_ventral_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_secondarySomatosensoryCortexParietalVentralArea",
+    abbreviation="S2PV",
+    alternate_names=["secondary somatosensory cortex, parietal ventral area"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexParietalVentralArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_secondarySomatosensoryCortexParietalVentralArea",
+    name="secondary somatosensory cortex parietal ventral area",
+)
+ParcellationEntity.marmoset_nma_somatosensory_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex",
+    abbreviation="SSC",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_somatosensoryCortex",
+    name="Somatosensory cortex",
+)
+ParcellationEntity.marmoset_nma_superior_temporal_rostral_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_superiorTemporalRostralArea",
+    abbreviation="STR",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_superiorTemporalRostralArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_superiorTemporalRostralArea",
+    name="superior temporal rostral area (cortex)",
+)
+ParcellationEntity.marmoset_nma_telencephalon = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_telencephalon",
+    abbreviation="TelCeph",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_prosencephalon"}],
+    lookup_label="MarmosetNMA_telencephalon",
+    name="Telencephalon",
+)
+ParcellationEntity.marmoset_nma_temporal_area_te1 = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTE1",
+    abbreviation="TE1",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE1"}
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTE1",
+    name="temporal area TE1 (inferior temporal cortex)",
+)
+ParcellationEntity.marmoset_nma_temporal_area_te2 = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTE2",
+    abbreviation="TE2",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE2"}
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTE2",
+    name="temporal area TE2 (inferior temporal cortex)",
+)
+ParcellationEntity.marmoset_nma_temporal_area_te3 = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTE3",
+    abbreviation="TE3",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE3"}
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTE3",
+    name="temporal area TE3 (inferior temporal cortex)",
+)
+ParcellationEntity.marmoset_nma_temporal_area_te_occipital_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTEOccipitalPart",
+    abbreviation="TEO",
+    alternate_names=["temporal area TE, occipital part"],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTEOccipitalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTEOccipitalPart",
+    name="temporal area TE occipital part",
+)
+ParcellationEntity.marmoset_nma_temporal_area_tf = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTF",
+    abbreviation="TF",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTF"}
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTF",
+    name="temporal area TF",
+)
+ParcellationEntity.marmoset_nma_temporal_area_tf_occipital_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTFOccipitalPart",
+    abbreviation="TFO",
+    alternate_names=["temporal area TF, occipital part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTFOccipitalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTFOccipitalPart",
+    name="temporal area TF occipital part",
+)
+ParcellationEntity.marmoset_nma_temporal_area_th = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTH",
+    abbreviation="TH",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTH"}
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTH",
+    name="temporal area TH",
+)
+ParcellationEntity.marmoset_nma_temporal_area_tl = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTL",
+    abbreviation="TL",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTL"}
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTL",
+    name="temporal area TL",
+)
+ParcellationEntity.marmoset_nma_temporal_area_tl_occipital_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalAreaTLOccipitalPart",
+    abbreviation="TLO",
+    alternate_names=["temporal area TL, occipital part"],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTLOccipitalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_temporalAreaTLOccipitalPart",
+    name="temporal area TL occipital part",
+)
+ParcellationEntity.marmoset_nma_temporal_proisocortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporalProisocortex",
+    abbreviation="TPro",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalProisocortex"}
+    ],
+    lookup_label="MarmosetNMA_temporalProisocortex",
+    name="temporal proisocortex",
+)
+ParcellationEntity.marmoset_nma_temporo_parieto_occipital_association_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporo-parieto-occipitalAssociationArea",
+    abbreviation="TPO(STP)",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporo-parieto-occipitalAssociationArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_temporo-parieto-occipitalAssociationArea",
+    name="temporo-parieto-occipital association area (superior temporal polysensory cortex)",
+)
+ParcellationEntity.marmoset_nma_temporoparietal_transitional_area = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporoparietalTransitionalArea",
+    abbreviation="TPt",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporoparietalTransitionalArea"
+        }
+    ],
+    lookup_label="MarmosetNMA_temporoparietalTransitionalArea",
+    name="temporoparietal transitional area",
+)
+ParcellationEntity.marmoset_nma_temporopolar_proisocortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_temporopolarProisocortex",
+    abbreviation="TPPro",
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporopolarProisocortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_temporopolarProisocortex",
+    name="temporopolar proisocortex",
+)
+ParcellationEntity.marmoset_nma_ventral_areas_of_the_temporal_lobe = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe",
+    abbreviation="VTC",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_ventralAreasOfTheTemporalLobe",
+    name="Ventral areas of the temporal lobe",
+)
+ParcellationEntity.marmoset_nma_ventral_intraparietal_area_of_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralIntraparietalAreaOfCortex",
+    abbreviation="VIP",
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_ventralIntraparietalAreaOfCortex"
+        }
+    ],
+    lookup_label="MarmosetNMA_ventralIntraparietalAreaOfCortex",
+    name="ventral intraparietal area of cortex",
+)
+ParcellationEntity.marmoset_nma_ventral_pallium = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralPallium",
+    abbreviation="VPal",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_pallium"}],
+    lookup_label="MarmosetNMA_ventralPallium",
+    name="Ventral pallium",
+)
+ParcellationEntity.marmoset_nma_ventrolateral_prefrontal_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex",
+    abbreviation="VLP",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_ventrolateralPrefrontalCortex",
+    name="Ventrolateral prefrontal cortex",
+)
+ParcellationEntity.marmoset_nma_visual_area2 = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualArea2",
+    abbreviation="V2",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea2"}
+    ],
+    lookup_label="MarmosetNMA_visualArea2",
+    name="visual area 2",
+)
+ParcellationEntity.marmoset_nma_visual_area3 = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualArea3",
+    abbreviation="V3(VLP)",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea3"}
+    ],
+    lookup_label="MarmosetNMA_visualArea3",
+    name="visual area 3 (ventrolateral posterior area)",
+)
+ParcellationEntity.marmoset_nma_visual_area3_a = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualArea3A",
+    abbreviation="V3A(DA)",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea3A"}
+    ],
+    lookup_label="MarmosetNMA_visualArea3A",
+    name="visual area 3A (dorsoanterior area)",
+)
+ParcellationEntity.marmoset_nma_visual_area4 = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualArea4",
+    abbreviation="V4(VLA)",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea4"}
+    ],
+    lookup_label="MarmosetNMA_visualArea4",
+    name="visual area 4 (ventrolatereral anterior area)",
+)
+ParcellationEntity.marmoset_nma_visual_area4_transitional_part = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualArea4TransitionalPart",
+    abbreviation="V4T(MTC)",
+    alternate_names=["visual area 4, transitional part (middle temporal crescent)"],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea4TransitionalPart"
+        }
+    ],
+    lookup_label="MarmosetNMA_visualArea4TransitionalPart",
+    name="visual area 4 transitional part (middle temporal crescent)",
+)
+ParcellationEntity.marmoset_nma_visual_area5 = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualArea5",
+    abbreviation="V5(MT)",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea5"}
+    ],
+    lookup_label="MarmosetNMA_visualArea5",
+    name="visual area 5 (middle temporal area)",
+)
+ParcellationEntity.marmoset_nma_visual_area6 = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualArea6",
+    abbreviation="V6(DM)",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea6"}
+    ],
+    lookup_label="MarmosetNMA_visualArea6",
+    name="visual area 6 (dorsomedial area)",
+)
+ParcellationEntity.marmoset_nma_visual_area6_a = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualArea6A",
+    abbreviation="V6A(PPM)",
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    has_versions=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea6A"}
+    ],
+    lookup_label="MarmosetNMA_visualArea6A",
+    name="visual area 6A (posterior parietal medial area)",
+)
+ParcellationEntity.marmoset_nma_visual_cortex = ParcellationEntity(
+    id="https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex",
+    abbreviation="VIS",
+    alternate_names=[None],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsalPallium"}],
+    lookup_label="MarmosetNMA_visualCortex",
+    name="Visual cortex",
+)
 ParcellationEntity.pw_rbsc_cor_10th_cerebellar_lobule_nodule = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/PW-RBSC-cor_10thCerebellarLobuleNodule",
     abbreviation="10Cb",

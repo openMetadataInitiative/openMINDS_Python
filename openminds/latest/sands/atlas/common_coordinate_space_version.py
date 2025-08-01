@@ -633,6 +633,24 @@ CommonCoordinateSpaceVersion.fsaverage_7 = CommonCoordinateSpaceVersion(
     version_identifier="7",
     version_innovation="This FsAverage Surface Space version has about 164k vertices per hemisphere.",
 )
+CommonCoordinateSpaceVersion.marmoset_nmt_v1 = CommonCoordinateSpaceVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MarmosetNMT_v1",
+    abbreviation="MarmosetNMT",
+    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/LPI"},
+    description="The Nencki-Monash (NM) template v1.0 (2020) represents a computational morphological average of selected gender-balanced young adult brains of the Common Marmoset monkey (Callithrix jacchus), derived from 3D reconstructions based on Nissl-stained serial sections.",
+    full_documentation={"@id": "https://www.marmosetbrain.org/nencki_monash_template/"},
+    full_name="The Marmoset Nencki-Monash Template in Stereotaxic Coordinates",
+    homepage=IRI("https://www.marmosetbrain.org/nencki_monash_template"),
+    how_to_cite="Majka, P., Bednarek, S., Chan, J. M., Jermakow, N., Liu, C., Saworska, G., Worthy, K. H., Silva, A. C., Wójcik, D. K., & Rosa, M. G. P. (2021). Histology-Based Average Template of the Marmoset Cortex With Probabilistic Localization of Cytoarchitectural Areas. NeuroImage, 226, 117625. https://doi.org/10.1016/j.neuroimage.2020.117625.",
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"},
+    native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
+    related_publications=[{"@id": "https://doi.org/10.1016/j.neuroimage.2020.117625"}],
+    release_date="2021-02-01",
+    short_name="Marmoset Nencki-Monash Template",
+    version_identifier="v1",
+    version_innovation="This is the first version of average histology.",
+)
 CommonCoordinateSpaceVersion.mebrain_stemplate_v1_0 = CommonCoordinateSpaceVersion(
     id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MEBRAINStemplate_v1.0",
     abbreviation="MEBRAINStemplate",
@@ -778,6 +796,21 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_6_g_sym = CommonCoordinateSpa
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="nonlinear 6th generation symmetric",
+)
+CommonCoordinateSpaceVersion.p__marmoset_bsc_cor_t_v2012__interaural_lsa = CommonCoordinateSpaceVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/P-MarmosetBSC-corT_v2012-Interaural-LSA",
+    abbreviation="P-MarmosetBSC-corT",
+    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/LSA"},
+    description="This coordinate space of the coronal plates from Paxinos et al. 'Marmoset Brain in Stereotaxic Coordinates' uses the midpoint of the interaural line as its origin. The coordinates of the origin in the physical coordinate system of the marmoset brain could not be determined from the information provided in the atlas publication. This coordinate space has LSA orientation (X, Y, Z axes are oriented towards left, superior and anterior, respectively). This was obtained by combining information provided in the pdf version of the 1st edition: (1) 'In the common marmoset, the horizontal zero plane is defined as the plane passing thorough the lower margin of the orbit and the center of the external auditory meatus (Figure B). The anteroposterior zero plane is defined as the plane perpendicular to the horizontal zero plane which passes the centers of the external auditory meati. The left-right zero plane is the midsagittal plane [...].' (quoted from chapter 'Introduction', subsection 'Histology', page IX). (2) Based on Figure C (chapter 'Introduction', subsection 'Histology', page X), the fiducial marks were made on the right hemisphere of the marmoset brain. These are visible in some of the photographic plates (e.g., Figure 187a) identifying the left hemisphere as delineated one. Thus, the coordinate system is oriented towards the left since the marmoset's left hemisphere has been used to draw the atlas. A pdf version of the atlas can be accessed from https://r.marmosetbrain.org/Atlas+Small.pdf or https://www.researchgate.net/publication/335871101_PDF_of_The_Marmoset_Brain_in_Stereotaxic_Coordinates.",
+    full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/978-0-12-415818-4"},
+    full_name="Paxinos et al. Coronal Template of the Marmoset Brain in Stereotaxic Coordinates",
+    homepage=IRI("http://www.neura.edu.au/research/themes/paxinos-group"),
+    native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
+    release_date="2011-10-11",
+    short_name="Paxinos et al. Stereotaxic Coronal Template (Marmoset Brain)",
+    version_identifier="v2012 (Interaural, LSA)",
+    version_innovation="This is the first version of this stereotaxic coordinate system.",
 )
 CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__bregma_lia = CommonCoordinateSpaceVersion(
     id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-LIA",

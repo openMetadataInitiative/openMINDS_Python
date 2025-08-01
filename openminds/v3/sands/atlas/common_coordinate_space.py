@@ -230,6 +230,17 @@ CommonCoordinateSpace.fsaverage = CommonCoordinateSpace(
     short_name="FsAverage Surface Space",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
 )
+CommonCoordinateSpace.marmoset_nmt = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/MarmosetNMT",
+    abbreviation="MarmosetNMT",
+    description="Stereotactic coordinate space of the coronal plane generated using computational average of histology sections.",
+    full_name="The Marmoset Nencki-Monash Template in Stereotaxic Coordinates",
+    has_versions=[{"@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/MarmosetNMT_v1"}],
+    homepage=IRI("https://www.marmosetbrain.org/nencki_monash_template"),
+    how_to_cite="Please refer to the template by its RRID:SCR_018367, and cite the publication of the version of the template you have used.",
+    short_name="Marmoset Nencki-Monash Template",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/callithrixJacchus"},
+)
 CommonCoordinateSpace.mebrain_stemplate = CommonCoordinateSpace(
     id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/MEBRAINStemplate",
     abbreviation="MEBRAINStemplate",
@@ -279,6 +290,20 @@ CommonCoordinateSpace.mni_icbm152 = CommonCoordinateSpace(
     homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
     short_name="MNI ICBM152",
     used_species={"@id": "https://openminds.ebrains.eu/instances/species/homoSapiens"},
+)
+CommonCoordinateSpace.p__marmoset_bsc_cor_t = CommonCoordinateSpace(
+    id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/P-MarmosetBSC-corT",
+    abbreviation="P-MarmosetBSC-corT",
+    description="Stereotactic coordinate space of the coronal plane.",
+    full_name="Paxinos et al. Coronal Template of the Marmoset Brain in Stereotaxic Coordinates",
+    has_versions=[
+        {
+            "@id": "https://openminds.ebrains.eu/instances/commonCoordinateSpaceVersion/P-MarmosetBSC-corT_v2012-Interaural-LSA"
+        }
+    ],
+    homepage=IRI("http://www.neura.edu.au/research/themes/paxinos-group"),
+    short_name="Paxinos et al. Stereotaxic Coronal Template (Marmoset Brain)",
+    used_species={"@id": "https://openminds.ebrains.eu/instances/species/callithrixJacchus"},
 )
 CommonCoordinateSpace.pw_rbsc_cor_t = CommonCoordinateSpace(
     id="https://openminds.ebrains.eu/instances/commonCoordinateSpace/PW-RBSC-corT",
