@@ -5,11 +5,11 @@
 # this file was auto-generated!
 
 
-from openminds.base import EmbeddedMetadata
+from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class CoordinatePoint(EmbeddedMetadata):
+class CoordinatePoint(LinkedMetadata):
     """
     <description not available>
     """
@@ -41,8 +41,9 @@ class CoordinatePoint(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, coordinate_space=None, coordinates=None):
+    def __init__(self, id=None, coordinate_space=None, coordinates=None):
         return super().__init__(
+            id=id,
             coordinate_space=coordinate_space,
             coordinates=coordinates,
         )

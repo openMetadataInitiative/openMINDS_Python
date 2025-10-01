@@ -523,7 +523,7 @@ BrainAtlasVersion.aal1_spm12_v4 = BrainAtlasVersion(
         ],
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcNd4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-ND-4.0"},
     short_name="AAL Atlas 1",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     version_identifier="SPM12, v4",
@@ -536,7 +536,7 @@ BrainAtlasVersion.amba_cc_fv3_2015 = BrainAtlasVersion(
     coordinate_space={"@id": "https://openminds.om-i.org/instances/commonCoordinateSpace/AMB-CCF_v3"},
     full_name="Allen Mouse Brain Atlas",
     has_terminology={
-        "@type": "https://openminds.om-i.org/types/ParcellationTerminology",
+        "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
         "dataLocation": None,
         "hasEntity": [
             {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/AMBA_CCFv3-2015_root"},
@@ -4052,7 +4052,7 @@ BrainAtlasVersion.amba_cc_fv3_2017 = BrainAtlasVersion(
     coordinate_space={"@id": "https://openminds.om-i.org/instances/commonCoordinateSpace/AMB-CCF_v3"},
     full_name="Allen Mouse Brain Atlas",
     has_terminology={
-        "@type": "https://openminds.om-i.org/types/ParcellationTerminology",
+        "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
         "dataLocation": None,
         "hasEntity": [
             {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/AMBA_CCFv3-2017_root"},
@@ -7788,7 +7788,7 @@ BrainAtlasVersion.dwma_2018 = BrainAtlasVersion(
         ],
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     short_name="Deep White Matter Atlas",
     version_identifier="2018",
     version_innovation="This is the first released version of this brain atlas.",
@@ -8009,7 +8009,7 @@ BrainAtlasVersion.jba_v1_13__colin27 = BrainAtlasVersion(
     },
     homepage=IRI("https://julich-brain-atlas.de/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2019)](https://doi.org/10.25493/Q3ZS-NV6).",
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v1.13",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -8326,7 +8326,7 @@ BrainAtlasVersion.jba_v1_18__colin27 = BrainAtlasVersion(
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2019)](https://doi.org/10.25493/8EGG-ZAR).",
     is_alternative_version_of=[{"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v1.18-MNI152"}],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v1.13-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v1.18",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -8617,7 +8617,7 @@ BrainAtlasVersion.jba_v1_18_mni152 = BrainAtlasVersion(
     homepage=IRI("https://julich-brain-atlas.de/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2019)](https://doi.org/10.25493/8EGG-ZAR).",
     is_alternative_version_of=[{"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v1.18-Colin27"}],
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v1.18",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -8961,7 +8961,7 @@ BrainAtlasVersion.jba_v2_2__colin27 = BrainAtlasVersion(
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2020)](https://doi.org/10.25493/TAKY-64D).",
     is_alternative_version_of=[{"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.2-MNI152"}],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v1.18-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.2",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -9228,7 +9228,7 @@ BrainAtlasVersion.jba_v2_2_mni152 = BrainAtlasVersion(
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2020)](https://doi.org/10.25493/TAKY-64D).",
     is_alternative_version_of=[{"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.2-Colin27"}],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v1.18-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.2",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -9571,7 +9571,7 @@ BrainAtlasVersion.jba_v2_4__colin27 = BrainAtlasVersion(
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2020)](https://doi.org/10.25493/A7Y0-NX9).",
     is_alternative_version_of=[{"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.4-MNI152"}],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.2-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.4",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -9838,7 +9838,7 @@ BrainAtlasVersion.jba_v2_4_mni152 = BrainAtlasVersion(
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2020)](https://doi.org/10.25493/A7Y0-NX9).",
     is_alternative_version_of=[{"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.4-Colin27"}],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.2-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.4",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -10186,7 +10186,7 @@ BrainAtlasVersion.jba_v2_5__colin27 = BrainAtlasVersion(
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2020)](https://doi.org/10.25493/8JKE-M53).",
     is_alternative_version_of=[{"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.5-MNI152"}],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.4-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.5",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -10460,7 +10460,7 @@ BrainAtlasVersion.jba_v2_5_mni152 = BrainAtlasVersion(
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2020)](https://doi.org/10.25493/8JKE-M53).",
     is_alternative_version_of=[{"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.5-Colin27"}],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.4-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.5",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -10733,7 +10733,7 @@ BrainAtlasVersion.jba_v2_6_mni152 = BrainAtlasVersion(
     homepage=IRI("https://julich-brain-atlas.de/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the following publications: [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001); [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588), [Amunts et al. (2021)](https://doi.org/10.25493/KJQN-AM0).",
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.5-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.6",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -10799,7 +10799,7 @@ BrainAtlasVersion.jba_v2_9__big_brain = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-fsaverage"},
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-MNI152"},
     ],
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.9",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -11220,7 +11220,7 @@ BrainAtlasVersion.jba_v2_9__colin27 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.5-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.9",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -11638,7 +11638,7 @@ BrainAtlasVersion.jba_v2_9_fsaverage = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-Colin27"},
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-MNI152"},
     ],
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.9",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -11959,7 +11959,7 @@ BrainAtlasVersion.jba_v2_9_mni152 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-fsaverage"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.6-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v2.9",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -12066,7 +12066,7 @@ BrainAtlasVersion.jba_v3_0_1__big_brain = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.1-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0-BigBrain"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.1",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -12588,7 +12588,7 @@ BrainAtlasVersion.jba_v3_0_1__colin27 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.1-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.1",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -13034,7 +13034,7 @@ BrainAtlasVersion.jba_v3_0_1_fsaverage = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.1-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0-fsaverage"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.1",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -13542,7 +13542,7 @@ BrainAtlasVersion.jba_v3_0_1_mni152 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.1-fsaverage"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.1",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -13649,7 +13649,7 @@ BrainAtlasVersion.jba_v3_0_2__big_brain = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.2-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.1-BigBrain"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.2",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -14171,7 +14171,7 @@ BrainAtlasVersion.jba_v3_0_2__colin27 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.2-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.1-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.2",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -14617,7 +14617,7 @@ BrainAtlasVersion.jba_v3_0_2_fsaverage = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.2-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.1-fsaverage"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.2",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -15125,7 +15125,7 @@ BrainAtlasVersion.jba_v3_0_2_mni152 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.2-fsaverage"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.1-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.2",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -15232,7 +15232,7 @@ BrainAtlasVersion.jba_v3_0_3__big_brain = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.3-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.2-BigBrain"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.3",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -15754,7 +15754,7 @@ BrainAtlasVersion.jba_v3_0_3__colin27 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.3-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.2-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.3",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -16200,7 +16200,7 @@ BrainAtlasVersion.jba_v3_0_3_fsaverage = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.3-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.2-fsaverage"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.3",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -16708,7 +16708,7 @@ BrainAtlasVersion.jba_v3_0_3_mni152 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.3-fsaverage"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0.2-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0.3",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -16775,7 +16775,7 @@ BrainAtlasVersion.jba_v3_0__big_brain = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-BigBrain"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -17261,7 +17261,7 @@ BrainAtlasVersion.jba_v3_0__colin27 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-Colin27"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -17695,7 +17695,7 @@ BrainAtlasVersion.jba_v3_0_fsaverage = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0-MNI152"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-fsaverage"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
@@ -18081,12 +18081,293 @@ BrainAtlasVersion.jba_v3_0_mni152 = BrainAtlasVersion(
         {"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v3.0-fsaverage"},
     ],
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/JBA_v2.9-MNI152"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     major_version_identifier="v3.0",
     short_name="Julich-Brain Atlas",
     support_channels=["julich-brain@fz-juelich.de"],
     type={"@id": "https://openminds.om-i.org/instances/atlasType/probabilisticAtlas"},
     version_identifier="v3.0, MNI152",
+)
+BrainAtlasVersion.marmoset_nma_v1 = BrainAtlasVersion(
+    id="https://openminds.om-i.org/instances/brainAtlasVersion/MarmosetNMA_v1",
+    abbreviation="MarmosetNMA",
+    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    coordinate_space={"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MarmosetNMT_v1"},
+    full_documentation={"@id": "https://www.marmosetbrain.org/nencki_monash_template"},
+    full_name="Marmoset Nencki-Monash Probabilistic Cytoarchitectonic Brain Atlas",
+    has_terminology={
+        "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
+        "dataLocation": None,
+        "hasEntity": [
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_agranularInsularCortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_amygdalopiriformTransitionArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_anteriorIntraparietalAreaOfCortex"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area10OfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area11OfCortex"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13OfCortexLateralPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13OfCortexMedialPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13aOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13bOfCortex"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area14OfCortexCaudalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area14OfCortexRostralPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area19OfCortexDorsointermediatePart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area19OfCortexMedialPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23OfCortexVentralPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23aOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23bOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23cOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24aOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24bOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24cOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24dOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area25OfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area29a-cOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area29dOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area30OfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area31OfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area32OfCortex"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area32OfCortexVentralPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area35OfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area36OfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area3aOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area3bOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area45OfCortex"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area46OfCortexDorsalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area46OfCortexVentralPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexLateralPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexMedialPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexOrbitalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area4OfCortexPartC"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area4OfCortexPartsAAndB"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexDorsocaudalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexDorsorostralPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexMedialPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexVentralPartA"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexVentralPartB"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8OfCortexCaudalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8aOfCortexDorsalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8aOfCortexVentralPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8bOfCortex"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area9OfCortex"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_areas1And2OfCortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexAnterolateralArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudalParabeltArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudolateralArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudomedialArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexMiddleLateralArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexPrimaryArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostralArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostralParabelt"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostromedialArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporal"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporalLateralArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporalMedialArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_dysgranularInsularCortex"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_entorhinalCortex"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_fundusOfSuperiorTemporalSulcusAreaOfCortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_granularInsularCortex"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_gustatoryCortex"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_insularProisocortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_lateralIntraparietalAreaOfCortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_medialIntraparietalAreaOfCortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_medialSuperiorTemporalAreaOfCortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_occipito-parietalTransitionalAreaOfCortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_orbitalPeriallocortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_orbitalProisocortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parainsularCortexLateralPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parainsularCortexMedialPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPE"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPECaudalPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPF"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPFG"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPG"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPGMedialPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreasPGaAndIPa"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_piriformCortex"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_primaryVisualCortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_proisocorticalMotorRegion"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_prostriateArea"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_retroinsularArea"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexExternalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexInternalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexParietalRostralArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexParietalVentralArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_superiorTemporalRostralArea"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE1"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE2"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE3"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTEOccipitalPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTF"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTFOccipitalPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTH"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTL"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTLOccipitalPart"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalProisocortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporo-parieto-occipitalAssociationArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporoparietalTransitionalArea"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporopolarProisocortex"
+            },
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_ventralIntraparietalAreaOfCortex"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea2"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea3"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea3A"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea4"},
+            {
+                "@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea4TransitionalPart"
+            },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea5"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea6"},
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea6A"},
+        ],
+        "ontologyIdentifier": None,
+    },
+    homepage=IRI("https://www.marmosetbrain.org/"),
+    how_to_cite="Majka, P., Bednarek, S., Chan, J. M., Jermakow, N., Liu, C., Saworska, G., Worthy, K. H., Silva, A. C., Wójcik, D. K., & Rosa, M. G. P. (2021). Histology-Based Average Template of the Marmoset Cortex With Probabilistic Localization of Cytoarchitectural Areas. NeuroImage, 226, 117625. https://doi.org/10.1016/j.neuroimage.2020.117625.",
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"},
+    related_publications=[{"@id": "https://doi.org/10.1016/j.neuroimage.2020.117625"}],
+    release_date="2021-02-01",
+    short_name="Marmoset Nencki-Monash Atlas",
+    support_channels=["support@marmosetbrain.org"],
+    type={"@id": "https://openminds.om-i.org/instances/atlasType/probabilisticAtlas"},
+    version_identifier="v1",
+    version_innovation="This is the first version of this atlas.",
 )
 BrainAtlasVersion.pw_rbsc_cor_6th_ed__bregma_lia = BrainAtlasVersion(
     id="https://openminds.om-i.org/instances/brainAtlasVersion/PW-RBSC-cor_6th-ed-Bregma-LIA",
@@ -29252,7 +29533,7 @@ BrainAtlasVersion.schaefer_400p_2018_fs_lr32k_kong17n = BrainAtlasVersion(
         "hasEntity": None,
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/mit"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/MIT"},
     major_version_identifier="2018",
     short_name="Schaefer Atlas (400p)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
@@ -29270,7 +29551,7 @@ BrainAtlasVersion.schaefer_400p_2018_fs_lr32k_yeo17n = BrainAtlasVersion(
         "hasEntity": None,
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/mit"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/MIT"},
     major_version_identifier="2018",
     short_name="Schaefer Atlas (400p)",
     version_identifier="2018, fsLR32k, yeo17n",
@@ -29287,7 +29568,7 @@ BrainAtlasVersion.schaefer_400p_2018_fs_lr32k_yeo7n = BrainAtlasVersion(
         "hasEntity": None,
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/mit"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/MIT"},
     major_version_identifier="2018",
     short_name="Schaefer Atlas (400p)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
@@ -29304,7 +29585,7 @@ BrainAtlasVersion.schaefer_400p_2018_fsl_mni152_kong17n = BrainAtlasVersion(
         "hasEntity": None,
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/mit"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/MIT"},
     major_version_identifier="2018",
     short_name="Schaefer Atlas (400p)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
@@ -29321,7 +29602,7 @@ BrainAtlasVersion.schaefer_400p_2018_fsl_mni152_yeo17n = BrainAtlasVersion(
         "hasEntity": None,
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/mit"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/MIT"},
     major_version_identifier="2018",
     short_name="Schaefer Atlas (400p)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
@@ -29338,7 +29619,7 @@ BrainAtlasVersion.schaefer_400p_2018_fsl_mni152_yeo7n = BrainAtlasVersion(
         "hasEntity": None,
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/mit"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/MIT"},
     major_version_identifier="2018",
     short_name="Schaefer Atlas (400p)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
@@ -32580,7 +32861,7 @@ BrainAtlasVersion.swanson_bm_3rd_ed = BrainAtlasVersion(
     },
     homepage=IRI("https://larrywswanson.com/?page_id=164"),
     how_to_cite="Swanson, L.W. (2004) Brain maps: structure of the rat brain, 3rd edition.",
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNc4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-4.0"},
     release_date="2003-11-24",
     short_name="Swanson's Brain Maps",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
@@ -32667,7 +32948,7 @@ BrainAtlasVersion.swma_2018 = BrainAtlasVersion(
         ],
         "ontologyIdentifier": None,
     },
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNcSa4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"},
     short_name="Superficial White Matter Atlas",
     version_identifier="2018",
     version_innovation="This is the first released version of this brain atlas.",
@@ -32874,7 +33155,7 @@ BrainAtlasVersion.whss_datlas_v1_01 = BrainAtlasVersion(
     },
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_001592](https://scicrunch.org/resolver/SCR_001592), and cite the following publications: [Papp et al. (2014)](https://doi.org/10.1016/j.neuroimage.2014.04.001); [Papp et al. (2015)](https://doi.org/10.1016/j.neuroimage.2014.10.017).",
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccBy4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"},
     related_publications=[{"@id": "https://doi.org/10.1016/j.neuroimage.2014.04.001"}],
     release_date="2014-07-17",
     short_name="Waxholm Space Rat Brain Atlas",
@@ -33064,7 +33345,7 @@ BrainAtlasVersion.whss_datlas_v2 = BrainAtlasVersion(
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_001592](https://scicrunch.org/resolver/SCR_001592), and cite the following publications: [Papp et al. (2014)](https://doi.org/10.1016/j.neuroimage.2014.04.001); [Kjonigsen et al. (2015)](https://doi.org/10.1016/j.neuroimage.2014.12.080).",
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/WHSSDatlas_v1.01"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccBy4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"},
     related_publications=[
         {"@id": "https://doi.org/10.1016/j.neuroimage.2014.04.001"},
         {"@id": "https://doi.org/10.1016/j.neuroimage.2014.10.017"},
@@ -33355,7 +33636,7 @@ BrainAtlasVersion.whss_datlas_v3 = BrainAtlasVersion(
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_001592](https://scicrunch.org/resolver/SCR_001592), and cite the following publications: [Papp et al. (2014)](https://doi.org/10.1016/j.neuroimage.2014.04.001); [Osen et al. (2019)](https://doi.org/10.1016/j.neuroimage.2019.05.016).",
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/WHSSDatlas_v2"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccBy4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"},
     related_publications=[
         {"@id": "https://doi.org/10.1016/j.neuroimage.2014.04.001"},
         {"@id": "https://doi.org/10.1016/j.neuroimage.2014.10.017"},
@@ -33677,7 +33958,7 @@ BrainAtlasVersion.whss_datlas_v3_01 = BrainAtlasVersion(
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_001592](https://scicrunch.org/resolver/SCR_001592), and cite the following publications: [Papp et al. (2014)](https://doi.org/10.1016/j.neuroimage.2014.04.001); [Osen et al. (2019)](https://doi.org/10.1016/j.neuroimage.2019.05.016).",
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/WHSSDatlas_v3"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccBy4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"},
     related_publications=[
         {"@id": "https://doi.org/10.1016/j.neuroimage.2014.04.001"},
         {"@id": "https://doi.org/10.1016/j.neuroimage.2014.10.017"},
@@ -34282,7 +34563,7 @@ BrainAtlasVersion.whss_datlas_v4 = BrainAtlasVersion(
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_001592](https://scicrunch.org/resolver/SCR_001592), and cite the following publications: [Papp et al. (2014)](https://doi.org/10.1016/j.neuroimage.2014.04.001); [Kleven et al. (2023)](https://doi.org/10.21203/rs.3.rs-2466303/v1).",
     is_new_version_of={"@id": "https://openminds.om-i.org/instances/brainAtlasVersion/WHSSDatlas_v3.01"},
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccBy4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"},
     related_publications=[
         {"@id": "https://doi.org/10.1016/j.neuroimage.2014.04.001"},
         {"@id": "https://doi.org/10.1016/j.neuroimage.2014.10.017"},

@@ -16,11 +16,13 @@ from .cell_culture_type import CellCultureType
 from .cell_type import CellType
 from .chemical_mixture_type import ChemicalMixtureType
 from .colormap import Colormap
+from .communication_protocol import CommunicationProtocol
 from .contribution_type import ContributionType
 from .cranial_window_construction_type import CranialWindowConstructionType
 from .cranial_window_reinforcement_type import CranialWindowReinforcementType
 from .criteria_quality_type import CriteriaQualityType
 from .data_type import DataType
+from .deployment_environment_type import DeploymentEnvironmentType
 from .device_type import DeviceType
 from .difference_measure import DifferenceMeasure
 from .disease import Disease
@@ -44,7 +46,7 @@ from .meta_data_model_type import MetaDataModelType
 from .model_abstraction_level import ModelAbstractionLevel
 from .model_scope import ModelScope
 from .molecular_entity import MolecularEntity
-from .mr_acquisition_type import MRAcquisitionType
+from .mr_spatial_encoding import MRSpatialEncoding
 from .mri_pulse_sequence import MRIPulseSequence
 from .mri_weighting import MRIWeighting
 from .olfactory_stimulus_type import OlfactoryStimulusType

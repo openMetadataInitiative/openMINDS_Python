@@ -206,12 +206,12 @@ Terminology.contribution_type = Terminology(
     name="contribution type",
 )
 Terminology.cranial_window_construction_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/CranialWindowConstructionType",
+    id="https://openminds.ebrains.eu/instances/terminology/cranialWindowConstructionType",
     definition="The construction type of a cranial window.",
     name="cranial window construction type",
 )
 Terminology.cranial_window_reinforcement_type = Terminology(
-    id="https://openminds.ebrains.eu/instances/terminology/CranialWindowReinforcementType",
+    id="https://openminds.ebrains.eu/instances/terminology/cranialWindowReinforcementType",
     definition="The reinforcement type of a cranial window.",
     name="cranial window reinforcement type",
 )

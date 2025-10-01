@@ -6,11 +6,11 @@ A representation of an array of quantitative values, optionally with uncertainti
 
 from numbers import Real
 
-from openminds.base import EmbeddedMetadata
+from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class QuantitativeValueArray(EmbeddedMetadata):
+class QuantitativeValueArray(LinkedMetadata):
     """
     A representation of an array of quantitative values, optionally with uncertainties.
     """
@@ -69,6 +69,7 @@ class QuantitativeValueArray(EmbeddedMetadata):
 
     def __init__(
         self,
+        id=None,
         negative_uncertainties=None,
         positive_uncertainties=None,
         type_of_uncertainty=None,
@@ -76,6 +77,7 @@ class QuantitativeValueArray(EmbeddedMetadata):
         values=None,
     ):
         return super().__init__(
+            id=id,
             negative_uncertainties=negative_uncertainties,
             positive_uncertainties=positive_uncertainties,
             type_of_uncertainty=type_of_uncertainty,

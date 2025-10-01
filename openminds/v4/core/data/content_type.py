@@ -885,6 +885,14 @@ ContentType.application_vnd_ilastik_projectplushdf5 = ContentType(
     name="application/vnd.ilastik.project+hdf5",
     synonyms=["ilastik project", "ilastik project file", "ILP"],
 )
+ContentType.application_vnd_illumina_annotated_sequenceplusfastq = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/application_vnd.illumina.annotated-sequence+fastq",
+    description="A text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores with a systematic identifier assigned by the Illumina software.",
+    file_extensions=[".fg", ".fg.gz"],
+    name="application/vnd.illumina.annotated-sequence+fastq",
+    specification=IRI("https://en.wikipedia.org/wiki/FASTQ_format"),
+    synonyms=["FASTQ Format", "Illumina FASTQ Format"],
+)
 ContentType.application_vnd_imacon = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.imacon",
     file_extensions=[".fff"],
@@ -1071,6 +1079,15 @@ ContentType.application_vnd_localizoom_lz = ContentType(
     name="application/vnd.localizoom.lz",
     synonyms=["LZ file"],
 )
+ContentType.application_vnd_locareplusjson = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/application_vnd.locare+json",
+    description="A text-based format for representing structured data based on JavaScript object syntax following the [LocareJSON schema specification](https://github.com/blixilla/LocareJSON).",
+    file_extensions=[".locare.json", ".json"],
+    name="application/vnd.locare+json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
+    specification=IRI("https://github.com/blixilla/LocareJSON"),
+    synonyms=["LocareJSON", "Locare JavaScript Object Notation"],
+)
 ContentType.application_vnd_ls_dyna = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.ls-dyna",
     file_extensions=[".d3plot"],
@@ -1238,6 +1255,24 @@ ContentType.application_vnd_nest = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.nest",
     file_extensions=[".gdf", ".dat"],
     name="application/vnd.nest",
+)
+ContentType.application_vnd_nest_desktop_model_v4plusjson = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/application_vnd.nest-desktop.model.v4+json",
+    description="A JSON file containing a computational model specification (version 4) for NEST Desktop",
+    display_label="NEST Desktop model (v4)",
+    file_extensions=[".json"],
+    name="application/vnd.nest-desktop.model.v4+json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
+    synonyms=["NEST Desktop model specification version 4"],
+)
+ContentType.application_vnd_nest_desktop_project_v4plusjson = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/application_vnd.nest-desktop.project.v4+json",
+    description="A JSON file containing a project configuration (version 4) for NEST Desktop",
+    display_label="NEST Desktop project configuration (v4)",
+    file_extensions=[".json"],
+    name="application/vnd.nest-desktop.project.v4+json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
+    synonyms=["NEST Desktop project specification version 4"],
 )
 ContentType.application_vnd_nest_simulator_modelpluspython = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.nest-simulator.model+python",
@@ -1739,6 +1774,20 @@ ContentType.application_vnd_seiko = ContentType(
     name="application/vnd.seiko",
     synonyms=["Seiko"],
 )
+ContentType.application_vnd_sequencereadarchive_annotated_sequenceplusfastq = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/application_vnd.sequencereadarchive.annotated-sequence+fastq",
+    description="A text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores often including a description added by the Sequence Read Archive.",
+    file_extensions=[".fg", ".fg.gz"],
+    name="application/vnd.sequencereadarchive.annotated-sequence+fastq",
+    specification=IRI("https://en.wikipedia.org/wiki/FASTQ_format"),
+    synonyms=[
+        "FASTQ Format",
+        "International Nucleotide Sequence Database Collaboration Sequence Read Archive FASTQ Format",
+        "INSDC Sequence Read Archive FASTQ Format",
+        "International Nucleotide Sequence Database Collaboration SRA FASTQ Format",
+        "INSDC SRA FASTQ Format",
+    ],
+)
 ContentType.application_vnd_siemens_ecat7 = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.siemens.ecat7",
     file_extensions=[".v"],
@@ -1784,6 +1833,18 @@ ContentType.application_vnd_spikeglx_system = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.spikeglx.system",
     name="application/vnd.spikeglx.system",
     synonyms=["SpikeGLX system"],
+)
+ContentType.application_vnd_spikeinterface_probeinterfaceplusjson = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/application_vnd.spikeinterface.probeinterface+json",
+    description="Validatable JSON file describing one or more probes by encoding each probe’s geometry (2D/3D and units), contact positions and shapes (with size params), optional shanks/contour, device-channel mapping, and annotations like manufacturer/model and version.",
+    display_label="probeinterface JSON",
+    file_extensions=[".json"],
+    name="application/vnd.spikeinterface.probeinterface+json",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
+    specification=IRI(
+        "https://raw.githubusercontent.com/SpikeInterface/probeinterface/main/src/probeinterface/schema/probe.json.schema"
+    ),
+    synonyms=["probeinterface JSON", "JSON-based probeinterface Format"],
 )
 ContentType.application_vnd_spm = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.spm",
@@ -2205,6 +2266,31 @@ ContentType.application_zip = ContentType(
     specification=IRI("https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"),
     synonyms=["ZIP", "ZIP file", "zipfile"],
 )
+ContentType.chemical_vnd_wwpdb_pdb_v3_30plusplain = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/chemical_vnd.wwpdb.pdb-v3.30+plain",
+    description="A textual file format describing the three-dimensional structures of molecules held in the [Protein Data Bank](https://www.rcsb.org/).",
+    file_extensions=[".brk", ".ent", ".pdb"],
+    name="chemical/vnd.wwpdb.pdb-v3.30+plain",
+    specification=IRI("https://www.wwpdb.org/documentation/file-format-content/format33/v3.3.html"),
+    synonyms=["chemical/pdb", "chemical/x-pdb", "Legacy PDB File Format", "Legacy Protein Data Bank File Format"],
+)
+ContentType.chemical_vnd_wwpdb_pdbml_v5plusxml = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/chemical_vnd.wwpdb.pdbml.v5+xml",
+    description="A XML serialization of the wwPDB’s PDBx/mmCIF data model, using tags from the PDBx/mmCIF dictionary to represent and distribute macromolecular structure data.",
+    file_extensions=[".xml"],
+    name="chemical/vnd.wwpdb.pdbml.v5+xml",
+    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/xml"),
+    specification=IRI("https://pdbml.wwpdb.org/"),
+    synonyms=["Protein Data Bank Markup Language", "PDB Markup Language", "PDBML"],
+)
+ContentType.chemical_vnd_wwpdb_pdbx_mmcif_v5plusplain = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/chemical_vnd.wwpdb.pdbx-mmcif.v5+plain",
+    description="A standard text file format for representing macromolecular structure data, developed by the International Union of Crystallography (IUCr) and the Protein Data Bank (PDB). [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Macromolecular_Crystallographic_Information_File)]",
+    file_extensions=[".mmcif"],
+    name="chemical/vnd.wwpdb.pdbx-mmcif.v5+plain",
+    specification=IRI("https://mmcif.wwpdb.org/docs/user-guide/guide.html"),
+    synonyms=["chemical/x-mmcif", "Macromolecular Crystallographic Information File Format", "mmCIF", "PDBx/mmCIF"],
+)
 ContentType.image_bmp = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/image_bmp",
     file_extensions=[".bmp"],
@@ -2496,6 +2582,14 @@ ContentType.text_x_cmlplusxml = ContentType(
     file_extensions=[".cml"],
     name="text/x-cml+xml",
     specification=IRI("http://www.xml-cml.org/schema/schema3/schema.xsd"),
+)
+ContentType.text_x_fastq = ContentType(
+    id="https://openminds.om-i.org/instances/contentTypes/text_x-fastq",
+    description="A text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores.",
+    file_extensions=[".fg", ".fg.gz"],
+    name="text/x-fastq",
+    specification=IRI("https://en.wikipedia.org/wiki/FASTQ_format"),
+    synonyms=["FASTQ Format"],
 )
 ContentType.text_x_matlab = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/text_x-matlab",

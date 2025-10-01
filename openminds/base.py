@@ -92,6 +92,17 @@ class Node(metaclass=Registry):
                             )
                             for item in value
                         ]
+                elif isinstance(value, (tuple, list)):
+                    # if property.multiple is False, then this means the node does not validate,
+                    # but we should try to serialize it anyway
+                    data[property.path] = [
+                        value_to_jsonld(
+                            item,
+                            include_empty_properties=include_empty_properties,
+                            embed_linked_nodes=embed_linked_nodes,
+                        )
+                        for item in value
+                    ]
                 else:
                     data[property.path] = value_to_jsonld(
                         value,
@@ -173,7 +184,7 @@ class Node(metaclass=Registry):
         for property in self.__class__.properties:
             value = getattr(self, property.name)
             if isinstance(value, Link):
-                resolved_value = node_lookup[value.identifier]
+                resolved_value = node_lookup.get(value.identifier, value)
                 setattr(self, property.name, resolved_value)
             elif hasattr(value, "_resolve_links"):
                 value._resolve_links(node_lookup)

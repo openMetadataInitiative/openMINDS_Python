@@ -137,7 +137,7 @@ ExperimentalApproach.behavior = ExperimentalApproach(
 )
 ExperimentalApproach.biophysics = ExperimentalApproach(
     id="https://openminds.ebrains.eu/instances/experimentalApproach/biophysics",
-    definition="'Biophysics' covers any experimental approach that is traditionally used in physics, but applied and modified to study biological phenomena. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Biophysics)]",
+    definition="Any experimental approach that is traditionally used in physics, but applied and modified to study biological phenomena. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Biophysics)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0793772"),
     name="biophysics",
 )
@@ -274,7 +274,7 @@ ExperimentalApproach.expression_characterization = ExperimentalApproach(
 )
 ExperimentalApproach.genetics = ExperimentalApproach(
     id="https://openminds.ebrains.eu/instances/experimentalApproach/genetics",
-    definition="Experimental approach that measures or manipulates some aspect of the genetic material of an organism.",
+    definition="Any experimental approach that measures or manipulates some aspect of the genetic material of an organism.",
     name="genetics",
 )
 ExperimentalApproach.genomics = ExperimentalApproach(
@@ -360,9 +360,15 @@ ExperimentalApproach.optogenetics = ExperimentalApproach(
     definition="Any experimental approach focused on using genetically encoded light-sensitive proteins in combination with targeted delivery of light in order to manipulate the behavior of populations of cells.",
     name="optogenetics",
 )
+ExperimentalApproach.pathology = ExperimentalApproach(
+    id="https://openminds.ebrains.eu/instances/experimentalApproach/pathology",
+    definition="Any experimental approach that aims to identify or classify the causes and effects of diseases, disorders, injuries, or other abnormal biology.",
+    name="pathology",
+    synonyms=["pathological approach"],
+)
 ExperimentalApproach.pharmacology = ExperimentalApproach(
     id="https://openminds.ebrains.eu/instances/experimentalApproach/pharmacology",
-    definition="'Pharmacology' is an experimental approach in which the composition, properties, functions, sources, synthesis and design of drugs (any artificial, natural, or endogenous molecule) and their biochemical or physiological effect (normal or abnormal) on a cell, tissue, organ, or organism are studied. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Pharmacology)]",
+    definition="Any experimental approach in which the composition, properties, functions, sources, synthesis and design of drugs (any artificial, natural, or endogenous molecule) and their biochemical or physiological effect (normal or abnormal) on a cell, tissue, organ, or organism are studied. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Pharmacology)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0108784"),
     name="pharmacology",
     preferred_ontology_identifier=IRI("http://edamontology.org/topic_0202"),

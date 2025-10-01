@@ -131,8 +131,8 @@ SoftwareFeature.augmented_reality = SoftwareFeature(
     name="augmented reality",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q254183"),
 )
-SoftwareFeature.commandline_interface = SoftwareFeature(
-    id="https://openminds.ebrains.eu/instances/softwareFeature/commandlineInterface",
+SoftwareFeature.command_line_interface = SoftwareFeature(
+    id="https://openminds.ebrains.eu/instances/softwareFeature/commandLineInterface",
     definition="A text-based system that enables users to interact with a computer or software by entering commands, allowing them to perform specific tasks or operations.",
     name="command line interface",
     preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q189053"),

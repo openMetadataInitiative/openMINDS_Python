@@ -126,6 +126,14 @@ Species.berghia_stephanieae = Species(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_1287507"),
     synonyms=["aeolidiella stephanieae"],
 )
+Species.bos_taurus = Species(
+    id="https://openminds.ebrains.eu/instances/species/bosTaurus",
+    definition="Cattle (Bos taurus) are large, domesticated, bovid ungulates widely kept as livestock.",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101393"),
+    name="Bos taurus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9913"),
+    synonyms=["bovine", "ox", "cow", "dairy cow", "domestic cattle", "domestic cow"],
+)
 Species.callithrix_jacchus = Species(
     id="https://openminds.ebrains.eu/instances/species/callithrixJacchus",
     definition="The species *Callithrix jacchus* (common marmoset) belongs to the family of *callitrichidae* (new world monkeys).",
@@ -174,6 +182,14 @@ Species.chlorocebus_pygerythrus = Species(
         "vervet monkey",
     ],
 )
+Species.cricetulus_griseus = Species(
+    id="https://openminds.ebrains.eu/instances/species/cricetulusGriseus",
+    definition="The Chinese hamster (Cricetulus griseus or Cricetulus aureus) is a rodent in the genus Cricetulus of the subfamily Cricetidae.",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102635"),
+    name="Cricetulus griseus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10029"),
+    synonyms=["Cricetulus aureus", "Chinese hamster"],
+)
 Species.danio_rerio = Species(
     id="https://openminds.ebrains.eu/instances/species/danioRerio",
     definition="The species *Danio rerio* (zebrafish) belongs to the family of *cyprinidae* (cyprinids, freshwater fish).",
@@ -192,6 +208,14 @@ Species.danio_rerio = Species(
         "zebra fish",
         "zebrafish",
     ],
+)
+Species.drosophila_melanogaster = Species(
+    id="https://openminds.ebrains.eu/instances/species/drosophilaMelanogaster",
+    definition="The species *Drosophila melanogaster* (fruit fly) belongs to the family of *Drosophilidae*.",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0103567"),
+    name="Drosophila melanogaster",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_7227"),
+    synonyms=["fruit fly"],
 )
 Species.felis_catus = Species(
     id="https://openminds.ebrains.eu/instances/species/felisCatus",
@@ -241,6 +265,27 @@ Species.macaca_mulatta = Species(
     name="Macaca mulatta",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9544"),
     synonyms=["rhesus macaque", "rhesus monkey"],
+)
+Species.macaca_nemestrina = Species(
+    id="https://openminds.ebrains.eu/instances/species/macacaNemestrina",
+    definition="The species *Macaca nemestrina* (southern pig-tailed macaque) belongs to the family of *cercopithecidae* (old world monkeys).",
+    name="Macaca nemestrina",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9545"),
+    synonyms=[
+        "pig-tailed macaque",
+        "pigtail monkey",
+        "pigtail macaque",
+        "Sundaland pig-tailed macaque",
+        "Sunda pig-tailed macaque",
+        "beruk",
+    ],
+)
+Species.meriones_unguiculatus = Species(
+    id="https://openminds.ebrains.eu/instances/species/merionesUnguiculatus",
+    definition="The Mongolian gerbil, also referred to as the Mongolian jird (Meriones unguiculatus), is a rodent belonging to the subfamily Gerbillinae. [Wikipedia]",
+    name="Meriones unguiculatus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10047"),
+    synonyms=["Mongolian gerbil", "Mongolian jird"],
 )
 Species.monodelphis_domestica = Species(
     id="https://openminds.ebrains.eu/instances/species/monodelphisDomestica",

@@ -335,3 +335,9 @@ License.mpl_2_0 = License(
         "https://opensource.org/licenses/MPL-2.0",
     ],
 )
+License.youtube = License(
+    id="https://openminds.ebrains.eu/instances/licenses/youtube",
+    full_name="Standard YouTube License",
+    legal_code=IRI("https://www.youtube.com/t/terms"),
+    short_name="youtube",
+)

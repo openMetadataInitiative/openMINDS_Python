@@ -232807,6 +232807,6595 @@ ParcellationEntityVersion.jba_v3_0_mni152_vtm_pm_v8_2 = ParcellationEntityVersio
     name="VTM (Amygdala)",
     version_identifier="v3.0-MNI152, PM-v8.2",
 )
+ParcellationEntityVersion.marmoset_nma_v1_agranular_insular_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_agranularInsularCortex",
+    abbreviation="AI",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "50",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "50",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E95900"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    lookup_label="MarmosetNMA_v1_agranularInsularCortex",
+    name="agranular insular cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_amygdalopiriform_transition_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_amygdalopiriformTransitionArea",
+    abbreviation="APir",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "52",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "52",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#00FF26"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateropallialPart"}],
+    lookup_label="MarmosetNMA_v1_amygdalopiriformTransitionArea",
+    name="amygdalopiriform transition area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_anterior_intraparietal_area_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_anteriorIntraparietalAreaOfCortex",
+    abbreviation="AIP",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "51",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "51",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FEFF76"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_anteriorIntraparietalAreaOfCortex",
+    name="anterior intraparietal area of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area10_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area10OfCortex",
+    abbreviation="A10",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "2",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "2",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF6D3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area10OfCortex",
+    name="area 10 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area11_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area11OfCortex",
+    abbreviation="A11",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "3",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "3",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E9BF3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    lookup_label="MarmosetNMA_v1_area11OfCortex",
+    name="area 11 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area13_of_cortex_lateral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13OfCortexLateralPart",
+    abbreviation="A13L",
+    alternate_names=["area 13 of cortex, lateral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "4",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "4",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E9CF76"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    lookup_label="MarmosetNMA_v1_area13OfCortexLateralPart",
+    name="area 13 of cortex lateral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area13_of_cortex_medial_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13OfCortexMedialPart",
+    abbreviation="A13M",
+    alternate_names=["area 13 of cortex, medial part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "5",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "5",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFC700"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    lookup_label="MarmosetNMA_v1_area13OfCortexMedialPart",
+    name="area 13 of cortex medial part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area13a_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13aOfCortex",
+    abbreviation="A13a",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "6",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "6",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D4A800"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    lookup_label="MarmosetNMA_v1_area13aOfCortex",
+    name="area 13a of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area13b_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area13bOfCortex",
+    abbreviation="A13b",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "7",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "7",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E9BC00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    lookup_label="MarmosetNMA_v1_area13bOfCortex",
+    name="area 13b of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area14_of_cortex_caudal_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area14OfCortexCaudalPart",
+    abbreviation="A14C",
+    alternate_names=["area 14 of cortex, caudal part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "8",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "8",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E99400"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area14OfCortexCaudalPart",
+    name="area 14 of cortex caudal part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area14_of_cortex_rostral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area14OfCortexRostralPart",
+    abbreviation="A14R",
+    alternate_names=["area 14 of cortex, rostral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "9",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "9",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E9B759"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area14OfCortexRostralPart",
+    name="area 14 of cortex rostral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area19_of_cortex_dorsointermediate_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area19OfCortexDorsointermediatePart",
+    abbreviation="A19DI",
+    alternate_names=["area 19 of cortex, dorsointermediate part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "10",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "10",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D1FF85"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_area19OfCortexDorsointermediatePart",
+    name="area 19 of cortex dorsointermediate part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area19_of_cortex_medial_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area19OfCortexMedialPart",
+    abbreviation="A19M",
+    alternate_names=["area 19 of cortex, medial part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "11",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "11",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#93EF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_area19OfCortexMedialPart",
+    name="area 19 of cortex medial part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area23_of_cortex_ventral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23OfCortexVentralPart",
+    abbreviation="A23V",
+    alternate_names=["area 23 of cortex, ventral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "12",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "12",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFE73B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_area23OfCortexVentralPart",
+    name="area 23 of cortex ventral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area23a_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23aOfCortex",
+    abbreviation="A23a",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "13",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "13",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFF6B2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_area23aOfCortex",
+    name="area 23a of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area23b_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23bOfCortex",
+    abbreviation="A23b",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "14",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "14",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EFDC3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_area23bOfCortex",
+    name="area 23b of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area23c_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area23cOfCortex",
+    abbreviation="A23c",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "15",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "15",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DFD576"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_area23cOfCortex",
+    name="area 23c of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area24a_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24aOfCortex",
+    abbreviation="A24a",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "16",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "16",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFB3B2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area24aOfCortex",
+    name="area 24a of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area24b_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24bOfCortex",
+    abbreviation="A24b",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "17",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "17",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DF0800"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area24bOfCortex",
+    name="area 24b of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area24c_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24cOfCortex",
+    abbreviation="A24c",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "18",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "18",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF6359"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area24cOfCortex",
+    name="area 24c of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area24d_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area24dOfCortex",
+    abbreviation="A24d",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "19",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "19",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF1600"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_anteriorCingulateCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area24dOfCortex",
+    name="area 24d of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area25_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area25OfCortex",
+    abbreviation="A25",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "20",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "20",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFE6B2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area25OfCortex",
+    name="area 25 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area29a_c_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area29a-cOfCortex",
+    abbreviation="A29a-c",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "21",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "21",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DFD13B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_area29a-cOfCortex",
+    name="area 29a-c of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area29d_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area29dOfCortex",
+    abbreviation="A29d",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "22",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "22",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EFE676"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_area29dOfCortex",
+    name="area 29d of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area30_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area30OfCortex",
+    abbreviation="A30",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "23",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "23",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFEF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_area30OfCortex",
+    name="area 30 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area31_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area31OfCortex",
+    abbreviation="A31",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "24",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "24",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFF876"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_area31OfCortex",
+    name="area 31 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area32_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area32OfCortex",
+    abbreviation="A32",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "25",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "25",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFB100"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area32OfCortex",
+    name="area 32 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area32_of_cortex_ventral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area32OfCortexVentralPart",
+    abbreviation="A32V",
+    alternate_names=["area 32 of cortex, ventral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "26",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "26",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFCF59"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_medialPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area32OfCortexVentralPart",
+    name="area 32 of cortex ventral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area35_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area35OfCortex",
+    abbreviation="A35",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "27",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "27",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#4ED400"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    lookup_label="MarmosetNMA_v1_area35OfCortex",
+    name="area 35 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area36_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area36OfCortex",
+    abbreviation="A36",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "28",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "28",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#A0E976"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    lookup_label="MarmosetNMA_v1_area36OfCortex",
+    name="area 36 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area3a_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area3aOfCortex",
+    abbreviation="A3a",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "29",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "29",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#CAFF3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    lookup_label="MarmosetNMA_v1_area3aOfCortex",
+    name="area 3a of cortex (somatosensory)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area3b_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area3bOfCortex",
+    abbreviation="A3b",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "30",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "30",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D8FF76"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    lookup_label="MarmosetNMA_v1_area3bOfCortex",
+    name="area 3b of cortex (somatosensory)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area45_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area45OfCortex",
+    abbreviation="A45",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "31",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "31",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#72E900"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area45OfCortex",
+    name="area 45 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area46_of_cortex_dorsal_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area46OfCortexDorsalPart",
+    abbreviation="A46D",
+    alternate_names=["area 46 of cortex, dorsal part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "32",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "32",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E99676"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area46OfCortexDorsalPart",
+    name="area 46 of cortex dorsal part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area46_of_cortex_ventral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area46OfCortexVentralPart",
+    abbreviation="A46V",
+    alternate_names=["area 46 of cortex, ventral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "33",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "33",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF9D76"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area46OfCortexVentralPart",
+    name="area 46 of cortex ventral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area47_of_cortex_lateral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexLateralPart",
+    abbreviation="A47L(12L)",
+    alternate_names=["area 47 (old 12) of cortex, lateral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "34",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "34",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D6FFB2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area47OfCortexLateralPart",
+    name="area 47 (old 12) of cortex lateral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area47_of_cortex_medial_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexMedialPart",
+    abbreviation="A47M(12M)",
+    alternate_names=["area 47 (old 12) of cortex, medial part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "35",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "35",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#73FF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area47OfCortexMedialPart",
+    name="area 47 (old 12) of cortex medial part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area47_of_cortex_orbital_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area47OfCortexOrbitalPart",
+    abbreviation="A47O(12O)",
+    alternate_names=["area 47 (old 12) of cortex, orbital part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "36",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "36",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#A0FF59"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area47OfCortexOrbitalPart",
+    name="area 47 (old 12) of cortex orbital part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area4_of_cortex_part_c = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area4OfCortexPartC",
+    abbreviation="A4c",
+    alternate_names=["area 4 of cortex, part c (primary motor)"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "38",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "38",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#C8E900"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    lookup_label="MarmosetNMA_v1_area4OfCortexPartC",
+    name="area 4 of cortex part c (primary motor)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area4_of_cortex_parts_a_and_b = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area4OfCortexPartsAAndB",
+    abbreviation="A4ab",
+    alternate_names=["area 4 of cortex, parts a and b (primary motor)"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "37",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "37",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EDFF76"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    lookup_label="MarmosetNMA_v1_area4OfCortexPartsAAndB",
+    name="area 4 of cortex parts a and b (primary motor)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area6_of_cortex_dorsocaudal_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexDorsocaudalPart",
+    abbreviation="A6DC",
+    alternate_names=["area 6 of cortex, dorsocaudal part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "39",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "39",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E0FF3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    lookup_label="MarmosetNMA_v1_area6OfCortexDorsocaudalPart",
+    name="area 6 of cortex dorsocaudal part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area6_of_cortex_dorsorostral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexDorsorostralPart",
+    abbreviation="A6DR",
+    alternate_names=["area 6 of cortex, dorsorostral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "40",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "40",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#B0D400"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    lookup_label="MarmosetNMA_v1_area6OfCortexDorsorostralPart",
+    name="area 6 of cortex dorsorostral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area6_of_cortex_medial_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexMedialPart",
+    abbreviation="A6M",
+    alternate_names=["area 6 of cortex, medial (supplementary motor) part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "41",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "41",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D0FF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    lookup_label="MarmosetNMA_v1_area6OfCortexMedialPart",
+    name="area 6 of cortex medial (supplementary motor) part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area6_of_cortex_ventral_part_a = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexVentralPartA",
+    abbreviation="A6Va",
+    alternate_names=["area 6 of cortex, ventral, part a"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "42",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "42",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#C8E93B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    lookup_label="MarmosetNMA_v1_area6OfCortexVentralPartA",
+    name="area 6 of cortex ventral part a",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area6_of_cortex_ventral_part_b = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area6OfCortexVentralPartB",
+    abbreviation="A6Vb",
+    alternate_names=["area 6 of cortex, ventral, part b"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "43",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "43",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EFFFB2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    lookup_label="MarmosetNMA_v1_area6OfCortexVentralPartB",
+    name="area 6 of cortex ventral part b",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area8_of_cortex_caudal_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8OfCortexCaudalPart",
+    abbreviation="A8C",
+    alternate_names=["area 8 of cortex, caudal part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "44",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "44",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D0E976"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_motorAndPremotorCorticalRegions"}
+    ],
+    lookup_label="MarmosetNMA_v1_area8OfCortexCaudalPart",
+    name="area 8 of cortex caudal part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area8a_of_cortex_dorsal_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8aOfCortexDorsalPart",
+    abbreviation="A8aD",
+    alternate_names=["area 8a of cortex, dorsal part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "45",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "45",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E96F3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area8aOfCortexDorsalPart",
+    name="area 8a of cortex dorsal part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area8a_of_cortex_ventral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8aOfCortexVentralPart",
+    abbreviation="A8aV",
+    alternate_names=["area 8a of cortex, ventral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "46",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "46",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFCAB2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area8aOfCortexVentralPart",
+    name="area 8a of cortex ventral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area8b_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area8bOfCortex",
+    abbreviation="A8b",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "47",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "47",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF5300"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area8bOfCortex",
+    name="area 8b of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_area9_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_area9OfCortex",
+    abbreviation="A9",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "48",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "48",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E95000"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_dorsolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_area9OfCortex",
+    name="area 9 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_areas1_and2_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_areas1And2OfCortex",
+    abbreviation="A1/2",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "1",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "1",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#BDE93B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    lookup_label="MarmosetNMA_v1_areas1And2OfCortex",
+    name="areas 1 and 2 of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_anterolateral_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexAnterolateralArea",
+    abbreviation="AuAL",
+    alternate_names=["auditory cortex, anterolateral area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "55",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "55",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EF472C"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexAnterolateralArea",
+    name="auditory cortex anterolateral area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_caudal_parabelt_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudalParabeltArea",
+    abbreviation="AuCPB",
+    alternate_names=["auditory cortex, caudal parabelt area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "58",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "58",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF4D2C"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexCaudalParabeltArea",
+    name="auditory cortex caudal parabelt area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_caudolateral_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudolateralArea",
+    abbreviation="AuCL",
+    alternate_names=["auditory cortex, caudolateral area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "56",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "56",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EF6E59"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexCaudolateralArea",
+    name="auditory cortex caudolateral area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_caudomedial_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexCaudomedialArea",
+    abbreviation="AuCM",
+    alternate_names=["auditory cortex, caudomedial area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "57",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "57",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EF2300"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexCaudomedialArea",
+    name="auditory cortex caudomedial area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_middle_lateral_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexMiddleLateralArea",
+    abbreviation="AuML",
+    alternate_names=["auditory cortex, middle lateral area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "59",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "59",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF2900"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexMiddleLateralArea",
+    name="auditory cortex middle lateral area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_primary_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexPrimaryArea",
+    abbreviation="AuA1",
+    alternate_names=["auditory cortex, primary area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "54",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "54",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DF1C00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexPrimaryArea",
+    name="auditory cortex primary area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_rostral_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostralArea",
+    abbreviation="AuR",
+    alternate_names=["auditory cortex, rostral area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "60",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "60",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DF7059"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexRostralArea",
+    name="auditory cortex rostral area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_rostral_parabelt = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostralParabelt",
+    abbreviation="AuRPB",
+    alternate_names=["auditory cortex, rostral parabelt"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "62",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "62",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#CF4A2C"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexRostralParabelt",
+    name="auditory cortex rostral parabelt",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_rostromedial_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostromedialArea",
+    abbreviation="AuRM",
+    alternate_names=["auditory cortex, rostromedial area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "61",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "61",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DF9585"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexRostromedialArea",
+    name="auditory cortex rostromedial area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_rostrotemporal = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporal",
+    abbreviation="AuRT",
+    alternate_names=["auditory cortex, rostrotemporal"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "63",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "63",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF7959"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexRostrotemporal",
+    name="auditory cortex rostrotemporal",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_rostrotemporal_lateral_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporalLateralArea",
+    abbreviation="AuRTL",
+    alternate_names=["auditory cortex, rostrotemporal lateral area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "64",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "64",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EF9A85"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexRostrotemporalLateralArea",
+    name="auditory cortex rostrotemporal lateral area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_auditory_cortex_rostrotemporal_medial_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_auditoryCortexRostrotemporalMedialArea",
+    abbreviation="AuRTM",
+    alternate_names=["auditory cortex, rostrotemporal medial area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "65",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "65",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#CF2B00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_auditoryCortexRostrotemporalMedialArea",
+    name="auditory cortex rostrotemporal medial area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_dysgranular_insular_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_dysgranularInsularCortex",
+    abbreviation="DI",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "67",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "67",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E9A476"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    lookup_label="MarmosetNMA_v1_dysgranularInsularCortex",
+    name="dysgranular insular cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_entorhinal_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_entorhinalCortex",
+    abbreviation="Ent",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "70",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "70",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#50E900"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    lookup_label="MarmosetNMA_v1_entorhinalCortex",
+    name="entorhinal cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_fundus_of_superior_temporal_sulcus_area_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_fundusOfSuperiorTemporalSulcusAreaOfCortex",
+    abbreviation="FST",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "71",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "71",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#99DF2C"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_fundusOfSuperiorTemporalSulcusAreaOfCortex",
+    name="fundus of superior temporal sulcus area of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_granular_insular_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_granularInsularCortex",
+    abbreviation="GI",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "72",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "72",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D45600"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    lookup_label="MarmosetNMA_v1_granularInsularCortex",
+    name="granular insular cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_gustatory_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_gustatoryCortex",
+    abbreviation="Gu",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "73",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "73",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFDB3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    lookup_label="MarmosetNMA_v1_gustatoryCortex",
+    name="gustatory cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_insular_proisocortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_insularProisocortex",
+    abbreviation="IPro",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "75",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "75",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFD2B2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    lookup_label="MarmosetNMA_v1_insularProisocortex",
+    name="insular proisocortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_lateral_intraparietal_area_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_lateralIntraparietalAreaOfCortex",
+    abbreviation="LIP",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "76",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "76",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DDDF76"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_lateralIntraparietalAreaOfCortex",
+    name="lateral intraparietal area of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_medial_intraparietal_area_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_medialIntraparietalAreaOfCortex",
+    abbreviation="MIP",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "79",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "79",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EAEF3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_medialIntraparietalAreaOfCortex",
+    name="medial intraparietal area of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_medial_superior_temporal_area_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_medialSuperiorTemporalAreaOfCortex",
+    abbreviation="MST",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "81",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "81",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#A9DF59"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_medialSuperiorTemporalAreaOfCortex",
+    name="medial superior temporal area of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_occipito_parietal_transitional_area_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_occipito-parietalTransitionalAreaOfCortex",
+    abbreviation="OPt",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "85",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "85",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E6EF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_occipito-parietalTransitionalAreaOfCortex",
+    name="occipito-parietal transitional area of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_orbital_periallocortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_orbitalPeriallocortex",
+    abbreviation="OPAl",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "83",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "83",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFE876"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    lookup_label="MarmosetNMA_v1_orbitalPeriallocortex",
+    name="orbital periallocortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_orbital_proisocortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_orbitalProisocortex",
+    abbreviation="OPro",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "84",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "84",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFF3B2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_orbitalFrontalCortex"}],
+    lookup_label="MarmosetNMA_v1_orbitalProisocortex",
+    name="orbital proisocortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parainsular_cortex_lateral_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parainsularCortexLateralPart",
+    abbreviation="PaIL",
+    alternate_names=["parainsular cortex, lateral part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "96",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "96",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF6E00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    lookup_label="MarmosetNMA_v1_parainsularCortexLateralPart",
+    name="parainsular cortex lateral part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parainsular_cortex_medial_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parainsularCortexMedialPart",
+    abbreviation="PaIM",
+    alternate_names=["parainsular cortex, medial part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "97",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "97",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFB376"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    lookup_label="MarmosetNMA_v1_parainsularCortexMedialPart",
+    name="parainsular cortex medial part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parietal_area_pe = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPE",
+    abbreviation="PE",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "87",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "87",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E9EF76"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_parietalAreaPE",
+    name="parietal area PE",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parietal_area_pe_caudal_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPECaudalPart",
+    abbreviation="PEC",
+    alternate_names=["parietal area PE, caudal part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "88",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "88",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D2DF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_parietalAreaPECaudalPart",
+    name="parietal area PE caudal part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parietal_area_pf = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPF",
+    abbreviation="PF",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "89",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "89",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#D4DF3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_parietalAreaPF",
+    name="parietal area PF (cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parietal_area_pfg = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPFG",
+    abbreviation="PFG",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "90",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "90",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#F0FF3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_parietalAreaPFG",
+    name="parietal area PFG (cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parietal_area_pg = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPG",
+    abbreviation="PG",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "91",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "91",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#F8FFB2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_parietalAreaPG",
+    name="parietal area PG",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parietal_area_pg_medial_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreaPGMedialPart",
+    abbreviation="PGM",
+    alternate_names=["parietal area PG, medial part (cortex)"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "92",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "92",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DFD600"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_parietalAreaPGMedialPart",
+    name="parietal area PG medial part (cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_parietal_areas_p_ga_and_i_pa = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_parietalAreasPGaAndIPa",
+    abbreviation="PGa/IPa(FSTv)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "93",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "93",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF9E3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_parietalAreasPGaAndIPa",
+    name="parietal areas PGa and IPa (fundus of superior temporal ventral area)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_piriform_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_piriformCortex",
+    abbreviation="Pir",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "100",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "100",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#00FFA5"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralPallium"}],
+    lookup_label="MarmosetNMA_v1_piriformCortex",
+    name="piriform cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_primary_visual_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_primaryVisualCortex",
+    abbreviation="V1",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "126",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "126",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#BBFF59"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_primaryVisualCortex",
+    name="primary visual cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_proisocortical_motor_region = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_proisocorticalMotorRegion",
+    abbreviation="ProM(PrCO)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "103",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "103",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#94E959"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventrolateralPrefrontalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_proisocorticalMotorRegion",
+    name="proisocortical motor region (precentral opercular cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_prostriate_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_prostriateArea",
+    abbreviation="ProSt",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "104",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "104",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#EFE700"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorCingulateMedialAndRetrosplenialCorticalRegions"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_prostriateArea",
+    name="prostriate area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_retroinsular_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_retroinsularArea",
+    abbreviation="ReI",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "105",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "105",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E98B3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    lookup_label="MarmosetNMA_v1_retroinsularArea",
+    name="retroinsular area (cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_secondary_somatosensory_cortex_external_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexExternalPart",
+    abbreviation="S2E",
+    alternate_names=["secondary somatosensory cortex, external part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "106",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "106",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E8FFB2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    lookup_label="MarmosetNMA_v1_secondarySomatosensoryCortexExternalPart",
+    name="secondary somatosensory cortex external part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_secondary_somatosensory_cortex_internal_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexInternalPart",
+    abbreviation="S2I",
+    alternate_names=["secondary somatosensory cortex, internal part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "107",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "107",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#C5E976"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    lookup_label="MarmosetNMA_v1_secondarySomatosensoryCortexInternalPart",
+    name="secondary somatosensory cortex internal part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_secondary_somatosensory_cortex_parietal_rostral_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexParietalRostralArea",
+    abbreviation="S2PR",
+    alternate_names=["secondary somatosensory cortex, parietal rostral area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "108",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "108",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#9DE900"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    lookup_label="MarmosetNMA_v1_secondarySomatosensoryCortexParietalRostralArea",
+    name="secondary somatosensory cortex parietal rostral area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_secondary_somatosensory_cortex_parietal_ventral_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_secondarySomatosensoryCortexParietalVentralArea",
+    abbreviation="S2PV",
+    alternate_names=["secondary somatosensory cortex, parietal ventral area"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "109",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "109",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#A7FF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_somatosensoryCortex"}],
+    lookup_label="MarmosetNMA_v1_secondarySomatosensoryCortexParietalVentralArea",
+    name="secondary somatosensory cortex parietal ventral area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_superior_temporal_rostral_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_superiorTemporalRostralArea",
+    abbreviation="STR",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "111",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "111",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF9F85"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_superiorTemporalRostralArea",
+    name="superior temporal rostral area (cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_te1 = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE1",
+    abbreviation="TE1",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "112",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "112",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E9963B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTE1",
+    name="temporal area TE1 (inferior temporal cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_te2 = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE2",
+    abbreviation="TE2",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "113",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "113",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E9B476"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTE2",
+    name="temporal area TE2 (inferior temporal cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_te3 = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTE3",
+    abbreviation="TE3",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "114",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "114",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E98000"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTE3",
+    name="temporal area TE3 (inferior temporal cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_te_occipital_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTEOccipitalPart",
+    abbreviation="TEO",
+    alternate_names=["temporal area TE, occipital part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "115",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "115",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFDDB2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTEOccipitalPart",
+    name="temporal area TE occipital part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_tf = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTF",
+    abbreviation="TF",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "116",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "116",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#CBFFB2"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTF",
+    name="temporal area TF",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_tf_occipital_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTFOccipitalPart",
+    abbreviation="TFO",
+    alternate_names=["temporal area TF, occipital part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "117",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "117",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#51FF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTFOccipitalPart",
+    name="temporal area TF occipital part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_th = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTH",
+    abbreviation="TH",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "118",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "118",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#71E93B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTH",
+    name="temporal area TH",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_tl = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTL",
+    abbreviation="TL",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "119",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "119",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#75FF3B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTL",
+    name="temporal area TL",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_area_tl_occipital_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalAreaTLOccipitalPart",
+    abbreviation="TLO",
+    alternate_names=["temporal area TL, occipital part"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "120",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "120",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#9DFF76"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_ventralAreasOfTheTemporalLobe"}
+    ],
+    lookup_label="MarmosetNMA_v1_temporalAreaTLOccipitalPart",
+    name="temporal area TL occipital part",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporal_proisocortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporalProisocortex",
+    abbreviation="TPro",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "123",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "123",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF973B"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_insularCortex"}],
+    lookup_label="MarmosetNMA_v1_temporalProisocortex",
+    name="temporal proisocortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporo_parieto_occipital_association_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporo-parieto-occipitalAssociationArea",
+    abbreviation="TPO(STP)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "121",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "121",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FFC576"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_temporo-parieto-occipitalAssociationArea",
+    name="temporo-parieto-occipital association area (superior temporal polysensory cortex)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporoparietal_transitional_area = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporoparietalTransitionalArea",
+    abbreviation="TPt",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "124",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "124",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#DF542C"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_auditoryCortex"}],
+    lookup_label="MarmosetNMA_v1_temporoparietalTransitionalArea",
+    name="temporoparietal transitional area",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_temporopolar_proisocortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_temporopolarProisocortex",
+    abbreviation="TPPro",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "122",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "122",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#FF9700"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {
+            "@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_lateralAndInferiorTemporalCorticalRegion"
+        }
+    ],
+    lookup_label="MarmosetNMA_v1_temporopolarProisocortex",
+    name="temporopolar proisocortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_ventral_intraparietal_area_of_cortex = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_ventralIntraparietalAreaOfCortex",
+    abbreviation="VIP",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "135",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "135",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#E6FF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[
+        {"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_posteriorParietalCortex"}
+    ],
+    lookup_label="MarmosetNMA_v1_ventralIntraparietalAreaOfCortex",
+    name="ventral intraparietal area of cortex",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_visual_area2 = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea2",
+    abbreviation="V2",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "127",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "127",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#C3EF85"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_visualArea2",
+    name="visual area 2",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_visual_area3 = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea3",
+    abbreviation="V3(VLP)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "128",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "128",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#80DF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_visualArea3",
+    name="visual area 3 (ventrolateral posterior area)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_visual_area3_a = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea3A",
+    abbreviation="V3A(DA)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "129",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "129",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#A4FF2C"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_visualArea3A",
+    name="visual area 3A (dorsoanterior area)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_visual_area4 = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea4",
+    abbreviation="V4(VLA)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "130",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "130",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#8EFF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_visualArea4",
+    name="visual area 4 (ventrolatereral anterior area)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_visual_area4_transitional_part = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea4TransitionalPart",
+    abbreviation="V4T(MTC)",
+    alternate_names=["visual area 4, transitional part (middle temporal crescent)"],
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "131",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "131",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#98EF2C"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_visualArea4TransitionalPart",
+    name="visual area 4 transitional part (middle temporal crescent)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_visual_area5 = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea5",
+    abbreviation="V5(MT)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "132",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "132",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#B6DF85"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_visualArea5",
+    name="visual area 5 (middle temporal area)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_visual_area6 = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea6",
+    abbreviation="V6(DM)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "133",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "133",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#A9EF59"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_visualArea6",
+    name="visual area 6 (dorsomedial area)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
+ParcellationEntityVersion.marmoset_nma_v1_visual_area6_a = ParcellationEntityVersion(
+    id="https://openminds.om-i.org/instances/parcellationEntityVersion/MarmosetNMA_v1_visualArea6A",
+    abbreviation="V6A(PPM)",
+    has_annotations=[
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/probabalisticAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "134",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {
+                    "@id": "https://openminds.om-i.org/instances/colormap/matplotlib.colormaps.Greys"
+                },
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+        {
+            "@type": "https://openminds.om-i.org/types/AtlasAnnotation",
+            "anchorPoint": None,
+            "criteria": None,
+            "criteriaQualityType": {"@id": "https://openminds.om-i.org/instances/criteriaQualityType/processive"},
+            "criteriaType": {
+                "@id": "https://openminds.om-i.org/instances/annotationCriteriaType/deterministicAnnotation"
+            },
+            "inspiredBy": None,
+            "internalIdentifier": "134",
+            "laterality": [{"@id": "https://openminds.om-i.org/instances/laterality/left"}],
+            "preferredVisualization": {
+                "@type": "https://openminds.om-i.org/types/ViewerSpecification",
+                "additionalRemarks": None,
+                "anchorPoint": None,
+                "cameraPosition": None,
+                "preferredDisplayColor": {"@id": "https://openminds.om-i.org/instances/singleColor/#6DCF00"},
+            },
+            "specification": None,
+            "type": {"@id": "https://openminds.om-i.org/instances/annotationType/annotationMask"},
+        },
+    ],
+    has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/MarmosetNMA_visualCortex"}],
+    lookup_label="MarmosetNMA_v1_visualArea6A",
+    name="visual area 6A (posterior parietal medial area)",
+    version_identifier="v1",
+    version_innovation="This is the first version of this parcellation entity.",
+)
 ParcellationEntityVersion.pw_rbsc_cor_6th_ed_10th_cerebellar_lobule_nodule = ParcellationEntityVersion(
     id="https://openminds.om-i.org/instances/parcellationEntityVersion/PW-RBSC-cor_6th-ed_10thCerebellarLobuleNodule",
     abbreviation="10Cb",

@@ -10,14 +10,14 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class AtlasType(LinkedMetadata):
+class CommunicationProtocol(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/AtlasType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
-    schema_version = "v1.0"
+    type_ = "https://openminds.om-i.org/types/CommunicationProtocol"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
+    schema_version = "latest"
 
     properties = [
         Property(
@@ -35,7 +35,7 @@ class AtlasType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the atlas type.",
+            description="Longer statement or account giving the characteristics of the communication protocol.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class AtlasType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the atlas type.",
+            description="Word or phrase that constitutes the distinctive designation of the communication protocol.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(

@@ -21,7 +21,7 @@ class Protocol(LinkedMetadata):
     properties = [
         Property(
             "behavioral_tasks",
-            "openminds.v2.core.BehavioralTask",
+            "openminds.v2.controlled_terms.BehavioralTask",
             "behavioralTask",
             multiple=True,
             unique_items=True,
@@ -59,7 +59,7 @@ class Protocol(LinkedMetadata):
                 "openminds.v2.controlled_terms.Organ",
                 "openminds.v2.controlled_terms.Phenotype",
                 "openminds.v2.controlled_terms.Species",
-                "openminds.v2.core.Strain",
+                "openminds.v2.controlled_terms.Strain",
                 "openminds.v2.controlled_terms.TermSuggestion",
                 "openminds.v2.sands.CustomAnatomicalEntity",
                 "openminds.v2.sands.ParcellationEntity",

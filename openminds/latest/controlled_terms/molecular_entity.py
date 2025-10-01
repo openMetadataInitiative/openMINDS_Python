@@ -524,7 +524,7 @@ MolecularEntity.edetic_acid = MolecularEntity(
     ],
 )
 MolecularEntity.egtazic_acid = MolecularEntity(
-    id="https://openminds.om-i.org/instances/molecularEntity/EgtazicAcid",
+    id="https://openminds.om-i.org/instances/molecularEntity/egtazicAcid",
     definition="EGTA (ethylene glycol-bis(β-aminoethyl ether)-N,N,N',N'-tetraacetic acid), also known as egtazic acid (INN, USAN), is an aminopolycarboxylic acid, a chelating agent. [adapted from Wikipedia (https://en.wikipedia.org/wiki/EGTA_(chemical))]",
     description="EGTA is a white solid that is related to the better known EDTA. Compared to EDTA, it has a lower affinity for magnesium, making it more selective for calcium ions. It is useful in buffer solutions that resemble the environment in living cells where calcium ions are usually at least a thousandfold less concentrated than magnesium. [adapted from Wikipedia (https://en.wikipedia.org/wiki/EGTA_(chemical))]",
     knowledge_space_link=IRI(
@@ -879,7 +879,7 @@ MolecularEntity.gtp_disodium_salt = MolecularEntity(
     ],
 )
 MolecularEntity.halothane = MolecularEntity(
-    id="https://openminds.om-i.org/instances/molecularEntity/Halothane",
+    id="https://openminds.om-i.org/instances/molecularEntity/halothane",
     definition="Halothane is a haloalkane comprising ethane having three fluoro substituents at the 1-position as well as bromo- and chloro substituents at the 2-position. It has a role as an inhalation anaesthetic. It is a haloalkane, an organofluorine compound, an organochlorine compound and an organobromine compound.[adapted from ChEBI (https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:5615)]",
     name="halothane",
     preferred_ontology_identifier=IRI("https://pubchem.ncbi.nlm.nih.gov/compound/3562"),
@@ -1196,7 +1196,6 @@ MolecularEntity.monosodium_phosphate = MolecularEntity(
         "sodium dihydrogen phosphate",
         "MSP",
         "monobasic sodium phosphate",
-        "sodium dihydrogen phosphate",
         "sodium biphosphate",
         "NaH2PO4",
         "phosphoric acid, monosodium salt",

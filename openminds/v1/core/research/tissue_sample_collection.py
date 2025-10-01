@@ -107,7 +107,7 @@ class TissueSampleCollection(LinkedMetadata):
         ),
         Property(
             "strains",
-            "openminds.v1.core.Strain",
+            "openminds.v1.controlled_terms.Strain",
             "strain",
             multiple=True,
             unique_items=True,

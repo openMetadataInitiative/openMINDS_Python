@@ -3,21 +3,10 @@ from .atlas import (
     BrainAtlas,
     BrainAtlasVersion,
     CommonCoordinateSpace,
-    CommonCoordinateSpaceVersion,
     ParcellationEntity,
-    ParcellationEntityVersion,
     ParcellationTerminology,
-    ParcellationTerminologyVersion,
 )
-from .mathematical_shapes import Circle, Ellipse, Rectangle
-from .miscellaneous import (
-    AnatomicalTargetPosition,
-    CoordinatePoint,
-    QualitativeRelationAssessment,
-    QuantitativeRelationAssessment,
-    SingleColor,
-    ViewerSpecification,
-)
+from .miscellaneous import CoordinatePoint, QualitativeRelationAssessment, QuantitativeRelationAssessment
 from .non_atlas import (
     CustomAnatomicalEntity,
     CustomAnnotation,

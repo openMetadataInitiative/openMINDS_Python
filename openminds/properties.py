@@ -126,9 +126,12 @@ class Property:
                 for item in value:
                     if not (isinstance(item, self.types) or _could_be_instance(item, self.types)):
                         if "type" not in ignore:
+                            if isinstance(item, Link):
+                                item_type = f"value contains a link to {item.allowed_types}"
+                            else:
+                                item_type = f"value contains {type(item)}"
                             failures["type"].append(
-                                f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
-                                f"value contains {type(item)}"
+                                f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, " + item_type
                             )
                     elif isinstance(item, (Node, IRI)):
                         failures.update(item.validate(ignore=ignore))
@@ -158,9 +161,12 @@ class Property:
                     )
             elif not (isinstance(value, self.types) or _could_be_instance(value, self.types)):
                 if "type" not in ignore:
+                    if isinstance(value, Link):
+                        value_type = f"value contains a link to {value.allowed_types}"
+                    else:
+                        value_type = f"value contains {type(value)}"
                     failures["type"].append(
-                        f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, "
-                        f"value is {type(value)}"
+                        f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, " + value_type
                     )
             elif isinstance(value, (Node, IRI)):
                 failures.update(value.validate(ignore=ignore))
@@ -215,7 +221,7 @@ class Property:
             else:
                 raise NotImplementedError()
 
-        if self.multiple and isinstance(data, (tuple, list)):
+        if isinstance(data, (tuple, list)):
             return [deserialize_item(item) for item in data]
         else:
             return deserialize_item(data)

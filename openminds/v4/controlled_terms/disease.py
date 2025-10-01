@@ -213,6 +213,16 @@ Disease.long_covid = Disease(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_0080848"),
     synonyms=["chronic COVID-19", "PASC", "post-acute sequelae of SARS-CoV-2 infection", "post-COVID syndrome"],
 )
+Disease.macular_degeneration = Disease(
+    id="https://openminds.om-i.org/instances/disease/macularDegeneration",
+    definition="A retinal degeneration characterized by gradual deterioration of light-sensing cells in the tissues at the back of the eye resulting in vision loss.[adapted from [Disease Ontology definition](http://purl.obolibrary.org/obo/DOID_4448)]",
+    description="Deterioration of the macula lutea in the retina; may be inherited, drug induced, or due to aging; leads to a severe loss of central vision while peripheral vision is retained.",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106448"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12811#macular-degeneration-1"),
+    name="macular degeneration",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_4448"),
+    synonyms=["macular degeneration of retina", "macular dystrophy", "maculopathy"],
+)
 Disease.malignant_neoplasm = Disease(
     id="https://openminds.om-i.org/instances/disease/malignantNeoplasm",
     definition="A 'malignant neoplasm' is composed of atypical, often pleomorphic cells that uncontrollably grow and multiply, spreading into surrounding tissue and even invading distant anatomic sites (metastasis). Many malignant neoplasm form solid tumors, but cancers of the blood generally do not. [(adapted from [NCI](https://www.cancer.gov/about-cancer/understanding/what-is-cancer)].",

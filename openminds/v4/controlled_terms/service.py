@@ -178,7 +178,7 @@ Service.model_db = Service(
 Service.multi__image_o_sd = Service(
     id="https://openminds.om-i.org/instances/service/Multi-Image-OSd",
     definition="Web application for viewing of series of high-resolution 2D images.",
-    description="Multi-Image-OSd allows the viewing and exploring of high-resolution images. For more information see: https://github.com/Neural-Systems-at-UIO/Multi-Image-OSd",
+    description="Multi-Image-OSd allows the viewing and exploring of high-resolution images. For more information see: https://github.com/Neural-Systems-at-UIO/Multi-Image-OSd. This service is not supported anymore and has been replaced by 'SeriesZoom'. [edited 2025-09-11]",
     name="Multi-Image-OSd",
     synonyms=["Multi-Image OpenSeadragon viewer"],
 )
@@ -198,6 +198,13 @@ Service.neurosift = Service(
     id="https://openminds.om-i.org/instances/service/Neurosift",
     definition="Neurosift is a browser-based tool designed for the visualization of neuroscience data with a focus on NWB (Neurodata Without Borders) files.",
     name="Neurosift",
+)
+Service.series_zoom = Service(
+    id="https://openminds.om-i.org/instances/service/SeriesZoom",
+    definition="Web application for viewing of series of high-resolution 2D images.",
+    description="SeriesZoom allows the viewing and exploring of high-resolution images. For more information see: https://github.com/Neural-Systems-at-UIO/SeriesZoom",
+    name="SeriesZoom",
+    synonyms=["SeriesZoom"],
 )
 Service.siibra_explorer = Service(
     id="https://openminds.om-i.org/instances/service/siibraExplorer",

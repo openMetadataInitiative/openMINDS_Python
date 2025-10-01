@@ -10,14 +10,14 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class VisualStimulusType(LinkedMetadata):
+class DeploymentEnvironmentType(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.ebrains.eu/controlledTerms/VisualStimulusType"
-    context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
-    schema_version = "v2.0"
+    type_ = "https://openminds.om-i.org/types/DeploymentEnvironmentType"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
+    schema_version = "latest"
 
     properties = [
         Property(
@@ -35,7 +35,7 @@ class VisualStimulusType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the visual stimulus type.",
+            description="Longer statement or account giving the characteristics of the deployment environment type.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class VisualStimulusType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the visual stimulus type.",
+            description="Word or phrase that constitutes the distinctive designation of the deployment environment type.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(

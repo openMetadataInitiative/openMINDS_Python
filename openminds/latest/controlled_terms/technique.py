@@ -453,7 +453,7 @@ Technique.functional_magnetic_resonance_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/functionalMagneticResonanceImaging",
     definition="A magnetic resonance imaging technique that generates multiple images over time of some physiological processes of a specimen.",
     name="functional magnetic resonance imaging",
-    synonyms=["fMRI"],
+    synonyms=["fMRI", "functional MRI"],
 )
 Technique.gene_expression_measurement = Technique(
     id="https://openminds.om-i.org/instances/technique/geneExpressionMeasurement",
@@ -511,11 +511,42 @@ Technique.high_density_electroencephalography = Technique(
 )
 Technique.high_field_functional_magnetic_resonance_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/highFieldFunctionalMagneticResonanceImaging",
+    definition="A magnetic resonance imaging technique that generates multiple images over time of some physiological processes of a specimen typically employing a magnetic field strength of 3 Tesla (or higher but below 7 Tesla).",
     name="high-field functional magnetic resonance imaging",
+    synonyms=[
+        "HF fMRI",
+        "HF functional magnetic resonance imaging",
+        "HF functional MRI",
+        "high-field fMRI",
+        "high-field functional MRI",
+    ],
 )
 Technique.high_field_magnetic_resonance_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/highFieldMagneticResonanceImaging",
+    definition="Any medical imaging technique that typically uses a magnetic field strength of 3 Tesla (or higher but below 7 Tesla) to generate images of a specimen based on the principle of nuclear magnetic resonance.",
     name="high-field magnetic resonance imaging",
+    synonyms=[
+        "HF MRI",
+        "high-field MRI",
+        "HF magnetic resonance imaging",
+        "HF unspecified magnetic resonance imaging",
+        "high-field unspecified magnetic resonance imaging",
+    ],
+)
+Technique.high_field_structural_magnetic_resonance_imaging = Technique(
+    id="https://openminds.om-i.org/instances/technique/highFieldStructuralMagneticResonanceImaging",
+    definition="A magnetic resonance imaging technique that typically uses a magnetic field strength of 3 Tesla (or higher but below 7 Tesla) to generate images with static information of the scanned body.",
+    name="high-field structural magnetic resonance imaging",
+    synonyms=[
+        "HF sMRI",
+        "HF structural MRI",
+        "HF structural magnetic resonance imaging",
+        "high-field structural MRI",
+        "HF MRI",
+        "high-field MRI",
+        "HF magnetic resonance imaging",
+        "high-field magnetic resonance imaging",
+    ],
 )
 Technique.high_resolution_scanning = Technique(
     id="https://openminds.om-i.org/instances/technique/high-resolutionScanning",
@@ -878,7 +909,7 @@ Technique.quantitative_magnetic_resonance_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/quantitativeMagneticResonanceImaging",
     definition="Any magnetic resonance imaging technique that generates images of a specimen based on the physical parameters of the local tissue microstructural environment.",
     name="quantitative magnetic resonance imaging",
-    synonyms=["qMRI"],
+    synonyms=["qMRI", "quantitative MRI"],
 )
 Technique.quantitative_susceptibility_mapping = Technique(
     id="https://openminds.om-i.org/instances/technique/quantitativeSusceptibilityMapping",
@@ -1060,7 +1091,7 @@ Technique.structural_magnetic_resonance_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/structuralMagneticResonanceImaging",
     definition="A magnetic resonance imaging technique that uses strong magnetic fields, magnetic field gradients, and radio waves to generate images with static information of the scanned body.",
     name="structural magnetic resonance imaging",
-    synonyms=["sMRI", "MRI", "magnetic resonance imaging"],
+    synonyms=["sMRI", "structural MRI", "MRI", "magnetic resonance imaging"],
 )
 Technique.structural_neuroimaging = Technique(
     id="https://openminds.om-i.org/instances/technique/structuralNeuroimaging",
@@ -1187,18 +1218,47 @@ Technique.two_photon_fluorescence_microscopy = Technique(
 )
 Technique.ultra_high_field_functional_magnetic_resonance_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/ultraHighFieldFunctionalMagneticResonanceImaging",
-    definition="'Ultra high-field functional magnetic resonance imaging' comprises all functional MRI techniques conducted with a MRI scanner with a magnetic field strength equal or above 7 Tesla.",
+    definition="A magnetic resonance imaging technique that generates multiple images over time of some physiological processes of a specimen typically employing a magnetic field strength of 7 Tesla (or higher).",
     name="ultra high-field functional magnetic resonance imaging",
+    synonyms=[
+        "UHF fMRI",
+        "UHF functional magnetic resonance imaging",
+        "UHF functional MRI",
+        "ultra high-field fMRI",
+        "ultra high-field functional MRI",
+    ],
 )
 Technique.ultra_high_field_magnetic_resonance_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/ultraHighFieldMagneticResonanceImaging",
-    definition="'Ultra high-field magnetic resonance imaging' comprises all structural MRI techniques conducted with a MRI scanner with a magnetic field strength equal or above 7 Tesla.",
+    definition="Any medical imaging technique that typically uses a magnetic field strength of 7 Tesla (or higher) to generate images of a specimen based on the principle of nuclear magnetic resonance.",
     name="ultra high-field magnetic resonance imaging",
+    synonyms=[
+        "UHF MRI",
+        "UHF magnetic resonance imaging",
+        "UHF unspecified magnetic resonance imaging",
+        "ultra high-field MRI",
+        "ultra high-field unspecified magnetic resonance imaging",
+    ],
 )
 Technique.ultra_high_field_magnetic_resonance_spectroscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/ultraHighFieldMagneticResonanceSpectroscopy",
     definition="'Ultra high-field magnetic resonance spectroscopy' comprises all MRS techniques conducted with a MRI scanner with a magnetic field strength equal or above 7 Tesla.",
     name="ultra high-field magnetic resonance spectroscopy",
+)
+Technique.ultra_high_field_structural_magnetic_resonance_imaging = Technique(
+    id="https://openminds.om-i.org/instances/technique/ultraHighFieldStructuralMagneticResonanceImaging",
+    definition="A magnetic resonance imaging technique that typically uses a magnetic field strength of 7 Tesla (or higher) to generate images with static information of the scanned body.",
+    name="ultra high-field structural magnetic resonance imaging",
+    synonyms=[
+        "UHF sMRI",
+        "UHF structural MRI",
+        "ultra high-field structural MRI",
+        "UHF structural magnetic resonance imaging",
+        "UHF MRI",
+        "ultra high-field MRI",
+        "UHF magnetic resonance imaging",
+        "ultra high-field magnetic resonance imaging",
+    ],
 )
 Technique.vibratome_sectioning = Technique(
     id="https://openminds.om-i.org/instances/technique/vibratomeSectioning",

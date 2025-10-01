@@ -195,11 +195,13 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.CellType",
                 "openminds.latest.controlled_terms.ChemicalMixtureType",
                 "openminds.latest.controlled_terms.Colormap",
+                "openminds.latest.controlled_terms.CommunicationProtocol",
                 "openminds.latest.controlled_terms.ContributionType",
                 "openminds.latest.controlled_terms.CranialWindowConstructionType",
                 "openminds.latest.controlled_terms.CranialWindowReinforcementType",
                 "openminds.latest.controlled_terms.CriteriaQualityType",
                 "openminds.latest.controlled_terms.DataType",
+                "openminds.latest.controlled_terms.DeploymentEnvironmentType",
                 "openminds.latest.controlled_terms.DeviceType",
                 "openminds.latest.controlled_terms.DifferenceMeasure",
                 "openminds.latest.controlled_terms.Disease",
@@ -217,9 +219,9 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.Language",
                 "openminds.latest.controlled_terms.Laterality",
                 "openminds.latest.controlled_terms.LearningResourceType",
-                "openminds.latest.controlled_terms.MRAcquisitionType",
                 "openminds.latest.controlled_terms.MRIPulseSequence",
                 "openminds.latest.controlled_terms.MRIWeighting",
+                "openminds.latest.controlled_terms.MRSpatialEncoding",
                 "openminds.latest.controlled_terms.MeasuredQuantity",
                 "openminds.latest.controlled_terms.MeasuredSignalType",
                 "openminds.latest.controlled_terms.MetaDataModelType",
@@ -703,7 +705,7 @@ CommonCoordinateSpaceVersion.mni_icbm152_linear_2001_sym = CommonCoordinateSpace
     id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_linear-2001-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
-    homepage={"@id": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152lin"},
+    homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152lin"),
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
@@ -713,9 +715,9 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009a_asym = CommonCoordinate
     id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009a-asym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
-    homepage={
-        "@id": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
-    },
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
@@ -725,9 +727,9 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009a_sym = CommonCoordinateS
     id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009a-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
-    homepage={
-        "@id": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
-    },
+    homepage=IRI(
+        "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
+    ),
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
@@ -904,7 +906,7 @@ CommonCoordinateSpaceVersion.swanson_srb_v1992 = CommonCoordinateSpaceVersion(
     full_documentation={"@id": "https://larrywswanson.com/?page_id=164"},
     full_name="Swanson's Stereotactic Brain of the Sprague Dawley Rat",
     how_to_cite="Swanson, L.W. (1992) 'Coordinate Systems' Brain maps: structure of the rat brain, 1st edition.",
-    license={"@id": "https://openminds.om-i.org/instances/licenses/ccByNc4.0"},
+    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-4.0"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="1992-12-24",
     short_name="Swanson's Stereotactic Rat Brain",

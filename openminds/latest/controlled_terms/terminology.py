@@ -206,12 +206,12 @@ Terminology.contribution_type = Terminology(
     name="contribution type",
 )
 Terminology.cranial_window_construction_type = Terminology(
-    id="https://openminds.om-i.org/instances/terminology/CranialWindowConstructionType",
+    id="https://openminds.om-i.org/instances/terminology/cranialWindowConstructionType",
     definition="The construction type of a cranial window.",
     name="cranial window construction type",
 )
 Terminology.cranial_window_reinforcement_type = Terminology(
-    id="https://openminds.om-i.org/instances/terminology/CranialWindowReinforcementType",
+    id="https://openminds.om-i.org/instances/terminology/cranialWindowReinforcementType",
     definition="The reinforcement type of a cranial window.",
     name="cranial window reinforcement type",
 )
@@ -327,6 +327,13 @@ Terminology.molecular_entity = Terminology(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:23367#molecular-entity"),
     name="molecular entity",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_23367"),
+)
+Terminology.mr_spatial_encoding = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/MRSpatialEncoding",
+    definition="MR spatial encoding type defines the method by which imaging data is collected, determining the spatial encoding strategy and affecting resolution, scan time, and overall image quality.",
+    description="MR spatial encoding dictates how spatial and temporal information is encoded during image acquisition. It is classified based on the number of encoded dimensions: 2D acquisition captures individual slices sequentially using frequency * phase encoding, while 3D acquisition collects an entire volume in a single scan with frequency * phase * phase encoding, offering higher resolution and isotropic reconstruction. In rare cases, 1D acquisition is used for specialized applications like MR spectroscopy, encoding data along a single frequency dimension. The choice of acquisition type depends on clinical and research needs, balancing factors such as scan efficiency, spatial resolution, and signal-to-noise ratio.",
+    name="MR spatial encoding",
+    synonyms=["MRI acquisition type"],
 )
 Terminology.mri_pulse_sequence = Terminology(
     id="https://openminds.om-i.org/instances/terminology/MRIPulseSequence",
