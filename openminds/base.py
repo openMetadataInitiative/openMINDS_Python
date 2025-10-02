@@ -112,9 +112,13 @@ class Node(metaclass=Registry):
         return {key: data[key] for key in sorted(data)}
 
     @classmethod
-    def from_jsonld(cls, data):
+    def from_jsonld(cls, data, ignore_unexpected_keys=False):
         """
-        Create a Python object representing a metadata node from a JSON-LD-compatible dictionary
+        Create a Python object representing a metadata node from a JSON-LD-compatible dictionary.
+
+        By default, a NameError will be raised if the data contain keys that are not
+        recognised by this metadata node.
+        If `ignore_unexpected_keys` is set to True, no error is raised.
         """
         data_copy = data.copy()
         context = data_copy.pop("@context", None)
@@ -131,7 +135,7 @@ class Node(metaclass=Registry):
                     deserialized_data[property.name] = property.deserialize(value)
                 else:
                     deserialized_data[property.name] = value
-        if len(data_copy) > 0:
+        if len(data_copy) > 0 and not ignore_unexpected_keys:
             raise NameError(f"Unexpected arguments for {cls}: {tuple(data_copy.keys())}")
         return cls(**deserialized_data)
 
@@ -220,13 +224,17 @@ class LinkedMetadata(Node):
             json.dump(self.to_jsonld(), output_file, indent=indent)
 
     @classmethod
-    def load(cls, file_path):
+    def load(cls, file_path, ignore_unexpected_keys=False):
         """
-        Create a Python object representing a metadata node from a JSON-LD file
+        Create a Python object representing a metadata node from a JSON-LD file.
+
+        By default, a NameError will be raised if the data contain keys that are not
+        recognised by this metadata node.
+        If `ignore_unexpected_keys` is set to True, no error is raised.
         """
         with open(file_path, "r") as input_file:
             data = json.load(input_file)
-        return cls.from_jsonld(data)
+        return cls.from_jsonld(data, ignore_unexpected_keys=ignore_unexpected_keys)
 
 
 class EmbeddedMetadata(Node):
