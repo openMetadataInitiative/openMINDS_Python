@@ -6823,19 +6823,53 @@ UBERONParcellation.fusiform_gyrus = UBERONParcellation(
         "occipitotemporal gyrus",
     ],
 )
+UBERONParcellation.future_brain_vesicle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureBrainVesicle",
+    definition="Is an anatomical entity. Is part of the ventricular system of central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013150) ('is_a' and 'relationship')]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0013150#future-brain-vesicle"),
+    name="future brain vesicle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013150"),
+    synonyms=["early brain vesicle", "primitive brain vesicle"],
+)
+UBERONParcellation.future_facial_nucleus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureFacialNucleus",
+    definition="Is a gray matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010123)]",
+    description="A gray matter that has the potential to develop into a facial nucleus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010123)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010123#future-facial-nucleus"),
+    name="future facial nucleus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010123"),
+)
 UBERONParcellation.future_hindbrain_meninx = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureHindbrainMeninx",
-    definition="'Future hindbrain meninx' is a future meninx. It is part of the hindbrain.",
-    description="A multi-tissue structure that has the potential to develop into a meninx of hindbrain.",
+    definition="Is a future meninx. Is part of the hindbrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010091) ('is_a' and 'relationship')]",
+    description="A multi-tissue structure that has the potential to develop into a meninx of hindbrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010091)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0736728"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010091#future-hindbrain-meninx"),
     name="future hindbrain meninx",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010091"),
+    synonyms=["future hindbrain meninges"],
+)
+UBERONParcellation.future_inferior_salivatory_nucleus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureInferiorSalivatoryNucleus",
+    definition="Is a gray matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010124)]",
+    description="A gray matter that has the potential to develop into a inferior salivatory nucleus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010124)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010124#future-inferior-salivatory-nucleus"),
+    name="future inferior salivatory nucleus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010124"),
+)
+UBERONParcellation.future_meninx = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureMeninx",
+    definition="Is part of the meningeal cluster. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007645)]",
+    description="A developing mesenchymal capsule that covers the developing brain and spinal cord and is the precursor of the meningeal cluster. In mammals this gives rise to the arachnoid mater, pia mater and dura mater. In cyclostomes and fishes, the future meninx gives rise to a single meningeal layer, the primitive meninx. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007645)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0007645#future-meninx"),
+    name="future meninx",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007645"),
+    synonyms=["primary meninx"],
 )
 UBERONParcellation.future_metencephalon = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureMetencephalon",
-    definition="'Future metencephalon' is part of the hindbrain.",
-    description="A developing anatomical structure that has the potential to develop into a metencephalon.",
+    definition="Is part of the hindbrain. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010092)]",
+    description="A developing anatomical structure that has the potential to develop into a metencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010092)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0735157"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010092#future-metencephalon"),
     name="future metencephalon",
@@ -6843,12 +6877,66 @@ UBERONParcellation.future_metencephalon = UBERONParcellation(
 )
 UBERONParcellation.future_myelencephalon = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureMyelencephalon",
-    definition="'Future myelencephalon' is part of the hindbrain.",
-    description="A developing anatomical structure that has the potential to develop into a myelencephalon.",
+    definition="Is part of the hindbrain. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010096)]",
+    description="A developing anatomical structure that has the potential to develop into a myelencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010096)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0727209"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010096#future-myelencephalon"),
     name="future myelencephalon",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010096"),
+)
+UBERONParcellation.future_neurohypophysis = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureNeurohypophysis",
+    definition="Is part of the diencephalon. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034876)]",
+    description="The outgrowth of neuroectoderm located on the floor of the embryonic hypothalamus that gives rise to the neurohypophysis (posterior lobe) of the pituitary gland. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034876)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0034876#future-neurohypophysis"),
+    name="future neurohypophysis",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034876"),
+)
+UBERONParcellation.future_nucleus_ambiguus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureNucleusAmbiguus",
+    definition="Is a gray matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010126)]",
+    description="A gray matter that has the potential to develop into a nucleus ambiguus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010126)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010126#future-nucleus-ambiguus"),
+    name="future nucleus ambiguus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010126"),
+)
+UBERONParcellation.future_pterygopalatine_ganglion = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futurePterygopalatineGanglion",
+    definition="Is a parasympathetic ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010128)]",
+    description="A ganglion that has the potential to develop into a pterygopalatine ganglion. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010128)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010128#future-pterygopalatine-ganglion"),
+    name="future pterygopalatine ganglion",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010128"),
+    synonyms=[
+        "future Meckel ganglion",
+        "future Meckel's ganglion",
+        "future nasal ganglion",
+        "future palatine ganglion",
+        "future pterygopalatine ganglia",
+        "future sphenopalatine ganglion",
+        "future sphenopalatine parasympathetic ganglion",
+    ],
+)
+UBERONParcellation.future_spinal_cord = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureSpinalCord",
+    definition="Is part of the central nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006241)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006241#future-spinal-cord"),
+    name="future spinal cord",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006241"),
+    synonyms=[
+        "presumptive spinal cord",
+        "presumptive spinal cord neural keel",
+        "presumptive spinal cord neural plate",
+        "presumptive spinal cord neural rod",
+    ],
+)
+UBERONParcellation.future_superior_salivatory_nucleus = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/futureSuperiorSalivatoryNucleus",
+    definition="Is a gray matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010125)]",
+    description="A gray matter that has the potential to develop into a superior salivatory nucleus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010125)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010125#future-superior-salivatory-nucleus"),
+    name="future superior salivatory nucleus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010125"),
 )
 UBERONParcellation.ganglion_of_central_nervous_system = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/ganglionOfCentralNervousSystem",
