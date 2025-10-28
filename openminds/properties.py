@@ -200,7 +200,15 @@ class Property:
             elif datetime in self.types:
                 return datetime.fromisoformat(item)
             elif date in self.types:
-                return date.fromisoformat(item)
+                try:
+                    return date.fromisoformat(item)
+                except ValueError as err:
+                    # if a datetime string has been provided
+                    # take the date part.
+                    try:
+                        return datetime.fromisoformat(item).date()
+                    except ValueError:
+                        raise err
             elif all(issubclass(t, Node) for t in self.types):
                 # use data["@type"] to figure out class to use
                 if "@type" in item:

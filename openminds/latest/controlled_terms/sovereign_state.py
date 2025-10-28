@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class CommunicationProtocol(LinkedMetadata):
+class SovereignState(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/CommunicationProtocol"
+    type_ = "https://openminds.om-i.org/types/SovereignState"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class CommunicationProtocol(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the communication protocol.",
+            description="Longer statement or account giving the characteristics of the sovereign state.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class CommunicationProtocol(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the communication protocol.",
+            description="Word or phrase that constitutes the distinctive designation of the sovereign state.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -102,57 +102,3 @@ class CommunicationProtocol(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
-
-    @classmethod
-    def instances(cls):
-        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
-
-    @classmethod
-    def by_name(cls, name):
-        if cls._instance_lookup is None:
-            cls._instance_lookup = {}
-            for instance in cls.instances():
-                cls._instance_lookup[instance.name] = instance
-                if instance.synonyms:
-                    for synonym in instance.synonyms:
-                        cls._instance_lookup[synonym] = instance
-        return cls._instance_lookup[name]
-
-
-CommunicationProtocol.http = CommunicationProtocol(
-    id="https://openminds.om-i.org/instances/communicationProtocol/HTTP",
-    definition="A network communication protocol used for exchanging hypermedia documents, primarily between web servers and browsers.",
-    description="For more information please go to the [HTTP Documentation](https://httpwg.org/specs/).",
-    name="HTTP",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q8777"),
-    synonyms=["Hypertext Transfer Protocol"],
-)
-CommunicationProtocol.https = CommunicationProtocol(
-    id="https://openminds.om-i.org/instances/communicationProtocol/HTTPS",
-    definition="A network communication protocol that secures HTTP traffic by encrypting it using SSL/TLS.",
-    name="HTTPS",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q44484"),
-    synonyms=["Hypertext Transfer Protocol Secure"],
-)
-CommunicationProtocol.ssh = CommunicationProtocol(
-    id="https://openminds.om-i.org/instances/communicationProtocol/SSH",
-    definition="A network communication protocol that enables secure remote login and command execution over unsecured networks.",
-    name="SSH",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q170460"),
-    synonyms=["Secure Shell"],
-)
-CommunicationProtocol.tcp_ip = CommunicationProtocol(
-    id="https://openminds.om-i.org/instances/communicationProtocol/TCP_IP",
-    definition="A network communication protocol suite that defines how data is transmitted across interconnected networks.",
-    name="TCP/IP",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q81414"),
-    synonyms=["Internet Protocol suite", "IP suite", "TCP-IP", "Transmission Control Protocol / Internet Protocol"],
-)
-CommunicationProtocol.web_socket = CommunicationProtocol(
-    id="https://openminds.om-i.org/instances/communicationProtocol/WebSocket",
-    definition="A computer communications protocol, providing a bidirectional communication channel over a single Transmission Control Protocol (TCP) connection.",
-    description="For more information please go to the [WebSocket documentation](https://www.rfc-editor.org/rfc/rfc6455) provided by the Internet Engineering Task Force (IETF).",
-    name="WebSocket",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q859938"),
-    synonyms=["WebSocket protocol"],
-)

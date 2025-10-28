@@ -134,6 +134,14 @@ Species.bos_taurus = Species(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9913"),
     synonyms=["bovine", "ox", "cow", "dairy cow", "domestic cattle", "domestic cow"],
 )
+Species.caenorhabditis_elegans = Species(
+    id="https://openminds.ebrains.eu/instances/species/caenorhabditisElegans",
+    definition="The species *Caenorhabditis elegans* (C. elegans) belongs to the family of *rhabditidae* (roundworms).",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101548"),
+    name="Caenorhabditis elegans",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_6239"),
+    synonyms=["C. elegans"],
+)
 Species.callithrix_jacchus = Species(
     id="https://openminds.ebrains.eu/instances/species/callithrixJacchus",
     definition="The species *Callithrix jacchus* (common marmoset) belongs to the family of *callitrichidae* (new world monkeys).",

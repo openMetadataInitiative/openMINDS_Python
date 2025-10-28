@@ -5318,7 +5318,6 @@ BrainAtlas.whss_datlas = BrainAtlas(
             {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_spinalTrigeminalTract"},
             {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_grayMatter"},
             {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_cerebrum"},
-            {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_cerebralCortex"},
             {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_corticalPlate"},
             {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_isocortex"},
             {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_neocortexUnspecified"},

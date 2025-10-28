@@ -16,6 +16,7 @@ from .cell_culture_type import CellCultureType
 from .cell_type import CellType
 from .chemical_mixture_type import ChemicalMixtureType
 from .colormap import Colormap
+from .communication_interface_type import CommunicationInterfaceType
 from .communication_protocol import CommunicationProtocol
 from .contribution_type import ContributionType
 from .cranial_window_construction_type import CranialWindowConstructionType
@@ -66,11 +67,13 @@ from .service import Service
 from .setup_type import SetupType
 from .software_application_category import SoftwareApplicationCategory
 from .software_feature import SoftwareFeature
+from .sovereign_state import SovereignState
 from .species import Species
 from .stimulation_approach import StimulationApproach
 from .stimulation_technique import StimulationTechnique
 from .subcellular_entity import SubcellularEntity
 from .subject_attribute import SubjectAttribute
+from .supranational_body import SupranationalBody
 from .tactile_stimulus_type import TactileStimulusType
 from .technique import Technique
 from .term_suggestion import TermSuggestion

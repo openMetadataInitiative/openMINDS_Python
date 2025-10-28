@@ -203,6 +203,14 @@ MolecularEntity.anterograde_tracer = MolecularEntity(
     name="anterograde tracer",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NLXMOL_1012002"),
 )
+MolecularEntity.barium = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/barium",
+    definition="Barium (Ba) is a chemical element with atomic number 56 and belongs to the alkaline earth metals.[adapted from Wikipedia (https://en.wikipedia.org/wiki/Barium)]",
+    description="Barium is a chemical element; it has symbol Ba and atomic number 56. It is the fifth element in group 2; and is a soft, silvery alkaline earth metal. Because of its high chemical reactivity, barium is never found in nature as a free element. [adapted from Wikipedia (https://en.wikipedia.org/wiki/Barium)]",
+    name="barium",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_37133"),
+    synonyms=["Ba"],
+)
 MolecularEntity.beta__amyloid40 = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/Beta-Amyloid40",
     definition="Amyloid beta peptide with carboxyterminal variant ending at residual Val40.",
@@ -794,6 +802,16 @@ MolecularEntity.gabazine = MolecularEntity(
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0142643"),
     synonyms=["SR-95531"],
 )
+MolecularEntity.gadolinium = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/gadolinium",
+    definition="Gadolinium (Gd) is a chemical element with atomic number 64 and belongs to the rare-earth metals. [paraphrased from (https://en.wikipedia.org/wiki/Gadolinium)]",
+    description="Gadolinium is a chemical element; it has symbol Gd and atomic number 64. It is a silvery-white metal when oxidation is removed. Gadolinium is a malleable and ductile rare-earth element. It reacts with atmospheric oxygen or moisture slowly to form a black coating. Gadolinium below its Curie point of 20 °C (68 °F) is ferromagnetic, with an attraction to a magnetic field higher than that of nickel. Above this temperature it is the most paramagnetic element. It is found in nature only in an oxidized form. When separated, it usually has impurities of the other rare earths because of their similar chemical properties. [adapted from Wikipedia (https://en.wikipedia.org/wiki/Gadolinium)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0782820"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:35729#gadolinium-molecular-entity"),
+    name="gadolinium",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_35729"),
+    synonyms=["Gd"],
+)
 MolecularEntity.galanin = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/galanin",
     definition="Galanin is a biologically active neuropeptide, encoded by the GAL gene, that is widely distributed in the central and peripheral nervous systems and the endocrine system.",
@@ -916,6 +934,15 @@ MolecularEntity.intrabody = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/intrabody",
     definition="An 'intrabody' is an antibody that works within the cell to bind an intracellular protein.",
     name="intrabody",
+)
+MolecularEntity.iodine = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/iodine",
+    definition="Iodine (I) is a chemical element with atomic number 53 and belongs to the halogens. [paraphrased from Wikipedia (https://en.wikipedia.org/wiki/Iodine)]",
+    description="Iodine is a chemical element; it has symbol I and atomic number 53. The heaviest of the stable halogens, it exists at standard conditions as a semi-lustrous, non-metallic solid that melts to form a deep violet liquid at 114 °C (237 °F), and boils to a violet gas at 184 °C (363 °F). [adapted from Wikipedia (https://en.wikipedia.org/wiki/Iodine)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:24860#iodine-molecular-entity"),
+    name="iodine",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_24860"),
+    synonyms=["I"],
 )
 MolecularEntity.ionotropic_glutamate_receptor = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/ionotropicGlutamateReceptor",
@@ -1499,4 +1526,12 @@ MolecularEntity.water = MolecularEntity(
         "κ1-hydroxylhydrogen(0)",
         "neutral liquid",
     ],
+)
+MolecularEntity.xenon = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/xenon",
+    definition="Xenon (Xe) is a chemical element with atomic number 54 and belongs to the noble gases. [paraphrased from Wikipedia (https://en.wikipedia.org/wiki/Xenon)]",
+    description="Xenon is a chemical element; it has symbol Xe and atomic number 54. It is a dense, colorless, odorless noble gas found in Earth's atmosphere in trace amounts. Although generally unreactive, it can undergo a few chemical reactions such as the formation of xenon hexafluoroplatinate, the first noble gas compound to be synthesized. [adapted from Wikipedia (https://en.wikipedia.org/wiki/Xenon)]",
+    name="xenon",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_36910"),
+    synonyms=["Xe"],
 )

@@ -129,8 +129,18 @@ class Node(metaclass=Registry):
         if issubclass(cls, LinkedMetadata):
             deserialized_data["id"] = data_copy.pop("@id", None)
         for property in cls.properties:
-            if property.path in data_copy:  # todo: use context to resolve uris
+            found = False
+            if property.path in data_copy:
                 value = data_copy.pop(property.path)
+                found = True
+            else:
+                # todo: implement or import a function that does a full JSON-LD expansion
+                #       not just this special case
+                expanded_path = f"{cls.context['@vocab']}{property.path}"
+                if expanded_path in data_copy:
+                    value = data_copy.pop(expanded_path)
+                    found = True
+            if found:
                 if value:
                     deserialized_data[property.name] = property.deserialize(value)
                 else:
