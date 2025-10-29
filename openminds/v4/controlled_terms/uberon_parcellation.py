@@ -3423,6 +3423,24 @@ UBERONParcellation.central_retina = UBERONParcellation(
     name="central retina",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_8000004"),
 )
+UBERONParcellation.central_retinal_artery = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/centralRetinalArtery",
+    definition="Is a retina blood vessel. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001620)]",
+    description="The central retinal artery (retinal artery) branches off the ophthalmic artery, running inferior to the optic nerve within its dural sheath to the eyeball. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001620)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001620#central-retinal-artery"),
+    name="central retinal artery",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001620"),
+    synonyms=["central artery of retina", "retinal artery", "Zinn's artery"],
+)
+UBERONParcellation.central_retinal_vein = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/centralRetinalVein",
+    definition="Is part of the cavernous sinus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001673)]",
+    description="The central retinal vein (retinal vein) is a short vein that runs through the optic nerve and drains blood from the capillaries of the retina into the larger veins outside the eye. The anatomy of the veins of the orbit of the eye varies between individuals, and in some the central retinal vein drains into the superior ophthalmic vein, and in some it drains directly into the cavernous sinus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001673)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001673#central-retinal-vein"),
+    name="central retinal vein",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001673"),
+    synonyms=["retinal vein"],
+)
 UBERONParcellation.central_sulcus = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/centralSulcus",
     definition="Is a sulcus of brain. Is part of the cerebral cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002916) ('is_a' and 'relationship')]",
@@ -8588,7 +8606,7 @@ UBERONParcellation.great_cerebral_vein = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0006666#great-cerebral-vein"),
     name="great cerebral vein",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006666"),
-    synonyms=["great cerebral vein", "great cerebral vein of Galen", "vein of Galen"],
+    synonyms=["great cerebral vein of Galen", "vein of Galen"],
 )
 UBERONParcellation.greater_splanchnic_nerve = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/greaterSplanchnicNerve",
@@ -18873,6 +18891,22 @@ UBERONParcellation.retina = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000966"),
     synonyms=["inner layer of eyeball", "retina of camera-type eye", "tunica interna of eyeball"],
 )
+UBERONParcellation.retina_blood_vessel = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/retinaBloodVessel",
+    definition="Is part of the vasculature of retina. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003501)]",
+    description="A blood vessel that is part of a retina. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003501)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0003501#retina-blood-vessel"),
+    name="retina blood vessel",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003501"),
+    synonyms=[
+        "blood vessel of inner layer of eyeball",
+        "blood vessel of retina",
+        "blood vessel of tunica interna of eyeball",
+        "inner layer of eyeball blood vessel",
+        "retinal blood vessel",
+        "tunica interna of eyeball blood vessel",
+    ],
+)
 UBERONParcellation.retinal_neural_layer = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/retinalNeuralLayer",
     definition="Is a layer of retina. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003902)]",
@@ -22689,6 +22723,14 @@ UBERONParcellation.triangular_septal_nucleus = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002977"),
     synonyms=["nucleus triangularis septi", "triangular nucleus of septum", "triangular nucleus septum (cajal)"],
 )
+UBERONParcellation.tributary_of_central_retinal_vein = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/tributaryOfCentralRetinalVein",
+    definition="Is part of the central retinal vein. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036300)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0036300#tributary-of-central-retinal-vein"),
+    name="tributary of central retinal vein",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036300"),
+    synonyms=["central retinal venous tributary"],
+)
 UBERONParcellation.trigeminal_ganglion = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/trigeminalGanglion",
     definition="Is a cranial ganglion and sensory ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001675)]",
@@ -23028,6 +23070,24 @@ UBERONParcellation.vasculature_of_central_nervous_system = UBERONParcellation(
     name="vasculature of central nervous system",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036303"),
 )
+UBERONParcellation.vasculature_of_retina = UBERONParcellation(
+    id="https://openminds.om-i.org/instances/UBERONParcellation/vasculatureOfRetina",
+    definition="Is part of the retina. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004864)]",
+    description="A vasculature that is part of a retina. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004864)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004864#vasculature-of-retina"),
+    name="vasculature of retina",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004864"),
+    synonyms=[
+        "retina vasculature",
+        "retina vasculature of camera-type eye",
+        "retinal blood vessels",
+        "retinal blood vessels set",
+        "retinal vasculature",
+        "set of blood vessels of retina",
+        "set of retinal blood vessels",
+        "vasa sanguinea retinae",
+    ],
+)
 UBERONParcellation.vein_baroreceptor = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/veinBaroreceptor",
     definition="Is a low-pressure baroreceptor. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0018394)]",
@@ -23052,14 +23112,7 @@ UBERONParcellation.venous_dural_sinus = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005486#venous-dural-sinus"),
     name="venous dural sinus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005486"),
-    synonyms=[
-        "cranial dural venous sinus",
-        "dural sinus",
-        "dural vein",
-        "dural venous sinus",
-        "venous dural",
-        "venous dural sinus",
-    ],
+    synonyms=["cranial dural venous sinus", "dural sinus", "dural vein", "dural venous sinus", "venous dural"],
 )
 UBERONParcellation.venous_system_of_brain = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/venousSystemOfBrain",
@@ -23730,15 +23783,6 @@ UBERONParcellation.vertical_limb_of_the_diagonal_band = UBERONParcellation(
         "vertical limb of the diagonal band",
         "Vertical limb of the diagonal band of Broca",
     ],
-)
-UBERONParcellation.vessel = UBERONParcellation(
-    id="https://openminds.om-i.org/instances/UBERONParcellation/vessel",
-    definition="'vessel' is an anatomical conduit.",
-    description="A tubular structure that contains, conveys body fluid, such as blood or lymph.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0731576"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0000055#vessel"),
-    name="vessel",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000055"),
 )
 UBERONParcellation.vestibular_ganglion = UBERONParcellation(
     id="https://openminds.om-i.org/instances/UBERONParcellation/vestibularGanglion",
