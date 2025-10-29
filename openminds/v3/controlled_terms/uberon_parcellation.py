@@ -6178,6 +6178,14 @@ UBERONParcellation.diencephalon_dura_mater = UBERONParcellation(
         "mature diencephalon dura mater of neuraxis",
     ],
 )
+UBERONParcellation.diencephalon_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/diencephalonLateralWall",
+    definition="Is part of the diencephalon. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005591)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005591#diencephalon-lateral-wall"),
+    name="diencephalon lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005591"),
+    synonyms=["lateral wall diencephalic region", "lateral wall diencephalon"],
+)
 UBERONParcellation.diencephalon_mantle_layer = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/diencephalonMantleLayer",
     definition="Is a neural tube mantle layer. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009580)]",
@@ -14598,6 +14606,14 @@ UBERONParcellation.midbrain_hindbrain_boundary = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003052"),
     synonyms=["MHB", "mid-hindbrain boundary", "mid-hindbrain junction", "midbrain hindbrain boundary"],
 )
+UBERONParcellation.midbrain_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/midbrainLateralWall",
+    definition="Is part of the midbrain. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005495)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005495#midbrain-lateral-wall"),
+    name="midbrain lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005495"),
+    synonyms=["lateral wall midbrain", "lateral wall midbrain region"],
+)
 UBERONParcellation.midbrain_mantle_layer = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/midbrainMantleLayer",
     definition="Is a neural tube mantle layer. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009581)]",
@@ -15247,6 +15263,13 @@ UBERONParcellation.neural_tube_derived_brain = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0008823#neural-tube-derived-brain"),
     name="neural tube derived brain",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0008823"),
+)
+UBERONParcellation.neural_tube_lateral_wall_mantle_layer = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/neuralTubeLateralWallMantleLayer",
+    definition="Is a neural tube mantle layer. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005883)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005883#neural-tube-lateral-wall-mantle-layer"),
+    name="neural tube lateral wall mantle layer",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005883"),
 )
 UBERONParcellation.neural_tube_mantle_layer = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/neuralTubeMantleLayer",
@@ -20367,6 +20390,15 @@ UBERONParcellation.rhombomere1_floor_plate = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005566"),
     synonyms=["floor plate r1", "floor plate rhombomere 1"],
 )
+UBERONParcellation.rhombomere1_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere1LateralWall",
+    definition="Is a rhombomere lateral wall. Is part of the rhombomere 1. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005567) ('is_a' and 'relationship')]",
+    description="A rhombomere lateral wall that is part of a rhombomere 1. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005567)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005567#rhombomere-lateral-wall"),
+    name="rhombomere 1 lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005567"),
+    synonyms=["lateral wall rhombomere 1"],
+)
 UBERONParcellation.rhombomere1_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere1RoofPlate",
     definition="Is a rhombomere roof plate. Is part of the rhombomere 1. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005568) ('is_a' and 'relationship')]",
@@ -20393,6 +20425,15 @@ UBERONParcellation.rhombomere2_floor_plate = UBERONParcellation(
     name="rhombomere 2 floor plate",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005570"),
     synonyms=["floor plate r2", "floor plate rhombomere 2", "floorplate r2"],
+)
+UBERONParcellation.rhombomere2_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere2LateralWall",
+    definition="Is a rhombomere lateral wall. Is part of the rhombomere 2. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005571) ('is_a' and 'relationship')]",
+    description="A rhombomere lateral wall that is part of a rhombomere 2. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005571)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005571#rhombomere-2-lateral-wall"),
+    name="rhombomere 2 lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005571"),
+    synonyms=["lateral wall rhombomere 2"],
 )
 UBERONParcellation.rhombomere2_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere2RoofPlate",
@@ -20421,6 +20462,15 @@ UBERONParcellation.rhombomere3_floor_plate = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005573"),
     synonyms=["floor plate r3", "floor plate rhombomere 3", "floorplate r3"],
 )
+UBERONParcellation.rhombomere3_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere3LateralWall",
+    definition="Is a rhombomere lateral wall. Is part of the rhombomere 3. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005574) ('is_a' and 'relationship')]",
+    description="A rhombomere lateral wall that is part of a rhombomere 3. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005574)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005574#rhombomere-3-lateral-wall"),
+    name="rhombomere 3 lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005574"),
+    synonyms=["lateral wall rhombomere 3"],
+)
 UBERONParcellation.rhombomere3_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere3RoofPlate",
     definition="Is a rhombomere roof plate. Is part of the rhombomere 3. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005575) ('is_a' and 'relationship')]",
@@ -20447,6 +20497,15 @@ UBERONParcellation.rhombomere4_floor_plate = UBERONParcellation(
     name="rhombomere 4 floor plate",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005576"),
     synonyms=["floor plate r4", "floor plate rhombomere 4", "floorplate r4"],
+)
+UBERONParcellation.rhombomere4_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere4LateralWall",
+    definition="Is a rhombomere lateral wall. Is part of the rhombomere 4. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005577) ('is_a' and 'relationship')]",
+    description="A rhombomere lateral wall that is part of a rhombomere 4. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005577)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005577#rhombomere-4-lateral-wall"),
+    name="rhombomere 4 lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005577"),
+    synonyms=["lateral wall rhombomere 4"],
 )
 UBERONParcellation.rhombomere4_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere4RoofPlate",
@@ -20475,6 +20534,15 @@ UBERONParcellation.rhombomere5_floor_plate = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005579"),
     synonyms=["floor plate r5", "floor plate rhombomere 5", "floorplate r5"],
 )
+UBERONParcellation.rhombomere5_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere5LateralWall",
+    definition="Is a rhombomere lateral wall. Is part of the rhombomere 5. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005580) ('is_a' and 'relationship')]",
+    description="A rhombomere lateral wall that is part of a rhombomere 5. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005580)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005580#rhombomere-5-lateral-wall"),
+    name="rhombomere 5 lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005580"),
+    synonyms=["lateral wall rhombomere 5"],
+)
 UBERONParcellation.rhombomere5_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere5RoofPlate",
     definition="Is a rhombomere roof plate. Is part of the rhombomere 5. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005581) ('is_a' and 'relationship')]",
@@ -20501,6 +20569,15 @@ UBERONParcellation.rhombomere6_floor_plate = UBERONParcellation(
     name="rhombomere 6 floor plate",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005582"),
     synonyms=["floor plate r6", "floor plate rhombomere 6", "floorplate r6"],
+)
+UBERONParcellation.rhombomere6_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere6LateralWall",
+    definition="Is a rhombomere lateral wall. Is part of the rhombomere 6. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005583) ('is_a' and 'relationship')]",
+    description="A rhombomere lateral wall that is part of a rhombomere 6. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005583)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005583#rhombomere-6-lateral-wall"),
+    name="rhombomere 6 lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005583"),
+    synonyms=["lateral wall rhombomere 6"],
 )
 UBERONParcellation.rhombomere6_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere6RoofPlate",
@@ -20529,6 +20606,15 @@ UBERONParcellation.rhombomere7_floor_plate = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005585"),
     synonyms=["floor plate r7", "floor plate rhombomere 7", "floorplate r7"],
 )
+UBERONParcellation.rhombomere7_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere7LateralWall",
+    definition="Is a rhombomere lateral wall. Is part of the rhombomere 7. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005586) ('is_a' and 'relationship')]",
+    description="A rhombomere lateral wall that is part of a rhombomere 7. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005586)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005586#rhombomere-7-lateral-wall"),
+    name="rhombomere 7 lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005586"),
+    synonyms=["lateral wall rhombomere 7"],
+)
 UBERONParcellation.rhombomere7_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere7RoofPlate",
     definition="Is a rhombomere roof plate. Is part of the rhombomere 7. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005587) ('is_a' and 'relationship')]",
@@ -20556,6 +20642,15 @@ UBERONParcellation.rhombomere8_floor_plate = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005588"),
     synonyms=["floor plate r8", "floor plate rhombomere 8", "floorplate r8"],
 )
+UBERONParcellation.rhombomere8_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere8LateralWall",
+    definition="Is a rhombomere lateral wall. Is part of the rhombomere 8. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005589) ('is_a' and 'relationship')]",
+    description="A rhombomere lateral wall that is part of a rhombomere 8. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005589)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005589#rhombomere-8-lateral-wall"),
+    name="rhombomere 8 lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005589"),
+    synonyms=["lateral wall rhombomere 8"],
+)
 UBERONParcellation.rhombomere8_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomere8RoofPlate",
     definition="Is a rhombomere roof plate. Is part of the rhombomere 8. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005590) ('is_a' and 'relationship')]",
@@ -20580,6 +20675,14 @@ UBERONParcellation.rhombomere_floor_plate = UBERONParcellation(
     name="rhombomere floor plate",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005500"),
     synonyms=["floor plate hindbrain", "floor plate rhombomere region", "rhombencephalon floor plate"],
+)
+UBERONParcellation.rhombomere_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomereLateralWall",
+    definition="Is part of the rhombomere. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005501)]",
+    description="A neural tube lateral wall that is part of a rhombomere. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005501)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005501#rhombomere-lateral-wall"),
+    name="rhombomere lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005501"),
 )
 UBERONParcellation.rhombomere_roof_plate = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/rhombomereRoofPlate",
@@ -21777,6 +21880,14 @@ UBERONParcellation.spinal_cord_lateral_motor_column = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010405#spinal-cord-lateral-motor-column"),
     name="spinal cord lateral motor column",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010405"),
+)
+UBERONParcellation.spinal_cord_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/spinalCordLateralWall",
+    definition="Is part of the spinal cord. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009582)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0009582#spinal-cord-lateral-wall"),
+    name="spinal cord lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009582"),
+    synonyms=["lateral wall spinal cord"],
 )
 UBERONParcellation.spinal_cord_mantle_layer = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/spinalCordMantleLayer",
@@ -23914,6 +24025,14 @@ UBERONParcellation.telencephalon_dura_mater = UBERONParcellation(
         "telencephalon dura mater of neuraxis",
     ],
 )
+UBERONParcellation.telencephalon_lateral_wall = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/telencephalonLateralWall",
+    definition="Is part of the telencephalon. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005561)]",
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0005561#telencephalon-lateral-wall"),
+    name="telencephalon lateral wall",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005561"),
+    synonyms=["lateral wall telencephalic region", "lateral wall telencephalon"],
+)
 UBERONParcellation.telencephalon_pia_mater = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/telencephalonPiaMater",
     definition="Is a meninx of telencephalon and forebrain pia mater. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003552)]",
@@ -25811,6 +25930,37 @@ UBERONParcellation.visual_processing_part_of_nervous_system = UBERONParcellation
     ),
     name="visual processing part of nervous system",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006794"),
+)
+UBERONParcellation.wall_of_central_canal_of_spinal_cord = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/wallOfCentralCanalOfSpinalCord",
+    definition="Is a ventricle of nervous system. Is part of the central canal of spinal cord. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036658) ('is_a' and 'relationship')]",
+    name="wall of central canal of spinal cord",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036658"),
+    synonyms=["wall of central canal"],
+)
+UBERONParcellation.wall_of_cerebral_aqueduct = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/wallOfCerebralAqueduct",
+    definition="Is a wall of ventricular system of brain. Is part of the midbrain cerebral aqueduct. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036655) ('is_a' and 'relationship')]",
+    name="wall of cerebral aqueduct",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036655"),
+)
+UBERONParcellation.wall_of_fourth_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/wallOfFourthVentricle",
+    definition="Is a wall of ventricular system of brain. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036657) ('is_a' and 'relationship')]",
+    name="wall of fourth ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036657"),
+)
+UBERONParcellation.wall_of_lateral_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/wallOfLateralVentricle",
+    definition="Is a wall of ventricular system of brain. Is part of the telencephalic ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036654) ('is_a' and 'relationship')]",
+    name="wall of lateral ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036654"),
+)
+UBERONParcellation.wall_of_third_ventricle = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/wallOfThirdVentricle",
+    definition="Is a wall of ventricular system of brain. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036656) ('is_a' and 'relationship')]",
+    name="wall of third ventricle",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036656"),
 )
 UBERONParcellation.wall_of_ventricular_system_of_brain = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/wallOfVentricularSystemOfBrain",
