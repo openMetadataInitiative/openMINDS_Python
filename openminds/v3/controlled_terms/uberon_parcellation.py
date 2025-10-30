@@ -529,16 +529,6 @@ UBERONParcellation.adenohypophysis = UBERONParcellation(
         "pituitary gland, anterior lobe",
     ],
 )
-UBERONParcellation.aggregate_regional_part_of_brain = UBERONParcellation(
-    id="https://openminds.ebrains.eu/instances/UBERONParcellation/aggregateRegionalPartOfBrain",
-    definition="'Aggregate regional part of brain' is an anatomical entity. It is part of the brain.",
-    description="A regional part of brain consisting of multiple brain regions that are not related through a simple volummetric part of hierarchy, e.g., basal ganglia.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100410"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0010009#aggregate-regional-part-of-brain-1"),
-    name="aggregate regional part of brain",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010009"),
-    synonyms=["set of nuclei of neuraxis"],
-)
 UBERONParcellation.agranular_insular_cortex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/agranularInsularCortex",
     definition="Is a regional part of brain. Is part of the insular cortex. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034893) ('is_a' and 'relationship')]",
@@ -4562,24 +4552,6 @@ UBERONParcellation.cervicothoracic_ganglion = UBERONParcellation(
         "stellate ganglion",
     ],
 )
-UBERONParcellation.chemoarchitectural_part_of_brain = UBERONParcellation(
-    id="https://openminds.ebrains.eu/instances/UBERONParcellation/chemoarchitecturalPartOfBrain",
-    definition="'Chemoarchitectural part of brain' is a regional part of brain.",
-    description="Regional part of an anatomical region that is revealed by the use of a stain that reveals chemoarchitecture.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102072"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0024090#chemoarchitectural-part"),
-    name="chemoarchitectural part of brain",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0024090"),
-    synonyms=["chemoarchitectural part"],
-)
-UBERONParcellation.chemoarchitectural_part_of_striatum = UBERONParcellation(
-    id="https://openminds.ebrains.eu/instances/UBERONParcellation/chemoarchitecturalPartOfStriatum",
-    definition="'Chemoarchitectural part of striatum' is a chemoarchitectural part of brain. It is part of the striatum.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102073"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0025736#chemoarchitectural-part-of-striatum"),
-    name="chemoarchitectural part of striatum",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025736"),
-)
 UBERONParcellation.chemoreceptor = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/chemoreceptor",
     definition="Is an interoceptor. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0018391)]",
@@ -5186,18 +5158,6 @@ UBERONParcellation.communicating_branch_of_spinal_nerve = UBERONParcellation(
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0017642#communicating-branch-of-spinal-nerve"),
     name="communicating branch of spinal nerve",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0017642"),
-)
-UBERONParcellation.composite_part_spanning_multiple_base_regional_parts_of_brain = UBERONParcellation(
-    id="https://openminds.ebrains.eu/instances/UBERONParcellation/compositePartSpanningMultipleBaseRegionalPartsOfBrain",
-    definition="'Composite part spanning multiple base regional parts of brain' is an anatomical entity. It is part of the brain.",
-    description="",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102438"),
-    knowledge_space_link=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0022776#composite-part-spanning-multiple-base-regional-parts-of-brain-1"
-    ),
-    name="composite part spanning multiple base regional parts of brain",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022776"),
-    synonyms=["composite part spanning multiple base regional parts of brain"],
 )
 UBERONParcellation.conus_medullaris = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/conusMedullaris",
@@ -9249,16 +9209,6 @@ UBERONParcellation.greater_splanchnic_nerve = UBERONParcellation(
     name="greater splanchnic nerve",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0018680"),
     synonyms=["greater thoracic splanchnic nerve"],
-)
-UBERONParcellation.gross_anatomical_parts_of_the_cerebellum = UBERONParcellation(
-    id="https://openminds.ebrains.eu/instances/UBERONParcellation/grossAnatomicalPartsOfTheCerebellum",
-    definition="'Gross anatomical parts of the cerebellum' is a regional part of brain. It is part of the cerebellum.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104796"),
-    knowledge_space_link=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0023836#gross-anatomical-parts-of-the-cerebellum-1"
-    ),
-    name="gross anatomical parts of the cerebellum",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023836"),
 )
 UBERONParcellation.grueneberg_ganglion = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/GruenebergGanglion",
@@ -20597,23 +20547,6 @@ UBERONParcellation.red_nucleus = UBERONParcellation(
     name="red nucleus",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001947"),
     synonyms=["nucleus ruber"],
-)
-UBERONParcellation.regional_part_of_brain = UBERONParcellation(
-    id="https://openminds.ebrains.eu/instances/UBERONParcellation/regionalPartOfBrain",
-    definition="'Regional part of brain' is a regional part of nervous system. It is part of the brain.",
-    description="Anatomical divisions of the brain according to one or more criteria, e.g. cytoarchitectural, gross anatomy. Parts may be contiguous in 3D or not, e.g., basal ganglia.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109835"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002616#regional-part-of-brain-1"),
-    name="regional part of brain",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002616"),
-)
-UBERONParcellation.regional_part_of_cerebellar_cortex = UBERONParcellation(
-    id="https://openminds.ebrains.eu/instances/UBERONParcellation/regionalPartOfCerebellarCortex",
-    definition="'Regional part of cerebellar cortex' is a regional part of brain. It is part of the cerebellar cortex.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109837"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002749#regional-part-of-cerebellar-cortex-1"),
-    name="regional part of cerebellar cortex",
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002749"),
 )
 UBERONParcellation.reissners_fiber = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/ReissnersFiber",
