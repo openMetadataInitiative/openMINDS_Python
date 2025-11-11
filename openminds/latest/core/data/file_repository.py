@@ -21,14 +21,6 @@ class FileRepository(LinkedMetadata):
 
     properties = [
         Property(
-            "iri",
-            IRI,
-            "IRI",
-            required=True,
-            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier (IRI) to this file repository.",
-        ),
-        Property(
             "content_type_patterns",
             "openminds.latest.core.ContentTypePattern",
             "contentTypePattern",
@@ -59,6 +51,14 @@ class FileRepository(LinkedMetadata):
             required=True,
             description="Reference to an organization that provides facilities and services for something.",
             instructions="Add the host organization of this file repository.",
+        ),
+        Property(
+            "iri",
+            IRI,
+            "IRI",
+            required=True,
+            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
+            instructions="Enter the internationalized resource identifier (IRI) to this file repository.",
         ),
         Property(
             "name",
@@ -95,11 +95,11 @@ class FileRepository(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        iri=None,
         content_type_patterns=None,
         format=None,
         hash=None,
         hosted_by=None,
+        iri=None,
         name=None,
         storage_size=None,
         structure_pattern=None,
@@ -107,11 +107,11 @@ class FileRepository(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
-            iri=iri,
             content_type_patterns=content_type_patterns,
             format=format,
             hash=hash,
             hosted_by=hosted_by,
+            iri=iri,
             name=name,
             storage_size=storage_size,
             structure_pattern=structure_pattern,

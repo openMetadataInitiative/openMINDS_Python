@@ -22,13 +22,6 @@ class Chapter(LinkedMetadata):
 
     properties = [
         Property(
-            "iri",
-            IRI,
-            "IRI",
-            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier (IRI) to this creative work.",
-        ),
-        Property(
             "abstract",
             str,
             "abstract",
@@ -108,6 +101,13 @@ class Chapter(LinkedMetadata):
             min_items=1,
             description="Money provided by a legal person for a particular purpose.",
             instructions="Add all funding information of this creative work.",
+        ),
+        Property(
+            "iri",
+            IRI,
+            "IRI",
+            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
+            instructions="Enter the internationalized resource identifier (IRI) to this creative work.",
         ),
         Property(
             "is_part_of",
@@ -267,7 +267,6 @@ class Chapter(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        iri=None,
         abstract=None,
         authors=None,
         cited_publications=None,
@@ -277,6 +276,7 @@ class Chapter(LinkedMetadata):
         digital_identifier=None,
         editors=None,
         funding=None,
+        iri=None,
         is_part_of=None,
         keywords=None,
         license=None,
@@ -289,7 +289,6 @@ class Chapter(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
-            iri=iri,
             abstract=abstract,
             authors=authors,
             cited_publications=cited_publications,
@@ -299,6 +298,7 @@ class Chapter(LinkedMetadata):
             digital_identifier=digital_identifier,
             editors=editors,
             funding=funding,
+            iri=iri,
             is_part_of=is_part_of,
             keywords=keywords,
             license=license,

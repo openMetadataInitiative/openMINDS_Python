@@ -90,7 +90,6 @@ class BrainAtlas(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            required=True,
             description="Reference to variants of an original.",
             instructions="Add versions of this brain atlas.",
         ),

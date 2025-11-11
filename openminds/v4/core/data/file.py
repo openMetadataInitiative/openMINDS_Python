@@ -21,14 +21,6 @@ class File(LinkedMetadata):
 
     properties = [
         Property(
-            "iri",
-            IRI,
-            "IRI",
-            required=True,
-            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier (IRI) to this file instance.",
-        ),
-        Property(
             "content_description",
             str,
             "contentDescription",
@@ -72,6 +64,14 @@ class File(LinkedMetadata):
             instructions="Add all hashes that were generated for this file instance.",
         ),
         Property(
+            "iri",
+            IRI,
+            "IRI",
+            required=True,
+            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
+            instructions="Enter the internationalized resource identifier (IRI) to this file instance.",
+        ),
+        Property(
             "is_part_of",
             "openminds.v4.core.FileBundle",
             "isPartOf",
@@ -109,12 +109,12 @@ class File(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        iri=None,
         content_description=None,
         data_types=None,
         file_repository=None,
         format=None,
         hashes=None,
+        iri=None,
         is_part_of=None,
         name=None,
         special_usage_role=None,
@@ -122,12 +122,12 @@ class File(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
-            iri=iri,
             content_description=content_description,
             data_types=data_types,
             file_repository=file_repository,
             format=format,
             hashes=hashes,
+            iri=iri,
             is_part_of=is_part_of,
             name=name,
             special_usage_role=special_usage_role,

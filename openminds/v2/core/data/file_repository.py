@@ -21,14 +21,6 @@ class FileRepository(LinkedMetadata):
 
     properties = [
         Property(
-            "iri",
-            IRI,
-            "IRI",
-            required=True,
-            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier (IRI) of this file repository.",
-        ),
-        Property(
             "format",
             "openminds.v2.core.ContentType",
             "format",
@@ -49,6 +41,14 @@ class FileRepository(LinkedMetadata):
             required=True,
             description="Reference to an organization that provides facilities and services for something.",
             instructions="Add the host of this file repository.",
+        ),
+        Property(
+            "iri",
+            IRI,
+            "IRI",
+            required=True,
+            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
+            instructions="Enter the internationalized resource identifier (IRI) of this file repository.",
         ),
         Property(
             "name",
@@ -78,20 +78,20 @@ class FileRepository(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        iri=None,
         format=None,
         hash=None,
         hosted_by=None,
+        iri=None,
         name=None,
         repository_type=None,
         storage_size=None,
     ):
         return super().__init__(
             id=id,
-            iri=iri,
             format=format,
             hash=hash,
             hosted_by=hosted_by,
+            iri=iri,
             name=name,
             repository_type=repository_type,
             storage_size=storage_size,

@@ -30,6 +30,8 @@ from .digital_identifier import (
 from .miscellaneous import (
     Comment,
     Funding,
+    GeoCoordinates,
+    Location,
     QuantitativeValue,
     QuantitativeValueArray,
     QuantitativeValueRange,

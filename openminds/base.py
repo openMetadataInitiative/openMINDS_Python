@@ -123,6 +123,8 @@ class Node(metaclass=Registry):
         data_copy = data.copy()
         context = data_copy.pop("@context", None)
         type_ = data_copy.pop("@type")
+        if isinstance(type_, list) and len(type_) == 1:
+            type_ = type_[0]
         if type_ and type_ != cls.type_:
             raise TypeError(f"Mismatched types. Data has '{type_}' but trying to create '{cls.type_}'")
         deserialized_data = {}

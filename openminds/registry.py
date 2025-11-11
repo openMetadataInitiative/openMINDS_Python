@@ -20,15 +20,19 @@ registry: dict = {"names": {}, "types": defaultdict(dict)}
 def register_class(target_class: Registry):
     """Add a class to the registry"""
     if hasattr(target_class, "schema_version"):
-        assert "openminds" in target_class.__module__
-        parts = target_class.__module__.split(".")
         version = target_class.schema_version.split(".")[0]  # e.g. 'v3' or 'latest'
-        name = ".".join(parts[0:3] + [target_class.__name__])  # e.g. openminds.latest.core.Dataset
-        # taking the first 3 parts is artbitrary, should add an attribute to each class
-        # with its preferred import name
-        # e.g. for `openminds.latest.core.research.protocol_execution.ProtocolExecution`
-        #      the preferred import name is `openminds.latest.core.ProtocolExecution`
-        #      because the intermediate directory structure is an implementation detail
+        if target_class.__module__.startswith("openminds"):
+            parts = target_class.__module__.split(".")
+            name = ".".join(parts[0:3] + [target_class.__name__])  # e.g. openminds.latest.core.Dataset
+            # taking the first 3 parts is arbitrary, we could instead set the
+            # attribute "preferred_import_path" on each class, with its preferred import name.
+            # e.g. for `openminds.latest.core.research.protocol_execution.ProtocolExecution`
+            #      the preferred import name is `openminds.latest.core.ProtocolExecution`
+            #      because the intermediate directory structure is an implementation detail
+        elif hasattr(target_class, "preferred_import_path"):  # e.g., classes used for testing
+            name = target_class.preferred_import_path
+        else:
+            raise AttributeError("Cannot register this class, it does not define 'preferred_import_path'")
 
         registry["names"][name] = target_class
 

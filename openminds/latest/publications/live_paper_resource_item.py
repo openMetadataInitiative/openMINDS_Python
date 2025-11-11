@@ -21,14 +21,6 @@ class LivePaperResourceItem(LinkedMetadata):
 
     properties = [
         Property(
-            "iri",
-            IRI,
-            "IRI",
-            required=True,
-            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier (IRI) to this live paper resource item.",
-        ),
-        Property(
             "hosted_by",
             [
                 "openminds.latest.core.Organization",
@@ -39,6 +31,14 @@ class LivePaperResourceItem(LinkedMetadata):
             required=True,
             description="Reference to an organization that provides facilities and services for something.",
             instructions="Add the web service or organization that hosts this live paper resource item.",
+        ),
+        Property(
+            "iri",
+            IRI,
+            "IRI",
+            required=True,
+            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
+            instructions="Enter the internationalized resource identifier (IRI) to this live paper resource item.",
         ),
         Property(
             "is_part_of",
@@ -59,11 +59,11 @@ class LivePaperResourceItem(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, iri=None, hosted_by=None, is_part_of=None, name=None):
+    def __init__(self, id=None, hosted_by=None, iri=None, is_part_of=None, name=None):
         return super().__init__(
             id=id,
-            iri=iri,
             hosted_by=hosted_by,
+            iri=iri,
             is_part_of=is_part_of,
             name=name,
         )

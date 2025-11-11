@@ -21,14 +21,6 @@ class File(LinkedMetadata):
 
     properties = [
         Property(
-            "iri",
-            IRI,
-            "IRI",
-            required=True,
-            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier of this single file.",
-        ),
-        Property(
             "content",
             str,
             "content",
@@ -76,6 +68,14 @@ class File(LinkedMetadata):
             instructions="Add the hash that was generated for this file instance.",
         ),
         Property(
+            "iri",
+            IRI,
+            "IRI",
+            required=True,
+            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
+            instructions="Enter the internationalized resource identifier of this single file.",
+        ),
+        Property(
             "is_part_of",
             "openminds.v1.core.FileBundle",
             "isPartOf",
@@ -114,12 +114,12 @@ class File(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        iri=None,
         content=None,
         descended_from=None,
         file_repository=None,
         format=None,
         hash=None,
+        iri=None,
         is_part_of=None,
         name=None,
         special_usage_role=None,
@@ -127,12 +127,12 @@ class File(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
-            iri=iri,
             content=content,
             descended_from=descended_from,
             file_repository=file_repository,
             format=format,
             hash=hash,
+            iri=iri,
             is_part_of=is_part_of,
             name=name,
             special_usage_role=special_usage_role,

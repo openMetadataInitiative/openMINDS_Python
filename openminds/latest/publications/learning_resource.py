@@ -22,13 +22,6 @@ class LearningResource(LinkedMetadata):
 
     properties = [
         Property(
-            "iri",
-            IRI,
-            "IRI",
-            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
-            instructions="Enter the internationalized resource identifier (IRI) to this creative work.",
-        ),
-        Property(
             "about",
             [
                 "openminds.latest.computation.ValidationTest",
@@ -146,6 +139,13 @@ class LearningResource(LinkedMetadata):
             min_items=1,
             description="Money provided by a legal person for a particular purpose.",
             instructions="Add all funding information of this creative work.",
+        ),
+        Property(
+            "iri",
+            IRI,
+            "IRI",
+            description="Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.",
+            instructions="Enter the internationalized resource identifier (IRI) to this creative work.",
         ),
         Property(
             "keywords",
@@ -342,7 +342,6 @@ class LearningResource(LinkedMetadata):
     def __init__(
         self,
         id=None,
-        iri=None,
         about=None,
         abstract=None,
         authors=None,
@@ -354,6 +353,7 @@ class LearningResource(LinkedMetadata):
         editors=None,
         educational_level=None,
         funding=None,
+        iri=None,
         keywords=None,
         learning_outcome=None,
         license=None,
@@ -370,7 +370,6 @@ class LearningResource(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
-            iri=iri,
             about=about,
             abstract=abstract,
             authors=authors,
@@ -382,6 +381,7 @@ class LearningResource(LinkedMetadata):
             editors=editors,
             educational_level=educational_level,
             funding=funding,
+            iri=iri,
             keywords=keywords,
             learning_outcome=learning_outcome,
             license=license,

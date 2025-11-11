@@ -9,7 +9,7 @@ from .atlas import (
     ParcellationTerminology,
     ParcellationTerminologyVersion,
 )
-from .mathematical_shapes import Circle, Ellipse, Rectangle
+from .mathematical_shape import Circle, Ellipse, Rectangle
 from .miscellaneous import (
     AnatomicalTargetPosition,
     CoordinatePoint,

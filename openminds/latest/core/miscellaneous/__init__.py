@@ -1,5 +1,7 @@
 from .comment import Comment
 from .funding import Funding
+from .geo_coordinates import GeoCoordinates
+from .location import Location
 from .quantitative_value import QuantitativeValue
 from .quantitative_value_array import QuantitativeValueArray
 from .quantitative_value_range import QuantitativeValueRange
