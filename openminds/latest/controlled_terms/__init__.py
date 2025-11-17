@@ -23,6 +23,7 @@ from .cranial_window_construction_type import CranialWindowConstructionType
 from .cranial_window_reinforcement_type import CranialWindowReinforcementType
 from .criteria_quality_type import CriteriaQualityType
 from .data_type import DataType
+from .dependency_impact import DependencyImpact
 from .deployment_environment_type import DeploymentEnvironmentType
 from .device_type import DeviceType
 from .difference_measure import DifferenceMeasure

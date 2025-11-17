@@ -73,6 +73,7 @@ class ParcellationEntity(LinkedMetadata):
             str,
             "lookupLabel",
             formatting="text/plain",
+            required=True,
             description="no description available",
             instructions="Enter a lookup label for this parcellation entity that may help you to find this instance more easily.",
         ),

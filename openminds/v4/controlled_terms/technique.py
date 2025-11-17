@@ -295,6 +295,20 @@ Technique.diffusion_fixation_technique = Technique(
     name="diffusion fixation technique",
     synonyms=["drop fixation"],
 )
+Technique.diffusion_spectrum_magnetic_resonance_imaging = Technique(
+    id="https://openminds.om-i.org/instances/technique/diffusionSpectrumMagneticResonanceImaging",
+    definition="Advanced magnetic resonance imaging (MRI) and image processing technique that enhances the contrast of fiber crossings and complex intravoxel fiber orientation distributions [[Zhang et al., 2018](https://doi.org/10.1371/journal.pone.0203271), [Wedeen et al., 2008](https://doi.org/10.1016/j.neuroimage.2008.03.036), [Wedeen et al., 2000](https://cds.ismrm.org/ismrm-2000/PDF1/0082.pdf)].",
+    name="diffusion spectrum magnetic resonance imaging",
+    synonyms=[
+        "diffusion spectrum imaging",
+        "diffusion spectrum image processing",
+        "DSI",
+        "Fourier diffusion magnetic resonance imaging",
+        "Fourier diffusion MRI",
+        "Fourier-transform diffusion magnetic resonance imaging",
+        "Fourier-transform diffusion MRI",
+    ],
+)
 Technique.diffusion_tensor_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/diffusionTensorImaging",
     name="diffusion tensor imaging",

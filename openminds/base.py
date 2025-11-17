@@ -161,11 +161,21 @@ class Node(metaclass=Registry):
 
         Returns a dict containing information about any validation failures.
         """
+        return self._validate(ignore=ignore)
+
+    def _validate(self, ignore=None, seen=None):
+        # this is implemented as an internal method so that the
+        # "seen" set, needed to avoid possible infinite recursion,
+        # can be hidden from the public interface.
+        if seen is None:
+            seen = set()
         failures = defaultdict(list)
         for property in self.properties:
             value = getattr(self, property.name, None)
-            for key, values in property.validate(value, ignore=ignore).items():
-                failures[key] += values
+            if (id(self), property.name) not in seen:
+                seen.add((id(self), property.name))
+                for key, values in property.validate(value, ignore=ignore, seen=seen).items():
+                    failures[key] += values
         return failures
 
     @property
@@ -297,7 +307,7 @@ class IRI:
     def to_jsonld(self):
         return self.value
 
-    def validate(self, ignore=None):
+    def _validate(self, ignore=None, seen=None):
         if ignore is None:
             ignore = []
         failures = defaultdict(list)

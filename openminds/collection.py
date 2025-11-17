@@ -11,6 +11,9 @@ from .registry import lookup_type
 from .base import Link
 
 
+DEFAULT_VERSION = "v4"
+
+
 class Collection:
     """
     A collection of metadata nodes that can be saved to
@@ -141,7 +144,7 @@ class Collection:
                     output_paths.append(file_path)
         return output_paths
 
-    def load(self, *paths):
+    def load(self, *paths, version=DEFAULT_VERSION):
         """
         Load openMINDS metadata from one or more JSON-LD files.
 
@@ -152,6 +155,9 @@ class Collection:
         (but without descending into subdirectories)
 
         2) one or more JSON-LD files, which will all be loaded.
+
+        By default, openMINDS v4 will be used.
+        If the JSON-LD files use a different openMINDS version, specify it with the `version` argument.
         """
         if len(paths) == 1 and os.path.isdir(paths[0]):
             data_dir = paths[0]
@@ -168,10 +174,6 @@ class Collection:
             with open(path, "r") as fp:
                 data = json.load(fp)
             if "@graph" in data:
-                if data["@context"]["@vocab"].startswith("https://openminds.ebrains.eu/"):
-                    version = "v3"
-                else:
-                    version = "latest"
                 for item in data["@graph"]:
                     if "@type" in item:
                         cls = lookup_type(item["@type"], version=version)

@@ -21,13 +21,20 @@ class ParcellationTerminology(EmbeddedMetadata):
     properties = [
         Property(
             "data_locations",
-            "openminds.latest.core.File",
+            ["openminds.latest.core.File", "openminds.latest.core.WebResource"],
             "dataLocation",
             multiple=True,
             unique_items=True,
             min_items=1,
             description="no description available",
             instructions="Add the location of all files in which this parcellation terminology is stored.",
+        ),
+        Property(
+            "digital_identifier",
+            ["openminds.latest.core.DOI", "openminds.latest.core.ISBN", "openminds.latest.core.RRID"],
+            "digitalIdentifier",
+            description="Digital handle to identify objects or legal persons.",
+            instructions="Add the globally unique and persistent digital identifier of this parcellation terminology.",
         ),
         Property(
             "has_entities",
@@ -53,9 +60,10 @@ class ParcellationTerminology(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, data_locations=None, has_entities=None, ontology_identifiers=None):
+    def __init__(self, data_locations=None, digital_identifier=None, has_entities=None, ontology_identifiers=None):
         return super().__init__(
             data_locations=data_locations,
+            digital_identifier=digital_identifier,
             has_entities=has_entities,
             ontology_identifiers=ontology_identifiers,
         )

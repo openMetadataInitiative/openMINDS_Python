@@ -100,7 +100,7 @@ class Property:
     def is_link(self) -> bool:
         return issubclass(self.types[0], Node)
 
-    def validate(self, value, ignore=None):
+    def validate(self, value, ignore=None, seen=None):
         """
         Check whether `value` satisfies all constraints.
 
@@ -108,6 +108,8 @@ class Property:
             value: the value to be checked
             ignore: an optional list of check types that should be ignored
                     ("required", "type", "multiplicity")
+            seen: for internal use: contains a set with Python object ids that have
+                  already been encountered in the validation tree.
 
         Returns a dict containing information about any validation failures.
         """
@@ -134,7 +136,7 @@ class Property:
                                 f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, " + item_type
                             )
                     elif isinstance(item, (Node, IRI)):
-                        failures.update(item.validate(ignore=ignore))
+                        failures.update(item._validate(ignore=ignore, seen=seen))
                 if self.min_items:
                     if len(value) < self.min_items and "multiplicity" not in ignore:
                         failures["multiplicity"].append(
@@ -169,7 +171,7 @@ class Property:
                         f"{self.name}: Expected {', '.join(t.__name__ for t in self.types)}, " + value_type
                     )
             elif isinstance(value, (Node, IRI)):
-                failures.update(value.validate(ignore=ignore))
+                failures.update(value._validate(ignore=ignore, seen=seen))
         # todo: check formatting, multiline
         return failures
 

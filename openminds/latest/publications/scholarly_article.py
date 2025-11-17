@@ -145,6 +145,7 @@ class ScholarlyArticle(LinkedMetadata):
                 "openminds.latest.controlled_terms.CranialWindowReinforcementType",
                 "openminds.latest.controlled_terms.CriteriaQualityType",
                 "openminds.latest.controlled_terms.DataType",
+                "openminds.latest.controlled_terms.DependencyImpact",
                 "openminds.latest.controlled_terms.DeploymentEnvironmentType",
                 "openminds.latest.controlled_terms.DeviceType",
                 "openminds.latest.controlled_terms.DifferenceMeasure",
