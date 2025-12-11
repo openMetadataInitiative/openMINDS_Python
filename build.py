@@ -138,9 +138,9 @@ shutil.copy("pipeline/src/README.md", "target/README.md")
 shutil.copy("./LICENSE", "target/LICENSE")
 shutil.copy("./CHANGELOG.md", "target/CHANGELOG.md")
 
-# If we have a PyPI release for the current version, complete the codemeta.json template
+# Complete the codemeta.json template
 try:
-    with urlopen(f"https://pypi.org/pypi/openminds/{context['version']}/json") as handle:
+    with urlopen(f"https://pypi.org/pypi/openminds/json") as handle:
         pypi_metadata = json.loads(handle.read())
 except HTTPError:
     pypi_metadata = None
@@ -148,7 +148,7 @@ except HTTPError:
 if pypi_metadata:
     with open("pipeline/src/codemeta.json") as fp:
         codemeta = json.load(fp)
-        codemeta["version"] = context["version"]
+        codemeta["version"] = pypi_metadata["info"]["version"]
         for item in pypi_metadata["urls"]:
             if item["packagetype"] == "sdist":
                 codemeta["downloadUrl"] = item["url"]
