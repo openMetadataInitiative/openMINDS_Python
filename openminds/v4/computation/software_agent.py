@@ -4,7 +4,6 @@ Structured information about a piece of software or web service that can perform
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

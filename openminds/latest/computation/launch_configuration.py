@@ -4,7 +4,6 @@ Structured information about the launch of a computational process.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

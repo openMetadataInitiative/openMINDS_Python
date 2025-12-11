@@ -4,7 +4,6 @@ Structured information on used funding.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

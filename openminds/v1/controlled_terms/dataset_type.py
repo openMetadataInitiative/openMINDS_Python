@@ -4,7 +4,6 @@ Structured information on the provided data type.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

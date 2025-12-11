@@ -4,7 +4,6 @@ Structured information on the quality type of the defined criteria for a measure
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

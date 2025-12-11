@@ -47,6 +47,7 @@ from .measured_signal_type import MeasuredSignalType
 from .meta_data_model_type import MetaDataModelType
 from .model_abstraction_level import ModelAbstractionLevel
 from .model_scope import ModelScope
+from .modification_clause import ModificationClause
 from .molecular_entity import MolecularEntity
 from .mr_spatial_encoding import MRSpatialEncoding
 from .mri_pulse_sequence import MRIPulseSequence
@@ -58,6 +59,7 @@ from .optical_stimulus_type import OpticalStimulusType
 from .organ import Organ
 from .organism_substance import OrganismSubstance
 from .organism_system import OrganismSystem
+from .organization_type import OrganizationType
 from .patch_clamp_variation import PatchClampVariation
 from .preparation_type import PreparationType
 from .product_accessibility import ProductAccessibility

@@ -4,7 +4,6 @@ Structured information on abstraction level of the computational model.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

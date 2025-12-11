@@ -4,7 +4,6 @@ Structured information on the life cycle (semantic term) of a specific age group
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

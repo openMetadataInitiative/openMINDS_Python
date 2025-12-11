@@ -4,7 +4,6 @@ Structured information on the type of contribution a person or organization perf
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

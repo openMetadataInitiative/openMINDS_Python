@@ -4,7 +4,6 @@ Structured information on a protocol execution.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

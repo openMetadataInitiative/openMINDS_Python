@@ -4,7 +4,6 @@ A persistent identifier for a research resource provided by the Resource Identif
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

@@ -4,7 +4,6 @@ Structured information on the grouping mechanism of a file bundle.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

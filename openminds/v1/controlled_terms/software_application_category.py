@@ -4,7 +4,6 @@ Structured information on the category of the software application.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

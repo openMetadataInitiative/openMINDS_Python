@@ -4,7 +4,6 @@ Structured information about the source of a chemical substance or mixture.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

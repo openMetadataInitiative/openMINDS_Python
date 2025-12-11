@@ -4,7 +4,6 @@ Structured information about a property of some entity or process whose value is
 
 # this file was auto-generated!
 
-
 from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 

@@ -5,6 +5,9 @@ create a collection of openMINDS metadata nodes.
 The collection can be saved to and loaded from disk, in JSON-LD format.
 """
 
+from collections import Counter
+from glob import glob
+from importlib import import_module
 import json
 import os
 from .registry import lookup_type
@@ -69,7 +72,31 @@ class Collection:
         sorted_nodes = dict(sorted(self.nodes.items()))
         self.nodes = sorted_nodes
 
-    def save(self, path, individual_files=False, include_empty_properties=False):
+    def generate_ids(self, id_generator):
+        """
+        Generate an IRI id for all nodes in the graph that do not possess one.
+
+        Args
+        ----
+
+        id_generator (function):
+            a function that takes the node as an argument, and returns a unique IRI
+        """
+        for node_id in list(self.nodes.keys()):
+            if node_id.startswith("_:"):
+                node = self.nodes.pop(node_id)
+                node.id = id_generator(node)
+                self.nodes[node.id] = node
+
+    @property
+    def complete(self):
+        """Do all nodes have an IRI?"""
+        for node_id in self.nodes:
+            if node_id.startswith("_:"):
+                return False
+        return True
+
+    def save(self, path, individual_files=False, include_empty_properties=False, group_by_schema=False):
         """
         Save the node collection to disk in JSON-LD format.
 
@@ -78,10 +105,18 @@ class Collection:
 
         path (str):
             either a file or a directory into which the metadata will be written.
+            It is recommended to use the extension ".jsonld".
         individual_files (bool):
             if False (default), save the entire collection into a single file.
             if True, `path` must be a directory, and each node is saved into a
             separate file within that directory.
+        include_empty_properties (bool):
+            if False (default), do not include properties with value None.
+            if True, include all properties.
+        group_by_schema (bool):
+            Only applies if `individual_files` is True.
+            If False (default), save all files in a single directory.
+            If True, save into subdirectories according to the schema name.
 
         Returns
         -------
@@ -92,7 +127,6 @@ class Collection:
         # we first re-add all child nodes to the collection.
         # This is probably not the most elegant or fast way to do this, but it is simple and robust.
         for node in tuple(self.nodes.values()):
-
             if node.type_.startswith("https://openminds.ebrains.eu/"):
                 data_context = {"@vocab": "https://openminds.ebrains.eu/vocab/"}
             else:
@@ -137,7 +171,12 @@ class Collection:
                 else:
                     assert node.id.startswith("_:")
                     file_identifier = node.id[2:]
-                file_path = os.path.join(path, f"{file_identifier}.jsonld")
+                if group_by_schema:
+                    dir_path = os.path.join(path, node.__class__.__name__)
+                    os.makedirs(dir_path, exist_ok=True)
+                    file_path = os.path.join(dir_path, f"{file_identifier}.jsonld")
+                else:
+                    file_path = os.path.join(path, f"{file_identifier}.jsonld")
                 with open(file_path, "w") as fp:
                     data = node.to_jsonld(embed_linked_nodes=False, include_empty_properties=include_empty_properties)
                     json.dump(data, fp, indent=2)
@@ -150,22 +189,30 @@ class Collection:
 
         `*paths` may contain either:
 
-        1) a single directory, in which case
-        all JSON-LD files all the top level of this directory will be loaded
-        (but without descending into subdirectories)
+        1) a single directory, in which case all JSON-LD files in this directory
+        and any non-hidden subdirectories will be loaded
+        (where hidden subdirectories are those whose name starts with ".").
 
         2) one or more JSON-LD files, which will all be loaded.
 
         By default, openMINDS v4 will be used.
-        If the JSON-LD files use a different openMINDS version, specify it with the `version` argument.
+        If the JSON-LD files use a different openMINDS version, specify it
+        with the `version` argument, e.g.::
+
+            import openminds.latest
+
+            c = Collection()
+            c.load("/path/to/my/metadata.jsonld", version="latest")
+
         """
+
+        import_module(f"openminds.{version}")
+
         if len(paths) == 1 and os.path.isdir(paths[0]):
             data_dir = paths[0]
-            json_paths = [
-                os.path.join(data_dir, item)
-                for item in os.listdir(data_dir)
-                if os.path.splitext(item)[1] in (".json", ".jsonld")
-            ]
+            json_paths = glob(f"{data_dir}/**/*.jsonld", recursive=True) + glob(
+                f"{data_dir}/**/*.json", recursive=True
+            )
         else:
             json_paths = paths
 
@@ -186,7 +233,7 @@ class Collection:
                     self.add(node)
             else:
                 if "@type" in data:
-                    cls = lookup_type(data["@type"])
+                    cls = lookup_type(data["@type"], version=version)
                     node = cls.from_jsonld(data)
                 else:
                     # allow links to metadata instances outside this collection
@@ -247,3 +294,10 @@ class Collection:
                     newly_sorted.append(node_id)
             unsorted -= set(newly_sorted)
         return [self.nodes[node_id] for node_id in sorted]
+
+    def statistics(self):
+        """
+        Return a counter containing the number of nodes of each type.
+        """
+        stats = Counter(node.__class__.__name__ for node in self.nodes.values())
+        return stats

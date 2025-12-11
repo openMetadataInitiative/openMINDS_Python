@@ -4,7 +4,6 @@ Structured information on the usage role of a file instance or bundle.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

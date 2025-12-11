@@ -108,15 +108,55 @@ class LearningResourceType(LinkedMetadata):
         return [value for value in cls.__dict__.values() if isinstance(value, cls)]
 
     @classmethod
-    def by_name(cls, name):
+    def by_name(
+        cls,
+        name: str,
+        match: str = "equals",
+        all: bool = False,
+    ):
+        """
+        Search for instances in the openMINDS instance library based on their name.
+
+        This includes properties "name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation", and "synonyms".
+
+        Note that not all metadata classes have a name.
+
+        Args:
+            name (str): a string to search for.
+            match (str, optional): either "equals" (exact match - default) or "contains".
+            all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
+        """
+        namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
         if cls._instance_lookup is None:
             cls._instance_lookup = {}
             for instance in cls.instances():
-                cls._instance_lookup[instance.name] = instance
-                if instance.synonyms:
-                    for synonym in instance.synonyms:
-                        cls._instance_lookup[synonym] = instance
-        return cls._instance_lookup[name]
+                keys = []
+                for prop_name in namelike_properties:
+                    if hasattr(instance, prop_name):
+                        keys.append(getattr(instance, prop_name))
+                if hasattr(instance, "synonyms"):
+                    for synonym in instance.synonyms or []:
+                        keys.append(synonym)
+                for key in keys:
+                    if key in cls._instance_lookup:
+                        cls._instance_lookup[key].append(instance)
+                    else:
+                        cls._instance_lookup[key] = [instance]
+        if match == "equals":
+            matches = cls._instance_lookup.get(name, None)
+        elif match == "contains":
+            matches = []
+            for key, instances in cls._instance_lookup.items():
+                if name in key:
+                    matches.extend(instances)
+        else:
+            raise ValueError("'match' must be either 'equals' or 'contains'")
+        if all:
+            return matches
+        elif len(matches) > 0:
+            return matches[0]
+        else:
+            return None
 
 
 LearningResourceType.developer_documentation = LearningResourceType(

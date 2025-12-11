@@ -4,7 +4,6 @@ Structured information about a digital object identifier, as standardized by the
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

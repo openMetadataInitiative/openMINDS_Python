@@ -4,7 +4,6 @@ A persistent identifier for a researcher provided by Open Researcher and Contrib
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

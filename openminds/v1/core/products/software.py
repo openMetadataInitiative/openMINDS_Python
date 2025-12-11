@@ -4,7 +4,6 @@ Structured information on a software tool (concept level).
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

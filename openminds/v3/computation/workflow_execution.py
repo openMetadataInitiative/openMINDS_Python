@@ -4,7 +4,6 @@ Structured information about an execution of a computational workflow.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

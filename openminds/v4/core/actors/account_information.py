@@ -4,7 +4,6 @@ Structured information about a user account for a web service.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

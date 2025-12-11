@@ -4,7 +4,6 @@ Structured information on the computer system or set of systems in which a compu
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

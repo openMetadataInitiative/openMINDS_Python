@@ -4,7 +4,6 @@ An International Standard Book Number of the International ISBN Agency.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

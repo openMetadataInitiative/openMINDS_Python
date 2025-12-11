@@ -4,7 +4,6 @@ An entity comprised of one or more natural persons with a particular purpose. [a
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

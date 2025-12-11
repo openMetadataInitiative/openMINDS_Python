@@ -4,7 +4,6 @@ Structured information about a protocol used in an experiment studying human or 
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

@@ -4,7 +4,6 @@ Structured information about the properties or parameters of an entity or proces
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

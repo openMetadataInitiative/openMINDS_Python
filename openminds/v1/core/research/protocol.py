@@ -4,7 +4,6 @@ Structured information on a research project.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

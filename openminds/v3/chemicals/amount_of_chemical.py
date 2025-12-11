@@ -4,7 +4,6 @@ Structured information about the amount of a given chemical that was used.
 
 # this file was auto-generated!
 
-
 from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 

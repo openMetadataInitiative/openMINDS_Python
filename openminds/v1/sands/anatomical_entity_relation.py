@@ -4,7 +4,6 @@ Structured information on the relation between one anatomical entity and another
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

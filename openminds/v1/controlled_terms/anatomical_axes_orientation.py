@@ -4,7 +4,6 @@ Structured information on the anatomical directions of the X, Y, and Z axis.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

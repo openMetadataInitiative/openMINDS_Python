@@ -108,15 +108,55 @@ class UBERONParcellation(LinkedMetadata):
         return [value for value in cls.__dict__.values() if isinstance(value, cls)]
 
     @classmethod
-    def by_name(cls, name):
+    def by_name(
+        cls,
+        name: str,
+        match: str = "equals",
+        all: bool = False,
+    ):
+        """
+        Search for instances in the openMINDS instance library based on their name.
+
+        This includes properties "name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation", and "synonyms".
+
+        Note that not all metadata classes have a name.
+
+        Args:
+            name (str): a string to search for.
+            match (str, optional): either "equals" (exact match - default) or "contains".
+            all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
+        """
+        namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
         if cls._instance_lookup is None:
             cls._instance_lookup = {}
             for instance in cls.instances():
-                cls._instance_lookup[instance.name] = instance
-                if instance.synonyms:
-                    for synonym in instance.synonyms:
-                        cls._instance_lookup[synonym] = instance
-        return cls._instance_lookup[name]
+                keys = []
+                for prop_name in namelike_properties:
+                    if hasattr(instance, prop_name):
+                        keys.append(getattr(instance, prop_name))
+                if hasattr(instance, "synonyms"):
+                    for synonym in instance.synonyms or []:
+                        keys.append(synonym)
+                for key in keys:
+                    if key in cls._instance_lookup:
+                        cls._instance_lookup[key].append(instance)
+                    else:
+                        cls._instance_lookup[key] = [instance]
+        if match == "equals":
+            matches = cls._instance_lookup.get(name, None)
+        elif match == "contains":
+            matches = []
+            for key, instances in cls._instance_lookup.items():
+                if name in key:
+                    matches.extend(instances)
+        else:
+            raise ValueError("'match' must be either 'equals' or 'contains'")
+        if all:
+            return matches
+        elif len(matches) > 0:
+            return matches[0]
+        else:
+            return None
 
 
 UBERONParcellation.a10_dopaminergic_cell_group = UBERONParcellation(
@@ -5443,7 +5483,7 @@ UBERONParcellation.corticobulbar_and_corticospinal_tracts = UBERONParcellation(
 UBERONParcellation.corticobulbar_tract = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/corticobulbarTract",
     definition="Is a tract of brain. Is part of the white matter of telencephalon and the corticobulbar and corticospinal tracts. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022272) ('is_a' and 'relationship')]",
-    description="The corticobulbar (or corticonuclear) tract is a white matter pathway connecting the cerebral cortex to the brainstem. The term \ [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022272)]",
+    description="The corticobulbar (or corticonuclear) tract is a white matter pathway connecting the cerebral cortex to the brainstem. The term 'bulbar' refers to the brainstem, as bulb was a historical term meaning the area currently called the brainstem. The 'bulb' is an archaic term for the medulla oblongata. In clinical usage, it includes the pons as well. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022272)]",
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0022272#corticobulbar-tract"),
     name="corticobulbar tract",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022272"),
@@ -8993,7 +9033,7 @@ UBERONParcellation.geniculate_placode = UBERONParcellation(
 UBERONParcellation.genu_of_corpus_callosum = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/genuOfCorpusCallosum",
     definition="Is a regional part of brain. Is part of the corpus callosum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0015599) ('is_a' and 'relationship')]",
-    description="Part of corpus callosum comprising the \ [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0015599)]",
+    description="Part of corpus callosum comprising the kneelike anterior bend (adapted from Nolte, The Human Brain, 6th ed., 2009 pg 664) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0015599)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104608"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0015599#genu-of-corpus-callosum"),
     name="genu of corpus callosum",
@@ -24314,7 +24354,7 @@ UBERONParcellation.superior_corona_radiata = UBERONParcellation(
 UBERONParcellation.superior_frontal_gyrus = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/superiorFrontalGyrus",
     definition="Is a frontal gyrus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002661)]",
-    description="Component of the frontal lobe, lateral aspect. The rostral boundary is the first appearance of the superior frontal sulcus whereas the caudal boundary is the midpoint of the paracentral sulcus on the \ [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002661)]",
+    description="Component of the frontal lobe, lateral aspect. The rostral boundary is the first appearance of the superior frontal sulcus whereas the caudal boundary is the midpoint of the paracentral sulcus on the inflated surface. The medial and lateral boundaries are the medial aspect of the frontal lobe and the superior frontal sulcus respectively (Christine Fennema-Notestine). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002661)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111304"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0002661#superior-frontal-gyrus-1"),
     name="superior frontal gyrus",

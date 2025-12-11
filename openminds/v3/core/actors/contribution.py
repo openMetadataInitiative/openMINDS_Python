@@ -4,7 +4,6 @@ Structured information on the contribution made to a research product.
 
 # this file was auto-generated!
 
-
 from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 

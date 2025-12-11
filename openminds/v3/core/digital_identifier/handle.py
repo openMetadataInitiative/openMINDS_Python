@@ -4,7 +4,6 @@ A persistent identifier for an information resource provided by the Handle Syste
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 

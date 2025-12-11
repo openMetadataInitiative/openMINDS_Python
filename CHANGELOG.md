@@ -66,3 +66,17 @@ For more detail see #29.
 - addition of a `Link` class, to allow making reference to remote graph nodes defined by their `@id`
   that are not present locally.
 - improved CI testing: we now test v3 and v4, as well as "latest".
+
+## Release 0.4.0 (2025-11-18)
+
+- drop support for Python 3.8, add support for Python 3.14.
+- more forgiving import of JSON-LD:
+  - an option to allow additional (non-openMINDS) keys in a JSON-LD document [#63](https://github.com/openMetadataInitiative/openMINDS_Python/pull/63)
+  - support fully-expanded IRIs as keys in JSON-LD documents [#64](https://github.com/openMetadataInitiative/openMINDS_Python/pull/64)
+  - accept `datetime` strings for properties with type `date` [#65](https://github.com/openMetadataInitiative/openMINDS_Python/pull/65)
+  - accept `"@type": [<IRI>]` as well as `"@type": <IRI>` [#66](https://github.com/openMetadataInitiative/openMINDS_Python/pull/66)
+- make the class registry reusable by other packages [#70](https://github.com/openMetadataInitiative/openMINDS_Python/pull/70)
+- bug fix: prevent infinite recursion in `validate()` where there are loops in the graph [#76](https://github.com/openMetadataInitiative/openMINDS_Python/pull/76)
+- allow the user to specify which openMINDS version should be used by `Collection.load()` [#77](https://github.com/openMetadataInitiative/openMINDS_Python/pull/77)
+- add the option to group files into subdirectories by schema when saving [#80](https://github.com/openMetadataInitiative/openMINDS_Python/pull/80)
+- improvements to the `by_name()` method [#81](https://github.com/openMetadataInitiative/openMINDS_Python/pull/81)

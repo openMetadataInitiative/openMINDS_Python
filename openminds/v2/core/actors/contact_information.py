@@ -4,7 +4,6 @@ Structured information about how to contact a given person or consortium.
 
 # this file was auto-generated!
 
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
