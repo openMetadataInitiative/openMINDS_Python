@@ -122,8 +122,6 @@ env = Environment(loader=FileSystemLoader(os.path.dirname(os.path.realpath(__fil
 context = {
     "version": "0.4.1.dev.0",
 }
-if args.branch == "development":
-    context["version"] += ".dev"
 
 with open("target/pyproject.toml", "w") as fp:
     contents = env.get_template("pipeline/src/pyproject_template.toml.txt").render(context)
