@@ -46,9 +46,9 @@
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches: 
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
