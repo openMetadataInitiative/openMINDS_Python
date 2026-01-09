@@ -58,6 +58,12 @@
       "@id": "https://orcid.org/0000-0002-5618-9776",
       "givenName": "Rapha\u00ebl",
       "familyName": "Gazzotti"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0003-4509-6969",
+      "givenName": "Reema",
+      "familyName": "Gupta"
     }
   ],
   "version": "0.4.0",

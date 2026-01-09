@@ -7,8 +7,9 @@ authors = [
     { name="Andrew P. Davison", email="andrew.davison@cnrs.fr" },
     { name="Lyuba Zehl", email="lyuba.zehl@ebrains.eu" },
     { name="Louisa Köhnen" },
-    { name="Peyman Najafi", email="peyman.najafi@cnrs.fr" },
-    { name="Raphaël Gazzotti" }
+    { name="Peyman Najafi" },
+    { name="Raphaël Gazzotti" },
+    { name="Reema Gupta" }
 ]
 requires-python = ">=3.9"
 license = "MIT"
