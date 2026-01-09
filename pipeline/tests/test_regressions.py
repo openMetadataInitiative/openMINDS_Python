@@ -331,3 +331,17 @@ def test_issue0069(om):
     results = om.core.License.by_name("Creative Commons", all=True, match="contains")
     assert len(results) == 7
     assert all("CC" in r.short_name for r in results)
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_pr0083(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/83
+    # by_name() should return None consistently
+    # when no matches are found, regardless of the 'all' parameter
+    
+    # all=False (default) should return None when no match is found
+    result = om.controlled_terms.BiologicalOrder.by_name("nonexistent_order_xyz")
+    assert result is None
+    
+    # all=True should also return None when no match is found
+    results = om.controlled_terms.BiologicalOrder.by_name("nonexistent_order_xyz", all=True)
+    assert results is None
