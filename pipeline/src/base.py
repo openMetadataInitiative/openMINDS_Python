@@ -77,7 +77,7 @@ class Node(metaclass=Registry):
             data["@id"] = self.id
         for property in self.__class__.properties:
             value = getattr(self, property.name)
-            if value or include_empty_properties:
+            if (value is not None) or include_empty_properties:
                 if property.multiple:
                     if value is None:
                         data[property.path] = value

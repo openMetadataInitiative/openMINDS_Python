@@ -332,16 +332,31 @@ def test_issue0069(om):
     assert len(results) == 7
     assert all("CC" in r.short_name for r in results)
 
+
 @pytest.mark.parametrize("om", [openminds.latest])
 def test_pr0083(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/pull/83
     # by_name() should return None consistently
     # when no matches are found, regardless of the 'all' parameter
-    
+
     # all=False (default) should return None when no match is found
     result = om.controlled_terms.BiologicalOrder.by_name("nonexistent_order_xyz")
     assert result is None
-    
+
     # all=True should also return None when no match is found
     results = om.controlled_terms.BiologicalOrder.by_name("nonexistent_order_xyz", all=True)
     assert results is None
+
+
+@pytest.mark.parametrize("om", [openminds.latest, openminds.v4])
+def test_issue0084(om):
+    # Properties whose value evaluates to False (e.g., zero)
+    # are not serialized if using include_empty_properties=False
+    obj = om.publications.LivePaperSection(name="test", order=0)
+    data = obj.to_jsonld(include_empty_properties=False)
+    assert data == {
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
+        "@type": "https://openminds.om-i.org/types/LivePaperSection",
+        "name": "test",
+        "order": 0,
+    }
