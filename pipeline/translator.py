@@ -122,6 +122,7 @@ class PythonBuilder(object):
                         openminds_module = generate_python_name(class_to_module_map[class_name])
                     else:
                         openminds_module = generate_python_name(openminds_module_from_type)
+                    assert openminds_module != "types", f"This probably means {class_name} isn't in class_to_module_map"
                     types.append(f"openminds.{self._version_module}.{openminds_module}.{class_name}")
                 if len(types) == 1:
                     types = f'"{types[0]}"'
