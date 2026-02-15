@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class OrganizationType(LinkedMetadata):
+class ModificationConsentRequirement(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/OrganizationType"
+    type_ = "https://openminds.om-i.org/types/ModificationConsentRequirement"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class OrganizationType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the organization type.",
+            description="Longer statement or account giving the characteristics of the modification consent requirement.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class OrganizationType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the organization type.",
+            description="Word or phrase that constitutes the distinctive designation of the modification consent requirement.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -159,14 +159,33 @@ class OrganizationType(LinkedMetadata):
             return matches[0]
 
 
-OrganizationType.legal_entity = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/legalEntity",
-    definition="An organization classified as a type of legal entity recognized within a specific legal system.",
-    name="legal entity",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q10541491"),
+ModificationConsentRequirement.advance_consent = ModificationConsentRequirement(
+    id="https://openminds.om-i.org/instances/modificationConsentRequirement/advanceConsent",
+    definition="Modification is permitted based on prior standing consent given in the original agreement.",
+    name="advance consent",
 )
-OrganizationType.organizational_unit = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/organizationalUnit",
-    definition="A distinct unit within a larger organization.",
-    name="organizational unit",
+ModificationConsentRequirement.delegated_consent = ModificationConsentRequirement(
+    id="https://openminds.om-i.org/instances/modificationConsentRequirement/delegatedConsent",
+    definition="Modification may be made by one designated party only.",
+    name="delegated consent",
+)
+ModificationConsentRequirement.mutual_consent = ModificationConsentRequirement(
+    id="https://openminds.om-i.org/instances/modificationConsentRequirement/mutualConsent",
+    definition="Modification requires contemporaneous agreement of all primary parties.",
+    name="mutual consent",
+)
+ModificationConsentRequirement.regulatory_consent = ModificationConsentRequirement(
+    id="https://openminds.om-i.org/instances/modificationConsentRequirement/regulatoryConsent",
+    definition="Modification requires approval by an external regulatory authority.",
+    name="regulatory consent",
+)
+ModificationConsentRequirement.single_party_consent = ModificationConsentRequirement(
+    id="https://openminds.om-i.org/instances/modificationConsentRequirement/singlePartyConsent",
+    definition="Modification may be made by one designated party only.",
+    name="single party consent",
+)
+ModificationConsentRequirement.unanimous_consent = ModificationConsentRequirement(
+    id="https://openminds.om-i.org/instances/modificationConsentRequirement/unanimousConsent",
+    definition="Modification requires agreement of all signatories in a multi-party agreement.",
+    name="unanimous consent",
 )

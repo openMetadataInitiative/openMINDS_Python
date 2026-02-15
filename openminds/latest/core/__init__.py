@@ -13,6 +13,7 @@ from .data import (
     License,
     Measurement,
     ServiceLink,
+    UsageAgreement,
 )
 from .digital_identifier import (
     DOI,
@@ -28,6 +29,7 @@ from .digital_identifier import (
     StockNumber,
 )
 from .miscellaneous import (
+    Accessibility,
     Comment,
     Funding,
     GeoCoordinates,

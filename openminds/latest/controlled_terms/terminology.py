@@ -159,6 +159,28 @@ class Terminology(LinkedMetadata):
             return matches[0]
 
 
+Terminology.access_channel = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/accessChannel",
+    definition="Terminology defining the location or medium through which a resource can be accessed.",
+    description="The terminology defining access channel specifies whether a resource is accessible remotely through digital means (virtual), requires physical presence at a specific location (on-site), or is available through both means (hybrid).",
+    name="access channel",
+)
+Terminology.access_eligibility_type = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/accessEligibilityType",
+    definition="The terminology defining access eligibility type specifies whether a resource is openly available to anyone, requires authentication, or authorization.",
+    name="access eligibility type",
+)
+Terminology.access_form = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/accessForm",
+    definition="Terminology defining the manner in which access to a resource is facilitated.",
+    description="The terminology defining access form specifies whether users obtain access directly without intermediaries or through mediation by a third party.",
+    name="access form",
+)
+Terminology.access_process_type = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/accessProcessType",
+    definition="Terminology defining the workflow or mechanism through which access to a resource is granted.",
+    name="access process type",
+)
 Terminology.action_status_type = Terminology(
     id="https://openminds.om-i.org/instances/terminology/actionStatusType",
     name="action status type",
@@ -291,10 +313,6 @@ Terminology.electrical_stimulus_type = Terminology(
     definition="An 'electrical stimulus type' groups similar electrical stimuli used across electrical stimulation techniques.",
     name="electrical stimulus type",
 )
-Terminology.ethics_assessment = Terminology(
-    id="https://openminds.om-i.org/instances/terminology/ethicsAssessment",
-    name="ethics assessment",
-)
 Terminology.experimental_approach = Terminology(
     id="https://openminds.om-i.org/instances/terminology/experimentalApproach",
     name="experimental approach",
@@ -360,6 +378,26 @@ Terminology.model_scope = Terminology(
     id="https://openminds.om-i.org/instances/terminology/modelScope",
     name="model scope",
 )
+Terminology.modification_consent_requirement = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/modificationConsentRequirement",
+    definition="Terminology for specifying whose agreement is required for a contract modification to be legally valid.",
+    name="modification consent requirement",
+)
+Terminology.modification_constraint = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/modificationConstraint",
+    definition="Terminology for specifying procedural conditions or prohibitions that limit how modifications may be made.",
+    name="modification constraint",
+)
+Terminology.modification_form = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/modificationForm",
+    definition="Terminology for specifying the formal method by which consent to a modification must be expressed.",
+    name="modification form",
+)
+Terminology.modification_scope = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/modificationScope",
+    definition="Terminology for specifying which parts or aspects of an agreement may be modified.",
+    name="modification scope",
+)
 Terminology.molecular_entity = Terminology(
     id="https://openminds.om-i.org/instances/terminology/molecularEntity",
     definition="Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.",
@@ -421,10 +459,21 @@ Terminology.organism_system = Terminology(
     definition="Any anatomical or functional system in an organism, regardless of scale.",
     name="organism system",
 )
+Terminology.organization_type = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/organizationType",
+    definition="Terminology for classifying an organization based on its legal status or position within a larger entity.",
+    name="organization type",
+    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q17197366"),
+)
 Terminology.patch_clamp_variation = Terminology(
     id="https://openminds.om-i.org/instances/terminology/patchClampVariation",
     definition="A variation of the patch clamp technique",
     name="patch clamp variation",
+)
+Terminology.payment_model_type = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/paymentModelType",
+    definition="Terminology defining the pricing structure or financial model associated with accessing a resource.",
+    name="payment model type",
 )
 Terminology.preparation_type = Terminology(
     id="https://openminds.om-i.org/instances/terminology/preparationType",
@@ -437,6 +486,11 @@ Terminology.product_accessibility = Terminology(
 Terminology.programming_language = Terminology(
     id="https://openminds.om-i.org/instances/terminology/programmingLanguage",
     name="programming language",
+)
+Terminology.publication_status = Terminology(
+    id="https://openminds.om-i.org/instances/terminology/publicationStatus",
+    definition="Terminology defining the status of a resource in the publication lifecycle.",
+    name="publication status",
 )
 Terminology.qualitative_overlap = Terminology(
     id="https://openminds.om-i.org/instances/terminology/qualitativeOverlap",

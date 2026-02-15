@@ -1,9 +1,9 @@
 from .atlas import (
+    AnatomicalAtlas,
+    AnatomicalAtlasVersion,
     AtlasAnnotation,
-    BrainAtlas,
-    BrainAtlasVersion,
-    CommonCoordinateSpace,
-    CommonCoordinateSpaceVersion,
+    CommonCoordinateFramework,
+    CommonCoordinateFrameworkVersion,
     ParcellationEntity,
     ParcellationEntityVersion,
     ParcellationTerminology,
@@ -18,4 +18,4 @@ from .miscellaneous import (
     SingleColor,
     ViewerSpecification,
 )
-from .non_atlas import CustomAnatomicalEntity, CustomAnnotation, CustomCoordinateSpace
+from .non_atlas import CustomAnatomicalEntity, CustomAnnotation, CustomCoordinateFramework

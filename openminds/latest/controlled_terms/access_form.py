@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class OrganizationType(LinkedMetadata):
+class AccessForm(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/OrganizationType"
+    type_ = "https://openminds.om-i.org/types/AccessForm"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class OrganizationType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the organization type.",
+            description="Longer statement or account giving the characteristics of the access form.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class OrganizationType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the organization type.",
+            description="Word or phrase that constitutes the distinctive designation of the access form.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -159,14 +159,13 @@ class OrganizationType(LinkedMetadata):
             return matches[0]
 
 
-OrganizationType.legal_entity = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/legalEntity",
-    definition="An organization classified as a type of legal entity recognized within a specific legal system.",
-    name="legal entity",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q10541491"),
+AccessForm.direct_access = AccessForm(
+    id="https://openminds.om-i.org/instances/accessForm/directAccess",
+    definition="Users interact directly with the product or service through integrated interfaces, or authorised environments.",
+    name="direct access",
 )
-OrganizationType.organizational_unit = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/organizationalUnit",
-    definition="A distinct unit within a larger organization.",
-    name="organizational unit",
+AccessForm.mediated_access = AccessForm(
+    id="https://openminds.om-i.org/instances/accessForm/mediatedAccess",
+    definition="Access is provided through designated technical systems or organisational actors acting on behalf of the user.",
+    name="mediated access",
 )

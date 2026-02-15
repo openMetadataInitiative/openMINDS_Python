@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class OrganizationType(LinkedMetadata):
+class MRICoilRole(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/OrganizationType"
+    type_ = "https://openminds.om-i.org/types/MRICoilRole"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class OrganizationType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the organization type.",
+            description="Longer statement or account giving the characteristics of the m r i coil role.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class OrganizationType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the organization type.",
+            description="Word or phrase that constitutes the distinctive designation of the m r i coil role.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -102,71 +102,3 @@ class OrganizationType(LinkedMetadata):
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
-
-    @classmethod
-    def instances(cls):
-        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
-
-    @classmethod
-    def by_name(
-        cls,
-        name: str,
-        match: str = "equals",
-        all: bool = False,
-    ):
-        """
-        Search for instances in the openMINDS instance library based on their name.
-
-        This includes properties "name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation", and "synonyms".
-
-        Note that not all metadata classes have a name.
-
-        Args:
-            name (str): a string to search for.
-            match (str, optional): either "equals" (exact match - default) or "contains".
-            all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
-        """
-        namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
-        if cls._instance_lookup is None:
-            cls._instance_lookup = {}
-            for instance in cls.instances():
-                keys = []
-                for prop_name in namelike_properties:
-                    if hasattr(instance, prop_name):
-                        keys.append(getattr(instance, prop_name))
-                if hasattr(instance, "synonyms"):
-                    for synonym in instance.synonyms or []:
-                        keys.append(synonym)
-                for key in keys:
-                    if key in cls._instance_lookup:
-                        cls._instance_lookup[key].append(instance)
-                    else:
-                        cls._instance_lookup[key] = [instance]
-        if match == "equals":
-            matches = cls._instance_lookup.get(name, [])
-        elif match == "contains":
-            matches = []
-            for key, instances in cls._instance_lookup.items():
-                if name in key:
-                    matches.extend(instances)
-        else:
-            raise ValueError("'match' must be either 'equals' or 'contains'")
-        if not matches:
-            return None
-        elif all:
-            return matches
-        else:
-            return matches[0]
-
-
-OrganizationType.legal_entity = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/legalEntity",
-    definition="An organization classified as a type of legal entity recognized within a specific legal system.",
-    name="legal entity",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q10541491"),
-)
-OrganizationType.organizational_unit = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/organizationalUnit",
-    definition="A distinct unit within a larger organization.",
-    name="organizational unit",
-)

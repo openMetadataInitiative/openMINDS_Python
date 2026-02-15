@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class MRSpatialEncoding(LinkedMetadata):
+class ModificationForm(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/MRSpatialEncoding"
+    type_ = "https://openminds.om-i.org/types/ModificationForm"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class MRSpatialEncoding(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the m r spatial encoding.",
+            description="Longer statement or account giving the characteristics of the modification form.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class MRSpatialEncoding(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the m r spatial encoding.",
+            description="Word or phrase that constitutes the distinctive designation of the modification form.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -159,30 +159,35 @@ class MRSpatialEncoding(LinkedMetadata):
             return matches[0]
 
 
-MRSpatialEncoding.frequency_encoding = MRSpatialEncoding(
-    id="https://openminds.om-i.org/instances/MRSpatialEncoding/frequencyEncoding",
-    definition="Gradients establish a direct relationship between frequency and spatial position, a process referred to as frequency encoding.",
-    description="In MRI, gradients generate a controlled variation in the magnetic field strength across the imaging volume. Each location along the gradient direction corresponds to a unique frequency in the received MR signal. This process, known as frequency encoding, allows spatial information to be extracted from the signal during image reconstruction. Primarily used in specialized applications like spectroscopy.",
-    name="1D MR acquisition",
-    synonyms=["frequency encoding", "1D MRI acquisition"],
+ModificationForm.board_approved_modification = ModificationForm(
+    id="https://openminds.om-i.org/instances/modificationForm/boardApprovedModification",
+    definition="Modification is approved through a formal resolution of the governing body.",
+    name="board approved modification",
 )
-MRSpatialEncoding.frequency_phase_encoding = MRSpatialEncoding(
-    id="https://openminds.om-i.org/instances/MRSpatialEncoding/frequencyPhaseEncoding",
-    definition="Using frequency encoding and phase encoding in conjunction together to acquire 2D magnetic resonance images.",
-    description="In 2D frequency x phase MRI imaging, spatial localization is achieved through a combination of slice selection, frequency encoding, and phase encoding. Slice selection involves applying a gradient along one axis (typically the z-axis) during RF excitation, ensuring that only a specific tissue slice resonates based on its unique Larmor frequency. Once the slice is excited, frequency encoding is applied along another axis (usually the x-axis) during signal acquisition, creating a direct relationship between spatial position and resonance frequency. To encode the second spatial dimension (typically the y-axis), phase encoding is applied before signal acquisition, briefly altering the phase of spins based on their position. This phase shift remains embedded in the signal and is later decoded during image reconstruction, allowing for the creation of detailed 2D MR images.",
-    name="Frequency x phase encoding",
-    synonyms=["2D MRI acquisition", "2D frequency x phase encoding"],
+ModificationForm.directed_modification = ModificationForm(
+    id="https://openminds.om-i.org/instances/modificationForm/directedModification",
+    definition="Modification is issued through a formal contractual or operational change directive.",
+    name="directed modification",
 )
-MRSpatialEncoding.frequency_phase_phase_encoding = MRSpatialEncoding(
-    id="https://openminds.om-i.org/instances/MRSpatialEncoding/frequencyPhasePhaseEncoding",
-    definition="3D MRI imaging is a technique that acquires volumetric data by using frequency encoding and two phase encoding steps, eliminating the need for slice selection and enabling high-resolution, multi-plane image reconstruction.",
-    description="In 3D frequency x phase x phase MRI imaging, spatial localization is achieved using frequency encoding, phase encoding, and a second phase encoding step instead of slice selection. Unlike 2D imaging, where individual slices are excited separately, 3D MRI excites the entire imaging volume at once. Frequency encoding is applied along one axis (typically the x-axis), while phase encoding is applied along the second (usually the y-axis). To resolve the third dimension, an additional phase encoding step is applied along the slice-select direction (typically the z-axis), replacing traditional slice selection. This results in a fully sampled 3D dataset, which can be reconstructed into thin slices or reformatted in multiple planes, providing higher signal-to-noise ratio (SNR) and improved spatial resolution compared to 2D imaging.",
-    name="Frequency x phase x phase encoding",
-    synonyms=["3D MRI acquisition", "frequency x phase x phase", "3D frequency x phase x phase"],
+ModificationForm.electronically_signed_modification = ModificationForm(
+    id="https://openminds.om-i.org/instances/modificationForm/electronicallySignedModification",
+    definition="Modification is executed using legally recognized electronic signature systems.",
+    name="electronically signed modification",
+    synonyms=["e-signed modification"],
 )
-MRSpatialEncoding.phase_encoding = MRSpatialEncoding(
-    id="https://openminds.om-i.org/instances/MRSpatialEncoding/phaseEncoding",
-    definition="Gradients establish a direct relationship between phase and spatial position, a process referred to as phase encoding.",
-    name="Phase encoding",
-    synonyms=["phase encoding"],
+ModificationForm.notarized_modification = ModificationForm(
+    id="https://openminds.om-i.org/instances/modificationForm/notarizedModification",
+    definition="Modification is authenticated by a licensed notary or equivalent public officer.",
+    name="notarized modification",
+)
+ModificationForm.physically_signed_modification = ModificationForm(
+    id="https://openminds.om-i.org/instances/modificationForm/physicallySignedModification",
+    definition="Modification is executed by physical signatures of the required parties.",
+    name="physically signed modification",
+    synonyms=["signed modification"],
+)
+ModificationForm.registered_modification = ModificationForm(
+    id="https://openminds.om-i.org/instances/modificationForm/registeredModification",
+    definition="Modification becomes effective upon registration in an official public or regulatory registry.",
+    name="registered modification",
 )

@@ -30,12 +30,15 @@ class CustomAnnotation(EmbeddedMetadata):
             instructions="Enter the coordinates of the anchor point for this annotation (e.g., its centroid in two dimensional space as [x, y] or in three dimensional space as [x, y, z]).",
         ),
         Property(
-            "coordinate_space",
-            ["openminds.latest.sands.CommonCoordinateSpaceVersion", "openminds.latest.sands.CustomCoordinateSpace"],
-            "coordinateSpace",
+            "coordinate_framework",
+            [
+                "openminds.latest.sands.CommonCoordinateFrameworkVersion",
+                "openminds.latest.sands.CustomCoordinateFramework",
+            ],
+            "coordinateFramework",
             required=True,
-            description="Two or three dimensional geometric setting.",
-            instructions="Add the coordinate space for this custom annotation.",
+            description="no description available",
+            instructions="Add the coordinate framework for this custom annotation.",
         ),
         Property(
             "criteria",
@@ -116,7 +119,7 @@ class CustomAnnotation(EmbeddedMetadata):
     def __init__(
         self,
         anchor_points=None,
-        coordinate_space=None,
+        coordinate_framework=None,
         criteria=None,
         criteria_quality_type=None,
         criteria_type=None,
@@ -129,7 +132,7 @@ class CustomAnnotation(EmbeddedMetadata):
     ):
         return super().__init__(
             anchor_points=anchor_points,
-            coordinate_space=coordinate_space,
+            coordinate_framework=coordinate_framework,
             criteria=criteria,
             criteria_quality_type=criteria_quality_type,
             criteria_type=criteria_type,

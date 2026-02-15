@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class OrganizationType(LinkedMetadata):
+class ModificationScope(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/OrganizationType"
+    type_ = "https://openminds.om-i.org/types/ModificationScope"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class OrganizationType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the organization type.",
+            description="Longer statement or account giving the characteristics of the modification scope.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class OrganizationType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the organization type.",
+            description="Word or phrase that constitutes the distinctive designation of the modification scope.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -159,14 +159,33 @@ class OrganizationType(LinkedMetadata):
             return matches[0]
 
 
-OrganizationType.legal_entity = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/legalEntity",
-    definition="An organization classified as a type of legal entity recognized within a specific legal system.",
-    name="legal entity",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q10541491"),
+ModificationScope.administrative_modification = ModificationScope(
+    id="https://openminds.om-i.org/instances/modificationScope/administrativeModification",
+    definition="Modification may be made to any clerical, formatting, or non-substantive information.",
+    name="administrative modification",
 )
-OrganizationType.organizational_unit = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/organizationalUnit",
-    definition="A distinct unit within a larger organization.",
-    name="organizational unit",
+ModificationScope.financial_modification = ModificationScope(
+    id="https://openminds.om-i.org/instances/modificationScope/financialModification",
+    definition="Modification may be made to any pricing, payment terms, fees, or compensation.",
+    name="financial modification",
+)
+ModificationScope.material_modification = ModificationScope(
+    id="https://openminds.om-i.org/instances/modificationScope/materialModification",
+    definition="Modification may be made to any core rights, duties, or risk allocations of the parties.",
+    name="material modification",
+)
+ModificationScope.schedule_modification = ModificationScope(
+    id="https://openminds.om-i.org/instances/modificationScope/scheduleModification",
+    definition="Modification may be made to any deadlines, milestones, and delivery timelines.",
+    name="schedule modification",
+)
+ModificationScope.technical_modification = ModificationScope(
+    id="https://openminds.om-i.org/instances/modificationScope/technicalModification",
+    definition="Modification may be made to any operational procedures, specifications, or performance methods.",
+    name="technical modification",
+)
+ModificationScope.unrestricted_modification = ModificationScope(
+    id="https://openminds.om-i.org/instances/modificationScope/unrestrictedModification",
+    definition="Modification may be made to any subject matter without contractual limitation.",
+    name="unrestricted modification",
 )

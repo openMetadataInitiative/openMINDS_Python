@@ -1,5 +1,5 @@
 """
-Structured information on the ethics assessment of a dataset.
+<description not available>
 """
 
 # this file was auto-generated!
@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class EthicsAssessment(LinkedMetadata):
+class AccessEligibilityType(LinkedMetadata):
     """
-    Structured information on the ethics assessment of a dataset.
+    <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/EthicsAssessment"
+    type_ = "https://openminds.om-i.org/types/AccessEligibilityType"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class EthicsAssessment(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the ethics assessment.",
+            description="Longer statement or account giving the characteristics of the access eligibility type.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class EthicsAssessment(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the ethics assessment.",
+            description="Word or phrase that constitutes the distinctive designation of the access eligibility type.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -159,26 +159,18 @@ class EthicsAssessment(LinkedMetadata):
             return matches[0]
 
 
-EthicsAssessment.eu_compliant = EthicsAssessment(
-    id="https://openminds.om-i.org/instances/ethicsAssessment/EUCompliant",
-    definition="Data are ethically approved in compliance with EU law. No additional ethics assessment was made by the data sharing initiative.",
-    description="Data are ethically approved in compliance with EU law. No additional ethics assessment was made by the data sharing initiative. This is typically true for all, human post-mortem data, human cross-subject statistics, non-primate vertebrate animals as well as cephalopods.",
-    name="EU compliant",
+AccessEligibilityType.controlled_access = AccessEligibilityType(
+    id="https://openminds.om-i.org/instances/accessEligibilityType/controlledAccess",
+    definition="Access limited to registered and/or authenticated users meeting defined eligibility criteria.",
+    name="controlled access",
 )
-EthicsAssessment.eu_compliantplus = EthicsAssessment(
-    id="https://openminds.om-i.org/instances/ethicsAssessment/EUCompliant+",
-    definition="Data are ethically approved in compliance with EU law and an additional assessment was made by the data sharing initiative.",
-    description="Data are ethically approved in compliance with EU law and an additional assessment was made by the data sharing initiative. This is typically true for all living human single-subject data as well as all non-human primate data.",
-    name="EU compliant +",
+AccessEligibilityType.open_access = AccessEligibilityType(
+    id="https://openminds.om-i.org/instances/accessEligibilityType/openAccess",
+    definition="Access without prior registration, authentication, or authorisation.",
+    name="open access",
 )
-EthicsAssessment.not_required = EthicsAssessment(
-    id="https://openminds.om-i.org/instances/ethicsAssessment/notRequired",
-    definition="An ethics assessment is 'not required' when no ethics approval was needed to conduct the study.",
-    description="An ethics assessment is 'not required' when no ethics approval was needed to conduct the study. This is typically true for all simulated and invertebrate data (except cephalopods).",
-    name="not required",
-)
-EthicsAssessment.us_compliant = EthicsAssessment(
-    id="https://openminds.om-i.org/instances/ethicsAssessment/USCompliant",
-    definition="Data are ethically approved in compliance with the laws of the United States of America. No additional ethics assessment was made by the data sharing initiative.",
-    name="US compliant",
+AccessEligibilityType.restricted_access = AccessEligibilityType(
+    id="https://openminds.om-i.org/instances/accessEligibilityType/restrictedAccess",
+    definition="Access limited to authenticated and specifically authorised users meeting enhanced legal, ethical, contractual, or governance requirements.",
+    name="restricted access",
 )

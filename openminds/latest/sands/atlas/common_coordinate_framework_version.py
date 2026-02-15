@@ -11,12 +11,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class CommonCoordinateSpaceVersion(LinkedMetadata):
+class CommonCoordinateFrameworkVersion(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
+    type_ = "https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -27,14 +27,14 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             "abbreviation",
             formatting="text/plain",
             description="no description available",
-            instructions="Enter the official abbreviation of this common coordinate space version.",
+            instructions="Enter the official abbreviation of this common coordinate framework version.",
         ),
         Property(
             "accessibility",
-            "openminds.latest.controlled_terms.ProductAccessibility",
+            "openminds.latest.core.Accessibility",
             "accessibility",
             required=True,
-            description="Level to which something is accessible to the common coordinate space version.",
+            description="Level to which something is accessible to the common coordinate framework version.",
             instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
@@ -43,17 +43,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             "anatomicalAxesOrientation",
             required=True,
             description="Relation between reference planes used in anatomy and mathematics.",
-            instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for this common coordinate space version.",
-        ),
-        Property(
-            "authors",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "author",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="Creator of a literary or creative work, as well as a dataset publication.",
-            instructions="Add all parties that contributed to this common coordinate space version as authors. Note that these authors will overwrite the author list provided for the overarching common coordinate space.",
+            instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for the anatomical space of this common coordinate framework version.",
         ),
         Property(
             "axes_origins",
@@ -65,7 +55,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             max_items=3,
             required=True,
             description="Special point in a coordinate system used as a fixed point of reference for the geometry of the surrounding space.",
-            instructions="Enter the origin (central point where all axes intersect) of this common coordinate space version for two-dimensional spaces as [x, y] or for three-dimensional space as [x, y, z].",
+            instructions="Enter the coordinate point in the native anatomical space of the template as [x, y] or [x, y, z] for two- or three-dimensional spaces, respectively, that has been defined as the origin of the anatomical space of this common coordinate framework version (i.e., as the central point where all axes intersect).",
         ),
         Property(
             "copyright",
@@ -92,7 +82,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Two or three dimensional image that particluarly represents a specific coordinate space.",
-            instructions="Add all image files used as visual representation of this common coordinate space version.",
+            instructions="Add all image files used as visual representation of this common coordinate framework version.",
         ),
         Property(
             "description",
@@ -100,7 +90,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the common coordinate space version.",
+            description="Longer statement or account giving the characteristics of the common coordinate framework version.",
             instructions="Enter a description (or abstract) of this research product version. Note that this version specific description will overwrite the description for the overarching dataset.",
         ),
         Property(
@@ -128,7 +118,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             str,
             "fullName",
             formatting="text/plain",
-            description="Whole, non-abbreviated name of the common coordinate space version.",
+            description="Whole, non-abbreviated name of the common coordinate framework version.",
             instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
         ),
         Property(
@@ -145,7 +135,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             "homepage",
             IRI,
             "homepage",
-            description="Main website of the common coordinate space version.",
+            description="Main website of the common coordinate framework version.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
         ),
         Property(
@@ -154,37 +144,42 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             "howToCite",
             formatting="text/markdown",
             multiline=True,
+            required=True,
             description="Preferred format for citing a particular object or legal person.",
             instructions="Enter the preferred citation text for this research product version. Leave blank if citation text can be extracted from the assigned digital identifier.",
         ),
         Property(
             "is_preceded_by",
-            "openminds.latest.sands.CommonCoordinateSpaceVersion",
+            "openminds.latest.sands.CommonCoordinateFrameworkVersion",
             "isPrecededBy",
             description="no description available",
-            instructions="Add the common coordinate space version preceding this common coordinate space version.",
+            instructions="Add the common coordinate framework version preceding this common coordinate framework version.",
         ),
         Property(
             "is_variant_of",
-            "openminds.latest.sands.CommonCoordinateSpaceVersion",
+            "openminds.latest.sands.CommonCoordinateFrameworkVersion",
             "isVariantOf",
             multiple=True,
             unique_items=True,
             min_items=1,
             description="no description available",
-            instructions="Add all common coordinate space versions that can be used alternatively to this common coordinate space version.",
+            instructions="Add all common coordinate framework versions that can be used alternatively to this common coordinate framework version.",
         ),
         Property(
             "is_version_of",
-            "openminds.latest.sands.CommonCoordinateSpace",
+            "openminds.latest.sands.CommonCoordinateFramework",
             "isVersionOf",
             required=True,
             description="no description available",
-            instructions="Add the version-independent information about this common coordinate space.",
+            instructions="Add the version-independent information about this common coordinate framework.",
         ),
         Property(
             "keywords",
             [
+                "openminds.latest.controlled_terms.AccessChannel",
+                "openminds.latest.controlled_terms.AccessEligibilityType",
+                "openminds.latest.controlled_terms.AccessForm",
+                "openminds.latest.controlled_terms.AccessProcessType",
                 "openminds.latest.controlled_terms.ActionStatusType",
                 "openminds.latest.controlled_terms.AgeCategory",
                 "openminds.latest.controlled_terms.AnalysisTechnique",
@@ -212,13 +207,13 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.DataType",
                 "openminds.latest.controlled_terms.DependencyImpact",
                 "openminds.latest.controlled_terms.DeploymentEnvironmentType",
+                "openminds.latest.controlled_terms.DeviceMountingType",
                 "openminds.latest.controlled_terms.DeviceType",
                 "openminds.latest.controlled_terms.DifferenceMeasure",
                 "openminds.latest.controlled_terms.Disease",
                 "openminds.latest.controlled_terms.DiseaseModel",
                 "openminds.latest.controlled_terms.EducationalLevel",
                 "openminds.latest.controlled_terms.ElectricalStimulusType",
-                "openminds.latest.controlled_terms.EthicsAssessment",
                 "openminds.latest.controlled_terms.ExperimentalApproach",
                 "openminds.latest.controlled_terms.FileBundleGrouping",
                 "openminds.latest.controlled_terms.FileRepositoryType",
@@ -229,15 +224,20 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.Language",
                 "openminds.latest.controlled_terms.Laterality",
                 "openminds.latest.controlled_terms.LearningResourceType",
+                "openminds.latest.controlled_terms.MRICoilRole",
+                "openminds.latest.controlled_terms.MRIParallelAcquisitionTechnique",
                 "openminds.latest.controlled_terms.MRIPulseSequence",
+                "openminds.latest.controlled_terms.MRISpoilingTechnique",
                 "openminds.latest.controlled_terms.MRIWeighting",
-                "openminds.latest.controlled_terms.MRSpatialEncoding",
                 "openminds.latest.controlled_terms.MeasuredQuantity",
                 "openminds.latest.controlled_terms.MeasuredSignalType",
                 "openminds.latest.controlled_terms.MetaDataModelType",
                 "openminds.latest.controlled_terms.ModelAbstractionLevel",
                 "openminds.latest.controlled_terms.ModelScope",
-                "openminds.latest.controlled_terms.ModificationClause",
+                "openminds.latest.controlled_terms.ModificationConsentRequirement",
+                "openminds.latest.controlled_terms.ModificationConstraint",
+                "openminds.latest.controlled_terms.ModificationForm",
+                "openminds.latest.controlled_terms.ModificationScope",
                 "openminds.latest.controlled_terms.MolecularEntity",
                 "openminds.latest.controlled_terms.OlfactoryStimulusType",
                 "openminds.latest.controlled_terms.OperatingDevice",
@@ -248,9 +248,12 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.OrganismSystem",
                 "openminds.latest.controlled_terms.OrganizationType",
                 "openminds.latest.controlled_terms.PatchClampVariation",
+                "openminds.latest.controlled_terms.PaymentModelType",
                 "openminds.latest.controlled_terms.PreparationType",
                 "openminds.latest.controlled_terms.ProductAccessibility",
                 "openminds.latest.controlled_terms.ProgrammingLanguage",
+                "openminds.latest.controlled_terms.PublicationStatus",
+                "openminds.latest.controlled_terms.PulseShape",
                 "openminds.latest.controlled_terms.QualitativeOverlap",
                 "openminds.latest.controlled_terms.SemanticDataType",
                 "openminds.latest.controlled_terms.Service",
@@ -258,6 +261,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.SoftwareApplicationCategory",
                 "openminds.latest.controlled_terms.SoftwareFeature",
                 "openminds.latest.controlled_terms.SovereignState",
+                "openminds.latest.controlled_terms.SpatialEncoding",
                 "openminds.latest.controlled_terms.Species",
                 "openminds.latest.controlled_terms.StimulationApproach",
                 "openminds.latest.controlled_terms.StimulationTechnique",
@@ -279,15 +283,8 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            description="Significant word or concept that are representative of the common coordinate space version.",
+            description="Significant word or concept that are representative of the common coordinate framework version.",
             instructions="Add all relevant keywords to this research product version either by adding controlled terms or by suggesting new terms.",
-        ),
-        Property(
-            "license",
-            "openminds.latest.core.License",
-            "license",
-            description="Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something.",
-            instructions="Add the license of this common coordinate space version.",
         ),
         Property(
             "native_unit",
@@ -295,7 +292,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             "nativeUnit",
             required=True,
             description="Determinate quantity used in the original measurement.",
-            instructions="Add the native unit that is used for this common coordinate space version.",
+            instructions="Add the native unit that is used for this common coordinate framework version.",
         ),
         Property(
             "ontology_identifiers",
@@ -305,8 +302,8 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             formatting="text/plain",
-            description="Term or code used to identify the common coordinate space version registered within a particular ontology.",
-            instructions="Enter the internationalized resource identifiers (IRIs) to the related ontological terms matching this common coordinate space version.",
+            description="Term or code used to identify the common coordinate framework version registered within a particular ontology.",
+            instructions="Enter the internationalized resource identifiers (IRIs) to the related ontological terms matching this common coordinate framework version.",
         ),
         Property(
             "other_contributions",
@@ -317,6 +314,13 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             min_items=1,
             description="Giving or supplying of something (such as money or time) as a part or share other than what is covered elsewhere.",
             instructions="Add any other contributions to this research product version that are not covered under 'author'/'developer' or 'custodian'.",
+        ),
+        Property(
+            "publication_status",
+            "openminds.latest.controlled_terms.PublicationStatus",
+            "publicationStatus",
+            description="no description available",
+            instructions="Add the relevant publication status indicating the current lifecycle state of the resource (published, embargoed, disposed, retracted, etc.).",
         ),
         Property(
             "related_publications",
@@ -357,7 +361,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of the common coordinate space version.",
+            description="Shortened or fully abbreviated name of the common coordinate framework version.",
             instructions="Enter a short name (or alias) for this research product version that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
         Property(
@@ -372,6 +376,16 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             instructions="Enter all channels through which a user can receive support for handling this research product version.",
         ),
         Property(
+            "usage_conditions",
+            ["openminds.latest.core.License", "openminds.latest.core.UsageAgreement"],
+            "usageCondition",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all licenses and available data usage agreements applicable to this product version. Inherited by all product versions unless overridden at the version level.",
+        ),
+        Property(
             "used_specimens",
             [
                 "openminds.latest.core.Subject",
@@ -384,7 +398,7 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="no description available",
-            instructions="Add the specimen that was used for the creation of this common coordinate space version.",
+            instructions="Add the specimen(s) that were used in the creation of this common coordinate framework version.",
         ),
         Property(
             "version_identifier",
@@ -413,7 +427,6 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
         abbreviation=None,
         accessibility=None,
         anatomical_axes_orientation=None,
-        authors=None,
         axes_origins=None,
         copyright=None,
         custodians=None,
@@ -429,15 +442,16 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
         is_variant_of=None,
         is_version_of=None,
         keywords=None,
-        license=None,
         native_unit=None,
         ontology_identifiers=None,
         other_contributions=None,
+        publication_status=None,
         related_publications=None,
         release_date=None,
         repository=None,
         short_name=None,
         support_channels=None,
+        usage_conditions=None,
         used_specimens=None,
         version_identifier=None,
         version_innovation=None,
@@ -447,7 +461,6 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             abbreviation=abbreviation,
             accessibility=accessibility,
             anatomical_axes_orientation=anatomical_axes_orientation,
-            authors=authors,
             axes_origins=axes_origins,
             copyright=copyright,
             custodians=custodians,
@@ -463,15 +476,16 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             is_variant_of=is_variant_of,
             is_version_of=is_version_of,
             keywords=keywords,
-            license=license,
             native_unit=native_unit,
             ontology_identifiers=ontology_identifiers,
             other_contributions=other_contributions,
+            publication_status=publication_status,
             related_publications=related_publications,
             release_date=release_date,
             repository=repository,
             short_name=short_name,
             support_channels=support_channels,
+            usage_conditions=usage_conditions,
             used_specimens=used_specimens,
             version_identifier=version_identifier,
             version_innovation=version_innovation,
@@ -533,37 +547,37 @@ class CommonCoordinateSpaceVersion(LinkedMetadata):
             return matches[0]
 
 
-CommonCoordinateSpaceVersion.amb_ccf_v1 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v1",
+CommonCoordinateFrameworkVersion.amb_ccf_v1 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v1",
     abbreviation="AMB CCF",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/PIR"},
     full_name="Allen Mouse Brain Common Coordinate Framework",
     homepage=IRI("https://portal.brain-map.org/"),
     how_to_cite="Lein E, Hawrylycz M, Ao N, et al.; 'Genome-wide atlas of gene expression in the adult mouse brain.'; Nature; Jan 2007; 445(7124):168–176. [doi: 10.1038/nature05453](https://doi.org/10.1038/nature05453)",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/AMB-CCF"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/AMB-CCF"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/micrometer"},
     short_name="Allen Mouse Brain CCF",
     version_identifier="v1",
     version_innovation="The first version of the 'Allen Mouse Brain Common Coordinate Framework' (CCFv1) is a 3D reconstruction of one brain hemisphere at 200µm resolution.",
 )
-CommonCoordinateSpaceVersion.amb_ccf_v2 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v2",
+CommonCoordinateFrameworkVersion.amb_ccf_v2 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v2",
     abbreviation="AMB CCF",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/PIR"},
     full_name="Allen Mouse Brain Common Coordinate Framework",
     homepage=IRI("https://portal.brain-map.org/"),
     how_to_cite="Oh S, Harris J, Ng L, et al.; 'A mesoscale connectome of the mouse brain.'; Nature; Apr 2014; 508(7495):207–214. [doi: 10.1038/nature13186](https://doi.org/10.1038/nature13186)",
-    is_preceded_by={"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v1"},
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/AMB-CCF"),
+    is_preceded_by={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v1"},
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/AMB-CCF"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/micrometer"},
     short_name="Allen Mouse Brain CCF",
     version_identifier="v2",
     version_innovation="The second version of the 'Allen Mouse Brain Common Coordinate Framework' (CCFv2) is a 3D reconstruction of a whole brain at 100µm resolution.",
 )
-CommonCoordinateSpaceVersion.amb_ccf_v3 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v3",
+CommonCoordinateFrameworkVersion.amb_ccf_v3 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v3",
     abbreviation="AMB CCF",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/PIR"},
@@ -575,17 +589,17 @@ CommonCoordinateSpaceVersion.amb_ccf_v3 = CommonCoordinateSpaceVersion(
     full_name="Allen Mouse Brain Common Coordinate Framework",
     homepage=IRI("https://portal.brain-map.org/"),
     how_to_cite="Wang Q, Ding S-L, Li Y, et al.; 'The Allen Mouse Brain Common Coordinate Framework: A 3D Reference Atlas.'; Cell; May 2020; 181(4):936-953.e20. [doi: 10.1016/j.cell.2020.04.007](https://doi.org/10.1016/j.cell.2020.04.007)",
-    is_preceded_by={"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v2"},
-    is_variant_of=[{"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v3-RAS"}],
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/AMB-CCF"),
+    is_preceded_by={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v2"},
+    is_variant_of=[{"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v3-RAS"}],
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/AMB-CCF"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/micrometer"},
     release_date="2015-05-01",
     short_name="Allen Mouse Brain CCF",
     version_identifier="v3",
     version_innovation="The third version of the 'Allen Mouse Brain Common Coordinate Framework' (CCFv3) is a 3D reconstruction of a whole brain at 10µm resolution.",
 )
-CommonCoordinateSpaceVersion.amb_ccf_v3_ras = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v3-RAS",
+CommonCoordinateFrameworkVersion.amb_ccf_v3_ras = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v3-RAS",
     abbreviation="AMB CCF",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RAS"},
@@ -597,17 +611,17 @@ CommonCoordinateSpaceVersion.amb_ccf_v3_ras = CommonCoordinateSpaceVersion(
     full_name="Allen Mouse Brain Common Coordinate Framework",
     homepage=IRI("https://portal.brain-map.org/"),
     how_to_cite="Wang Q, Ding S-L, Li Y, et al.; 'The Allen Mouse Brain Common Coordinate Framework: A 3D Reference Atlas.'; Cell; May 2020; 181(4):936-953.e20. [doi: 10.1016/j.cell.2020.04.007](https://doi.org/10.1016/j.cell.2020.04.007)",
-    is_preceded_by={"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v2"},
-    is_variant_of=[{"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/AMB-CCF_v3"}],
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/AMB-CCF"),
+    is_preceded_by={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v2"},
+    is_variant_of=[{"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/AMB-CCF_v3"}],
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/AMB-CCF"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/micrometer"},
     release_date="2015-05-01",
     short_name="Allen Mouse Brain CCF",
     version_identifier="v3-RAS",
     version_innovation="The third version of the 'Allen Mouse Brain Common Coordinate Framework' (CCFv3-RAS) is a 3D reconstruction of a whole brain at 10µm resolution. This alternative CCFv3 version was transformed to RAS axes orientation.",
 )
-CommonCoordinateSpaceVersion.big_brain_2015 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/BigBrain_2015",
+CommonCoordinateFrameworkVersion.big_brain_2015 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/BigBrain_2015",
     abbreviation="BigBrain",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RAS"},
@@ -616,91 +630,87 @@ CommonCoordinateSpaceVersion.big_brain_2015 = CommonCoordinateSpaceVersion(
         {"@type": "https://openminds.om-i.org/types/QuantitativeValue", "value": 3500.0},
         {"@type": "https://openminds.om-i.org/types/QuantitativeValue", "value": 2776.899244094488},
     ],
-    custodians=[
-        {"@id": "https://openminds.om-i.org/instances/person/evansAlanC"},
-        {"@id": "https://openminds.om-i.org/instances/person/amuntsKatrin"},
-    ],
     full_name="BigBrain Whole-Brain Model",
     homepage=IRI("https://bigbrainproject.org/"),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/BigBrain"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/BigBrain"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/micrometer"},
     release_date="2013-06-21",
     short_name="BigBrain Model",
     version_identifier="2015",
     version_innovation="The 'BigBrain Whole-Brain Model' (2015) is an ultrahigh-resolution three-dimensional (3D) model of a brain from a male human subject, deceased at the age of 65 years, at nearly cellular resolution of 20 micrometers. The model is based on a full 3D reconstruction from digital scans of 7404 histological coronal sections, which were stained for cell bodies.",
 )
-CommonCoordinateSpaceVersion.fs_lr_164k = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/fsLR_164k",
+CommonCoordinateFrameworkVersion.fs_lr_164k = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsLR_164k",
     abbreviation="fsLR",
     full_name="Unbiased FsAverage Left–Right Hybrid Surface Space",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/fsLR"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/fsLR"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     short_name="fsLR Surface Space",
     version_identifier="164k",
     version_innovation="This fsLR Surface Space version has about 163842 (164k) vertices per hemisphere.",
 )
-CommonCoordinateSpaceVersion.fs_lr_32k = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/fsLR_32k",
+CommonCoordinateFrameworkVersion.fs_lr_32k = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsLR_32k",
     abbreviation="fsLR",
     full_name="Unbiased FsAverage Left–Right Hybrid Surface Space",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/fsLR"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/fsLR"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     short_name="fsLR Surface Space",
     version_identifier="32k",
     version_innovation="This fsLR Surface Space version has about 32492 (32k) vertices per hemisphere.",
 )
-CommonCoordinateSpaceVersion.fsaverage_3 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/fsaverage_3",
+CommonCoordinateFrameworkVersion.fsaverage_3 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_3",
     abbreviation="fsaverage",
     full_name="FsAverage Surface Space",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/fsaverage"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/fsaverage"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     short_name="FsAverage Surface Space",
     version_identifier="3",
     version_innovation="This FsAverage Surface Space version has about 1k vertices per hemisphere.",
 )
-CommonCoordinateSpaceVersion.fsaverage_4 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/fsaverage_4",
+CommonCoordinateFrameworkVersion.fsaverage_4 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_4",
     abbreviation="fsaverage",
     full_name="FsAverage Surface Space",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/fsaverage"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/fsaverage"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     short_name="FsAverage Surface Space",
     version_identifier="4",
     version_innovation="This FsAverage Surface Space version has about 3k vertices per hemisphere.",
 )
-CommonCoordinateSpaceVersion.fsaverage_5 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/fsaverage_5",
+CommonCoordinateFrameworkVersion.fsaverage_5 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_5",
     abbreviation="fsaverage",
     full_name="FsAverage Surface Space",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/fsaverage"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/fsaverage"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     short_name="FsAverage Surface Space",
     version_identifier="5",
     version_innovation="This FsAverage Surface Space version has about 10k vertices per hemisphere.",
 )
-CommonCoordinateSpaceVersion.fsaverage_6 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/fsaverage_6",
+CommonCoordinateFrameworkVersion.fsaverage_6 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_6",
     abbreviation="fsaverage",
     full_name="FsAverage Surface Space",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/fsaverage"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/fsaverage"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     short_name="FsAverage Surface Space",
     version_identifier="6",
     version_innovation="This FsAverage Surface Space version has about 41k vertices per hemisphere.",
 )
-CommonCoordinateSpaceVersion.fsaverage_7 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/fsaverage_7",
+CommonCoordinateFrameworkVersion.fsaverage_7 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_7",
     abbreviation="fsaverage",
     full_name="FsAverage Surface Space",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/fsaverage"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/fsaverage"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     short_name="FsAverage Surface Space",
     version_identifier="7",
     version_innovation="This FsAverage Surface Space version has about 164k vertices per hemisphere.",
 )
-CommonCoordinateSpaceVersion.marmoset_nmt_v1 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MarmosetNMT_v1",
+CommonCoordinateFrameworkVersion.marmoset_nmt_v1 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MarmosetNMT_v1",
     abbreviation="MarmosetNMT",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/LPI"},
@@ -709,17 +719,17 @@ CommonCoordinateSpaceVersion.marmoset_nmt_v1 = CommonCoordinateSpaceVersion(
     full_name="The Marmoset Nencki-Monash Template in Stereotaxic Coordinates",
     homepage=IRI("https://www.marmosetbrain.org/nencki_monash_template"),
     how_to_cite="Majka, P., Bednarek, S., Chan, J. M., Jermakow, N., Liu, C., Saworska, G., Worthy, K. H., Silva, A. C., Wójcik, D. K., & Rosa, M. G. P. (2021). Histology-Based Average Template of the Marmoset Cortex With Probabilistic Localization of Cytoarchitectural Areas. NeuroImage, 226, 117625. https://doi.org/10.1016/j.neuroimage.2020.117625.",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MarmosetNMT"),
-    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"},
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MarmosetNMT"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     related_publications=[{"@id": "https://doi.org/10.1016/j.neuroimage.2020.117625"}],
     release_date="2021-02-01",
     short_name="Marmoset Nencki-Monash Template",
+    usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"}],
     version_identifier="v1",
     version_innovation="This is the first version of average histology.",
 )
-CommonCoordinateSpaceVersion.mebrain_stemplate_v1_0 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MEBRAINStemplate_v1.0",
+CommonCoordinateFrameworkVersion.mebrain_stemplate_v1_0 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MEBRAINStemplate_v1.0",
     abbreviation="MEBRAINStemplate",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RAS"},
@@ -729,14 +739,14 @@ CommonCoordinateSpaceVersion.mebrain_stemplate_v1_0 = CommonCoordinateSpaceVersi
         {"@type": "https://openminds.om-i.org/types/QuantitativeValue", "value": 70.0},
     ],
     full_name="MEBRAINS population-based monkey brain template",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MEBRAINStemplate"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MEBRAINStemplate"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/micrometer"},
     short_name="MEBRAINS brain template",
     version_identifier="v1.0",
     version_innovation="The first version of the 'MEBRAINS population-based monkey brain template' (v1.0) is a population average brain of T1- and T2-weighted MRI scans from 10 macaque brains. In addition, 9 CT scans of the same monkeys (one missing) are registered to the T1 modality and co-registered to the population average.",
 )
-CommonCoordinateSpaceVersion.mni__colin27_1998 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-Colin27_1998",
+CommonCoordinateFrameworkVersion.mni__colin27_1998 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998",
     abbreviation="MNI-Colin27",
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RAS"},
     axes_origins=[
@@ -746,90 +756,90 @@ CommonCoordinateSpaceVersion.mni__colin27_1998 = CommonCoordinateSpaceVersion(
     ],
     full_name="MNI Colin27 Average Brain Stereotaxic Registration Model",
     homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
-    is_variant_of=[{"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-Colin27_2008"}],
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-Colin27"),
+    is_variant_of=[{"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_2008"}],
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-Colin27"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="1998-06-01",
     short_name="MNI Colin27 Average Brain",
     version_identifier="1998",
 )
-CommonCoordinateSpaceVersion.mni__colin27_2008 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-Colin27_2008",
+CommonCoordinateFrameworkVersion.mni__colin27_2008 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_2008",
     abbreviation="MNI-Colin27",
     full_name="MNI Colin27 Average Brain Stereotaxic Registration Model",
     homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
-    is_variant_of=[{"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNIColin27_1998"}],
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-Colin27"),
+    is_variant_of=[{"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNIColin27_1998"}],
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-Colin27"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2006-08-01",
     short_name="MNI Colin27 Average Brain",
     version_identifier="2008",
 )
-CommonCoordinateSpaceVersion.mni_icbm152_linear_2001_sym = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_linear-2001-sym",
+CommonCoordinateFrameworkVersion.mni_icbm152_linear_2001_sym = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_linear-2001-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
     homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152lin"),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="2001 linear symmetric",
 )
-CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009a_asym = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009a-asym",
+CommonCoordinateFrameworkVersion.mni_icbm152_nonlinear_2009a_asym = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009a-asym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
     homepage=IRI(
         "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
     ),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="2009a nonlinear asymmetric",
 )
-CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009a_sym = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009a-sym",
+CommonCoordinateFrameworkVersion.mni_icbm152_nonlinear_2009a_sym = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009a-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
     homepage=IRI(
         "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
     ),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="2009a nonlinear symmetric",
 )
-CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009b_asym = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009b-asym",
+CommonCoordinateFrameworkVersion.mni_icbm152_nonlinear_2009b_asym = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009b-asym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
     homepage=IRI(
         "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
     ),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="2009b nonlinear asymmetric",
 )
-CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009b_sym = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009b-sym",
+CommonCoordinateFrameworkVersion.mni_icbm152_nonlinear_2009b_sym = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009b-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
     homepage=IRI(
         "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
     ),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="2009b nonlinear symmetric",
 )
-CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009c_asym = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009c-asym",
+CommonCoordinateFrameworkVersion.mni_icbm152_nonlinear_2009c_asym = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym",
     abbreviation="ICBM152",
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RAS"},
     axes_origins=[
@@ -841,38 +851,38 @@ CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009c_asym = CommonCoordinate
     homepage=IRI(
         "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
     ),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="2009c nonlinear asymmetric",
 )
-CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_2009c_sym = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-2009c-sym",
+CommonCoordinateFrameworkVersion.mni_icbm152_nonlinear_2009c_sym = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
     homepage=IRI(
         "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009"
     ),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="2009c nonlinear symmetric",
 )
-CommonCoordinateSpaceVersion.mni_icbm152_nonlinear_6_g_sym = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/MNI-ICBM152_nonlinear-6G-sym",
+CommonCoordinateFrameworkVersion.mni_icbm152_nonlinear_6_g_sym = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-6G-sym",
     abbreviation="ICBM152",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
     homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear"),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2009-07-01",
     short_name="MNI ICBM152",
     version_identifier="nonlinear 6th generation symmetric",
 )
-CommonCoordinateSpaceVersion.p__marmoset_bsc_cor_t_v2012__interaural_lsa = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/P-MarmosetBSC-corT_v2012-Interaural-LSA",
+CommonCoordinateFrameworkVersion.p__marmoset_bsc_cor_t_v2012__interaural_lsa = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/P-MarmosetBSC-corT_v2012-Interaural-LSA",
     abbreviation="P-MarmosetBSC-corT",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/LSA"},
@@ -880,15 +890,15 @@ CommonCoordinateSpaceVersion.p__marmoset_bsc_cor_t_v2012__interaural_lsa = Commo
     full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/978-0-12-415818-4"},
     full_name="Paxinos et al. Coronal Template of the Marmoset Brain in Stereotaxic Coordinates",
     homepage=IRI("http://www.neura.edu.au/research/themes/paxinos-group"),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/P-MarmosetBSC-corT"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/P-MarmosetBSC-corT"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2011-10-11",
     short_name="Paxinos et al. Stereotaxic Coronal Template (Marmoset Brain)",
     version_identifier="v2012 (Interaural, LSA)",
     version_innovation="This is the first version of this stereotaxic coordinate system.",
 )
-CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__bregma_lia = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-LIA",
+CommonCoordinateFrameworkVersion.pw_rbsc_cor_t_v2004__bregma_lia = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/PW-RBSC-corT_v2004-Bregma-LIA",
     abbreviation="PW-RBSC-corT",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/paidAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/LIA"},
@@ -896,15 +906,15 @@ CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__bregma_lia = CommonCoordinateS
     full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
     full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
     how_to_cite="Paxinos, G. and Watson, C. (2004) The Rat Brain in Stereotaxic Coordinates. 5th Edition, Academic Press, San Diego.",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/PW-RBSC-corT"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/PW-RBSC-corT"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2004-11-10",
     short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
     version_identifier="v2004 (Bregma, LIA)",
     version_innovation="This is the second version of the common coordinate space for the coronal plane atlas. From the 4th to the 5th edition of the Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates, the reference data (template) was changed (new adult male Wistar rat with a more complete coronal series) which resulted in a new common coordinate space version.",
 )
-CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__bregma_ria = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Bregma-RIA",
+CommonCoordinateFrameworkVersion.pw_rbsc_cor_t_v2004__bregma_ria = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/PW-RBSC-corT_v2004-Bregma-RIA",
     abbreviation="PW-RBSC-corT",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/paidAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RIA"},
@@ -912,15 +922,15 @@ CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__bregma_ria = CommonCoordinateS
     full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
     full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
     how_to_cite="Paxinos, G. and Watson, C. (2004) The Rat Brain in Stereotaxic Coordinates. 5th Edition, Academic Press, San Diego.",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/PW-RBSC-corT"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/PW-RBSC-corT"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2004-11-10",
     short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
     version_identifier="v2004 (Bregma, RIA)",
     version_innovation="This is the second version of the common coordinate space for the coronal plane atlas. From the 4th to the 5th edition of the Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates, the reference data (template) was changed (new adult male Wistar rat with a more complete coronal series) which resulted in a new common coordinate space version.",
 )
-CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__interaural_lsa = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-LSA",
+CommonCoordinateFrameworkVersion.pw_rbsc_cor_t_v2004__interaural_lsa = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/PW-RBSC-corT_v2004-Interaural-LSA",
     abbreviation="PW-RBSC-corT",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/paidAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/LSA"},
@@ -928,15 +938,15 @@ CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__interaural_lsa = CommonCoordin
     full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
     full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
     how_to_cite="Paxinos, G. and Watson, C. (2004) The Rat Brain in Stereotaxic Coordinates. 5th Edition, Academic Press, San Diego.",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/PW-RBSC-corT"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/PW-RBSC-corT"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2004-11-10",
     short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
     version_identifier="v2004 (Interaural, LSA)",
     version_innovation="This is the second version of the common coordinate space for the coronal plane atlas. From the 4th to the 5th edition of the Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates, the reference data (template) was changed (new adult male Wistar rat with a more complete coronal series) which resulted in a new common coordinate space version.",
 )
-CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__interaural_rsa = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/PW-RBSC-corT_v2004-Interaural-RSA",
+CommonCoordinateFrameworkVersion.pw_rbsc_cor_t_v2004__interaural_rsa = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/PW-RBSC-corT_v2004-Interaural-RSA",
     abbreviation="PW-RBSC-corT",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/paidAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RSA"},
@@ -944,15 +954,15 @@ CommonCoordinateSpaceVersion.pw_rbsc_cor_t_v2004__interaural_rsa = CommonCoordin
     full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
     full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
     how_to_cite="Paxinos, G. and Watson, C. (2004) The Rat Brain in Stereotaxic Coordinates. 5th Edition, Academic Press, San Diego.",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/PW-RBSC-corT"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/PW-RBSC-corT"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="2004-11-10",
     short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
     version_identifier="v2004 (Interaural, RSA)",
     version_innovation="This is the second version of the common coordinate space for the coronal plane atlas. From the 4th to the 5th edition of the Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates, the reference data (template) was changed (new adult male Wistar rat with a more complete coronal series) which resulted in a new common coordinate space version.",
 )
-CommonCoordinateSpaceVersion.swanson_srb_v1992 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/SwansonSRB_v1992",
+CommonCoordinateFrameworkVersion.swanson_srb_v1992 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/SwansonSRB_v1992",
     abbreviation="SwansonSRB",
     accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RIA"},
@@ -983,28 +993,28 @@ CommonCoordinateSpaceVersion.swanson_srb_v1992 = CommonCoordinateSpaceVersion(
     full_documentation={"@id": "https://larrywswanson.com/?page_id=164"},
     full_name="Swanson's Stereotactic Brain of the Sprague Dawley Rat",
     how_to_cite="Swanson, L.W. (1992) 'Coordinate Systems' Brain maps: structure of the rat brain, 1st edition.",
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/SwansonSRB"),
-    license={"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-4.0"},
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/SwansonSRB"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/millimeter"},
     release_date="1992-12-24",
     short_name="Swanson's Stereotactic Rat Brain",
+    usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-4.0"}],
     version_identifier="v1992",
     version_innovation="This is the first version of this common coordinate space.",
 )
-CommonCoordinateSpaceVersion.whssd_v1 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/WHSSD_v1",
+CommonCoordinateFrameworkVersion.whssd_v1 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/WHSSD_v1",
     abbreviation="WHSSD",
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/ALS"},
     full_name="Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)",
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/WHSSD"),
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/WHSSD"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/micrometer"},
     release_date="2014-07-16",
     short_name="WHS of the SD Rat Brain",
     version_identifier="v1",
 )
-CommonCoordinateSpaceVersion.whssd_v1_01 = CommonCoordinateSpaceVersion(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/WHSSD_v1.01",
+CommonCoordinateFrameworkVersion.whssd_v1_01 = CommonCoordinateFrameworkVersion(
+    id="https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/WHSSD_v1.01",
     abbreviation="WHSSD",
     anatomical_axes_orientation={"@id": "https://openminds.om-i.org/instances/anatomicalAxesOrientation/RAS"},
     axes_origins=[
@@ -1014,8 +1024,8 @@ CommonCoordinateSpaceVersion.whssd_v1_01 = CommonCoordinateSpaceVersion(
     ],
     full_name="Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)",
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
-    is_preceded_by={"@id": "https://openminds.om-i.org/instances/commonCoordinateSpaceVersion/WHSSD_v1"},
-    is_version_of=IRI("https://openminds.om-i.org/instances/commonCoordinateSpace/WHSSD"),
+    is_preceded_by={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/WHSSD_v1"},
+    is_version_of={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/WHSSD"},
     native_unit={"@id": "https://openminds.om-i.org/instances/unitOfMeasurement/micrometer"},
     release_date="2014-07-16",
     short_name="WHS of the SD Rat Brain",

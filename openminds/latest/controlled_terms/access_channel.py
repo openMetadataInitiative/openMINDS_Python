@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class OrganizationType(LinkedMetadata):
+class AccessChannel(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/OrganizationType"
+    type_ = "https://openminds.om-i.org/types/AccessChannel"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class OrganizationType(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the organization type.",
+            description="Longer statement or account giving the characteristics of the access channel.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class OrganizationType(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the organization type.",
+            description="Word or phrase that constitutes the distinctive designation of the access channel.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
@@ -159,14 +159,20 @@ class OrganizationType(LinkedMetadata):
             return matches[0]
 
 
-OrganizationType.legal_entity = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/legalEntity",
-    definition="An organization classified as a type of legal entity recognized within a specific legal system.",
-    name="legal entity",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q10541491"),
+AccessChannel.hybrid_access = AccessChannel(
+    id="https://openminds.om-i.org/instances/accessChannel/hybridAccess",
+    definition="Access is provided both remotely through digital means and at a specific physical location.",
+    name="hybrid access",
 )
-OrganizationType.organizational_unit = OrganizationType(
-    id="https://openminds.om-i.org/instances/organizationType/organizationalUnit",
-    definition="A distinct unit within a larger organization.",
-    name="organizational unit",
+AccessChannel.physical_access = AccessChannel(
+    id="https://openminds.om-i.org/instances/accessChannel/physicalAccess",
+    definition="Access requires physical presence at a specific location.",
+    name="physical access",
+    synonyms=["in-person access", "on-premises access", "on-site access"],
+)
+AccessChannel.virtual_access = AccessChannel(
+    id="https://openminds.om-i.org/instances/accessChannel/virtualAccess",
+    definition="Refers to the ability of users to connect to, interact with, and utilize resources, systems, or other individuals remotely via digital interfaces.",
+    name="virtual access",
+    synonyms=["digital access", "online access"],
 )

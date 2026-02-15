@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class BrainAtlas(LinkedMetadata):
+class AnatomicalAtlas(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/BrainAtlas"
+    type_ = "https://openminds.om-i.org/types/AnatomicalAtlas"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -26,18 +26,7 @@ class BrainAtlas(LinkedMetadata):
             "abbreviation",
             formatting="text/plain",
             description="no description available",
-            instructions="Enter the official abbreviation of this brain atlas.",
-        ),
-        Property(
-            "authors",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "author",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            required=True,
-            description="Creator of a literary or creative work, as well as a dataset publication.",
-            instructions="Add all parties that contributed to this brain atlas as authors.",
+            instructions="Enter the official abbreviation of this anatomical atlas.",
         ),
         Property(
             "custodians",
@@ -56,7 +45,7 @@ class BrainAtlas(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             required=True,
-            description="Longer statement or account giving the characteristics of the brain atlas.",
+            description="Longer statement or account giving the characteristics of the anatomical atlas.",
             instructions="Enter a description (or abstract) of this research product. Note that this should be a suitable description for all attached research product versions.",
         ),
         Property(
@@ -72,7 +61,7 @@ class BrainAtlas(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of the brain atlas.",
+            description="Whole, non-abbreviated name of the anatomical atlas.",
             instructions="Enter a descriptive full name (or title) for this research product. Note that this should be a suitable full name for all attached research product versions.",
         ),
         Property(
@@ -81,13 +70,13 @@ class BrainAtlas(LinkedMetadata):
             "hasTerminology",
             required=True,
             description="no description available",
-            instructions="Enter the parcellation terminology of this brain atlas.",
+            instructions="Enter the parcellation terminology of this anatomical atlas.",
         ),
         Property(
             "homepage",
             IRI,
             "homepage",
-            description="Main website of the brain atlas.",
+            description="Main website of the anatomical atlas.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product.",
         ),
         Property(
@@ -96,6 +85,7 @@ class BrainAtlas(LinkedMetadata):
             "howToCite",
             formatting="text/markdown",
             multiline=True,
+            required=True,
             description="Preferred format for citing a particular object or legal person.",
             instructions="Enter the preferred citation text for this research product. Leave blank if citation text can be extracted from the assigned digital identifier.",
         ),
@@ -103,8 +93,8 @@ class BrainAtlas(LinkedMetadata):
             "ontology_identifier",
             IRI,
             "ontologyIdentifier",
-            description="Term or code used to identify the brain atlas registered within a particular ontology.",
-            instructions="Enter the internationalized resource identifier (IRI) to the related ontological term matching this brain atlas.",
+            description="Term or code used to identify the anatomical atlas registered within a particular ontology.",
+            instructions="Enter the internationalized resource identifier (IRI) to the related ontological term matching this anatomical atlas.",
         ),
         Property(
             "short_name",
@@ -112,15 +102,16 @@ class BrainAtlas(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of the brain atlas.",
+            description="Shortened or fully abbreviated name of the anatomical atlas.",
             instructions="Enter a short name (or alias) for this research product that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
         Property(
-            "used_species",
-            "openminds.latest.controlled_terms.Species",
-            "usedSpecies",
+            "used_taxon",
+            ["openminds.latest.controlled_terms.BiologicalOrder", "openminds.latest.controlled_terms.Species"],
+            "usedTaxon",
+            required=True,
             description="no description available",
-            instructions="Add the species that was used for the creation of this brain atlas.",
+            instructions="Add the taxon (e.g., species) that was used for the creation of this anatomical atlas.",
         ),
     ]
 
@@ -128,7 +119,6 @@ class BrainAtlas(LinkedMetadata):
         self,
         id=None,
         abbreviation=None,
-        authors=None,
         custodians=None,
         description=None,
         digital_identifier=None,
@@ -138,12 +128,11 @@ class BrainAtlas(LinkedMetadata):
         how_to_cite=None,
         ontology_identifier=None,
         short_name=None,
-        used_species=None,
+        used_taxon=None,
     ):
         return super().__init__(
             id=id,
             abbreviation=abbreviation,
-            authors=authors,
             custodians=custodians,
             description=description,
             digital_identifier=digital_identifier,
@@ -153,7 +142,7 @@ class BrainAtlas(LinkedMetadata):
             how_to_cite=how_to_cite,
             ontology_identifier=ontology_identifier,
             short_name=short_name,
-            used_species=used_species,
+            used_taxon=used_taxon,
         )
 
     @classmethod
@@ -212,8 +201,8 @@ class BrainAtlas(LinkedMetadata):
             return matches[0]
 
 
-BrainAtlas.aal1 = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/AAL1",
+AnatomicalAtlas.aal1 = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/AAL1",
     abbreviation="AAL1",
     full_name="Automated Anatomical Labeling Atlas 1",
     has_terminology={
@@ -277,18 +266,18 @@ BrainAtlas.aal1 = BrainAtlas(
     },
     homepage=IRI("https://www.gin.cnrs.fr/en/tools/aal/"),
     short_name="AAL Atlas 1",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.amba = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/AMBA",
+AnatomicalAtlas.amba = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/AMBA",
     abbreviation="AMBA",
     full_name="Allen Mouse Brain Atlas",
     homepage=IRI("https://portal.brain-map.org/"),
     short_name="Allen Mouse Brain Atlas",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/musMusculus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/musMusculus"},
 )
-BrainAtlas.aseg_atlas = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/AsegAtlas",
+AnatomicalAtlas.aseg_atlas = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/AsegAtlas",
     abbreviation="Aseg Atlas",
     description="The Automated Segmentation Atlas of the Human Brain is an automated whole brain segmentation that is based on probabilistic information on the location of structures of a manual labeled training set (cf., [Fischl et al., 2002](https://doi.org/10.1016/S0896-6273(02)00569-X)).",
     full_name="Automated Segmentation Atlas of the Human Brain",
@@ -321,10 +310,10 @@ BrainAtlas.aseg_atlas = BrainAtlas(
         "ontologyIdentifier": None,
     },
     short_name="Automated Segmentation Atlas",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.ba_human = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/BA-human",
+AnatomicalAtlas.ba_human = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/BA-human",
     abbreviation="BA-human",
     full_name="Brodmann Cortical Parcellation Scheme (human)",
     has_terminology={
@@ -386,10 +375,10 @@ BrainAtlas.ba_human = BrainAtlas(
         "ontologyIdentifier": None,
     },
     short_name="Brodmann Areas (human)",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.dka = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/DKA",
+AnatomicalAtlas.dka = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/DKA",
     abbreviation="DKA",
     full_name="Desikan-Killiany Atlas",
     has_terminology={
@@ -447,10 +436,10 @@ BrainAtlas.dka = BrainAtlas(
         "ontologyIdentifier": None,
     },
     short_name="DK Atlas",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.dwma = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/DWMA",
+AnatomicalAtlas.dwma = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/DWMA",
     abbreviation="DWMA",
     full_name="Atlas of Deep White Matter Fibre Bundles",
     has_terminology={
@@ -479,10 +468,10 @@ BrainAtlas.dwma = BrainAtlas(
         "ontologyIdentifier": None,
     },
     short_name="Deep White Matter Atlas",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.jba = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/JBA",
+AnatomicalAtlas.jba = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/JBA",
     abbreviation="JBA",
     description="The Julich-Brain Atlas is a three-dimensional atlas of the human brain. It integrates high-resolution cytoarchitectonic maps with microstructural and connectivity data as well as neurotransmitter receptor expression profiles and functional data. It is available in the common reference spaces MNI ICBM 152 (2009c Nonlinear Asymmetric), Colin 27 and FreeSurfer fsaverage surface space.  Furthermore, many maps are also available in the BigBrain high-resolution reference space. It is continuously expanded and openly accessible for researchers to systematically integrate multi-level data. It is interoperable in a way that it can be linked with other brain parcellations, databases and mapping projects. The Julich Brain Atlas offers a powerful tool for neuroscience and medicine alike and has been adopted as central element of the multilevel human brain atlas for the EBRAINS infrastructure, see [EBRAINS Human Brain Atlas](https://www.ebrains.eu/tools/human-brain-atlas).",
     digital_identifier={"@id": "https://scicrunch.org/resolver/RRID:SCR_023277"},
@@ -765,10 +754,10 @@ BrainAtlas.jba = BrainAtlas(
     homepage=IRI("https://julich-brain-atlas.de/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_023277](https://scicrunch.org/resolver/SCR_023277), and cite the two main publications [Amunts and Zilles (2015)](https://doi.org/10.1016/j.neuron.2015.12.001) AND [Amunts et al. (2020)](https://doi.org/10.1126/science.abb4588) along with the atlas version(s) you have used.",
     short_name="Julich-Brain Atlas",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.marmoset_nma = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/MarmosetNMA",
+AnatomicalAtlas.marmoset_nma = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/MarmosetNMA",
     abbreviation="MarmosetNMA",
     description="The Marmoset Nencki-Monash Atlas is a three dimensional (3D) probabilistic brain atlas reconstructed from 20 young adult marmoset monkeys (Callithrix jacchus) and segmented based on the cytoarchitectonic analysis of the serial Nissl-stained sections of those brains.",
     full_name="Marmoset Nencki-Monash Probabilistic Cytoarchitectonic Brain Atlas",
@@ -988,10 +977,10 @@ BrainAtlas.marmoset_nma = BrainAtlas(
     homepage=IRI("https://www.marmosetbrain.org/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_018367](https://scicrunch.org/resolver/SCR_018367), and cite the publication of the version of the template you have used.",
     short_name="Marmoset Nencki-Monash Atlas",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/callithrixJacchus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/callithrixJacchus"},
 )
-BrainAtlas.pw_rbsc_cor = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/PW-RBSC-cor",
+AnatomicalAtlas.pw_rbsc_cor = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/PW-RBSC-cor",
     abbreviation="PW-RBSC-cor",
     description="Paxinos and Watson's stereotaxic rat brain atlases are based on the study of 130 adult male Wistar rats. The atlases have a stereotactic reference system, in a flat-skull position with bregma and lambda as reference points, photographs of rat brain sections in the coronal plane, and contain diagrams showing delineated brain structures based on the previously mentioned photographs.",
     full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
@@ -2903,10 +2892,10 @@ BrainAtlas.pw_rbsc_cor = BrainAtlas(
         "ontologyIdentifier": None,
     },
     short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
 )
-BrainAtlas.schaefer_400p = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/Schaefer-400p",
+AnatomicalAtlas.schaefer_400p = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/Schaefer-400p",
     abbreviation="Schaefer-400p",
     full_name="Schaefer Atlas with 400 Parcellation",
     has_terminology={
@@ -2919,10 +2908,10 @@ BrainAtlas.schaefer_400p = BrainAtlas(
         "https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal"
     ),
     short_name="Schaefer Atlas (400p)",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.swanson_bm = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/SwansonBM",
+AnatomicalAtlas.swanson_bm = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/SwansonBM",
     abbreviation="SwansonBM",
     description="Swanson's Brain Maps atlases are open access, stereotaxic rat brain atlases of an adult Sprague Dawley rat. These atlases contain spatially aligned maps for 3D reconstruction, hierarchical nomenclature and flatmaps.",
     full_name="Swanson's Brain Maps: Structure of the Rat Brain",
@@ -5104,10 +5093,10 @@ BrainAtlas.swanson_bm = BrainAtlas(
     },
     homepage=IRI("https://larrywswanson.com/"),
     short_name="Swanson's Brain Maps",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
 )
-BrainAtlas.swma = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/SWMA",
+AnatomicalAtlas.swma = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/SWMA",
     abbreviation="SWMA",
     full_name="Atlas of Superficial White Matter Fibre Bundles",
     has_terminology={
@@ -5184,10 +5173,10 @@ BrainAtlas.swma = BrainAtlas(
         "ontologyIdentifier": None,
     },
     short_name="Superficial White Matter Atlas",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-BrainAtlas.whss_datlas = BrainAtlas(
-    id="https://openminds.om-i.org/instances/brainAtlas/WHSSDatlas",
+AnatomicalAtlas.whss_datlas = AnatomicalAtlas(
+    id="https://openminds.om-i.org/instances/anatomicalAtlas/WHSSDatlas",
     abbreviation="WHSSDatlas",
     description="The Waxholm Space Atlas of the Sprague Dawley Rat Brain is an open access volumetric atlas. The delineations are defined in isotropic magnetic resonance (39 micrometre) and diffusion tensor (78 micrometre) images acquired ex vivo from an 80 day old male rat at the Duke Center for In Vivo Microscopy. Coordinates for navigating the volume are provided by the Waxholm Space coordinate system. The location of bregma and lambda are also identified as anchors towards stereotaxic space. The atlas (with MRI/DTI anatomical volumes, delineation- and label files) is hosted at [NITRC](https://www.nitrc.org/projects/whs-sd-atlas/) along with configuration files for ITK-SNAP, the Mouse BIRN Atlasing Toolkit, and PMOD. The atlas has been adopted as the standard rat brain atlas for the EBRAINS infrastructure, see [EBRAINS Rat Brain Atlas](https://ebrains.eu/service/rat-brain-atlas/). Note that the licence was changed to from CC BY-SA-NC to CC BY-SA on October 1, 2021.",
     digital_identifier={"@id": "https://scicrunch.org/resolver/SCR_001592"},
@@ -5728,5 +5717,5 @@ BrainAtlas.whss_datlas = BrainAtlas(
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas/"),
     how_to_cite="Please refer to the atlas by its [RRID:SCR_001592](https://scicrunch.org/resolver/SCR_001592), and cite the first publication [Papp et al. (2014)](https://doi.org/10.1016/j.neuroimage.2014.04.001) along with the atlas version(s) you have used.",
     short_name="Waxholm Space Rat Brain Atlas",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
 )

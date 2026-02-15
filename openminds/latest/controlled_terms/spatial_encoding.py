@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class ModificationClause(LinkedMetadata):
+class SpatialEncoding(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/ModificationClause"
+    type_ = "https://openminds.om-i.org/types/SpatialEncoding"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -35,7 +35,7 @@ class ModificationClause(LinkedMetadata):
             "description",
             formatting="text/markdown",
             multiline=True,
-            description="Longer statement or account giving the characteristics of the modification clause.",
+            description="Longer statement or account giving the characteristics of the spatial encoding.",
             instructions="Enter a short text describing this term.",
         ),
         Property(
@@ -58,7 +58,7 @@ class ModificationClause(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the modification clause.",
+            description="Word or phrase that constitutes the distinctive designation of the spatial encoding.",
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(

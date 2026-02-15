@@ -8,12 +8,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class CustomCoordinateSpace(LinkedMetadata):
+class CustomCoordinateFramework(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/CustomCoordinateSpace"
+    type_ = "https://openminds.om-i.org/types/CustomCoordinateFramework"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -24,7 +24,7 @@ class CustomCoordinateSpace(LinkedMetadata):
             "anatomicalAxesOrientation",
             required=True,
             description="Relation between reference planes used in anatomy and mathematics.",
-            instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for this custom coordinate space.",
+            instructions="Add the axes orientation denoted in standard anatomical terms of direction (stated as XYZ) for the anatomical space of this custom coordinate framework.",
         ),
         Property(
             "axes_origins",
@@ -36,7 +36,7 @@ class CustomCoordinateSpace(LinkedMetadata):
             max_items=3,
             required=True,
             description="Special point in a coordinate system used as a fixed point of reference for the geometry of the surrounding space.",
-            instructions="Enter the origin (central point where all axes intersect) of this custom coordinate space for two-dimensional spaces as [x, y] or for three-dimensional space as [x, y, z].",
+            instructions="Enter the coordinate point in the native anatomical space of the template as [x, y] or [x, y, z] for two- or three-dimensional spaces, respectively, that has been defined as the origin of the anatomical space of this custom coordinate framework (i.e., as the central point where all axes intersect).",
         ),
         Property(
             "default_images",
@@ -46,7 +46,7 @@ class CustomCoordinateSpace(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Two or three dimensional image that particluarly represents a specific coordinate space.",
-            instructions="Add all image files used as visual representation of this custom coordinate space.",
+            instructions="Add all image files used as visual representation of this custom coordinate framework.",
         ),
         Property(
             "name",
@@ -54,8 +54,8 @@ class CustomCoordinateSpace(LinkedMetadata):
             "name",
             formatting="text/plain",
             required=True,
-            description="Word or phrase that constitutes the distinctive designation of the custom coordinate space.",
-            instructions="Enter a descriptive name for this custom coordinate space.",
+            description="Word or phrase that constitutes the distinctive designation of the custom coordinate framework.",
+            instructions="Enter a descriptive name for this custom coordinate framework.",
         ),
         Property(
             "native_unit",
@@ -63,7 +63,7 @@ class CustomCoordinateSpace(LinkedMetadata):
             "nativeUnit",
             required=True,
             description="Determinate quantity used in the original measurement.",
-            instructions="Add the native unit that is used for this custom coordinate space.",
+            instructions="Add the native unit that is used for this custom coordinate framework.",
         ),
     ]
 

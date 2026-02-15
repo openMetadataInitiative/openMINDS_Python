@@ -1,3 +1,4 @@
+from .accessibility import Accessibility
 from .comment import Comment
 from .funding import Funding
 from .geo_coordinates import GeoCoordinates

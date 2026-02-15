@@ -11,3 +11,4 @@ from .hash import Hash
 from .license import License
 from .measurement import Measurement
 from .service_link import ServiceLink
+from .usage_agreement import UsageAgreement

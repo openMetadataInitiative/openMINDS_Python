@@ -243,6 +243,29 @@ MolecularEntity.anterograde_tracer = MolecularEntity(
     name="anterograde tracer",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NLXMOL_1012002"),
 )
+MolecularEntity.atp = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/ATP",
+    definition="Adenosine triphosphate (ATP) is a nucleoside triphosphate. [sourced from [Wikipedia](https://en.wikipedia.org/wiki/Adenosine_triphosphate)]",
+    description="ATP provides energy to drive and support many processes in living cells, such as muscle contraction, nerve impulse propagation, and chemical synthesis. When consumed in a metabolic process, ATP converts either to adenosine diphosphate (ADP) or to adenosine monophosphate (AMP). (adapted from Wikipedia: https://en.wikipedia.org/wiki/Adenosine_triphosphate)",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0780796"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:15422#atp"),
+    name="ATP",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_15422"),
+    synonyms=["adenosine 5'-triphosphate", "adenosine triphosphate", "H4atp"],
+)
+MolecularEntity.bapta = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/BAPTA",
+    definition="BAPTA (1,2-bis(o-aminophenoxy)ethane-N,N,N′,N′-tetraacetic acid) is an aminopolycarboxylic acid with a high affinity for calcium. [sourced from [Wikipedia](https://en.wikipedia.org/wiki/BAPTA)]",
+    description="BAPTA is a white solid. It is used in research to chelate Ca2+. It is a component of some fluorescent calcium ion indicators such as Calcium Green and Oregon Green 488 BAPTA-1 and -2 (OGB-1, OGB2). [adapted from Wikipedia (https://en.wikipedia.org/wiki/BAPTA)]",
+    name="BAPTA",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_60888"),
+    synonyms=[
+        "1,2-Bis(2-aminophenoxy)ethane-N,N,N',N'-tetraacetic acid",
+        "1,2-Bis(o-aminophenoxy)ethane-N,N,N',N'-tetraacetic acid",
+        "2,2',2'',2'''-[ethane-1,2-diylbis(oxy-2,1-phenylenenitrilo)]tetraacetic acid",
+        "Bapeta",
+    ],
+)
 MolecularEntity.barium = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/barium",
     definition="Barium (Ba) is a chemical element with atomic number 56 and belongs to the alkaline earth metals.[adapted from Wikipedia (https://en.wikipedia.org/wiki/Barium)]",
@@ -375,6 +398,23 @@ MolecularEntity.carbon_dioxide = MolecularEntity(
         "E290",
     ],
 )
+MolecularEntity.cesium_sulfate = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/cesiumSulfate",
+    definition="Cesium sulfate (or caesium sulfate) is the cesium salt with the formula Cs2SO4. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Caesium_sulfate)]",
+    description="Cesium sulfate is a white water-soluble solid that is used to prepare dense aqueous solutions for use in isopycnic (or 'density-gradient') centrifugation. [adapted from Wikipedia (https://en.wikipedia.org/wiki/Caesium_sulfate)]",
+    interlex_identifier=IRI("http://uri.interlex.org/ilx_0514068"),
+    name="cesium sulfate",
+    preferred_ontology_identifier=IRI("https://pubchem.ncbi.nlm.nih.gov/compound/25137"),
+    synonyms=[
+        "caesium sulfate",
+        "caesium sulphate",
+        "cesium sulphate",
+        "Cs2O4S",
+        "Cs2SO4",
+        "dicesium sulfate",
+        "dicesium;sulfate",
+    ],
+)
 MolecularEntity.cholecystokinin = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/cholecystokinin",
     definition="Cholecystokinin is a peptide hormone of the gastrointestinal system responsible for stimulating the digestion of fat and protein.",
@@ -438,6 +478,28 @@ MolecularEntity.d2_receptor = MolecularEntity(
     name="D2 receptor",
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_5833"),
     synonyms=["D(2) dopamine receptor", "D2", "D2 dopamine receptor", "D2R", "dopamine receptor D2", "DRD2"],
+)
+MolecularEntity.d_ap5 = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/D-AP5",
+    definition="D-AP5 is the D-isomer of AP5, a chemical compound that is a selective NMDA receptor antagonist that competitively inhibits the ligand (glutamate) binding site of NMDA receptors. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/AP5)]",
+    description="The active isomer of AP5 is considered to be the D configuration. AP5 is sometimes used in conjunction with the calcium chelator BAPTA to determine whether NMDARs are required for a particular cellular process. AP5 has also been used to study NMDAR-dependent LTP in the mammalian hippocampus. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/AP5)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100867"),
+    name="D-AP5",
+    preferred_ontology_identifier=IRI("https://purl.obolibrary.org/obo/CHEBI_138644"),
+    synonyms=[
+        "5-Phosphono-D-norvaline",
+        "D-2-amino-5-phosphonopentanoic acid",
+        "D-2-Amino-5-phosphonopentanoic acid",
+        "D-2-amino-5-phosphonovaleric acid",
+        "D-2-amino-5-phosphopentanoic acid",
+        "D-2-amino-5-phosphovaleric acid",
+        "D-AP-5 acid",
+        "D-AP-5",
+        "D-AP5 acid",
+        "D-APV acid",
+        "D-APV",
+        "D-Norvaline, 5-phosphono-",
+    ],
 )
 MolecularEntity.dab = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/DAB",
@@ -553,7 +615,7 @@ MolecularEntity.edetic_acid = MolecularEntity(
     name="edetic acid",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_4735"),
     synonyms=[
-        "EGTA",
+        "EDTA",
         "edetic acid",
         "(ethylenedinitrilo)tetraacetic acid",
         "2,2',2'',2'''-(ethane-1,2-diylbis(azanetriyl))tetraacetic acid",
@@ -840,7 +902,7 @@ MolecularEntity.gabazine = MolecularEntity(
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0572043"),
     name="gabazine",
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0142643"),
-    synonyms=["SR-95531"],
+    synonyms=["SR 95531", "SR-95531", "SR95531"],
 )
 MolecularEntity.gadolinium = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/gadolinium",
@@ -924,16 +986,32 @@ MolecularEntity.growth_factor = MolecularEntity(
     preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1671627152"),
     synonyms=["GF"],
 )
+MolecularEntity.gtp = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/GTP",
+    definition="Guanosine-5'-triphosphate (GTP) is a purine nucleoside triphosphate. [sourced from [Wikipedia](https://en.wikipedia.org/wiki/Guanosine_triphosphate)]",
+    description="GTP is one of the building blocks needed for the synthesis of RNA during the transcription process. It also has a role as an activator of substrates in metabolic reactions and as a source of energy for protein synthesis and gluconeogenesis. GTP is essential to signal transduction, in particular with G-proteins, in second-messenger mechanisms where it is converted to guanosine diphosphate (GDP) through the action of GTPases. (adapted from Wikipedia: https://en.wikipedia.org/wiki/Guanosine_triphosphate)",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0439625"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:15996#gtp"),
+    name="GTP",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_15996"),
+    synonyms=[
+        "5'-GTP",
+        "guanosine 5'-triphosphate",
+        "guanosine 5'-triphosphoric acid",
+        "guanosine triphosphate",
+        "H4gtp",
+    ],
+)
 MolecularEntity.gtp_disodium_salt = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/GTPDisodiumSalt",
     definition="A GTP (guanosine 5'-triphosphate) molecule bonded with two sodium ions (Na+), forming a salt hydrate.",
     name="GTP, disodium salt",
     preferred_ontology_identifier=IRI("https://pubchem.ncbi.nlm.nih.gov/compound/135818278"),
     synonyms=[
-        "Guanosine 5'-triphosphate sodium salt hydrate",
-        "NaGTP",
         "5'-triphospho-guanosine; hydrate; sodium salt",
         "disodium;[[[(2R,3S,4R,5R)-5-(2-amino-6-oxo-1H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy-hydroxyphosphoryl]oxy-oxidophosphoryl] hydrogen phosphate;dihydrate",
+        "Guanosine 5'-triphosphate sodium salt hydrate",
+        "Na2GTP",
     ],
 )
 MolecularEntity.halothane = MolecularEntity(
@@ -1252,6 +1330,24 @@ MolecularEntity.methanol = MolecularEntity(
         "wood spirit",
     ],
 )
+MolecularEntity.monopotassium_phosphate = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/monopotassiumPhosphate",
+    definition="Monopotassium phosphate (MKP) is the inorganic compound with the formula KH2PO4 (potassium cation with a dihydrogen phosphate anion). [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Monopotassium_phosphate)]",
+    description="Monopotassium phosphate, is often used as a fertilizer, food additive, and buffering agent. This salt often cocrystallizes with dipotassium salt as well as with phosphoric acid. [adapted from Wikipedia (https://en.wikipedia.org/wiki/Monopotassium_phosphate)]",
+    name="monopotassium phosphate",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_63036"),
+    synonyms=[
+        "KDP",
+        "KH2PO4",
+        "MKP",
+        "monobasic potassium phosphate",
+        "monopotassium dihydrogen phosphate",
+        "monopotassium monophosphate",
+        "monopotassium phosphate",
+        "potassium dihydrogen phosphate",
+        "potassium phosphate monobasic",
+    ],
+)
 MolecularEntity.monosodium_phosphate = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/monosodiumPhosphate",
     definition="Monosodium phosphate (MSP), is an inorganic compound of sodium with a dihydrogen phosphate (H2PO4) anion. [adapted from Wikipedia (https://en.wikipedia.org/wiki/Monosodium_phosphate)]",
@@ -1390,6 +1486,20 @@ MolecularEntity.pentobarbital_sodium = MolecularEntity(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_7984"),
     synonyms=["Nembutal"],
 )
+MolecularEntity.phosphocreatine_sodium = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/phosphocreatineSodium",
+    definition="Phosphocreatine sodium is a compound of two sodiums with a phosphocreatine molecule.",
+    description="Phosphocreatine is a phosphorylated form of creatine that serves as a rapidly mobilizable reserve of high-energy phosphates in skeletal muscle, myocardium and the brain to recycle ATP. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Phosphocreatine)]",
+    name="phosphocreatine sodium",
+    preferred_ontology_identifier=IRI("https://pubchem.ncbi.nlm.nih.gov/compound/9571077"),
+    synonyms=[
+        "creatine phosphate disodium salt",
+        "disodium phosphocreatine",
+        "Na2-phosphocreatine",
+        "phosphocreatine sodium salt",
+        "sodium phosphocreatine",
+    ],
+)
 MolecularEntity.potassium_chloride = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/potassiumChloride",
     definition="A metal chloride salt with a K(+) counterion.",
@@ -1417,6 +1527,22 @@ MolecularEntity.propofol = MolecularEntity(
     name="propofol",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_44915"),
     synonyms=["2,6-Diisopropylphenol", "Diisopropylphenol", "propofol", "Diprivan", "Disoprivan", "Disoprofol"],
+)
+MolecularEntity.qx_314 = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/QX-314",
+    definition="QX-314 is a quaternary lidocaine derivative, permanently charged, and lipophobic. [sourced from the [Merck website](https://www.sigmaaldrich.com/FR/fr/product/mm/552233)]",
+    description="QX-314 is a blocker of voltage-sensitive Na+ conductance when applied intracellularly. It suppresses the generation of Na+-dependent spikes from inside the cell membrane, without affecting Ca2+ currents or glutamate-activated currents. (adapted from the Merck website: https://www.sigmaaldrich.com/FR/fr/product/mm/552233)",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0523764"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/CHEBI:46937#qx-314"),
+    name="QX-314",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_46937"),
+    synonyms=[
+        "(2-((2,6-dimethylphenyl)amino)-2-oxoethyl)-triethylazanium",
+        "[2-[(2,6-dimethylphenyl)amino]-2-oxoethyl]-triethylazanium",
+        "2-((2,6-Dimethylphenyl)amino)-N,N,N-triethyl-2-oxoethanaminium",
+        "2-[(2,6-dimethylphenyl)amino]-N,N,N-triethyl-2-oxoethanaminium",
+        "QX 314",
+    ],
 )
 MolecularEntity.silicon_dioxide = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/siliconDioxide",
@@ -1459,6 +1585,21 @@ MolecularEntity.sixcomma7_dinitro_1comma4_dihydroquinoxaline_2comma3_dione = Mol
     preferred_ontology_identifier=IRI("https://pubchem.ncbi.nlm.nih.gov/compound/3899541"),
     synonyms=["DNQX", "6,7-dinitroquinoxaline-2,3-dione"],
 )
+MolecularEntity.sodium_atp = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/sodiumATP",
+    definition="Sodium ATP is a compound of sodium and an ATP molecule.",
+    name="sodium ATP",
+    preferred_ontology_identifier=IRI("https://pubchem.ncbi.nlm.nih.gov/compound/23675355"),
+    synonyms=[
+        "ATP Na salt",
+        "ATP xsodium",
+        "ATP-Na",
+        "NaATP",
+        "sodium adenosine triphosphate",
+        "sodium adenosine-5'-triphosphate",
+        "sodium ATP",
+    ],
+)
 MolecularEntity.sodium_bicarbonate = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/sodiumBicarbonate",
     definition="A white, crystalline powder that is commonly used as a pH buffering agent, an electrolyte replenisher, systemic alkalizer and in topical cleansing solutions.",
@@ -1485,6 +1626,43 @@ MolecularEntity.sodium_chloride = MolecularEntity(
     name="sodium chloride",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_26710"),
     synonyms=["NaCl", "common salt", "regular salt", "halite", "rock salt", "table salt", "sea salt", "saline"],
+)
+MolecularEntity.sodium_gtp = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/sodiumGTP",
+    definition="Sodium GTP is a compound of sodium and a GTP molecule.",
+    name="sodium GTP",
+    preferred_ontology_identifier=IRI("https://pubchem.ncbi.nlm.nih.gov/compound/136636089"),
+    synonyms=[
+        "5'-GTP sodium salt",
+        "guanosine 5'-(tetrahydrogen triphosphate) sodium salt",
+        "Na-GTP",
+        "NaGTP",
+        "sodium GTP",
+        "xSodium (2R,3S,4R,5R)-5-(2-amino-6-oxo-1H-purin-9(6H)-yl)-4-hydroxy-2-(((hydroxy((hydroxy(phosphonooxy)phosphoryl)oxy)phosphoryl)oxy)methyl)tetrahydrofuran-3-olate",
+    ],
+)
+MolecularEntity.strychnine = MolecularEntity(
+    id="https://openminds.om-i.org/instances/molecularEntity/strychnine",
+    definition="Strychnine is a highly toxic, colorless, bitter, crystalline alkaloid. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Strychnine)]",
+    description="Strychnine is used as a pesticide, particularly for killing small vertebrates such as birds and rodents. Strychnine, when inhaled, swallowed, or absorbed through the eyes or mouth, causes poisoning which results in muscular convulsions and eventually death through asphyxia. While it is no longer used medicinally, it was used historically in small doses to strengthen muscle contractions. The most common source is from the seeds of the Strychnos nux-vomica tree.  [adapted from Wikipedia (https://en.wikipedia.org/wiki/Strychnine)]",
+    name="strychnine",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHEBI_28973"),
+    synonyms=[
+        "Boomer-rid",
+        "Certox",
+        "Gopher bait",
+        "Gopher-gitter",
+        "Hare-Rid",
+        "Kwik-kil",
+        "Mole death",
+        "Mouse-nots",
+        "Mouse-rid",
+        "Mouse-tox",
+        "Ro-Dex",
+        "Sanaseed",
+        "strychnidin-10-one",
+        "Strychninum",
+    ],
 )
 MolecularEntity.sucrose = MolecularEntity(
     id="https://openminds.om-i.org/instances/molecularEntity/sucrose",

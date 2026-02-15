@@ -10,12 +10,12 @@ from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class CommonCoordinateSpace(LinkedMetadata):
+class CommonCoordinateFramework(LinkedMetadata):
     """
     <description not available>
     """
 
-    type_ = "https://openminds.om-i.org/types/CommonCoordinateSpace"
+    type_ = "https://openminds.om-i.org/types/CommonCoordinateFramework"
     context = {"@vocab": "https://openminds.om-i.org/props/"}
     schema_version = "latest"
 
@@ -26,17 +26,7 @@ class CommonCoordinateSpace(LinkedMetadata):
             "abbreviation",
             formatting="text/plain",
             description="no description available",
-            instructions="Enter the official abbreviation of this common coordinate space.",
-        ),
-        Property(
-            "authors",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "author",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="Creator of a literary or creative work, as well as a dataset publication.",
-            instructions="Add all parties that contributed to this common coordinate space as authors.",
+            instructions="Enter the official abbreviation of this common coordinate framework.",
         ),
         Property(
             "custodians",
@@ -55,7 +45,7 @@ class CommonCoordinateSpace(LinkedMetadata):
             formatting="text/markdown",
             multiline=True,
             required=True,
-            description="Longer statement or account giving the characteristics of the common coordinate space.",
+            description="Longer statement or account giving the characteristics of the common coordinate framework.",
             instructions="Enter a description (or abstract) of this research product. Note that this should be a suitable description for all attached research product versions.",
         ),
         Property(
@@ -71,14 +61,14 @@ class CommonCoordinateSpace(LinkedMetadata):
             "fullName",
             formatting="text/plain",
             required=True,
-            description="Whole, non-abbreviated name of the common coordinate space.",
+            description="Whole, non-abbreviated name of the common coordinate framework.",
             instructions="Enter a descriptive full name (or title) for this research product. Note that this should be a suitable full name for all attached research product versions.",
         ),
         Property(
             "homepage",
             IRI,
             "homepage",
-            description="Main website of the common coordinate space.",
+            description="Main website of the common coordinate framework.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product.",
         ),
         Property(
@@ -87,6 +77,7 @@ class CommonCoordinateSpace(LinkedMetadata):
             "howToCite",
             formatting="text/markdown",
             multiline=True,
+            required=True,
             description="Preferred format for citing a particular object or legal person.",
             instructions="Enter the preferred citation text for this research product. Leave blank if citation text can be extracted from the assigned digital identifier.",
         ),
@@ -98,8 +89,8 @@ class CommonCoordinateSpace(LinkedMetadata):
             unique_items=True,
             min_items=1,
             formatting="text/plain",
-            description="Term or code used to identify the common coordinate space registered within a particular ontology.",
-            instructions="Enter the internationalized resource identifiers (IRIs) to the related ontological terms matching this common coordinate space.",
+            description="Term or code used to identify the common coordinate framework registered within a particular ontology.",
+            instructions="Enter the internationalized resource identifiers (IRIs) to the related ontological terms matching this common coordinate framework.",
         ),
         Property(
             "short_name",
@@ -107,16 +98,16 @@ class CommonCoordinateSpace(LinkedMetadata):
             "shortName",
             formatting="text/plain",
             required=True,
-            description="Shortened or fully abbreviated name of the common coordinate space.",
+            description="Shortened or fully abbreviated name of the common coordinate framework.",
             instructions="Enter a short name (or alias) for this research product that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
         Property(
-            "used_species",
-            "openminds.latest.controlled_terms.Species",
-            "usedSpecies",
+            "used_taxon",
+            ["openminds.latest.controlled_terms.BiologicalOrder", "openminds.latest.controlled_terms.Species"],
+            "usedTaxon",
             required=True,
             description="no description available",
-            instructions="Add the species that was used for the creation of this common coordinate space.",
+            instructions="Add the taxon (e.g., species) that was used for the creation of this common coordinate framework.",
         ),
     ]
 
@@ -124,7 +115,6 @@ class CommonCoordinateSpace(LinkedMetadata):
         self,
         id=None,
         abbreviation=None,
-        authors=None,
         custodians=None,
         description=None,
         digital_identifier=None,
@@ -133,12 +123,11 @@ class CommonCoordinateSpace(LinkedMetadata):
         how_to_cite=None,
         ontology_identifiers=None,
         short_name=None,
-        used_species=None,
+        used_taxon=None,
     ):
         return super().__init__(
             id=id,
             abbreviation=abbreviation,
-            authors=authors,
             custodians=custodians,
             description=description,
             digital_identifier=digital_identifier,
@@ -147,7 +136,7 @@ class CommonCoordinateSpace(LinkedMetadata):
             how_to_cite=how_to_cite,
             ontology_identifiers=ontology_identifiers,
             short_name=short_name,
-            used_species=used_species,
+            used_taxon=used_taxon,
         )
 
     @classmethod
@@ -206,107 +195,107 @@ class CommonCoordinateSpace(LinkedMetadata):
             return matches[0]
 
 
-CommonCoordinateSpace.amb_ccf = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/AMB-CCF",
+CommonCoordinateFramework.amb_ccf = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/AMB-CCF",
     abbreviation="AMB CCF",
     description="The 'Allen Mouse Brain Common Coordinate Framework' is a 3D reconstruction of an averaged adult mouse brain.",
     full_name="Allen Mouse Brain Common Coordinate Framework",
     homepage=IRI("https://portal.brain-map.org/"),
     short_name="Allen Mouse Brain CCF",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/musMusculus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/musMusculus"},
 )
-CommonCoordinateSpace.big_brain = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/BigBrain",
+CommonCoordinateFramework.big_brain = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/BigBrain",
     abbreviation="BigBrain",
     description="The 'BigBrain Whole-Brain Model' is a 3D reconstruction of a human brain in extremely high resolution.",
     full_name="BigBrain Whole-Brain Model",
     homepage=IRI("https://bigbrainproject.org/"),
     short_name="BigBrain Model",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-CommonCoordinateSpace.fs_lr = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/fsLR",
+CommonCoordinateFramework.fs_lr = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/fsLR",
     abbreviation="fsLR",
     description="The 'Unbiased FsAverage Left–Right Hybrid Surface Space' (fsLR) brings the left and right fsaverage surfaces into geographic correspondence using Landmark-SBR ([Van Essen et al. 2011](https://doi.org/10.1093/cercor/bhr291)).",
     full_name="Unbiased FsAverage Left–Right Hybrid Surface Space",
     short_name="fsLR Surface Space",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-CommonCoordinateSpace.fsaverage = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/fsaverage",
+CommonCoordinateFramework.fsaverage = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/fsaverage",
     abbreviation="fsaverage",
     full_name="FsAverage Surface Space",
     short_name="FsAverage Surface Space",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-CommonCoordinateSpace.marmoset_nmt = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/MarmosetNMT",
+CommonCoordinateFramework.marmoset_nmt = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/MarmosetNMT",
     abbreviation="MarmosetNMT",
     description="Stereotactic coordinate space of the coronal plane generated using computational average of histology sections.",
     full_name="The Marmoset Nencki-Monash Template in Stereotaxic Coordinates",
     homepage=IRI("https://www.marmosetbrain.org/nencki_monash_template"),
     how_to_cite="Please refer to the template by its RRID:SCR_018367, and cite the publication of the version of the template you have used.",
     short_name="Marmoset Nencki-Monash Template",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/callithrixJacchus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/callithrixJacchus"},
 )
-CommonCoordinateSpace.mebrain_stemplate = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/MEBRAINStemplate",
+CommonCoordinateFramework.mebrain_stemplate = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/MEBRAINStemplate",
     abbreviation="MEBRAINStemplate",
     description="The 'MEBRAINS population-based monkey brain template' is a multi-subject based, multi-modal, volume and surface brain template for macaque monkeys.",
     full_name="MEBRAINS population-based monkey brain template",
     short_name="MEBRAINS brain template",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/macacaMulatta"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/macacaMulatta"},
 )
-CommonCoordinateSpace.mni__colin27 = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-Colin27",
+CommonCoordinateFramework.mni__colin27 = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-Colin27",
     abbreviation="MNI-Colin27",
     description="The 'MNI Colin 27 Average Brain Stereotaxic Registration Model' is a stereotaxic average of 27 T1-weighted MRI scans of the same individual. It was created at the Montreal Neurological Institute (MNI) in a two step process: (1) each of the 27 T1-weighted scans were registered to stereotaxic space using MRITOTAL (an automated volumetric registration procedure) and resampled onto a 1mm grid. All 27 scans were averaged together to create an initial average. (2) The initial average volume was used as a target for a second phase of registration where each original T1-weighted MRI was re-registered in stereotaxic space. This two-step procedure has the advantage of removing the small variance in intra-subject mapping in stereotaxic space associated with the use of a multi-subject average resulting in an average brain stereotaxic registration model with high signal-to-noise ratio and structure definition.",
     full_name="MNI Colin27 Average Brain Stereotaxic Registration Model",
     homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
-    how_to_cite="Holmes CJ, Hoge R, Collins L, Woods R, Toga AW, and Evans AC; 'Enhancement of MR images using registration for signal averaging.'; J Comput Assist Tomogr; 1998 Mar-Apr; 22(2):324–33. [doi: 10.1097/00004728-199803000-00032](http://dx.doi.org/10.1097/00004728-199803000-00032) Aubert-Broche B, Evans AC, and Collins DL; 'A new improved version of the realistic digital brain phantom'; NeuroImage; 2006 Aug;32(1):138–45. [doi: 10.1016/j.neuroimage.2006.03.052](https://doi.org/10.1016/j.neuroimage.2006.03.052)",
+    how_to_cite="Holmes CJ, Hoge R, Collins L, Woods R, Toga AW, and Evans AC; 'Enhancement of MR images using registration for signal averaging.'; J Comput Assist Tomogr; 1998 Mar-Apr; 22(2):324–333. [doi: 10.1097/00004728-199803000-00032](http://dx.doi.org/10.1097/00004728-199803000-00032) Aubert-Broche B, Evans AC, and Collins DL; 'A new improved version of the realistic digital brain phantom'; NeuroImage; 2006 Aug;32(1):138–145. [doi: 10.1016/j.neuroimage.2006.03.052](https://doi.org/10.1016/j.neuroimage.2006.03.052)",
     short_name="MNI Colin27 Average Brain",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-CommonCoordinateSpace.mni_icbm152 = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/MNI-ICBM152",
+CommonCoordinateFramework.mni_icbm152 = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-ICBM152",
     abbreviation="ICBM152",
     description="The 'MNI ICBM152 Average Brain Stereotaxic Registration Model' is an average of T1-weighted magnetic resonance imaging (MRI) scans from 152 normative young adults.",
     full_name="MNI ICBM152 Average Brain Stereotaxic Registration Model",
     homepage=IRI("https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases"),
     short_name="MNI ICBM152",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/homoSapiens"},
 )
-CommonCoordinateSpace.p__marmoset_bsc_cor_t = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/P-MarmosetBSC-corT",
+CommonCoordinateFramework.p__marmoset_bsc_cor_t = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/P-MarmosetBSC-corT",
     abbreviation="P-MarmosetBSC-corT",
     description="Stereotactic coordinate space of the coronal plane.",
     full_name="Paxinos et al. Coronal Template of the Marmoset Brain in Stereotaxic Coordinates",
     homepage=IRI("http://www.neura.edu.au/research/themes/paxinos-group"),
     short_name="Paxinos et al. Stereotaxic Coronal Template (Marmoset Brain)",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/callithrixJacchus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/callithrixJacchus"},
 )
-CommonCoordinateSpace.pw_rbsc_cor_t = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/PW-RBSC-corT",
+CommonCoordinateFramework.pw_rbsc_cor_t = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/PW-RBSC-corT",
     abbreviation="PW-RBSC-corT",
     description="Stereotactic coordinate space of the coronal plane.",
     full_name="Paxinos and Watson's Coronal Template of the Rat Brain in Stereotaxic Coordinates",
     short_name="Paxinos and Watson's Stereotaxic Coronal Template (Rat Brain)",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
 )
-CommonCoordinateSpace.swanson_srb = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/SwansonSRB",
+CommonCoordinateFramework.swanson_srb = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/SwansonSRB",
     abbreviation="SwansonSRB",
     description="Stereotactic coordinate system derived from the atlas by Paxinos and Watson (1986; ISBN: 0-12-547621-3).",
     full_name="Swanson's Stereotactic Brain of the Sprague Dawley Rat",
     short_name="Swanson's Stereotactic Rat Brain",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
 )
-CommonCoordinateSpace.whssd = CommonCoordinateSpace(
-    id="https://openminds.om-i.org/instances/commonCoordinateSpace/WHSSD",
+CommonCoordinateFramework.whssd = CommonCoordinateFramework(
+    id="https://openminds.om-i.org/instances/commonCoordinateFramework/WHSSD",
     abbreviation="WHSSD",
     description="The 'Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)' employs a continuous three- dimensional Cartesian coordinate system, with its origin set at the decussation of the anterior commissure.",
     full_name="Waxholm Space of the Sprague Dawley Rat Brain (coordinate space)",
     homepage=IRI("https://www.nitrc.org/projects/whs-sd-atlas"),
     short_name="WHS of the SD Rat Brain",
-    used_species={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
+    used_taxon={"@id": "https://openminds.om-i.org/instances/species/rattusNorvegicus"},
 )
