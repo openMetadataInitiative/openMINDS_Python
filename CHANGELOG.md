@@ -84,5 +84,5 @@ For more detail see #29.
 ## Release 0.4.1 (2026-02-16)
 
 - fixed a TypeError in `by_name()` when a name was not found [#83](https://github.com/openMetadataInitiative/openMINDS_Python/pull/83)
-- fixed a bug where properties whose value evaluated to False (e.g., zero) were not serialized if using `include_empty_properties=False`
+- fixed a bug where properties whose value evaluated to False (e.g., zero) were not serialized if using `include_empty_properties=False` [#84](https://github.com/openMetadataInitiative/openMINDS_Python/pull/84)
 - updates to the "latest" module
