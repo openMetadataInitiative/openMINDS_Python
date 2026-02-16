@@ -33,4 +33,8 @@ jobs:
       run: |
         pip install pytest pytest-cov
         pip install ./target
-        pytest -v --cov=openminds --cov-report term pipeline/tests
+        if [ "${{ matrix.python-version }}" = "3.14" ]; then
+          pytest -v --cov=openminds --cov-report term pipeline/tests
+        else
+          pytest -v pipeline/tests
+        fi
