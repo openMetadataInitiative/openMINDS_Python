@@ -36,8 +36,7 @@ def test_round_trip_single_file():
     collection.save(test_file_path, individual_files=False, include_empty_properties=False)
 
     new_collection = Collection()
-    new_collection.load(test_file_path)
-
+    new_collection.load(test_file_path, version='latest')
     assert len(collection) == len(new_collection)
 
     for node in new_collection:
@@ -63,7 +62,7 @@ def test_round_trip_multi_file():
     collection = Collection(person)
     collection.save(test_output_dir, individual_files=True, include_empty_properties=False)
     new_collection = Collection()
-    new_collection.load(test_output_dir)
+    new_collection.load(test_output_dir, version='latest')
 
     assert len(collection) == len(new_collection)
 
@@ -83,7 +82,7 @@ def test_round_trip_multi_file_group_by_schema():
     collection = Collection(person)
     collection.save(test_output_dir, individual_files=True, include_empty_properties=False, group_by_schema=True)
     new_collection = Collection()
-    new_collection.load(test_output_dir)
+    new_collection.load(test_output_dir, version='latest')
 
     assert len(collection) == len(new_collection)
 
@@ -98,12 +97,14 @@ def test_round_trip_multi_file_group_by_schema():
 
 
 def test_collection_sort_by_id():
-    person = omcore.Person(given_name="A", family_name="Professor", id="_:004")
-    uni1 = omcore.Organization(full_name="University of This Place", id="_:002")
-    uni2 = omcore.Organization(full_name="University of That Place", id="_:001")
-    person.affiliations = [
-        omcore.Affiliation(member_of=uni1),
-        omcore.Affiliation(member_of=uni2),
+    person = omcore.Person(preferred_name="A", family_name="Professor", id="_:004")
+    uni1 = omcore.Organization(name="University of This Place", id="_:002")
+    uni2 = omcore.Organization(name="University of That Place", id="_:001")
+    uni1.membershipss = [
+        omcore.Membership(member=person),
+    ]
+    uni2.membershipss = [
+        omcore.Membership(member=person),
     ]
 
     c = Collection(person, uni1, uni2)
@@ -116,29 +117,43 @@ def test_collection_sort_by_id():
     os.remove("test_collection_sort_by_id.jsonld")
 
     expected_saved_data = {
-        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
-        "@graph": [
-            {
-                "@id": "_:001",
-                "@type": "https://openminds.om-i.org/types/Organization",
-                "fullName": "University of That Place",
-            },
-            {
-                "@id": "_:002",
-                "@type": "https://openminds.om-i.org/types/Organization",
-                "fullName": "University of This Place",
-            },
-            {
-                "@id": "_:004",
-                "@type": "https://openminds.om-i.org/types/Person",
-                "affiliation": [
-                    {"@type": "https://openminds.om-i.org/types/Affiliation", "memberOf": {"@id": "_:002"}},
-                    {"@type": "https://openminds.om-i.org/types/Affiliation", "memberOf": {"@id": "_:001"}},
-                ],
-                "familyName": "Professor",
-                "givenName": "A",
-            },
-        ],
+       "@context":{
+          "@vocab":"https://openminds.om-i.org/props/"
+       },
+       "@graph":[
+          {
+             "@id":"_:001",
+             "@type":"https://openminds.om-i.org/types/Organization",
+             "memberships":[
+                {
+                   "@type":"https://openminds.om-i.org/types/Membership",
+                   "member":{
+                      "@id":"_:004"
+                   }
+                }
+             ],
+             "name":"University of That Place"
+          },
+          {
+             "@id":"_:002",
+             "@type":"https://openminds.om-i.org/types/Organization",
+             "memberships":[
+                {
+                   "@type":"https://openminds.om-i.org/types/Membership",
+                   "member":{
+                      "@id":"_:004"
+                   }
+                }
+             ],
+             "name":"University of This Place"
+          },
+          {
+             "@id":"_:004",
+             "@type":"https://openminds.om-i.org/types/Person",
+             "familyName":"Professor",
+             "preferredName":"A"
+          }
+       ]
     }
 
     assert saved_data == expected_saved_data
