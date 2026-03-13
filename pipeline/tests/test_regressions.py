@@ -291,6 +291,40 @@ def test_issue0008a(om):
     assert actual == expected
 
 
+@pytest.mark.parametrize("om", [openminds.v5, openminds.latest])
+def test_issue0008b(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/8
+    # The instance of linked types in instances of embedded types are integrated as embedded not linked
+    # (example: organization -> memberships (embedded) -> person (linked))
+
+    person = om.core.Person(
+        id="_:002",
+        preferred_name="A",
+        family_name="Professor"
+    )
+
+    uni1 = om.core.Organization(
+        name="University of This Place",
+        id="_:001",
+        memberships=om.core.Membership(member=person, end_date=date(2023, 9, 30))
+    )
+    actual = uni1.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
+    expected = {
+        '@context': {'@vocab': 'https://openminds.om-i.org/props/'},
+        '@id': '_:001',
+        '@type': 'https://openminds.om-i.org/types/Organization',
+        'membership': [
+            {
+                '@type': 'https://openminds.om-i.org/types/Membership',
+                'endDate': '2023-09-30',
+                'member': {'@id': '_:002'}
+            }
+        ],
+        'name': 'University of This Place'
+    }
+    assert actual == expected
+
+
 @pytest.mark.parametrize("om", [openminds.v4])
 def test_issue0026a(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/26
@@ -315,6 +349,33 @@ def test_issue0026a(om):
     person_again = [item for item in new_collection if isinstance(item, om.core.Person)][0]
     assert len(person_again.affiliations) == 1
     assert person_again.affiliations[0].member_of.full_name == "University of This Place"
+
+
+@pytest.mark.parametrize("om", [openminds.v5, openminds.latest])
+def test_issue0026b(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/26
+    # When reading a JSON-LD file, the attributes of LinkedMetadata nodes
+    # inside EmbeddedMetadata nodes are not set properly
+
+    person = om.core.Person(
+        preferred_name="A", family_name="Professor", id="_:ap"
+    )
+    uni1 = om.core.Organization(name="University of This Place",
+                                id="_:uthisp",
+                                memberships=[om.core.Membership(member=person)])
+    c = Collection(uni1)
+
+    # person was not added explicitly, but should nevertheless be included in the JSON-LD export
+
+    output_paths = c.save("issue0026.jsonld", individual_files=False, include_empty_properties=False)
+
+    new_collection = Collection()
+    new_collection.load(*output_paths, version=om.__name__.split(".")[1])
+    os.remove("issue0026.jsonld")
+
+    uni_again = [item for item in new_collection if isinstance(item, om.core.Organization)][0]
+    assert len(uni_again.memberships) == 1
+    assert uni_again.memberships[0].member.family_name == "Professor"
 
 
 @pytest.mark.parametrize("om", [openminds.v4])
@@ -349,6 +410,50 @@ def test_issue0023a(om):
     assert len(dv_again.custodians[0].affiliations) == 2
     assert dv_again.custodians[0].affiliations[0].member_of.full_name == "University of This Place"
     assert dv_again.custodians[0].affiliations[1].member_of.full_name == "University of That Place"
+
+
+@pytest.mark.parametrize("om", [openminds.v5])
+def test_issue0023b(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/23
+    # If a user adds an instance/node to a collection, and then later adds linked types to the instance,
+    # currently that is not added to the collection
+
+    person = om.core.Person(
+        preferred_name="A", family_name="Professor", id="_:ap"
+    )
+    uni1 = om.core.Organization(name="University of This Place",
+                                id="_:uthisp",
+                                memberships=[om.core.Membership(member=person)])
+    dv = om.core.DatasetVersion(full_name="The name of the dataset version",
+                                contributions=[om.core.Contribution(contributors=[uni1],
+                                                                    type=om.controlled_terms.contribution_type.ContributionType.by_name('custodianship'))],
+                                id="_:dv")
+
+    c = Collection(dv)
+
+    # even though we add uni2 and the repository after creating the collection,
+    # they should be included when we save the collection.
+    person2 = om.core.Person(
+        preferred_name="B", family_name="Professor", id="_:bp"
+    )
+    uni1.memberships.append(om.core.Membership(member=person2))
+    #dv.contributions.append(om.core.Contribution(contributors=[uni2],
+    #type=om.controlled_terms.contribution_type.ContributionType.by_name('ownership')))
+    dv.repository = om.core.FileRepository(iri="http://example.com", id="_:fr")
+
+    output_paths = c.save("issue0023.jsonld", individual_files=False, include_empty_properties=False)
+
+    new_collection = Collection()
+    new_collection.load(*output_paths, version=om.__name__.split(".")[1])
+    os.remove("issue0023.jsonld")
+
+    dv_again = [item for item in new_collection if isinstance(item, om.core.DatasetVersion)][0]
+    assert isinstance(dv_again.repository, om.core.FileRepository)
+    assert dv_again.repository.iri.value == "http://example.com"
+    assert len(dv_again.contributions[0].contributors[0].memberships) == 2
+    assert (dv_again.contributions[0].contributors[0].name == "University of This Place")
+    assert dv_again.contributions[0].contributors[0].memberships[0].member.preferred_name == "A"
+    assert dv_again.contributions[0].contributors[0].memberships[1].member.preferred_name == "B"
 
 
 @pytest.mark.parametrize("om", [openminds.latest, openminds.v4])
