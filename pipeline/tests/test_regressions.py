@@ -175,6 +175,91 @@ def test_issue0007a(om):
     assert saved_data == expected_saved_data
 
 
+@pytest.mark.parametrize("om", [openminds.v5, openminds.latest])
+def test_issue0007b(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/7
+    # Instances of embedded types with value type "array" are not correctly resolved for saving and causing an error.
+
+    person = om.core.Person(preferred_name="A", family_name="Professor", id="_:001")
+    uni1 = om.core.Organization(name="University of This Place", id="_:002")
+    uni2 = om.core.Organization(name="University of That Place", id="_:003")
+    person2 = om.core.Person(preferred_name="B", family_name="Professor", id="_:004")
+    uni1.memberships = [
+        om.core.Membership(member=person),
+    ]
+    uni2.memberships = [
+        om.core.Membership(member=person),
+        om.core.Membership(member=person2)
+    ]
+
+    actual = uni1.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
+    expected = {
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
+        "@id": "_:002",
+        "@type": "https://openminds.om-i.org/types/Organization",
+        "membership": [
+            {
+                "@type": "https://openminds.om-i.org/types/Membership",
+                "member": {"@id": "_:001"}
+            }
+        ],
+        "name": "University of This Place"
+    }
+    assert actual == expected
+
+    c = Collection(person, uni1, uni2)
+    output_paths = c.save("issue0007.jsonld", individual_files=False, include_empty_properties=False)
+    assert output_paths == ["issue0007.jsonld"]
+
+    with open(output_paths[0]) as fp:
+        saved_data = json.load(fp)
+    os.remove("issue0007.jsonld")
+    expected_saved_data = {
+        "@context": {"@vocab": "https://openminds.om-i.org/props/"},
+        "@graph": [
+            {
+                "@id": "_:001",
+                "@type": "https://openminds.om-i.org/types/Person",
+                "familyName": "Professor",
+                "preferredName": "A",
+            },
+            {
+                "@id": "_:002",
+                "@type": "https://openminds.om-i.org/types/Organization",
+                "membership": [
+                    {
+                        "@type": "https://openminds.om-i.org/types/Membership",
+                        "member": {"@id": "_:001"},
+                    }
+                ],
+                "name": "University of This Place",
+            },
+            {
+                "@id": "_:003",
+                "@type": "https://openminds.om-i.org/types/Organization",
+                "membership": [
+                    {
+                        "@type": "https://openminds.om-i.org/types/Membership",
+                        "member": {"@id": "_:001"},
+                    },
+                    {
+                        "@type": "https://openminds.om-i.org/types/Membership",
+                        "member": {"@id": "_:004"},
+                    },
+                ],
+                "name": "University of That Place",
+            },
+            {
+                "@id": "_:004",
+                "@type": "https://openminds.om-i.org/types/Person",
+                "familyName": "Professor",
+                "preferredName": "B",
+            }
+        ],
+    }
+    assert saved_data == expected_saved_data
+
+
 @pytest.mark.parametrize("om", [openminds.v4])
 def test_issue0008a(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/8
