@@ -36,7 +36,7 @@ def test_round_trip_single_file():
     collection.save(test_file_path, individual_files=False, include_empty_properties=False)
 
     new_collection = Collection()
-    new_collection.load(test_file_path, version='latest')
+    new_collection.load(test_file_path)
     assert len(collection) == len(new_collection)
 
     for node in new_collection:
@@ -62,7 +62,7 @@ def test_round_trip_multi_file():
     collection = Collection(person)
     collection.save(test_output_dir, individual_files=True, include_empty_properties=False)
     new_collection = Collection()
-    new_collection.load(test_output_dir, version='latest')
+    new_collection.load(test_output_dir)
 
     assert len(collection) == len(new_collection)
 
@@ -82,7 +82,7 @@ def test_round_trip_multi_file_group_by_schema():
     collection = Collection(person)
     collection.save(test_output_dir, individual_files=True, include_empty_properties=False, group_by_schema=True)
     new_collection = Collection()
-    new_collection.load(test_output_dir, version='latest')
+    new_collection.load(test_output_dir)
 
     assert len(collection) == len(new_collection)
 
@@ -100,10 +100,10 @@ def test_collection_sort_by_id():
     person = omcore.Person(preferred_name="A", family_name="Professor", id="_:004")
     uni1 = omcore.Organization(name="University of This Place", id="_:002")
     uni2 = omcore.Organization(name="University of That Place", id="_:001")
-    uni1.membershipss = [
+    uni1.memberships = [
         omcore.Membership(member=person),
     ]
-    uni2.membershipss = [
+    uni2.memberships = [
         omcore.Membership(member=person),
     ]
 
@@ -124,7 +124,7 @@ def test_collection_sort_by_id():
           {
              "@id":"_:001",
              "@type":"https://openminds.om-i.org/types/Organization",
-             "memberships":[
+             "membership":[
                 {
                    "@type":"https://openminds.om-i.org/types/Membership",
                    "member":{
@@ -137,7 +137,7 @@ def test_collection_sort_by_id():
           {
              "@id":"_:002",
              "@type":"https://openminds.om-i.org/types/Organization",
-             "memberships":[
+             "membership":[
                 {
                    "@type":"https://openminds.om-i.org/types/Membership",
                    "member":{

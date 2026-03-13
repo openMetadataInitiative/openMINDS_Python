@@ -14,7 +14,7 @@ from .registry import lookup_type
 from .base import Link
 
 
-DEFAULT_VERSION = "v4"
+DEFAULT_VERSION = "v5"
 
 
 class Collection:
