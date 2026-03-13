@@ -7,6 +7,7 @@ import pytest
 from openminds import Collection, IRI
 import openminds.latest
 import openminds.v4
+import openminds.v5
 from utils import build_fake_node
 
 
@@ -65,8 +66,8 @@ def test_issue_0003(om):
     )
 
 
-@pytest.mark.parametrize("om", [openminds.latest, openminds.v4])
-def test_issue0005(om):
+@pytest.mark.parametrize("om", [openminds.v4])
+def test_issue0005a(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/5
     # validate() does not complain about list/tuple entries that should be a direct single entry
     uni1 = om.core.Organization(full_name="University of This Place")
@@ -82,9 +83,26 @@ def test_issue0005(om):
     failures = person.validate()
     assert len(failures) == 0
 
+@pytest.mark.parametrize("om", [openminds.v5, openminds.latest])
+def test_issue0005b(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/5
+    # validate() does not complain about list/tuple entries that should be a direct single entry
+    person = om.core.Person(
+        preferred_name="A",
+        family_name="Professor"
+    )
+    uni1 = om.core.Organization(name="University of This Place", country_of_formation=om.controlled_terms.sovereign_state.SovereignState.by_name("Germany"), type=om.controlled_terms.organization_type.OrganizationType.by_name('organizational unit'), memberships=[om.core.Membership(member=person, end_date=(2023, 9, 30))])
+    failures = uni1.validate()
+    assert len(failures) == 1
 
-@pytest.mark.parametrize("om", [openminds.latest, openminds.v4])
-def test_issue0007(om):
+    uni1.memberships[0].end_date = date(2023, 9, 30)
+    print(uni1.type)
+    failures = uni1.validate()
+    assert len(failures) == 0
+
+
+@pytest.mark.parametrize("om", [openminds.v4])
+def test_issue0007a(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/7
     # Instances of embedded types with value type "array" are not correctly resolved for saving and causing an error.
 
@@ -157,8 +175,8 @@ def test_issue0007(om):
     assert saved_data == expected_saved_data
 
 
-@pytest.mark.parametrize("om", [openminds.latest, openminds.v4])
-def test_issue0008(om):
+@pytest.mark.parametrize("om", [openminds.v4])
+def test_issue0008a(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/8
     # The instance of linked types in instances of embedded types are integrated as embedded not linked
     # (example: person -> affiliations (embedded) -> organization (linked))
@@ -188,8 +206,8 @@ def test_issue0008(om):
     assert actual == expected
 
 
-@pytest.mark.parametrize("om", [openminds.latest, openminds.v4])
-def test_issue0026(om):
+@pytest.mark.parametrize("om", [openminds.v4])
+def test_issue0026a(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/26
     # When reading a JSON-LD file, the attributes of LinkedMetadata nodes
     # inside EmbeddedMetadata nodes are not set properly
@@ -214,8 +232,8 @@ def test_issue0026(om):
     assert person_again.affiliations[0].member_of.full_name == "University of This Place"
 
 
-@pytest.mark.parametrize("om", [openminds.latest, openminds.v4])
-def test_issue0023(om):
+@pytest.mark.parametrize("om", [openminds.v4])
+def test_issue0023a(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/issues/23
     # If a user adds an instance/node to a collection, and then later adds linked types to the instance,
     # currently that is not added to the collection

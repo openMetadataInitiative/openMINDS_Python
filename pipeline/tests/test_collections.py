@@ -37,6 +37,7 @@ def test_round_trip_single_file():
 
     new_collection = Collection()
     new_collection.load(test_file_path)
+
     assert len(collection) == len(new_collection)
 
     for node in new_collection:
