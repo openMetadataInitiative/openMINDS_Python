@@ -437,8 +437,6 @@ def test_issue0023b(om):
         preferred_name="B", family_name="Professor", id="_:bp"
     )
     uni1.memberships.append(om.core.Membership(member=person2))
-    #dv.contributions.append(om.core.Contribution(contributors=[uni2],
-    #type=om.controlled_terms.contribution_type.ContributionType.by_name('ownership')))
     dv.repository = om.core.FileRepository(iri="http://example.com", id="_:fr")
 
     output_paths = c.save("issue0023.jsonld", individual_files=False, include_empty_properties=False)
