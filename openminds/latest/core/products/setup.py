@@ -36,6 +36,8 @@ class Setup(LinkedMetadata):
                 "openminds.latest.ephys.Electrode",
                 "openminds.latest.ephys.ElectrodeArray",
                 "openminds.latest.ephys.Pipette",
+                "openminds.latest.neuroimaging.MRICoil",
+                "openminds.latest.neuroimaging.MRIScanner",
                 "openminds.latest.specimen_prep.SlicingDevice",
             ],
             "hasPart",
@@ -56,7 +58,7 @@ class Setup(LinkedMetadata):
         ),
         Property(
             "manufacturers",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
+            ["openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "manufacturer",
             multiple=True,
             unique_items=True,

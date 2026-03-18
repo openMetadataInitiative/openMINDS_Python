@@ -4,6 +4,8 @@
 
 # this file was auto-generated!
 
+from openminds.base import IRI
+
 from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 
@@ -18,6 +20,13 @@ class StringProperty(EmbeddedMetadata):
     schema_version = "latest"
 
     properties = [
+        Property(
+            "external_definition_of_name",
+            IRI,
+            "externalDefinitionOfName",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) to an external definition of the property name.",
+        ),
         Property(
             "name",
             str,
@@ -38,8 +47,9 @@ class StringProperty(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, name=None, value=None):
+    def __init__(self, external_definition_of_name=None, name=None, value=None):
         return super().__init__(
+            external_definition_of_name=external_definition_of_name,
             name=name,
             value=value,
         )

@@ -39,20 +39,6 @@ class DataType(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class DataType(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class DataType(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class DataType(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -163,7 +180,7 @@ DataType.associative_array = DataType(
     id="https://openminds.om-i.org/instances/dataType/associativeArray",
     definition="A 'associative array' is an abstract data type that associates keys (scalars) with values (scalars, lists or matrices).",
     name="associative array",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q80585"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q80585"),
     synonyms=["dictionary"],
 )
 DataType.event_sequence = DataType(
@@ -175,52 +192,52 @@ DataType.list = DataType(
     id="https://openminds.om-i.org/instances/dataType/list",
     definition="A 'list' is a series of ordered scalars and/or lists.",
     name="list",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q12139612"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q12139612"),
 )
 DataType.matrix = DataType(
     id="https://openminds.om-i.org/instances/dataType/matrix",
     definition="A 'matrix' is a list of lists.",
     name="matrix",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q44337"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q44337"),
 )
 DataType.raster_graphic = DataType(
     id="https://openminds.om-i.org/instances/dataType/rasterGraphic",
     definition="A 'raster graphic' is a matrix, representing values (scalars, lists, matrices) on a grid in a two dimensional space, viewable via a monitor, paper, or other display medium.",
     name="raster graphic",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q182270"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q182270"),
     synonyms=["pixel data", "raster image"],
 )
 DataType.scalar = DataType(
     id="https://openminds.om-i.org/instances/dataType/scalar",
     definition="A 'scalar' represent a single value (e.g., integer, float, string, etc.).",
     name="scalar",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q1289248"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q1289248"),
 )
 DataType.table = DataType(
     id="https://openminds.om-i.org/instances/dataType/table",
     definition="A 'table' is an arrangement of elements (scalars, lists and/or matrices) in specified/named rows and columns.",
     name="table",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q496946"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q496946"),
     synonyms=["tabular data"],
 )
 DataType.three_d_computer_graphic = DataType(
     id="https://openminds.om-i.org/instances/dataType/3DComputerGraphic",
     definition="A '3D computer graphic' is an associative array, defining points, lines, and/or curves in a three dimensional space, which can be rendered to raster graphic.",
     name="3D computer graphic",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q189177"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q189177"),
 )
 DataType.time_series = DataType(
     id="https://openminds.om-i.org/instances/dataType/timeSeries",
     definition="A 'time series' is a list or matrix, where elements are ordered in equally spaced points in time.",
     name="time series",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q186588"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q186588"),
     synonyms=["time-series"],
 )
 DataType.vector_graphic = DataType(
     id="https://openminds.om-i.org/instances/dataType/vectorGraphic",
     definition="A 'vector graphic' is an associative array defining points, lines and curves which can be rendered to a raster graphic.",
     name="vector graphic",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q170130"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q170130"),
     synonyms=["vector image"],
 )
 DataType.voxel_data = DataType(

@@ -39,20 +39,6 @@ class Species(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class Species(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class Species(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class Species(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -169,16 +186,16 @@ Species.berghia_stephanieae = Species(
 Species.bos_taurus = Species(
     id="https://openminds.om-i.org/instances/species/bosTaurus",
     definition="Cattle (Bos taurus) are large, domesticated, bovid ungulates widely kept as livestock.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101393"),
     name="Bos taurus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0101393"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9913"),
     synonyms=["bovine", "ox", "cow", "dairy cow", "domestic cattle", "domestic cow"],
 )
 Species.caenorhabditis_elegans = Species(
     id="https://openminds.om-i.org/instances/species/caenorhabditisElegans",
     definition="The species *Caenorhabditis elegans* (C. elegans) belongs to the family of *rhabditidae* (roundworms).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101548"),
     name="Caenorhabditis elegans",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0101548"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_6239"),
     synonyms=["C. elegans"],
 )
@@ -233,17 +250,17 @@ Species.chlorocebus_pygerythrus = Species(
 Species.cricetulus_griseus = Species(
     id="https://openminds.om-i.org/instances/species/cricetulusGriseus",
     definition="The Chinese hamster (Cricetulus griseus or Cricetulus aureus) is a rodent in the genus Cricetulus of the subfamily Cricetidae.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0102635"),
     name="Cricetulus griseus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0102635"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10029"),
     synonyms=["Cricetulus aureus", "Chinese hamster"],
 )
 Species.danio_rerio = Species(
     id="https://openminds.om-i.org/instances/species/danioRerio",
     definition="The species *Danio rerio* (zebrafish) belongs to the family of *cyprinidae* (cyprinids, freshwater fish).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0783580"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NCBITaxon:7955#danio-rerio"),
     name="Danio rerio",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0783580"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:7955#danio-rerio"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_7955"),
     synonyms=[
         "Brachydanio rerio",
@@ -260,33 +277,33 @@ Species.danio_rerio = Species(
 Species.drosophila_melanogaster = Species(
     id="https://openminds.om-i.org/instances/species/drosophilaMelanogaster",
     definition="The species *Drosophila melanogaster* (fruit fly) belongs to the family of *Drosophilidae*.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0103567"),
     name="Drosophila melanogaster",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0103567"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_7227"),
     synonyms=["fruit fly"],
 )
 Species.felis_catus = Species(
     id="https://openminds.om-i.org/instances/species/felisCatus",
     definition="The species *Felis catus* (domestic cat) belongs to the family of *Felidae*, subfamily *Felinae*.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101690"),
     name="Felis catus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0101690"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9685"),
     synonyms=["cat", "house cat", "domestic cat", "Felis silvestris catus", "Felis domesticus"],
 )
 Species.homo_sapiens = Species(
     id="https://openminds.om-i.org/instances/species/homoSapiens",
     definition="The species *Homo sapiens* (humans) belongs to the family of *hominidae* (great apes).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105114"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NCBITaxon:9606#human"),
     name="Homo sapiens",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0105114"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:9606#human"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9606"),
     synonyms=["homo sapien", "human", "man"],
 )
 Species.macaca_fascicularis = Species(
     id="https://openminds.om-i.org/instances/species/macacaFascicularis",
     definition="The species *Macaca fascicularis* (crab-eating macaque) belongs to the family of *cercopithecidae* (old world monkeys).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0485278"),
     name="Macaca fascicularis",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0485278"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9541"),
     synonyms=[
         "crab eating macaque",
@@ -301,16 +318,16 @@ Species.macaca_fascicularis = Species(
 Species.macaca_fuscata = Species(
     id="https://openminds.om-i.org/instances/species/macacaFuscata",
     definition="The species *Macaca fuscata* (Japanese macaque) belongs to the family of *cercopithecidae* (old world monkeys).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105773"),
     name="Macaca fuscata",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0105773"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9542"),
     synonyms=["japanese macaque", "japanese monkey"],
 )
 Species.macaca_mulatta = Species(
     id="https://openminds.om-i.org/instances/species/macacaMulatta",
     definition="The species *Macaca mulatta* (rhesus macaque) belongs to the family of *cercopithecidae* (old world monkeys).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0110118"),
     name="Macaca mulatta",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0110118"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9544"),
     synonyms=["rhesus macaque", "rhesus monkey"],
 )
@@ -345,9 +362,9 @@ Species.monodelphis_domestica = Species(
 Species.mus_musculus = Species(
     id="https://openminds.om-i.org/instances/species/musMusculus",
     definition="The species *Mus musculus* (house mouse) belongs to the family of *muridae* (murids).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107134"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NCBITaxon:10090#mouse"),
     name="Mus musculus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0107134"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:10090#mouse"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10090"),
     synonyms=["house mouse", "mouse"],
 )
@@ -361,8 +378,8 @@ Species.mustela_putorius = Species(
 Species.mustela_putorius_furo = Species(
     id="https://openminds.om-i.org/instances/species/mustelaPutoriusFuro",
     definition="The species *Mustela putorius furo* (domestic ferret) belongs to the family of *mustelidae* (mustelids).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104165"),
     name="Mustela putorius furo",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0104165"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9669"),
     synonyms=["black ferret", "domestic ferret", "ferret", "mustela furo"],
 )
@@ -384,18 +401,18 @@ Species.quiscalus_mexicanus = Species(
 Species.rattus_norvegicus = Species(
     id="https://openminds.om-i.org/instances/species/rattusNorvegicus",
     definition="The species *Rattus norvegicus* (brown rat) belongs to the family of *muridae* (murids).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0109658"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NCBITaxon:10116#rat"),
     name="Rattus norvegicus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0109658"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:10116#rat"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10116"),
     synonyms=["brown rat", "norway rat", "rat"],
 )
 Species.sus_scrofa_domesticus = Species(
     id="https://openminds.om-i.org/instances/species/susScrofaDomesticus",
     definition="The species *Sus scrofa domesticus* (domestic pig) belongs to the family of suidae (suids).",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739770"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NCBITaxon:9825#sus-scrofa-domesticus"),
     name="Sus scrofa domesticus",
+    other_ontology_identifiers=["http://uri.interlex.org/ilx_0739770"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:9825#sus-scrofa-domesticus"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9825"),
     synonyms=["domestic pig", "sus domestica", "sus domesticus", "sus scrofa domestica"],
 )

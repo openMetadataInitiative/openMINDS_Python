@@ -238,12 +238,12 @@ StimulationTechnique.static_grating_visual_stimulation = StimulationTechnique(
     name="static grating visual stimulation",
 )
 StimulationTechnique.subliminal_stimulation = StimulationTechnique(
-    id="https://openminds.om-i.org/instances/technique/subliminalStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/subliminalStimulation",
     definition="'Subliminal stimulation' is a technique providing any sensory stimuli below an individual's threshold for conscious perception (adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli))",
     name="subliminal stimulation",
 )
 StimulationTechnique.subliminal_visual_stimulation = StimulationTechnique(
-    id="https://openminds.om-i.org/instances/technique/subliminalVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/subliminalVisualStimulation",
     definition="Stimulation technique that is providing visual stimuli below an indivdual's threshold for conscious perception [adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli)]",
     name="subliminal visual stimulation",
 )

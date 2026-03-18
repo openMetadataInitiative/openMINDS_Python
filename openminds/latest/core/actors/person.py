@@ -19,16 +19,6 @@ class Person(LinkedMetadata):
 
     properties = [
         Property(
-            "affiliations",
-            "openminds.latest.core.Affiliation",
-            "affiliation",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="Declaration of a person being closely associated to an organization.",
-            instructions="Enter all current and, if desired, past affiliations of this person.",
-        ),
-        Property(
             "alternate_names",
             str,
             "alternateName",
@@ -58,7 +48,7 @@ class Person(LinkedMetadata):
         ),
         Property(
             "digital_identifiers",
-            "openminds.latest.core.ORCID",
+            ["openminds.latest.core.GenericIdentifier", "openminds.latest.core.ORCID"],
             "digitalIdentifier",
             multiple=True,
             unique_items=True,
@@ -72,37 +62,45 @@ class Person(LinkedMetadata):
             "familyName",
             formatting="text/plain",
             description="Name borne in common by members of a family.",
-            instructions="Enter the family name of this person.",
+            instructions="Enter the family name, surname, or equivalent of this person.",
         ),
         Property(
             "given_name",
             str,
             "givenName",
             formatting="text/plain",
-            required=True,
             description="Name given to a person, including all potential middle names, but excluding the family name.",
-            instructions="Enter the given name of this person.",
+            instructions="Enter the given name(s) of this person, or a name chosen in place of the given name. At least one of the names should be spelled out in full; initials may be used for the others.",
+        ),
+        Property(
+            "preferred_name",
+            str,
+            "preferredName",
+            formatting="text/plain",
+            required=True,
+            description="no description available",
+            instructions="Enter the person’s preferred way to write their name in a professional context. It is recommended to place given before family name separated by space.",
         ),
     ]
 
     def __init__(
         self,
         id=None,
-        affiliations=None,
         alternate_names=None,
         associated_accounts=None,
         contact_information=None,
         digital_identifiers=None,
         family_name=None,
         given_name=None,
+        preferred_name=None,
     ):
         return super().__init__(
             id=id,
-            affiliations=affiliations,
             alternate_names=alternate_names,
             associated_accounts=associated_accounts,
             contact_information=contact_information,
             digital_identifiers=digital_identifiers,
             family_name=family_name,
             given_name=given_name,
+            preferred_name=preferred_name,
         )

@@ -38,11 +38,23 @@ class CustomAnatomicalEntity(LinkedMetadata):
             instructions="Enter a descriptive name for this custom anatomical entity.",
         ),
         Property(
-            "related_uberon_term",
-            ["openminds.latest.controlled_terms.Organ", "openminds.latest.controlled_terms.UBERONParcellation"],
-            "relatedUBERONTerm",
+            "related_interspecies_anatomy",
+            [
+                "openminds.latest.controlled_terms.AnatomicalCavity",
+                "openminds.latest.controlled_terms.ExternalBodyRegion",
+                "openminds.latest.controlled_terms.MuscularStructure",
+                "openminds.latest.controlled_terms.NervousSystemStructure",
+                "openminds.latest.controlled_terms.Organ",
+                "openminds.latest.controlled_terms.OrganSystemStructure",
+                "openminds.latest.controlled_terms.OrganismSubstance",
+                "openminds.latest.controlled_terms.OrganismSystem",
+                "openminds.latest.controlled_terms.SkeletalStructure",
+                "openminds.latest.controlled_terms.TissueStructure",
+                "openminds.latest.controlled_terms.VascularStructure",
+            ],
+            "relatedInterspeciesAnatomy",
             description="no description available",
-            instructions="Add the related anatomical entity as defined by the UBERON ontology.",
+            instructions="Add the corresponding cross-species anatomical entity from the UBERON-derived terminologies that represents the generic anatomical concept underlying the custom anatomical entity.",
         ),
         Property(
             "relation_assessments",
@@ -59,11 +71,13 @@ class CustomAnatomicalEntity(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, has_annotations=None, name=None, related_uberon_term=None, relation_assessments=None):
+    def __init__(
+        self, id=None, has_annotations=None, name=None, related_interspecies_anatomy=None, relation_assessments=None
+    ):
         return super().__init__(
             id=id,
             has_annotations=has_annotations,
             name=name,
-            related_uberon_term=related_uberon_term,
+            related_interspecies_anatomy=related_interspecies_anatomy,
             relation_assessments=relation_assessments,
         )

@@ -38,16 +38,18 @@ class Measurement(EmbeddedMetadata):
             instructions="Add the quantity that was measured during this measurement.",
         ),
         Property(
-            "measured_with",
+            "obtained_with",
             [
                 "openminds.latest.ephys.ElectrodeArrayUsage",
                 "openminds.latest.ephys.ElectrodeUsage",
                 "openminds.latest.ephys.PipetteUsage",
+                "openminds.latest.neuroimaging.MRICoilUsage",
+                "openminds.latest.neuroimaging.MRIScannerUsage",
                 "openminds.latest.specimen_prep.SlicingDeviceUsage",
             ],
-            "measuredWith",
+            "obtainedWith",
             description="no description available",
-            instructions="Add the device that was used during this measurement.",
+            instructions="Add the used device for obtaining this measurement.",
         ),
         Property(
             "timestamp",
@@ -70,12 +72,12 @@ class Measurement(EmbeddedMetadata):
     ]
 
     def __init__(
-        self, additional_remarks=None, measured_quantity=None, measured_with=None, timestamp=None, values=None
+        self, additional_remarks=None, measured_quantity=None, obtained_with=None, timestamp=None, values=None
     ):
         return super().__init__(
             additional_remarks=additional_remarks,
             measured_quantity=measured_quantity,
-            measured_with=measured_with,
+            obtained_with=obtained_with,
             timestamp=timestamp,
             values=values,
         )

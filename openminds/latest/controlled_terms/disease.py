@@ -39,20 +39,6 @@ class Disease(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class Disease(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class Disease(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class Disease(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -162,8 +179,8 @@ class Disease(LinkedMetadata):
 Disease.acquired_blindness = Disease(
     id="https://openminds.om-i.org/instances/disease/acquiredBlindness",
     definition="Acquired blindness is caused by a group of diseases, disorders or injuries that led to permanent severely impaired vision or irreversible lack of vision during adulthood.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0499758"),
     name="acquired blindness",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0499758"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0336554"),
 )
 Disease.alzheimers_disease = Disease(
@@ -179,8 +196,8 @@ Disease.autism_spectrum_disorder = Disease(
 Disease.cerebral_atrophy = Disease(
     id="https://openminds.om-i.org/instances/disease/cerebralAtrophy",
     definition="Cerebral atrophy describes the pathological process of wasting or decrease in size of the cells or tissue of the cerebrum.",
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/HP:0012444#brain-atrophy"),
     name="cerebral atrophy",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/HP:0012444#brain-atrophy"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/HP_0002059"),
     synonyms=["atrophy of cerebrum", "brain atrophy", "degeneration of cerebrum", "degeneration of brain"],
 )
@@ -192,8 +209,8 @@ Disease.congenital_blindness = Disease(
 Disease.covid_19 = Disease(
     id="https://openminds.om-i.org/instances/disease/COVID-19",
     definition="A coronavirus infectious disease that is characterized by fever, cough and shortness of breath and caused by the coronavirus strain SARS-CoV-2.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739370"),
     name="COVID-19",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0739370"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_0080600"),
     synonyms=[
         "coronavirus disease 2019",
@@ -232,10 +249,10 @@ Disease.fragile_xsyndrome = Disease(
 Disease.glioma = Disease(
     id="https://openminds.om-i.org/instances/disease/glioma",
     definition="A benign or malignant brain and spinal cord tumor that arises from glial cells (astrocytes, oligodendrocytes, ependymal cells).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104647"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12618#glioma"),
     name="glioma",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_12618"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/birnlex_12618"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/BIRNLEX:12618#glioma"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0104647"),
     synonyms=[
         "glial neoplasm",
         "neoplasm of the neuroglia",
@@ -257,27 +274,27 @@ Disease.macular_degeneration = Disease(
     id="https://openminds.om-i.org/instances/disease/macularDegeneration",
     definition="A retinal degeneration characterized by gradual deterioration of light-sensing cells in the tissues at the back of the eye resulting in vision loss.[adapted from [Disease Ontology definition](http://purl.obolibrary.org/obo/DOID_4448)]",
     description="Deterioration of the macula lutea in the retina; may be inherited, drug induced, or due to aging; leads to a severe loss of central vision while peripheral vision is retained.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106448"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12811#macular-degeneration-1"),
     name="macular degeneration",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0106448"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/BIRNLEX:12811#macular-degeneration-1"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_4448"),
     synonyms=["macular degeneration of retina", "macular dystrophy", "maculopathy"],
 )
 Disease.malignant_neoplasm = Disease(
     id="https://openminds.om-i.org/instances/disease/malignantNeoplasm",
     definition="A 'malignant neoplasm' is composed of atypical, often pleomorphic cells that uncontrollably grow and multiply, spreading into surrounding tissue and even invading distant anatomic sites (metastasis). Many malignant neoplasm form solid tumors, but cancers of the blood generally do not. [(adapted from [NCI](https://www.cancer.gov/about-cancer/understanding/what-is-cancer)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0752652"),
     name="malignant neoplasm",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0752652"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCIT_C9305"),
     synonyms=["cancer"],
 )
 Disease.meningioma = Disease(
     id="https://openminds.om-i.org/instances/disease/meningioma",
     definition="A generally slow growing tumor attached to the dura mater and composed of neoplastic meningothelial (arachnoidal) cells.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106789"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12601#meningioma"),
     name="meningioma",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_12601"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/birnlex_12601"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/BIRNLEX:12601#meningioma"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0106789"),
     synonyms=[
         "meningeal neoplasm",
         "meningothelial cell tumor",
@@ -289,9 +306,8 @@ Disease.meningioma = Disease(
 Disease.mental_disorder = Disease(
     id="https://openminds.om-i.org/instances/disease/mentalDisorder",
     definition="A 'mental disorder' is characterized by a clinically significant disturbance in an individual’s cognition, emotional regulation, or behaviour and is usually associated with distress or impairment in important areas of functioning. [adapted from [WHO fact-sheets](https://www.who.int/news-room/fact-sheets/detail/mental-disorders)]",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106792"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12669#mental-disorder"),
     name="mental disorder",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/BIRNLEX:12669#mental-disorder"),
     preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0106792"),
     synonyms=["mental disease", "mental illness", "psychiatric disease", "psychiatric disorder"],
 )
@@ -304,9 +320,9 @@ Disease.minimally_conscious_state = Disease(
 Disease.multiple_sclerosis = Disease(
     id="https://openminds.om-i.org/instances/disease/multipleSclerosis",
     definition="'Multiple sclerosis' is a disorder in which the body's immune system attacks the protective meylin covering of the nerve cells in the brain, optic nerve and spinal cord (adapted from the [Mayo clinic](https://www.mayoclinic.org/diseases-conditions/multiple-sclerosis/symptoms-causes/syc-20350269#:~:text=Multiple%20sclerosis%20is%20a%20disorder,insulation%20on%20an%20electrical%20wire.))",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0756481"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/BIRNLEX:12514#multiple-sclerosis-1"),
     name="multiple sclerosis",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0756481"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/BIRNLEX:12514#multiple-sclerosis-1"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_2377"),
     synonyms=["MS", "generalized multiple sclerosis"],
 )
@@ -319,8 +335,8 @@ Disease.parkinsons_disease = Disease(
 Disease.stroke = Disease(
     id="https://openminds.om-i.org/instances/disease/stroke",
     definition="A sudden loss of neurological function secondary to hemorrhage or ischemia in the brain parenchyma due to a vascular event.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0738754"),
     name="stroke",
+    other_ontology_identifiers=["http://uri.interlex.org/ilx_0738754"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_6713"),
     synonyms=["cerebral infaction", "cerebrovascular accident", "cerebrovascular disease", "CVA", "stroke disorder"],
 )

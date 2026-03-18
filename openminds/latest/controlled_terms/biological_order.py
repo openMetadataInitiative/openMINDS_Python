@@ -39,20 +39,6 @@ class BiologicalOrder(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class BiologicalOrder(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class BiologicalOrder(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class BiologicalOrder(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -162,16 +179,16 @@ class BiologicalOrder(LinkedMetadata):
 BiologicalOrder.carnivora = BiologicalOrder(
     id="https://openminds.om-i.org/instances/biologicalOrder/carnivora",
     definition="The biological order *Carnivora* (carnivore) belongs to the class *Mammalia* (mammals).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101675"),
     name="Carnivora",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0101675"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_33554"),
     synonyms=["carnivore"],
 )
 BiologicalOrder.cypriniformes = BiologicalOrder(
     id="https://openminds.om-i.org/instances/biologicalOrder/cypriniformes",
     definition="The biological order *Cypriniformes* belongs to the class *Actinopterygii* (ray-finned fishes).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0737279"),
     name="Cypriniformes",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0737279"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0005508"),
 )
 BiologicalOrder.didelphimorphia = BiologicalOrder(
@@ -183,23 +200,23 @@ BiologicalOrder.didelphimorphia = BiologicalOrder(
 BiologicalOrder.nudibranchia = BiologicalOrder(
     id="https://openminds.om-i.org/instances/biologicalOrder/nudibranchia",
     definition="The biological order *Nudibranchia* (nudibranchs) belongs to the class *Gastropoda* (gastropods).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107805"),
     name="Nudibranchia",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0107805"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_70849"),
     synonyms=["nudibranchs"],
 )
 BiologicalOrder.primates = BiologicalOrder(
     id="https://openminds.om-i.org/instances/biologicalOrder/primates",
     definition="The biological order *Primates* belongs to the class *Mammalia* (mammals).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0486298"),
     name="Primates",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0486298"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0017579"),
 )
 BiologicalOrder.rodentia = BiologicalOrder(
     id="https://openminds.om-i.org/instances/biologicalOrder/rodentia",
     definition="The biological order *Rodentia* (rodents) belongs to the class *Mammalia* (mammals).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0110175"),
     name="Rodentia",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0110175"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9989"),
     synonyms=["rodents"],
 )

@@ -20,11 +20,11 @@ class AccountInformation(LinkedMetadata):
     properties = [
         Property(
             "service",
-            "openminds.latest.core.WebService",
+            "openminds.latest.core.Service",
             "service",
             required=True,
             description="no description available",
-            instructions="Add the web service of this account.",
+            instructions="Add the service associated with this account.",
         ),
         Property(
             "user_name",

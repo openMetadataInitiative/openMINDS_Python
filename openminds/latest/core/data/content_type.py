@@ -31,6 +31,17 @@ class ContentType(LinkedMetadata):
             instructions="Add all data types that may be represented via this content type.",
         ),
         Property(
+            "defining_sources",
+            str,
+            "definingSource",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter the internationalized resource identifiers (IRIs) of sources that define or document this content type, preferably authoritative registries (e.g., IANA), or reference documentation (e.g., mimetype.io) if no registry entry exists.",
+        ),
+        Property(
             "description",
             str,
             "description",
@@ -59,6 +70,16 @@ class ContentType(LinkedMetadata):
             instructions="Enter all file extensions associated with this content type.",
         ),
         Property(
+            "is_based_on",
+            "openminds.latest.core.ContentType",
+            "isBasedOn",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all content types this content type is based on.",
+        ),
+        Property(
             "name",
             str,
             "name",
@@ -66,13 +87,6 @@ class ContentType(LinkedMetadata):
             required=True,
             description="Word or phrase that constitutes the distinctive designation of the content type.",
             instructions="Enter the name of this content type following a IANA.org inspired convention.",
-        ),
-        Property(
-            "related_media_type",
-            IRI,
-            "relatedMediaType",
-            description="Reference to an official two-part identifier for file formats and format contents.",
-            instructions="Enter the internationalized resource identifier (IRI) to the official registered media type (e.g., provided on IANA.org) matching this content type.",
         ),
         Property(
             "specification",
@@ -98,22 +112,24 @@ class ContentType(LinkedMetadata):
         self,
         id=None,
         data_types=None,
+        defining_sources=None,
         description=None,
         display_label=None,
         file_extensions=None,
+        is_based_on=None,
         name=None,
-        related_media_type=None,
         specification=None,
         synonyms=None,
     ):
         return super().__init__(
             id=id,
             data_types=data_types,
+            defining_sources=defining_sources,
             description=description,
             display_label=display_label,
             file_extensions=file_extensions,
+            is_based_on=is_based_on,
             name=name,
-            related_media_type=related_media_type,
             specification=specification,
             synonyms=synonyms,
         )
@@ -188,61 +204,61 @@ ContentType.application_5_mat = ContentType(
 )
 ContentType.application_dicom = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_dicom",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/dicom"],
     file_extensions=[".dcm"],
     name="application/dicom",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/dicom"),
     synonyms=["Digital Imaging and Communications in Medicine", "DICOM"],
 )
 ContentType.application_gzip = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_gzip",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/gzip"],
     description="A gzip (.gz) file is a compressed archive using the GNU zip algorithm. Unlike the ZIP format, which packages multiple files along with directory structure, gzip typically compresses a single file or data stream. It uses the DEFLATE compression method for efficient lossless compression and is commonly combined with tar (as .tar.gz or .tgz) when multiple files need compression.",
     file_extensions=[".gz", ".gzip"],
     name="application/gzip",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/gzip"),
     specification=IRI("https://www.ietf.org/rfc/rfc1952.txt"),
     synonyms=["GZIP", "GZ file", "GZIP file", "GNU zip", "GNU zip file"],
 )
 ContentType.application_json = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     file_extensions=[".json"],
     name="application/json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["JavaScript Object Notation", "JSON"],
 )
 ContentType.application_ldplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_ld+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/ld+json"],
     file_extensions=[".jsonld"],
     name="application/ld+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/ld+json"),
     synonyms=["JSON-LD"],
 )
 ContentType.application_octet_stream = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_octet-stream",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/octet-stream"],
     file_extensions=[".bin"],
     name="application/octet-stream",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/octet-stream"),
     synonyms=["binary format", "BIN"],
 )
 ContentType.application_pdf = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_pdf",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/pdf"],
     file_extensions=[".pdf"],
     name="application/pdf",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/pdf"),
     specification=IRI("https://www.pdfa.org/resource/iso-32000-2-pdf-2-0/"),
     synonyms=["Adobe Portable Document Format", "PDF"],
 )
 ContentType.application_sbmlplusxml = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_sbml+xml",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/sbml+xml"],
     file_extensions=[".sbml"],
     name="application/sbml+xml",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/sbml+xml"),
     synonyms=["System Biology Markup Language"],
 )
 ContentType.application_schemaplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_schema+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/schema+json"],
     file_extensions=[".schema.json", ".json", ".jschema", ".jsd", ".jsonsd"],
     name="application/schema+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/schema+json"),
     synonyms=["JSON Schema"],
 )
 ContentType.application_vnd_3i_slidebook = ContentType(
@@ -827,7 +843,7 @@ ContentType.application_vnd_ge_healthcare_life_sciences_amersham_biosciences_gel
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.ge-healthcare-life-sciences.amersham-biosciences-gel",
     file_extensions=[".gel"],
     name="application/vnd.ge-healthcare-life-sciences.amersham-biosciences-gel",
-    synonyms="GEL",
+    synonyms=["GEL"],
 )
 ContentType.application_vnd_ge_healthcare_microct = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.ge-healthcare.microct",
@@ -908,9 +924,9 @@ ContentType.application_vnd_igorpro = ContentType(
 )
 ContentType.application_vnd_ilastik_object_featurespluscsv = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.ilastik.object-features+csv",
+    defining_sources=["https://www.iana.org/assignments/media-types/text/csv"],
     file_extensions=[".csv"],
     name="application/vnd.ilastik.object-features+csv",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/csv"),
     synonyms=["ilastik object features CSV"],
 )
 ContentType.application_vnd_ilastik_object_featuresplushdf5 = ContentType(
@@ -1121,10 +1137,10 @@ ContentType.application_vnd_localizoom_lz = ContentType(
 )
 ContentType.application_vnd_locareplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.locare+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     description="A text-based format for representing structured data based on JavaScript object syntax following the [LocareJSON schema specification](https://github.com/blixilla/LocareJSON).",
     file_extensions=[".locare.json", ".json"],
     name="application/vnd.locare+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     specification=IRI("https://github.com/blixilla/LocareJSON"),
     synonyms=["LocareJSON", "Locare JavaScript Object Notation"],
 )
@@ -1160,10 +1176,10 @@ ContentType.application_vnd_mearec = ContentType(
 )
 ContentType.application_vnd_meshviewplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.meshview+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     description="Coordinate triplets for display of point clouds in MeshView (RRID:SCR_017222)",
     file_extensions=[".json"],
     name="application/vnd.meshview+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["MeshView JavaScript Object Notation", "MeshView JSON"],
 )
 ContentType.application_vnd_metamorph_stack = ContentType(
@@ -1268,9 +1284,9 @@ ContentType.application_vnd_mrtrix_legacysparseformat = ContentType(
 )
 ContentType.application_vnd_ms_excel = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.ms-excel",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/vnd.ms-excel"],
     file_extensions=[".xls"],
     name="application/vnd.ms-excel",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/vnd.ms-excel"),
     synonyms=["Microsoft Excel", "XLS"],
 )
 ContentType.application_vnd_neo_ascii_image = ContentType(
@@ -1298,20 +1314,20 @@ ContentType.application_vnd_nest = ContentType(
 )
 ContentType.application_vnd_nest_desktop_model_v4plusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.nest-desktop.model.v4+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     description="A JSON file containing a computational model specification (version 4) for NEST Desktop",
     display_label="NEST Desktop model (v4)",
     file_extensions=[".json"],
     name="application/vnd.nest-desktop.model.v4+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["NEST Desktop model specification version 4"],
 )
 ContentType.application_vnd_nest_desktop_project_v4plusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.nest-desktop.project.v4+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     description="A JSON file containing a project configuration (version 4) for NEST Desktop",
     display_label="NEST Desktop project configuration (v4)",
     file_extensions=[".json"],
     name="application/vnd.nest-desktop.project.v4+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["NEST Desktop project specification version 4"],
 )
 ContentType.application_vnd_nest_simulator_modelpluspython = ContentType(
@@ -1483,9 +1499,9 @@ ContentType.application_vnd_nutil_parameters = ContentType(
 )
 ContentType.application_vnd_nutil_quantifierplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.nutil.quantifier+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     file_extensions=[".json"],
     name="application/vnd.nutil.quantifier+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["Nutil Quantifier JavaScript Object Notation", "Nutil Quantifier JSON"],
 )
 ContentType.application_vnd_nutil_resultspluscsv = ContentType(
@@ -1562,20 +1578,20 @@ ContentType.application_vnd_openmetadatainitiative_openminds_schemaplusjson = Co
 )
 ContentType.application_vnd_openxmlformats_officedocument_spreadsheetml_sheet = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    defining_sources=[
+        "https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ],
     file_extensions=[".xlsx"],
     name="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    related_media_type=IRI(
-        "https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    ),
     synonyms=["Microsoft Excel (Open XML)", "XLSX"],
 )
 ContentType.application_vnd_openxmlformats_officedocument_wordprocessingml_document = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.openxmlformats-officedocument.wordprocessingml.document",
+    defining_sources=[
+        "https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    ],
     file_extensions=[".docx"],
     name="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-    related_media_type=IRI(
-        "https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-    ),
     synonyms=["Microsoft Word (OpenXML)", "DOCX"],
 )
 ContentType.application_vnd_oxford_instruments = ContentType(
@@ -1704,9 +1720,9 @@ ContentType.application_vnd_princeton_instruments = ContentType(
 )
 ContentType.application_vnd_qcalignplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.qcalign+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     file_extensions=[".json"],
     name="application/vnd.qcalign+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["QCAlign JavaScript Object Notation", "QCAlign JSON"],
 )
 ContentType.application_vnd_quesant = ContentType(
@@ -1723,16 +1739,16 @@ ContentType.application_vnd_quicknii_flat = ContentType(
 )
 ContentType.application_vnd_quickniiplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.quicknii+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     file_extensions=[".json"],
     name="application/vnd.quicknii+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["QuickNII JavaScript Object Notation", "QuickNII JSON"],
 )
 ContentType.application_vnd_quickniiplusxml = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.quicknii+xml",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/xml"],
     file_extensions=[".xml"],
     name="application/vnd.quicknii+xml",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/xml"),
     synonyms=["QuickNII Extensible Markup Language", "QuickNII XML"],
 )
 ContentType.application_vnd_raw_binarysignal = ContentType(
@@ -1839,7 +1855,6 @@ ContentType.application_vnd_sivic = ContentType(
 )
 ContentType.application_vnd_snakemake_snakefile = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.snakemake.snakefile",
-    file_extensions=[],
     name="application/vnd.snakemake.snakefile",
     synonyms=["Snakefile"],
 )
@@ -1876,11 +1891,11 @@ ContentType.application_vnd_spikeglx_system = ContentType(
 )
 ContentType.application_vnd_spikeinterface_probeinterfaceplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.spikeinterface.probeinterface+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     description="Validatable JSON file describing one or more probes by encoding each probe’s geometry (2D/3D and units), contact positions and shapes (with size params), optional shanks/contour, device-channel mapping, and annotations like manufacturer/model and version.",
     display_label="probeinterface JSON",
     file_extensions=[".json"],
     name="application/vnd.spikeinterface.probeinterface+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     specification=IRI(
         "https://raw.githubusercontent.com/SpikeInterface/probeinterface/main/src/probeinterface/schema/probe.json.schema"
     ),
@@ -2054,9 +2069,9 @@ ContentType.application_vnd_visualign_flat = ContentType(
 )
 ContentType.application_vnd_visualignplusjson = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.visualign+json",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/json"],
     file_extensions=[".json"],
     name="application/vnd.visualign+json",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/json"),
     synonyms=["VisuAlign JavaScript Object Notation", "VisuAlign JSON"],
 )
 ContentType.application_vnd_voluba_v1_landmark_pairsplusjson = ContentType(
@@ -2141,16 +2156,16 @@ ContentType.application_vnd_watechnology_wa_top = ContentType(
 )
 ContentType.application_vnd_wavefronttechnologies = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.wavefronttechnologies",
+    defining_sources=["https://www.iana.org/assignments/media-types/model/obj"],
     file_extensions=[".obj"],
     name="application/vnd.wavefronttechnologies",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/model/obj"),
     synonyms=["Wavefront OBJ"],
 )
 ContentType.application_vnd_wavefronttechnologies_mtl = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_vnd.wavefronttechnologies.mtl",
+    defining_sources=["https://www.iana.org/assignments/media-types/model/mtl"],
     file_extensions=[".mtl"],
     name="application/vnd.wavefronttechnologies.mtl",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/model/mtl"),
     synonyms=["Wavefront MTL"],
 )
 ContentType.application_vnd_wavemetrics_igorpro = ContentType(
@@ -2287,9 +2302,9 @@ ContentType.application_x_tgif = ContentType(
 )
 ContentType.application_xml = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_xml",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/xml"],
     file_extensions=[".xml"],
     name="application/xml",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/xml"),
     synonyms=["Extensible Markup Language", "XML"],
 )
 ContentType.application_yaml = ContentType(
@@ -2300,9 +2315,9 @@ ContentType.application_yaml = ContentType(
 )
 ContentType.application_zip = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/application_zip",
+    defining_sources=["https://www.iana.org/assignments/media-types/application/zip"],
     file_extensions=[".zip", ".zipx"],
     name="application/zip",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/application/zip"),
     specification=IRI("https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT"),
     synonyms=["ZIP", "ZIP file", "zipfile"],
 )
@@ -2316,10 +2331,10 @@ ContentType.chemical_vnd_wwpdb_pdb_v3_30plusplain = ContentType(
 )
 ContentType.chemical_vnd_wwpdb_pdbml_v5plusxml = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/chemical_vnd.wwpdb.pdbml.v5+xml",
+    defining_sources=["https://www.iana.org/assignments/media-types/text/xml"],
     description="A XML serialization of the wwPDB’s PDBx/mmCIF data model, using tags from the PDBx/mmCIF dictionary to represent and distribute macromolecular structure data.",
     file_extensions=[".xml"],
     name="chemical/vnd.wwpdb.pdbml.v5+xml",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/xml"),
     specification=IRI("https://pdbml.wwpdb.org/"),
     synonyms=["Protein Data Bank Markup Language", "PDB Markup Language", "PDBML"],
 )
@@ -2333,9 +2348,9 @@ ContentType.chemical_vnd_wwpdb_pdbx_mmcif_v5plusplain = ContentType(
 )
 ContentType.image_bmp = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/image_bmp",
+    defining_sources=["https://www.iana.org/assignments/media-types/image/bmp"],
     file_extensions=[".bmp"],
     name="image/bmp",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/image/bmp"),
     synonyms=["Bitmap image"],
 )
 ContentType.image_gif = ContentType(
@@ -2358,16 +2373,16 @@ ContentType.image_jpeg = ContentType(
 )
 ContentType.image_png = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/image_png",
+    defining_sources=["https://www.iana.org/assignments/media-types/image/png"],
     file_extensions=[".png"],
     name="image/png",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/image/png"),
     synonyms=["Portable Network Graphics", "PNG"],
 )
 ContentType.image_tiff = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/image_tiff",
+    defining_sources=["https://www.iana.org/assignments/media-types/image/tiff"],
     file_extensions=[".tiff", ".tif"],
     name="image/tiff",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/image/tiff"),
     synonyms=["Tagged Image File (Tiled)"],
 )
 ContentType.image_tiff_andor_abd = ContentType(
@@ -2552,23 +2567,23 @@ ContentType.text_cfg = ContentType(
 )
 ContentType.text_csv = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/text_csv",
+    defining_sources=["https://www.iana.org/assignments/media-types/text/csv"],
     file_extensions=[".csv"],
     name="text/csv",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/csv"),
     synonyms=["Comma-Separated Value", "CSV"],
 )
 ContentType.text_html = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/text_html",
+    defining_sources=["https://www.iana.org/assignments/media-types/text/html"],
     file_extensions=[".html", ".htm"],
     name="text/html",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/html"),
     synonyms=["Hypertext Markup Language", "HTML"],
 )
 ContentType.text_markdown = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/text_markdown",
+    defining_sources=["https://www.iana.org/assignments/media-types/text/markdown"],
     file_extensions=[".md", ".markdown"],
     name="text/markdown",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/markdown"),
     synonyms=["Markdown"],
 )
 ContentType.text_plain = ContentType(
@@ -2590,9 +2605,9 @@ ContentType.text_semicolon_separated_values = ContentType(
 )
 ContentType.text_tab_separated_values = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/text_tab-separated-values",
+    defining_sources=["https://www.iana.org/assignments/media-types/text/tab-separated-values"],
     file_extensions=[".tsv", ".csv"],
     name="text/tab-separated-values",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/text/tab-separated-values"),
     synonyms=["Tab-Separated Value", "TSV"],
 )
 ContentType.text_vnd_citation_file_format = ContentType(
@@ -2690,9 +2705,9 @@ ContentType.text_x_python_3_9 = ContentType(
 )
 ContentType.video_mp4 = ContentType(
     id="https://openminds.om-i.org/instances/contentTypes/video_mp4",
+    defining_sources=["https://www.iana.org/assignments/media-types/video/mp4"],
     file_extensions=[".mp4"],
     name="video/mp4",
-    related_media_type=IRI("https://www.iana.org/assignments/media-types/video/mp4"),
     synonyms=["Moving Picture Experts Group 4 video file", "MPEG-4"],
 )
 ContentType.video_quicktime = ContentType(

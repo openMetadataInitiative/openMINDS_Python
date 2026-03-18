@@ -59,17 +59,24 @@ class ServiceLink(LinkedMetadata):
             instructions="Add an image file to this service link that acts as a preview of its content or could function as an icon.",
         ),
         Property(
+            "services",
+            [
+                "openminds.latest.core.Interface",
+                "openminds.latest.core.InterfaceVersion",
+                "openminds.latest.core.WebResource",
+            ],
             "service",
-            "openminds.latest.controlled_terms.Service",
-            "service",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
             required=True,
             description="no description available",
-            instructions="Add the service in which the specified data can be opened.",
+            instructions="Add all services in which the specified data can be opened by linking to each service’s interface (group of versions), specific interface version, or web resource.",
         ),
     ]
 
     def __init__(
-        self, id=None, data_location=None, display_label=None, open_data_in=None, preview_image=None, service=None
+        self, id=None, data_location=None, display_label=None, open_data_in=None, preview_image=None, services=None
     ):
         return super().__init__(
             id=id,
@@ -77,5 +84,5 @@ class ServiceLink(LinkedMetadata):
             display_label=display_label,
             open_data_in=open_data_in,
             preview_image=preview_image,
-            service=service,
+            services=services,
         )

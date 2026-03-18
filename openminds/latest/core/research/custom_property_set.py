@@ -43,6 +43,7 @@ class CustomPropertySet(EmbeddedMetadata):
             "relevant_for",
             [
                 "openminds.latest.controlled_terms.AnalysisTechnique",
+                "openminds.latest.controlled_terms.MRIFatSuppressionTechnique",
                 "openminds.latest.controlled_terms.MRIParallelAcquisitionTechnique",
                 "openminds.latest.controlled_terms.MRIPulseSequence",
                 "openminds.latest.controlled_terms.MRISpoilingTechnique",

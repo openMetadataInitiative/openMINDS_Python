@@ -22,11 +22,7 @@ class LivePaperResourceItem(LinkedMetadata):
     properties = [
         Property(
             "hosted_by",
-            [
-                "openminds.latest.core.Organization",
-                "openminds.latest.core.WebService",
-                "openminds.latest.controlled_terms.Service",
-            ],
+            ["openminds.latest.core.Organization", "openminds.latest.core.Service", "openminds.latest.core.Service"],
             "hostedBy",
             required=True,
             description="Reference to an organization that provides facilities and services for something.",

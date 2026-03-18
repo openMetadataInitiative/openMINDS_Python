@@ -21,14 +21,14 @@ class Project(LinkedMetadata):
 
     properties = [
         Property(
-            "coordinators",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "coordinator",
+            "contributions",
+            "openminds.latest.core.Contribution",
+            "contribution",
             multiple=True,
             unique_items=True,
             min_items=1,
-            description="Legal person who organizes the collaborative work of people or groups.",
-            instructions="Add all parties that coordinate this project.",
+            description="no description available",
+            instructions="Add all individual, organisational, or consortial contributions to this project.",
         ),
         Property(
             "description",
@@ -58,14 +58,14 @@ class Project(LinkedMetadata):
                 "openminds.latest.computation.WorkflowRecipeVersion",
                 "openminds.latest.core.Dataset",
                 "openminds.latest.core.DatasetVersion",
+                "openminds.latest.core.Interface",
+                "openminds.latest.core.InterfaceVersion",
                 "openminds.latest.core.MetaDataModel",
                 "openminds.latest.core.MetaDataModelVersion",
                 "openminds.latest.core.Model",
                 "openminds.latest.core.ModelVersion",
                 "openminds.latest.core.Software",
                 "openminds.latest.core.SoftwareVersion",
-                "openminds.latest.core.WebService",
-                "openminds.latest.core.WebServiceVersion",
                 "openminds.latest.publications.LivePaper",
                 "openminds.latest.publications.LivePaperVersion",
                 "openminds.latest.sands.AnatomicalAtlas",
@@ -97,24 +97,34 @@ class Project(LinkedMetadata):
             description="Shortened or fully abbreviated name of the project.",
             instructions="Enter a short name (or alias) for this project that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
         ),
+        Property(
+            "type",
+            "openminds.latest.controlled_terms.ProjectType",
+            "type",
+            required=True,
+            description="Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to.",
+            instructions="Add the type of this project (e.g., research project, grant project).",
+        ),
     ]
 
     def __init__(
         self,
         id=None,
-        coordinators=None,
+        contributions=None,
         description=None,
         full_name=None,
         has_parts=None,
         homepage=None,
         short_name=None,
+        type=None,
     ):
         return super().__init__(
             id=id,
-            coordinators=coordinators,
+            contributions=contributions,
             description=description,
             full_name=full_name,
             has_parts=has_parts,
             homepage=homepage,
             short_name=short_name,
+            type=type,
         )

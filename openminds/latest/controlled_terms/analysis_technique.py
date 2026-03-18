@@ -39,20 +39,6 @@ class AnalysisTechnique(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class AnalysisTechnique(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class AnalysisTechnique(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class AnalysisTechnique(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -291,9 +308,9 @@ AnalysisTechnique.diffeomorphic_registration = AnalysisTechnique(
 AnalysisTechnique.dynamic_causal_modeling = AnalysisTechnique(
     id="https://openminds.om-i.org/instances/analysisTechnique/dynamicCausalModeling",
     definition="An analysis framework for specifying non-linear state-space models in continuous time using stochastic or ordinary differential equations, for fitting them to data and comparing their evidence using Bayesian model comparison.[adapted from [Wikipedia](https://en.wikipedia.org/wiki/Dynamic_causal_modeling)]",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0103618"),
     name="dynamic causal modeling",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0103618"),
+    other_ontology_identifiers=["http://uri.interlex.org/ilx_0103618"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0103618"),
     synonyms=["dynamic causal model", "DCM"],
 )
 AnalysisTechnique.eye_movement_analysis = AnalysisTechnique(
@@ -585,8 +602,8 @@ AnalysisTechnique.nuisance_regression = AnalysisTechnique(
 AnalysisTechnique.pathway_analysis = AnalysisTechnique(
     id="https://openminds.om-i.org/instances/analysisTechnique/pathwayAnalysis",
     definition="A 'pathway analysis' refers to a group of techniques that aim to discover what biological themes, and which biomolecules, are crucial to understand biological pathways of (typically) high-throughput biological data (adapted from [García-Campos et al., 2015](https://doi.org/10.3389/fphys.2015.00383)).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0778897"),
     name="pathway analysis",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0778897"],
     preferred_ontology_identifier=IRI("http://edamontology.org/operation_3928"),
     synonyms=[
         "biological pathway modelling",
@@ -680,17 +697,17 @@ AnalysisTechnique.shapiro_wilk_test = AnalysisTechnique(
 AnalysisTechnique.signal_filtering_technique = AnalysisTechnique(
     id="https://openminds.om-i.org/instances/analysisTechnique/signalFilteringTechnique",
     definition="'Signal filtering' is a signal processing technique used to remove or suppress unwanted components or features (e.g., certain frequencies) from a measured signal. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Filter_(signal_processing))]",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739623"),
     name="signal filtering technique",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/151"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/151"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739623"),
     synonyms=["filtering", "signal filtering"],
 )
 AnalysisTechnique.signal_processing_technique = AnalysisTechnique(
     id="https://openminds.om-i.org/instances/analysisTechnique/signalProcessingTechnique",
     definition="'Signal processing' refers to a class of analysis techniques used to improve transmission, storage efficiency and subjective quality as well as to emphasize or detect components of interest in a measured signal. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Signal_processing)]",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739633"),
     name="signal processing technique",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/technique/sigproc"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/technique/sigproc"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739633"),
     synonyms=["signal processing"],
 )
 AnalysisTechnique.slice_timing_correction = AnalysisTechnique(
@@ -714,8 +731,9 @@ AnalysisTechnique.spectral_power_auto_segmentation_technique = AnalysisTechnique
 AnalysisTechnique.spike_sorting = AnalysisTechnique(
     id="https://openminds.om-i.org/instances/analysisTechnique/spikeSorting",
     definition="'Spike sorting' is a class of techniques used in the analysis of extracellular electrophysiological data to extract the activity of one or more neurons from the background electrical noise by making use of the typical waveforms action potentials (spikes) create in the recorded neuronal signal.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739628"),
     name="spike sorting",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0739628"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739628"),
     synonyms=["spike sorting technique"],
 )
 AnalysisTechnique.stochastic_online_matrix_factorization = AnalysisTechnique(

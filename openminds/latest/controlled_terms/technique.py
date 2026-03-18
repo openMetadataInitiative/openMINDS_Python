@@ -39,20 +39,6 @@ class Technique(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class Technique(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class Technique(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class Technique(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -178,9 +195,9 @@ Technique.anaesthesia_technique = Technique(
 Technique.angiography = Technique(
     id="https://openminds.om-i.org/instances/technique/angiography",
     definition="Imaging technique for anatomical and structural details of the vascular system [adapted from [National Library of Medicine](https://www.ncbi.nlm.nih.gov/books/NBK557477/)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739420"),
     name="angiography",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/87"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/87"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739420"),
     synonyms=["angiographic technique"],
 )
 Technique.anterograde_tracing = Technique(
@@ -192,8 +209,9 @@ Technique.anterograde_tracing = Technique(
 Technique.autoradiography = Technique(
     id="https://openminds.om-i.org/instances/technique/autoradiography",
     definition="'Autoradiography' is a photography technique that creates images of a radioactive source (e.g., molecules or fragments of molecules that have been radioactively labeled) by the direct exposure to an imaging media (e.g., X-ray film or nuclear emulsion)",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0439300"),
     name="autoradiography",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0439300"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0439300"),
 )
 Technique.avidin_biotin_complex_staining = Technique(
     id="https://openminds.om-i.org/instances/technique/avidinBiotinComplexStaining",
@@ -214,17 +232,17 @@ Technique.biocytin_staining = Technique(
 Technique.blood_sampling = Technique(
     id="https://openminds.om-i.org/instances/technique/bloodSampling",
     definition="'Blood sampling' is the process of obtaining blood from a body for purpose of medical diagnosis and/or evaluation of an indication for treatment, further medical tests or other procedures.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0782225"),
     name="blood sampling",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0782225"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/OBI_1110095"),
     synonyms=["blood collection", "blood harvesting"],
 )
 Technique.brightfield_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/brightfieldMicroscopy",
     definition="Brightfield microscopy is an optical microscopy techniques, in which illumination light is transmitted through the sample and the contrast is generated by the absorption of light in dense areas of the specimen.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739719"),
     name="brightfield microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/238"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/238"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739719"),
 )
 Technique.calcium_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/calciumImaging",
@@ -266,9 +284,9 @@ Technique.confocal_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/confocalMicroscopy",
     definition="Confocal microscopy is a specialized fluorescence microscopy technique that uses pinholes to reject out-of-focus light.",
     description="Confocal microscopy focuses light onto a defined spot at a specific depth within a fluorescent sample to eliminate out-of-focus glare, and increase resolution and contrast in the micrographs.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739731"),
     name="confocal microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/157"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/157"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739731"),
     synonyms=["confocal microscopy technique"],
 )
 Technique.contrast_agent_administration = Technique(
@@ -324,9 +342,9 @@ Technique.darkfield_microscopy = Technique(
 Technique.differential_interference_contrast_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/differentialInterferenceContrastMicroscopy",
     definition="An optical microscopy technique, used to enhance the contrast in unstained, transparent samples [taken from [Wikipedia](https://en.wikipedia.org/wiki/Differential_interference_contrast_microscopy)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739494"),
     name="differential interference contrast microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/technique/IRDIC"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/technique/IRDIC"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739494"),
     synonyms=["IR DIC video microscopy", "IR-DIC", "DIC microscopy", "DIC"],
 )
 Technique.diffusion_fixation_technique = Technique(
@@ -360,15 +378,16 @@ Technique.diffusion_weighted_imaging = Technique(
 Technique.dna_methylation_analysis = Technique(
     id="https://openminds.om-i.org/instances/technique/DNAMethylationAnalysis",
     definition="A 'DNA methylation analysis' studies chromosomal patterns of DNA or histone modification by methyl groups ([modified from Nature.com](https://www.nature.com/subjects/methylation-analysis)).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0779582"),
     name="DNA methylation analysis",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0779582"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0779582"),
     synonyms=["methylation analysis"],
 )
 Technique.dna_sequencing = Technique(
     id="https://openminds.om-i.org/instances/technique/DNASequencing",
     definition="'DNA sequencing' refers to a group of techniques that are used to determine the order of nucleotides (nucleic acid sequence) in DNA. [adapted from [wikipedia](https://en.wikipedia.org/wiki/DNA_sequencing)]",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0783031"),
     name="DNA sequencing",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0783031"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/OBI_0000626"),
     synonyms=[
         "deoxyribonucleic acid sequencing",
@@ -410,16 +429,16 @@ Technique.electromyography = Technique(
 Technique.electron_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/electronMicroscopy",
     definition="Electron microscopy describes any microscopy technique that uses electrons to generate contrast.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739513"),
     name="electron microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/technique/electronMicroscopy"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/technique/electronMicroscopy"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739513"),
     synonyms=["EM"],
 )
 Technique.electron_tomography = Technique(
     id="https://openminds.om-i.org/instances/technique/electronTomography",
     definition="Electron tomography is a microscopy technique that takes a series of images of a thick sample at different angles (tilts) so that tomography can be applied to increase the resolution of the ticker sample.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0461087"),
     name="electron tomography",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0461087"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0512939"),
     synonyms=["electron microscope tomography"],
 )
@@ -431,17 +450,17 @@ Technique.electroporation = Technique(
     id="https://openminds.om-i.org/instances/technique/electroporation",
     definition="A microbiology technique in which an electrical field is applied to cells in order to increase the permeability of the cell membrane.",
     description="'Electroporation' is a process in which a significant increase in the electrical conductivity and permeability of the cell plasma membrane is caused by an externally applied electrical field. It is usually used in molecular biology as a way of introducing some substance into a cell, such as loading it with a molecular probe, a drug that can change the cell's function, or a piece of coding DNA.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739748"),
     name="electroporation",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/technique/electroporation"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/technique/electroporation"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739748"),
     synonyms=["electropermeabilization"],
 )
 Technique.enzyme_linked_immunosorbent_assay = Technique(
     id="https://openminds.om-i.org/instances/technique/enzymeLinkedImmunosorbentAssay",
     definition="The 'enzyme-linked immunosorbent assay' is a commonly used analytical biochemistry assay for the quantitative determination of antibodies, first described by [Engvall and Perlmann (1972)](https://www.jimmunol.org/content/109/1/129.abstract). [adapted from [wikipedia](https://en.wikipedia.org/wiki/ELISA)]",
     description="This immunoassay utilizes an antibody labeled with an enzyme marker such as horseradish peroxidase. While either the enzyme or the antibody is bound to an immunosorbent substrate, they both retain their biologic activity; the change in enzyme activity as a result of the enzyme-antibody-antigen reaction is proportional to the concentration of the antigen and can be measured spectrophotometrically or with the naked eye. Many variations of the method have been developed.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0484188"),
     name="enzyme-linked immunosorbent assay",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0484188"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0007526"),
     synonyms=["ELISA"],
 )
@@ -458,9 +477,9 @@ Technique.epidural_electrocorticography = Technique(
 Technique.epifluorescent_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/epifluorescentMicroscopy",
     definition="Epifluorescent microscopy comprises all widefield microscopy techniques in which fluorescent molecules of an entire sample are excited through a permanent exposure of a light source of a specific wavelength.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739632"),
     name="epifluorescent microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/243"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/243"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739632"),
     synonyms=[
         "epifluorescence microscopy",
         "WFM",
@@ -476,8 +495,8 @@ Technique.extracellular_electrophysiology = Technique(
 Technique.eye_movement_tracking = Technique(
     id="https://openminds.om-i.org/instances/technique/eyeMovementTracking",
     definition="'Eye movement tracking' refers to a group of techniques used to record the eye movement and/or position of a living specimen over a given period of time.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0417680"),
     name="eye movement tracking",
+    other_ontology_identifiers=["http://uri.interlex.org/ilx_0417680"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0493574"),
     synonyms=["eye motion tracking", "eye tracking"],
 )
@@ -485,22 +504,23 @@ Technique.fixation_technique = Technique(
     id="https://openminds.om-i.org/instances/technique/fixationTechnique",
     definition="Fixation is a technique to preserve specimen permanently as faithfully as possible compared to the living state.",
     description="Fixation is a two-step process in which 1) all normal life functions are terminated and 2) the structure of the tissue is stabilized (preserved). The fixation of tissue can be achieved by chemical or physical (e.g. heating, freezing) means.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739717"),
     name="fixation technique",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0739717"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739717"),
 )
 Technique.fluorescence_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/fluorescenceMicroscopy",
     definition="Fluorescence microscopy comprises any type of microscopy where the specimen can be made to fluoresce (emit energy as visible light), typically by illuminating it with light of specific wavelengths.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0780848"),
     name="fluorescence microscopy",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0780848"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHMO_0000087"),
 )
 Technique.focused_ion_beam_scanning_electron_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/focusedIonBeamScanningElectronMicroscopy",
     definition="Focused ion beam scanning electron microscopy is a serial section scanning electron microscopy technique where a focused ion beam is used to ablate the surface of a specimen.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739434"),
     name="focused ion beam scanning electron microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/245"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/245"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739434"),
     synonyms=["FIB-SEM", "FIB/SEM", "FIBSEM", "focused ion beam scanning electron microscoscopy technique"],
 )
 Technique.functional_magnetic_resonance_imaging = Technique(
@@ -524,9 +544,9 @@ Technique.gene_knockout = Technique(
 Technique.genome_wide_association_study = Technique(
     id="https://openminds.om-i.org/instances/technique/genomeWideAssociationStudy",
     definition="A 'genome-wide association study' is an analysis technique comparing the allele frequencies of all available (or a whole genome representative set of) polymorphic markers in unrelated individuals with a specific symptom or disease condition, and those of healthy controls to identify markers associated with a specific disease or condition.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104603"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXINV:1005075#genome-association-studies"),
     name="genome-wide association study",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0104603"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NLXINV:1005075#genome-association-studies"),
     preferred_ontology_identifier=IRI("http://edamontology.org/topic_3517"),
     synonyms=[
         "genetic association study",
@@ -542,9 +562,9 @@ Technique.genome_wide_association_study = Technique(
 Technique.golgi_staining = Technique(
     id="https://openminds.om-i.org/instances/technique/GolgiStaining",
     definition="'Golgi staining' includes several silver staining techniques in which fixed tissue is impregnated with silver nitrate and potassium dichromate resulting in the complete staining of some nerve cells while other cells are not stained at all. [adapted from InterLex](http://uri.interlex.org/ilx_0104713)",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0104713"),
     name="Golgi staining",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2243"),
+    preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2243"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0104713"),
     synonyms=["Golgi method", "black reaction"],
 )
 Technique.he_staining = Technique(
@@ -652,9 +672,9 @@ Technique.in_situ_hybridisation = Technique(
 )
 Technique.infrared_differential_interference_contrast_video_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/infraredDifferentialInterferenceContrastVideoMicroscopy",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739494"),
     name="infrared differential interference contrast video microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/technique/IRDIC"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/technique/IRDIC"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739494"),
     synonyms=["IR DIC video microscopy", "IR-DIC"],
 )
 Technique.injection = Technique(
@@ -665,9 +685,9 @@ Technique.intracellular_electrophysiology = Technique(
     id="https://openminds.om-i.org/instances/technique/intracellularElectrophysiology",
     definition="A technique used to measure electrical properties of a single cell, e.g. a neuron.",
     description="'Intracellular electrophysiology' describes a group of techniques used to measure with precision the voltage across, or electrical currents passing through, neuronal or other cellular membranes by inserting an electrode inside the neuron.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739521"),
     name="intracellular electrophysiology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/222"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/222"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739521"),
     synonyms=["intracellular recording"],
 )
 Technique.intracellular_injection = Technique(
@@ -701,26 +721,27 @@ Technique.iontophoretic_microinjection = Technique(
 Technique.light_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/lightMicroscopy",
     definition="Light microscopy, also referred to as optical microscopy, comprises any type of microscopy technique that uses visible light to generate magnified images of small objects.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0780269"),
     name="light microscopy",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0780269"],
     preferred_ontology_identifier=IRI("http://edamontology.org/topic_3385"),
     synonyms=["LM", "optical microscopy"],
 )
 Technique.light_sheet_fluorescence_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/lightSheetFluorescenceMicroscopy",
     definition="Lightsheet fluorescence microscopy is a fluorescence microscopy technique that uses a thin sheet of light to excite only fluorophores within the plane of illumination.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739693"),
     name="light sheet fluorescence microscopy",
-    preferred_ontology_identifier=IRI(
+    other_ontology_identifiers=[
         "http://uri.interlex.org/tgbugs/uris/readable/technique/lightSheetMicroscopyFluorescent"
-    ),
+    ],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739693"),
     synonyms=["light sheet microscopy", "LSFM", "selective plane illumination microscopy", "SPIM"],
 )
 Technique.magnetic_resonance_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/magneticResonanceImaging",
     definition="Any medical imaging technique that uses strong magnetic fields, magnetic field gradients, and radio waves to generate images of a specimen based on the principle of nuclear magnetic resonance.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0741208"),
     name="magnetic resonance imaging",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0741208"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741208"),
     synonyms=["MRI", "unspecified magnetic resonance imaging"],
 )
 Technique.magnetic_resonance_spectroscopy = Technique(
@@ -736,9 +757,9 @@ Technique.magnetization_transfer_imaging = Technique(
 Technique.magnetoencephalography = Technique(
     id="https://openminds.om-i.org/instances/technique/magnetoencephalography",
     definition="'Magnetoencephalography' is a noninvasive neuroimaging technique for studying brain activity by recording magnetic fields produced by electrical currents occurring naturally in the brain, using very sensitive magnetometers. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Magnetoencephalography)]",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0741209"),
     name="magnetoencephalography",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/163"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/163"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0741209"),
     synonyms=["MEG"],
 )
 Technique.mass_spectrometry = Technique(
@@ -748,8 +769,8 @@ Technique.mass_spectrometry = Technique(
 Technique.micro_computed_tomography = Technique(
     id="https://openminds.om-i.org/instances/technique/microComputedTomography",
     definition="'Micro computed tomography' uses X-rays to create cross-sections of physical objects with resolution in the micrometer range that can be used to recreate 3-dimensional models [adapted from [Wikipedia](https://en.wikipedia.org/wiki/X-ray_microtomography)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0489243"),
     name="micro computed tomography",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0489243"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0514122"),
     synonyms=["micro CT", "microtomography", "X-ray microtomography", "X-ray micro computed tomography"],
 )
@@ -757,9 +778,9 @@ Technique.microtome_sectioning = Technique(
     id="https://openminds.om-i.org/instances/technique/microtomeSectioning",
     definition="A technique used to cut specimen in thin slices using a microtome.",
     description="The microtome cutting thickness can range between 50 nanometer and 100 micrometer.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739422"),
     name="microtome sectioning",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/212"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/212"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739422"),
     synonyms=["microtomy"],
 )
 Technique.motion_capture = Technique(
@@ -789,9 +810,9 @@ Technique.multiple_whole_cell_patch_clamp = Technique(
 Technique.myelin_staining = Technique(
     id="https://openminds.om-i.org/instances/technique/myelinStaining",
     definition="A technique used to selectively alter the appearance of myelin (sheaths) that surround the nerve cell axons.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0107265"),
     name="myelin staining",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2248"),
+    preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2248"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0107265"),
 )
 Technique.myelin_water_imaging = Technique(
     id="https://openminds.om-i.org/instances/technique/myelinWaterImaging",
@@ -802,8 +823,8 @@ Technique.myelin_water_imaging = Technique(
 Technique.near_infrared_spectroscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/nearInfraredSpectroscopy",
     definition="A noninvasive technique that uses the differential absorption properties of hemoglobin and myoglobin to evaluate tissue oxygenation and indirectly can measure regional hemodynamics and blood flow [taken from [Interlex](http://uri.interlex.org/base/ilx_0488397)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0488397"),
     name="near infrared spectroscopy",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0488397"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0028692"),
 )
 Technique.neuromorphic_simulation = Technique(
@@ -819,8 +840,8 @@ Technique.nissl_staining = Technique(
 Technique.nonlinear_optical_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/nonlinearOpticalMicroscopy",
     definition="Microscopic imaging techniques that utilize nonlinear responses of light-matter interactions which occur with high-intensity illumination, such as from lasers, and specialized light signal detection instrumentation to produce images without the need for dyes or fluorescent labels. [taken from [Interlex](http://uri.interlex.org/base/ilx_0436517)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0436517"),
     name="nonlinear optical microscopy",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0436517"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M000623844"),
 )
 Technique.nucleic_acid_extraction = Technique(
@@ -867,8 +888,9 @@ Technique.perfusion_fixation_technique = Technique(
 Technique.perfusion_technique = Technique(
     id="https://openminds.om-i.org/instances/technique/perfusionTechnique",
     definition="Perfusion is a technique to distribute fluid through the circulatory system or lymphatic system to an organ or a tissue.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739602"),
     name="perfusion technique",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0739602"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739602"),
 )
 Technique.perturbational_complexity_index_measurement = Technique(
     id="https://openminds.om-i.org/instances/technique/perturbationalComplexityIndexMeasurement",
@@ -877,9 +899,9 @@ Technique.perturbational_complexity_index_measurement = Technique(
 Technique.phase_contrast_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/phaseContrastMicroscopy",
     definition="Optical microscopy technique that converts phase shifts in light passing through a transparent specimen to brightness changes in the image [taken from [Wikipedia](https://en.wikipedia.org/wiki/Phase-contrast_microscopy)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739510"),
     name="phase contrast microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/158"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/158"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739510"),
     synonyms=["phase-contrast microscopy", "PCM"],
 )
 Technique.phase_contrast_x_ray_computed_tomography = Technique(
@@ -911,16 +933,16 @@ Technique.photoinactivation = Technique(
 Technique.photoplethysmography = Technique(
     id="https://openminds.om-i.org/instances/technique/photoplethysmography",
     definition="Photoplethysmography is a non-invasive technique to optically detect blood volume changes in the micro-vascular bed of tissue by measuring the transmissive absorption and/or the reflection of light by the skin.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0487650"),
     name="photoplethysmography",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0487650"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0026056"),
     synonyms=["PPG"],
 )
 Technique.polarized_light_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/polarizedLightMicroscopy",
     definition="Polarized light microscopy comprises all optical microscopy techniques involving polarized light.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0485478"),
     name="polarized light microscopy",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0485478"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0013816"),
     synonyms=["polarized-light microscopy"],
 )
@@ -1005,8 +1027,8 @@ Technique.retrograde_tracing = Technique(
 Technique.rna_sequencing = Technique(
     id="https://openminds.om-i.org/instances/technique/RNASequencing",
     definition="'RNA sequencing' refers to a group of techniques that are used to (directly or indirectly) determine the order of nucleotides (nucleic acid sequence) in RNA.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0782092"),
     name="RNA sequencing",
+    other_ontology_identifiers=["http://uri.interlex.org/ilx_0782092"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/OBI_0001177"),
     synonyms=["ribonucleic acid sequencing", "ribonucleic acid sequencing assay", "RNA sequencing assay", "RNA-Seq"],
 )
@@ -1017,11 +1039,9 @@ Technique.rule_based_modeling = Technique(
 Technique.scanning_electron_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/scanningElectronMicroscopy",
     definition="Scanning electron microscopy is a microscopy technique to produce images of a specimen by scanning the surface with focused beam of electrons.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739710"),
     name="scanning electron microscopy",
-    preferred_ontology_identifier=IRI(
-        "http://uri.interlex.org/tgbugs/uris/readable/technique/scanningElectronMicroscopy"
-    ),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/technique/scanningElectronMicroscopy"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739710"),
     synonyms=["SEM", "scanning electron microscopy technique"],
 )
 Technique.scattered_light_imaging = Technique(
@@ -1051,9 +1071,9 @@ Technique.sharp_electrode_intracellular_electrophysiology = Technique(
     id="https://openminds.om-i.org/instances/technique/sharpElectrodeIntracellularElectrophysiology",
     definition="An intracellular electrophysiology technique where a microelectrode/micropipette is used to measure electrical properties of a single cell, e.g. a neuron.",
     description="This technique uses a fine-tipped micropipette/microelectrode that is inserted into the neuron, allowing direct recording of electrical events generated by the neuron (membrane potential, resistance, time constant, synaptic potentials and action potentials).",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739713"),
     name="sharp electrode intracellular electrophysiology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/technique/sharpElectrodeEphys"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/technique/sharpElectrodeEphys"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739713"),
     synonyms=[
         "sharp electrode technique",
         "sharp intracellular electrode technique",
@@ -1065,9 +1085,9 @@ Technique.silver_staining = Technique(
     id="https://openminds.om-i.org/instances/technique/silverStaining",
     definition="A technique where the appearance of biological subcellular targets (e.g. proteins, RNA or DNA) is selectively alter by use of silver.",
     description="Silver can be used to stain subcellular targets such as proteins, peptide, carbohydrates, RNA or DNA. This techniques is typically used on histological sections prior to light microscopy, for the detection of proteins and peptides in polyacrylamide gels or gel electrophoresis.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0110626"),
     name="silver staining",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_152217"),
+    preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_152217"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0110626"),
     synonyms=["silver stain"],
 )
 Technique.simulation = Technique(
@@ -1095,8 +1115,8 @@ Technique.single_gene_analysis = Technique(
 Technique.single_nucleotide_polymorphism_detection = Technique(
     id="https://openminds.om-i.org/instances/technique/singleNucleotidePolymorphismDetection",
     definition="'Single nucleotide polymorphism detection' refers to a group of techniques that are used to scan for new polymorphisms and to determine the allele(s) of a known polymorphism in target sequences (adapted from [Kwok and Chen, 2003](https://doi.org/10.21775/cimb.005.043)).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0780321"),
     name="single nucleotide polymorphism detection",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0780321"],
     preferred_ontology_identifier=IRI("http://edamontology.org/operation_0484"),
     synonyms=["SNP calling", "SNP detection", "SNP discovery"],
 )
@@ -1113,8 +1133,8 @@ Technique.sonography = Technique(
 Technique.standardization = Technique(
     id="https://openminds.om-i.org/instances/technique/standardization",
     definition="'Standardization' is the process of providing (meta)data according to a consensus of different parties (e.g., firms, users, interest groups, organizations and governments).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0479520"),
     name="standardization",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0479520"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0018674"),
 )
 Technique.stereoelectroencephalography = Technique(
@@ -1133,9 +1153,9 @@ Technique.stereoelectroencephalography = Technique(
 Technique.stereology = Technique(
     id="https://openminds.om-i.org/instances/technique/stereology",
     definition="An imaging assay that is used for the three-dimensional interpretation of planar sections of materials or tissues.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0739729"),
     name="stereology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/79"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/79"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739729"),
 )
 Technique.stereotactic_surgery = Technique(
     id="https://openminds.om-i.org/instances/technique/stereotacticSurgery",
@@ -1164,9 +1184,9 @@ Technique.subdural_electrocorticography = Technique(
 Technique.super_resolution_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/superResolutionMicroscopy",
     definition="Techniques in optical microscopy that allow images to have resolutions higher than those imposed by the diffraction limit, due to the diffraction of light [taken from [Wikipedia](https://en.wikipedia.org/wiki/Super-resolution_microscopy)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739445"),
     name="super resolution microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/218"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/218"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739445"),
     synonyms=["super-resolution microscopy"],
 )
 Technique.susceptibility_weighted_imaging = Technique(
@@ -1219,9 +1239,9 @@ Technique.timms_staining = Technique(
     id="https://openminds.om-i.org/instances/technique/TimmsStaining",
     definition="A technique used to selectively visualize a variety of metals (e.g. zinc, copper, iron) in biological tissue based on sulphide-precipitation of metals in the tissue.",
     description="The principle of this technique is that metals in the tissue can be transformed histochemically to metal sulphide. Subsequently, metal sulphide catalyze the reduction of silver ions by a reducing agent to metallic grains that are visible under a light or electron microscope.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0107265"),
     name="Timm's staining",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2248"),
+    preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/birnlex_2248"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0107265"),
     synonyms=["Timm's stain", "Timm's sulfide silver staining"],
 )
 Technique.tissue_clearing = Technique(
@@ -1241,9 +1261,9 @@ Technique.transcardial_perfusion_fixation_technique = Technique(
 Technique.transcardial_perfusion_technique = Technique(
     id="https://openminds.om-i.org/instances/technique/transcardialPerfusionTechnique",
     definition="Transcardial perfusion is a technique to distribute fluid throughout tissue via the heart.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739695"),
     name="transcardial perfusion technique",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/167"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/167"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739695"),
     synonyms=["intracardiac perfusion technique", "intracardial perfusion technique"],
 )
 Technique.transmission_electron_microscopy = Technique(
@@ -1255,9 +1275,9 @@ Technique.transmission_electron_microscopy = Technique(
 Technique.two_photon_fluorescence_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/twoPhotonFluorescenceMicroscopy",
     definition="Two-photon fluorescence microscopy is a fluorescence microscopy technique for living tissue which is based on the simultaneous excitation by two photons with longer wavelength than the emitted light.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739658"),
     name="two-photon fluorescence microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/technique/twoPhoton"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/technique/twoPhoton"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739658"),
     synonyms=[
         "2-photon excitation microscopy",
         "2-photon fluorescence microscopy",
@@ -1354,8 +1374,8 @@ Technique.whole_cell_patch_clamp = Technique(
 Technique.whole_genome_sequencing = Technique(
     id="https://openminds.om-i.org/instances/technique/wholeGenomeSequencing",
     definition="'Whole genome sequencing' is a genetic test (sequencing technique) to determine the entire, or nearly the entire, DNA sequence of an organism's genome at a single time. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Whole_genome_sequencing)]",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0492452"),
     name="whole genome sequencing",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0492452"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M000621306"),
     synonyms=["complete genome sequencing", "entire genome sequencing", "full genome sequencing", "WGS"],
 )

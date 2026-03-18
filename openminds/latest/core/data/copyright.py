@@ -28,7 +28,7 @@ class Copyright(EmbeddedMetadata):
         ),
         Property(
             "holders",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
+            ["openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "holder",
             multiple=True,
             unique_items=True,

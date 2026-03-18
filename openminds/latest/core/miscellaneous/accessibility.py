@@ -4,6 +4,8 @@
 
 # this file was auto-generated!
 
+from openminds.base import IRI
+
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
@@ -72,3 +74,108 @@ class Accessibility(LinkedMetadata):
             payment_models=payment_models,
             process=process,
         )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(
+        cls,
+        name: str,
+        match: str = "equals",
+        all: bool = False,
+    ):
+        """
+        Search for instances in the openMINDS instance library based on their name.
+
+        This includes properties "name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation", and "synonyms".
+
+        Note that not all metadata classes have a name.
+
+        Args:
+            name (str): a string to search for.
+            match (str, optional): either "equals" (exact match - default) or "contains".
+            all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
+        """
+        namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                keys = []
+                for prop_name in namelike_properties:
+                    if hasattr(instance, prop_name):
+                        keys.append(getattr(instance, prop_name))
+                if hasattr(instance, "synonyms"):
+                    for synonym in instance.synonyms or []:
+                        keys.append(synonym)
+                for key in keys:
+                    if key in cls._instance_lookup:
+                        cls._instance_lookup[key].append(instance)
+                    else:
+                        cls._instance_lookup[key] = [instance]
+        if match == "equals":
+            matches = cls._instance_lookup.get(name, [])
+        elif match == "contains":
+            matches = []
+            for key, instances in cls._instance_lookup.items():
+                if name in key:
+                    matches.extend(instances)
+        else:
+            raise ValueError("'match' must be either 'equals' or 'contains'")
+        if not matches:
+            return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
+
+
+Accessibility.direct_physical_single_payment_model_controlled_access = Accessibility(
+    id="https://openminds.om-i.org/instances/accessibilities/directPhysicalSingle-paymentModelControlledAccess",
+    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/physicalAccess"},
+    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/controlledAccess"},
+    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
+    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/single-paymentModel"}],
+    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/immediateAccess"},
+)
+Accessibility.direct_virtual_authenticated_controlled_access = Accessibility(
+    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthenticatedControlledAccess",
+    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
+    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/controlledAccess"},
+    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
+    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
+    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/authenticatedAccess"},
+)
+Accessibility.direct_virtual_authorized_controlled_access = Accessibility(
+    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthorizedControlledAccess",
+    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
+    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/controlledAccess"},
+    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
+    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
+    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/authorizedAccess"},
+)
+Accessibility.direct_virtual_authorized_restricted_access = Accessibility(
+    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthorizedRestrictedAccess",
+    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
+    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/restrictedAccess"},
+    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
+    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
+    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/authorizedAccess"},
+)
+Accessibility.direct_virtual_open_access = Accessibility(
+    id="https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess",
+    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
+    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/openAccess"},
+    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
+    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
+    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/immediateAccess"},
+)
+Accessibility.mediated_virtual_authorized_restricted_access = Accessibility(
+    id="https://openminds.om-i.org/instances/accessibilities/mediatedVirtualAuthorizedRestrictedAccess",
+    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
+    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/restrictedAccess"},
+    form={"@id": "https://openminds.om-i.org/instances/accessForm/mediatedAccess"},
+    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
+    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/authorizedAccess"},
+)

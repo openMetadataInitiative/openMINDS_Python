@@ -20,7 +20,7 @@ class UsageAgreement(LinkedMetadata):
     properties = [
         Property(
             "authoring_parties",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
+            ["openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "authoringParty",
             multiple=True,
             unique_items=True,

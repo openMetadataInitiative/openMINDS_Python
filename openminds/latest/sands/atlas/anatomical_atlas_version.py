@@ -38,6 +38,27 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             instructions="Add the accessibility of the data for this research product version.",
         ),
         Property(
+            "contributions",
+            "openminds.latest.core.Contribution",
+            "contribution",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            required=True,
+            description="no description available",
+            instructions="Add all individual, organisational, or consortial contributions to this research product version. These values override the inherited values from the version-independent product.",
+        ),
+        Property(
+            "contributor_affiliations",
+            "openminds.latest.core.Affiliation",
+            "contributorAffiliation",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all affiliations for the individual contributors to this research product version.",
+        ),
+        Property(
             "coordinate_framework",
             "openminds.latest.sands.CommonCoordinateFrameworkVersion",
             "coordinateFramework",
@@ -52,23 +73,14 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             instructions="Enter the copyright information of this research product version.",
         ),
         Property(
-            "custodians",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
-            "custodian",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="The 'custodian' is a legal person who is responsible for the content and quality of the data, metadata, and/or code of a research product.",
-            instructions="Add all parties that fulfill the role of a custodian for the research product version (e.g., a research group leader or principle investigator). Custodians are typically the main contact in case of misconduct, obtain permission from the contributors to publish personal information, and maintain the content and quality of the data, metadata, and/or code of the research product version.",
-        ),
-        Property(
             "description",
             str,
             "description",
             formatting="text/markdown",
             multiline=True,
+            required=True,
             description="Longer statement or account giving the characteristics of the anatomical atlas version.",
-            instructions="Enter a description (or abstract) of this research product version. Note that this version specific description will overwrite the description for the overarching dataset.",
+            instructions="Enter a description (or abstract) of this research product version. This value overrides the inherited value from the version-independent product.",
         ),
         Property(
             "digital_identifier",
@@ -78,25 +90,26 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             instructions="Add the globally unique and persistent digital identifier of this research product version.",
         ),
         Property(
-            "full_documentation",
+            "documentation",
             [
                 "openminds.latest.core.DOI",
                 "openminds.latest.core.File",
                 "openminds.latest.core.ISBN",
                 "openminds.latest.core.WebResource",
             ],
-            "fullDocumentation",
+            "documentation",
             required=True,
-            description="Non-abridged instructions, comments, and information for using a particular product.",
-            instructions="Add the publication or file that acts as the full documentation of this research product version.",
+            description="no description available",
+            instructions="Add the publication or file that acts as the documentation of this research product version. This value overrides the inherited value from the version-independent product.",
         ),
         Property(
             "full_name",
             str,
             "fullName",
             formatting="text/plain",
+            required=True,
             description="Whole, non-abbreviated name of the anatomical atlas version.",
-            instructions="Enter a descriptive full name (or title) for this research product version. Note that this version specific full name will overwrite the full name for the overarching dataset.",
+            instructions="Enter a descriptive full name (or title) for this research product version. This value overrides the inherited value from the version-independent product.",
         ),
         Property(
             "funding",
@@ -121,7 +134,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             IRI,
             "homepage",
             description="Main website of the anatomical atlas version.",
-            instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version.",
+            instructions="Enter the internationalized resource identifier (IRI) to the homepage of this research product version. This value overrides the inherited value from the version-independent product.",
         ),
         Property(
             "how_to_cite",
@@ -167,8 +180,10 @@ class AnatomicalAtlasVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.AccessProcessType",
                 "openminds.latest.controlled_terms.ActionStatusType",
                 "openminds.latest.controlled_terms.AgeCategory",
+                "openminds.latest.controlled_terms.AgeReference",
                 "openminds.latest.controlled_terms.AnalysisTechnique",
                 "openminds.latest.controlled_terms.AnatomicalAxesOrientation",
+                "openminds.latest.controlled_terms.AnatomicalCavity",
                 "openminds.latest.controlled_terms.AnatomicalIdentificationType",
                 "openminds.latest.controlled_terms.AnatomicalPlane",
                 "openminds.latest.controlled_terms.AnnotationCriteriaType",
@@ -200,6 +215,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.EducationalLevel",
                 "openminds.latest.controlled_terms.ElectricalStimulusType",
                 "openminds.latest.controlled_terms.ExperimentalApproach",
+                "openminds.latest.controlled_terms.ExternalBodyRegion",
                 "openminds.latest.controlled_terms.FileBundleGrouping",
                 "openminds.latest.controlled_terms.FileRepositoryType",
                 "openminds.latest.controlled_terms.FileUsageRole",
@@ -209,7 +225,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.Language",
                 "openminds.latest.controlled_terms.Laterality",
                 "openminds.latest.controlled_terms.LearningResourceType",
-                "openminds.latest.controlled_terms.MRICoilRole",
+                "openminds.latest.controlled_terms.MRIFatSuppressionTechnique",
                 "openminds.latest.controlled_terms.MRIParallelAcquisitionTechnique",
                 "openminds.latest.controlled_terms.MRIPulseSequence",
                 "openminds.latest.controlled_terms.MRISpoilingTechnique",
@@ -224,25 +240,30 @@ class AnatomicalAtlasVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.ModificationForm",
                 "openminds.latest.controlled_terms.ModificationScope",
                 "openminds.latest.controlled_terms.MolecularEntity",
+                "openminds.latest.controlled_terms.MuscularStructure",
+                "openminds.latest.controlled_terms.NervousSystemStructure",
                 "openminds.latest.controlled_terms.OlfactoryStimulusType",
                 "openminds.latest.controlled_terms.OperatingDevice",
                 "openminds.latest.controlled_terms.OperatingSystem",
+                "openminds.latest.controlled_terms.OperationalApproach",
                 "openminds.latest.controlled_terms.OpticalStimulusType",
                 "openminds.latest.controlled_terms.Organ",
+                "openminds.latest.controlled_terms.OrganSystemStructure",
                 "openminds.latest.controlled_terms.OrganismSubstance",
                 "openminds.latest.controlled_terms.OrganismSystem",
                 "openminds.latest.controlled_terms.OrganizationType",
                 "openminds.latest.controlled_terms.PatchClampVariation",
                 "openminds.latest.controlled_terms.PaymentModelType",
                 "openminds.latest.controlled_terms.PreparationType",
-                "openminds.latest.controlled_terms.ProductAccessibility",
                 "openminds.latest.controlled_terms.ProgrammingLanguage",
+                "openminds.latest.controlled_terms.ProjectType",
                 "openminds.latest.controlled_terms.PublicationStatus",
                 "openminds.latest.controlled_terms.PulseShape",
                 "openminds.latest.controlled_terms.QualitativeOverlap",
                 "openminds.latest.controlled_terms.SemanticDataType",
-                "openminds.latest.controlled_terms.Service",
                 "openminds.latest.controlled_terms.SetupType",
+                "openminds.latest.controlled_terms.SignalDirectionality",
+                "openminds.latest.controlled_terms.SkeletalStructure",
                 "openminds.latest.controlled_terms.SoftwareApplicationCategory",
                 "openminds.latest.controlled_terms.SoftwareFeature",
                 "openminds.latest.controlled_terms.SovereignState",
@@ -259,17 +280,19 @@ class AnatomicalAtlasVersion(LinkedMetadata):
                 "openminds.latest.controlled_terms.Terminology",
                 "openminds.latest.controlled_terms.TissueSampleAttribute",
                 "openminds.latest.controlled_terms.TissueSampleType",
+                "openminds.latest.controlled_terms.TissueStructure",
                 "openminds.latest.controlled_terms.TypeOfUncertainty",
-                "openminds.latest.controlled_terms.UBERONParcellation",
                 "openminds.latest.controlled_terms.UnitOfMeasurement",
+                "openminds.latest.controlled_terms.VascularStructure",
                 "openminds.latest.controlled_terms.VisualStimulusType",
+                "openminds.latest.controlled_terms.WeightType",
             ],
             "keyword",
             multiple=True,
             unique_items=True,
             min_items=1,
             description="Significant word or concept that are representative of the anatomical atlas version.",
-            instructions="Add all relevant keywords to this research product version either by adding controlled terms or by suggesting new terms.",
+            instructions="Add all relevant keywords to this research product version either by adding controlled terms or by suggesting new terms. This value overrides the inherited value from the version-independent product.",
         ),
         Property(
             "major_version_identifier",
@@ -287,16 +310,6 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             instructions="Enter the internationalized resource identifier (IRI) to the related ontological term matching this anatomical atlas version.",
         ),
         Property(
-            "other_contributions",
-            "openminds.latest.core.Contribution",
-            "otherContribution",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="Giving or supplying of something (such as money or time) as a part or share other than what is covered elsewhere.",
-            instructions="Add any other contributions to this research product version that are not covered under 'author'/'developer' or 'custodian'.",
-        ),
-        Property(
             "publication_status",
             "openminds.latest.controlled_terms.PublicationStatus",
             "publicationStatus",
@@ -307,6 +320,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             "related_publications",
             [
                 "openminds.latest.core.DOI",
+                "openminds.latest.core.GenericIdentifier",
                 "openminds.latest.core.HANDLE",
                 "openminds.latest.core.ISBN",
                 "openminds.latest.core.ISSN",
@@ -319,7 +333,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Reference to something that was made available for the general public to see or buy.",
-            instructions="Add all further publications besides the full documentation that provide the original context for the production of this research product version (e.g., an original research article that used or produced the data of this research product version).",
+            instructions="Add all further publications besides the documentation that provide the original context for the production of this research product version (e.g., an original research article that used or produced the data of this research product version). This value overrides the inherited value from the version-independent product.",
         ),
         Property(
             "release_date",
@@ -343,7 +357,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             formatting="text/plain",
             required=True,
             description="Shortened or fully abbreviated name of the anatomical atlas version.",
-            instructions="Enter a short name (or alias) for this research product version that could be used as a shortened display title (e.g., for web services with too little space to display the full name).",
+            instructions="Enter a short name (or alias) for this research product version that could be used as a shortened display title (e.g., for web services with too little space to display the full name). This value overrides the inherited value from the version-independent product.",
         ),
         Property(
             "support_channels",
@@ -354,7 +368,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             min_items=1,
             formatting="text/plain",
             description="Way of communication used to interact with users or customers.",
-            instructions="Enter all channels through which a user can receive support for handling this research product version.",
+            instructions="Enter all channels through which a user can receive support for handling this research product version. This value overrides the inherited value from the version-independent product.",
         ),
         Property(
             "type",
@@ -372,7 +386,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="no description available",
-            instructions="Add all licenses and available data usage agreements applicable to this product version. Inherited by all product versions unless overridden at the version level.",
+            instructions="Add all licenses and available data usage agreements applicable to this product version.",
         ),
         Property(
             "used_specimens",
@@ -399,13 +413,12 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             instructions="Enter the version identifier of this research product version.",
         ),
         Property(
-            "version_innovation",
+            "version_specification",
             str,
-            "versionInnovation",
-            formatting="text/markdown",
-            multiline=True,
+            "versionSpecification",
+            formatting="text/plain",
             required=True,
-            description="Documentation on what changed in comparison to a previously published form of something.",
+            description="no description available",
             instructions="Enter a short description (or summary) of the novelties/peculiarities of this research product version in comparison to its preceding versions. If this research product version is the first version, you can enter the following disclaimer 'This is the first version of this research product'.",
         ),
     ]
@@ -415,12 +428,13 @@ class AnatomicalAtlasVersion(LinkedMetadata):
         id=None,
         abbreviation=None,
         accessibility=None,
+        contributions=None,
+        contributor_affiliations=None,
         coordinate_framework=None,
         copyright=None,
-        custodians=None,
         description=None,
         digital_identifier=None,
-        full_documentation=None,
+        documentation=None,
         full_name=None,
         funding=None,
         has_terminology=None,
@@ -432,7 +446,6 @@ class AnatomicalAtlasVersion(LinkedMetadata):
         keywords=None,
         major_version_identifier=None,
         ontology_identifier=None,
-        other_contributions=None,
         publication_status=None,
         related_publications=None,
         release_date=None,
@@ -443,18 +456,19 @@ class AnatomicalAtlasVersion(LinkedMetadata):
         usage_conditions=None,
         used_specimens=None,
         version_identifier=None,
-        version_innovation=None,
+        version_specification=None,
     ):
         return super().__init__(
             id=id,
             abbreviation=abbreviation,
             accessibility=accessibility,
+            contributions=contributions,
+            contributor_affiliations=contributor_affiliations,
             coordinate_framework=coordinate_framework,
             copyright=copyright,
-            custodians=custodians,
             description=description,
             digital_identifier=digital_identifier,
-            full_documentation=full_documentation,
+            documentation=documentation,
             full_name=full_name,
             funding=funding,
             has_terminology=has_terminology,
@@ -466,7 +480,6 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             keywords=keywords,
             major_version_identifier=major_version_identifier,
             ontology_identifier=ontology_identifier,
-            other_contributions=other_contributions,
             publication_status=publication_status,
             related_publications=related_publications,
             release_date=release_date,
@@ -477,7 +490,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             usage_conditions=usage_conditions,
             used_specimens=used_specimens,
             version_identifier=version_identifier,
-            version_innovation=version_innovation,
+            version_specification=version_specification,
         )
 
     @classmethod
@@ -539,7 +552,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
 AnatomicalAtlasVersion.aal1_spm12_v4 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/AAL1_SPM12-v4",
     abbreviation="AAL1",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -602,12 +615,12 @@ AnatomicalAtlasVersion.aal1_spm12_v4 = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-ND-4.0"}],
     version_identifier="SPM12, v4",
-    version_innovation="This is the 2018 release of the SPM12 version of the AAL Atlas 1 containing 3D definitions of 45 anatomical volumes of interest in each hemisphere.",
+    version_specification="This is the 2018 release of the SPM12 version of the AAL Atlas 1 containing 3D definitions of 45 anatomical volumes of interest in each hemisphere.",
 )
 AnatomicalAtlasVersion.amba_cc_fv3_2015 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/AMBA_CCFv3-2015",
     abbreviation="AMBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/AMB-CCF_v3"},
     full_name="Allen Mouse Brain Atlas",
     has_terminology={
@@ -4124,7 +4137,7 @@ AnatomicalAtlasVersion.amba_cc_fv3_2015 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.amba_cc_fv3_2017 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/AMBA_CCFv3-2017",
     abbreviation="AMBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/AMB-CCF_v3"},
     full_name="Allen Mouse Brain Atlas",
     has_terminology={
@@ -7761,7 +7774,7 @@ AnatomicalAtlasVersion.amba_cc_fv3_2017 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.ba_human_1909 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/BA-human_1909",
     abbreviation="BA-human",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     full_name="Brodmann Cortical Parcellation Scheme (human)",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -7826,12 +7839,12 @@ AnatomicalAtlasVersion.ba_human_1909 = AnatomicalAtlasVersion(
     short_name="Brodmann Areas (human)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/parcellationScheme"},
     version_identifier="1909",
-    version_innovation="This is the second released version of the human Brodmann cortical parcellation scheme.",
+    version_specification="This is the second released version of the human Brodmann cortical parcellation scheme.",
 )
 AnatomicalAtlasVersion.dwma_2018 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/DWMA_2018",
     abbreviation="DWMA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -7870,12 +7883,12 @@ AnatomicalAtlasVersion.dwma_2018 = AnatomicalAtlasVersion(
     short_name="Deep White Matter Atlas",
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"}],
     version_identifier="2018",
-    version_innovation="This is the first released version of this brain atlas.",
+    version_specification="This is the first released version of this brain atlas.",
 )
 AnatomicalAtlasVersion.jba_v1_13__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v1.13-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFramework/MNI-Colin27_1998"},
     full_name="Julich-Brain Cytoarchitectonic Atlas",
     has_terminology={
@@ -8095,12 +8108,12 @@ AnatomicalAtlasVersion.jba_v1_13__colin27 = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/probabilisticAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"}],
     version_identifier="v1.13, Colin27",
-    version_innovation="This is the first release of the Julich-Brain Atlas using the common coordinate space Colin27 (1998).",
+    version_specification="This is the first release of the Julich-Brain Atlas using the common coordinate space Colin27 (1998).",
 )
 AnatomicalAtlasVersion.jba_v1_18__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v1.18-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -8419,7 +8432,7 @@ AnatomicalAtlasVersion.jba_v1_18__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v1_18_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v1.18-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -8707,12 +8720,12 @@ AnatomicalAtlasVersion.jba_v1_18_mni152 = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/probabilisticAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"}],
     version_identifier="v1.18, MNI152",
-    version_innovation="This is the first release of the Julich-Brain Atlas using the common coordinate space MNI ICBM152 (2009c Nonlinear Asymmetric).",
+    version_specification="This is the first release of the Julich-Brain Atlas using the common coordinate space MNI ICBM152 (2009c Nonlinear Asymmetric).",
 )
 AnatomicalAtlasVersion.jba_v2_2__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.2-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -9058,7 +9071,7 @@ AnatomicalAtlasVersion.jba_v2_2__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v2_2_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.2-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -9326,7 +9339,7 @@ AnatomicalAtlasVersion.jba_v2_2_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v2_4__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.4-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -9672,7 +9685,7 @@ AnatomicalAtlasVersion.jba_v2_4__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v2_4_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.4-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -9940,7 +9953,7 @@ AnatomicalAtlasVersion.jba_v2_4_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v2_5__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.5-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -10291,7 +10304,7 @@ AnatomicalAtlasVersion.jba_v2_5__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v2_5_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.5-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -10566,7 +10579,7 @@ AnatomicalAtlasVersion.jba_v2_5_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v2_6_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.6-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -10840,7 +10853,7 @@ AnatomicalAtlasVersion.jba_v2_6_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v2_9__big_brain = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.9-BigBrain",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/BigBrain_2015"
     },
@@ -10905,12 +10918,12 @@ AnatomicalAtlasVersion.jba_v2_9__big_brain = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"}],
     version_identifier="v2.9, BigBrain",
-    version_innovation="This is the first release of the Julich-Brain Atlas using the common coordinate space BigBrain (2015).",
+    version_specification="This is the first release of the Julich-Brain Atlas using the common coordinate space BigBrain (2015).",
 )
 AnatomicalAtlasVersion.jba_v2_9__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.9-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -11333,7 +11346,7 @@ AnatomicalAtlasVersion.jba_v2_9__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v2_9_fsaverage = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.9-fsaverage",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_7"},
     full_name="Julich-Brain Cytoarchitectonic Atlas",
     has_terminology={
@@ -11748,12 +11761,12 @@ AnatomicalAtlasVersion.jba_v2_9_fsaverage = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/probabilisticAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"}],
     version_identifier="v2.9, fsaverage",
-    version_innovation="This is the first release of the Julich-Brain Atlas using the common coordinate space FsAverage (7).",
+    version_specification="This is the first release of the Julich-Brain Atlas using the common coordinate space FsAverage (7).",
 )
 AnatomicalAtlasVersion.jba_v2_9_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v2.9-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -12074,7 +12087,7 @@ AnatomicalAtlasVersion.jba_v2_9_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_1__big_brain = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.1-BigBrain",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/BigBrain_2015"
     },
@@ -12184,7 +12197,7 @@ AnatomicalAtlasVersion.jba_v3_0_1__big_brain = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_1__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.1-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -12709,7 +12722,7 @@ AnatomicalAtlasVersion.jba_v3_0_1__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_1_fsaverage = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.1-fsaverage",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_7"},
     full_name="Julich-Brain Cytoarchitectonic Atlas",
     has_terminology={
@@ -13156,7 +13169,7 @@ AnatomicalAtlasVersion.jba_v3_0_1_fsaverage = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_1_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.1-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -13665,7 +13678,7 @@ AnatomicalAtlasVersion.jba_v3_0_1_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_2__big_brain = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.2-BigBrain",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/BigBrain_2015"
     },
@@ -13775,7 +13788,7 @@ AnatomicalAtlasVersion.jba_v3_0_2__big_brain = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_2__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.2-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -14300,7 +14313,7 @@ AnatomicalAtlasVersion.jba_v3_0_2__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_2_fsaverage = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.2-fsaverage",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_7"},
     full_name="Julich-Brain Cytoarchitectonic Atlas",
     has_terminology={
@@ -14747,7 +14760,7 @@ AnatomicalAtlasVersion.jba_v3_0_2_fsaverage = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_2_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.2-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -15256,7 +15269,7 @@ AnatomicalAtlasVersion.jba_v3_0_2_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_3__big_brain = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.3-BigBrain",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/BigBrain_2015"
     },
@@ -15366,7 +15379,7 @@ AnatomicalAtlasVersion.jba_v3_0_3__big_brain = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_3__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.3-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -15891,7 +15904,7 @@ AnatomicalAtlasVersion.jba_v3_0_3__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_3_fsaverage = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.3-fsaverage",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_7"},
     full_name="Julich-Brain Cytoarchitectonic Atlas",
     has_terminology={
@@ -16338,7 +16351,7 @@ AnatomicalAtlasVersion.jba_v3_0_3_fsaverage = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_3_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0.3-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -16847,7 +16860,7 @@ AnatomicalAtlasVersion.jba_v3_0_3_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0__big_brain = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0-BigBrain",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/BigBrain_2015"
     },
@@ -16917,7 +16930,7 @@ AnatomicalAtlasVersion.jba_v3_0__big_brain = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0__colin27 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0-Colin27",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-Colin27_1998"
     },
@@ -17406,7 +17419,7 @@ AnatomicalAtlasVersion.jba_v3_0__colin27 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_fsaverage = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0-fsaverage",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsaverage_7"},
     full_name="Julich-Brain Cytoarchitectonic Atlas",
     has_terminology={
@@ -17841,7 +17854,7 @@ AnatomicalAtlasVersion.jba_v3_0_fsaverage = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.jba_v3_0_mni152 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/JBA_v3.0-MNI152",
     abbreviation="JBA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -18228,11 +18241,11 @@ AnatomicalAtlasVersion.jba_v3_0_mni152 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.marmoset_nma_v1 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/MarmosetNMA_v1",
     abbreviation="MarmosetNMA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MarmosetNMT_v1"
     },
-    full_documentation={"@id": "https://www.marmosetbrain.org/nencki_monash_template"},
+    documentation={"@id": "https://www.marmosetbrain.org/nencki_monash_template"},
     full_name="Marmoset Nencki-Monash Probabilistic Cytoarchitectonic Brain Atlas",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -18507,17 +18520,19 @@ AnatomicalAtlasVersion.marmoset_nma_v1 = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/probabilisticAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"}],
     version_identifier="v1",
-    version_innovation="This is the first version of this atlas.",
+    version_specification="This is the first version of this atlas.",
 )
 AnatomicalAtlasVersion.pw_rbsc_cor_6th_ed__bregma_lia = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/PW-RBSC-cor_6th-ed-Bregma-LIA",
     abbreviation="PW-RBSC-cor",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/paidAccess"},
+    accessibility={
+        "@id": "https://openminds.om-i.org/instances/accessibilities/directPhysicalSingle-paymentModelControlledAccess"
+    },
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/PW-RBSC-corT_v2004-Bregma-LIA"
     },
     digital_identifier={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
-    full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
+    documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
     full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -21296,17 +21311,19 @@ AnatomicalAtlasVersion.pw_rbsc_cor_6th_ed__bregma_lia = AnatomicalAtlasVersion(
     short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     version_identifier="6th ed. (Bregma, LIA)",
-    version_innovation="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
+    version_specification="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
 )
 AnatomicalAtlasVersion.pw_rbsc_cor_6th_ed__bregma_ria = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/PW-RBSC-cor_6th-ed-Bregma-RIA",
     abbreviation="PW-RBSC-cor",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/paidAccess"},
+    accessibility={
+        "@id": "https://openminds.om-i.org/instances/accessibilities/directPhysicalSingle-paymentModelControlledAccess"
+    },
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/PW-RBSC-corT_v2004-Bregma-RIA"
     },
     digital_identifier={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
-    full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
+    documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
     full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -24085,17 +24102,19 @@ AnatomicalAtlasVersion.pw_rbsc_cor_6th_ed__bregma_ria = AnatomicalAtlasVersion(
     short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     version_identifier="6th ed. (Bregma, RIA)",
-    version_innovation="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
+    version_specification="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
 )
 AnatomicalAtlasVersion.pw_rbsc_cor_6th_ed__interaural_lsa = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/PW-RBSC-cor_6th-ed-Interaural-LSA",
     abbreviation="PW-RBSC-cor",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/paidAccess"},
+    accessibility={
+        "@id": "https://openminds.om-i.org/instances/accessibilities/directPhysicalSingle-paymentModelControlledAccess"
+    },
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/PW-RBSC-corT_v2004-Interaural-LSA"
     },
     digital_identifier={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
-    full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
+    documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
     full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -26874,17 +26893,19 @@ AnatomicalAtlasVersion.pw_rbsc_cor_6th_ed__interaural_lsa = AnatomicalAtlasVersi
     short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     version_identifier="6th ed. (Interaural, LSA)",
-    version_innovation="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
+    version_specification="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
 )
 AnatomicalAtlasVersion.pw_rbsc_cor_6th_ed__interaural_rsa = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/PW-RBSC-cor_6th-ed-Interaural-RSA",
     abbreviation="PW-RBSC-cor",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/paidAccess"},
+    accessibility={
+        "@id": "https://openminds.om-i.org/instances/accessibilities/directPhysicalSingle-paymentModelControlledAccess"
+    },
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/PW-RBSC-corT_v2004-Interaural-RSA"
     },
     digital_identifier={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
-    full_documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
+    documentation={"@id": "https://openminds.om-i.org/instances/ISBN/0-12-547612-4"},
     full_name="Paxinos and Watson's The Rat Brain in Stereotaxic Coordinates - Coronal Plates",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -29663,12 +29684,12 @@ AnatomicalAtlasVersion.pw_rbsc_cor_6th_ed__interaural_rsa = AnatomicalAtlasVersi
     short_name="Paxinos and Watson's Stereotaxic Rat Brain Atlas (Coronal)",
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     version_identifier="6th ed. (Interaural, RSA)",
-    version_innovation="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
+    version_specification="The 6th edition introduces color photographs of the coronal brain section. All diagrams from the previous editions have been completely revised [paraphrased from the ‘Preface’ of the book ISBN: 0-12-547612-4].",
 )
 AnatomicalAtlasVersion.schaefer_400p_2018_fs_lr32k_kong17n = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/Schaefer-400p_2018-fsLR32k-kong17n",
     abbreviation="Schaefer-400p",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsLR_32k"},
     full_name="Schaefer Atlas with 400 Parcellation",
     has_terminology={
@@ -29687,7 +29708,7 @@ AnatomicalAtlasVersion.schaefer_400p_2018_fs_lr32k_kong17n = AnatomicalAtlasVers
 AnatomicalAtlasVersion.schaefer_400p_2018_fs_lr32k_yeo17n = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/Schaefer-400p_2018-fsLR32k-yeo17n",
     abbreviation="Schaefer-400p",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsLR_32k"},
     full_name="Schaefer Atlas with 400 Parcellation",
     has_terminology={
@@ -29705,7 +29726,7 @@ AnatomicalAtlasVersion.schaefer_400p_2018_fs_lr32k_yeo17n = AnatomicalAtlasVersi
 AnatomicalAtlasVersion.schaefer_400p_2018_fs_lr32k_yeo7n = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/Schaefer-400p_2018-fsLR32k-yeo7n",
     abbreviation="Schaefer-400p",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/fsLR_32k"},
     full_name="Schaefer Atlas with 400 Parcellation",
     has_terminology={
@@ -29724,7 +29745,7 @@ AnatomicalAtlasVersion.schaefer_400p_2018_fs_lr32k_yeo7n = AnatomicalAtlasVersio
 AnatomicalAtlasVersion.schaefer_400p_2018_fsl_mni152_kong17n = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/Schaefer-400p_2018-FSL-MNI152-kong17n",
     abbreviation="Schaefer-400p",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     full_name="Schaefer Atlas with 400 Parcellation",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -29742,7 +29763,7 @@ AnatomicalAtlasVersion.schaefer_400p_2018_fsl_mni152_kong17n = AnatomicalAtlasVe
 AnatomicalAtlasVersion.schaefer_400p_2018_fsl_mni152_yeo17n = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/Schaefer-400p_2018-FSL-MNI152-yeo17n",
     abbreviation="Schaefer-400p",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     full_name="Schaefer Atlas with 400 Parcellation",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -29760,7 +29781,7 @@ AnatomicalAtlasVersion.schaefer_400p_2018_fsl_mni152_yeo17n = AnatomicalAtlasVer
 AnatomicalAtlasVersion.schaefer_400p_2018_fsl_mni152_yeo7n = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/Schaefer-400p_2018-FSL-MNI152-yeo7n",
     abbreviation="Schaefer-400p",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     full_name="Schaefer Atlas with 400 Parcellation",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -29778,12 +29799,12 @@ AnatomicalAtlasVersion.schaefer_400p_2018_fsl_mni152_yeo7n = AnatomicalAtlasVers
 AnatomicalAtlasVersion.swanson_bm_3rd_ed = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/SwansonBM_3rd-ed",
     abbreviation="SwansonBM",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/SwansonSRB_v1992"
     },
     digital_identifier={"@id": "https://openminds.om-i.org/instances/ISBN/0-126-10582-0"},
-    full_documentation={"@id": "https://larrywswanson.com/?page_id=164"},
+    documentation={"@id": "https://larrywswanson.com/?page_id=164"},
     full_name="Swanson's Brain Maps: Structure of the Rat Brain",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -33019,12 +33040,12 @@ AnatomicalAtlasVersion.swanson_bm_3rd_ed = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-4.0"}],
     version_identifier="3rd ed.",
-    version_innovation="The book’s third edition has returned to the large format of the first, and its photo of each atlas level with accompanying drawing of gray and white matter distribution. The new feature is a second drawing that illustrates major features of gray matter regionalization in a color-coded way that is carried through the flatmaps of the rat CNS (Frontispiece, Fig. 11, and poster) and the hierarchical nomenclature tables of section VIII. Changes to the Original Atlas: Two general types of change have been made to the second [editor note: 3rd] edition of the atlas. New architectonic information has been incorporated, and these changes are reflected in the annotated nomenclature tables, whose general organization has been improved. The following structures have been added or modified significantly: auditory areas (cortex), bed nuclei of the stria terminalis (simplified), capsular part of the central amygdalar nucleus, caudoputamen, ventral part of the dorsomedial hypothalamic nucleus, globus pallidus, internuclear area of the hypothalamic periventricular region, lateral hypothalamic area (parcelled), midbrain reticular nucleus, nucleus of the lateral lemniscus (parcelled), nucleus of the solitary tract, parasolitary nucleus, ventral premammillary nucleus, peripeduncular nucleus, parastrial nucleus, preparasubthalamic nucleus, parasubthalamic nucleus, anterior parvicellular part of the paraventricular hypothalamic nucleus, subparaventricular zone of the hypothalamus, substantia innominata, stria medullaris, parvicellular part of the subparafascicular nucleus (parcelled), temporal association areas (renamed), tuberal nucleus (parcelled), ventrolateral preoptic nucleus, ventrolateral hypothalamic tract. In addition, a limited number of spelling changes have been made. The American spelling of words like “taenia” has been adopted (“tenia”), and “amygdalar” has been substituted for “amygdaloid” and “amygdala”. For earlier versions of the atlas see CD-ROM files C1-3. See [full documentation](https://larrywswanson.com/?page_id=164), section: Preface and Chapter III: Preparation and Use of the Atlas.",
+    version_specification="The book’s third edition has returned to the large format of the first, and its photo of each atlas level with accompanying drawing of gray and white matter distribution. The new feature is a second drawing that illustrates major features of gray matter regionalization in a color-coded way that is carried through the flatmaps of the rat CNS (Frontispiece, Fig. 11, and poster) and the hierarchical nomenclature tables of section VIII. Changes to the Original Atlas: Two general types of change have been made to the second [editor note: 3rd] edition of the atlas. New architectonic information has been incorporated, and these changes are reflected in the annotated nomenclature tables, whose general organization has been improved. The following structures have been added or modified significantly: auditory areas (cortex), bed nuclei of the stria terminalis (simplified), capsular part of the central amygdalar nucleus, caudoputamen, ventral part of the dorsomedial hypothalamic nucleus, globus pallidus, internuclear area of the hypothalamic periventricular region, lateral hypothalamic area (parcelled), midbrain reticular nucleus, nucleus of the lateral lemniscus (parcelled), nucleus of the solitary tract, parasolitary nucleus, ventral premammillary nucleus, peripeduncular nucleus, parastrial nucleus, preparasubthalamic nucleus, parasubthalamic nucleus, anterior parvicellular part of the paraventricular hypothalamic nucleus, subparaventricular zone of the hypothalamus, substantia innominata, stria medullaris, parvicellular part of the subparafascicular nucleus (parcelled), temporal association areas (renamed), tuberal nucleus (parcelled), ventrolateral preoptic nucleus, ventrolateral hypothalamic tract. In addition, a limited number of spelling changes have been made. The American spelling of words like “taenia” has been adopted (“tenia”), and “amygdalar” has been substituted for “amygdaloid” and “amygdala”. For earlier versions of the atlas see CD-ROM files C1-3. See [full documentation](https://larrywswanson.com/?page_id=164), section: Preface and Chapter III: Preparation and Use of the Atlas.",
 )
 AnatomicalAtlasVersion.swma_2018 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/SWMA_2018",
     abbreviation="SWMA",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={
         "@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/MNI-ICBM152_nonlinear-2009c-asym"
     },
@@ -33105,14 +33126,14 @@ AnatomicalAtlasVersion.swma_2018 = AnatomicalAtlasVersion(
     short_name="Superficial White Matter Atlas",
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-NC-SA-4.0"}],
     version_identifier="2018",
-    version_innovation="This is the first released version of this brain atlas.",
+    version_specification="This is the first released version of this brain atlas.",
 )
 AnatomicalAtlasVersion.whss_datlas_v1_01 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/WHSSDatlas_v1.01",
     abbreviation="WHSSDatlas",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/WHSSD_v1.01"},
-    full_documentation={"@id": "https://doi.org/10.1016/j.neuroimage.2014.10.017"},
+    documentation={"@id": "https://doi.org/10.1016/j.neuroimage.2014.10.017"},
     full_name="Waxholm Space Atlas of the Sprague Dawley Rat Brain",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -33317,14 +33338,14 @@ AnatomicalAtlasVersion.whss_datlas_v1_01 = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"}],
     version_identifier="v1.01",
-    version_innovation="Anatomical delineations of 76 major brain regions and white matter tracts in the Sprague Dawley rat brain, based on observations in a high resolution magnetic resonance imaging (MRI) volume (DOI: 10.25493/DTSG-ZBS). This dataset is hosted on NITRC.org and includes: WHS_SD_rat_atlas_v1.01.nii.gz: delineation file with anatomical structures; WHS_SD_rat_atlas_v1.label: text file naming the anatomical structures; MBAT_WHS_SD_rat_atlas_v1.01.zip: files describing a suggested hierarchical organization of the anatomical structures. Note: The licence was changed to from CC BY-SA-NC to CC BY-SA on October 1, 2021.",
+    version_specification="Anatomical delineations of 76 major brain regions and white matter tracts in the Sprague Dawley rat brain, based on observations in a high resolution magnetic resonance imaging (MRI) volume (DOI: 10.25493/DTSG-ZBS). This dataset is hosted on NITRC.org and includes: WHS_SD_rat_atlas_v1.01.nii.gz: delineation file with anatomical structures; WHS_SD_rat_atlas_v1.label: text file naming the anatomical structures; MBAT_WHS_SD_rat_atlas_v1.01.zip: files describing a suggested hierarchical organization of the anatomical structures. Note: The licence was changed to from CC BY-SA-NC to CC BY-SA on October 1, 2021.",
 )
 AnatomicalAtlasVersion.whss_datlas_v2 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/WHSSDatlas_v2",
     abbreviation="WHSSDatlas",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/WHSSD_v1.01"},
-    full_documentation={"@id": "https://doi.org/10.1016/j.neuroimage.2014.12.080"},
+    documentation={"@id": "https://doi.org/10.1016/j.neuroimage.2014.12.080"},
     full_name="Waxholm Space Atlas of the Sprague Dawley Rat Brain",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -33511,14 +33532,14 @@ AnatomicalAtlasVersion.whss_datlas_v2 = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"}],
     version_identifier="v2",
-    version_innovation="Anatomical delineations of 79 brain regions and white matter tracts in the Sprague Dawley rat brain, based on observations in a high resolution magnetic resonance imaging (MRI) volume (DOI: 10.25493/DTSG-ZBS). Version 2 of the Waxholm Space atlas of the Sprague Dawley rat brain contains 13 new and updated delineations of the hippocampal formation and parahippocampal region, and 66 structure delineations unchanged relative to v1.01. This dataset is hosted on NITRC.org and includes: WHS_SD_rat_atlas_v2.nii.gz: delineation file with anatomical structures; WHS_SD_rat_atlas_v2.label: text file naming anatomical structures; MBAT_WHS_SD_rat_atlas_v2.zip: file describing a suggested hierarchy of the anatomical structures. Note: The licence was changed to from CC BY-SA-NC to CC BY-SA on October 1, 2021.",
+    version_specification="Anatomical delineations of 79 brain regions and white matter tracts in the Sprague Dawley rat brain, based on observations in a high resolution magnetic resonance imaging (MRI) volume (DOI: 10.25493/DTSG-ZBS). Version 2 of the Waxholm Space atlas of the Sprague Dawley rat brain contains 13 new and updated delineations of the hippocampal formation and parahippocampal region, and 66 structure delineations unchanged relative to v1.01. This dataset is hosted on NITRC.org and includes: WHS_SD_rat_atlas_v2.nii.gz: delineation file with anatomical structures; WHS_SD_rat_atlas_v2.label: text file naming anatomical structures; MBAT_WHS_SD_rat_atlas_v2.zip: file describing a suggested hierarchy of the anatomical structures. Note: The licence was changed to from CC BY-SA-NC to CC BY-SA on October 1, 2021.",
 )
 AnatomicalAtlasVersion.whss_datlas_v3 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/WHSSDatlas_v3",
     abbreviation="WHSSDatlas",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/WHSSD_v1.01"},
-    full_documentation={"@id": "https://doi.org/10.1016/j.neuroimage.2019.05.016"},
+    documentation={"@id": "https://doi.org/10.1016/j.neuroimage.2019.05.016"},
     full_name="Waxholm Space Atlas of the Sprague Dawley Rat Brain",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -33804,14 +33825,14 @@ AnatomicalAtlasVersion.whss_datlas_v3 = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"}],
     version_identifier="v3",
-    version_innovation="Anatomical delineations of 118 brain regions and white matter tracts in the Sprague Dawley rat brain, based on observations in a high resolution magnetic resonance imaging (MRI) volume (DOI: 10.25493/DTSG-ZBS). Version 3 of the Waxholm Space atlas of the Sprague Dawley rat brain contains 41 new and 10 updated delineations related or adjacent to the ascending the auditory system. 65 delineations have remained unchanged relative to v2. This dataset is hosted on NITRC.org and includes: WHS_SD_rat_atlas_v3.nii.gz: delineation file with anatomical structures; WHS_SD_rat_atlas_v3.label: text file naming anatomical structures; MBAT_WHS_SD_rat_atlas_v3.zip: file describing a suggested hierarchy of the anatomical structures. Note: The licence was changed to from CC BY-SA-NC to CC BY-SA on October 1, 2021.",
+    version_specification="Anatomical delineations of 118 brain regions and white matter tracts in the Sprague Dawley rat brain, based on observations in a high resolution magnetic resonance imaging (MRI) volume (DOI: 10.25493/DTSG-ZBS). Version 3 of the Waxholm Space atlas of the Sprague Dawley rat brain contains 41 new and 10 updated delineations related or adjacent to the ascending the auditory system. 65 delineations have remained unchanged relative to v2. This dataset is hosted on NITRC.org and includes: WHS_SD_rat_atlas_v3.nii.gz: delineation file with anatomical structures; WHS_SD_rat_atlas_v3.label: text file naming anatomical structures; MBAT_WHS_SD_rat_atlas_v3.zip: file describing a suggested hierarchy of the anatomical structures. Note: The licence was changed to from CC BY-SA-NC to CC BY-SA on October 1, 2021.",
 )
 AnatomicalAtlasVersion.whss_datlas_v3_01 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/WHSSDatlas_v3.01",
     abbreviation="WHSSDatlas",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/WHSSD_v1.01"},
-    full_documentation={"@id": "https://doi.org/10.1016/j.neuroimage.2019.05.016"},
+    documentation={"@id": "https://doi.org/10.1016/j.neuroimage.2019.05.016"},
     full_name="Waxholm Space Atlas of the Sprague Dawley Rat Brain",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -34131,9 +34152,9 @@ AnatomicalAtlasVersion.whss_datlas_v3_01 = AnatomicalAtlasVersion(
 AnatomicalAtlasVersion.whss_datlas_v4 = AnatomicalAtlasVersion(
     id="https://openminds.om-i.org/instances/anatomicalAtlasVersion/WHSSDatlas_v4",
     abbreviation="WHSSDatlas",
-    accessibility={"@id": "https://openminds.om-i.org/instances/productAccessibility/freeAccess"},
+    accessibility={"@id": "https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess"},
     coordinate_framework={"@id": "https://openminds.om-i.org/instances/commonCoordinateFrameworkVersion/WHSSD_v1.01"},
-    full_documentation={"@id": "https://doi.org/10.21203/rs.3.rs-2466303/v1"},
+    documentation={"@id": "https://doi.org/10.21203/rs.3.rs-2466303/v1"},
     full_name="Waxholm Space Atlas of the Sprague Dawley Rat Brain",
     has_terminology={
         "@type": "https://openminds.om-i.org/types/ParcellationTerminologyVersion",
@@ -34734,5 +34755,5 @@ AnatomicalAtlasVersion.whss_datlas_v4 = AnatomicalAtlasVersion(
     type={"@id": "https://openminds.om-i.org/instances/atlasType/deterministicAtlas"},
     usage_conditions=[{"@id": "https://openminds.om-i.org/instances/licenses/CC-BY-4.0"}],
     version_identifier="v4",
-    version_innovation="Anatomical delineations of 222 brain regions and white matter tracts in the Sprague Dawley rat brain, based on a high resolution magnetic resonance imaging (MRI) volume (DOI: 10.25493/DTSG-ZBS). Version 4 of the Waxholm Space atlas of the Sprague Dawley rat brain contains 112 new and 56 updated delineations related or adjacent to the basal ganglia, thalamus and cortical structures. 54 delineations have remained unchanged and 9 have been completely replaced relative to v3. This dataset is hosted on NITRC.org and includes: WHS_SD_rat_atlas_v4.nii.gz: delineation file with anatomical structures; WHS_SD_rat_atlas_v4.label: text file naming anatomical structures; MBAT_WHS_SD_rat_atlas_v4.zip: file describing a suggested hierarchy of the anatomical structures",
+    version_specification="Anatomical delineations of 222 brain regions and white matter tracts in the Sprague Dawley rat brain, based on a high resolution magnetic resonance imaging (MRI) volume (DOI: 10.25493/DTSG-ZBS). Version 4 of the Waxholm Space atlas of the Sprague Dawley rat brain contains 112 new and 56 updated delineations related or adjacent to the basal ganglia, thalamus and cortical structures. 54 delineations have remained unchanged and 9 have been completely replaced relative to v3. This dataset is hosted on NITRC.org and includes: WHS_SD_rat_atlas_v4.nii.gz: delineation file with anatomical structures; WHS_SD_rat_atlas_v4.label: text file naming anatomical structures; MBAT_WHS_SD_rat_atlas_v4.zip: file describing a suggested hierarchy of the anatomical structures",
 )

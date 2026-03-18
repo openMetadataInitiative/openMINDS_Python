@@ -39,20 +39,6 @@ class SupranationalBody(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class SupranationalBody(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class SupranationalBody(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class SupranationalBody(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -163,14 +180,14 @@ SupranationalBody.arab_maghreb_union = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/ArabMaghrebUnion",
     definition="Trade agreement among Arab countries. [auto-generated from 'schema:description' property of the [Wikidata entity](http://www.wikidata.org/entity/Q370862)]",
     name="Arab Maghreb Union",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q370862"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q370862"),
     synonyms=["AMU"],
 )
 SupranationalBody.covax = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/COVAX",
     definition="Global vaccine alliance regarding the COVID-19 pandemic. [auto-generated from 'schema:description' property of the [Wikidata entity](http://www.wikidata.org/entity/Q99360983)]",
     name="COVAX",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q99360983"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q99360983"),
     synonyms=[
         "COVAX Facility",
         "COVAX Global Vaccines Facility",
@@ -184,14 +201,14 @@ SupranationalBody.european_economic_area = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/EuropeanEconomicArea",
     definition="Area of the European Union's internal market and some of EFTA states established in 1994. [auto-generated from 'schema:description' property of the [Wikidata entity](http://www.wikidata.org/entity/Q8932)]",
     name="European Economic Area",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q8932"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q8932"),
     synonyms=["EEA"],
 )
 SupranationalBody.european_union = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/EuropeanUnion",
     definition="Political and economic union of 27 European states. [auto-generated from 'schema:description' property of the [Wikidata entity](http://www.wikidata.org/entity/Q458)]",
     name="European Union",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q458"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q458"),
     synonyms=[
         "An tAontas Eorpach",
         "Den Europæiske Union",
@@ -223,14 +240,14 @@ SupranationalBody.nordic_council = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/NordicCouncil",
     definition="Geo-political inter-parliamentary forum for co-operation between the Nordic countries. [auto-generated from 'schema:description' property of the [Wikidata entity](http://www.wikidata.org/entity/Q146165)]",
     name="Nordic Council",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q146165"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q146165"),
     synonyms=["Nordic cooperation", "The Nordic Council"],
 )
 SupranationalBody.provisional_world_government = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/ProvisionalWorldGovernment",
     definition="World Government in Provisional stage. [auto-generated from 'schema:description' property of the [Wikidata entity](http://www.wikidata.org/entity/Q119439372)]",
     name="Provisional World Government",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q119439372"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q119439372"),
     synonyms=[
         "Provisional World Government for the Federation of Earth",
         "Transitional World Government",
@@ -241,20 +258,20 @@ SupranationalBody.the_mahdi_servants_union = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/TheMahdiServantsUnion",
     definition="International non-governmental organization. [auto-generated from 'schema:description' property of the [Wikidata entity](http://www.wikidata.org/entity/Q96979217)]",
     name="The Mahdi Servants Union",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q96979217"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q96979217"),
     synonyms=["Khoddam Al-Mahdi", "MSU"],
 )
 SupranationalBody.union_state = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/UnionState",
     definition="Supranational entity consisting of the Russian Federation and the Republic of Belarus. [auto-generated from 'schema:description' property of the [Wikidata entity](http://www.wikidata.org/entity/Q166110)]",
     name="Union State",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q166110"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q166110"),
     synonyms=["Union State of Russia and Belarus"],
 )
 SupranationalBody.west_african_examinations_council = SupranationalBody(
     id="https://openminds.om-i.org/instances/SupranationalBody/WestAfricanExaminationsCouncil",
     definition="Is an examination board established in the public interest to conduct exams and award certificates in English-speaking West African countries. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/West_African_Examinations_Council)]",
     name="West African Examinations Council",
-    preferred_ontology_identifier=IRI("http://www.wikidata.org/entity/Q2993835"),
+    preferred_cross_reference=IRI("http://www.wikidata.org/entity/Q2993835"),
     synonyms=["WAEC", "West African Examination Council", "West African Exams Council"],
 )

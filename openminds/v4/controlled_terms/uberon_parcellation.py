@@ -3244,7 +3244,7 @@ UBERONParcellation.caudate_nucleus = UBERONParcellation(
     synonyms=["caudatus"],
 )
 UBERONParcellation.caudate_putamen = UBERONParcellation(
-    id="https://openminds.om-i.org/instances/UBERONParcellation/caudatePutamen",
+    id="https://openminds.om-i.org/instances/UBERONParcellation/caudate-putamen",
     definition="Is a central nervous system cell part cluster. Is part of the dorsal striatum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005383) ('is_a' and 'relationship')]",
     description="Regional part of telencephalon in some species, e.g., rodent, equivalent to the dorsal striatum (caudate nucleus and putamen). Unlike the dorsal striatum of primates, for example, the caudoputamen is not split into separate nuclei by the fibers of the internal capsule. Rather, the internal capsule splits into fiber bundles which course through the structure. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005383)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101739"),
@@ -14821,7 +14821,7 @@ UBERONParcellation.midbrain_dura_mater = UBERONParcellation(
     synonyms=["dura mater of midbrain", "dura mater of neuraxis of midbrain", "midbrain dura mater of neuraxis"],
 )
 UBERONParcellation.midbrain_hindbrain_boundary = UBERONParcellation(
-    id="https://openminds.om-i.org/instances/UBERONParcellation/midbrainHindbrainBoundary",
+    id="https://openminds.om-i.org/instances/UBERONParcellation/midbrain-hindbrainBoundary",
     definition="Is part of the brain. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003052)]",
     description="The part of the brain that is the morphological boundary between the midbrain and hindbrain and that is the location of an organizing center which patterns the midbrain and hindbrain primordia of the neural plate. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003052)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0728815"),

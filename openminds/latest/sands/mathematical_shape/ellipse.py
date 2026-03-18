@@ -19,25 +19,20 @@ class Ellipse(EmbeddedMetadata):
 
     properties = [
         Property(
-            "semi_major_axis",
+            "diameters",
             "openminds.latest.core.QuantitativeValue",
-            "semiMajorAxis",
+            "diameters",
+            multiple=True,
+            unique_items=False,
+            min_items=2,
+            max_items=2,
             required=True,
             description="no description available",
-            instructions="Enter the length of the semi-minor axis of this ellipse.",
-        ),
-        Property(
-            "semi_minor_axis",
-            "openminds.latest.core.QuantitativeValue",
-            "semiMinorAxis",
-            required=True,
-            description="no description available",
-            instructions="Enter the length of the semi-major axis of this ellipse.",
+            instructions="Enter the lengths of the major and minor diameters of this ellipse.",
         ),
     ]
 
-    def __init__(self, semi_major_axis=None, semi_minor_axis=None):
+    def __init__(self, diameters=None):
         return super().__init__(
-            semi_major_axis=semi_major_axis,
-            semi_minor_axis=semi_minor_axis,
+            diameters=diameters,
         )

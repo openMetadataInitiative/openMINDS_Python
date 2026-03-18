@@ -88,11 +88,23 @@ class ParcellationEntity(LinkedMetadata):
             instructions="Enter the internationalized resource identifiers (IRIs) to the related ontological terms matching this parcellation entity.",
         ),
         Property(
-            "related_uberon_term",
-            ["openminds.latest.controlled_terms.Organ", "openminds.latest.controlled_terms.UBERONParcellation"],
-            "relatedUBERONTerm",
+            "related_interspecies_anatomy",
+            [
+                "openminds.latest.controlled_terms.AnatomicalCavity",
+                "openminds.latest.controlled_terms.ExternalBodyRegion",
+                "openminds.latest.controlled_terms.MuscularStructure",
+                "openminds.latest.controlled_terms.NervousSystemStructure",
+                "openminds.latest.controlled_terms.Organ",
+                "openminds.latest.controlled_terms.OrganSystemStructure",
+                "openminds.latest.controlled_terms.OrganismSubstance",
+                "openminds.latest.controlled_terms.OrganismSystem",
+                "openminds.latest.controlled_terms.SkeletalStructure",
+                "openminds.latest.controlled_terms.TissueStructure",
+                "openminds.latest.controlled_terms.VascularStructure",
+            ],
+            "relatedInterspeciesAnatomy",
             description="no description available",
-            instructions="Add the related anatomical entity as defined by the UBERON ontology.",
+            instructions="Add the corresponding cross-species anatomical entity from the UBERON-derived terminologies that represents the generic anatomical concept underlying the atlas parcellation entity.",
         ),
     ]
 
@@ -106,7 +118,7 @@ class ParcellationEntity(LinkedMetadata):
         lookup_label=None,
         name=None,
         ontology_identifiers=None,
-        related_uberon_term=None,
+        related_interspecies_anatomy=None,
     ):
         return super().__init__(
             id=id,
@@ -117,7 +129,7 @@ class ParcellationEntity(LinkedMetadata):
             lookup_label=lookup_label,
             name=name,
             ontology_identifiers=ontology_identifiers,
-            related_uberon_term=related_uberon_term,
+            related_interspecies_anatomy=related_interspecies_anatomy,
         )
 
     @classmethod
@@ -587,76 +599,88 @@ ParcellationEntity.aseg_atlas_accumbens_area = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_accumbensArea",
     lookup_label="AsegAtlas_accumbensArea",
     name="accumbens area",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/nucleusAccumbens"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/nucleusAccumbens"
+    },
 )
 ParcellationEntity.aseg_atlas_amygdala = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_amygdala",
     lookup_label="AsegAtlas_amygdala",
     name="amygdala",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/amygdala"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/amygdala"},
 )
 ParcellationEntity.aseg_atlas_brain_stem = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_brainStem",
     lookup_label="AsegAtlas_brainStem",
     name="brain stem",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/brainstem"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/brainstem"},
 )
 ParcellationEntity.aseg_atlas_caudate = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_caudate",
     lookup_label="AsegAtlas_caudate",
     name="caudate",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/caudateNucleus"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/caudateNucleus"},
 )
 ParcellationEntity.aseg_atlas_cerebellum_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_cerebellumCortex",
     lookup_label="AsegAtlas_cerebellumCortex",
     name="cerebellum cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/cerebellarCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cerebellarCortex"
+    },
 )
 ParcellationEntity.aseg_atlas_cerebellum_white_matter = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_cerebellumWhiteMatter",
     lookup_label="AsegAtlas_cerebellumWhiteMatter",
     name="cerebellum white matter",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/whiteMatterOfCerebellum"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/whiteMatterOfCerebellum"
+    },
 )
 ParcellationEntity.aseg_atlas_cerebral_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_cerebralCortex",
     lookup_label="AsegAtlas_cerebralCortex",
     name="cerebral cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/cerebralCortex"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cerebralCortex"},
 )
 ParcellationEntity.aseg_atlas_cerebral_white_matter = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_cerebralWhiteMatter",
     lookup_label="AsegAtlas_cerebralWhiteMatter",
     name="cerebral white matter",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/cerebralHemisphereWhiteMatter"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cerebralHemisphereWhiteMatter"
     },
 )
 ParcellationEntity.aseg_atlas_cerebrospinal_fluid = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_cerebrospinalFluid",
     lookup_label="AsegAtlas_cerebrospinalFluid",
     name="cerebrospinal fluid",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/cerebrospinalFluid"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cerebrospinalFluid"
+    },
 )
 ParcellationEntity.aseg_atlas_fourth_ventricle = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_fourthVentricle",
     lookup_label="AsegAtlas_fourthVentricle",
     name="fourth ventricle",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/fourthVentricle"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/fourthVentricle"
+    },
 )
 ParcellationEntity.aseg_atlas_hippocampus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_hippocampus",
     lookup_label="AsegAtlas_hippocampus",
     name="hippocampus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/hippocampalFormation"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/hippocampalFormation"
+    },
 )
 ParcellationEntity.aseg_atlas_inferior_lateral_ventricle = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_inferiorLateralVentricle",
     lookup_label="AsegAtlas_inferiorLateralVentricle",
     name="inferior lateral ventricle",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/inferiorHornOfTheLateralVentricle"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/inferiorHornOfTheLateralVentricle"
     },
 )
 ParcellationEntity.aseg_atlas_lateral_ventricle = ParcellationEntity(
@@ -673,13 +697,13 @@ ParcellationEntity.aseg_atlas_pallidum = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_pallidum",
     lookup_label="AsegAtlas_pallidum",
     name="pallidum",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/pallidum"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/pallidum"},
 )
 ParcellationEntity.aseg_atlas_putamen = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_putamen",
     lookup_label="AsegAtlas_putamen",
     name="putamen",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/putamen"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/putamen"},
 )
 ParcellationEntity.aseg_atlas_thalamus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_thalamus",
@@ -690,7 +714,7 @@ ParcellationEntity.aseg_atlas_third_ventricle = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_thirdVentricle",
     lookup_label="AsegAtlas_thirdVentricle",
     name="third ventricle",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/thirdVentricle"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/thirdVentricle"},
 )
 ParcellationEntity.aseg_atlas_unknown = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_unknown",
@@ -706,7 +730,7 @@ ParcellationEntity.aseg_atlas_vessel = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/AsegAtlas_vessel",
     lookup_label="AsegAtlas_vessel",
     name="vessel",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/vessel"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/vessel"},
 )
 ParcellationEntity.ba_human_ba1 = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/BA-human_BA1",
@@ -1119,22 +1143,24 @@ ParcellationEntity.ba_human_cerebral_cortex = ParcellationEntity(
     ],
     lookup_label="BA-human_cerebralCortex",
     name="Brodmann cerebral cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/cerebralCortex"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cerebralCortex"},
 )
 ParcellationEntity.dka_anterior_cingulate_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_anteriorCingulateCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_cingulateCortex"}],
     lookup_label="DKA_anteriorCingulateCortex",
     name="anterior cingulate cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/anteriorCingulateCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/anteriorCingulateCortex"
+    },
 )
 ParcellationEntity.dka_banks_of_superior_temporal_sulcus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_banksOfSuperiorTemporalSulcus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_lateralAspect"}],
     lookup_label="DKA_banksOfSuperiorTemporalSulcus",
     name="banks of superior temporal sulcus",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/banksOfSuperiorTemporalSulcus"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/banksOfSuperiorTemporalSulcus"
     },
 )
 ParcellationEntity.dka_banks_superior_temporal_sulcus = ParcellationEntity(
@@ -1147,8 +1173,8 @@ ParcellationEntity.dka_caudal_anterior_cingulate_cortex = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_anteriorCingulateCortex"}],
     lookup_label="DKA_caudalAnteriorCingulateCortex",
     name="caudal anterior cingulate cortex",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/caudalAnteriorCingulateCortex"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/caudalAnteriorCingulateCortex"
     },
 )
 ParcellationEntity.dka_caudal_middle_frontal_gyrus = ParcellationEntity(
@@ -1156,182 +1182,212 @@ ParcellationEntity.dka_caudal_middle_frontal_gyrus = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_middleFrontalGyrus"}],
     lookup_label="DKA_caudalMiddleFrontalGyrus",
     name="caudal middle frontal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/caudalMiddleFrontalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/caudalMiddleFrontalGyrus"
+    },
 )
 ParcellationEntity.dka_cerebral_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_cerebralCortex",
     lookup_label="DKA_cerebralCortex",
     name="cerebral cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/cerebralCortex"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cerebralCortex"},
 )
 ParcellationEntity.dka_cingulate_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_cingulateCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_cerebralCortex"}],
     lookup_label="DKA_cingulateCortex",
     name="cingulate cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/cingulateCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cingulateCortex"
+    },
 )
 ParcellationEntity.dka_corpus_callosum = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_corpusCallosum",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_occipitalLobe"}],
     lookup_label="DKA_corpusCallosum",
     name="corpus callosum",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/corpusCallosum"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/corpusCallosum"},
 )
 ParcellationEntity.dka_cuneus_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_cuneusCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_occipitalLobe"}],
     lookup_label="DKA_cuneusCortex",
     name="cuneus cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/cuneusCortex"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cuneusCortex"},
 )
 ParcellationEntity.dka_entorhinal_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_entorhinalCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_medialAspect"}],
     lookup_label="DKA_entorhinalCortex",
     name="entorhinal cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/entorhinalCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/entorhinalCortex"
+    },
 )
 ParcellationEntity.dka_frontal_lobe = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalLobe",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_cerebralCortex"}],
     lookup_label="DKA_frontalLobe",
     name="frontal lobe",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/frontalLobe"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/frontalLobe"},
 )
 ParcellationEntity.dka_frontal_pole = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalPole",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalLobe"}],
     lookup_label="DKA_frontalPole",
     name="frontal pole",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/frontalPole"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/frontalPole"},
 )
 ParcellationEntity.dka_fusiform_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_fusiformGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_medialAspect"}],
     lookup_label="DKA_fusiformGyrus",
     name="fusiform gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/fusiformGyrus"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/fusiformGyrus"},
 )
 ParcellationEntity.dka_inferior_frontal_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_inferiorFrontalGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalLobe"}],
     lookup_label="DKA_inferiorFrontalGyrus",
     name="inferior frontal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/inferiorFrontalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/inferiorFrontalGyrus"
+    },
 )
 ParcellationEntity.dka_inferior_parietal_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_inferiorParietalCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_parietalLobe"}],
     lookup_label="DKA_inferiorParietalCortex",
     name="inferior parietal cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/inferiorParietalCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/inferiorParietalCortex"
+    },
 )
 ParcellationEntity.dka_inferior_temporal_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_inferiorTemporalGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_lateralAspect"}],
     lookup_label="DKA_inferiorTemporalGyrus",
     name="inferior temporal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/inferiorTemporalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/inferiorTemporalGyrus"
+    },
 )
 ParcellationEntity.dka_insula = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_insula",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_cerebralCortex"}],
     lookup_label="DKA_insula",
     name="insula",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/insula"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/insula"},
 )
 ParcellationEntity.dka_isthmus_of_cingulate_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_isthmusOfCingulateCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_occipitalLobe"}],
     lookup_label="DKA_isthmusOfCingulateCortex",
     name="isthmus of cingulate cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/isthmusOfCingulateGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/isthmusOfCingulateGyrus"
+    },
 )
 ParcellationEntity.dka_lateral_occipital_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_lateralOccipitalCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_occipitalLobe"}],
     lookup_label="DKA_lateralOccipitalCortex",
     name="lateral occipital cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/lateralOccipitalCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/lateralOccipitalCortex"
+    },
 )
 ParcellationEntity.dka_lateral_orbital_frontal_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_lateralOrbitalFrontalCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_orbitofrontalCortex"}],
     lookup_label="DKA_lateralOrbitalFrontalCortex",
     name="lateral orbitofrontal cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/lateralOrbitalFrontalCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/lateralOrbitalFrontalCortex"
+    },
 )
 ParcellationEntity.dka_lingual_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_lingualGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_occipitalLobe"}],
     lookup_label="DKA_lingualGyrus",
     name="lingual gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/lingualGyrus"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/lingualGyrus"},
 )
 ParcellationEntity.dka_medial_orbital_frontal_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_medialOrbitalFrontalCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_orbitofrontalCortex"}],
     lookup_label="DKA_medialOrbitalFrontalCortex",
     name="medial orbitofrontal cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/medialOrbitalFrontalCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/medialOrbitalFrontalCortex"
+    },
 )
 ParcellationEntity.dka_middle_frontal_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_middleFrontalGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalLobe"}],
     lookup_label="DKA_middleFrontalGyrus",
     name="middle frontal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/middleFrontalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/middleFrontalGyrus"
+    },
 )
 ParcellationEntity.dka_middle_temporal_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_middleTemporalGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_lateralAspect"}],
     lookup_label="DKA_middleTemporalGyrus",
     name="middle temporal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/middleTemporalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/middleTemporalGyrus"
+    },
 )
 ParcellationEntity.dka_occipital_lobe = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_occipitalLobe",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_cerebralCortex"}],
     lookup_label="DKA_occipitalLobe",
     name="occipital lobe",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/occipitalLobe"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/occipitalLobe"},
 )
 ParcellationEntity.dka_orbitofrontal_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_orbitofrontalCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalLobe"}],
     lookup_label="DKA_orbitofrontalCortex",
     name="orbitofrontal cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/orbitofrontalCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/orbitofrontalCortex"
+    },
 )
 ParcellationEntity.dka_paracentral_lobule = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_paracentralLobule",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalLobe"}],
     lookup_label="DKA_paracentralLobule",
     name="paracentral lobule",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/paracentralLobule"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/paracentralLobule"
+    },
 )
 ParcellationEntity.dka_parahippocampal_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_parahippocampalGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_medialAspect"}],
     lookup_label="DKA_parahippocampalGyrus",
     name="parahippocampal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/parahippocampalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/parahippocampalGyrus"
+    },
 )
 ParcellationEntity.dka_parietal_lobe = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_parietalLobe",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_cerebralCortex"}],
     lookup_label="DKA_parietalLobe",
     name="parietal lobe",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/parietalLobe"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/parietalLobe"},
 )
 ParcellationEntity.dka_pars_opercularis = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_parsOpercularis",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_inferiorFrontalGyrus"}],
     lookup_label="DKA_parsOpercularis",
     name="pars opercularis",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/opercularPartOfInferiorFrontalGyrus"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/opercularPartOfInferiorFrontalGyrus"
     },
 )
 ParcellationEntity.dka_pars_orbitalis = ParcellationEntity(
@@ -1339,8 +1395,8 @@ ParcellationEntity.dka_pars_orbitalis = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_inferiorFrontalGyrus"}],
     lookup_label="DKA_parsOrbitalis",
     name="pars orbitalis",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/orbitalPartOfInferiorFrontalGyrus"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/orbitalPartOfInferiorFrontalGyrus"
     },
 )
 ParcellationEntity.dka_pars_triangularis = ParcellationEntity(
@@ -1348,8 +1404,8 @@ ParcellationEntity.dka_pars_triangularis = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_inferiorFrontalGyrus"}],
     lookup_label="DKA_parsTriangularis",
     name="pars triangularis",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/triangularPartOfInferiorFrontalGyrus"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/triangularPartOfInferiorFrontalGyrus"
     },
 )
 ParcellationEntity.dka_pericalcarine_cortex = ParcellationEntity(
@@ -1357,43 +1413,53 @@ ParcellationEntity.dka_pericalcarine_cortex = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_occipitalLobe"}],
     lookup_label="DKA_pericalcarineCortex",
     name="pericalcarine cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/pericalcarineCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/pericalcarineCortex"
+    },
 )
 ParcellationEntity.dka_postcentral_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_postcentralGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_parietalLobe"}],
     lookup_label="DKA_postcentralGyrus",
     name="postcentral gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/postcentralGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/postcentralGyrus"
+    },
 )
 ParcellationEntity.dka_posterior_cingulate_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_posteriorCingulateCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_occipitalLobe"}],
     lookup_label="DKA_posteriorCingulateCortex",
     name="posterior cingulate cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/posteriorCingulateCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/posteriorCingulateCortex"
+    },
 )
 ParcellationEntity.dka_precentral_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_precentralGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalLobe"}],
     lookup_label="DKA_precentralGyrus",
     name="precentral gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/precentralGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/precentralGyrus"
+    },
 )
 ParcellationEntity.dka_precuneus_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_precuneusCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_parietalLobe"}],
     lookup_label="DKA_precuneusCortex",
     name="precuneus cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/precuneusCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/precuneusCortex"
+    },
 )
 ParcellationEntity.dka_rostral_anterior_cingulate_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_rostralAnteriorCingulateCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_anteriorCingulateCortex"}],
     lookup_label="DKA_rostralAnteriorCingulateCortex",
     name="rostral anterior cingulate cortex",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/rostralAnteriorCingulateCortex"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/rostralAnteriorCingulateCortex"
     },
 )
 ParcellationEntity.dka_rostral_middle_frontal_gyrus = ParcellationEntity(
@@ -1401,42 +1467,52 @@ ParcellationEntity.dka_rostral_middle_frontal_gyrus = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_middleFrontalGyrus"}],
     lookup_label="DKA_rostralMiddleFrontalGyrus",
     name="rostral middle frontal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/rostralMiddleFrontalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/rostralMiddleFrontalGyrus"
+    },
 )
 ParcellationEntity.dka_superior_frontal_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_superiorFrontalGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_frontalLobe"}],
     lookup_label="DKA_superiorFrontalGyrus",
     name="superior frontal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/superiorFrontalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/superiorFrontalGyrus"
+    },
 )
 ParcellationEntity.dka_superior_parietal_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_superiorParietalCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_parietalLobe"}],
     lookup_label="DKA_superiorParietalCortex",
     name="superior parietal cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/superiorParietalCortex"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/superiorParietalCortex"
+    },
 )
 ParcellationEntity.dka_superior_temporal_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_superiorTemporalGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_lateralAspect"}],
     lookup_label="DKA_superiorTemporalGyrus",
     name="superior temporal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/superiorTemporalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/superiorTemporalGyrus"
+    },
 )
 ParcellationEntity.dka_supramarginal_gyrus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_supramarginalGyrus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_parietalLobe"}],
     lookup_label="DKA_supramarginalGyrus",
     name="supramarginal gyrus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/supramarginalGyrus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/supramarginalGyrus"
+    },
 )
 ParcellationEntity.dka_temporal_lobe = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_cerebralCortex"}],
     lookup_label="DKA_temporalLobe",
     name="temporal lobe",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/temporalLobe"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/temporalLobe"},
 )
 ParcellationEntity.dka_temporal_lobe_lateral_aspect = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_lateralAspect",
@@ -1455,14 +1531,16 @@ ParcellationEntity.dka_temporal_pole = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_medialAspect"}],
     lookup_label="DKA_temporalPole",
     name="temporal pole",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/temporalPole"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/temporalPole"},
 )
 ParcellationEntity.dka_transverse_temporal_cortex = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DKA_transverseTemporalCortex",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DKA_temporalLobe_lateralAspect"}],
     lookup_label="DKA_transverseTemporalCortex",
     name="transverse temporal cortex",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/transverseGyrusOfHeschl"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/transverseGyrusOfHeschl"
+    },
 )
 ParcellationEntity.dwma_anterior_segement_of_arcuate_fasciculus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DWMA_anteriorSegementOfArcuateFasciculus",
@@ -1475,21 +1553,27 @@ ParcellationEntity.dwma_arcuate_fasciculus = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DWMA_deepWhiteMatter"}],
     lookup_label="DWMA_arcuateFasciculus",
     name="arcuate fasciculus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/arcuateFasciculus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/arcuateFasciculus"
+    },
 )
 ParcellationEntity.dwma_cingulum = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DWMA_cingulum",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DWMA_deepWhiteMatter"}],
     lookup_label="DWMA_cingulum",
     name="cingulum",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/cingulumOfBrain"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/cingulumOfBrain"
+    },
 )
 ParcellationEntity.dwma_corticospinal_tract = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DWMA_corticospinalTract",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DWMA_deepWhiteMatter"}],
     lookup_label="DWMA_corticospinalTract",
     name="corticospinal tract",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/corticospinalTract"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/corticospinalTract"
+    },
 )
 ParcellationEntity.dwma_deep_white_matter = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DWMA_deepWhiteMatter",
@@ -1507,15 +1591,15 @@ ParcellationEntity.dwma_fornix = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DWMA_deepWhiteMatter"}],
     lookup_label="DWMA_fornix",
     name="fornix",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/fornixOfBrain"},
+    related_interspecies_anatomy={"@id": "https://openminds.om-i.org/instances/nervousSystemStructure/fornixOfBrain"},
 )
 ParcellationEntity.dwma_inferior_fronto_occipital_fasciculus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DWMA_inferiorFronto-occipitalFasciculus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DWMA_deepWhiteMatter"}],
     lookup_label="DWMA_inferiorFronto-occipitalFasciculus",
     name="inferior fronto-occipital fasciculus",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/inferiorOccipitofrontalFasciculus"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/inferiorOccipitofrontalFasciculus"
     },
 )
 ParcellationEntity.dwma_inferior_longitudinal_fasciculus = ParcellationEntity(
@@ -1523,8 +1607,8 @@ ParcellationEntity.dwma_inferior_longitudinal_fasciculus = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DWMA_deepWhiteMatter"}],
     lookup_label="DWMA_inferiorLongitudinalFasciculus",
     name="inferior longitudinal fasciculus",
-    related_uberon_term={
-        "@id": "https://openminds.om-i.org/instances/UBERONParcellation/inferiorLongitudinalFasciculus"
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/inferiorLongitudinalFasciculus"
     },
 )
 ParcellationEntity.dwma_long_cingulate_fibres = ParcellationEntity(
@@ -1550,14 +1634,18 @@ ParcellationEntity.dwma_temporal_cingulate_fibres = ParcellationEntity(
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DWMA_cingulum"}],
     lookup_label="DWMA_temporalCingulateFibres",
     name="temporal cingulate fibres",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/temporalCortexCingulum"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/temporalCortexCingulum"
+    },
 )
 ParcellationEntity.dwma_uncinate_fasciculus = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/DWMA_uncinateFasciculus",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/DWMA_deepWhiteMatter"}],
     lookup_label="DWMA_uncinateFasciculus",
     name="uncinate fasciculus",
-    related_uberon_term={"@id": "https://openminds.om-i.org/instances/UBERONParcellation/uncinateFasciculus"},
+    related_interspecies_anatomy={
+        "@id": "https://openminds.om-i.org/instances/nervousSystemStructure/uncinateFasciculus"
+    },
 )
 ParcellationEntity.jba__acb_l = ParcellationEntity(
     id="https://openminds.om-i.org/instances/parcellationEntity/JBA_AcbL",
@@ -17019,397 +17107,397 @@ ParcellationEntity.swanson_bm_zona_limitans = ParcellationEntity(
     name="zona limitans",
 )
 ParcellationEntity.swma__cu__li_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Cu-Li_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Cu-Li_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Cu-Li_0",
     name="Cu-Li_0",
 )
 ParcellationEntity.swma__fu_lo_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Fu-LO_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Fu-LO_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Fu-LO_0",
     name="Fu-LO_0",
 )
 ParcellationEntity.swma__fu_lo_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Fu-LO_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Fu-LO_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Fu-LO_1",
     name="Fu-LO_1",
 )
 ParcellationEntity.swma__op__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Op-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Op-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Op-Ins_0",
     name="Op-Ins_0",
 )
 ParcellationEntity.swma__op__pr_c_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Op-PrC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Op-PrC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Op-PrC_0",
     name="Op-PrC_0",
 )
 ParcellationEntity.swma__op__tr_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Op-Tr_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Op-Tr_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Op-Tr_0",
     name="Op-Tr_0",
 )
 ParcellationEntity.swma__op_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Op-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Op-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Op-SF_0",
     name="Op-SF_0",
 )
 ParcellationEntity.swma__or__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Or-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Or-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Or-Ins_0",
     name="Or-Ins_0",
 )
 ParcellationEntity.swma__po_c__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-Ins_0",
     name="PoC-Ins_0",
 )
 ParcellationEntity.swma__po_c__pr_c_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-PrC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-PrC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-PrC_0",
     name="PoC-PrC_0",
 )
 ParcellationEntity.swma__po_c__pr_c_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-PrC_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-PrC_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-PrC_1",
     name="PoC-PrC_1",
 )
 ParcellationEntity.swma__po_c__pr_c_2 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-PrC_2",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-PrC_2",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-PrC_2",
     name="PoC-PrC_2",
 )
 ParcellationEntity.swma__po_c__pr_c_3 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-PrC_3",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-PrC_3",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-PrC_3",
     name="PoC-PrC_3",
 )
 ParcellationEntity.swma__po_c_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-SM_0",
     name="PoC-SM_0",
 )
 ParcellationEntity.swma__po_c_sm_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-SM_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-SM_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-SM_1",
     name="PoC-SM_1",
 )
 ParcellationEntity.swma__po_c_sp_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-SP_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-SP_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-SP_0",
     name="PoC-SP_0",
 )
 ParcellationEntity.swma__po_c_sp_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-SP_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-SP_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoC-SP_1",
     name="PoC-SP_1",
 )
 ParcellationEntity.swma__po_ci__pr_cu_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-PrCu_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-PrCu_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoCi-PrCu_0",
     name="PoCi-PrCu_0",
 )
 ParcellationEntity.swma__po_ci__pr_cu_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-PrCu_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-PrCu_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoCi-PrCu_1",
     name="PoCi-PrCu_1",
 )
 ParcellationEntity.swma__po_ci__pr_cu_2 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-PrCu_2",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-PrCu_2",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoCi-PrCu_2",
     name="PoCi-PrCu_2",
 )
 ParcellationEntity.swma__po_ci_rac_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-RAC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-RAC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoCi-RAC_0",
     name="PoCi-RAC_0",
 )
 ParcellationEntity.swma__po_ci_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PoCi-SF_0",
     name="PoCi-SF_0",
 )
 ParcellationEntity.swma__pr_c__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PrC-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PrC-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PrC-Ins_0",
     name="PrC-Ins_0",
 )
 ParcellationEntity.swma__pr_c_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PrC-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PrC-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PrC-SF_0",
     name="PrC-SF_0",
 )
 ParcellationEntity.swma__pr_c_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PrC-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PrC-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PrC-SM_0",
     name="PrC-SM_0",
 )
 ParcellationEntity.swma__pr_c_sp_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PrC-SP_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PrC-SP_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_PrC-SP_0",
     name="PrC-SP_0",
 )
 ParcellationEntity.swma__tr__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Tr-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Tr-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Tr-Ins_0",
     name="Tr-Ins_0",
 )
 ParcellationEntity.swma__tr_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Tr-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Tr-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_Tr-SF_0",
     name="Tr-SF_0",
 )
 ParcellationEntity.swma_cac__po_ci_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CAC-PoCi_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CAC-PoCi_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CAC-PoCi_0",
     name="CAC-PoCi_0",
 )
 ParcellationEntity.swma_cac__pr_cu_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CAC-PrCu_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CAC-PrCu_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CAC-PrCu_0",
     name="CAC-PrCu_0",
 )
 ParcellationEntity.swma_cmf__op_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-Op_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-Op_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CMF-Op_0",
     name="CMF-Op_0",
 )
 ParcellationEntity.swma_cmf__po_c_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-PoC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-PoC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CMF-PoC_0",
     name="CMF-PoC_0",
 )
 ParcellationEntity.swma_cmf__pr_c_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-PrC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-PrC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CMF-PrC_0",
     name="CMF-PrC_0",
 )
 ParcellationEntity.swma_cmf__pr_c_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-PrC_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-PrC_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CMF-PrC_1",
     name="CMF-PrC_1",
 )
 ParcellationEntity.swma_cmf_rmf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-RMF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-RMF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CMF-RMF_0",
     name="CMF-RMF_0",
 )
 ParcellationEntity.swma_cmf_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CMF-SF_0",
     name="CMF-SF_0",
 )
 ParcellationEntity.swma_cmf_sf_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-SF_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-SF_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_CMF-SF_1",
     name="CMF-SF_1",
 )
 ParcellationEntity.swma_ic__pr_cu_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IC-PrCu_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IC-PrCu_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IC-PrCu_0",
     name="IC-PrCu_0",
 )
 ParcellationEntity.swma_ip_it_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-IT_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-IT_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IP-IT_0",
     name="IP-IT_0",
 )
 ParcellationEntity.swma_ip_lo_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-LO_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-LO_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IP-LO_0",
     name="IP-LO_0",
 )
 ParcellationEntity.swma_ip_lo_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-LO_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-LO_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IP-LO_1",
     name="IP-LO_1",
 )
 ParcellationEntity.swma_ip_mt_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-MT_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-MT_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IP-MT_0",
     name="IP-MT_0",
 )
 ParcellationEntity.swma_ip_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IP-SM_0",
     name="IP-SM_0",
 )
 ParcellationEntity.swma_ip_sp_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-SP_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-SP_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IP-SP_0",
     name="IP-SP_0",
 )
 ParcellationEntity.swma_ip_sp_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-SP_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-SP_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IP-SP_1",
     name="IP-SP_1",
 )
 ParcellationEntity.swma_it_mt_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IT-MT_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IT-MT_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IT-MT_0",
     name="IT-MT_0",
 )
 ParcellationEntity.swma_it_mt_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IT-MT_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IT-MT_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IT-MT_1",
     name="IT-MT_1",
 )
 ParcellationEntity.swma_it_mt_2 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IT-MT_2",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IT-MT_2",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_IT-MT_2",
     name="IT-MT_2",
 )
 ParcellationEntity.swma_lo_sp_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LO-SP_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LO-SP_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_LO-SP_0",
     name="LO-SP_0",
 )
 ParcellationEntity.swma_lof__or_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-Or_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-Or_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_LOF-Or_0",
     name="LOF-Or_0",
 )
 ParcellationEntity.swma_lof_mof_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-MOF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-MOF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_LOF-MOF_0",
     name="LOF-MOF_0",
 )
 ParcellationEntity.swma_lof_rmf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-RMF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-RMF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_LOF-RMF_0",
     name="LOF-RMF_0",
 )
 ParcellationEntity.swma_lof_rmf_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-RMF_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-RMF_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_LOF-RMF_1",
     name="LOF-RMF_1",
 )
 ParcellationEntity.swma_lof_st_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-ST_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-ST_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_LOF-ST_0",
     name="LOF-ST_0",
 )
 ParcellationEntity.swma_mof_st_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_MOF-ST_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_MOF-ST_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_MOF-ST_0",
     name="MOF-ST_0",
 )
 ParcellationEntity.swma_mt_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_MT-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_MT-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_MT-SM_0",
     name="MT-SM_0",
 )
 ParcellationEntity.swma_mt_st_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_MT-ST_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_MT-ST_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_MT-ST_0",
     name="MT-ST_0",
 )
 ParcellationEntity.swma_rac_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_RAC-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_RAC-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_RAC-SF_0",
     name="RAC-SF_0",
 )
 ParcellationEntity.swma_rac_sf_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_RAC-SF_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_RAC-SF_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_RAC-SF_1",
     name="RAC-SF_1",
 )
 ParcellationEntity.swma_rmf_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_RMF-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_RMF-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_RMF-SF_0",
     name="RMF-SF_0",
 )
 ParcellationEntity.swma_rmf_sf_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_RMF-SF_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_RMF-SF_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_RMF-SF_1",
     name="RMF-SF_1",
 )
 ParcellationEntity.swma_sm__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_SM-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_SM-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_SM-Ins_0",
     name="SM-Ins_0",
 )
 ParcellationEntity.swma_sp_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_SP-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_SP-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_SP-SM_0",
     name="SP-SM_0",
 )
 ParcellationEntity.swma_st__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_ST-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_ST-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_ST-Ins_0",
     name="ST-Ins_0",
 )
 ParcellationEntity.swma_st_tt_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_ST-TT_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_ST-TT_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     lookup_label="SWMA_ST-TT_0",
     name="ST-TT_0",
 )
 ParcellationEntity.swma_superficial_white_matter = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_superficialWhiteMatter",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter",
     abbreviation="SWM",
     lookup_label="SWMA_superficialWhiteMatter",
     name="superficial white matter",

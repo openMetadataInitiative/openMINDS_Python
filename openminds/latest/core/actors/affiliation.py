@@ -4,8 +4,6 @@ Structured information about a relationship between two entities, such as a pers
 
 # this file was auto-generated!
 
-from datetime import date
-
 from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 
@@ -21,32 +19,28 @@ class Affiliation(EmbeddedMetadata):
 
     properties = [
         Property(
-            "end_date",
-            date,
-            "endDate",
-            description="Date in the Gregorian calendar at which something terminates in time.",
-            instructions="Enter the end date of this affiliation, formatted as 'YYYY-MM-DD'. Leave blank if this affiliation is still current.",
+            "organizations",
+            "openminds.latest.core.Organization",
+            "organization",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            required=True,
+            description="Legally accountable, administrative and functional structure.",
+            instructions="Add all organizations (in display order) with which the specified individual is affiliated.",
         ),
         Property(
-            "member_of",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization"],
-            "memberOf",
+            "person",
+            "openminds.latest.core.Person",
+            "person",
             required=True,
             description="no description available",
-            instructions="Add the organization or consortium another party was or still is a member of.",
-        ),
-        Property(
-            "start_date",
-            date,
-            "startDate",
-            description="Date in the Gregorian calendar at which something begins in time",
-            instructions="Enter the start date of this affiliation, formatted as 'YYYY-MM-DD'.",
+            instructions="Add the individual to whom this affiliation belongs.",
         ),
     ]
 
-    def __init__(self, end_date=None, member_of=None, start_date=None):
+    def __init__(self, organizations=None, person=None):
         return super().__init__(
-            end_date=end_date,
-            member_of=member_of,
-            start_date=start_date,
+            organizations=organizations,
+            person=person,
         )

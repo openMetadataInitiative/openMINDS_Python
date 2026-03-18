@@ -39,20 +39,6 @@ class CellType(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class CellType(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class CellType(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class CellType(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -168,8 +185,9 @@ CellType.aromatase_expressing_neuron = CellType(
 CellType.astrocyte = CellType(
     id="https://openminds.om-i.org/instances/cellType/astrocyte",
     definition="'Astrocytes' are a class of large, star-shaped neuroglial (macroglial) cells in the central nervous system.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0100947"),
     name="astrocyte",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0100947"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0100947"),
     synonyms=["astroglial cell"],
 )
 CellType.basket_cell = CellType(
@@ -212,19 +230,19 @@ CellType.cerebellar_interneuron = CellType(
 CellType.cerebellum_basket_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/cerebellumBasketCell",
     definition="An inhibitory GABAergic interneurons of the cerebellum, enmeshing the cell body of another neuron with its terminal axon ramifications.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101964"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:666951243#cerebellum-basket-cell"),
     name="cerebellum basket cell",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao666951243"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/sao666951243"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/SAO:666951243#cerebellum-basket-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0101964"),
     synonyms=["cerebellar basket cell"],
 )
 CellType.cerebellum_golgi_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/cerebellumGolgiCell",
     definition="An inhibitory interneuron found within the granular layer of the cerebellum.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101966"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:129#golgi-cell"),
     name="cerebellum Golgi cell",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1415726815"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/sao1415726815"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NIFEXT:129#golgi-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0101966"),
     synonyms=[
         "cerebellar Golgi cell",
         "cerebellar Golgi neuron",
@@ -236,19 +254,19 @@ CellType.cerebellum_golgi_cell = CellType(
 CellType.cerebellum_granule_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/cerebellumGranuleCell",
     definition="'Cerebellum granule cells' form the thick granular layer of the cerebellar cortex and typically have small cell bodies but varying functions.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0101967"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:128#cerebellum-granule-cell"),
     name="cerebellum granule cell",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_128"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nifext_128"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NIFEXT:128#cerebellum-granule-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0101967"),
     synonyms=["cerebellar granule cell", "cerebellar granule neuron", "cerebellum granule neuron"],
 )
 CellType.cerebellum_stellate_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/cerebellumStellateNeuron",
     definition="Any cerebellar neuron that has a star-like shape formed by dendritic processes radiating from the cell body.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0101975"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:130#cerebellum-stellate-cell"),
     name="cerebellum stellate neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_130"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nifext_130"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NIFEXT:130#cerebellum-stellate-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0101975"),
     synonyms=["cerebellar stellate cell", "cerebellar stellate neuron", "cerebellum stellate cell"],
 )
 CellType.cholecystokinin_expressing_neuron = CellType(
@@ -288,19 +306,19 @@ CellType.cholinergic_interneuron = CellType(
 CellType.cholinergic_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/cholinergicNeuron",
     definition="Any neuron that releases some acetylcholine as a neurotransmitter",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0102131"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXNEURNT:090802#cholinergic-neuron"),
     name="cholinergic neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_148005"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nlx_148005"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NLXNEURNT:090802#cholinergic-neuron"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0102131"),
     synonyms=["ACh neuron"],
 )
 CellType.cortical_basket_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/corticalBasketCell",
     definition="An inhibitory GABAergic interneurons of the cortex, enmeshing the cell body of another neuron with its terminal axon ramifications.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107351"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:56#neocortex-basket-cell"),
     name="cortical basket cell",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_56"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nifext_56"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NIFEXT:56#neocortex-basket-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0107351"),
     synonyms=["basket cell", "cortical basket neuron", "neocortex basket cell", "neocortical basket cell"],
 )
 CellType.cortical_interneuron = CellType(
@@ -342,10 +360,10 @@ CellType.d2_receptor_expressing_neuron = CellType(
 CellType.dopaminergic_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/dopaminergicNeuron",
     definition="Any neuron that releases some dopamine as a neurotransmitter",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0103395"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXNEURNT:090806#dopaminergic-neuron"),
     name="dopaminergic neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_147835"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nlx_147835"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NLXNEURNT:090806#dopaminergic-neuron"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0103395"),
     synonyms=["DA neuron"],
 )
 CellType.excitatory_neuron = CellType(
@@ -363,8 +381,9 @@ CellType.fast_spiking_interneuron = CellType(
 CellType.glial_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/glialCell",
     definition="A 'glial cell' is a non-neuronal cell of the nervous system. Glial cells provide physical support, respond to injury, regulate the ionic and chemical composition of the extracellular milieu, guide neuronal migration during development, and exchange metabolites with neurons.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104634"),
     name="glial cell",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0104634"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0104634"),
     synonyms=["neuroglial cell"],
 )
 CellType.granule_neuron = CellType(
@@ -376,10 +395,10 @@ CellType.granule_neuron = CellType(
 CellType.hippocampus_ca1_pyramidal_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/hippocampusCA1PyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body that is located in the cornu ammonis 1 (CA1) of the hippocampus.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0105031"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:830368389#hippocampus-ca1-pyramidal-cell"),
     name="hippocampus CA1 pyramidal neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao830368389"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/sao830368389"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/SAO:830368389#hippocampus-ca1-pyramidal-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0105031"),
     synonyms=[
         "CA1 pyramidal neuron",
         "cornu ammonis 1 pyramidal neuron",
@@ -401,8 +420,9 @@ CellType.interneuron = CellType(
 CellType.macroglial_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/macroglialCell",
     definition="'Macroglial cells' are large glial cells in the central nervous system.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106438"),
     name="macroglial cell",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0106438"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0106438"),
 )
 CellType.main_olfactory_bulb_deep_tufted_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbDeepTuftedNeuron",
@@ -417,9 +437,9 @@ CellType.main_olfactory_bulb_deep_tufted_neuron = CellType(
 CellType.main_olfactory_bulb_external_tufted_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbExternalTuftedNeuron",
     definition="An excitatory neuron type found predominately at the glomerular layer of the main olfactory bulb.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107943"),
     name="main olfactory bulb external tufted neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_82555"),
+    preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_82555"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0107943"),
     synonyms=[
         "olfactory bulb main tufted cell external",
         "olfactory bulb external tufted cell",
@@ -431,10 +451,10 @@ CellType.main_olfactory_bulb_external_tufted_neuron = CellType(
 CellType.main_olfactory_bulb_granule_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbGranuleNeuron",
     definition="Axonless inhibitory interneurons and form the majority of neurons in the vertebrate main olfactory bulb [adapted from [Egger et al. (2003)](https://doi.org/10.1523/JNEUROSCI.23-20-07551.2003)].",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107930"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:123#olfactory-bulb-main-granule-cell"),
     name="main olfactory bulb granule neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_123"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nifext_123"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NIFEXT:123#olfactory-bulb-main-granule-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0107930"),
     synonyms=[
         "granule cell of the olfactory bulb",
         "olfactory bulb granule neuron",
@@ -448,10 +468,10 @@ CellType.main_olfactory_bulb_granule_neuron = CellType(
 CellType.main_olfactory_bulb_middle_tufted_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbMiddleTuftedNeuron",
     definition="A subclass of neurons situated in the middle layer of the external plexiform layer of the main olfactory bulb.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107935"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:121#olfactory-bulb-main-tufted-cell"),
     name="main olfactory bulb middle tufted neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_121"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nifext_121"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NIFEXT:121#olfactory-bulb-main-tufted-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0107935"),
     synonyms=[
         "olfactory bulb (main) tufted cell (middle)",
         "middle tufted cell of the main olfactory bulb",
@@ -462,10 +482,10 @@ CellType.main_olfactory_bulb_middle_tufted_neuron = CellType(
 CellType.main_olfactory_bulb_mitral_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbMitralNeuron",
     definition="Neuronal cell type in the mammalian olfactory bulb, distinguished by the position of their somata located in an orderly row in the mitral cell layer of the bulb. [from [Wikipedia](https://en.wikipedia.org/wiki/Mitral_cell#Structure)]",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107933"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:120#olfactory-bulb-main-mitral-cell"),
     name="main olfactory bulb mitral neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_120"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nifext_120"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NIFEXT:120#olfactory-bulb-main-mitral-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0107933"),
     synonyms=[
         "olfactory bulb (main) mitral cell",
         "olfactory bulb (main) mitral neuron",
@@ -477,12 +497,12 @@ CellType.main_olfactory_bulb_mitral_neuron = CellType(
 CellType.main_olfactory_bulb_periglomerular_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/mainOlfactoryBulbPeriglomerularNeuron",
     definition="Small intrinsic neurons in the glomerular layer of the main olfactory bulb, with cell bodies surrounding the olfactory glomerulus. [adapted from [InterLex](http://uri.interlex.org/base/ilx_0107934)]",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107934"),
-    knowledge_space_link=IRI(
+    name="main olfactory bulb periglomerular neuron",
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nlx_cell_091202"],
+    preferred_cross_reference=IRI(
         "https://knowledge-space.org/wiki/NLXCELL:091202#olfactory-bulb-main-periglomerular-cell"
     ),
-    name="main olfactory bulb periglomerular neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_cell_091202"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0107934"),
     synonyms=[
         "periglomerular neuron",
         "PGC",
@@ -515,8 +535,9 @@ CellType.main_olfactory_bulb_tufted_neuron = CellType(
 CellType.microglial_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/microglialCell",
     definition="'Microglial cells' are small, migratory, phagocytic, interstitial glial cells in the central nervous system.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106919"),
     name="microglial cell",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0106919"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0106919"),
 )
 CellType.motor_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/motorNeuron",
@@ -525,10 +546,10 @@ CellType.motor_neuron = CellType(
 CellType.neocortex_layer2_3_pyramidal_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/neocortexLayer2-3PyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body that is located in layer 2/3 of the neocortex.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107387"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NIFEXT:49#neocortex-pyramidal-cell-layer-2-3"),
     name="neocortex layer 2/3 pyramidal neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nifext_49"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nifext_49"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NIFEXT:49#neocortex-pyramidal-cell-layer-2-3"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0107387"),
     synonyms=[
         "layer 2/3 pyramidal cell",
         "layer 2/3 pyramidal neuron",
@@ -541,8 +562,9 @@ CellType.neocortex_layer2_3_pyramidal_neuron = CellType(
 CellType.neocortex_layer5_tufted_pyramidal_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/neocortexLayer5TuftedPyramidalNeuron",
     definition="An excitatory neuron type with a pyramidal-shaped cell body found in layer 5 of the neocortex and projects to subcortical areas.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0738209"),
     name="neocortex layer 5 tufted pyramidal neuron",
+    other_ontology_identifiers=["http://uri.interlex.org/ilx_0738209"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0738209"),
     synonyms=[
         "L5 TPC",
         "L5 tufted pyramidal cell",
@@ -554,10 +576,10 @@ CellType.neocortex_layer5_tufted_pyramidal_neuron = CellType(
 CellType.neostriatum_cholinergic_interneuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/neostriatumCholinergicInterneuron",
     definition="An inhibitory interneuron in the caudate nucleus and putamen which mainly uses the neurotrasmitter acetylcholine (ACh).",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0107403"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:1866881837#neostriatum-cholinergic-cell"),
     name="neostriatum cholinergic interneuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1866881837"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/sao1866881837"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/SAO:1866881837#neostriatum-cholinergic-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0107403"),
     synonyms=[
         "cholinergic striatal neuron",
         "CIN",
@@ -572,9 +594,9 @@ CellType.neostriatum_cholinergic_interneuron = CellType(
 CellType.neostriatum_direct_pathway_spiny_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/neostriatumDirectPathwaySpinyNeuron",
     definition="The principal projection neuron of the caudate and putamen that excite their output structure.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0107404"),
     name="neostriatum direct pathway spiny neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_149135"),
+    preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_149135"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0107404"),
     synonyms=[
         "direct pathway medium spiny neuron",
         "direct pathway medium-sized spiny neuron",
@@ -586,9 +608,9 @@ CellType.neostriatum_direct_pathway_spiny_neuron = CellType(
 CellType.neostriatum_indirect_pathway_spiny_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/neostriatumIndirectPathwaySpinyNeuron",
     definition="The principal projection neuron of the caudate and putamen that inhibit their output structure.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0107405"),
     name="neostriatum indirect pathway spiny neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_149136"),
+    preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_149136"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0107405"),
     synonyms=[
         "iMSN",
         "indirect pathway medium spiny neuron",
@@ -600,8 +622,9 @@ CellType.neostriatum_indirect_pathway_spiny_neuron = CellType(
 CellType.neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/neuron",
     definition="A 'neuron' is a basic cellular unit of nervous tissue which can receive, conduct, and transmit electrical impulses.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0107497"),
     name="neuron",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0107497"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0107497"),
     synonyms=["nerve cell", "neurone"],
 )
 CellType.neuropeptide_y_expressing_neuron = CellType(
@@ -655,9 +678,9 @@ CellType.progenitor_cell = CellType(
 CellType.purkinje_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/PurkinjeCell",
     definition="A class of GABAergic inhibitory neurons located in the cerebellum with pear-shape cell bodies arranged in a single layer, typically one primary dendrites and an elaborate dendritic tree heavily invested with dendritic spines.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0101974"),
     name="Purkinje cell",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao471801888"),
+    preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/sao471801888"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0101974"),
     synonyms=[
         "cerebellar Punkinje cell",
         "cerebellar Punkinje neuron",
@@ -700,9 +723,9 @@ CellType.spinal_interneuron = CellType(
 CellType.spiny_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/spinyNeuron",
     definition="Any neuron characterized by a high density of dendritic spines on the dendrites.",
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/NLXCELL:100601#spiny-neuron"),
     name="spiny neuron",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_100601"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/nlx_100601"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NLXCELL:100601#spiny-neuron"),
 )
 CellType.stellate_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/stellateNeuron",
@@ -716,18 +739,18 @@ CellType.striatal_interneuron = CellType(
 CellType.striatum_medium_spiny_neuron = CellType(
     id="https://openminds.om-i.org/instances/cellType/striatumMediumSpinyNeuron",
     definition="A special type of GABAergic neuron with large dendritic trees that is located in the striatum.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0784362"),
     name="striatum medium spiny neuron",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/npo/uris/neurons/35"),
+    other_ontology_identifiers=["http://uri.interlex.org/npo/uris/neurons/35"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0784362"),
     synonyms=["MSN", "spiny projection neuron", "SPN", "striatal medium spiny neuron"],
 )
 CellType.vascular_endothelial_cell = CellType(
     id="https://openminds.om-i.org/instances/cellType/vascularEndothelialCell",
     definition="Cells that constitute the inner cellular lining of arteries, veins and capillaries.",
-    interlex_identifier=IRI("http://uri.interlex.org/ilx_0112265"),
-    knowledge_space_link=IRI("https://knowledge-space.org/wiki/SAO:1543450574#vascular-endothelial-cell"),
     name="vascular endothelial cell",
-    preferred_ontology_identifier=IRI("http://uri.neuinfo.org/nif/nifstd/sao1543450574"),
+    other_cross_references=["http://uri.neuinfo.org/nif/nifstd/sao1543450574"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/SAO:1543450574#vascular-endothelial-cell"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0112265"),
     synonyms=["endothelial cell"],
 )
 CellType.vascular_smooth_muscle_cell = CellType(
