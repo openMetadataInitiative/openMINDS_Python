@@ -19,12 +19,15 @@ class CoordinatePoint(EmbeddedMetadata):
 
     properties = [
         Property(
-            "coordinate_space",
-            ["openminds.latest.sands.CommonCoordinateSpaceVersion", "openminds.latest.sands.CustomCoordinateSpace"],
-            "coordinateSpace",
+            "coordinate_framework",
+            [
+                "openminds.latest.sands.CommonCoordinateFrameworkVersion",
+                "openminds.latest.sands.CustomCoordinateFramework",
+            ],
+            "coordinateFramework",
             required=True,
-            description="Two or three dimensional geometric setting.",
-            instructions="Add the coordinate space in which this coordinate point exists in.",
+            description="no description available",
+            instructions="Add the coordinate framework in which this coordinate point exists in.",
         ),
         Property(
             "coordinates",
@@ -40,8 +43,8 @@ class CoordinatePoint(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, coordinate_space=None, coordinates=None):
+    def __init__(self, coordinate_framework=None, coordinates=None):
         return super().__init__(
-            coordinate_space=coordinate_space,
+            coordinate_framework=coordinate_framework,
             coordinates=coordinates,
         )

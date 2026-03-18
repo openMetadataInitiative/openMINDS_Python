@@ -28,7 +28,7 @@ class ElectrodeContact(LinkedMetadata):
         ),
         Property(
             "defined_in",
-            "openminds.v1.core.FileInstance",
+            "openminds.v1.core.File",
             "definedIn",
             multiple=True,
             unique_items=True,
@@ -47,7 +47,7 @@ class ElectrodeContact(LinkedMetadata):
         ),
         Property(
             "related_recordings",
-            "openminds.v1.core.FileInstance",
+            ["openminds.v1.core.File", "openminds.v1.core.FileBundle"],
             "relatedRecording",
             multiple=True,
             unique_items=True,
@@ -57,7 +57,7 @@ class ElectrodeContact(LinkedMetadata):
         ),
         Property(
             "related_stimulations",
-            "openminds.v1.core.FileInstance",
+            ["openminds.v1.core.File", "openminds.v1.core.FileBundle"],
             "relatedStimulation",
             multiple=True,
             unique_items=True,

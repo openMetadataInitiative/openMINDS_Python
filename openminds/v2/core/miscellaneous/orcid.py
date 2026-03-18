@@ -23,6 +23,7 @@ class ORCID(LinkedMetadata):
             str,
             "identifier",
             formatting="text/plain",
+            required=True,
             description="Term or code used to identify the ORCID.",
             instructions="Enter the resolvable identifier (IRI) of the Open Researcher and Contributor ID, Inc.",
         ),

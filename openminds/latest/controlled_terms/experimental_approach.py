@@ -39,20 +39,6 @@ class ExperimentalApproach(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class ExperimentalApproach(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class ExperimentalApproach(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class ExperimentalApproach(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -143,7 +160,7 @@ class ExperimentalApproach(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,75 +168,74 @@ class ExperimentalApproach(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 ExperimentalApproach.anatomy = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/anatomy",
     definition="Any experimental approach focused on the bodily structure of living organisms.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739411"),
     name="anatomy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Anatomy"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Anatomy"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739411"),
     synonyms=["anatomical approach"],
 )
 ExperimentalApproach.behavior = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/behavior",
     definition="Any experimental approach focused on the mechanical activity or cognitive processes underlying mechanical activity of living organisms often in response to external sensory stimuli.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739413"),
     name="behavior",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Behavior"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Behavior"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739413"),
     synonyms=["behavioral approach"],
 )
 ExperimentalApproach.biophysics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/biophysics",
     definition="Any experimental approach that is traditionally used in physics, but applied and modified to study biological phenomena. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Biophysics)]",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0793772"),
     name="biophysics",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0793772"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0793772"),
 )
 ExperimentalApproach.cell_biology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/cellBiology",
     definition="Any experimental approach focused on structure, function, multiplication, pathology, and life history of biological cells.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739391"),
     name="cell biology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Cellular"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Cellular"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739391"),
     synonyms=["cellular approach"],
 )
 ExperimentalApproach.cell_morphology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/cellMorphology",
     definition="Any experimental approach focused on the shape and structure of individual cells.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739394"),
     name="cell morphology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/CellMorphology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/CellMorphology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739394"),
 )
 ExperimentalApproach.cell_population_characterization = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/cellPopulationCharacterization",
     definition="Any experimental approach focused on biochemical, molecular and/or physiological characteristics of populations of cells as opposed to individual cells.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739408"),
     name="cell population characterization",
-    preferred_ontology_identifier=IRI(
+    other_ontology_identifiers=[
         "http://uri.interlex.org/tgbugs/uris/readable/modality/CellPopulationCharachterization"
-    ),
+    ],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739408"),
 )
 ExperimentalApproach.cell_population_imaging = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/cellPopulationImaging",
     definition="Any experimental approach focused on imaging biochemical, molecular, or physiological characteristics of populations of cells.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739402"),
     name="cell population imaging",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/CellPopulationImaging"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/CellPopulationImaging"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739402"),
 )
 ExperimentalApproach.cell_population_manipulation = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/cellPopulationManipulation",
     definition="Any experimental approach focused on manipulation of biochemical, molecular, or physiological characteristics of populations of cells.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739398"),
     name="cell population manipulation",
-    preferred_ontology_identifier=IRI(
-        "http://uri.interlex.org/tgbugs/uris/readable/modality/CellPopulationManipulation"
-    ),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/CellPopulationManipulation"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739398"),
 )
 ExperimentalApproach.chemogenetics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/chemogenetics",
@@ -229,88 +245,86 @@ ExperimentalApproach.chemogenetics = ExperimentalApproach(
 ExperimentalApproach.clinical_research = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/clinicalResearch",
     definition="Any experimental approach focused on medical observation, treatment, or testing of patients.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739401"),
     name="clinical research",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Clinical"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Clinical"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739401"),
     synonyms=["clinical approach"],
 )
 ExperimentalApproach.computational_modeling = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/computationalModeling",
     definition="Any experimental approach focused on creating or characterizing computational models or simulations of experimentally observed phenomena.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739414"),
     name="computational modeling",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/ComputationalModelling"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/ComputationalModelling"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739414"),
 )
 ExperimentalApproach.developmental_biology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/developmentalBiology",
     definition="Any experimental approach focused on life cycle, development, or developmental history of an organism.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739412"),
     name="developmental biology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Developmental"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Developmental"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739412"),
     synonyms=["developmental approach"],
 )
 ExperimentalApproach.ecology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/ecology",
     definition="Any experimental approach focused on interrelationship of organisms and their environments, including causes and consequences.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739389"),
     name="ecology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Ecology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Ecology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739389"),
     synonyms=["ecological approach"],
 )
 ExperimentalApproach.electrophysiology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/electrophysiology",
     definition="Any experimental approach focused on electrical phenomena associated with living systems, most notably the nervous system, cardiac system, and musculoskeletal system.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0741202"),
     name="electrophysiology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Electrophysiology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Electrophysiology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741202"),
 )
 ExperimentalApproach.epidemiology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/epidemiology",
     definition="Any experimental approach focused on incidence, distribution, and possible control of diseases and other factors relating to health.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739400"),
     name="epidemiology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Epidemiology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Epidemiology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739400"),
     synonyms=["epidemiological approach"],
 )
 ExperimentalApproach.epigenomics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/epigenomics",
     definition="Any experimental approach focused on processes that modulate transcription but that do not directly alter the primary sequences of an organism's DNA.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0741207"),
     name="epigenomics",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Epigenomics"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Epigenomics"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741207"),
 )
 ExperimentalApproach.ethology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/ethology",
     definition="Any experimental approach focused on natural unmanipulated human or animal behavior and social organization from a biological, life history, and often evolutionary perspective.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739388"),
     name="ethology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Ethology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Ethology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739388"),
     synonyms=["ethological approach"],
 )
 ExperimentalApproach.evolutionary_biology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/evolutionaryBiology",
     definition="Any experimental approach focused on heritable characteristics of biological populations and their variation through the modification of developmental process to produce new forms and species.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739392"),
     name="evolutionary biology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Evolution"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Evolution"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739392"),
     synonyms=["evolutionary approach"],
 )
 ExperimentalApproach.expression = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/expression",
     definition="Any experimental approach focused on driving or detecting expression of genes in cells or tissues.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739397"),
     name="expression",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Expression"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Expression"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739397"),
     synonyms=["molecular expression approach"],
 )
 ExperimentalApproach.expression_characterization = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/expressionCharacterization",
     definition="Any experimental approach focused on the cellular, anatomical, or morphological distribution of gene expression.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739409"),
     name="expression characterization",
-    preferred_ontology_identifier=IRI(
-        "http://uri.interlex.org/tgbugs/uris/readable/modality/ExpressionCharachterization"
-    ),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/ExpressionCharachterization"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739409"),
 )
 ExperimentalApproach.genetics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/genetics",
@@ -320,16 +334,16 @@ ExperimentalApproach.genetics = ExperimentalApproach(
 ExperimentalApproach.genomics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/genomics",
     definition="Any experimental approach focused on structure, function, evolution, and mapping of genomes, the entiretiy of the genetic material of a single organism.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0741204"),
     name="genomics",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Genomics"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Genomics"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741204"),
 )
 ExperimentalApproach.histology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/histology",
     definition="Any experimental approach focused on structure of biological tissue.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739399"),
     name="histology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Histology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Histology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739399"),
     synonyms=["histological approach"],
 )
 ExperimentalApproach.informatics = ExperimentalApproach(
@@ -340,60 +354,60 @@ ExperimentalApproach.informatics = ExperimentalApproach(
 ExperimentalApproach.metabolomics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/metabolomics",
     definition="Any experimental approach focused on chemical processes involving metabolites, the small molecule substrates, intermediates and products of cell metabolism.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0741203"),
     name="metabolomics",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Metabolomics"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Metabolomics"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741203"),
 )
 ExperimentalApproach.microscopy = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/microscopy",
     definition="Any experimental approach focused on using differential contrast of microscopic structures to form an image.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739404"),
     name="microscopy",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Microscopy"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Microscopy"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739404"),
 )
 ExperimentalApproach.morphology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/morphology",
     definition="Any experimental approach focused on the shape and structure of living organisms or their parts.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739403"),
     name="morphology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Morphology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Morphology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739403"),
     synonyms=["morphological approach"],
 )
 ExperimentalApproach.multimodal_research = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/multimodalResearch",
     definition="Any experimental approach that employs multiple experimental approaches in significant ways.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739395"),
     name="multimodal research",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Multimodal"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Multimodal"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739395"),
     synonyms=["multimodal approach"],
 )
 ExperimentalApproach.multiomics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/multiomics",
     definition="Any experimental approach that employs multiple omics approaches in significant ways.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739407"),
     name="multiomics",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Multiomics"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Multiomics"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739407"),
 )
 ExperimentalApproach.neural_connectivity = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/neuralConnectivity",
     definition="Any experimental approach focused on functional or anatomical connections between single neurons or populations of neurons in defined anatomical regions.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739393"),
     name="neural connectivity",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Connectivity"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Connectivity"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739393"),
 )
 ExperimentalApproach.neuroimaging = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/neuroimaging",
     definition="Any experimental approach focused on the non-invasive direct or indirect imaging of the structure, function, or pharmacology of the nervous system.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0741206"),
     name="neuroimaging",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Neuroimaging"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Neuroimaging"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741206"),
 )
 ExperimentalApproach.omics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/omics",
     definition="Any experimental approach focused on characterization and quantification of biological molecules that give rise to the structure, function, and dynamics of organisms or their parts.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739405"),
     name="omics",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Omics"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Omics"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739405"),
 )
 ExperimentalApproach.optogenetics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/optogenetics",
@@ -409,43 +423,43 @@ ExperimentalApproach.pathology = ExperimentalApproach(
 ExperimentalApproach.pharmacology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/pharmacology",
     definition="Any experimental approach in which the composition, properties, functions, sources, synthesis and design of drugs (any artificial, natural, or endogenous molecule) and their biochemical or physiological effect (normal or abnormal) on a cell, tissue, organ, or organism are studied. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Pharmacology)]",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0108784"),
     name="pharmacology",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0108784"],
     preferred_ontology_identifier=IRI("http://edamontology.org/topic_0202"),
 )
 ExperimentalApproach.physiology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/physiology",
     definition="Any experimental approach focused on normal functions of living organisms and their parts.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739410"),
     name="physiology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Physiology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Physiology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739410"),
     synonyms=["physiological approach"],
 )
 ExperimentalApproach.proteomics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/proteomics",
     definition="Any experimental approach focused on the composition, structure, and activity of an entire set of proteins in organisms or their parts.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0741205"),
     name="proteomics",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Proteomics"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Proteomics"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741205"),
 )
 ExperimentalApproach.radiology = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/radiology",
     definition="Any experimental approach focused on using non-invasive techniques that use intrinsic or induced contrast to form images. Also covers purely clinical domains such as nuclear medicine.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739390"),
     name="radiology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Radiology"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Radiology"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739390"),
 )
 ExperimentalApproach.spatial_transcriptomics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/spatialTranscriptomics",
     definition="Any experimental approach focused on mapping the spatial location of gene activity in biological tissue.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739396"),
     name="spatial transcriptomics",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/SpatialTranscriptomics"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/SpatialTranscriptomics"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739396"),
 )
 ExperimentalApproach.transcriptomics = ExperimentalApproach(
     id="https://openminds.om-i.org/instances/experimentalApproach/transcriptomics",
     definition="Any experimental approach focused on the transcriptome (all RNA transcripts) of one or more cells, tissues, or organisms.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0739406"),
     name="transcriptomics",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Transcriptomics"),
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Transcriptomics"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0739406"),
 )

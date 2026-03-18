@@ -19,6 +19,20 @@ class TissueSample(LinkedMetadata):
 
     properties = [
         Property(
+            "anatomical_locations",
+            [
+                "openminds.v2.controlled_terms.UBERONParcellation",
+                "openminds.v2.sands.CustomAnatomicalEntity",
+                "openminds.v2.sands.ParcellationEntity",
+            ],
+            "anatomicalLocation",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all anatomical entities to which this tissue sample belongs.",
+        ),
+        Property(
             "biological_sex",
             "openminds.v2.controlled_terms.BiologicalSex",
             "biologicalSex",
@@ -118,6 +132,7 @@ class TissueSample(LinkedMetadata):
     def __init__(
         self,
         id=None,
+        anatomical_locations=None,
         biological_sex=None,
         internal_identifier=None,
         is_part_of=None,
@@ -132,6 +147,7 @@ class TissueSample(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
+            anatomical_locations=anatomical_locations,
             biological_sex=biological_sex,
             internal_identifier=internal_identifier,
             is_part_of=is_part_of,

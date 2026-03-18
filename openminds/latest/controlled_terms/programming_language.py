@@ -39,20 +39,6 @@ class ProgrammingLanguage(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class ProgrammingLanguage(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class ProgrammingLanguage(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class ProgrammingLanguage(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -143,7 +160,7 @@ class ProgrammingLanguage(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,54 +168,54 @@ class ProgrammingLanguage(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 ProgrammingLanguage.ampl = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/AMPL",
     name="AMPL",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q295250"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q295250"),
     synonyms=["A Mathematical Programming Language"],
 )
 ProgrammingLanguage.bash = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/Bash",
     name="Bash",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q189248"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q189248"),
 )
 ProgrammingLanguage.c = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/C",
     name="C",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q15777"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q15777"),
 )
 ProgrammingLanguage.cplusplus = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/C++",
     name="C++",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q2407"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q2407"),
 )
 ProgrammingLanguage.csharp = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/C#",
     name="C#",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q2370"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q2370"),
 )
 ProgrammingLanguage.fortran = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/Fortran",
     name="Fortran",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q83303"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q83303"),
 )
 ProgrammingLanguage.glsl = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/GLSL",
     name="GLSL",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q779819"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q779819"),
 )
 ProgrammingLanguage.html = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/HTML",
     name="HTML",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q8811"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q8811"),
 )
 ProgrammingLanguage.igor_pro = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/IGORPro",
@@ -209,60 +226,60 @@ ProgrammingLanguage.igor_pro = ProgrammingLanguage(
 ProgrammingLanguage.java = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/Java",
     name="Java",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q251"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q251"),
 )
 ProgrammingLanguage.java_script = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/JavaScript",
     name="JavaScript",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q2005"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q2005"),
 )
 ProgrammingLanguage.matlab = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/MATLAB",
     name="MATLAB",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q37805571"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q37805571"),
 )
 ProgrammingLanguage.pascal = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/Pascal",
     name="Pascal",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q81571"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q81571"),
 )
 ProgrammingLanguage.php = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/PHP",
     name="PHP",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q59"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q59"),
 )
 ProgrammingLanguage.python = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/Python",
     name="Python",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q28865"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q28865"),
 )
 ProgrammingLanguage.r = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/R",
     name="R",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q206904"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q206904"),
 )
 ProgrammingLanguage.ruby = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/Ruby",
     name="Ruby",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q161053"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q161053"),
 )
 ProgrammingLanguage.scala = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/Scala",
     name="Scala",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q460584"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q460584"),
 )
 ProgrammingLanguage.shell = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/shell",
     name="Shell",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q14663"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q14663"),
 )
 ProgrammingLanguage.t_sql = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/T-SQL",
     name="T-SQL",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q1411245"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q1411245"),
 )
 ProgrammingLanguage.type_script = ProgrammingLanguage(
     id="https://openminds.om-i.org/instances/programmingLanguage/TypeScript",
     name="TypeScript",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q978185"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q978185"),
 )

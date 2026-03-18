@@ -19,6 +19,38 @@ class FileBundle(LinkedMetadata):
 
     properties = [
         Property(
+            "content",
+            str,
+            "content",
+            formatting="text/plain",
+            description="Something that is contained.",
+            instructions="Enter a short content description for this file bundle.",
+        ),
+        Property(
+            "descended_from",
+            [
+                "openminds.v2.controlled_terms.AnalysisTechnique",
+                "openminds.v2.controlled_terms.MRIPulseSequence",
+                "openminds.v2.controlled_terms.MRIWeighting",
+                "openminds.v2.controlled_terms.StimulationApproach",
+                "openminds.v2.controlled_terms.StimulationTechnique",
+                "openminds.v2.controlled_terms.Technique",
+                "openminds.v2.core.BehavioralTask",
+                "openminds.v2.core.File",
+                "openminds.v2.core.FileBundle",
+                "openminds.v2.core.SubjectGroupState",
+                "openminds.v2.core.SubjectState",
+                "openminds.v2.core.TissueSampleCollectionState",
+                "openminds.v2.core.TissueSampleState",
+            ],
+            "descendedFrom",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all entities that played a role in the production of this file bundle (must be true for all grouped files).",
+        ),
+        Property(
             "format",
             "openminds.v2.core.ContentType",
             "format",
@@ -76,6 +108,8 @@ class FileBundle(LinkedMetadata):
     def __init__(
         self,
         id=None,
+        content=None,
+        descended_from=None,
         format=None,
         grouped_by=None,
         hash=None,
@@ -86,6 +120,8 @@ class FileBundle(LinkedMetadata):
     ):
         return super().__init__(
             id=id,
+            content=content,
+            descended_from=descended_from,
             format=format,
             grouped_by=grouped_by,
             hash=hash,

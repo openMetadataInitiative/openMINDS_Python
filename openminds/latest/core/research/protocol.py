@@ -66,8 +66,12 @@ class Protocol(LinkedMetadata):
             "techniques",
             [
                 "openminds.latest.controlled_terms.AnalysisTechnique",
+                "openminds.latest.controlled_terms.MRIFatSuppressionTechnique",
+                "openminds.latest.controlled_terms.MRIParallelAcquisitionTechnique",
                 "openminds.latest.controlled_terms.MRIPulseSequence",
+                "openminds.latest.controlled_terms.MRISpoilingTechnique",
                 "openminds.latest.controlled_terms.MRIWeighting",
+                "openminds.latest.controlled_terms.SpatialEncoding",
                 "openminds.latest.controlled_terms.StimulationApproach",
                 "openminds.latest.controlled_terms.StimulationTechnique",
                 "openminds.latest.controlled_terms.Technique",

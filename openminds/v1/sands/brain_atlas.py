@@ -4,6 +4,8 @@
 
 # this file was auto-generated!
 
+from openminds.base import IRI
+
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
@@ -29,6 +31,13 @@ class BrainAtlas(LinkedMetadata):
             instructions="Enter a short description for this brain atlas.",
         ),
         Property(
+            "digital_identifier",
+            "openminds.v1.core.DOI",
+            "digitalIdentifier",
+            description="Digital handle to identify objects or legal persons.",
+            instructions="Add the globally unique and persistent digital identifier of this brain atlas.",
+        ),
+        Property(
             "full_name",
             str,
             "fullName",
@@ -50,11 +59,19 @@ class BrainAtlas(LinkedMetadata):
         ),
         Property(
             "homepage",
-            str,
+            IRI,
             "homepage",
-            formatting="text/plain",
             description="Main website of the brain atlas.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this brain atlas.",
+        ),
+        Property(
+            "how_to_cite",
+            str,
+            "howToCite",
+            formatting="text/markdown",
+            multiline=True,
+            description="Preferred format for citing a particular object or legal person.",
+            instructions="Enter the preferred citation text for this brain atlas. Leave blank if citation text can be extracted from the assigned digital identifier.",
         ),
         Property(
             "short_name",
@@ -67,12 +84,24 @@ class BrainAtlas(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, description=None, full_name=None, has_versions=None, homepage=None, short_name=None):
+    def __init__(
+        self,
+        id=None,
+        description=None,
+        digital_identifier=None,
+        full_name=None,
+        has_versions=None,
+        homepage=None,
+        how_to_cite=None,
+        short_name=None,
+    ):
         return super().__init__(
             id=id,
             description=description,
+            digital_identifier=digital_identifier,
             full_name=full_name,
             has_versions=has_versions,
             homepage=homepage,
+            how_to_cite=how_to_cite,
             short_name=short_name,
         )

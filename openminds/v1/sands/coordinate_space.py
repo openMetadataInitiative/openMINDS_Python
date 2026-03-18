@@ -4,6 +4,9 @@ Structured information on a coordinate space.
 
 # this file was auto-generated!
 
+from datetime import date
+from openminds.base import IRI
+
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
@@ -50,7 +53,7 @@ class CoordinateSpace(LinkedMetadata):
         ),
         Property(
             "digital_identifier",
-            "openminds.v1.core.DigitalIdentifier",
+            "openminds.v1.core.DOI",
             "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this coordinate space.",
@@ -66,11 +69,19 @@ class CoordinateSpace(LinkedMetadata):
         ),
         Property(
             "homepage",
-            str,
+            IRI,
             "homepage",
-            formatting="text/plain",
             description="Main website of the coordinate space.",
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this brain atlas.",
+        ),
+        Property(
+            "how_to_cite",
+            str,
+            "howToCite",
+            formatting="text/markdown",
+            multiline=True,
+            description="Preferred format for citing a particular object or legal person.",
+            instructions="Enter the preferred citation text for this coordinate space. Leave blank if citation text can be extracted from the assigned digital identifier.",
         ),
         Property(
             "native_unit",
@@ -82,17 +93,15 @@ class CoordinateSpace(LinkedMetadata):
         ),
         Property(
             "ontology_identifier",
-            str,
+            IRI,
             "ontologyIdentifier",
-            formatting="text/plain",
             description="Term or code used to identify the coordinate space registered within a particular ontology.",
             instructions="Enter the identifier (IRI) of the related ontological term matching this coordinate space.",
         ),
         Property(
             "release_date",
-            str,
+            date,
             "releaseDate",
-            formatting="text/plain",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
             instructions="Enter the date of first publication of this coordinate space.",
@@ -126,6 +135,7 @@ class CoordinateSpace(LinkedMetadata):
         digital_identifier=None,
         full_name=None,
         homepage=None,
+        how_to_cite=None,
         native_unit=None,
         ontology_identifier=None,
         release_date=None,
@@ -140,6 +150,7 @@ class CoordinateSpace(LinkedMetadata):
             digital_identifier=digital_identifier,
             full_name=full_name,
             homepage=homepage,
+            how_to_cite=how_to_cite,
             native_unit=native_unit,
             ontology_identifier=ontology_identifier,
             release_date=release_date,

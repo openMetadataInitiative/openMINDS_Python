@@ -1,0 +1,47 @@
+"""
+<description not available>
+"""
+
+# this file was auto-generated!
+
+from openminds.base import EmbeddedMetadata
+from openminds.properties import Property
+
+
+class Trapezoid(EmbeddedMetadata):
+    """
+    <description not available>
+    """
+
+    type_ = "https://openminds.om-i.org/types/Trapezoid"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
+    schema_version = "latest"
+
+    properties = [
+        Property(
+            "base_distance",
+            "openminds.latest.core.QuantitativeValue",
+            "baseDistance",
+            required=True,
+            description="no description available",
+            instructions="Enter the perpendicular distance between the parallel lines of the major and minor bases of this trapezoid.",
+        ),
+        Property(
+            "base_lengthss",
+            "openminds.latest.core.QuantitativeValue",
+            "baseLengths",
+            multiple=True,
+            unique_items=False,
+            min_items=2,
+            max_items=2,
+            required=True,
+            description="no description available",
+            instructions="Enter the lengths of the major and minor bases of this trapezoid.",
+        ),
+    ]
+
+    def __init__(self, base_distance=None, base_lengthss=None):
+        return super().__init__(
+            base_distance=base_distance,
+            base_lengthss=base_lengthss,
+        )

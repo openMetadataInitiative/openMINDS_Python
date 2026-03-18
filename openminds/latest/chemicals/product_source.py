@@ -44,7 +44,7 @@ class ProductSource(LinkedMetadata):
         ),
         Property(
             "provider",
-            ["openminds.latest.core.Consortium", "openminds.latest.core.Organization", "openminds.latest.core.Person"],
+            ["openminds.latest.core.Organization", "openminds.latest.core.Person"],
             "provider",
             required=True,
             description="no description available",

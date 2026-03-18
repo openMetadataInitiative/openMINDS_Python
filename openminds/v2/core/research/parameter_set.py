@@ -40,7 +40,7 @@ class ParameterSet(EmbeddedMetadata):
         ),
         Property(
             "relevant_for",
-            ["openminds.v2.controlled_terms.BehavioralTask", "openminds.v2.controlled_terms.Technique"],
+            ["openminds.v2.core.BehavioralTask", "openminds.v2.controlled_terms.Technique"],
             "relevantFor",
             required=True,
             description="Reference to what or whom the parameter set bears significance.",

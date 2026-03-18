@@ -39,20 +39,6 @@ class BiologicalSex(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class BiologicalSex(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class BiologicalSex(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class BiologicalSex(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -143,7 +160,7 @@ class BiologicalSex(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,28 +168,28 @@ class BiologicalSex(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 BiologicalSex.female = BiologicalSex(
     id="https://openminds.om-i.org/instances/biologicalSex/female",
     definition="Biological sex that produces egg cells (ova).",
     description="A female organism typically has the capacity to produce relatively large, usually immobile gametes (reproductive cells), called egg cells (or ova). In the process of fertilization, an egg cell (ovum) fuses with a smaller, usually mobile male gametes, called sperm cells (or spermatozoa).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104150"),
     name="female",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0104150"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/PATO_0000383"),
 )
 BiologicalSex.hermaphrodite = BiologicalSex(
     id="https://openminds.om-i.org/instances/biologicalSex/hermaphrodite",
     definition="Biological sex with both male and female reproductive organs.",
     description="A hermaphrodite is an animal or plant that can produce gametes (reproductive cells) of both, male and female sexes. In sexually dimorphic organisms, hermaphroditism may occur because of variations in the genetic code. The term *hermaphrodite* is considered to be misleading, stigmatizing, and scientifically specious in reference to humans. For this reason, in humans the term *intersex* is typically used.",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0104963"),
     name="hermaphrodite",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0104963"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/PATO_0001340"),
     synonyms=["intersex"],
 )
@@ -180,8 +197,8 @@ BiologicalSex.male = BiologicalSex(
     id="https://openminds.om-i.org/instances/biologicalSex/male",
     definition="Biological sex that produces sperm cells (spermatozoa).",
     description="A male organism typically has the capacity to produce relatively small, usually mobile gametes (reproductive cells), called sperm cells (or spermatozoa). In the process of fertilization, these sperm cells fuse with a larger, usually immobile female gamete, called egg cell (or ovum).",
-    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0106489"),
     name="male",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0106489"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/PATO_0000384"),
 )
 BiologicalSex.not_detectable = BiologicalSex(

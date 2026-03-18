@@ -44,6 +44,17 @@ class Consortium(LinkedMetadata):
             instructions="Enter the internationalized resource identifier (IRI) to the homepage of this consortium.",
         ),
         Property(
+            "membershipss",
+            "openminds.latest.core.Membership",
+            "memberships",
+            multiple=True,
+            unique_items=True,
+            min_items=2,
+            required=True,
+            description="no description available",
+            instructions="Add all membership records (one per member) for this consortium.",
+        ),
+        Property(
             "short_name",
             str,
             "shortName",
@@ -53,11 +64,14 @@ class Consortium(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, contact_information=None, full_name=None, homepage=None, short_name=None):
+    def __init__(
+        self, id=None, contact_information=None, full_name=None, homepage=None, membershipss=None, short_name=None
+    ):
         return super().__init__(
             id=id,
             contact_information=contact_information,
             full_name=full_name,
             homepage=homepage,
+            membershipss=membershipss,
             short_name=short_name,
         )

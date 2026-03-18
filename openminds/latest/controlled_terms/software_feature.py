@@ -39,20 +39,6 @@ class SoftwareFeature(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class SoftwareFeature(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class SoftwareFeature(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class SoftwareFeature(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -143,7 +160,7 @@ class SoftwareFeature(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,37 +168,37 @@ class SoftwareFeature(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 SoftwareFeature.application_programming_interface = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/applicationProgrammingInterface",
     definition="A set of rules and protocols that allows different software applications to communicate with each other, enabling them to access specific functions or data.",
     name="application programming interface",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q165194"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q165194"),
     synonyms=["API"],
 )
 SoftwareFeature.augmented_reality = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/augmentedReality",
     name="augmented reality",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q254183"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q254183"),
 )
 SoftwareFeature.command_line_interface = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/commandLineInterface",
     definition="A text-based system that enables users to interact with a computer or software by entering commands, allowing them to perform specific tasks or operations.",
     name="command line interface",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q189053"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q189053"),
     synonyms=["CLI"],
 )
 SoftwareFeature.control = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/control",
     name="control",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q29017603"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q29017603"),
 )
 SoftwareFeature.data_acquisition = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/dataAcquisition",
@@ -190,29 +207,29 @@ SoftwareFeature.data_acquisition = SoftwareFeature(
 SoftwareFeature.data_processing = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/dataProcessing",
     name="data processing",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q6661985"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q6661985"),
 )
 SoftwareFeature.desktop_environment = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/desktopEnvironment",
     name="desktop environment",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q56155"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q56155"),
 )
 SoftwareFeature.graph_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/graphDataTypes",
     name="graph data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q2479726"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q2479726"),
 )
 SoftwareFeature.graphical_user_interface = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/graphicalUserInterface",
     definition="A visual system that enables users to interact with a computer or software through graphical elements like windows, icons, and menus, allowing them to perform specific tasks or operations.",
     name="graphical user interface",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q782543"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q782543"),
     synonyms=["GUI"],
 )
 SoftwareFeature.heterogeneous_architecture = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/heterogeneousArchitecture",
     name="heterogeneous architecture",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q17111997"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q17111997"),
 )
 SoftwareFeature.interactive_analysis = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/interactiveAnalysis",
@@ -221,57 +238,57 @@ SoftwareFeature.interactive_analysis = SoftwareFeature(
 SoftwareFeature.matrix_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/matrixDataTypes",
     name="matrix data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q44337"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q44337"),
 )
 SoftwareFeature.metadata_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/metadataDataTypes",
     name="metadata data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q180160"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q180160"),
 )
 SoftwareFeature.mobile_device = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/mobileDevice",
     name="mobile device",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q5082128"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q5082128"),
 )
 SoftwareFeature.modelling = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/modelling",
     name="modelling",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q1116876"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q1116876"),
 )
 SoftwareFeature.parallel_programming = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/parallelProgramming",
     name="parallel programming",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q232661"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q232661"),
 )
 SoftwareFeature.performance_measurement = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/performanceMeasurement",
     name="performance measurement",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q1771949"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q1771949"),
 )
 SoftwareFeature.positional_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/positionalDataTypes",
     name="positional data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q1477538"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q1477538"),
 )
 SoftwareFeature.presentation_visualisation = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/presentationVisualisation",
     name="presentation visualisation",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q451553"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q451553"),
 )
 SoftwareFeature.profiling = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/profiling",
     name="profiling",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q1138496"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q1138496"),
 )
 SoftwareFeature.provenance = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/provenance",
     name="provenance",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q30105403"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q30105403"),
 )
 SoftwareFeature.raster_image_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/rasterImageDataTypes",
     name="raster image data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q182270"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q182270"),
 )
 SoftwareFeature.scripting_interface = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/scriptingInterface",
@@ -280,22 +297,22 @@ SoftwareFeature.scripting_interface = SoftwareFeature(
 SoftwareFeature.simulation = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/simulation",
     name="simulation",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q925667"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q925667"),
 )
 SoftwareFeature.statistical_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/statisticalDataTypes",
     name="statistical data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q7604387"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q7604387"),
 )
 SoftwareFeature.tensor_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/tensorDataTypes",
     name="tensor data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q188524"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q188524"),
 )
 SoftwareFeature.three_d_geometry_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/3DGeometryDataTypes",
     name="3D geometry data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q189177"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q189177"),
 )
 SoftwareFeature.three_d_scalar_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/3DScalarDataTypes",
@@ -312,15 +329,15 @@ SoftwareFeature.tiled_display_wall = SoftwareFeature(
 SoftwareFeature.time_series_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/timeSeriesDataTypes",
     name="time series data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q186588"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q186588"),
 )
 SoftwareFeature.vector_image_data_types = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/vectorImageDataTypes",
     name="vector image data types",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q170130"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q170130"),
 )
 SoftwareFeature.virtual_reality = SoftwareFeature(
     id="https://openminds.om-i.org/instances/softwareFeature/virtualReality",
     name="virtual reality",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q170519"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q170519"),
 )

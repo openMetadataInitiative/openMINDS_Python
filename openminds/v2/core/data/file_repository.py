@@ -21,6 +21,16 @@ class FileRepository(LinkedMetadata):
 
     properties = [
         Property(
+            "content_type_patterns",
+            "openminds.v2.core.ContentTypePattern",
+            "contentTypePattern",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all content type patterns that would identify matching content types for files within this file repository.",
+        ),
+        Property(
             "format",
             "openminds.v2.core.ContentType",
             "format",
@@ -73,11 +83,19 @@ class FileRepository(LinkedMetadata):
             description="Quantitative value defining how much disk space is used by an object on a computer system.",
             instructions="Enter the storage size this file repository allocates.",
         ),
+        Property(
+            "structure_pattern",
+            "openminds.v2.core.FileRepositoryStructure",
+            "structurePattern",
+            description="no description available",
+            instructions="Add a file repository structure which identifies the file path patterns used in this file repository.",
+        ),
     ]
 
     def __init__(
         self,
         id=None,
+        content_type_patterns=None,
         format=None,
         hash=None,
         hosted_by=None,
@@ -85,9 +103,11 @@ class FileRepository(LinkedMetadata):
         name=None,
         repository_type=None,
         storage_size=None,
+        structure_pattern=None,
     ):
         return super().__init__(
             id=id,
+            content_type_patterns=content_type_patterns,
             format=format,
             hash=hash,
             hosted_by=hosted_by,
@@ -95,4 +115,5 @@ class FileRepository(LinkedMetadata):
             name=name,
             repository_type=repository_type,
             storage_size=storage_size,
+            structure_pattern=structure_pattern,
         )

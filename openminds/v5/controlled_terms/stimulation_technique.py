@@ -1,0 +1,275 @@
+"""
+<description not available>
+"""
+
+# this file was auto-generated!
+
+from openminds.base import IRI
+
+from openminds.base import LinkedMetadata
+from openminds.properties import Property
+
+
+class StimulationTechnique(LinkedMetadata):
+    """
+    <description not available>
+    """
+
+    type_ = "https://openminds.om-i.org/types/StimulationTechnique"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
+    schema_version = "v5.0"
+
+    properties = [
+        Property(
+            "definition",
+            str,
+            "definition",
+            formatting="text/markdown",
+            multiline=True,
+            description="Short, but precise statement of the meaning of a word, word group, sign or a symbol.",
+            instructions="Enter one sentence for defining this term.",
+        ),
+        Property(
+            "description",
+            str,
+            "description",
+            formatting="text/markdown",
+            multiline=True,
+            description="Longer statement or account giving the characteristics of the stimulation technique.",
+            instructions="Enter a short text describing this term.",
+        ),
+        Property(
+            "name",
+            str,
+            "name",
+            formatting="text/plain",
+            required=True,
+            description="Word or phrase that constitutes the distinctive designation of the stimulation technique.",
+            instructions="Controlled term originating from a defined terminology.",
+        ),
+        Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
+            "preferred_ontology_identifier",
+            IRI,
+            "preferredOntologyIdentifier",
+            description="Persistent identifier of a preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
+        ),
+        Property(
+            "synonyms",
+            str,
+            "synonym",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
+        ),
+    ]
+
+    def __init__(
+        self,
+        id=None,
+        definition=None,
+        description=None,
+        name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
+        preferred_ontology_identifier=None,
+        synonyms=None,
+    ):
+        return super().__init__(
+            id=id,
+            definition=definition,
+            description=description,
+            name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
+            preferred_ontology_identifier=preferred_ontology_identifier,
+            synonyms=synonyms,
+        )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(
+        cls,
+        name: str,
+        match: str = "equals",
+        all: bool = False,
+    ):
+        """
+        Search for instances in the openMINDS instance library based on their name.
+
+        This includes properties "name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation", and "synonyms".
+
+        Note that not all metadata classes have a name.
+
+        Args:
+            name (str): a string to search for.
+            match (str, optional): either "equals" (exact match - default) or "contains".
+            all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
+        """
+        namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                keys = []
+                for prop_name in namelike_properties:
+                    if hasattr(instance, prop_name):
+                        keys.append(getattr(instance, prop_name))
+                if hasattr(instance, "synonyms"):
+                    for synonym in instance.synonyms or []:
+                        keys.append(synonym)
+                for key in keys:
+                    if key in cls._instance_lookup:
+                        cls._instance_lookup[key].append(instance)
+                    else:
+                        cls._instance_lookup[key] = [instance]
+        if match == "equals":
+            matches = cls._instance_lookup.get(name, [])
+        elif match == "contains":
+            matches = []
+            for key, instances in cls._instance_lookup.items():
+                if name in key:
+                    matches.extend(instances)
+        else:
+            raise ValueError("'match' must be either 'equals' or 'contains'")
+        if not matches:
+            return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
+
+
+StimulationTechnique.abstract_image_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/abstractImageVisualStimulation",
+    definition="In an 'abstract image visual stimulation' a subject is visually stimulated with a static image that does not show a natural scene but reduced information or forms (e.g., colored symbols or outlines of faces).",
+    name="abstract image visual stimulation",
+)
+StimulationTechnique.checkerboard_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/checkerboardVisualStimulation",
+    definition="Stimulation technique that uses a checkerboard as visual stimulus.",
+    name="checkerboard visual stimulation",
+    synonyms=[
+        "checker board stimulation",
+        "checker board visual stimulation",
+        "checker-board stimulation",
+        "checker-board visual stimulation",
+    ],
+)
+StimulationTechnique.current_step_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/currentStepStimulation",
+    definition="Current step stimulation is a technique in which an amount of current is applied in predefined steps, whilst measuring changes in neural/muscular activity.",
+    name="current step stimulation",
+)
+StimulationTechnique.drifting_grating_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/driftingGratingVisualStimulation",
+    name="drifting grating visual stimulation",
+)
+StimulationTechnique.electrical_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/electricalStimulation",
+    definition="A technique used to elicit a reaction by an electrical stimulus.",
+    name="electrical stimulation",
+    other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/indexes/ontologies/methods/188"],
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0739699"),
+)
+StimulationTechnique.figure_ground_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/figure-groundVisualStimulation",
+    name="figure-ground visual stimulation",
+)
+StimulationTechnique.gestalt_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/GestaltVisualStimulation",
+    name="Gestalt visual stimulation",
+)
+StimulationTechnique.microstimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/microstimulation",
+    name="microstimulation",
+)
+StimulationTechnique.natural_image_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/naturalImageVisualStimulation",
+    definition="In a 'natural image visual stimulation' a subject is visually stimulated with a static image that shows a natural scene (e.g., landscape or a person).",
+    name="natural image visual stimulation",
+)
+StimulationTechnique.natural_sound_auditory_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/naturalSoundAuditoryStimulation",
+    name="natural sound auditory stimulation",
+)
+StimulationTechnique.optogenetic_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/optogeneticStimulation",
+    definition="Using light of a particular wavelength, 'optogenetic stimulation' increases or inhibits the activity of neuron populations that express (typically due to genetic manipulation) light-sensitive ion channels, pumps or enzymes.",
+    name="optogenetic stimulation",
+)
+StimulationTechnique.photon_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/photonStimulation",
+    name="photon stimulation",
+)
+StimulationTechnique.random_dot_motion_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/randomDotMotionStimulation",
+    definition="In a 'random dot motion stimulation' a subject is visually stimulated with a video where simulated randomly distributed dot(s) are re-positioned at a new random location with each video frame [[Newsome & Paré, 1988](https://doi.org/10.1523/jneurosci.08-06-02201.1988).",
+    name="random dot motion stimulation",
+    synonyms=["random dot visual stimulation", "random dot visual stimulation technique"],
+)
+StimulationTechnique.single_pulse_electrical_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/singlePulseElectricalStimulation",
+    definition="A 'single pulse electrical stimulation' is a cortical stimulation technique typically used in the field of epilepsy surgery.",
+    name="single pulse electrical stimulation",
+    synonyms=["SPES"],
+)
+StimulationTechnique.static_grating_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/staticGratingVisualStimulation",
+    name="static grating visual stimulation",
+)
+StimulationTechnique.subliminal_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/subliminalStimulation",
+    definition="'Subliminal stimulation' is a technique providing any sensory stimuli below an individual's threshold for conscious perception (adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli))",
+    name="subliminal stimulation",
+)
+StimulationTechnique.subliminal_visual_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/subliminalVisualStimulation",
+    definition="Stimulation technique that is providing visual stimuli below an indivdual's threshold for conscious perception [adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli)]",
+    name="subliminal visual stimulation",
+)
+StimulationTechnique.transcranial_magnetic_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/transcranialMagneticStimulation",
+    name="transcranial magnetic stimulation",
+)
+StimulationTechnique.whisker_stimulation = StimulationTechnique(
+    id="https://openminds.om-i.org/instances/stimulationTechnique/whiskerStimulation",
+    definition="'Whisker stimulation' comprises all stimulation techniques in which a single whisker or a group of whiskers is deflected in repeatable manner.",
+    name="whisker stimulation",
+)

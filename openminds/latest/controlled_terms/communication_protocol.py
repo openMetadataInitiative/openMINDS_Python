@@ -39,20 +39,6 @@ class CommunicationProtocol(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class CommunicationProtocol(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class CommunicationProtocol(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class CommunicationProtocol(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -143,7 +160,7 @@ class CommunicationProtocol(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,12 +168,12 @@ class CommunicationProtocol(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 CommunicationProtocol.http = CommunicationProtocol(
@@ -164,28 +181,28 @@ CommunicationProtocol.http = CommunicationProtocol(
     definition="A network communication protocol used for exchanging hypermedia documents, primarily between web servers and browsers.",
     description="For more information please go to the [HTTP Documentation](https://httpwg.org/specs/).",
     name="HTTP",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q8777"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q8777"),
     synonyms=["Hypertext Transfer Protocol"],
 )
 CommunicationProtocol.https = CommunicationProtocol(
     id="https://openminds.om-i.org/instances/communicationProtocol/HTTPS",
     definition="A network communication protocol that secures HTTP traffic by encrypting it using SSL/TLS.",
     name="HTTPS",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q44484"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q44484"),
     synonyms=["Hypertext Transfer Protocol Secure"],
 )
 CommunicationProtocol.ssh = CommunicationProtocol(
     id="https://openminds.om-i.org/instances/communicationProtocol/SSH",
     definition="A network communication protocol that enables secure remote login and command execution over unsecured networks.",
     name="SSH",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q170460"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q170460"),
     synonyms=["Secure Shell"],
 )
 CommunicationProtocol.tcp_ip = CommunicationProtocol(
     id="https://openminds.om-i.org/instances/communicationProtocol/TCP_IP",
     definition="A network communication protocol suite that defines how data is transmitted across interconnected networks.",
     name="TCP/IP",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q81414"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q81414"),
     synonyms=["Internet Protocol suite", "IP suite", "TCP-IP", "Transmission Control Protocol / Internet Protocol"],
 )
 CommunicationProtocol.web_socket = CommunicationProtocol(
@@ -193,6 +210,6 @@ CommunicationProtocol.web_socket = CommunicationProtocol(
     definition="A computer communications protocol, providing a bidirectional communication channel over a single Transmission Control Protocol (TCP) connection.",
     description="For more information please go to the [WebSocket documentation](https://www.rfc-editor.org/rfc/rfc6455) provided by the Internet Engineering Task Force (IETF).",
     name="WebSocket",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q859938"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q859938"),
     synonyms=["WebSocket protocol"],
 )

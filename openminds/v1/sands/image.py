@@ -28,7 +28,7 @@ class Image(LinkedMetadata):
         ),
         Property(
             "defined_in",
-            "openminds.v1.core.FileInstance",
+            "openminds.v1.core.File",
             "definedIn",
             required=True,
             description="Reference to a file instance in which something is stored.",

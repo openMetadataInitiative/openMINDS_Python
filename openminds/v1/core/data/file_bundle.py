@@ -29,7 +29,13 @@ class FileBundle(LinkedMetadata):
         Property(
             "descended_from",
             [
-                "openminds.v1.controlled_terms.BehavioralTask",
+                "openminds.v1.controlled_terms.AnalysisTechnique",
+                "openminds.v1.controlled_terms.MRIPulseSequence",
+                "openminds.v1.controlled_terms.MRIWeighting",
+                "openminds.v1.controlled_terms.StimulationApproach",
+                "openminds.v1.controlled_terms.StimulationTechnique",
+                "openminds.v1.controlled_terms.Technique",
+                "openminds.v1.core.BehavioralTask",
                 "openminds.v1.core.File",
                 "openminds.v1.core.FileBundle",
                 "openminds.v1.core.SubjectGroupState",

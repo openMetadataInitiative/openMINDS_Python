@@ -4,11 +4,11 @@
 
 # this file was auto-generated!
 
-from openminds.base import LinkedMetadata
+from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 
 
-class Location(LinkedMetadata):
+class Location(EmbeddedMetadata):
     """
     <description not available>
     """
@@ -43,9 +43,8 @@ class Location(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, address=None, country=None, geo_coordinates=None):
+    def __init__(self, address=None, country=None, geo_coordinates=None):
         return super().__init__(
-            id=id,
             address=address,
             country=country,
             geo_coordinates=geo_coordinates,

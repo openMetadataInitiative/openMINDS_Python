@@ -4,11 +4,11 @@ Structured information on the relation between one anatomical entity and another
 
 # this file was auto-generated!
 
-from openminds.base import LinkedMetadata
+from openminds.base import EmbeddedMetadata
 from openminds.properties import Property
 
 
-class AnatomicalEntityRelation(LinkedMetadata):
+class AnatomicalEntityRelation(EmbeddedMetadata):
     """
     Structured information on the relation between one anatomical entity and another.
     """
@@ -60,7 +60,6 @@ class AnatomicalEntityRelation(LinkedMetadata):
 
     def __init__(
         self,
-        id=None,
         criteria=None,
         criteria_quality_type=None,
         in_relation_to=None,
@@ -68,7 +67,6 @@ class AnatomicalEntityRelation(LinkedMetadata):
         quantitative_overlap=None,
     ):
         return super().__init__(
-            id=id,
             criteria=criteria,
             criteria_quality_type=criteria_quality_type,
             in_relation_to=in_relation_to,

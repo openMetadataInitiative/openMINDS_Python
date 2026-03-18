@@ -171,7 +171,7 @@ class ParcellationEntity(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -179,12 +179,12 @@ class ParcellationEntity(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 ParcellationEntity.aal1_acin = ParcellationEntity(
@@ -30981,462 +30981,462 @@ ParcellationEntity.swanson_bm_zona_limitans = ParcellationEntity(
     name="zona limitans",
 )
 ParcellationEntity.swma__cu__li_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Cu-Li_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Cu-Li_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Cu-Li_0"}],
     lookup_label="SWMA_Cu-Li_0",
     name="Cu-Li_0",
 )
 ParcellationEntity.swma__fu_lo_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Fu-LO_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Fu-LO_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Fu-LO_0"}],
     lookup_label="SWMA_Fu-LO_0",
     name="Fu-LO_0",
 )
 ParcellationEntity.swma__fu_lo_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Fu-LO_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Fu-LO_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Fu-LO_1"}],
     lookup_label="SWMA_Fu-LO_1",
     name="Fu-LO_1",
 )
 ParcellationEntity.swma__op__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Op-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Op-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Op-Ins_0"}],
     lookup_label="SWMA_Op-Ins_0",
     name="Op-Ins_0",
 )
 ParcellationEntity.swma__op__pr_c_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Op-PrC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Op-PrC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Op-PrC_0"}],
     lookup_label="SWMA_Op-PrC_0",
     name="Op-PrC_0",
 )
 ParcellationEntity.swma__op__tr_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Op-Tr_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Op-Tr_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Op-Tr_0"}],
     lookup_label="SWMA_Op-Tr_0",
     name="Op-Tr_0",
 )
 ParcellationEntity.swma__op_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Op-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Op-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Op-SF_0"}],
     lookup_label="SWMA_Op-SF_0",
     name="Op-SF_0",
 )
 ParcellationEntity.swma__or__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Or-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Or-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Or-Ins_0"}],
     lookup_label="SWMA_Or-Ins_0",
     name="Or-Ins_0",
 )
 ParcellationEntity.swma__po_c__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-Ins_0"}],
     lookup_label="SWMA_PoC-Ins_0",
     name="PoC-Ins_0",
 )
 ParcellationEntity.swma__po_c__pr_c_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-PrC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-PrC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-PrC_0"}],
     lookup_label="SWMA_PoC-PrC_0",
     name="PoC-PrC_0",
 )
 ParcellationEntity.swma__po_c__pr_c_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-PrC_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-PrC_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-PrC_1"}],
     lookup_label="SWMA_PoC-PrC_1",
     name="PoC-PrC_1",
 )
 ParcellationEntity.swma__po_c__pr_c_2 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-PrC_2",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-PrC_2",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-PrC_2"}],
     lookup_label="SWMA_PoC-PrC_2",
     name="PoC-PrC_2",
 )
 ParcellationEntity.swma__po_c__pr_c_3 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-PrC_3",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-PrC_3",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-PrC_3"}],
     lookup_label="SWMA_PoC-PrC_3",
     name="PoC-PrC_3",
 )
 ParcellationEntity.swma__po_c_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-SM_0"}],
     lookup_label="SWMA_PoC-SM_0",
     name="PoC-SM_0",
 )
 ParcellationEntity.swma__po_c_sm_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-SM_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-SM_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-SM_1"}],
     lookup_label="SWMA_PoC-SM_1",
     name="PoC-SM_1",
 )
 ParcellationEntity.swma__po_c_sp_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-SP_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-SP_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-SP_0"}],
     lookup_label="SWMA_PoC-SP_0",
     name="PoC-SP_0",
 )
 ParcellationEntity.swma__po_c_sp_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoC-SP_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoC-SP_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoC-SP_1"}],
     lookup_label="SWMA_PoC-SP_1",
     name="PoC-SP_1",
 )
 ParcellationEntity.swma__po_ci__pr_cu_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-PrCu_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-PrCu_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoCi-PrCu_0"}],
     lookup_label="SWMA_PoCi-PrCu_0",
     name="PoCi-PrCu_0",
 )
 ParcellationEntity.swma__po_ci__pr_cu_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-PrCu_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-PrCu_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoCi-PrCu_1"}],
     lookup_label="SWMA_PoCi-PrCu_1",
     name="PoCi-PrCu_1",
 )
 ParcellationEntity.swma__po_ci__pr_cu_2 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-PrCu_2",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-PrCu_2",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoCi-PrCu_2"}],
     lookup_label="SWMA_PoCi-PrCu_2",
     name="PoCi-PrCu_2",
 )
 ParcellationEntity.swma__po_ci_rac_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-RAC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-RAC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoCi-RAC_0"}],
     lookup_label="SWMA_PoCi-RAC_0",
     name="PoCi-RAC_0",
 )
 ParcellationEntity.swma__po_ci_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PoCi-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PoCi-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PoCi-SF_0"}],
     lookup_label="SWMA_PoCi-SF_0",
     name="PoCi-SF_0",
 )
 ParcellationEntity.swma__pr_c__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PrC-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PrC-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PrC-Ins_0"}],
     lookup_label="SWMA_PrC-Ins_0",
     name="PrC-Ins_0",
 )
 ParcellationEntity.swma__pr_c_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PrC-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PrC-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PrC-SF_0"}],
     lookup_label="SWMA_PrC-SF_0",
     name="PrC-SF_0",
 )
 ParcellationEntity.swma__pr_c_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PrC-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PrC-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PrC-SM_0"}],
     lookup_label="SWMA_PrC-SM_0",
     name="PrC-SM_0",
 )
 ParcellationEntity.swma__pr_c_sp_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_PrC-SP_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_PrC-SP_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_PrC-SP_0"}],
     lookup_label="SWMA_PrC-SP_0",
     name="PrC-SP_0",
 )
 ParcellationEntity.swma__tr__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Tr-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Tr-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Tr-Ins_0"}],
     lookup_label="SWMA_Tr-Ins_0",
     name="Tr-Ins_0",
 )
 ParcellationEntity.swma__tr_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_Tr-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_Tr-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_Tr-SF_0"}],
     lookup_label="SWMA_Tr-SF_0",
     name="Tr-SF_0",
 )
 ParcellationEntity.swma_cac__po_ci_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CAC-PoCi_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CAC-PoCi_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CAC-PoCi_0"}],
     lookup_label="SWMA_CAC-PoCi_0",
     name="CAC-PoCi_0",
 )
 ParcellationEntity.swma_cac__pr_cu_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CAC-PrCu_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CAC-PrCu_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CAC-PrCu_0"}],
     lookup_label="SWMA_CAC-PrCu_0",
     name="CAC-PrCu_0",
 )
 ParcellationEntity.swma_cmf__op_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-Op_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-Op_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CMF-Op_0"}],
     lookup_label="SWMA_CMF-Op_0",
     name="CMF-Op_0",
 )
 ParcellationEntity.swma_cmf__po_c_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-PoC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-PoC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CMF-PoC_0"}],
     lookup_label="SWMA_CMF-PoC_0",
     name="CMF-PoC_0",
 )
 ParcellationEntity.swma_cmf__pr_c_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-PrC_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-PrC_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CMF-PrC_0"}],
     lookup_label="SWMA_CMF-PrC_0",
     name="CMF-PrC_0",
 )
 ParcellationEntity.swma_cmf__pr_c_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-PrC_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-PrC_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CMF-PrC_1"}],
     lookup_label="SWMA_CMF-PrC_1",
     name="CMF-PrC_1",
 )
 ParcellationEntity.swma_cmf_rmf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-RMF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-RMF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CMF-RMF_0"}],
     lookup_label="SWMA_CMF-RMF_0",
     name="CMF-RMF_0",
 )
 ParcellationEntity.swma_cmf_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CMF-SF_0"}],
     lookup_label="SWMA_CMF-SF_0",
     name="CMF-SF_0",
 )
 ParcellationEntity.swma_cmf_sf_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_CMF-SF_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_CMF-SF_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_CMF-SF_1"}],
     lookup_label="SWMA_CMF-SF_1",
     name="CMF-SF_1",
 )
 ParcellationEntity.swma_ic__pr_cu_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IC-PrCu_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IC-PrCu_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IC-PrCu_0"}],
     lookup_label="SWMA_IC-PrCu_0",
     name="IC-PrCu_0",
 )
 ParcellationEntity.swma_ip_it_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-IT_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-IT_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IP-IT_0"}],
     lookup_label="SWMA_IP-IT_0",
     name="IP-IT_0",
 )
 ParcellationEntity.swma_ip_lo_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-LO_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-LO_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IP-LO_0"}],
     lookup_label="SWMA_IP-LO_0",
     name="IP-LO_0",
 )
 ParcellationEntity.swma_ip_lo_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-LO_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-LO_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IP-LO_1"}],
     lookup_label="SWMA_IP-LO_1",
     name="IP-LO_1",
 )
 ParcellationEntity.swma_ip_mt_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-MT_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-MT_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IP-MT_0"}],
     lookup_label="SWMA_IP-MT_0",
     name="IP-MT_0",
 )
 ParcellationEntity.swma_ip_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IP-SM_0"}],
     lookup_label="SWMA_IP-SM_0",
     name="IP-SM_0",
 )
 ParcellationEntity.swma_ip_sp_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-SP_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-SP_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IP-SP_0"}],
     lookup_label="SWMA_IP-SP_0",
     name="IP-SP_0",
 )
 ParcellationEntity.swma_ip_sp_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IP-SP_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IP-SP_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IP-SP_1"}],
     lookup_label="SWMA_IP-SP_1",
     name="IP-SP_1",
 )
 ParcellationEntity.swma_it_mt_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IT-MT_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IT-MT_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IT-MT_0"}],
     lookup_label="SWMA_IT-MT_0",
     name="IT-MT_0",
 )
 ParcellationEntity.swma_it_mt_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IT-MT_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IT-MT_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IT-MT_1"}],
     lookup_label="SWMA_IT-MT_1",
     name="IT-MT_1",
 )
 ParcellationEntity.swma_it_mt_2 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_IT-MT_2",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_IT-MT_2",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_IT-MT_2"}],
     lookup_label="SWMA_IT-MT_2",
     name="IT-MT_2",
 )
 ParcellationEntity.swma_lo_sp_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LO-SP_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LO-SP_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_LO-SP_0"}],
     lookup_label="SWMA_LO-SP_0",
     name="LO-SP_0",
 )
 ParcellationEntity.swma_lof__or_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-Or_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-Or_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_LOF-Or_0"}],
     lookup_label="SWMA_LOF-Or_0",
     name="LOF-Or_0",
 )
 ParcellationEntity.swma_lof_mof_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-MOF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-MOF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_LOF-MOF_0"}],
     lookup_label="SWMA_LOF-MOF_0",
     name="LOF-MOF_0",
 )
 ParcellationEntity.swma_lof_rmf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-RMF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-RMF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_LOF-RMF_0"}],
     lookup_label="SWMA_LOF-RMF_0",
     name="LOF-RMF_0",
 )
 ParcellationEntity.swma_lof_rmf_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-RMF_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-RMF_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_LOF-RMF_1"}],
     lookup_label="SWMA_LOF-RMF_1",
     name="LOF-RMF_1",
 )
 ParcellationEntity.swma_lof_st_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_LOF-ST_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_LOF-ST_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_LOF-ST_0"}],
     lookup_label="SWMA_LOF-ST_0",
     name="LOF-ST_0",
 )
 ParcellationEntity.swma_mof_st_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_MOF-ST_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_MOF-ST_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_MOF-ST_0"}],
     lookup_label="SWMA_MOF-ST_0",
     name="MOF-ST_0",
 )
 ParcellationEntity.swma_mt_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_MT-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_MT-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_MT-SM_0"}],
     lookup_label="SWMA_MT-SM_0",
     name="MT-SM_0",
 )
 ParcellationEntity.swma_mt_st_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_MT-ST_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_MT-ST_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_MT-ST_0"}],
     lookup_label="SWMA_MT-ST_0",
     name="MT-ST_0",
 )
 ParcellationEntity.swma_rac_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_RAC-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_RAC-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_RAC-SF_0"}],
     lookup_label="SWMA_RAC-SF_0",
     name="RAC-SF_0",
 )
 ParcellationEntity.swma_rac_sf_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_RAC-SF_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_RAC-SF_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_RAC-SF_1"}],
     lookup_label="SWMA_RAC-SF_1",
     name="RAC-SF_1",
 )
 ParcellationEntity.swma_rmf_sf_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_RMF-SF_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_RMF-SF_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_RMF-SF_0"}],
     lookup_label="SWMA_RMF-SF_0",
     name="RMF-SF_0",
 )
 ParcellationEntity.swma_rmf_sf_1 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_RMF-SF_1",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_RMF-SF_1",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_RMF-SF_1"}],
     lookup_label="SWMA_RMF-SF_1",
     name="RMF-SF_1",
 )
 ParcellationEntity.swma_sm__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_SM-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_SM-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_SM-Ins_0"}],
     lookup_label="SWMA_SM-Ins_0",
     name="SM-Ins_0",
 )
 ParcellationEntity.swma_sp_sm_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_SP-SM_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_SP-SM_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_SP-SM_0"}],
     lookup_label="SWMA_SP-SM_0",
     name="SP-SM_0",
 )
 ParcellationEntity.swma_st__ins_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_ST-Ins_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_ST-Ins_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_ST-Ins_0"}],
     lookup_label="SWMA_ST-Ins_0",
     name="ST-Ins_0",
 )
 ParcellationEntity.swma_st_tt_0 = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_ST-TT_0",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_ST-TT_0",
     has_parents=[{"@id": "https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter"}],
     has_versions=[{"@id": "https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_2018_ST-TT_0"}],
     lookup_label="SWMA_ST-TT_0",
     name="ST-TT_0",
 )
 ParcellationEntity.swma_superficial_white_matter = ParcellationEntity(
-    id="https://openminds.om-i.org/instances/parcellationEntityVersion/SWMA_superficialWhiteMatter",
+    id="https://openminds.om-i.org/instances/parcellationEntity/SWMA_superficialWhiteMatter",
     abbreviation="SWM",
     lookup_label="SWMA_superficialWhiteMatter",
     name="superficial white matter",

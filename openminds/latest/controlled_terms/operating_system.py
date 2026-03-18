@@ -39,20 +39,6 @@ class OperatingSystem(LinkedMetadata):
             instructions="Enter a short text describing this term.",
         ),
         Property(
-            "interlex_identifier",
-            IRI,
-            "interlexIdentifier",
-            description="Persistent identifier for a term registered in the InterLex project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the integrated ontology entry in the InterLex project.",
-        ),
-        Property(
-            "knowledge_space_link",
-            IRI,
-            "knowledgeSpaceLink",
-            description="Persistent link to an encyclopedia entry in the Knowledge Space project.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the wiki page of the corresponding term in the KnowledgeSpace.",
-        ),
-        Property(
             "name",
             str,
             "name",
@@ -62,11 +48,40 @@ class OperatingSystem(LinkedMetadata):
             instructions="Controlled term originating from a defined terminology.",
         ),
         Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
             "preferred_ontology_identifier",
             IRI,
             "preferredOntologyIdentifier",
             description="Persistent identifier of a preferred ontological term.",
-            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
         ),
         Property(
             "synonyms",
@@ -86,9 +101,10 @@ class OperatingSystem(LinkedMetadata):
         id=None,
         definition=None,
         description=None,
-        interlex_identifier=None,
-        knowledge_space_link=None,
         name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
         preferred_ontology_identifier=None,
         synonyms=None,
     ):
@@ -96,9 +112,10 @@ class OperatingSystem(LinkedMetadata):
             id=id,
             definition=definition,
             description=description,
-            interlex_identifier=interlex_identifier,
-            knowledge_space_link=knowledge_space_link,
             name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
             preferred_ontology_identifier=preferred_ontology_identifier,
             synonyms=synonyms,
         )
@@ -143,7 +160,7 @@ class OperatingSystem(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,56 +168,56 @@ class OperatingSystem(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 OperatingSystem.android = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/Android",
     name="Android",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q94"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q94"),
 )
 OperatingSystem.i_os = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/iOS",
     name="iOS",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q48493"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q48493"),
 )
 OperatingSystem.linux = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/Linux",
     name="Linux",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q388"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q388"),
 )
 OperatingSystem.mac_os = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/MacOS",
     name="MacOS",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q43627"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q43627"),
 )
 OperatingSystem.platform_independent = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/platformIndependent",
     name="platform independent",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q174666"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q174666"),
 )
 OperatingSystem.solaris = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/Solaris",
     name="Solaris",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q14646"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q14646"),
 )
 OperatingSystem.unix = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/Unix",
     name="Unix",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q11368"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q11368"),
 )
 OperatingSystem.windows = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/Windows",
     name="Windows",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q1406"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q1406"),
 )
 OperatingSystem.windows_phone = OperatingSystem(
     id="https://openminds.om-i.org/instances/operatingSystem/WindowsPhone",
     name="Windows Phone",
-    preferred_ontology_identifier=IRI("https://www.wikidata.org/entity/Q4885200"),
+    preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q4885200"),
 )

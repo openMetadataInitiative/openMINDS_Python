@@ -4,6 +4,8 @@ Structured information on an anatomical entity.
 
 # this file was auto-generated!
 
+from openminds.base import IRI
+
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
@@ -36,9 +38,8 @@ class AnatomicalEntity(LinkedMetadata):
         ),
         Property(
             "ontology_identifier",
-            str,
+            IRI,
             "ontologyIdentifier",
-            formatting="text/plain",
             description="Term or code used to identify the anatomical entity registered within a particular ontology.",
             instructions="Enter the internationalized resource identifier (IRI) pointing to the ontological term matching this anatomical entity.",
         ),

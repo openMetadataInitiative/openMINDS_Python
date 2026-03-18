@@ -29,10 +29,10 @@ class SubjectState(LinkedMetadata):
         ),
         Property(
             "age",
-            ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
+            "openminds.latest.core.SpecimenAge",
             "age",
             description="Time of life or existence at which some particular qualification, capacity or event arises.",
-            instructions="Enter the age of the specimen (set) in this state.",
+            instructions="Enter the age and age reference of the specimen (set) in this state.",
         ),
         Property(
             "age_category",
@@ -41,6 +41,16 @@ class SubjectState(LinkedMetadata):
             required=True,
             description="Distinct life cycle class that is defined by a similar age or age range (developmental stage) within a group of individual beings.",
             instructions="Add the age category of the subject in this state.",
+        ),
+        Property(
+            "associated_protocols",
+            ["openminds.latest.core.Protocol", "openminds.latest.core.BehavioralProtocol"],
+            "associatedProtocol",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            description="no description available",
+            instructions="Add all technical and/or behavioral protocols associated with this specimen state.",
         ),
         Property(
             "attributes",
@@ -101,10 +111,10 @@ class SubjectState(LinkedMetadata):
         ),
         Property(
             "weight",
-            ["openminds.latest.core.QuantitativeValue", "openminds.latest.core.QuantitativeValueRange"],
+            "openminds.latest.core.SpecimenWeight",
             "weight",
             description="Amount that a thing or being weighs.",
-            instructions="Enter the weight of the specimen (set) in this state.",
+            instructions="Enter the weight and weight type of the specimen (set) in this state.",
         ),
     ]
 
@@ -114,6 +124,7 @@ class SubjectState(LinkedMetadata):
         additional_remarks=None,
         age=None,
         age_category=None,
+        associated_protocols=None,
         attributes=None,
         descended_from=None,
         handedness=None,
@@ -128,6 +139,7 @@ class SubjectState(LinkedMetadata):
             additional_remarks=additional_remarks,
             age=age,
             age_category=age_category,
+            associated_protocols=associated_protocols,
             attributes=attributes,
             descended_from=descended_from,
             handedness=handedness,

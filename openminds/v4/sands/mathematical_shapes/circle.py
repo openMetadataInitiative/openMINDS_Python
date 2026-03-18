@@ -4,11 +4,11 @@
 
 # this file was auto-generated!
 
-from openminds.base import EmbeddedMetadata
+from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class Circle(EmbeddedMetadata):
+class Circle(LinkedMetadata):
     """
     <description not available>
     """
@@ -28,7 +28,8 @@ class Circle(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, radius=None):
+    def __init__(self, id=None, radius=None):
         return super().__init__(
+            id=id,
             radius=radius,
         )

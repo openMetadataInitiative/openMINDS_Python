@@ -23,6 +23,7 @@ class DOI(LinkedMetadata):
             str,
             "identifier",
             formatting="text/plain",
+            required=True,
             description="Term or code used to identify the DOI.",
             instructions="Enter the resolvable identifier (IRI) of the International Digital Object Identifier Foundation.",
         ),

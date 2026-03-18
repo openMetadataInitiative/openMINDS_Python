@@ -23,6 +23,7 @@ class GRIDID(LinkedMetadata):
             str,
             "identifier",
             formatting="text/plain",
+            required=True,
             description="Term or code used to identify the GRIDID.",
             instructions="Enter the resolvable identifier (IRI) of the Global Research Identifier Database.",
         ),

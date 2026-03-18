@@ -24,6 +24,7 @@ class URL(LinkedMetadata):
             "url",
             IRI,
             "URL",
+            required=True,
             description="no description available",
             instructions="Enter a uniform resource locator (URL).",
         ),

@@ -4,11 +4,11 @@
 
 # this file was auto-generated!
 
-from openminds.base import EmbeddedMetadata
+from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class Ellipse(EmbeddedMetadata):
+class Ellipse(LinkedMetadata):
     """
     <description not available>
     """
@@ -36,8 +36,9 @@ class Ellipse(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, semi_major_axis=None, semi_minor_axis=None):
+    def __init__(self, id=None, semi_major_axis=None, semi_minor_axis=None):
         return super().__init__(
+            id=id,
             semi_major_axis=semi_major_axis,
             semi_minor_axis=semi_minor_axis,
         )

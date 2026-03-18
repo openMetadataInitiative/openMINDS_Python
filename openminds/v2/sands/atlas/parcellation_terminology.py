@@ -41,7 +41,7 @@ class ParcellationTerminology(LinkedMetadata):
         ),
         Property(
             "is_alternative_version_of",
-            "openminds.v2.sands.BrainAtlasVersion",
+            "openminds.v2.sands.ParcellationTerminology",
             "isAlternativeVersionOf",
             multiple=True,
             unique_items=True,
@@ -51,7 +51,7 @@ class ParcellationTerminology(LinkedMetadata):
         ),
         Property(
             "is_new_version_of",
-            "openminds.v2.sands.BrainAtlasVersion",
+            "openminds.v2.sands.ParcellationTerminology",
             "isNewVersionOf",
             description="Reference to a previous (potentially outdated) particular form of something.",
             instructions="Add the earlier version of this parcellation terminology.",

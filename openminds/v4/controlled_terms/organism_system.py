@@ -143,7 +143,7 @@ class OrganismSystem(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,12 +151,12 @@ class OrganismSystem(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 OrganismSystem.cardiovascular_system = OrganismSystem(
@@ -169,13 +169,13 @@ OrganismSystem.cardiovascular_system = OrganismSystem(
 )
 OrganismSystem.central_nervous_system = OrganismSystem(
     id="https://openminds.om-i.org/instances/organismSystem/centralNervousSystem",
-    definition="The 'central nervous system' is the main processing center in most organisms. Its function is to take in sensory information, process information, and send out motor signals.",
-    description="In vertebrates, the central nervous system (CNS) consists of the brain and the spinal cord. In invertebrates, it includes the central ganglia and the nerve cord.",
+    definition="Is part of the nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001017)]",
+    description="The central nervous system is the core nervous system that serves an integrating and coordinating function. In vertebrates it consists of the neural tube derivatives: the brain and spinal cord. In invertebrates it includes central ganglia plus nerve cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001017)]",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0101901"),
     knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0001017#central-nervous-system-1"),
     name="central nervous system",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001017"),
-    synonyms=["systema nervosum centrale", "CNS"],
+    synonyms=["CNS", "systema nervosum centrale"],
 )
 OrganismSystem.cholinergic_system = OrganismSystem(
     id="https://openminds.om-i.org/instances/organismSystem/cholinergicSystem",

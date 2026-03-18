@@ -1,3 +1,4 @@
+from .behavioral_task import BehavioralTask
 from .numerical_parameter import NumericalParameter
 from .parameter_set import ParameterSet
 from .protocol import Protocol

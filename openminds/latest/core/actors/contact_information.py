@@ -19,18 +19,21 @@ class ContactInformation(LinkedMetadata):
 
     properties = [
         Property(
-            "email",
+            "emails",
             str,
             "email",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
             formatting="text/plain",
             required=True,
             description="Address to which or from which an electronic mail can be sent.",
-            instructions="Enter the email address of the party (e.g., of the person).",
+            instructions="Enter all relevant contact email addresses.",
         ),
     ]
 
-    def __init__(self, id=None, email=None):
+    def __init__(self, id=None, emails=None):
         return super().__init__(
             id=id,
-            email=email,
+            emails=emails,
         )

@@ -19,17 +19,6 @@ class AtlasAnnotation(EmbeddedMetadata):
 
     properties = [
         Property(
-            "anchor_points",
-            "openminds.latest.core.QuantitativeValue",
-            "anchorPoint",
-            multiple=True,
-            unique_items=False,
-            min_items=2,
-            max_items=3,
-            description="no description available",
-            instructions="Enter the coordinates of the anchor point for this annotation (e.g., its centroid in two dimensional space as [x, y] or in three dimensional space as [x, y, z]).",
-        ),
-        Property(
             "criteria",
             "openminds.latest.core.ProtocolExecution",
             "criteria",
@@ -107,7 +96,6 @@ class AtlasAnnotation(EmbeddedMetadata):
 
     def __init__(
         self,
-        anchor_points=None,
         criteria=None,
         criteria_quality_type=None,
         criteria_type=None,
@@ -119,7 +107,6 @@ class AtlasAnnotation(EmbeddedMetadata):
         type=None,
     ):
         return super().__init__(
-            anchor_points=anchor_points,
             criteria=criteria,
             criteria_quality_type=criteria_quality_type,
             criteria_type=criteria_type,

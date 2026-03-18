@@ -94,7 +94,6 @@ class MetaDataModelVersion(LinkedMetadata):
             multiple=True,
             unique_items=True,
             min_items=1,
-            required=True,
             description="Money provided by a legal person for a particular purpose.",
             instructions="Add all funding information of this research product version.",
         ),

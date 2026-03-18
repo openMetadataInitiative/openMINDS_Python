@@ -143,7 +143,7 @@ class Terminology(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,12 +151,12 @@ class Terminology(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 Terminology.action_status_type = Terminology(
@@ -243,6 +243,8 @@ Terminology.colormap = Terminology(
 )
 Terminology.contribution_type = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/contributionType",
+    definition="A functional role characterized by a specific activity or responsibility realized by a role-bearing entity in relation to a target entity and its life cycle.",
+    description="A contribution type denotes a functional role realized by a role-bearing entity, which may be a person, organization, consortium, hardware system, software system, service, or another entity capable of performing an activity or assuming a responsibility. The activity or responsibility is directed toward a target entity, which may represent a wide range of entities such as a person, specimen, dataset, software system, model, document, infrastructure component, or another resource.",
     name="contribution type",
 )
 Terminology.cranial_window_construction_type = Terminology(
@@ -398,20 +400,21 @@ Terminology.optical_stimulus_type = Terminology(
 )
 Terminology.organ = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/organ",
-    definition="Anatomical structure that performs a specific function or group of functions.",
-    description="The preferred ontology for 'organ' is UBERON.",
+    definition="Terminology defining whole anatomical organs that function as discrete structural and functional units within an organism.",
+    description="This terminology includes complete organs composed of multiple coordinated tissue types organized into a distinct anatomical entity. Only whole organs are included, excluding internal parts or subdivisions of organs. Examples include the heart, liver, lung, and kidney. These entities represent the primary functional units within many biological systems. The terminology provides a standardized reference set for complete organs across species.",
     name="organ",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000062"),
 )
 Terminology.organism_substance = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/organismSubstance",
-    definition="Any material anatomical entity in a gaseous, liquid, semisolid or solid state produced by or derived from an organism or parts of an organism.",
-    description="The preferred ontology for 'organism substance' is UBERON.",
+    definition="Terminology defining biological substances produced by or contained within an organism.",
+    description="This terminology includes naturally occurring materials or substances that exist within anatomical contexts of an organism. These may include fluids, secreted substances, or other biological materials associated with tissues or organs. The terms represent substances rather than structural anatomical entities. Examples may include biological fluids or mineralized materials produced by tissues. The terminology enables representation of organism-derived substances in anatomical datasets.",
     name="organism substance",
 )
 Terminology.organism_system = Terminology(
     id="https://openminds.ebrains.eu/instances/terminology/organismSystem",
-    definition="Any anatomical or functional system in an organism, regardless of scale.",
+    definition="Terminology defining biological systems composed of multiple interacting anatomical structures that together perform a major physiological function.",
+    description="This terminology includes coordinated groups of organs and structures that operate collectively to carry out essential biological processes. Examples include the nervous system, digestive system, and circulatory system. These systems organize anatomical structures into functional frameworks. The terminology represents high-level biological organization within the body. It supports cross-species representation of major physiological systems.",
     name="organism system",
 )
 Terminology.patch_clamp_variation = Terminology(

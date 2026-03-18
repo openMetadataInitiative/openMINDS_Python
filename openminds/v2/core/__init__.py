@@ -1,5 +1,17 @@
 from .actors import Affiliation, ContactInformation, Contribution, Organization, Person
-from .data import ContentType, Copyright, File, FileBundle, FileRepository, Hash, License
+from .data import (
+    ContentType,
+    ContentTypePattern,
+    Copyright,
+    File,
+    FileBundle,
+    FilePathPattern,
+    FileRepository,
+    FileRepositoryStructure,
+    Hash,
+    License,
+    ServiceLink,
+)
 from .miscellaneous import (
     DOI,
     Funding,
@@ -24,6 +36,7 @@ from .products import (
     SoftwareVersion,
 )
 from .research import (
+    BehavioralTask,
     NumericalParameter,
     ParameterSet,
     Protocol,

@@ -1,7 +1,6 @@
 from .anatomical_entity import AnatomicalEntity
 from .anatomical_entity_relation import AnatomicalEntityRelation
 from .annotation import Annotation
-from .atlas_terminology import AtlasTerminology
 from .brain_atlas import BrainAtlas
 from .brain_atlas_version import BrainAtlasVersion
 from .coordinate_point import CoordinatePoint
@@ -10,3 +9,4 @@ from .electrode import Electrode
 from .electrode_array import ElectrodeArray
 from .electrode_contact import ElectrodeContact
 from .image import Image
+from .parcellation_terminology import ParcellationTerminology

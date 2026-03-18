@@ -23,8 +23,9 @@ class ISBN(LinkedMetadata):
             str,
             "identifier",
             formatting="text/plain",
+            required=True,
             description="Term or code used to identify the ISBN.",
-            instructions="Enter the International Standard Book Number of the International ISBN Agency.",
+            instructions="Enter the International Standard Book Number (ISBN-13) of the International ISBN Agency.",
         ),
     ]
 

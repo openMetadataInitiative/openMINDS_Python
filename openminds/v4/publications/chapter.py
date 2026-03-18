@@ -237,7 +237,7 @@ class Chapter(LinkedMetadata):
             "pagination",
             formatting="text/plain",
             description="no description available",
-            instructions="Enter the page range of this chapter.",
+            instructions="Enter the page range of this chapter, expressed as two numbers separated by a dash, e.g., '435-452'.",
         ),
         Property(
             "publication_date",

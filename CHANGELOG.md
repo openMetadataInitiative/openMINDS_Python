@@ -80,3 +80,9 @@ For more detail see #29.
 - allow the user to specify which openMINDS version should be used by `Collection.load()` [#77](https://github.com/openMetadataInitiative/openMINDS_Python/pull/77)
 - add the option to group files into subdirectories by schema when saving [#80](https://github.com/openMetadataInitiative/openMINDS_Python/pull/80)
 - improvements to the `by_name()` method [#81](https://github.com/openMetadataInitiative/openMINDS_Python/pull/81)
+
+## Release 0.4.1 (2026-02-16)
+
+- fixed a TypeError in `by_name()` when a name was not found [#83](https://github.com/openMetadataInitiative/openMINDS_Python/pull/83)
+- fixed a bug where properties whose value evaluated to False (e.g., zero) were not serialized if using `include_empty_properties=False` [#84](https://github.com/openMetadataInitiative/openMINDS_Python/pull/84)
+- updates to the "latest" module

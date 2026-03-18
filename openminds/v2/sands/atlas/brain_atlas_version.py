@@ -31,7 +31,7 @@ class BrainAtlasVersion(LinkedMetadata):
         ),
         Property(
             "digital_identifier",
-            "openminds.v2.core.DOI",
+            ["openminds.v2.core.DOI", "openminds.v2.core.ISBN"],
             "digitalIdentifier",
             description="Digital handle to identify objects or legal persons.",
             instructions="Add the globally unique and persistent digital identifier of this brain atlas version.",
@@ -47,7 +47,7 @@ class BrainAtlasVersion(LinkedMetadata):
         ),
         Property(
             "has_terminology",
-            "openminds.v2.sands.parcellationTerminology",
+            "openminds.v2.sands.ParcellationTerminology",
             "hasTerminology",
             required=True,
             description="no description available",

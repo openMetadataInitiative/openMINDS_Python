@@ -19,16 +19,6 @@ class Protocol(LinkedMetadata):
 
     properties = [
         Property(
-            "behavioral_tasks",
-            "openminds.v2.controlled_terms.BehavioralTask",
-            "behavioralTask",
-            multiple=True,
-            unique_items=True,
-            min_items=1,
-            description="Specific set of defined activities (or their absence) that should be performed (or avoided) by a subject.",
-            instructions="Add all behavioral tasks that were executed as part of this protocol.",
-        ),
-        Property(
             "description",
             str,
             "description",
@@ -50,16 +40,31 @@ class Protocol(LinkedMetadata):
         Property(
             "study_options",
             [
+                "openminds.v2.controlled_terms.AuditoryStimulusType",
+                "openminds.v2.controlled_terms.BiologicalOrder",
                 "openminds.v2.controlled_terms.BiologicalSex",
+                "openminds.v2.controlled_terms.BreedingType",
+                "openminds.v2.controlled_terms.CellCultureType",
                 "openminds.v2.controlled_terms.CellType",
                 "openminds.v2.controlled_terms.Disease",
                 "openminds.v2.controlled_terms.DiseaseModel",
+                "openminds.v2.controlled_terms.ElectricalStimulusType",
+                "openminds.v2.controlled_terms.GeneticStrainType",
+                "openminds.v2.controlled_terms.GustatoryStimulusType",
                 "openminds.v2.controlled_terms.Handedness",
+                "openminds.v2.controlled_terms.MolecularEntity",
+                "openminds.v2.controlled_terms.OlfactoryStimulusType",
+                "openminds.v2.controlled_terms.OpticalStimulusType",
                 "openminds.v2.controlled_terms.Organ",
-                "openminds.v2.controlled_terms.Phenotype",
+                "openminds.v2.controlled_terms.OrganismSubstance",
+                "openminds.v2.controlled_terms.OrganismSystem",
                 "openminds.v2.controlled_terms.Species",
-                "openminds.v2.controlled_terms.Strain",
+                "openminds.v2.controlled_terms.SubcellularEntity",
+                "openminds.v2.controlled_terms.TactileStimulusType",
                 "openminds.v2.controlled_terms.TermSuggestion",
+                "openminds.v2.controlled_terms.TissueSampleType",
+                "openminds.v2.controlled_terms.UBERONParcellation",
+                "openminds.v2.controlled_terms.VisualStimulusType",
                 "openminds.v2.sands.CustomAnatomicalEntity",
                 "openminds.v2.sands.ParcellationEntity",
             ],
@@ -83,12 +88,9 @@ class Protocol(LinkedMetadata):
         ),
     ]
 
-    def __init__(
-        self, id=None, behavioral_tasks=None, description=None, name=None, study_options=None, techniques=None
-    ):
+    def __init__(self, id=None, description=None, name=None, study_options=None, techniques=None):
         return super().__init__(
             id=id,
-            behavioral_tasks=behavioral_tasks,
             description=description,
             name=name,
             study_options=study_options,

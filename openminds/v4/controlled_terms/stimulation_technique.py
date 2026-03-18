@@ -143,7 +143,7 @@ class StimulationTechnique(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
         if match == "equals":
-            matches = cls._instance_lookup.get(name, None)
+            matches = cls._instance_lookup.get(name, [])
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
@@ -151,12 +151,12 @@ class StimulationTechnique(LinkedMetadata):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if all:
-            return matches
-        elif len(matches) > 0:
-            return matches[0]
-        else:
+        if not matches:
             return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
 
 
 StimulationTechnique.abstract_image_visual_stimulation = StimulationTechnique(
@@ -238,12 +238,12 @@ StimulationTechnique.static_grating_visual_stimulation = StimulationTechnique(
     name="static grating visual stimulation",
 )
 StimulationTechnique.subliminal_stimulation = StimulationTechnique(
-    id="https://openminds.om-i.org/instances/technique/subliminalStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/subliminalStimulation",
     definition="'Subliminal stimulation' is a technique providing any sensory stimuli below an individual's threshold for conscious perception (adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli))",
     name="subliminal stimulation",
 )
 StimulationTechnique.subliminal_visual_stimulation = StimulationTechnique(
-    id="https://openminds.om-i.org/instances/technique/subliminalVisualStimulation",
+    id="https://openminds.om-i.org/instances/stimulationTechnique/subliminalVisualStimulation",
     definition="Stimulation technique that is providing visual stimuli below an indivdual's threshold for conscious perception [adapted from [wikipedia](https://en.wikipedia.org/wiki/Subliminal_stimuli)]",
     name="subliminal visual stimulation",
 )

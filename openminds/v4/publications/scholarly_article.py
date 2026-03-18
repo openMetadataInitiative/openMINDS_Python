@@ -237,7 +237,7 @@ class ScholarlyArticle(LinkedMetadata):
             "pagination",
             formatting="text/plain",
             description="no description available",
-            instructions="Enter the page range of this scholarly article.",
+            instructions="Enter the page range of this scholarly article, expressed as two numbers separated by a dash, e.g., '435-452', or a non-page-number identifier such as used in online-only journals.",
         ),
         Property(
             "publication_date",

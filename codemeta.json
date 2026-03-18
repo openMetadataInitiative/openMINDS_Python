@@ -58,9 +58,15 @@
       "@id": "https://orcid.org/0000-0002-5618-9776",
       "givenName": "Rapha\u00ebl",
       "familyName": "Gazzotti"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0003-4509-6969",
+      "givenName": "Reema",
+      "familyName": "Gupta"
     }
   ],
-  "version": "0.4.0",
-  "downloadUrl": "https://files.pythonhosted.org/packages/81/56/bc66eb2eb610c65991805726471817dfd7668391adbda369d9e36d7ec759/openminds-0.4.0.tar.gz",
-  "dateModified": "2025-11-19"
+  "version": "0.4.1",
+  "downloadUrl": "https://files.pythonhosted.org/packages/43/c2/09c8e30359a9fb510be33a8e75b248a484c5b65425b1c0bce809827522d5/openminds-0.4.1.tar.gz",
+  "dateModified": "2026-02-16"
 }

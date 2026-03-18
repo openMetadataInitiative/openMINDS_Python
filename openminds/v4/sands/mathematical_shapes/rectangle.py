@@ -4,11 +4,11 @@
 
 # this file was auto-generated!
 
-from openminds.base import EmbeddedMetadata
+from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
 
-class Rectangle(EmbeddedMetadata):
+class Rectangle(LinkedMetadata):
     """
     <description not available>
     """
@@ -36,8 +36,9 @@ class Rectangle(EmbeddedMetadata):
         ),
     ]
 
-    def __init__(self, length=None, width=None):
+    def __init__(self, id=None, length=None, width=None):
         return super().__init__(
+            id=id,
             length=length,
             width=width,
         )

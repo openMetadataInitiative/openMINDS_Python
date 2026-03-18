@@ -1,0 +1,432 @@
+"""
+Structured information on the species.
+"""
+
+# this file was auto-generated!
+
+from openminds.base import IRI
+
+from openminds.base import LinkedMetadata
+from openminds.properties import Property
+
+
+class Species(LinkedMetadata):
+    """
+    Structured information on the species.
+    """
+
+    type_ = "https://openminds.om-i.org/types/Species"
+    context = {"@vocab": "https://openminds.om-i.org/props/"}
+    schema_version = "v5.0"
+
+    properties = [
+        Property(
+            "definition",
+            str,
+            "definition",
+            formatting="text/markdown",
+            multiline=True,
+            description="Short, but precise statement of the meaning of a word, word group, sign or a symbol.",
+            instructions="Enter one sentence for defining this term.",
+        ),
+        Property(
+            "description",
+            str,
+            "description",
+            formatting="text/markdown",
+            multiline=True,
+            description="Longer statement or account giving the characteristics of the species.",
+            instructions="Enter a short text describing this term.",
+        ),
+        Property(
+            "name",
+            str,
+            "name",
+            formatting="text/plain",
+            required=True,
+            description="Word or phrase that constitutes the distinctive designation of the species.",
+            instructions="Controlled term originating from a defined terminology.",
+        ),
+        Property(
+            "other_cross_references",
+            str,
+            "otherCrossReference",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to cross-references to external databases or registries that are equivalent to this term (e.g., Wikidata). Do not repeat the preferred cross-reference.",
+        ),
+        Property(
+            "other_ontology_identifiers",
+            str,
+            "otherOntologyIdentifier",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter all internationalized resource identifiers (IRIs) pointing to ontology entries that are equivalent to this term (e.g., UBERON). Do not repeat the preferred ontology identifier.",
+        ),
+        Property(
+            "preferred_cross_reference",
+            IRI,
+            "preferredCrossReference",
+            description="no description available",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred cross-reference to an external database or registry (e.g., KnowledgeSpace).",
+        ),
+        Property(
+            "preferred_ontology_identifier",
+            IRI,
+            "preferredOntologyIdentifier",
+            description="Persistent identifier of a preferred ontological term.",
+            instructions="Enter the internationalized resource identifier (IRI) pointing to the preferred ontological term (e.g., InterLex).",
+        ),
+        Property(
+            "synonyms",
+            str,
+            "synonym",
+            multiple=True,
+            unique_items=True,
+            min_items=1,
+            formatting="text/plain",
+            description="Words or expressions used in the same language that have the same or nearly the same meaning in some or all senses.",
+            instructions="Enter one or several synonyms (including abbreviations) for this controlled term.",
+        ),
+    ]
+
+    def __init__(
+        self,
+        id=None,
+        definition=None,
+        description=None,
+        name=None,
+        other_cross_references=None,
+        other_ontology_identifiers=None,
+        preferred_cross_reference=None,
+        preferred_ontology_identifier=None,
+        synonyms=None,
+    ):
+        return super().__init__(
+            id=id,
+            definition=definition,
+            description=description,
+            name=name,
+            other_cross_references=other_cross_references,
+            other_ontology_identifiers=other_ontology_identifiers,
+            preferred_cross_reference=preferred_cross_reference,
+            preferred_ontology_identifier=preferred_ontology_identifier,
+            synonyms=synonyms,
+        )
+
+    @classmethod
+    def instances(cls):
+        return [value for value in cls.__dict__.values() if isinstance(value, cls)]
+
+    @classmethod
+    def by_name(
+        cls,
+        name: str,
+        match: str = "equals",
+        all: bool = False,
+    ):
+        """
+        Search for instances in the openMINDS instance library based on their name.
+
+        This includes properties "name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation", and "synonyms".
+
+        Note that not all metadata classes have a name.
+
+        Args:
+            name (str): a string to search for.
+            match (str, optional): either "equals" (exact match - default) or "contains".
+            all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
+        """
+        namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
+        if cls._instance_lookup is None:
+            cls._instance_lookup = {}
+            for instance in cls.instances():
+                keys = []
+                for prop_name in namelike_properties:
+                    if hasattr(instance, prop_name):
+                        keys.append(getattr(instance, prop_name))
+                if hasattr(instance, "synonyms"):
+                    for synonym in instance.synonyms or []:
+                        keys.append(synonym)
+                for key in keys:
+                    if key in cls._instance_lookup:
+                        cls._instance_lookup[key].append(instance)
+                    else:
+                        cls._instance_lookup[key] = [instance]
+        if match == "equals":
+            matches = cls._instance_lookup.get(name, [])
+        elif match == "contains":
+            matches = []
+            for key, instances in cls._instance_lookup.items():
+                if name in key:
+                    matches.extend(instances)
+        else:
+            raise ValueError("'match' must be either 'equals' or 'contains'")
+        if not matches:
+            return None
+        elif all:
+            return matches
+        else:
+            return matches[0]
+
+
+Species.berghia_stephanieae = Species(
+    id="https://openminds.om-i.org/instances/species/berghiaStephanieae",
+    definition="The species *Berghia stephanieae* belongs to the family of *aeolidiidae* (family of sea slugs, shell-less marine gastropod molluscs).",
+    name="Berghia stephanieae",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_1287507"),
+    synonyms=["aeolidiella stephanieae"],
+)
+Species.bos_taurus = Species(
+    id="https://openminds.om-i.org/instances/species/bosTaurus",
+    definition="Cattle (Bos taurus) are large, domesticated, bovid ungulates widely kept as livestock.",
+    name="Bos taurus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0101393"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9913"),
+    synonyms=["bovine", "ox", "cow", "dairy cow", "domestic cattle", "domestic cow"],
+)
+Species.caenorhabditis_elegans = Species(
+    id="https://openminds.om-i.org/instances/species/caenorhabditisElegans",
+    definition="The species *Caenorhabditis elegans* (C. elegans) belongs to the family of *rhabditidae* (roundworms).",
+    name="Caenorhabditis elegans",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0101548"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_6239"),
+    synonyms=["C. elegans"],
+)
+Species.callithrix_jacchus = Species(
+    id="https://openminds.om-i.org/instances/species/callithrixJacchus",
+    definition="The species *Callithrix jacchus* (common marmoset) belongs to the family of *callitrichidae* (new world monkeys).",
+    name="Callithrix jacchus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9483"),
+    synonyms=[
+        "callithrix jacchus jacchus",
+        "common marmoset",
+        "white ear-tufted marmoset",
+        "white-tufted-ear marmoset",
+    ],
+)
+Species.cervus_elaphus = Species(
+    id="https://openminds.om-i.org/instances/species/cervusElaphus",
+    definition="The species *Cervus elaphus* (red deer) belongs to the family of *cervidae* (deers).",
+    name="Cervus elaphus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9860"),
+    synonyms=["red deer"],
+)
+Species.chlorocebus_aethiops_sabaeus = Species(
+    id="https://openminds.om-i.org/instances/species/chlorocebusAethiopsSabaeus",
+    definition="The species *Chlorocebus aethiops sabaeus* (green monkey) belongs to the family of *cercopithecidae* (old world monkeys).",
+    name="Chlorocebus aethiops sabaeus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_60711"),
+    synonyms=[
+        "cercopithecus aethiops sabaeus",
+        "cercopithecus sabaeus",
+        "cercopithecus sabeus",
+        "chlorocebus aethiops sabeus",
+        "chlorocebus sabaeus",
+        "chlorocebus sabeus",
+        "green monkey",
+    ],
+)
+Species.chlorocebus_pygerythrus = Species(
+    id="https://openminds.om-i.org/instances/species/chlorocebusPygerythrus",
+    definition="The species *Chlorocebus pygerythrus* (vervet marmoset) belongs to the family of *cercopithecidae* (old world monkeys).",
+    name="Chlorocebus pygerythrus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_60710"),
+    synonyms=[
+        "cercopithecus aethiops pygerythrus",
+        "cercopithecus pygerythrus",
+        "chlorocebus aethiops pygerythrus",
+        "vervet",
+        "vervet marmoset",
+        "vervet monkey",
+    ],
+)
+Species.cricetulus_griseus = Species(
+    id="https://openminds.om-i.org/instances/species/cricetulusGriseus",
+    definition="The Chinese hamster (Cricetulus griseus or Cricetulus aureus) is a rodent in the genus Cricetulus of the subfamily Cricetidae.",
+    name="Cricetulus griseus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0102635"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10029"),
+    synonyms=["Cricetulus aureus", "Chinese hamster"],
+)
+Species.danio_rerio = Species(
+    id="https://openminds.om-i.org/instances/species/danioRerio",
+    definition="The species *Danio rerio* (zebrafish) belongs to the family of *cyprinidae* (cyprinids, freshwater fish).",
+    name="Danio rerio",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0783580"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:7955#danio-rerio"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_7955"),
+    synonyms=[
+        "Brachydanio rerio",
+        "Brachydanio rerio frankei",
+        "Cyprinus rerio",
+        "Danio frankei",
+        "Danio rerio frankei",
+        "leopard danio",
+        "zebra danio",
+        "zebra fish",
+        "zebrafish",
+    ],
+)
+Species.drosophila_melanogaster = Species(
+    id="https://openminds.om-i.org/instances/species/drosophilaMelanogaster",
+    definition="The species *Drosophila melanogaster* (fruit fly) belongs to the family of *Drosophilidae*.",
+    name="Drosophila melanogaster",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0103567"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_7227"),
+    synonyms=["fruit fly"],
+)
+Species.felis_catus = Species(
+    id="https://openminds.om-i.org/instances/species/felisCatus",
+    definition="The species *Felis catus* (domestic cat) belongs to the family of *Felidae*, subfamily *Felinae*.",
+    name="Felis catus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0101690"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9685"),
+    synonyms=["cat", "house cat", "domestic cat", "Felis silvestris catus", "Felis domesticus"],
+)
+Species.homo_sapiens = Species(
+    id="https://openminds.om-i.org/instances/species/homoSapiens",
+    definition="The species *Homo sapiens* (humans) belongs to the family of *hominidae* (great apes).",
+    name="Homo sapiens",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0105114"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:9606#human"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9606"),
+    synonyms=["homo sapien", "human", "man"],
+)
+Species.macaca_fascicularis = Species(
+    id="https://openminds.om-i.org/instances/species/macacaFascicularis",
+    definition="The species *Macaca fascicularis* (crab-eating macaque) belongs to the family of *cercopithecidae* (old world monkeys).",
+    name="Macaca fascicularis",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0485278"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9541"),
+    synonyms=[
+        "crab eating macaque",
+        "crab-eating macaque",
+        "cynomolgus macaque",
+        "cynomolgus monkey",
+        "long-tailed macaque",
+        "macaca cynomolgus",
+        "macaca irus",
+    ],
+)
+Species.macaca_fuscata = Species(
+    id="https://openminds.om-i.org/instances/species/macacaFuscata",
+    definition="The species *Macaca fuscata* (Japanese macaque) belongs to the family of *cercopithecidae* (old world monkeys).",
+    name="Macaca fuscata",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0105773"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9542"),
+    synonyms=["japanese macaque", "japanese monkey"],
+)
+Species.macaca_mulatta = Species(
+    id="https://openminds.om-i.org/instances/species/macacaMulatta",
+    definition="The species *Macaca mulatta* (rhesus macaque) belongs to the family of *cercopithecidae* (old world monkeys).",
+    name="Macaca mulatta",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0110118"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9544"),
+    synonyms=["rhesus macaque", "rhesus monkey"],
+)
+Species.macaca_nemestrina = Species(
+    id="https://openminds.om-i.org/instances/species/macacaNemestrina",
+    definition="The species *Macaca nemestrina* (southern pig-tailed macaque) belongs to the family of *cercopithecidae* (old world monkeys).",
+    name="Macaca nemestrina",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9545"),
+    synonyms=[
+        "pig-tailed macaque",
+        "pigtail monkey",
+        "pigtail macaque",
+        "Sundaland pig-tailed macaque",
+        "Sunda pig-tailed macaque",
+        "beruk",
+    ],
+)
+Species.meriones_unguiculatus = Species(
+    id="https://openminds.om-i.org/instances/species/merionesUnguiculatus",
+    definition="The Mongolian gerbil, also referred to as the Mongolian jird (Meriones unguiculatus), is a rodent belonging to the subfamily Gerbillinae. [Wikipedia]",
+    name="Meriones unguiculatus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10047"),
+    synonyms=["Mongolian gerbil", "Mongolian jird"],
+)
+Species.monodelphis_domestica = Species(
+    id="https://openminds.om-i.org/instances/species/monodelphisDomestica",
+    definition="The species *Monodelphis domestica* (gray short-tailed opossum) belongs to the family of *didelphidae* (American possums).",
+    name="Monodelphis domestica",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_13616"),
+    synonyms=["gray short-tailed opossum"],
+)
+Species.mus_musculus = Species(
+    id="https://openminds.om-i.org/instances/species/musMusculus",
+    definition="The species *Mus musculus* (house mouse) belongs to the family of *muridae* (murids).",
+    name="Mus musculus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0107134"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:10090#mouse"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10090"),
+    synonyms=["house mouse", "mouse"],
+)
+Species.mustela_putorius = Species(
+    id="https://openminds.om-i.org/instances/species/mustelaPutorius",
+    definition="The species *Mustela putorius* (European polecat) belongs to the family of *mustelidae* (mustelids).",
+    name="Mustela putorius",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9668"),
+    synonyms=["european polecat", "putorius putorius"],
+)
+Species.mustela_putorius_furo = Species(
+    id="https://openminds.om-i.org/instances/species/mustelaPutoriusFuro",
+    definition="The species *Mustela putorius furo* (domestic ferret) belongs to the family of *mustelidae* (mustelids).",
+    name="Mustela putorius furo",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0104165"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9669"),
+    synonyms=["black ferret", "domestic ferret", "ferret", "mustela furo"],
+)
+Species.ovis_aries = Species(
+    id="https://openminds.om-i.org/instances/species/ovisAries",
+    definition="The species *Ovis aries* (domestic sheep) belongs to the family of bovidae (bovids).",
+    name="Ovis aries",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9940"),
+    synonyms=["domestic sheep", "sheep"],
+)
+Species.quiscalus_mexicanus = Species(
+    id="https://openminds.om-i.org/instances/species/quiscalusMexicanus",
+    definition="The species *Quiscalus mexicanus* (great-tailed grackle) belongs to the family of *Icteridae* (New World blackbirds, orioles and allies) of the order *Passeriformes* (song birds).",
+    description="It is a medium-sized, highly social passerine bird native to North and South America. Great-tailed grackles are medium-sized, highly social passerine birds (38–46 cm with males weighing 203–265 g and females 115–142 g) native to North and South America. Both sexes have long tails. Wingspan ranges between 48 and 58 cm. Males are iridescent black with a purple-blue sheen on the feathers of the head and upper body, while females are brown with darker wings and tail. Adults of both sexes have bright yellow eyes, while juveniles of both sexes have brown eyes and brown plumage like females (except for streaks on the breast). Great-tailed grackles, particularly the adult males, have a keel-shaped tail that they can fold vertically by aligning the two halves. [[adapted from Wikipedia](https://en.wikipedia.org/wiki/Great-tailed_grackle)]",
+    name="Quiscalus mexicanus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_64278"),
+    synonyms=["great-tailed grackle"],
+)
+Species.rattus_norvegicus = Species(
+    id="https://openminds.om-i.org/instances/species/rattusNorvegicus",
+    definition="The species *Rattus norvegicus* (brown rat) belongs to the family of *muridae* (murids).",
+    name="Rattus norvegicus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0109658"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:10116#rat"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_10116"),
+    synonyms=["brown rat", "norway rat", "rat"],
+)
+Species.sus_scrofa_domesticus = Species(
+    id="https://openminds.om-i.org/instances/species/susScrofaDomesticus",
+    definition="The species *Sus scrofa domesticus* (domestic pig) belongs to the family of suidae (suids).",
+    name="Sus scrofa domesticus",
+    other_ontology_identifiers=["http://uri.interlex.org/ilx_0739770"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/NCBITaxon:9825#sus-scrofa-domesticus"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9825"),
+    synonyms=["domestic pig", "sus domestica", "sus domesticus", "sus scrofa domestica"],
+)
+Species.trachemys_scripta_elegans = Species(
+    id="https://openminds.om-i.org/instances/species/trachemysScriptaElegans",
+    definition="The red-eared slider or red-eared terrapin (Trachemys scripta elegans) is a subspecies of the pond slider (Trachemys scripta), a semiaquatic turtle belonging to the family Emydidae ([Wikipedia](https://en.wikipedia.org/wiki/Red-eared_slider)).",
+    name="Trachemys scripta elegans",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_31138"),
+    synonyms=[
+        "Pseudemys scripta elegans",
+        "Chrysemys scripta elegans",
+        "Emys elegans",
+        "red-eared slider",
+        "red-eared terrapin",
+        "pond slider",
+    ],
+)

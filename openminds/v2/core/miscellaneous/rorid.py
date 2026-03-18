@@ -23,6 +23,7 @@ class RORID(LinkedMetadata):
             str,
             "identifier",
             formatting="text/plain",
+            required=True,
             description="Term or code used to identify the RORID.",
             instructions="Enter the resolvable identifier (IRI) of the Research Organization Registry.",
         ),
