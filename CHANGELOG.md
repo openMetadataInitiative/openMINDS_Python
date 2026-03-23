@@ -86,3 +86,8 @@ For more detail see #29.
 - fixed a TypeError in `by_name()` when a name was not found [#83](https://github.com/openMetadataInitiative/openMINDS_Python/pull/83)
 - fixed a bug where properties whose value evaluated to False (e.g., zero) were not serialized if using `include_empty_properties=False` [#84](https://github.com/openMetadataInitiative/openMINDS_Python/pull/84)
 - updates to the "latest" module
+
+
+## Release 0.5.0 (2026-03-23)
+
+- Added openMINDS v5 schemas. For full details of the changes, see the [Release Notes](https://github.com/openMetadataInitiative/openMINDS/blob/main/schemas/v5.0/release_notes_v5.0.txt).
