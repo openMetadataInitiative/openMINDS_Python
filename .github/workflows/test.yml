@@ -34,7 +34,14 @@ jobs:
         pip install pytest pytest-cov
         pip install ./target
         if [ "${{ matrix.python-version }}" = "3.14" ]; then
-          pytest -v --cov=openminds --cov-report term pipeline/tests
+          pytest -v --cov=openminds --cov-report term --cov-report lcov pipeline/tests
         else
           pytest -v pipeline/tests
         fi
+
+    - name: Upload coverage to Coveralls
+      if: matrix.python-version == '3.14'
+      uses: coverallsapp/github-action@v2
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: coverage.lcov
