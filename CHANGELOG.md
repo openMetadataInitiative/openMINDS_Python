@@ -91,3 +91,8 @@ For more detail see #29.
 ## Release 0.5.0 (2026-03-23)
 
 - Added openMINDS v5 schemas. For full details of the changes, see the [Release Notes](https://github.com/openMetadataInitiative/openMINDS/blob/main/schemas/v5.0/release_notes_v5.0.txt).
+
+
+## Release 0.5.1 (2026-04-02)
+
+- Changed `embed_linked_nodes` from boolean to LinkedNodeEmbedding enum [#92](https://github.com/openMetadataInitiative/openMINDS_Python/pull/92). This adds an option "if necessary", which embeds linked nodes inline when they lack an @id, and otherwise uses a reference — useful for mixed scenarios where some nodes don't yet have identifiers. This is backwards compatible: True is accepted in place of "always" and False in place of "never.
