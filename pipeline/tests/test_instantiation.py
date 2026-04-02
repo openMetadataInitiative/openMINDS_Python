@@ -7,7 +7,7 @@ import sys
 
 import pytest
 
-from openminds.base import Node, IRI, Link
+from openminds.base import Node, IRI, Link, LinkedNodeEmbedding
 from utils import build_fake_node
 
 module_names = (
@@ -114,8 +114,74 @@ def test_link():
     }
     assert my_dsv1.to_jsonld(
         include_empty_properties=False,
-        embed_linked_nodes=False
+        embed_linked_nodes=LinkedNodeEmbedding.NEVER
     ) == my_dsv2.to_jsonld(
         include_empty_properties=False,
-        embed_linked_nodes=False
+        embed_linked_nodes=LinkedNodeEmbedding.NEVER
     ) == expected
+
+
+def test_linked_node_embedding():
+    from openminds.v4.core import Organization, Person
+    from openminds.v4.core.actors.affiliation import Affiliation
+
+    uni = Organization(full_name="University of Somewhere", id="_:001")
+    person_with_id = Person(
+        given_name="Ada",
+        family_name="Lovelace",
+        id="_:002",
+        affiliations=[Affiliation(member_of=uni)],
+    )
+    person_without_id = Person(
+        given_name="Ada",
+        family_name="Lovelace",
+        affiliations=[Affiliation(member_of=uni)],
+    )
+
+    # ALWAYS: linked nodes are embedded inline
+    result = person_with_id.to_jsonld(
+        include_empty_properties=False,
+        embed_linked_nodes=LinkedNodeEmbedding.ALWAYS,
+    )
+    affiliation = result["affiliation"][0]
+    assert affiliation["memberOf"]["@type"] == "https://openminds.om-i.org/types/Organization"
+    assert affiliation["memberOf"]["fullName"] == "University of Somewhere"
+
+    # NEVER: linked nodes with id are replaced by {"@id": ...}
+    result = person_with_id.to_jsonld(
+        include_empty_properties=False,
+        embed_linked_nodes=LinkedNodeEmbedding.NEVER,
+    )
+    affiliation = result["affiliation"][0]
+    assert affiliation["memberOf"] == {"@id": "_:001"}
+
+    # NEVER: raises ValueError when a linked node has no id
+    uni_no_id = Organization(full_name="University of Nowhere")
+    person_with_unidentified_org = Person(
+        given_name="Ada",
+        family_name="Lovelace",
+        id="_:003",
+        affiliations=[Affiliation(member_of=uni_no_id)],
+    )
+    with pytest.raises(ValueError, match="requires @id to be defined"):
+        person_with_unidentified_org.to_jsonld(
+            include_empty_properties=False,
+            embed_linked_nodes=LinkedNodeEmbedding.NEVER,
+        )
+
+    # IF_NECESSARY: linked nodes with id are replaced by {"@id": ...}
+    result = person_with_id.to_jsonld(
+        include_empty_properties=False,
+        embed_linked_nodes=LinkedNodeEmbedding.IF_NECESSARY,
+    )
+    affiliation = result["affiliation"][0]
+    assert affiliation["memberOf"] == {"@id": "_:001"}
+
+    # IF_NECESSARY: linked nodes without id are embedded inline
+    result = person_with_unidentified_org.to_jsonld(
+        include_empty_properties=False,
+        embed_linked_nodes=LinkedNodeEmbedding.IF_NECESSARY,
+    )
+    affiliation = result["affiliation"][0]
+    assert affiliation["memberOf"]["@type"] == "https://openminds.om-i.org/types/Organization"
+    assert affiliation["memberOf"]["fullName"] == "University of Nowhere"

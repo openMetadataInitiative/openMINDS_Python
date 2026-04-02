@@ -6,6 +6,7 @@ import os.path
 import shutil
 import json
 
+from openminds.base import LinkedNodeEmbedding
 from openminds.collection import Collection
 import openminds.latest.controlled_terms
 import openminds.latest.core as omcore
@@ -45,8 +46,8 @@ def test_round_trip_single_file():
             new_person = person
             break
 
-    p = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=True)
-    np = new_person.to_jsonld(include_empty_properties=False, embed_linked_nodes=True)
+    p = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=LinkedNodeEmbedding.ALWAYS)
+    np = new_person.to_jsonld(include_empty_properties=False, embed_linked_nodes=LinkedNodeEmbedding.ALWAYS)
     assert p == np
 
 
@@ -72,8 +73,8 @@ def test_round_trip_multi_file():
             new_person = person
             break
 
-    p = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=True)
-    np = new_person.to_jsonld(include_empty_properties=False, embed_linked_nodes=True)
+    p = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=LinkedNodeEmbedding.ALWAYS)
+    np = new_person.to_jsonld(include_empty_properties=False, embed_linked_nodes=LinkedNodeEmbedding.ALWAYS)
     assert p == np
 
 
@@ -92,8 +93,8 @@ def test_round_trip_multi_file_group_by_schema():
             new_person = person
             break
 
-    p = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=True)
-    np = new_person.to_jsonld(include_empty_properties=False, embed_linked_nodes=True)
+    p = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=LinkedNodeEmbedding.ALWAYS)
+    np = new_person.to_jsonld(include_empty_properties=False, embed_linked_nodes=LinkedNodeEmbedding.ALWAYS)
     assert p == np
 
 
