@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from datetime import date, datetime
 from collections import defaultdict
+from enum import Enum
 import json
 from typing import Union
 
@@ -17,17 +18,31 @@ import rfc3987
 from .registry import Registry
 
 
-def value_to_jsonld(value, include_empty_properties=True, embed_linked_nodes=True):
+class LinkedNodeEmbedding(Enum):
+    ALWAYS = "always"
+    NEVER = "never"
+    IF_NECESSARY = "if necessary"
+
+
+def value_to_jsonld(value, include_empty_properties=True, embed_linked_nodes=LinkedNodeEmbedding.ALWAYS):
     if isinstance(value, LinkedMetadata):
-        if embed_linked_nodes:
+        if embed_linked_nodes in (LinkedNodeEmbedding.ALWAYS, True):
             item = value.to_jsonld(
                 with_context=False,
                 include_empty_properties=include_empty_properties,
                 embed_linked_nodes=embed_linked_nodes,
             )
-        else:
-            if hasattr(value, "id") and value.id is None:
+        elif value.id is None:
+            if embed_linked_nodes == LinkedNodeEmbedding.IF_NECESSARY:
+                item = value.to_jsonld(
+                    with_context=False,
+                    include_empty_properties=include_empty_properties,
+                    embed_linked_nodes=embed_linked_nodes,
+                )
+            else:
+                assert embed_linked_nodes in (LinkedNodeEmbedding.NEVER, False)
                 raise ValueError("Exporting as a stand-alone JSON-LD document requires @id to be defined.")
+        else:
             item = {"@id": value.id}
     elif isinstance(value, EmbeddedMetadata):
         item = value.to_jsonld(
@@ -62,7 +77,9 @@ class Node(metaclass=Registry):
                 return True
         return False
 
-    def to_jsonld(self, include_empty_properties=True, embed_linked_nodes=True, with_context=True):
+    def to_jsonld(
+        self, include_empty_properties=True, embed_linked_nodes=LinkedNodeEmbedding.ALWAYS, with_context=True
+    ):
         """
         Return a represention of this metadata node as a dictionary that can be directly serialized to JSON-LD.
         """
