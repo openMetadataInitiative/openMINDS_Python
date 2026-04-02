@@ -11,7 +11,7 @@ from importlib import import_module
 import json
 import os
 from .registry import lookup_type
-from .base import Link
+from .base import Link, LinkedNodeEmbedding
 
 
 DEFAULT_VERSION = "v5"
@@ -148,7 +148,9 @@ class Collection:
                 "@context": data_context,
                 "@graph": [
                     node.to_jsonld(
-                        embed_linked_nodes=False, include_empty_properties=include_empty_properties, with_context=False
+                        embed_linked_nodes=LinkedNodeEmbedding.NEVER,
+                        include_empty_properties=include_empty_properties,
+                        with_context=False,
                     )
                     for node in self
                 ],
@@ -178,7 +180,9 @@ class Collection:
                 else:
                     file_path = os.path.join(path, f"{file_identifier}.jsonld")
                 with open(file_path, "w") as fp:
-                    data = node.to_jsonld(embed_linked_nodes=False, include_empty_properties=include_empty_properties)
+                    data = node.to_jsonld(
+                        embed_linked_nodes=LinkedNodeEmbedding.NEVER, include_empty_properties=include_empty_properties
+                    )
                     json.dump(data, fp, indent=2)
                     output_paths.append(file_path)
         return output_paths
