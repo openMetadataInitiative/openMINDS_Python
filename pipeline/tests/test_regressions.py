@@ -5,6 +5,7 @@ import os
 import pytest
 
 from openminds import Collection, IRI
+from openminds.base import LinkedNodeEmbedding
 import openminds.latest
 import openminds.v4
 import openminds.v5
@@ -114,7 +115,11 @@ def test_issue0007a(om):
         om.core.Affiliation(member_of=uni2),
     ]
 
-    actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
+    actual = person.to_jsonld(
+        include_empty_properties=False,
+        embed_linked_nodes=LinkedNodeEmbedding.NEVER,
+        with_context=True
+    )
     expected = {
         "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@id": "_:001",
@@ -192,7 +197,11 @@ def test_issue0007b(om):
         om.core.Membership(member=person2)
     ]
 
-    actual = uni1.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
+    actual = uni1.to_jsonld(
+        include_empty_properties=False,
+        embed_linked_nodes=LinkedNodeEmbedding.NEVER,
+        with_context=True
+    )
     expected = {
         "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@id": "_:002",
@@ -273,7 +282,11 @@ def test_issue0008a(om):
         family_name="Professor",
         affiliations=[om.core.Affiliation(member_of=uni1, end_date=date(2023, 9, 30))],
     )
-    actual = person.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
+    actual = person.to_jsonld(
+        include_empty_properties=False,
+        embed_linked_nodes=LinkedNodeEmbedding.NEVER,
+        with_context=True
+    )
     expected = {
         "@context": {"@vocab": "https://openminds.om-i.org/props/"},
         "@id": "_:002",
@@ -308,7 +321,11 @@ def test_issue0008b(om):
         id="_:001",
         memberships=om.core.Membership(member=person, end_date=date(2023, 9, 30))
     )
-    actual = uni1.to_jsonld(include_empty_properties=False, embed_linked_nodes=False, with_context=True)
+    actual = uni1.to_jsonld(
+        include_empty_properties=False,
+        embed_linked_nodes=LinkedNodeEmbedding.NEVER,
+        with_context=True
+    )
     expected = {
         '@context': {'@vocab': 'https://openminds.om-i.org/props/'},
         '@id': '_:001',
