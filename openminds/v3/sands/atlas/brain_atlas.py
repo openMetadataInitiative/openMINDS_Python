@@ -5700,6 +5700,7 @@ BrainAtlas.whss_datlas = BrainAtlas(
             {
                 "@id": "https://openminds.ebrains.eu/instances/parcellationEntity/WHSSDatlas_cerebralCortexIncludingTheNeocortexAndTheHippocampus"
             },
+            {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/WHSSDatlas_cerebralCortex"},
             {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/WHSSDatlas_hippocampalRegion"},
             {"@id": "https://openminds.ebrains.eu/instances/parcellationEntity/WHSSDatlas_hippocampalFormation"},
             {
