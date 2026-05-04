@@ -5478,6 +5478,7 @@ AnatomicalAtlas.whss_datlas = AnatomicalAtlas(
             {
                 "@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_cerebralCortexIncludingTheNeocortexAndTheHippocampus"
             },
+            {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_cerebralCortex"},
             {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_hippocampalRegion"},
             {"@id": "https://openminds.om-i.org/instances/parcellationEntity/WHSSDatlas_hippocampalFormation"},
             {
