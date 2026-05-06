@@ -28,6 +28,14 @@ class MRIScannerUsage(LinkedMetadata):
             instructions="Enter the acceleration factor (R), defined as the ratio of fully sampled to reduced k-space acquisition, with R ≥ 1 and R = 1 indicating no acceleration. This value is specified in the sequence protocol and can be retrieved from the DICOM header.",
         ),
         Property(
+            "device",
+            "openminds.latest.neuroimaging.MRIScanner",
+            "device",
+            required=True,
+            description="Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function.",
+            instructions="Add the MRI Scanner used.",
+        ),
+        Property(
             "diffusion_encoding_parameters",
             "openminds.latest.core.File",
             "diffusionEncodingParameters",
@@ -286,6 +294,7 @@ class MRIScannerUsage(LinkedMetadata):
         self,
         id=None,
         acceleration_factor=None,
+        device=None,
         diffusion_encoding_parameters=None,
         dwell_time=None,
         echo_times=None,
@@ -322,6 +331,7 @@ class MRIScannerUsage(LinkedMetadata):
         return super().__init__(
             id=id,
             acceleration_factor=acceleration_factor,
+            device=device,
             diffusion_encoding_parameters=diffusion_encoding_parameters,
             dwell_time=dwell_time,
             echo_times=echo_times,
