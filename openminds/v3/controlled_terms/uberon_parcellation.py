@@ -25994,6 +25994,21 @@ UBERONParcellation.trigeminal_nerve_fibers = UBERONParcellation(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003041"),
     synonyms=["central part of trigeminal nerve", "trigeminal nerve tract"],
 )
+UBERONParcellation.trigeminal_nerve_root = UBERONParcellation(
+    id="https://openminds.ebrains.eu/instances/UBERONParcellation/trigeminalNerveRoot",
+    definition="Is a root of cranial nerve. Is part of the metencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004673) ('is_a' and 'relationship')]",
+    description="A nerve root that extends fibers into a trigeminal nerve. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004673)]",
+    interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0111966"),
+    knowledge_space_link=IRI("https://knowledge-space.org/wiki/UBERON:0004673#trigeminal-nerve-root-1"),
+    name="trigeminal nerve root",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004673"),
+    synonyms=[
+        "radix descendens nervi trigemini",
+        "root of trigeminal nerve",
+        "root of trigeminal V nerve",
+        "trigeminal neural root",
+    ],
+)
 UBERONParcellation.trigeminal_nuclear_complex = UBERONParcellation(
     id="https://openminds.ebrains.eu/instances/UBERONParcellation/trigeminalNuclearComplex",
     definition="Is a nuclear complex of neuraxis. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007641)]",
