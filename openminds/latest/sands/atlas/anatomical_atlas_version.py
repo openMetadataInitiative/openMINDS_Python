@@ -151,7 +151,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             "openminds.latest.sands.AnatomicalAtlasVersion",
             "isPrecededBy",
             description="no description available",
-            instructions="Add the brain atlas version preceding this anatomical atlas version.",
+            instructions="Add the anatomical atlas version preceding this anatomical atlas version.",
         ),
         Property(
             "is_variant_of",
@@ -161,7 +161,7 @@ class AnatomicalAtlasVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="no description available",
-            instructions="Add all brain atlas versions that can be used alternatively to this anatomical atlas version.",
+            instructions="Add all anatomical atlas versions that can be used alternatively to this anatomical atlas version.",
         ),
         Property(
             "is_version_of",
