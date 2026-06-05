@@ -583,3 +583,29 @@ def test_issue0084(om):
         "name": "test",
         "order": 0,
     }
+
+
+@pytest.mark.parametrize("om", [openminds.v5, openminds.latest])
+def test_issue0094(om, tmp_path):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/94
+    # Accessibility library instances store payment_models as dicts instead of
+    # PaymentModelType objects, causing KeyError on Collection.load()
+
+    PaymentModelType = om.controlled_terms.PaymentModelType
+
+    acc = om.core.Accessibility.direct_virtual_open_access
+
+    # Properties should be typed objects, not dicts
+    assert not isinstance(acc.payment_models[0], dict)
+    assert isinstance(acc.payment_models[0], PaymentModelType)
+
+    # Save and reload should not raise KeyError
+    c = Collection()
+    c.add(acc)
+    c.save(str(tmp_path), individual_files=True, group_by_schema=True)
+
+    c2 = Collection()
+    c2.load(str(tmp_path), version=om.__name__.split(".")[1])
+
+    acc2 = next(item for item in c2 if isinstance(item, om.core.Accessibility))
+    assert acc2.id == acc.id
