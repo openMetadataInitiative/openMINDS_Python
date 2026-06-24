@@ -74,7 +74,7 @@ class ParcellationEntityVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Reference to a parent object or legal person.",
-            instructions="Add all anatomical parent structures (or version of the structures) for this parcellation entity as defined within corresponding brain atlas version.",
+            instructions="Add all anatomical parent structures (or version of the structures) for this parcellation entity as defined within corresponding anatomical atlas version.",
         ),
         Property(
             "is_version_of",
