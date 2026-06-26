@@ -609,3 +609,32 @@ def test_issue0094(om, tmp_path):
 
     acc2 = next(item for item in c2 if isinstance(item, om.core.Accessibility))
     assert acc2.id == acc.id
+
+
+@pytest.mark.parametrize("om", [openminds.v5, openminds.latest])
+def test_issue0094_resolve_links_tolerates_missing_id(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/issues/94
+    # Node._resolve_links() must tolerate a list-valued link whose id is absent from the
+    # lookup, keeping the Link (as the scalar branch already did) rather than raising
+    # KeyError. fairgraph's initialise_instances relies on this when a recast library
+    # instance references an id that lies outside the set of instances being recast.
+    from openminds.base import Link
+
+    ParcellationEntity = om.sands.ParcellationEntity
+
+    present = ParcellationEntity(id="http://example.org/pe/present", name="present")
+    node = ParcellationEntity(
+        id="http://example.org/pe/child",
+        name="child",
+        has_parents=[
+            Link("http://example.org/pe/present"),
+            Link("http://example.org/pe/missing"),  # deliberately not in the lookup
+        ],
+    )
+
+    node._resolve_links({present.id: present})
+
+    parents = node.has_parents
+    assert parents[0] is present  # resolvable link replaced by the typed object
+    assert isinstance(parents[1], Link)  # unresolvable link kept, no KeyError
+    assert parents[1].identifier == "http://example.org/pe/missing"
