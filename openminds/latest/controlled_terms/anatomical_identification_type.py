@@ -176,13 +176,4 @@ class AnatomicalIdentificationType(LinkedMetadata):
             return matches[0]
 
 
-AnatomicalIdentificationType.landmark_based = AnatomicalIdentificationType(
-    id="https://openminds.om-i.org/instances/anatomicalIdentificationType/landmarkBased",
-    definition="'Landmark based' identification makes use of distinct anatomical structures as a point of orientation in locating other structures in the body.",
-    name="landmark based",
-)
-AnatomicalIdentificationType.stereotactic = AnatomicalIdentificationType(
-    id="https://openminds.om-i.org/instances/anatomicalIdentificationType/stereotactic",
-    definition="'Stereotactic' identification makes use of three-dimensional coordinate system to locate specific targets inside the body. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Stereotactic_surgery)]",
-    name="stereotactic",
-)
+from . import anatomical_identification_type_instances as _  # noqa: F401

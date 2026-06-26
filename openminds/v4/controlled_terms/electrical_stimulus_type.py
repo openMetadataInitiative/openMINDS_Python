@@ -159,8 +159,4 @@ class ElectricalStimulusType(LinkedMetadata):
             return matches[0]
 
 
-ElectricalStimulusType.direct_current = ElectricalStimulusType(
-    id="https://openminds.om-i.org/instances/electricalStimulusType/directCurrent",
-    name="direct current",
-    synonyms=["DC"],
-)
+from . import electrical_stimulus_type_instances as _  # noqa: F401

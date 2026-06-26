@@ -159,15 +159,4 @@ class TactileStimulusType(LinkedMetadata):
             return matches[0]
 
 
-TactileStimulusType.textured_surface = TactileStimulusType(
-    id="https://openminds.ebrains.eu/instances/tactileStimulusType/texturedSurface",
-    name="textured surface",
-)
-TactileStimulusType.vibrating_object = TactileStimulusType(
-    id="https://openminds.ebrains.eu/instances/tactileStimulusType/vibratingObject",
-    name="vibrating object",
-)
-TactileStimulusType.vibrating_surface = TactileStimulusType(
-    id="https://openminds.ebrains.eu/instances/tactileStimulusType/vibratingSurface",
-    name="vibrating surface",
-)
+from . import tactile_stimulus_type_instances as _  # noqa: F401
