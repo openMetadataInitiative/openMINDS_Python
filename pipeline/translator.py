@@ -168,7 +168,7 @@ class PythonBuilder(object):
         module_name = self.relative_path_without_extension[-1]
 
         def filter_value_strings(value):
-            """Normalize strings only — PythonRef conversion happens in *_instances.py generation."""
+            """Normalize strings only; reference resolution happens during *_instances.py generation."""
             if isinstance(value, str):
                 return value.replace('"', "'").replace("\n", " ")
             if isinstance(value, list):

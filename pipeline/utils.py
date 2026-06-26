@@ -9,16 +9,18 @@ from pipeline.translator import generate_python_name
 
 
 class PythonRef:
-    """A bare Python identifier/expression rendered without quotes in generated code."""
+    """A reference to a generated class attribute (``ClassName.attr_name``),
+    rendered without quotes in generated code."""
 
-    def __init__(self, ref):
-        self.ref = ref
+    def __init__(self, class_name, attr_name):
+        self.class_name = class_name
+        self.attr_name = attr_name
 
     def __repr__(self):
-        return self.ref
+        return f"{self.class_name}.{self.attr_name}"
 
     def __str__(self):
-        return self.ref
+        return f"{self.class_name}.{self.attr_name}"
 
 
 def build_instance_id_to_ref(instances_by_type):
@@ -60,7 +62,7 @@ def _resolve_value(value, id_to_ref, referenced_classes):
         if entry:
             ref_class, ref_name = entry
             referenced_classes.add(ref_class)
-            return PythonRef(f"{ref_class}.{ref_name}")
+            return PythonRef(ref_class, ref_name)
     elif isinstance(value, list):
         return [_resolve_value(item, id_to_ref, referenced_classes) for item in value]
     return value
@@ -69,7 +71,7 @@ def _resolve_value(value, id_to_ref, referenced_classes):
 def _has_cyclic_ref(value, deferred_classes):
     """True if value contains a PythonRef whose class is in deferred_classes."""
     if isinstance(value, PythonRef):
-        return value.ref.split(".")[0] in deferred_classes
+        return value.class_name in deferred_classes
     if isinstance(value, list):
         return any(_has_cyclic_ref(item, deferred_classes) for item in value)
     return False
@@ -88,7 +90,7 @@ def _instance_needs_iri(props):
 def _collect_python_ref_classes(value, classes):
     """Collect the class name of every PythonRef found within value (recursing into lists)."""
     if isinstance(value, PythonRef):
-        classes.add(value.ref.split(".")[0])
+        classes.add(value.class_name)
     elif isinstance(value, list):
         for item in value:
             _collect_python_ref_classes(item, classes)
