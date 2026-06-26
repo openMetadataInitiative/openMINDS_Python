@@ -1,0 +1,24 @@
+# this file was auto-generated!
+
+{% for imp in imports %}
+{{imp}}
+{% endfor %}
+
+{% for class_name, inst_name, props in phase1_instances %}
+{{class_name}}.{{inst_name}} = {{class_name}}(
+    {% for key, value in props.items() -%}
+    {% if value is string -%}
+        {% if value.startswith('http') and key != 'id' -%}
+            {{key}}=IRI("{{value}}"),
+        {%- else -%}
+            {{key}}="{{value}}",
+        {%- endif %}
+    {%- else -%}
+        {{key}}={{value}},
+    {%- endif %}
+    {% endfor -%}
+)
+{% endfor %}
+{% for class_name, inst_name, prop_name, value in phase2_patches %}
+{{class_name}}.{{inst_name}}.{{prop_name}} = {{value}}
+{% endfor %}

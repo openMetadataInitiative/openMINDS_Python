@@ -1,0 +1,9 @@
+# this file was auto-generated!
+
+{% for imp in imports %}
+{{imp}}
+{% endfor %}
+
+{% for class_name, inst_name, prop_name, value in patches %}
+{{class_name}}.{{inst_name}}.{{prop_name}} = {{value}}
+{% endfor %}

@@ -100,7 +100,7 @@ class PythonBuilder(object):
     def _target_file_without_extension(self) -> str:
         return os.path.join(self._version_module, "/".join(self.relative_path_without_extension))
 
-    def translate(self, embedded=None, class_to_module_map=None):
+    def translate(self, embedded=None, class_to_module_map=None, class_full_modules=None):
         def get_type(property):
             type_map = {
                 "string": "str",
@@ -164,23 +164,31 @@ class PythonBuilder(object):
         else:
             base_class = "LinkedMetadata"
 
-        def filter_value(value):
+        has_instances = bool(self.instances.get(openminds_type))
+        module_name = self.relative_path_without_extension[-1]
+
+        def filter_value_strings(value):
+            """Normalize strings only; reference resolution happens during *_instances.py generation."""
             if isinstance(value, str):
                 return value.replace('"', "'").replace("\n", " ")
+            if isinstance(value, list):
+                return [filter_value_strings(item) for item in value]
             return value
 
         def filter_instance(instance):
-            filtered_instance = {
-                k: filter_value(v) for k, v in instance.items() if k[0] != "@" and k[:4] != "http" and v is not None
+            filtered = {
+                k: filter_value_strings(v)
+                for k, v in instance.items()
+                if k[0] != "@" and k[:4] != "http" and v is not None
             }
-            filtered_instance["id"] = instance["@id"]
-            return filtered_instance
+            filtered["id"] = instance["@id"]
+            return filtered
 
-        instances = {
-            generate_python_name(instance["@id"].split("/")[-1]): filter_instance(instance)
-            for instance in self.instances.get(openminds_type, [])
+        instances_raw = {
+            generate_python_name(inst["@id"].split("/")[-1]): filter_instance(inst)
+            for inst in self.instances.get(openminds_type, [])
         }
-        instances = {name: instances[name] for name in sorted(instances)}  # sort by key
+        instances_raw = {name: instances_raw[name] for name in sorted(instances_raw)}
 
         properties = []
         for iri, property in self._schema_payload["properties"].items():
@@ -211,9 +219,10 @@ class PythonBuilder(object):
                 }
             )
             # unused in property:  "nameForReverseLink"
-            for instance in instances.values():
+            for instance in instances_raw.values():
                 if property["name"] in instance:
                     instance[pythonic_name] = instance.pop(property["name"])
+
         self.context = {
             "docstring": self._schema_payload.get("description", "<description not available>"),
             "base_class": base_class,
@@ -223,12 +232,12 @@ class PythonBuilder(object):
             "schema_version": self.version,
             "context_vocab": self.context_vocab,
             "properties": sorted(properties, key=lambda p: p["name"].lower()),
-            "additional_methods": "",
-            "instances": instances,
+            "additional_methods": self.additional_methods["by_name"] if has_instances else "",
+            "instances_trigger": (
+                f"from . import {module_name}_instances as _  # noqa: F401" if has_instances else ""
+            ),
+            "instances_raw": instances_raw,
         }
-
-        if len(instances) > 0:
-            self.context["additional_methods"] = self.additional_methods["by_name"]
 
         import_map = {
             "date": "from datetime import date",
@@ -239,8 +248,6 @@ class PythonBuilder(object):
             "Real": "from numbers import Real",
         }
         extra_imports = set()
-        if len(instances) > 0:
-            extra_imports.add(import_map["IRI"])
         for property in self.context["properties"]:
             if isinstance(property["type"], list):
                 for t in property["type"]:
@@ -251,14 +258,14 @@ class PythonBuilder(object):
                 imp = import_map.get(property["type"], None)
                 if imp:
                     extra_imports.add(imp)
-            if extra_imports:
-                self.context["preamble"] = "\n".join(sorted(extra_imports))
+        if extra_imports:
+            self.context["preamble"] = "\n".join(sorted(extra_imports))
 
-    def build(self, embedded=None, class_to_module_map=None):
+    def build(self, embedded=None, class_to_module_map=None, class_full_modules=None):
         target_file_path = os.path.join("target", "openminds", f"{self._target_file_without_extension()}.py")
         os.makedirs(os.path.dirname(target_file_path), exist_ok=True)
 
-        self.translate(embedded=embedded, class_to_module_map=class_to_module_map)
+        self.translate(embedded=embedded, class_to_module_map=class_to_module_map, class_full_modules=class_full_modules)
 
         with open(target_file_path, "w") as target_file:
             contents = self.env.get_template(self.template_name).render(self.context)
@@ -274,7 +281,7 @@ class PythonBuilder(object):
             linked.update(property.get("_linkedTypes", []))
         return embedded, linked
 
-    def update_class_to_module_map(self, class_to_module_map):
+    def update_class_to_module_map(self, class_to_module_map, class_full_modules=None):
         """
         Updates a dictionary with the class name and its corresponding module based on the schemas.
 
@@ -288,6 +295,9 @@ class PythonBuilder(object):
         Args:
             class_to_module_map (dict): A dictionary where keys are class names and values
                                       are their corresponding modules.
+            class_full_modules (dict, optional): If provided, also populated with
+                                      class_name → full dotted submodule path
+                                      (e.g. "core.miscellaneous.accessibility").
 
         Returns:
             dict: The updated dictionary with the class name and module mapping.
@@ -300,5 +310,8 @@ class PythonBuilder(object):
             module = schema_type.split("/")[-2]
 
         class_to_module_map[class_name] = module
+
+        if class_full_modules is not None:
+            class_full_modules[class_name] = ".".join(self.relative_path_without_extension)
 
         return class_to_module_map

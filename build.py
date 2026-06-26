@@ -11,7 +11,10 @@ from urllib.request import urlopen, HTTPError
 from jinja2 import Environment, select_autoescape, FileSystemLoader
 
 from pipeline.translator import PythonBuilder
-from pipeline.utils import clone_sources, SchemaLoader, InstanceLoader
+from pipeline.utils import (
+    clone_sources, SchemaLoader, InstanceLoader,
+    build_instance_id_to_ref, generate_directory_instance_files,
+)
 
 
 include_instances = True  # to speed up the build during development, set this to False
@@ -52,6 +55,9 @@ if include_instances:
 print(f"Loaded instances ({perf_counter() - start_time} s)")
 
 python_modules = defaultdict(list)
+directories_with_patches = set()  # (version_module, dir_path) pairs needing _instance_patches.py
+
+env = Environment(loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))), autoescape=select_autoescape())
 
 for schema_version in schema_loader.get_schema_versions():
 
@@ -62,11 +68,12 @@ for schema_version in schema_loader.get_schema_versions():
     embedded = set()
     linked = set()
     class_to_module_map = {}
+    class_full_modules = {}
     for schema_file_path in schemas_file_paths:
         emb, lnk = PythonBuilder(schema_file_path, schema_loader.schemas_sources).get_edges()
         class_to_module_map = PythonBuilder(
             schema_file_path, schema_loader.schemas_sources
-        ).update_class_to_module_map(class_to_module_map)
+        ).update_class_to_module_map(class_to_module_map, class_full_modules)
         embedded.update(emb)
         linked.update(lnk)
     conflicts = linked.intersection(embedded)
@@ -79,17 +86,42 @@ for schema_version in schema_loader.get_schema_versions():
             linked.remove(schema_identifier)
 
     # Step 4b - translate and build each openMINDS schema as a Python class
+    instance_data_by_dir = defaultdict(list)  # dir_path → [(class_name, full_module_path, instances_raw)]
+
     for schema_file_path in schemas_file_paths:
-        module_path, class_name = PythonBuilder(
+        builder = PythonBuilder(
             schema_file_path,
             schema_loader.schemas_sources,
             instances=instances.get(schema_version, None),
             additional_methods=additional_methods,
-        ).build(embedded=embedded, class_to_module_map=class_to_module_map)
+        )
+        module_path, class_name = builder.build(
+            embedded=embedded, class_to_module_map=class_to_module_map, class_full_modules=class_full_modules
+        )
+
+        if builder.context["instances_raw"]:
+            dir_parts = builder.relative_path_without_extension[:-1]
+            dir_path = "/".join(dir_parts)
+            instance_data_by_dir[dir_path].append(
+                (class_name, class_full_modules[class_name], builder.context["instances_raw"])
+            )
 
         parts = module_path.split(".")
         parent_path = ".".join(parts[:-1])
         python_modules[parent_path].append((parts[-1], class_name))
+
+    # Step 4c - generate _instances.py for each leaf directory that has instances
+    version_module = schema_version.split(".")[0]
+    all_instances_for_version = instances.get(schema_version, {})
+    id_to_ref = build_instance_id_to_ref(all_instances_for_version)
+
+    for dir_path, dir_class_data in instance_data_by_dir.items():
+        has_patches = generate_directory_instance_files(
+            version_module, dir_path, dir_class_data,
+            all_instances_for_version, id_to_ref, class_full_modules, env
+        )
+        if has_patches:
+            directories_with_patches.add((version_module, dir_path))
 
 print(f"Processed schemas ({perf_counter() - start_time} s)")
 
@@ -104,6 +136,9 @@ for path in sorted(python_modules):
     with open(init_file_path, "w") as fp:
         for class_module, class_name in sorted(classes):
             fp.write(f"from .{class_module} import {class_name}\n")
+        rel_dir_path = "/".join(dir_path[3:])
+        if (dir_path[2], rel_dir_path) in directories_with_patches:
+            fp.write("from . import _instance_patches as _  # noqa: F401\n")
     while len(dir_path) > 3:
         child_dir = dir_path[-1]
         dir_path = dir_path[:-1]
@@ -118,7 +153,6 @@ for version, module_list in openminds_modules.items():
     with open(init_file_path, "w") as fp:
         fp.write(f"from . import ({', '.join(sorted(module_list))})\n")
 
-env = Environment(loader=FileSystemLoader(os.path.dirname(os.path.realpath(__file__))), autoescape=select_autoescape())
 context = {
     "version": "0.5.1",
 }
