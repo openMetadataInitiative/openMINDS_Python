@@ -159,11 +159,4 @@ class TypeOfUncertainty(LinkedMetadata):
             return matches[0]
 
 
-TypeOfUncertainty.standard_deviation = TypeOfUncertainty(
-    id="https://openminds.ebrains.eu/instances/typeOfUncertainty/standardDeviation",
-    name="standard deviation",
-)
-TypeOfUncertainty.standard_error = TypeOfUncertainty(
-    id="https://openminds.ebrains.eu/instances/typeOfUncertainty/standardError",
-    name="standard error",
-)
+from . import type_of_uncertainty_instances as _  # noqa: F401

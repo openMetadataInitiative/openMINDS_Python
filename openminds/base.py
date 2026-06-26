@@ -235,7 +235,7 @@ class Node(metaclass=Registry):
                 resolved_values = []
                 for item in value:
                     if isinstance(item, Link):
-                        resolved_values.append(node_lookup[item.identifier])
+                        resolved_values.append(node_lookup.get(item.identifier, item))
                     else:
                         resolved_values.append(item)
                         if hasattr(item, "_resolve_links"):

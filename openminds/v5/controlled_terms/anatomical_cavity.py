@@ -176,11 +176,4 @@ class AnatomicalCavity(LinkedMetadata):
             return matches[0]
 
 
-AnatomicalCavity.basal_cistern = AnatomicalCavity(
-    id="https://openminds.om-i.org/instances/anatomicalCavity/basalCistern",
-    definition="Is a subarachnoid cistern. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004047)]",
-    description="The enclosed space where the arachnoid membrane stretches between the two temporal lobes and encloses the cerebral peduncles including the structures contained in the interpeduncular fossa. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004047)]",
-    name="basal cistern",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004047#basal-cistern"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004047"),
-)
+from . import anatomical_cavity_instances as _  # noqa: F401

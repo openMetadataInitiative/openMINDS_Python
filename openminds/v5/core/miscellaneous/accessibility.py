@@ -4,8 +4,6 @@
 
 # this file was auto-generated!
 
-from openminds.base import IRI
-
 from openminds.base import LinkedMetadata
 from openminds.properties import Property
 
@@ -131,51 +129,4 @@ class Accessibility(LinkedMetadata):
             return matches[0]
 
 
-Accessibility.direct_physical_single_payment_model_controlled_access = Accessibility(
-    id="https://openminds.om-i.org/instances/accessibilities/directPhysicalSingle-paymentModelControlledAccess",
-    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/physicalAccess"},
-    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/controlledAccess"},
-    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
-    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/single-paymentModel"}],
-    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/immediateAccess"},
-)
-Accessibility.direct_virtual_authenticated_controlled_access = Accessibility(
-    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthenticatedControlledAccess",
-    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
-    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/controlledAccess"},
-    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
-    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
-    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/authenticatedAccess"},
-)
-Accessibility.direct_virtual_authorized_controlled_access = Accessibility(
-    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthorizedControlledAccess",
-    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
-    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/controlledAccess"},
-    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
-    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
-    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/authorizedAccess"},
-)
-Accessibility.direct_virtual_authorized_restricted_access = Accessibility(
-    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthorizedRestrictedAccess",
-    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
-    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/restrictedAccess"},
-    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
-    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
-    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/authorizedAccess"},
-)
-Accessibility.direct_virtual_open_access = Accessibility(
-    id="https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess",
-    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
-    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/openAccess"},
-    form={"@id": "https://openminds.om-i.org/instances/accessForm/directAccess"},
-    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
-    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/immediateAccess"},
-)
-Accessibility.mediated_virtual_authorized_restricted_access = Accessibility(
-    id="https://openminds.om-i.org/instances/accessibilities/mediatedVirtualAuthorizedRestrictedAccess",
-    channel={"@id": "https://openminds.om-i.org/instances/accessChannel/virtualAccess"},
-    eligibility={"@id": "https://openminds.om-i.org/instances/accessEligibilityType/restrictedAccess"},
-    form={"@id": "https://openminds.om-i.org/instances/accessForm/mediatedAccess"},
-    payment_models=[{"@id": "https://openminds.om-i.org/instances/paymentModelType/zero-costPaymentModel"}],
-    process={"@id": "https://openminds.om-i.org/instances/accessProcessType/authorizedAccess"},
-)
+from . import accessibility_instances as _  # noqa: F401

@@ -159,11 +159,4 @@ class Laterality(LinkedMetadata):
             return matches[0]
 
 
-Laterality.left = Laterality(
-    id="https://openminds.ebrains.eu/instances/laterality/left",
-    name="left",
-)
-Laterality.right = Laterality(
-    id="https://openminds.ebrains.eu/instances/laterality/right",
-    name="right",
-)
+from . import laterality_instances as _  # noqa: F401

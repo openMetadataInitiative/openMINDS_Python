@@ -7,3 +7,4 @@ from .parcellation_entity import ParcellationEntity
 from .parcellation_entity_version import ParcellationEntityVersion
 from .parcellation_terminology import ParcellationTerminology
 from .parcellation_terminology_version import ParcellationTerminologyVersion
+from . import _instance_patches as _  # noqa: F401

@@ -159,8 +159,4 @@ class OlfactoryStimulusType(LinkedMetadata):
             return matches[0]
 
 
-OlfactoryStimulusType.floral_odor = OlfactoryStimulusType(
-    id="https://openminds.om-i.org/instances/olfactoryStimulusType/floralOdor",
-    definition="Any chemical compound that smells floral.",
-    name="floral odor",
-)
+from . import olfactory_stimulus_type_instances as _  # noqa: F401
