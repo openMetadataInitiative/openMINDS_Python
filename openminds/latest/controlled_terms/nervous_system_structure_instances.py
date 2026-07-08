@@ -9639,14 +9639,6 @@ NervousSystemStructure.ganglionic_layer_of_retina = NervousSystemStructure(
     ],
 )
 
-NervousSystemStructure.gasserian_ganglion = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/gasserianGanglion",
-    definition="Is a ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_3011045)]",
-    name="gasserian ganglion",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:3011045#gasserian-ganglion"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_3011045"),
-)
-
 NervousSystemStructure.gastropod_cerebral_ganglion = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/gastropodCerebralGanglion",
     definition="Is a ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0008942)]",
@@ -27305,14 +27297,6 @@ NervousSystemStructure.telencephalic_song_nucleus_hvc = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0035785#telencephalic-song-nucleus-hvc"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035785"),
     synonyms=["HVC (avian brain region)"],
-)
-
-NervousSystemStructure.telencephalic_tracts = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/telencephalicTracts",
-    definition="Is a white matter of telencephalon. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000597)]",
-    name="telencephalic tracts",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:2000597#telencephalic-tracts"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000597"),
 )
 
 NervousSystemStructure.telencephalic_ventricle = NervousSystemStructure(
