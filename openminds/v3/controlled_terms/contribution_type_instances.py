@@ -16,6 +16,12 @@ ContributionType.administration = ContributionType(
     name="administration",
 )
 
+ContributionType.approval = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/approval",
+    definition="A contribution type of a role-bearing entity realized by formally authorizing or accepting a target entity so that it may proceed or be used.",
+    name="approval",
+)
+
 ContributionType.authoring = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/authoring",
     definition="A contribution type of a role-bearing entity realized by creating textual, visual, or other expressive intellectual content about or for a target entity.",
@@ -36,7 +42,7 @@ ContributionType.communication = ContributionType(
 
 ContributionType.coordination = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/coordination",
-    definition="A contribution type of a role-bearing entity realized by coordinating activities, participants, or processes related to a target entity.",
+    definition="A contribution type of a role-bearing entity realized by aligning interdependent activities, contributors, or resources to enable coherent joint action.",
     name="coordination",
 )
 
@@ -100,10 +106,41 @@ ContributionType.dissemination = ContributionType(
     name="dissemination",
 )
 
+ContributionType.editing = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/editing",
+    definition="A contribution type of a role-bearing entity realized by modifying the content or form of a target entity to improve its accuracy, clarity, coherence, or quality.",
+    name="editing",
+)
+
+ContributionType.editorial_decision_making = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/editorialDecision-making",
+    definition="A contribution type of a role-bearing entity realized by evaluating a target entity against relevant criteria and determining its acceptance, rejection, revision, or other editorial disposition.",
+    name="editorial decision-making",
+    synonyms=["editorial assessment"],
+)
+
 ContributionType.education = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/education",
     definition="A contribution type of a role-bearing entity realized by transferring knowledge about a target entity to enable learning about its nature, context, principles, or applications.",
     name="education",
+)
+
+ContributionType.execution = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/execution",
+    definition="A contribution type of a role-bearing entity realized by carrying out substantive tasks according to an established plan, method, or procedure.",
+    name="execution",
+)
+
+ContributionType.funding = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/funding",
+    definition="A contribution type of a role-bearing entity realized by providing financial resources to support a target entity or activities related to it.",
+    name="funding",
+)
+
+ContributionType.fundraising = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/fundraising",
+    definition="A contribution type of a role-bearing entity realized by securing financial resources to support a target entity or activities related to it.",
+    name="fundraising",
 )
 
 ContributionType.hosting = ContributionType(
@@ -126,7 +163,7 @@ ContributionType.husbandry = ContributionType(
 
 ContributionType.implementation = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/implementation",
-    definition="A contribution type of a role-bearing entity realized by putting a specified design, plan, method, or specification into effect through or within a target entity.",
+    definition="A contribution type of a role-bearing entity realized by putting an adopted plan, method, system, or procedure into practical effect.",
     name="implementation",
 )
 
@@ -154,6 +191,12 @@ ContributionType.laboratory_assistance = ContributionType(
     name="laboratory assistance",
 )
 
+ContributionType.leadership = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/leadership",
+    definition="A contribution type of a role-bearing entity realized by setting direction and making consequential decisions for a collective undertaking.",
+    name="leadership",
+)
+
 ContributionType.liaison = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/liaison",
     definition="A contribution type of a role-bearing entity realized by serving as a point of contact or intermediary regarding a target entity.",
@@ -164,6 +207,12 @@ ContributionType.maintenance = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/maintenance",
     definition="A contribution type of a role-bearing entity realized by sustaining, updating, or repairing a target entity to ensure its continued functionality and quality.",
     name="maintenance",
+)
+
+ContributionType.management = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/management",
+    definition="A contribution type of a role-bearing entity realized by organizing and administering people, resources, and/or work toward specified objectives.",
+    name="management",
 )
 
 ContributionType.manufacturing = ContributionType(
@@ -186,7 +235,7 @@ ContributionType.metadata_management = ContributionType(
 
 ContributionType.operation = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/operation",
-    definition="A contribution type of a role-bearing entity realized by controlling, operating, or running a target entity in an active environment.",
+    definition="A contribution type of a role-bearing entity realized by controlling and sustaining the functioning of a target entity.",
     name="operation",
 )
 
@@ -232,9 +281,15 @@ ContributionType.provision = ContributionType(
     name="provision",
 )
 
+ContributionType.research = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/research",
+    definition="A contribution type of a role-bearing entity realized by conducting systematic inquiry concerning a target entity to generate, validate, or refine knowledge or understanding.",
+    name="research",
+)
+
 ContributionType.review = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/review",
-    definition="A contribution type of a role-bearing entity realized by critically assessing a target entity through expert judgment to evaluate its quality, validity, or suitability.",
+    definition="A contribution type of a role-bearing entity realized by critically assessing a target entity through expert judgment to evaluate its quality, validity, or suitability and, where appropriate, identify deficiencies or opportunities for improvement and recommend changes.",
     name="review",
 )
 
@@ -248,6 +303,12 @@ ContributionType.standardization = ContributionType(
     id="https://openminds.ebrains.eu/instances/contributionType/standardization",
     definition="A contribution type of a role-bearing entity realized by aligning a target entity with shared specifications or conventions applied across multiple entities.",
     name="standardization",
+)
+
+ContributionType.supervision = ContributionType(
+    id="https://openminds.ebrains.eu/instances/contributionType/supervision",
+    definition="A contribution type of a role-bearing entity realized by overseeing and guiding the work or activities performed by humans, non-human animals, or software agents in relation to a target entity.",
+    name="supervision",
 )
 
 ContributionType.support = ContributionType(
