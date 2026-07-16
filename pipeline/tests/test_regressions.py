@@ -638,3 +638,24 @@ def test_issue0094_resolve_links_tolerates_missing_id(om):
     assert parents[0] is present  # resolvable link replaced by the typed object
     assert isinstance(parents[1], Link)  # unresolvable link kept, no KeyError
     assert parents[1].identifier == "http://example.org/pe/missing"
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_by_name_deduplicates_matches(om):
+    # by_name(..., all=True) must not return the same instance more than once
+    # Two cases:
+    # (a) an instance whose name-like properties (which include "synonyms") share
+    #     the same value gets indexed twice under that value's key while the lookup
+    #     is built (e.g. MolecularEntity "propofol" lists "propofol" itself as one
+    #     of its own synonyms).
+    # (b) match="contains" can find the same instance through several distinct,
+    #     overlapping keys (e.g. SovereignState "France" has synonyms "FR" and
+    #     "FRA", both of which contain the substring "FR").
+
+    MolecularEntity = om.controlled_terms.MolecularEntity
+    propofol_matches = MolecularEntity.by_name("propofol", all=True)
+    assert len(propofol_matches) == 1
+
+    SovereignState = om.controlled_terms.SovereignState
+    fr_matches = SovereignState.by_name("FR", match="contains", all=True)
+    assert len(set(m.id for m in fr_matches)) == len(fr_matches)  # no instance repeated

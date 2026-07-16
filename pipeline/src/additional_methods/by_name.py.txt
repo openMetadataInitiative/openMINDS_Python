@@ -46,9 +46,9 @@
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
-        if not matches: 
+        if not matches:
             return None
         elif all:
-            return matches
+            return list(dict.fromkeys(matches))
         else:
             return matches[0]
