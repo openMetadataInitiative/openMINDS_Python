@@ -708,3 +708,19 @@ def test_by_name_case_sensitive(om):
     assert UnitOfMeasurement.by_name(greek_mu_a) is None
     match = UnitOfMeasurement.by_name(greek_mu_a, case_sensitive=False)
     assert match.name == "microampere"
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_by_name_match_contained(om):
+    # match="contained" is the reverse of match="contains": it looks for
+    # instances whose name-like properties are substrings of the given
+    # (typically longer/composite) search string, rather than the other way around.
+    Species = om.controlled_terms.Species
+
+    result = Species.by_name("Mus musculus - House mouse", match="contained")
+    assert result.name == "Mus musculus"
+
+    # Several macaque species' full names contain "Macaca" as a substring, 
+    # but none of those full names is itself a substring of "Macaca".
+    assert Species.by_name("Macaca", match="contains", all=True) is not None
+    assert Species.by_name("Macaca", match="contained", all=True) is None

@@ -19,7 +19,9 @@
 
         Args:
             name (str): a string to search for.
-            match (str, optional): either "equals" (exact match - default) or "contains".
+            match (str, optional): either "equals" (exact match - default), "contains"
+                (the name-like property contains the given string), or "contained"
+                (the given string contains the name-like property).
             all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
             case_sensitive (bool, optional): Whether the search should be case-sensitive. Defaults to True.
         """
@@ -57,8 +59,13 @@
             for key, instances in cls._instance_lookup.items():
                 if normalize(name) in normalize(key):
                     matches.extend(instances)
+        elif match == "contained":
+            matches = []
+            for key, instances in cls._instance_lookup.items():
+                if normalize(key) in normalize(name):
+                    matches.extend(instances)
         else:
-            raise ValueError("'match' must be either 'equals' or 'contains'")
+            raise ValueError("'match' must be either 'equals', 'contains', or 'contained'")
         if not matches:
             return None
         elif all:
