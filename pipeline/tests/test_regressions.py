@@ -670,3 +670,41 @@ def test_by_name_tolerates_unset_namelike_properties(om):
 
     ParcellationEntity.by_name("brain", match="contains", all=True)  # would previously raise TypeError
     assert None not in ParcellationEntity._instance_lookup
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_by_name_case_sensitive(om):
+    # by_name(..., case_sensitive=False) must match regardless of case, while
+    # the default (case_sensitive=True) stays exact, as in test_issue0069.
+    License = om.core.License
+
+    # match="equals"
+    assert License.by_name("cc-by-4.0") is None
+    result = License.by_name("cc-by-4.0", case_sensitive=False)
+    assert result is License.by_name("CC-BY-4.0")
+
+    # match="contains"
+    assert License.by_name("creative commons", match="contains", all=True) is None
+    results = License.by_name("creative commons", match="contains", all=True, case_sensitive=False)
+    expected = License.by_name("Creative Commons", match="contains", all=True)
+    assert set(r.id for r in results) == set(r.id for r in expected)
+
+    # case-insensitive matching can also merge results from genuinely different
+    # instances, not just recover a single missed match: MolecularEntity
+    # "pentobarbital sodium" is its own instance's name, while "pentobarbital
+    # Sodium" (capital S) is a synonym of a different instance ("pentobarbital").
+    MolecularEntity = om.controlled_terms.MolecularEntity
+    exact_matches = MolecularEntity.by_name("pentobarbital sodium", all=True)
+    assert set(m.name for m in exact_matches) == {"pentobarbital sodium"}
+    merged_matches = MolecularEntity.by_name("pentobarbital sodium", all=True, case_sensitive=False)
+    assert set(m.name for m in merged_matches) == {"pentobarbital", "pentobarbital sodium"}
+
+    # case-insensitive matching uses casefold(), not lower(), so it also unifies
+    # Unicode variants such as the micro sign "µ" (U+00B5) and the Greek letter
+    # "μ" (U+03BC) - e.g. UnitOfMeasurement "microampere" has synonym "µA" (micro
+    # sign), which a search for the Greek-mu spelling should still find.
+    UnitOfMeasurement = om.controlled_terms.UnitOfMeasurement
+    greek_mu_a = "μA"  # Greek mu, not the micro sign used in the real data
+    assert UnitOfMeasurement.by_name(greek_mu_a) is None
+    match = UnitOfMeasurement.by_name(greek_mu_a, case_sensitive=False)
+    assert match.name == "microampere"

@@ -8,6 +8,7 @@
         name: str,
         match: str = "equals",
         all: bool = False,
+        case_sensitive: bool = True,
     ):
         """
         Search for instances in the openMINDS instance library based on their name.
@@ -20,6 +21,7 @@
             name (str): a string to search for.
             match (str, optional): either "equals" (exact match - default) or "contains".
             all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
+            case_sensitive (bool, optional): Whether the search should be case-sensitive. Defaults to True.
         """
         namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
         if cls._instance_lookup is None:
@@ -38,12 +40,22 @@
                         cls._instance_lookup[key].append(instance)
                     else:
                         cls._instance_lookup[key] = [instance]
+
+        def normalize(s):
+            return s if case_sensitive else s.casefold()
+
         if match == "equals":
-            matches = cls._instance_lookup.get(name, [])
+            if case_sensitive:
+                matches = cls._instance_lookup.get(name, [])
+            else:
+                matches = []
+                for key, instances in cls._instance_lookup.items():
+                    if key.casefold() == name.casefold():
+                        matches.extend(instances)
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
-                if name in key:
+                if normalize(name) in normalize(key):
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals' or 'contains'")
