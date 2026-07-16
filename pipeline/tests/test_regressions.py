@@ -659,3 +659,14 @@ def test_by_name_deduplicates_matches(om):
     SovereignState = om.controlled_terms.SovereignState
     fr_matches = SovereignState.by_name("FR", match="contains", all=True)
     assert len(set(m.id for m in fr_matches)) == len(fr_matches)  # no instance repeated
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_by_name_tolerates_unset_namelike_properties(om):
+    # ParcellationEntity has real instances that leave "abbreviation" unset.
+    # Before the fix, an unset property was still indexed, leaving None as
+    # a lookup key, which crashed match="contains" (`name in None`).
+    ParcellationEntity = om.sands.ParcellationEntity
+
+    ParcellationEntity.by_name("brain", match="contains", all=True)  # would previously raise TypeError
+    assert None not in ParcellationEntity._instance_lookup

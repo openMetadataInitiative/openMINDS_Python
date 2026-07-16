@@ -27,8 +27,9 @@
             for instance in cls.instances():
                 keys = []
                 for prop_name in namelike_properties:
-                    if hasattr(instance, prop_name):
-                        keys.append(getattr(instance, prop_name))
+                    value = getattr(instance, prop_name, None)
+                    if value is not None:
+                        keys.append(value)
                 if hasattr(instance, "synonyms"):
                     for synonym in instance.synonyms or []:
                         keys.append(synonym)
