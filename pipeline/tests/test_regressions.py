@@ -641,7 +641,8 @@ def test_issue0094_resolve_links_tolerates_missing_id(om):
 
 
 @pytest.mark.parametrize("om", [openminds.latest])
-def test_by_name_deduplicates_matches(om):
+def test_pr0100_by_name_deduplicates_matches(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
     # by_name(..., all=True) must not return the same instance more than once
     # Two cases:
     # (a) an instance whose name-like properties (which include "synonyms") share
@@ -662,7 +663,8 @@ def test_by_name_deduplicates_matches(om):
 
 
 @pytest.mark.parametrize("om", [openminds.latest])
-def test_by_name_tolerates_unset_namelike_properties(om):
+def test_pr0100_by_name_tolerates_unset_namelike_properties(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
     # ParcellationEntity has real instances that leave "abbreviation" unset.
     # Before the fix, an unset property was still indexed, leaving None as
     # a lookup key, which crashed match="contains" (`name in None`).
@@ -673,7 +675,8 @@ def test_by_name_tolerates_unset_namelike_properties(om):
 
 
 @pytest.mark.parametrize("om", [openminds.latest])
-def test_by_name_case_sensitive(om):
+def test_pr0100_by_name_case_sensitive(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
     # by_name(..., case_sensitive=False) must match regardless of case, while
     # the default (case_sensitive=True) stays exact, as in test_issue0069.
     License = om.core.License
@@ -711,7 +714,8 @@ def test_by_name_case_sensitive(om):
 
 
 @pytest.mark.parametrize("om", [openminds.latest])
-def test_by_name_match_contained(om):
+def test_pr0100_by_name_match_contained(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
     # match="contained" is the reverse of match="contains": it looks for
     # instances whose name-like properties are substrings of the given
     # (typically longer/composite) search string, rather than the other way around.
