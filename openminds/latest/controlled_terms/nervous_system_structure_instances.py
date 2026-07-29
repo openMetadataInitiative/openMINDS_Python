@@ -2363,15 +2363,6 @@ NervousSystemStructure.brachium_of_superior_colliculus = NervousSystemStructure(
     ],
 )
 
-NervousSystemStructure.brain = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/brain",
-    definition="Is part of the central nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000955)]",
-    description="The brain is the center of the nervous system in all vertebrate, and most invertebrate, animals. Some primitive animals such as jellyfish and starfish have a decentralized nervous system without a brain, while sponges lack any nervous system at all. In vertebrates, the brain is located in the head, protected by the skull and close to the primary sensory apparatus of vision, hearing, balance, taste, and smell. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000955)]",
-    name="brain",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0000955#brain-1"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000955"),
-)
-
 NervousSystemStructure.brain_arachnoid_mater = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/brainArachnoidMater",
     definition="Is an arachnoid mater and brain meninx. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005397)]",
@@ -11460,15 +11451,6 @@ NervousSystemStructure.inner_plexiform_layer_of_retina = NervousSystemStructure(
     synonyms=["retina inner plexiform layer", "retinal inner plexiform layer", "stratum plexiforme internum"],
 )
 
-NervousSystemStructure.insect_adult_brain = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/insectAdultBrain",
-    definition="Is a brain. Is part of the insect adult central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6003624) ('is_a' and 'relationship')]",
-    description="Brain of the adult. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6003624)]",
-    name="insect adult brain",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:6003624#adult-brain"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6003624"),
-)
-
 NervousSystemStructure.insect_adult_central_complex = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/insectAdultCentralComplex",
     definition="Is an insect synaptic neuropil block. Is part of the insect adult protocerebrum. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6003632) ('is_a' and 'relationship')]",
@@ -11549,24 +11531,6 @@ NervousSystemStructure.insect_chaeta = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:6005177#chaeta"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6005177"),
     synonyms=["sensillum chaeticum"],
-)
-
-NervousSystemStructure.insect_embryonic_brain = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/insectEmbryonicBrain",
-    definition="Is a brain. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6001060)]",
-    description="Brain of the embryo. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6001060)]",
-    name="insect embryonic brain",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:6001060#insect-embryonic-brain"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6001060"),
-)
-
-NervousSystemStructure.insect_embryonic_larval_brain = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/insectEmbryonicLarvalBrain",
-    definition="Is a brain and ganglion of central nervous system. Is part of the insect embryonic/larval central nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6001920) ('is_a' and 'relationship')]",
-    description="Brain of the embryo/larva. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6001920)]",
-    name="insect embryonic/larval brain",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:6001920#insect-embryonic-larval-brain"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6001920"),
 )
 
 NervousSystemStructure.insect_embryonic_larval_central_nervous_system = NervousSystemStructure(
@@ -16812,16 +16776,6 @@ NervousSystemStructure.neural_tube_ventricular_layer = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004060#neural-tube-ventricular-layer"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004060"),
     synonyms=["neural tube ependymal layer", "neural tube ventricular germinal zone", "neural tube ventricular zone"],
-)
-
-NervousSystemStructure.neuroendocrine_gland = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/neuroendocrineGland",
-    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010133) ('is_a' and 'relationship')]",
-    description="Any of the organized aggregations of cells that function as secretory or excretory organs and that release hormones in response to neural stimuli. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010133)]",
-    name="neuroendocrine gland",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0010133#neuroendocrine-gland"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010133"),
-    synonyms=["neuroendocrine system gland"],
 )
 
 NervousSystemStructure.neurohypophysis = NervousSystemStructure(
@@ -24636,15 +24590,6 @@ NervousSystemStructure.sommers_sector = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0023932#sommer-s-sector-1"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023932"),
     synonyms=["sommer's sector"],
-)
-
-NervousSystemStructure.spinal_cord = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/spinalCord",
-    definition="Is part of the central nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002240)]",
-    description="Part of the central nervous system located in the vertebral canal continuous with and caudal to the brain; demarcated from brain by plane of foramen magnum. It is composed of an inner core of gray matter in which nerve cells predominate, and an outer layer of white matter in which myelinated nerve fibers predominate, and surrounds the central canal. (CUMBO) [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002240)]",
-    name="spinal cord",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002240#spinal-cord-1"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002240"),
 )
 
 NervousSystemStructure.spinal_cord_alar_plate = NervousSystemStructure(
