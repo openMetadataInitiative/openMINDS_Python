@@ -41,15 +41,6 @@ Accessibility.direct_virtual_authorized_controlled_access = Accessibility(
     process=AccessProcessType.authorized_access,
 )
 
-Accessibility.direct_virtual_authorized_restricted_access = Accessibility(
-    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthorizedRestrictedAccess",
-    channel=AccessChannel.virtual_access,
-    eligibility=AccessEligibilityType.restricted_access,
-    form=AccessForm.direct_access,
-    payment_models=[PaymentModelType.zero_cost_payment_model],
-    process=AccessProcessType.authorized_access,
-)
-
 Accessibility.direct_virtual_open_access = Accessibility(
     id="https://openminds.om-i.org/instances/accessibilities/directVirtualOpenAccess",
     channel=AccessChannel.virtual_access,
