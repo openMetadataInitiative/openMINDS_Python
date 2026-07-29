@@ -22,21 +22,19 @@ collection = Collection()
 # Create some metadata
 
 mgm = omcore.Organization(
-    full_name="Metro-Goldwyn-Mayer Studios, Inc.",
-    short_name="MGM",
-    homepage=IRI("https://www.mgm.com")
+    full_name="Metro-Goldwyn-Mayer Studios, Inc.", short_name="MGM", homepage=IRI("https://www.mgm.com")
 )
 
 stan = omcore.Person(
     given_name="Stan",
     family_name="Laurel",
-    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
+    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1)),
 )
 
 ollie = omcore.Person(
     given_name="Oliver",
     family_name="Hardy",
-    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1))
+    affiliations=omcore.Affiliation(member_of=mgm, start_date=date(1942, 1, 1)),
 )
 
 # Add the metadata to the collection
