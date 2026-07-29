@@ -11480,14 +11480,6 @@ NervousSystemStructure.insect_adult_cerebral_ganglion = NervousSystemStructure(
     synonyms=["CRG"],
 )
 
-NervousSystemStructure.insect_adult_nervous_system = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/insectAdultNervousSystem",
-    definition="Is a nervous system. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6003559)]",
-    name="insect adult nervous system",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:6003559#adult-nervous-system"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6003559"),
-)
-
 NervousSystemStructure.insect_adult_protocerebrum = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/insectAdultProtocerebrum",
     definition="Is an insect protocerebrum. Is part of the insect adult cerebral ganglion. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6007145) ('is_a' and 'relationship')]",
@@ -11552,18 +11544,6 @@ NervousSystemStructure.insect_embryonic_larval_head_sensillum = NervousSystemStr
     name="insect embryonic/larval head sensillum",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:6007242#embryonic-larval-head-sensillum"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6007242"),
-)
-
-NervousSystemStructure.insect_embryonic_larval_nervous_system = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/insectEmbryonicLarvalNervousSystem",
-    definition="Is a nervous system. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6001911)]",
-    description="Nervous system of the embryo/larva. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6001911)]",
-    name="insect embryonic/larval nervous system",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:6001911#insect-embryonic-larval-nervous-system"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6001911"),
-    synonyms=["larval nervous system"],
 )
 
 NervousSystemStructure.insect_embryonic_larval_protocerebrum = NervousSystemStructure(

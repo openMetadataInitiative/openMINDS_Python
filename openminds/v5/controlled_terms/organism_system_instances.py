@@ -110,6 +110,26 @@ OrganismSystem.glymphatic_system = OrganismSystem(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036145"),
 )
 
+OrganismSystem.insect_adult_nervous_system = OrganismSystem(
+    id="https://openminds.om-i.org/instances/organismSystem/insectAdultNervousSystem",
+    definition="Is a nervous system. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6003559)]",
+    name="insect adult nervous system",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:6003559#adult-nervous-system"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6003559"),
+)
+
+OrganismSystem.insect_embryonic_larval_nervous_system = OrganismSystem(
+    id="https://openminds.om-i.org/instances/organismSystem/insectEmbryonicLarvalNervousSystem",
+    definition="Is a nervous system. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6001911)]",
+    description="Nervous system of the embryo/larva. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_6001911)]",
+    name="insect embryonic/larval nervous system",
+    preferred_cross_reference=IRI(
+        "https://knowledge-space.org/wiki/UBERON:6001911#insect-embryonic-larval-nervous-system"
+    ),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_6001911"),
+    synonyms=["larval nervous system"],
+)
+
 OrganismSystem.limbic_system = OrganismSystem(
     id="https://openminds.om-i.org/instances/organismSystem/limbicSystem",
     definition="Is part of the forebrain. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000349)]",
