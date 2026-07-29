@@ -47,6 +47,22 @@ VascularStructure.brain_blood_vessel = VascularStructure(
     synonyms=["blood vessel of brain"],
 )
 
+VascularStructure.canal_of_schlemm = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/canalOfSchlemm",
+    definition="Is part of the cavernous sinus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004029)]",
+    description="The vascular structure encircling the anterior chamber of the eye, through which the aqueous humor is returned to the blood circulation. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004029)]",
+    name="canal of Schlemm",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004029#canal-of-schlemm"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004029"),
+    synonyms=[
+        "Schlemm's canal",
+        "scleral sinus",
+        "scleral venous sinus",
+        "sinus venosus of sclera",
+        "sinus venosus sclerae",
+    ],
+)
+
 VascularStructure.cavernous_sinus = VascularStructure(
     id="https://openminds.om-i.org/instances/vascularStructure/cavernousSinus",
     definition="Is a venous dural sinus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003712)]",
@@ -201,6 +217,15 @@ VascularStructure.hyaloid_artery = VascularStructure(
     synonyms=["arteria hyaloidea"],
 )
 
+VascularStructure.inferior_cerebral_vein = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/inferiorCerebralVein",
+    definition="Is a cerebral vein. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001664)]",
+    description="The inferior cerebral veins, of small size, drain the under surfaces of the hemispheres. Those on the orbital surface of the frontal lobe join the superior cerebral veins, and through these open into the superior sagittal sinus. Those of the temporal lobe anastomose with the middle cerebral and basal veins, and join the cavernous, sphenoparietal, and superior petrosal sinuses. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001664)]",
+    name="inferior cerebral vein",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0001664#inferior-cerebral-vein"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001664"),
+)
+
 VascularStructure.inferior_petrosal_sinus = VascularStructure(
     id="https://openminds.om-i.org/instances/vascularStructure/inferiorPetrosalSinus",
     definition="Is a paired venous dural sinus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007160)]",
@@ -278,6 +303,18 @@ VascularStructure.perineural_vascular_plexus = VascularStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0015189#perineural-vascular-plexus"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0015189"),
     synonyms=["PNVP"],
+)
+
+VascularStructure.posterior_mesencephalic_central_artery = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/posteriorMesencephalicCentralArtery",
+    definition="Is a central artery. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005079)]",
+    description="Project dorsally from BCA to irrigate the caudal part of midbrain Isogai et al. 2001. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005079)]",
+    name="posterior mesencephalic central artery",
+    preferred_cross_reference=IRI(
+        "https://knowledge-space.org/wiki/UBERON:2005079#posterior-mesencephalic-central-artery"
+    ),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005079"),
+    synonyms=["caudal mesencephalic central artery", "PMCtA"],
 )
 
 VascularStructure.primitive_marginal_sinus = VascularStructure(
@@ -454,6 +491,16 @@ VascularStructure.vasculature_of_retina = VascularStructure(
         "set of retinal blood vessels",
         "vasa sanguinea retinae",
     ],
+)
+
+VascularStructure.vein_of_vestibular_aqueduct = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/veinOfVestibularAqueduct",
+    definition="Is part of the transverse sinus and the inferior petrosal sinus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036074)]",
+    description="A vein that leaves the vestibule through an individual bone canal running parallel to the vestibular aqueduct up to the dura of the posterior side of the petrosa in the area of the endolymphatic sac. It then opens in the inferior petrosal sinus or the jugular bulb. The vein receives other branches from the bone, dura and sac. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036074)]",
+    name="vein of vestibular aqueduct",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0036074#vein-of-vestibular-aqueduct"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036074"),
+    synonyms=["vena aqueductus vestibuli", "vestibular aqueduct vein"],
 )
 
 VascularStructure.venous_dural_sinus = VascularStructure(

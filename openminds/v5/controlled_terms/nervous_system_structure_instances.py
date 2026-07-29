@@ -2969,22 +2969,6 @@ NervousSystemStructure.callosal_sulcus = NervousSystemStructure(
     synonyms=["sulcus corporis callosi", "sulcus of corpus callosum"],
 )
 
-NervousSystemStructure.canal_of_schlemm = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/canalOfSchlemm",
-    definition="Is part of the cavernous sinus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004029)]",
-    description="The vascular structure encircling the anterior chamber of the eye, through which the aqueous humor is returned to the blood circulation. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004029)]",
-    name="canal of Schlemm",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004029#canal-of-schlemm"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004029"),
-    synonyms=[
-        "Schlemm's canal",
-        "scleral sinus",
-        "scleral venous sinus",
-        "sinus venosus of sclera",
-        "sinus venosus sclerae",
-    ],
-)
-
 NervousSystemStructure.capsule_of_medial_geniculate_body = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/capsuleOfMedialGeniculateBody",
     definition="Is a diencephalic white matter. Is part of the medial geniculate body. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002627) ('is_a' and 'relationship')]",
@@ -10937,15 +10921,6 @@ NervousSystemStructure.inferior_cerebellar_peduncle = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002163#inferior-cerebellar-peduncle-1"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002163"),
     synonyms=["corpus restiforme", "restiform body"],
-)
-
-NervousSystemStructure.inferior_cerebral_vein = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/inferiorCerebralVein",
-    definition="Is a cerebral vein. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001664)]",
-    description="The inferior cerebral veins, of small size, drain the under surfaces of the hemispheres. Those on the orbital surface of the frontal lobe join the superior cerebral veins, and through these open into the superior sagittal sinus. Those of the temporal lobe anastomose with the middle cerebral and basal veins, and join the cavernous, sphenoparietal, and superior petrosal sinuses. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001664)]",
-    name="inferior cerebral vein",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0001664#inferior-cerebral-vein"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001664"),
 )
 
 NervousSystemStructure.inferior_cervical_ganglion = NervousSystemStructure(
@@ -20789,18 +20764,6 @@ NervousSystemStructure.posterior_median_eminence = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002652"),
 )
 
-NervousSystemStructure.posterior_mesencephalic_central_artery = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/posteriorMesencephalicCentralArtery",
-    definition="Is a central artery. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005079)]",
-    description="Project dorsally from BCA to irrigate the caudal part of midbrain Isogai et al. 2001. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005079)]",
-    name="posterior mesencephalic central artery",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:2005079#posterior-mesencephalic-central-artery"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005079"),
-    synonyms=["caudal mesencephalic central artery", "PMCtA"],
-)
-
 NervousSystemStructure.posterior_middle_temporal_sulcus = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/posteriorMiddleTemporalSulcus",
     definition="Is a temporal sulcus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0025768)]",
@@ -28859,16 +28822,6 @@ NervousSystemStructure.vein_baroreceptor = NervousSystemStructure(
     name="vein baroreceptor",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0018394#vein-baroreceptor"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0018394"),
-)
-
-NervousSystemStructure.vein_of_vestibular_aqueduct = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/veinOfVestibularAqueduct",
-    definition="Is part of the transverse sinus and the inferior petrosal sinus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036074)]",
-    description="A vein that leaves the vestibule through an individual bone canal running parallel to the vestibular aqueduct up to the dura of the posterior side of the petrosa in the area of the endolymphatic sac. It then opens in the inferior petrosal sinus or the jugular bulb. The vein receives other branches from the bone, dura and sac. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0036074)]",
-    name="vein of vestibular aqueduct",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0036074#vein-of-vestibular-aqueduct"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036074"),
-    synonyms=["vena aqueductus vestibuli", "vestibular aqueduct vein"],
 )
 
 NervousSystemStructure.ventral_accessory_optic_nucleus = NervousSystemStructure(
