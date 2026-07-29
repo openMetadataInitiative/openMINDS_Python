@@ -2960,3 +2960,108 @@ ContentType.video_x_msvideo = ContentType(
     name="video/x-msvideo",
     synonyms=["Audio Video Interleave", "AVI"],
 )
+
+
+ContentType.application_ldplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_sbmlplusxml.is_based_on = [ContentType.application_xml]
+
+ContentType.application_schemaplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_ants_nonlinear_transformplushdf5.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_bigdataviewerplush5.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_cellh5plushdf5.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_enzo_amrplushdf5.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_espina_measurementplusms_excel.is_based_on = [ContentType.application_vnd_ms_excel]
+
+ContentType.application_vnd_faconstructor_3d_pliplushdf5.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_g_node_nixplushdf5.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_ilastik_object_featurespluscsv.is_based_on = [ContentType.text_csv]
+
+ContentType.application_vnd_ilastik_object_featuresplushdf5.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_ilastik_projectplushdf5.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_illumina_annotated_sequenceplusfastq.is_based_on = [ContentType.text_x_fastq]
+
+ContentType.application_vnd_intranatpluscsv.is_based_on = [ContentType.text_csv]
+
+ContentType.application_vnd_locareplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_meshviewplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_microsoft_deepzoom_collectionplusxml.is_based_on = [ContentType.application_xml]
+
+ContentType.application_vnd_microsoft_deepzoom_imageplusxml.is_based_on = [ContentType.application_xml]
+
+ContentType.application_vnd_mindsplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_nest_desktop_model_v4plusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_nest_desktop_project_v4plusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_neuroglancer_precomputed_infoplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_nutil_quantifierplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_nutil_resultspluscsv.is_based_on = [ContentType.text_csv]
+
+ContentType.application_vnd_nwb_nwbnplushdf.is_based_on = [ContentType.application_x_hdf]
+
+ContentType.application_vnd_openmetadatainitiative_openminds_schema_tplplusjson.is_based_on = [
+    ContentType.application_json
+]
+
+ContentType.application_vnd_openmetadatainitiative_openminds_schemaplusjson.is_based_on = [
+    ContentType.application_json
+]
+
+ContentType.application_vnd_qcalignplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_quickniiplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_quickniiplusxml.is_based_on = [ContentType.application_xml]
+
+ContentType.application_vnd_sequencereadarchive_annotated_sequenceplusfastq.is_based_on = [ContentType.text_x_fastq]
+
+ContentType.application_vnd_spikeinterface_probeinterfaceplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_thevirtualbrain_metadataplustsv.is_based_on = [ContentType.text_tab_separated_values]
+
+ContentType.application_vnd_tracesplusxml.is_based_on = [ContentType.application_xml]
+
+ContentType.application_vnd_unicore_workflowplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_visualignplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_voluba_v1_landmark_pairsplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_voluba_v1_linear_transformplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_webalign_walnplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_vnd_webwarp_wwrpplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.application_x_ipynbplusjson.is_based_on = [ContentType.application_json]
+
+ContentType.chemical_vnd_wwpdb_pdb_v3_30plusplain.is_based_on = [ContentType.text_plain]
+
+ContentType.chemical_vnd_wwpdb_pdbml_v5plusxml.is_based_on = [ContentType.application_xml]
+
+ContentType.chemical_vnd_wwpdb_pdbx_mmcif_v5plusplain.is_based_on = [ContentType.text_plain]
+
+ContentType.image_vnd_ilastik_pixelclassificationplushdf5.is_based_on = [ContentType.image_x_hdf]
+
+ContentType.image_vnd_ilastik_pixelclassificationplusn5.is_based_on = [ContentType.image_x_n5]
+
+ContentType.image_vnd_ilastik_segmentationplusn5.is_based_on = [ContentType.image_x_n5]
+
+ContentType.image_vnd_ilastikplushdf5.is_based_on = [ContentType.image_x_hdf]
+
+ContentType.text_x_cmlplusxml.is_based_on = [ContentType.application_xml]
