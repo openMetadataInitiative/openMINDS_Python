@@ -3414,16 +3414,6 @@ NervousSystemStructure.central_amygdaloid_nucleus = NervousSystemStructure(
     synonyms=["central amygdala", "central nucleus of amygda", "central nucleus of amygdala"],
 )
 
-NervousSystemStructure.central_canal_of_spinal_cord = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/centralCanalOfSpinalCord",
-    definition="Is part of the spinal cord and the ventricular system of central nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002291)]",
-    description="Spinal cord structure that is part of the ventricular system and is filled with cerebral-spinal fluid and runs the length of the spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002291)]",
-    name="central canal of spinal cord",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002291#spinal-cord-central-canal"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002291"),
-    synonyms=["canalis centralis", "central canal", "spinal cord central canal", "ventricle of spinal cord"],
-)
-
 NervousSystemStructure.central_caudal_thalamic_nucleus = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/centralCaudalThalamicNucleus",
     definition="Is a nucleus of dorsal thalamus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000182)]",
@@ -3972,16 +3962,6 @@ NervousSystemStructure.cerebellar_vermis = NervousSystemStructure(
         "vermis of cerebellum",
         "vermis of cerebellum [I-X]",
     ],
-)
-
-NervousSystemStructure.cerebellomedullary_cistern = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/cerebellomedullaryCistern",
-    definition="Is a subarachnoid cistern. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004049)]",
-    description="The largest of the subarachnoid cisterns between the cerebellum and the medulla oblongata; it is divided into a posterior cerebellomedullary cistern located between the cerebellum and the posterior surface of the medulla (also called cisterna magna), and a lateral cerebellomedullary cistern located between the cerebellum and the lateral aspect of the medulla. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004049)]",
-    name="cerebellomedullary cistern",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004049#cerebellomedullary-cistern"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004049"),
-    synonyms=["great cistern"],
 )
 
 NervousSystemStructure.cerebellopontine_angle = NervousSystemStructure(
@@ -4588,18 +4568,6 @@ NervousSystemStructure.cerebrocerebellum = NervousSystemStructure(
     synonyms=["cerebellum lateral hemisphere", "cerebellum lateral zone", "neocerebellum", "pontocerebellum"],
 )
 
-NervousSystemStructure.cervical_division_of_cord_spinal_central_canal = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/cervicalDivisionOfCordSpinalCentralCanal",
-    definition="Is a subdivision of spinal cord central canal. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014542)]",
-    description="Part of central canal contained within the cervical spinal cord. It is continuous caudally with the thoracic spinal cord central canal and rostrally with the fourth ventricle of the brain via the obex. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014542)]",
-    name="cervical division of cord spinal central canal",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0014542#cervical-spinal-cord-central-canal"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014542"),
-    synonyms=["cervical spinal cord central canal"],
-)
-
 NervousSystemStructure.cervical_dorsal_root_ganglion = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/cervicalDorsalRootGanglion",
     definition="Is a dorsal root ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002834)]",
@@ -4820,16 +4788,6 @@ NervousSystemStructure.chest_nerve = NervousSystemStructure(
         "nerve of chest",
         "nerve of front of thorax",
     ],
-)
-
-NervousSystemStructure.chiasmatic_cistern = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/chiasmaticCistern",
-    definition="Is a subarachnoid cistern. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002898)]",
-    description="The region of the subarachnoid space that is located below and anterior to the optic chiasm. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002898)]",
-    name="chiasmatic cistern",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002898#chiasmatic-cistern-1"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002898"),
-    synonyms=["cisterna chiasmatica", "cisterna chiasmatis"],
 )
 
 NervousSystemStructure.cholinergic_enteric_nerve = NervousSystemStructure(
@@ -5158,15 +5116,6 @@ NervousSystemStructure.circumventricular_organ = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005408#circumventricular-organ-1"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005408"),
     synonyms=["circumventricular organ of neuraxis", "CVO"],
-)
-
-NervousSystemStructure.cistern_of_lamina_terminalis = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/cisternOfLaminaTerminalis",
-    definition="Is a subarachnoid cistern. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002897)]",
-    name="cistern of lamina terminalis",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002897#cistern-of-lamina-terminalis-1"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002897"),
-    synonyms=["cisterna lamina terminalis", "lamina terminalis cistern"],
 )
 
 NervousSystemStructure.claustral_amygdaloid_area = NervousSystemStructure(
@@ -6561,16 +6510,6 @@ NervousSystemStructure.diencephalon_pia_mater = NervousSystemStructure(
     ],
 )
 
-NervousSystemStructure.diencephalon_subarachnoid_space = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/diencephalonSubarachnoidSpace",
-    definition="Is a subarachnoid space. Is part of the diencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005218) ('is_a' and 'relationship')]",
-    description="A subarachnoid space that is part of a diencephalon. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005218)]",
-    name="diencephalon subarachnoid space",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005218#diencephalon-subarachnoid-space"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005218"),
-    synonyms=["subarachnoid space diencephalon"],
-)
-
 NervousSystemStructure.differentiating_neuroepithelium = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/differentiatingNeuroepithelium",
     definition="Is a developing neuroepithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034707)]",
@@ -7896,21 +7835,6 @@ NervousSystemStructure.emboliform_nucleus = NervousSystemStructure(
         "embolus",
         "lateral interpositus (emboliform) nucleus",
         "nucleus interpositus anterior",
-    ],
-)
-
-NervousSystemStructure.embryonic_intraretinal_space = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/embryonicIntraretinalSpace",
-    definition="Is an anatomical entity. Is part of the retina. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006253) ('is_a' and 'relationship')]",
-    description="The space separating the outer pigment epithelium and the inner neural retina of the optic cup and of the retina. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006253)]",
-    name="embryonic intraretinal space",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0006253#embryonic-intraretinal-space"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006253"),
-    synonyms=[
-        "intraretinal space",
-        "intraretinal space of optic cup",
-        "intraretinal space of retina",
-        "retina intraretinal space",
     ],
 )
 
@@ -10469,17 +10393,6 @@ NervousSystemStructure.hindbrain_spinal_cord_boundary = NervousSystemStructure(
     synonyms=["hindbrain-spinal cord boundary region"],
 )
 
-NervousSystemStructure.hindbrain_subarachnoid_space = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/hindbrainSubarachnoidSpace",
-    definition="Is a subarachnoid space. Is part of the hindbrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005219) ('is_a' and 'relationship')]",
-    description="A subarachnoid space that is part of a hindbrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005219)]",
-    name="hindbrain subarachnoid space",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0726998"],
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005219#hindbrain-subarachnoid-space"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005219"),
-    synonyms=["subarachnoid space hindbrain"],
-)
-
 NervousSystemStructure.hindbrain_vesicle = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/hindbrainVesicle",
     definition="Is a future brain vesicle. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0013149)]",
@@ -11386,23 +11299,6 @@ NervousSystemStructure.infundibular_organ = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0011358#infundibular-organ"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0011358"),
     synonyms=["infundibular organ of Boeke", "ventral infundibular organ"],
-)
-
-NervousSystemStructure.infundibular_recess_of3rd_ventricle = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/infundibularRecessOf3rdVentricle",
-    definition="Is part of the third ventricle and the future neurohypophysis. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006250)]",
-    description="A funnel-shaped diverticulum that extends downward from the anterior aspect of the floor of the third ventricle into the infundibulum of the hypophysis; the embryonic structure gives rise the neural component of the pituitary (pas nervosa). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006250)]",
-    name="infundibular recess of 3rd ventricle",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0006250#infundibular-recess-of-3rd-ventricle"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006250"),
-    synonyms=[
-        "infundibular recess",
-        "infundibular recess of third ventricle",
-        "recessus infundibularis",
-        "recessus infundibuli",
-    ],
 )
 
 NervousSystemStructure.inner_limiting_layer_of_retina = NervousSystemStructure(
@@ -12474,18 +12370,6 @@ NervousSystemStructure.lateral_amygdaloid_nucleus_ventromedial_part = NervousSys
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023417"),
 )
 
-NervousSystemStructure.lateral_cerebellomedullary_cistern = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/lateralCerebellomedullaryCistern",
-    definition="Is a cerebellomedullary cistern. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004051)]",
-    description="The space between the cerebellum and the lateral aspect of the medulla. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004051)]",
-    name="lateral cerebellomedullary cistern",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0004051#lateral-cerebellomedullary-cistern"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004051"),
-    synonyms=["cisterna cerebellomedullaris lateralis"],
-)
-
 NervousSystemStructure.lateral_cervical_nucleus = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/lateralCervicalNucleus",
     definition="Is a nucleus of spinal cord. Is part of the dorsal horn of spinal cord. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002176) ('is_a' and 'relationship')]",
@@ -13153,29 +13037,6 @@ NervousSystemStructure.lateral_pulvinar_nucleus = NervousSystemStructure(
         "nucleus pulvinaris lateralis thalami",
         "nucleus pulvinaris thalami, pars lateralis",
     ],
-)
-
-NervousSystemStructure.lateral_recess_of_fourth_ventricle = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/lateralRecessOfFourthVentricle",
-    definition="Is an anatomical entity. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007656) ('is_a' and 'relationship')]",
-    description="The lateral recess is a projection of the fourth ventricle which extends into the inferior cerebellar peduncle of the brainstem. The lateral aperture, an opening in each extremity of the lateral recess, provides a conduit for cerebrospinal fluid to flow from the brain's ventricular system into the subarachnoid space. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007656)]",
-    name="lateral recess of fourth ventricle",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0736090"],
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0007656#lateral-recess-of-fourth-ventricle"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007656"),
-    synonyms=["recessus lateralis (ventriculi quarti)"],
-)
-
-NervousSystemStructure.lateral_recess_of_third_vetricle = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/lateralRecessOfThirdVetricle",
-    definition="Is an anatomical entity. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0008902) ('is_a' and 'relationship')]",
-    description="Lateral protrusion of the third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0008902)]",
-    name="lateral recess of third vetricle",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0008902#lateral-recess-of-third-vetricle"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0008902"),
-    synonyms=["lateral recess of diencephalic ventricle"],
 )
 
 NervousSystemStructure.lateral_reticular_nucleus = NervousSystemStructure(
@@ -13960,16 +13821,6 @@ NervousSystemStructure.lower_rhombic_lip = NervousSystemStructure(
     synonyms=["caudal rhombic lip", "lower (caudal) rhombic lip"],
 )
 
-NervousSystemStructure.lumbar_division_of_spinal_cord_central_canal = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/lumbarDivisionOfSpinalCordCentralCanal",
-    definition="Is a subdivision of spinal cord central canal. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014543)]",
-    description="Part of central canal lying within the lumbar spinal cord. It is continuous rostrally with the central canal of the thoracic spinal cord and caudally with the central canal of the sacral spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014543)]",
-    name="lumbar division of spinal cord central canal",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0014543#lumbar-spinal-cord-central-canal"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014543"),
-    synonyms=["lumbar spinal cord central canal"],
-)
-
 NervousSystemStructure.lumbar_dorsal_root_ganglion = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/lumbarDorsalRootGanglion",
     definition="Is a dorsal root ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002836)]",
@@ -14145,18 +13996,6 @@ NervousSystemStructure.lumbosacral_nerve_plexus = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0001815#lumbosacral-nerve-plexus"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001815"),
     synonyms=["lumbosacral plexus", "plexus lumbosacralis"],
-)
-
-NervousSystemStructure.lumen_of_central_canal_of_spinal_cord = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/lumenOfCentralCanalOfSpinalCord",
-    definition="Is an anatomical entity. Is part of the central canal of spinal cord. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009572) ('is_a' and 'relationship')]",
-    description="A cerebrospinal fluid-filled space that runs longitudinally through the length of the entire spinal cord. The central canal is contiguous with the ventricular system of the brain. The central canal represents the adult remainder of the neural tube. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009572)]",
-    name="lumen of central canal of spinal cord",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0009572#lumen-of-central-canal-of-spinal-cord"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009572"),
-    synonyms=["cavity of central canal of spinal cord", "central canal lumen", "spinal cord lumen"],
 )
 
 NervousSystemStructure.lumen_of_central_nervous_system = NervousSystemStructure(
@@ -16026,16 +15865,6 @@ NervousSystemStructure.midbrain_reticular_formation = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002639#midbrain-reticular-formation-1"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002639"),
     synonyms=["reticular formation of midbrain", "tegmental reticular formation"],
-)
-
-NervousSystemStructure.midbrain_subarachnoid_space = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/midbrainSubarachnoidSpace",
-    definition="Is a subarachnoid space. Is part of the midbrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005217) ('is_a' and 'relationship')]",
-    description="A subarachnoid space that is part of a midbrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005217)]",
-    name="midbrain subarachnoid space",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005217#midbrain-subarachnoid-space"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005217"),
-    synonyms=["subarachnoid space midbrain"],
 )
 
 NervousSystemStructure.midbrain_tectum = NervousSystemStructure(
@@ -18161,17 +17990,6 @@ NervousSystemStructure.optic_radiation = NervousSystemStructure(
     synonyms=["Gratiolet's radiation"],
 )
 
-NervousSystemStructure.optic_recess_of_third_ventricle = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/opticRecessOfThirdVentricle",
-    definition="Is an anatomical entity. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002287) ('is_a' and 'relationship')]",
-    description="Recess in third ventricle lying in front of the optic chiasm at the base of the lamina terminalis. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002287)]",
-    name="optic recess of third ventricle",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0108073"],
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002287#optic-recess-of-third-ventricle-1"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002287"),
-    synonyms=["optic recess", "preoptic recess", "recessus supraopticus", "supraoptic recess"],
-)
-
 NervousSystemStructure.optic_stalk = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/opticStalk",
     definition="Is a developing neuroepithelium. Is part of the diencephalon. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003098) ('is_a' and 'relationship')]",
@@ -19834,16 +19652,6 @@ NervousSystemStructure.peritrigeminal_nucleus = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002879"),
 )
 
-NervousSystemStructure.perivascular_space = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/perivascularSpace",
-    definition="Is an anatomical entity. Is part of the meningeal cluster. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014930) ('is_a' and 'relationship')]",
-    description="The space between a blood vessel and the pia mater. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014930)]",
-    name="perivascular space",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0014930#perivascular-space"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014930"),
-    synonyms=["perivascular region", "Virchow-Robin space"],
-)
-
 NervousSystemStructure.periventricular_gray_matter = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/periventricularGrayMatter",
     definition="Is a brain gray matter. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014933)]",
@@ -20113,16 +19921,6 @@ NervousSystemStructure.pineal_parenchyma = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034907"),
 )
 
-NervousSystemStructure.pineal_recess_of_third_ventricle = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/pinealRecessOfThirdVentricle",
-    definition="Is an anatomical entity. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022283) ('is_a' and 'relationship')]",
-    description="The diverticulum of the thin roof of the dorsocaudal third ventricle that projects into the stalk of the pineal gland. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0022283)]",
-    name="pineal recess of third ventricle",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0022283#pineal-recess-of-third-ventricle"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022283"),
-    synonyms=["pineal recess", "pineal recess of 3V", "recessus pinealis"],
-)
-
 NervousSystemStructure.pineal_tract = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/pinealTract",
     definition="Is a central nervous system cell part cluster and cranial neuron projection bundle. Is part of the epiphyseal tract. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034715) ('is_a' and 'relationship')]",
@@ -20318,16 +20116,6 @@ NervousSystemStructure.pons_reticulospinal_tract = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004172"),
 )
 
-NervousSystemStructure.pontine_cistern = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/pontineCistern",
-    definition="Is a subarachnoid cistern and hindbrain subarachnoid space. Is part of the pons. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004048) ('is_a' and 'relationship')]",
-    description="The space located on lateral aspects of the pons at the junction with the celebellum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004048)]",
-    name="pontine cistern",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004048#pontine-cistern"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004048"),
-    synonyms=["cisterna pontis"],
-)
-
 NervousSystemStructure.pontine_nuclear_group = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/pontineNuclearGroup",
     definition="Is a brainstem nucleus and hindbrain nucleus. Is part of the basal part of pons. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002151) ('is_a' and 'relationship')]",
@@ -20511,18 +20299,6 @@ NervousSystemStructure.posterior_calcarine_sulcus = NervousSystemStructure(
         "posterior part of calcarine sulcus",
         "sulcus calcarinus posterior",
     ],
-)
-
-NervousSystemStructure.posterior_cerebellomedullary_cistern = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/posteriorCerebellomedullaryCistern",
-    definition="Is a cerebellomedullary cistern. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005974)]",
-    description="A space between the cerebellum and the dorsal surface of the medulla. The cisterna magna (or cerebellomedullary cistern) is one of three principal openings in the subarachnoid space between the arachnoid and pia mater layers of the meninges surrounding the brain. The openings are collectively referred to as cisterns. The cisterna magna is located between the cerebellum and the dorsal surface of the medulla oblongata. Cerebrospinal fluid produced in the fourth ventricle drains into the cisterna magna via the lateral apertures and median aperture. The two other principal cisterns are the pontine cistern located between the pons and the medulla, and the interpeduncular cistern located between the cerebral peduncles. Cerebral spinal fluid can also be obtained by puncture of the cisterna magna (cistern puncture). [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005974)]",
-    name="posterior cerebellomedullary cistern",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0005974#posterior-cerebellomedullary-cistern"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005974"),
-    synonyms=["cisterna cerebellomedullaris posterior", "cisterna magna"],
 )
 
 NervousSystemStructure.posterior_cingulate_cortex = NervousSystemStructure(
@@ -20878,16 +20654,6 @@ NervousSystemStructure.posterior_pretectal_nucleus = NervousSystemStructure(
     name="posterior pretectal nucleus",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0006848#posterior-pretectal-nucleus"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006848"),
-)
-
-NervousSystemStructure.posterior_recess = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/posteriorRecess",
-    definition="Is an anatomical entity. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005338) ('is_a' and 'relationship')]",
-    description="Posterior protrusion of the third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005338)]",
-    name="posterior recess",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:2005338#posterior-recess"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005338"),
-    synonyms=["posterior recess of diencephalic ventricle"],
 )
 
 NervousSystemStructure.posterior_segment_of_paracentral_lobule = NervousSystemStructure(
@@ -22188,23 +21954,6 @@ NervousSystemStructure.quadrangular_lobule = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0036063"),
 )
 
-NervousSystemStructure.quadrigeminal_cistern = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/quadrigeminalCistern",
-    definition="Is a subarachnoid cistern. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004052)]",
-    description="The enclosed space extending forward between the corpus callosum and the thalamus that contains the internal cerebral veins. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004052)]",
-    name="quadrigeminal cistern",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004052#quadrigeminal-cistern"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004052"),
-    synonyms=[
-        "ambient cistern",
-        "cistern of great cerebral vein",
-        "cisterna ambiens",
-        "cisterna quadrigeminalis",
-        "cisterna venae magnae cerebri",
-        "superior cistern",
-    ],
-)
-
 NervousSystemStructure.radial_nerve = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/radialNerve",
     definition="Is an arm nerve. Is part of the brachial nerve plexus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001492) ('is_a' and 'relationship')]",
@@ -22499,16 +22248,6 @@ NervousSystemStructure.reissners_fiber = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0011357#reissner-s-fiber"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0011357"),
     synonyms=["Reissner's fibre"],
-)
-
-NervousSystemStructure.remnant_of_lumen_of_rathkes_pouch = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/remnantOfLumenOfRathkesPouch",
-    definition="Is an anatomical entity. Is part of the adenohypophysis. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009975) ('is_a' and 'relationship')]",
-    name="remnant of lumen of Rathke's pouch",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0009975#remnant-of-lumen-of-rathke-s-pouch"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009975"),
 )
 
 NervousSystemStructure.remnant_of_rathkes_pouch = NervousSystemStructure(
@@ -23821,18 +23560,6 @@ NervousSystemStructure.saccus_vasculosus = NervousSystemStructure(
     name="saccus vasculosus",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0034943#saccus-vasculosus"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034943"),
-)
-
-NervousSystemStructure.sacral_division_of_spinal_cord_central_canal = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/sacralDivisionOfSpinalCordCentralCanal",
-    definition="Is a subdivision of spinal cord central canal. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014547)]",
-    description="Part of spinal cord central canal contained in the sacral spinal cord. It is continuous rostrally with the spinal cord central canal of the lumbar cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014547)]",
-    name="sacral division of spinal cord central canal",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0014547#sacral-division-of-spinal-cord-central-canal"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014547"),
-    synonyms=["sacral spinal cord central canal"],
 )
 
 NervousSystemStructure.sacral_dorsal_root_ganglion = NervousSystemStructure(
@@ -25555,15 +25282,6 @@ NervousSystemStructure.sub_lobar_region = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0023255"),
 )
 
-NervousSystemStructure.subarachnoid_cistern = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/subarachnoidCistern",
-    definition="Is a subarachnoid space. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004050)]",
-    description="The widening portions of the subarachnoid space within the cranium where the arachnoid bridges over a depression on the surface of the brain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004050)]",
-    name="subarachnoid cistern",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004050#subarachnoid-cistern"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004050"),
-)
-
 NervousSystemStructure.subarachnoid_fissure = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/subarachnoidFissure",
     definition="Is an anatomical entity. Is part of the subarachnoid space. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014466) ('is_a' and 'relationship')]",
@@ -25571,16 +25289,6 @@ NervousSystemStructure.subarachnoid_fissure = NervousSystemStructure(
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0735254"],
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0014466#subarachnoid-fissure"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014466"),
-)
-
-NervousSystemStructure.subarachnoid_space = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/subarachnoidSpace",
-    definition="Is an anatomical entity. Is part of the brain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000315) ('is_a' and 'relationship')]",
-    description="The space between the arachnoid and pia mater. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000315)]",
-    name="subarachnoid space",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0736673"],
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0000315#subarachnoid-space"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000315"),
 )
 
 NervousSystemStructure.subarachnoid_sulcus = NervousSystemStructure(
@@ -25667,18 +25375,6 @@ NervousSystemStructure.subdivision_of_diagonal_band = NervousSystemStructure(
     synonyms=["diagonal band subdivision", "regional part of diagonal band"],
 )
 
-NervousSystemStructure.subdivision_of_spinal_cord_central_canal = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/subdivisionOfSpinalCordCentralCanal",
-    definition="Is part of the central canal of spinal cord. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014538)]",
-    description="A subdivision of the central canal of the spinal cord along its anterior-posterior axis. This is typically subdivided into cervical, thoracic, lumbar and sacral segments. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014538)]",
-    name="subdivision of spinal cord central canal",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0014538#regional-part-of-spinal-cord-central-canal"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014538"),
-    synonyms=["regional part of spinal cord central canal"],
-)
-
 NervousSystemStructure.subdivision_of_spinal_cord_dorsal_column = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/subdivisionOfSpinalCordDorsalColumn",
     definition="Is a spinal cord column. Is part of the spinal cord dorsal column. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006079) ('is_a' and 'relationship')]",
@@ -25707,15 +25403,6 @@ NervousSystemStructure.subdivision_of_spinal_cord_ventral_column = NervousSystem
         "https://knowledge-space.org/wiki/UBERON:0016551#subdivision-of-spinal-cord-ventral-column"
     ),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0016551"),
-)
-
-NervousSystemStructure.subdural_space = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/subduralSpace",
-    definition="Is an anatomical entity. Is part of the meningeal cluster. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000416) ('is_a' and 'relationship')]",
-    description="A narrow fluid-containing space, often only a potential space, between the dura mater and the arachnoid. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000416)]",
-    name="subdural space",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0000416#subdural-space"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000416"),
 )
 
 NervousSystemStructure.subfascicular_nucleus = NervousSystemStructure(
@@ -26880,15 +26567,6 @@ NervousSystemStructure.sural_nerve = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0015488"),
 )
 
-NervousSystemStructure.sylvian_cistern = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/SylvianCistern",
-    definition="Is a subarachnoid cistern. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011155)]",
-    description="The subarachnoid space associated with the lateral cerebral sulcus (Sylvian fissure); contains the M1 segment of the middle cerebral artery and the origin of lenticulostriate arteries, and proximal parts of the middle cerebral artery. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011155)]",
-    name="Sylvian cistern",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0011155#sylvian-cistern"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0011155"),
-)
-
 NervousSystemStructure.sympathetic_afferent_fiber = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/sympatheticAfferentFiber",
     definition="Is a nerve fiber. Is part of the sympathetic nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003965) ('is_a' and 'relationship')]",
@@ -27662,18 +27340,6 @@ NervousSystemStructure.thoracic_cavity_nerve = NervousSystemStructure(
         "nerve of thoracic cavity",
         "pectoral cavity nerve",
     ],
-)
-
-NervousSystemStructure.thoracic_division_of_spinal_cord_central_canal = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/thoracicDivisionOfSpinalCordCentralCanal",
-    definition="Is a subdivision of spinal cord central canal. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014541)]",
-    description="Part of spinal cord central canal contained in the thoracic spinal cord. It is continuous rostrally with the cervical spinal cord central canal and caudally with the lumbar spinal cord central canal. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014541)]",
-    name="thoracic division of spinal cord central canal",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0014541#thoracic-spinal-cord-central-canal"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014541"),
-    synonyms=["thoracic spinal cord central canal"],
 )
 
 NervousSystemStructure.thoracic_dorsal_root_ganglion = NervousSystemStructure(
