@@ -315,8 +315,6 @@ class IRI:
             iri = value.value
         else:
             iri = value
-        if not rfc3987.match(iri, rule="IRI"):
-            raise ValueError("Invalid IRI")
         self.value: str = iri
 
     def __eq__(self, other):
@@ -337,4 +335,9 @@ class IRI:
         failures = defaultdict(list)
         if self.value.startswith("file") and "value" not in ignore:
             failures["value"].append("IRI points to a local file path")
+        if not rfc3987.match(self.value, rule="IRI"):
+            if rfc3987.match(self.value.replace(" ", "%20"), rule="IRI"):
+                failures["value"].append("Invalid IRI - replace spaces with '%20'")
+            else:
+                failures["value"].append("Invalid IRI")
         return failures
