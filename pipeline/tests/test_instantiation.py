@@ -74,11 +74,17 @@ def test_IRI():
             assert not failures
         else:
             assert failures["value"][0] == "IRI points to a local file path"
-    invalid_iris = ["/path/to/my/file.txt"]
-    for value in invalid_iris:
-        with pytest.raises(ValueError) as exc_info:
-            iri = IRI(value)
-        assert exc_info.value.args[0] == "Invalid IRI"
+    invalid_iris = [
+        ("/path/to/my/file.txt", "Invalid IRI"),
+        ("https://example.com/path with spaces/to/my/file.txt", "Invalid IRI - replace spaces with '%20'"),
+        ("https://data-proxy.ebrains.eu/api/v1/buckets/report%.pdf", "Invalid IRI")  # lone '%' not allowed
+    ]
+    for value, expected_message in invalid_iris:
+        iri = IRI(value)
+        assert iri.value == value
+        failures = iri._validate()
+        assert len(failures["value"]) == 1
+        assert failures["value"][0] == expected_message
 
 
 def test_link():
