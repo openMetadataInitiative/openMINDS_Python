@@ -714,17 +714,17 @@ def test_pr0100_by_name_case_sensitive(om):
 
 
 @pytest.mark.parametrize("om", [openminds.latest])
-def test_pr0100_by_name_match_contained(om):
+def test_pr0100_by_name_match_within(om):
     # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
-    # match="contained" is the reverse of match="contains": it looks for
+    # match="within" is the reverse of match="contains": it looks for
     # instances whose name-like properties are substrings of the given
     # (typically longer/composite) search string, rather than the other way around.
     Species = om.controlled_terms.Species
 
-    result = Species.by_name("Mus musculus - House mouse", match="contained")
+    result = Species.by_name("Mus musculus - House mouse", match="within")
     assert result.name == "Mus musculus"
 
     # Several macaque species' full names contain "Macaca" as a substring, 
     # but none of those full names is itself a substring of "Macaca".
     assert Species.by_name("Macaca", match="contains", all=True) is not None
-    assert Species.by_name("Macaca", match="contained", all=True) is None
+    assert Species.by_name("Macaca", match="within", all=True) is None
