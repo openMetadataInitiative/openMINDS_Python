@@ -50,7 +50,7 @@ def customize_description(property, obj_title):
     elif "UBERON" in obj_title:
         obj_title_readable = obj_title
     else:
-        obj_title_readable = re.sub("([A-Z])", " \g<0>", obj_title).strip().lower()
+        obj_title_readable = re.sub("([A-Z])", r" \g<0>", obj_title).strip().lower()
     doc = property.get("description", "no description available")
     doc = doc.replace("someone or something", f"the {obj_title_readable}")
     doc = doc.replace("something or somebody", f"the {obj_title_readable}")
