@@ -731,8 +731,8 @@ def test_pr0100_by_name_match_within(om):
 
 
 @pytest.mark.parametrize("om", [openminds.latest])
-def test_prXXXX_by_name_ignore_accents(om):
-    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/XXXX
+def test_pr0103_by_name_ignore_accents(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/103
     # by_name(..., ignore_accents=True) strips accents/diacritics (Unicode NFD) before matching
     SovereignState = om.controlled_terms.SovereignState
 
