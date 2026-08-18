@@ -113,6 +113,7 @@ class Technique(LinkedMetadata):
         name: str,
         match: str = "equals",
         all: bool = False,
+        case_sensitive: bool = True,
     ):
         """
         Search for instances in the openMINDS instance library based on their name.
@@ -123,8 +124,11 @@ class Technique(LinkedMetadata):
 
         Args:
             name (str): a string to search for.
-            match (str, optional): either "equals" (exact match - default) or "contains".
+            match (str, optional): either "equals" (exact match - default), "contains"
+                (the name-like property contains the given string), or "within"
+                (the given string contains the name-like property).
             all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
+            case_sensitive (bool, optional): Whether the search should be case-sensitive. Defaults to True.
         """
         namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
         if cls._instance_lookup is None:
@@ -132,8 +136,9 @@ class Technique(LinkedMetadata):
             for instance in cls.instances():
                 keys = []
                 for prop_name in namelike_properties:
-                    if hasattr(instance, prop_name):
-                        keys.append(getattr(instance, prop_name))
+                    value = getattr(instance, prop_name, None)
+                    if value is not None:
+                        keys.append(value)
                 if hasattr(instance, "synonyms"):
                     for synonym in instance.synonyms or []:
                         keys.append(synonym)
@@ -142,19 +147,34 @@ class Technique(LinkedMetadata):
                         cls._instance_lookup[key].append(instance)
                     else:
                         cls._instance_lookup[key] = [instance]
+
+        def normalize(s):
+            return s if case_sensitive else s.casefold()
+
         if match == "equals":
-            matches = cls._instance_lookup.get(name, [])
+            if case_sensitive:
+                matches = cls._instance_lookup.get(name, [])
+            else:
+                matches = []
+                for key, instances in cls._instance_lookup.items():
+                    if key.casefold() == name.casefold():
+                        matches.extend(instances)
         elif match == "contains":
             matches = []
             for key, instances in cls._instance_lookup.items():
-                if name in key:
+                if normalize(name) in normalize(key):
+                    matches.extend(instances)
+        elif match == "within":
+            matches = []
+            for key, instances in cls._instance_lookup.items():
+                if normalize(key) in normalize(name):
                     matches.extend(instances)
         else:
-            raise ValueError("'match' must be either 'equals' or 'contains'")
+            raise ValueError("'match' must be either 'equals', 'contains', or 'within'")
         if not matches:
             return None
         elif all:
-            return matches
+            return list(dict.fromkeys(matches))
         else:
             return matches[0]
 
