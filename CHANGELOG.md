@@ -96,3 +96,20 @@ For more detail see #29.
 ## Release 0.5.1 (2026-04-02)
 
 - Changed `embed_linked_nodes` from boolean to LinkedNodeEmbedding enum [#92](https://github.com/openMetadataInitiative/openMINDS_Python/pull/92). This adds an option "if necessary", which embeds linked nodes inline when they lack an @id, and otherwise uses a reference — useful for mixed scenarios where some nodes don't yet have identifiers. This is backwards compatible: True is accepted in place of "always" and False in place of "never.
+
+
+## Release 0.6.0 (2026-08-18)
+
+Note that this release contains two changes in behaviour which, although they are bug fixes, may require changes in downstream code. See "Changes in behaviour" below.
+
+- New options for the `by_name()` method [#100](https://github.com/openMetadataInitiative/openMINDS_Python/pull/100):
+    - `case_sensitive` (default `True`); set it to `False` to ignore case when matching.
+    - a third `match` mode, `"within"`, which finds instances whose name-like property is contained in the string you provide (the mirror image of `"contains"`).
+- Bug fixes in `by_name()` [#100](https://github.com/openMetadataInitiative/openMINDS_Python/pull/100):
+    - a crash when an instance did not have one of the name-like properties set.
+    - `by_name(..., all=True)` could return the same instance more than once, where it matched through several keys (e.g. a name that is also listed as one of its own synonyms).
+
+### Changes in behaviour
+
+- Cross-references between instance library instances are now resolved to typed openMINDS objects instead of being left as raw dicts [#95](https://github.com/openMetadataInitiative/openMINDS_Python/pull/95), fixing [#94](https://github.com/openMetadataInitiative/openMINDS_Python/issues/94). For example, `Accessibility.direct_virtual_open_access.payment_models[0]` is now a `PaymentModelType` object, where previously it was a dict. Code that treated such values as dicts will need updating. As part of this fix, `Node._resolve_links()` now keeps an unresolvable `Link` in a list-valued property rather than raising `KeyError`.
+- IRI validation has moved from the `IRI` constructor to the `validate()` method [#101](https://github.com/openMetadataInitiative/openMINDS_Python/pull/101), fixing [#93](https://github.com/openMetadataInitiative/openMINDS_Python/issues/93). Creating an `IRI` with an invalid value no longer raises `ValueError`; the problem is instead reported as a validation failure, with a specific hint to replace spaces with "%20" where that would make the IRI valid.
