@@ -47,6 +47,8 @@
                         cls._instance_lookup[key] = [instance]
 
         def remove_accents(s):
+            import unicodedata
+
             nfd_form = unicodedata.normalize("NFD", s)
             return "".join(c for c in nfd_form if not unicodedata.combining(c))
 
