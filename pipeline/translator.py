@@ -248,6 +248,8 @@ class PythonBuilder(object):
             "Real": "from numbers import Real",
         }
         extra_imports = set()
+        if has_instances:
+            extra_imports.add("import unicodedata")
         for property in self.context["properties"]:
             if isinstance(property["type"], list):
                 for t in property["type"]:
@@ -259,7 +261,9 @@ class PythonBuilder(object):
                 if imp:
                     extra_imports.add(imp)
         if extra_imports:
-            self.context["preamble"] = "\n".join(sorted(extra_imports))
+            stdlib_imports = sorted(i for i in extra_imports if not i.startswith("from openminds"))
+            openminds_imports = sorted(i for i in extra_imports if i.startswith("from openminds"))
+            self.context["preamble"] = "\n".join(stdlib_imports + openminds_imports)
 
     def build(self, embedded=None, class_to_module_map=None, class_full_modules=None):
         target_file_path = os.path.join("target", "openminds", f"{self._target_file_without_extension()}.py")

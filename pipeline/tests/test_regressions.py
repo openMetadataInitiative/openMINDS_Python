@@ -728,3 +728,24 @@ def test_pr0100_by_name_match_within(om):
     # but none of those full names is itself a substring of "Macaca".
     assert Species.by_name("Macaca", match="contains", all=True) is not None
     assert Species.by_name("Macaca", match="within", all=True) is None
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_prXXXX_by_name_ignore_accents(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/XXXX
+    # by_name(..., ignore_accents=True) strips accents/diacritics (Unicode NFD) before matching
+    SovereignState = om.controlled_terms.SovereignState
+
+    # (query, case_sensitive, ignore_accents, should match France)
+    cases = [
+        ("République française", True, False, True),    # exact
+        ("Republique francaise", True, True, True),     # accents differ 
+        ("république française", False, False, True),   # case differs 
+        ("republique francaise", False, True, True),    # case and accents differ 
+        ("republique francaise", True, False, False),   # defaults: neither absorbed
+        ("Republique francaise", True, False, False),   # accents still matter
+        ("république française", True, True, False),     # case still matters
+    ]
+    for query, case_sensitive, ignore_accents, should_match in cases:
+        match = SovereignState.by_name(query, case_sensitive=case_sensitive, ignore_accents=ignore_accents)
+        assert (match is not None and match.name == "France") == should_match
