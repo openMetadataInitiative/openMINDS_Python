@@ -638,3 +638,93 @@ def test_issue0094_resolve_links_tolerates_missing_id(om):
     assert parents[0] is present  # resolvable link replaced by the typed object
     assert isinstance(parents[1], Link)  # unresolvable link kept, no KeyError
     assert parents[1].identifier == "http://example.org/pe/missing"
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_pr0100_by_name_deduplicates_matches(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
+    # by_name(..., all=True) must not return the same instance more than once
+    # Two cases:
+    # (a) an instance whose name-like properties (which include "synonyms") share
+    #     the same value gets indexed twice under that value's key while the lookup
+    #     is built (e.g. MolecularEntity "propofol" lists "propofol" itself as one
+    #     of its own synonyms).
+    # (b) match="contains" can find the same instance through several distinct,
+    #     overlapping keys (e.g. SovereignState "France" has synonyms "FR" and
+    #     "FRA", both of which contain the substring "FR").
+
+    MolecularEntity = om.controlled_terms.MolecularEntity
+    propofol_matches = MolecularEntity.by_name("propofol", all=True)
+    assert len(propofol_matches) == 1
+
+    SovereignState = om.controlled_terms.SovereignState
+    fr_matches = SovereignState.by_name("FR", match="contains", all=True)
+    assert len(set(m.id for m in fr_matches)) == len(fr_matches)  # no instance repeated
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_pr0100_by_name_tolerates_unset_namelike_properties(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
+    # ParcellationEntity has real instances that leave "abbreviation" unset.
+    # Before the fix, an unset property was still indexed, leaving None as
+    # a lookup key, which crashed match="contains" (`name in None`).
+    ParcellationEntity = om.sands.ParcellationEntity
+
+    ParcellationEntity.by_name("brain", match="contains", all=True)  # would previously raise TypeError
+    assert None not in ParcellationEntity._instance_lookup
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_pr0100_by_name_case_sensitive(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
+    # by_name(..., case_sensitive=False) must match regardless of case, while
+    # the default (case_sensitive=True) stays exact, as in test_issue0069.
+    License = om.core.License
+
+    # match="equals"
+    assert License.by_name("cc-by-4.0") is None
+    result = License.by_name("cc-by-4.0", case_sensitive=False)
+    assert result is License.by_name("CC-BY-4.0")
+
+    # match="contains"
+    assert License.by_name("creative commons", match="contains", all=True) is None
+    results = License.by_name("creative commons", match="contains", all=True, case_sensitive=False)
+    expected = License.by_name("Creative Commons", match="contains", all=True)
+    assert set(r.id for r in results) == set(r.id for r in expected)
+
+    # case-insensitive matching can also merge results from genuinely different
+    # instances, not just recover a single missed match: MolecularEntity
+    # "pentobarbital sodium" is its own instance's name, while "pentobarbital
+    # Sodium" (capital S) is a synonym of a different instance ("pentobarbital").
+    MolecularEntity = om.controlled_terms.MolecularEntity
+    exact_matches = MolecularEntity.by_name("pentobarbital sodium", all=True)
+    assert set(m.name for m in exact_matches) == {"pentobarbital sodium"}
+    merged_matches = MolecularEntity.by_name("pentobarbital sodium", all=True, case_sensitive=False)
+    assert set(m.name for m in merged_matches) == {"pentobarbital", "pentobarbital sodium"}
+
+    # case-insensitive matching uses casefold(), not lower(), so it also unifies
+    # Unicode variants such as the micro sign "µ" (U+00B5) and the Greek letter
+    # "μ" (U+03BC) - e.g. UnitOfMeasurement "microampere" has synonym "µA" (micro
+    # sign), which a search for the Greek-mu spelling should still find.
+    UnitOfMeasurement = om.controlled_terms.UnitOfMeasurement
+    greek_mu_a = "μA"  # Greek mu, not the micro sign used in the real data
+    assert UnitOfMeasurement.by_name(greek_mu_a) is None
+    match = UnitOfMeasurement.by_name(greek_mu_a, case_sensitive=False)
+    assert match.name == "microampere"
+
+
+@pytest.mark.parametrize("om", [openminds.latest])
+def test_pr0100_by_name_match_within(om):
+    # https://github.com/openMetadataInitiative/openMINDS_Python/pull/100
+    # match="within" is the reverse of match="contains": it looks for
+    # instances whose name-like properties are substrings of the given
+    # (typically longer/composite) search string, rather than the other way around.
+    Species = om.controlled_terms.Species
+
+    result = Species.by_name("Mus musculus - House mouse", match="within")
+    assert result.name == "Mus musculus"
+
+    # Several macaque species' full names contain "Macaca" as a substring, 
+    # but none of those full names is itself a substring of "Macaca".
+    assert Species.by_name("Macaca", match="contains", all=True) is not None
+    assert Species.by_name("Macaca", match="within", all=True) is None
