@@ -26,7 +26,9 @@
             all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
             case_sensitive (bool, optional): Whether the search should be case-sensitive. Defaults to True.
             ignore_accents (bool, optional): Whether to ignore accents (acute, grave, circumflex) and
-                other diacritical marks (cedilla, tilde, ring, etc.) when matching. Defaults to False.
+                other diacritical marks (cedilla, tilde, ring, etc.) when matching. Also treat
+                special letters (ß, œ, æ, ø, ł, etc.) as their closest plain-letter equivalents
+                (e.g. "ß" as "ss"). Defaults to False.
         """
         namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
         if cls._instance_lookup is None:
@@ -49,8 +51,21 @@
         def remove_accents(s):
             import unicodedata
 
+            special = str.maketrans({
+                "Ł": "L", "ł": "l",
+                "Ø": "O", "ø": "o",
+                "Đ": "D", "đ": "d",
+                "Ð": "D", "ð": "d",
+                "Þ": "Th", "þ": "th",
+                "Æ": "AE", "æ": "ae",
+                "Œ": "OE", "œ": "oe",
+                "ß": "ss", "ẞ": "SS",
+                "Ə": "E", "ə": "e",
+                "ı": "i",
+            })
             nfd_form = unicodedata.normalize("NFD", s)
-            return "".join(c for c in nfd_form if not unicodedata.combining(c))
+            stripped = "".join(c for c in nfd_form if not unicodedata.combining(c))
+            return stripped.translate(special)
 
         def normalize(s):
             if not case_sensitive:

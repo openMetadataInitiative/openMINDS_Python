@@ -749,3 +749,17 @@ def test_pr0103_by_name_ignore_accents(om):
     for query, case_sensitive, ignore_accents, should_match in cases:
         match = SovereignState.by_name(query, case_sensitive=case_sensitive, ignore_accents=ignore_accents)
         assert (match is not None and match.name == "France") == should_match
+
+    # ignore_accents also has to map special letters
+    special_letter_cases = [
+        # (query, ignore_accents, expected_country_or_None)
+        ("Azərbaycan Respublikası", False, "Azerbaijan"),     # exact
+        ("Azerbaycan Respublikasi", True, "Azerbaijan"),
+        ("Azerbaycan Respublikasi", False, None),
+        ("Wááshindoon Bikéyah Ałhidadiidzooígíí", False, "United States"),  # exact
+        ("Waashindoon Bikeyah Alhidadiidzooigii", True, "United States"),
+        ("Waashindoon Bikeyah Alhidadiidzooigii", False, None),
+    ]
+    for query, ignore_accents, expected_name in special_letter_cases:
+        match = SovereignState.by_name(query, ignore_accents=ignore_accents)
+        assert (match.name if match else None) == expected_name
