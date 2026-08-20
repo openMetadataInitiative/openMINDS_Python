@@ -64,6 +64,12 @@
       "@id": "https://orcid.org/0000-0003-4509-6969",
       "givenName": "Reema",
       "familyName": "Gupta"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0002-2247-2418",
+      "givenName": "Genevi\u00e8ve",
+      "familyName": "Fleury"
     }
   ],
   "version": "0.5.1",
