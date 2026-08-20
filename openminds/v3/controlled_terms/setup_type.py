@@ -114,6 +114,7 @@ class SetupType(LinkedMetadata):
         match: str = "equals",
         all: bool = False,
         case_sensitive: bool = True,
+        ignore_accents: bool = False,
     ):
         """
         Search for instances in the openMINDS instance library based on their name.
@@ -129,6 +130,10 @@ class SetupType(LinkedMetadata):
                 (the given string contains the name-like property).
             all (bool, optional): Whether to return all objects that match the name, or only the first. Defaults to False.
             case_sensitive (bool, optional): Whether the search should be case-sensitive. Defaults to True.
+            ignore_accents (bool, optional): Whether to ignore accents (acute, grave, circumflex) and
+                other diacritical marks (cedilla, tilde, ring, etc.) when matching. Also treat
+                special letters (ß, œ, æ, ø, ł, etc.) as their closest plain-letter equivalents
+                (e.g. "ß" as "ss"). Defaults to False.
         """
         namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
         if cls._instance_lookup is None:
@@ -148,16 +153,50 @@ class SetupType(LinkedMetadata):
                     else:
                         cls._instance_lookup[key] = [instance]
 
+        def remove_accents(s):
+            import unicodedata
+
+            special = str.maketrans(
+                {
+                    "Ł": "L",
+                    "ł": "l",
+                    "Ø": "O",
+                    "ø": "o",
+                    "Đ": "D",
+                    "đ": "d",
+                    "Ð": "D",
+                    "ð": "d",
+                    "Þ": "Th",
+                    "þ": "th",
+                    "Æ": "AE",
+                    "æ": "ae",
+                    "Œ": "OE",
+                    "œ": "oe",
+                    "ß": "ss",
+                    "ẞ": "SS",
+                    "Ə": "E",
+                    "ə": "e",
+                    "ı": "i",
+                }
+            )
+            nfd_form = unicodedata.normalize("NFD", s)
+            stripped = "".join(c for c in nfd_form if not unicodedata.combining(c))
+            return stripped.translate(special)
+
         def normalize(s):
-            return s if case_sensitive else s.casefold()
+            if not case_sensitive:
+                s = s.casefold()
+            if ignore_accents:
+                s = remove_accents(s)
+            return s
 
         if match == "equals":
-            if case_sensitive:
+            if case_sensitive and not ignore_accents:
                 matches = cls._instance_lookup.get(name, [])
             else:
                 matches = []
                 for key, instances in cls._instance_lookup.items():
-                    if key.casefold() == name.casefold():
+                    if normalize(key) == normalize(name):
                         matches.extend(instances)
         elif match == "contains":
             matches = []
