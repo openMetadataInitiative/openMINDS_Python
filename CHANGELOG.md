@@ -98,13 +98,14 @@ For more detail see #29.
 - Changed `embed_linked_nodes` from boolean to LinkedNodeEmbedding enum [#92](https://github.com/openMetadataInitiative/openMINDS_Python/pull/92). This adds an option "if necessary", which embeds linked nodes inline when they lack an @id, and otherwise uses a reference — useful for mixed scenarios where some nodes don't yet have identifiers. This is backwards compatible: True is accepted in place of "always" and False in place of "never.
 
 
-## Release 0.6.0 (2026-08-18)
+## Release 0.6.0 (2026-08-20)
 
 Note that this release contains two changes in behaviour which, although they are bug fixes, may require changes in downstream code. See "Changes in behaviour" below.
 
-- New options for the `by_name()` method [#100](https://github.com/openMetadataInitiative/openMINDS_Python/pull/100):
+- New options for the `by_name()` method [#100](https://github.com/openMetadataInitiative/openMINDS_Python/pull/100), [#103](https://github.com/openMetadataInitiative/openMINDS_Python/pull/103):
     - `case_sensitive` (default `True`); set it to `False` to ignore case when matching.
     - a third `match` mode, `"within"`, which finds instances whose name-like property is contained in the string you provide (the mirror image of `"contains"`).
+    - `ignore_accents` (default `False`); set it to `True` to ignore accents and other diacritical marks when matching, and to treat special letters such as ß, æ, ø and ł as their closest plain-letter equivalents. For example, `SovereignState.by_name("Republique francaise", ignore_accents=True)` finds "France". Combine it with `case_sensitive=False` to ignore differences in case as well.
 - Bug fixes in `by_name()` [#100](https://github.com/openMetadataInitiative/openMINDS_Python/pull/100):
     - a crash when an instance did not have one of the name-like properties set.
     - `by_name(..., all=True)` could return the same instance more than once, where it matched through several keys (e.g. a name that is also listed as one of its own synonyms).
