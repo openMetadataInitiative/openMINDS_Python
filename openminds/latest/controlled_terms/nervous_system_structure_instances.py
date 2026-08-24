@@ -2212,37 +2212,6 @@ NervousSystemStructure.bed_nucleus_of_the_accessory_olfactory_tract = NervousSys
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0035977"),
 )
 
-NervousSystemStructure.blood_brain_barrier = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/bloodBrainBarrier",
-    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000120) ('is_a' and 'relationship')]",
-    description="Cell layer consisting of lining cells that separates the central nervous system and the bloodstream. The BBB may consist of endothelial cells or glial cells. An endothelial barrier may have arisen independently several times during evolution. In bichir and lungfish the barrier is formed by brain endothelial cells, while in sturgeon it is formed by a complex perivascular glial sheath, but with no detectable tight junctions. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000120)]",
-    name="blood brain barrier",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0000120#blood-brain-barrier"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000120"),
-    synonyms=["blood-brain barrier"],
-)
-
-NervousSystemStructure.blood_cerebrospinal_fluid_barrier = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/bloodCerebrospinalFluidBarrier",
-    definition="Is part of the choroid plexus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003210)]",
-    description="Barrier in the choroid plexus located in the lateral, third, and fourth brain ventricles that controls the entrance of substances into the cerebrospinal fluid from the blood. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003210)]",
-    name="blood-cerebrospinal fluid barrier",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0729920"],
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0003210#blood-cerebrospinal-fluid-barrier"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003210"),
-    synonyms=["blood-CSF barrier"],
-)
-
-NervousSystemStructure.blood_nerve_barrier = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/bloodNerveBarrier",
-    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003209) ('is_a' and 'relationship')]",
-    description="Barrier between the perineurium of peripheral nerves and the vascular endothelium of endoneurial capillaries. The perineurium acts as a diffusion barrier, but ion permeability at the blood-nerve barrier is still higher than at the blood-brain barrier. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003209)]",
-    name="blood nerve barrier",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0003209#blood-nerve-barrier"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003209"),
-    synonyms=["blood-nerve barrier"],
-)
-
 NervousSystemStructure.body_of_caudate_nucleus = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/bodyOfCaudateNucleus",
     definition="Is a gray matter of telencephalon. Is part of the caudate nucleus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002630) ('is_a' and 'relationship')]",
@@ -2386,17 +2355,6 @@ NervousSystemStructure.brain_dura_mater = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002092#brain-dura-mater"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002092"),
     synonyms=["cranial dura mater", "dura mater cranialis", "dura mater encephali", "dura mater of brain"],
-)
-
-NervousSystemStructure.brain_ependyma = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/brainEpendyma",
-    definition="Is an ependyma. Is part of the brain ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005357) ('is_a' and 'relationship')]",
-    description="The ependymal cell layer that lines the brain ventricles. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005357)]",
-    name="brain ependyma",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0730349"],
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005357#brain-ependyma"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005357"),
-    synonyms=["ependyma of ventricular system of brain"],
 )
 
 NervousSystemStructure.brain_gray_matter = NervousSystemStructure(
@@ -4773,22 +4731,6 @@ NervousSystemStructure.chorda_tympani_branch_of_facial_nerve = NervousSystemStru
     ],
 )
 
-NervousSystemStructure.choroid_plexus_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/choroidPlexusEpithelium",
-    definition="Is part of the choroid plexus. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003911)]",
-    description="The epithelial component of the choroid plexus. Consists of cuboidal epithelial cells surrounding a core of capillaries and loose connective tissue. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003911)]",
-    name="choroid plexus epithelium",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0726675"],
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0003911#choroid-plexus-epithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003911"),
-    synonyms=[
-        "choroid plexus epithelial tissue",
-        "epithelial tissue of chorioid plexus of cerebral hemisphere",
-        "epithelial tissue of choroid plexus",
-        "epithelium of choroid plexus",
-    ],
-)
-
 NervousSystemStructure.ciliary_marginal_zone = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/ciliaryMarginalZone",
     definition="Is part of the retina. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003065)]",
@@ -5702,16 +5644,6 @@ NervousSystemStructure.cranial_sensory_ganglion = NervousSystemStructure(
     ],
 )
 
-NervousSystemStructure.crista_ampullaris_neuroepithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/cristaAmpullarisNeuroepithelium",
-    definition="Is a vestibular epithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006935)]",
-    description="An epithelium that is part of a crista ampullaris. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006935)]",
-    name="crista ampullaris neuroepithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0006935#crista-ampullaris-neuroepithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006935"),
-    synonyms=["epithelium of crista of ampulla of semicircular duct of membranous labyrinth"],
-)
-
 NervousSystemStructure.crossed_tecto_bulbar_tract = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/crossedTectoBulbarTract",
     definition="Is a tectobulbar tract. Is part of the brainstem and spinal white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2000335) ('is_a' and 'relationship')]",
@@ -5727,15 +5659,6 @@ NervousSystemStructure.cruciate_sulcus = NervousSystemStructure(
     name="cruciate sulcus",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0013590#cruciate-sulcus"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013590"),
-)
-
-NervousSystemStructure.crus_commune_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/crusCommuneEpithelium",
-    definition="Is a vestibular epithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005657)]",
-    description="An epithelium that is part of a crus commune. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005657)]",
-    name="crus commune epithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005657#crus-commune-epithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005657"),
 )
 
 NervousSystemStructure.cuneate_fasciculus = NervousSystemStructure(
@@ -6116,16 +6039,6 @@ NervousSystemStructure.descending_octaval_nucleus = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000645"),
 )
 
-NervousSystemStructure.developing_neuroepithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/developingNeuroepithelium",
-    definition="Is an anatomical entity. Is part of the nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034705) ('is_a' and 'relationship')]",
-    description="An embryonic or larval epithelium that is committed to form part of the nervous system. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034705)]",
-    name="developing neuroepithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0034705#developing-neuroepithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034705"),
-    synonyms=["embryonic neuroepithelium", "neuroepithelium"],
-)
-
 NervousSystemStructure.diagonal_band_of_broca = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/diagonalBandOfBroca",
     definition="Is a neuron projection bundle and central nervous system cell part cluster. Is part of the cerebral hemisphere white matter. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002741) ('is_a' and 'relationship')]",
@@ -6300,15 +6213,6 @@ NervousSystemStructure.diencephalon_pia_mater = NervousSystemStructure(
         "pia mater of neuraxis of interbrain",
         "pia mater of neuraxis of mature diencephalon",
     ],
-)
-
-NervousSystemStructure.differentiating_neuroepithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/differentiatingNeuroepithelium",
-    definition="Is a developing neuroepithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034707)]",
-    description="A neuroepithelium some of whose cells are undergoing terminal differentiation to become neuronal cells. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034707)]",
-    name="differentiating neuroepithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0034707#differentiating-neuroepithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034707"),
 )
 
 NervousSystemStructure.diffuse_nuclei = NervousSystemStructure(
@@ -7706,15 +7610,6 @@ NervousSystemStructure.endopiriform_nucleus = NervousSystemStructure(
     synonyms=["layer 4 of piriform cortex", "layer IV of piriform cortex"],
 )
 
-NervousSystemStructure.endothelial_blood_brain_barrier = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/endothelialBloodBrainBarrier",
-    definition="Is a blood brain barrier. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000201)]",
-    description="A blood brain barrier that is composed of endothelial cells. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000201)]",
-    name="endothelial blood brain barrier",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0000201#endothelial-blood-brain-barrier"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000201"),
-)
-
 NervousSystemStructure.enteric_ganglion = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/entericGanglion",
     definition="Is a parasympathetic ganglion. Is part of the enteric nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001809) ('is_a' and 'relationship')]",
@@ -7831,16 +7726,6 @@ NervousSystemStructure.entorhinal_cortex_layer6 = NervousSystemStructure(
     synonyms=["entorhinal cortex layer VI"],
 )
 
-NervousSystemStructure.ependyma = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/ependyma",
-    definition="Is part of the ventricle of nervous system. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004670)]",
-    description="The thin epithelium-like membrane composed of ependymal cells that lines the ventricular system of the brain and the spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004670)]",
-    name="ependyma",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004670#ependyma"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004670"),
-    synonyms=["ependyma of neuraxis", "ependymal epithelium"],
-)
-
 NervousSystemStructure.epibranchial_ganglion = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/epibranchialGanglion",
     definition="Is a cranial ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009127)]",
@@ -7921,72 +7806,6 @@ NervousSystemStructure.epithalamus_ventricular_layer = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0013160#epithalamus-ventricular-layer"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013160"),
     synonyms=["ventricular layer epithalamus", "ventricular layer of epithalamus"],
-)
-
-NervousSystemStructure.epithelium_of_ductus_reuniens = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/epitheliumOfDuctusReuniens",
-    definition="Is a vestibular epithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003363)]",
-    description="An epithelium that is part of a ductus reuniens. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003363)]",
-    name="epithelium of ductus reuniens",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0003363#epithelium-of-ductus-reuniens"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003363"),
-    synonyms=[
-        "ductus reuniens epithelial tissue",
-        "ductus reuniens epithelium",
-        "epithelial tissue of ductus reuniens",
-    ],
-)
-
-NervousSystemStructure.epithelium_of_saccule = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/epitheliumOfSaccule",
-    definition="Is a vestibular epithelium. Is part of the saccule of membranous labyrinth. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003242) ('is_a' and 'relationship')]",
-    description="An epithelium that is part of a saccule of membranous labyrinth. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003242)]",
-    name="epithelium of saccule",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0003242#epithelium-of-saccule"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003242"),
-    synonyms=[
-        "epithelial tissue of membranous labyrinth saccule",
-        "epithelial tissue of saccule",
-        "epithelial tissue of saccule of membranous labyrinth",
-        "epithelial tissue of sacculus (labyrinthus vestibularis)",
-        "epithelium of membranous labyrinth saccule",
-        "epithelium of saccule of membranous labyrinth",
-        "epithelium of sacculus (labyrinthus vestibularis)",
-        "membranous labyrinth saccule epithelial tissue",
-        "membranous labyrinth saccule epithelium",
-        "saccule epithelial tissue",
-        "saccule epithelium",
-        "saccule of membranous labyrinth epithelial tissue",
-        "saccule of membranous labyrinth epithelium",
-        "sacculus (labyrinthus vestibularis) epithelial tissue",
-        "sacculus (labyrinthus vestibularis) epithelium",
-    ],
-)
-
-NervousSystemStructure.epithelium_of_utricle = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/epitheliumOfUtricle",
-    definition="Is a vestibular epithelium. Is part of the macula of utricle of membranous labyrinth. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003241) ('is_a' and 'relationship')]",
-    description="An epithelium that is part of a utricle of membranous labyrinth. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0003241)]",
-    name="epithelium of utricle",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0003241#epithelium-of-utricle"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003241"),
-    synonyms=[
-        "epithelial tissue of membranous labyrinth utricle",
-        "epithelial tissue of utricle",
-        "epithelial tissue of utricle of membranous labyrinth",
-        "epithelial tissue of utriculus (labyrinthus vestibularis)",
-        "epithelium of membranous labyrinth utricle",
-        "epithelium of utricle of membranous labyrinth",
-        "epithelium of utriculus (labyrinthus vestibularis)",
-        "membranous labyrinth utricle epithelial tissue",
-        "membranous labyrinth utricle epithelium",
-        "utricle epithelial tissue",
-        "utricle epithelium",
-        "utricle of membranous labyrinth epithelial tissue",
-        "utricle of membranous labyrinth epithelium",
-        "utriculus (labyrinthus vestibularis) epithelial tissue",
-        "utriculus (labyrinthus vestibularis) epithelium",
-    ],
 )
 
 NervousSystemStructure.esophageal_taste_bud = NervousSystemStructure(
@@ -8323,34 +8142,6 @@ NervousSystemStructure.fifth_thoracic_spinal_cord_segment = NervousSystemStructu
     ),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006453"),
     synonyms=["t5 segment", "T5 spinal cord segment"],
-)
-
-NervousSystemStructure.filum_terminale = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/filumTerminale",
-    definition="Is part of the spinal cord. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005443)]",
-    description="A strand of fibrous tissue in the spinal cord consisting of the filum terminale internum and the filum terminale externum. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005443)]",
-    name="filum terminale",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005443#filum-terminale"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005443"),
-    synonyms=["filum terminale segment of pia mater", "pars pialis fili terminalis", "terminal filum"],
-)
-
-NervousSystemStructure.filum_terminale_externum = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/filumTerminaleExternum",
-    definition="Is part of the filum terminale. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010270)]",
-    name="filum terminale externum",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0010270#filum-terminale-externum"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010270"),
-    synonyms=["external part of filum terminale"],
-)
-
-NervousSystemStructure.filum_terminale_internum = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/filumTerminaleInternum",
-    definition="Is part of the filum terminale. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010269)]",
-    name="filum terminale internum",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0010269#filum-terminale-internum"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010269"),
-    synonyms=["internal part of filum terminale"],
 )
 
 NervousSystemStructure.fin_taste_bud = NervousSystemStructure(
@@ -8825,46 +8616,6 @@ NervousSystemStructure.fourth_ventricle = NervousSystemStructure(
     synonyms=["ventricle IV"],
 )
 
-NervousSystemStructure.fourth_ventricle_choroid_plexus_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/fourthVentricleChoroidPlexusEpithelium",
-    definition="Is a choroid plexus epithelium. Is part of the choroid plexus of fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004276) ('is_a' and 'relationship')]",
-    description="A choroid plexus epithelium that is part of a fourth ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004276)]",
-    name="fourth ventricle choroid plexus epithelium",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0728876"],
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0004276#fourth-ventricle-choroid-plexus-epithelium"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004276"),
-    synonyms=[
-        "chorioid plexus of cerebral hemisphere epithelial tissue of fourth ventricle",
-        "chorioid plexus of cerebral hemisphere epithelium of fourth ventricle",
-        "choroid plexus epithelial tissue of fourth ventricle",
-        "choroid plexus epithelium of fourth ventricle",
-        "epithelial tissue of chorioid plexus of cerebral hemisphere of fourth ventricle",
-        "epithelial tissue of choroid plexus of fourth ventricle",
-        "epithelium of chorioid plexus of cerebral hemisphere of fourth ventricle",
-        "epithelium of choroid plexus of fourth ventricle",
-        "fourth ventricle chorioid plexus of cerebral hemisphere epithelial tissue",
-        "fourth ventricle chorioid plexus of cerebral hemisphere epithelium",
-        "fourth ventricle choroid plexus epithelial tissue",
-        "fourth ventricle epithelial tissue of chorioid plexus of cerebral hemisphere",
-        "fourth ventricle epithelial tissue of choroid plexus",
-        "fourth ventricle epithelium of chorioid plexus of cerebral hemisphere",
-        "fourth ventricle epithelium of choroid plexus",
-    ],
-)
-
-NervousSystemStructure.fourth_ventricle_ependyma = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/fourthVentricleEpendyma",
-    definition="Is a brain ependyma. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004644) ('is_a' and 'relationship')]",
-    description="An ependyma that is part of a fourth ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004644)]",
-    name="fourth ventricle ependyma",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0729148"],
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004644#fourth-ventricle-ependyma"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004644"),
-    synonyms=["ependyma of fourth ventricle"],
-)
-
 NervousSystemStructure.fovea_centralis = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/foveaCentralis",
     definition="Is part of the macula lutea. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001786)]",
@@ -9073,17 +8824,6 @@ NervousSystemStructure.future_facial_nucleus = NervousSystemStructure(
     name="future facial nucleus",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0010123#future-facial-nucleus"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010123"),
-)
-
-NervousSystemStructure.future_hindbrain_meninx = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/futureHindbrainMeninx",
-    definition="Is a future meninx. Is part of the hindbrain. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010091) ('is_a' and 'relationship')]",
-    description="A multi-tissue structure that has the potential to develop into a meninx of hindbrain. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010091)]",
-    name="future hindbrain meninx",
-    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0736728"],
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0010091#future-hindbrain-meninx"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010091"),
-    synonyms=["future hindbrain meninges"],
 )
 
 NervousSystemStructure.future_inferior_salivatory_nucleus = NervousSystemStructure(
@@ -9334,16 +9074,6 @@ NervousSystemStructure.genu_of_facial_nerve = NervousSystemStructure(
     synonyms=["genu nervi facialis"],
 )
 
-NervousSystemStructure.germinal_neuroepithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/germinalNeuroepithelium",
-    definition="Is a proliferating neuroepithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004022)]",
-    description="The single layer of epithelial cells that lines the early neural tube and develops into the nervous system and into the neural crest cells. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004022)]",
-    name="germinal neuroepithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004022#germinal-neuroepithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004022"),
-    synonyms=["germinal neuroepithelial layer", "original neural tube"],
-)
-
 NervousSystemStructure.gigantocellular_nucleus = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/gigantocellularNucleus",
     definition="Is a nucleus of medulla oblongata. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002155)]",
@@ -9367,15 +9097,6 @@ NervousSystemStructure.gigantocellular_part_of_magnocellular_preoptic_nucleus = 
         "https://knowledge-space.org/wiki/UBERON:2000210#gigantocellular-part-of-magnocellular-preoptic-nucleus"
     ),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2000210"),
-)
-
-NervousSystemStructure.glial_blood_brain_barrier = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/glialBloodBrainBarrier",
-    definition="Is a blood brain barrier. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000202)]",
-    description="A blood brain barrier composed of glial cells. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000202)]",
-    name="glial blood brain barrier",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0000202#glial-blood-brain-barrier"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000202"),
 )
 
 NervousSystemStructure.glial_limiting_membrane = NervousSystemStructure(
@@ -9715,35 +9436,6 @@ NervousSystemStructure.grueneberg_ganglion = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0013208#grueneberg-ganglion"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0013208"),
     synonyms=["Grüneberg ganglion"],
-)
-
-NervousSystemStructure.gustatory_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/gustatoryEpithelium",
-    definition="Is a sensory epithelium. Is part of the somatic nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002926) ('is_a' and 'relationship')]",
-    description="A sensory epithelium that is part of a gustatory system. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002926)]",
-    name="gustatory epithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002926#gustatory-epithelium-1"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002926"),
-)
-
-NervousSystemStructure.gustatory_epithelium_of_palate = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/gustatoryEpitheliumOfPalate",
-    definition="Is a gustatory epithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014453)]",
-    description="A gustatory epithelium that is part of a roof of mouth. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014453)]",
-    name="gustatory epithelium of palate",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0014453#gustatory-epithelium-of-palate"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014453"),
-    synonyms=["palatal gustatory epithelium"],
-)
-
-NervousSystemStructure.gustatory_epithelium_of_tongue = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/gustatoryEpitheliumOfTongue",
-    definition="Is a gustatory epithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014452)]",
-    description="A gustatory epithelium that is part of a tongue. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014452)]",
-    name="gustatory epithelium of tongue",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0014452#gustatory-epithelium-of-tongue"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014452"),
-    synonyms=["lingual gustatory epithelium"],
 )
 
 NervousSystemStructure.gustatory_nucleus = NervousSystemStructure(
@@ -12847,55 +12539,6 @@ NervousSystemStructure.lateral_tuberal_nucleus = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0000435#lateral-tuberal-nuclear-complex"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000435"),
     synonyms=["lateral tuberal hypothalamic nuclei", "lateral tuberal nuclear complex", "lateral tuberal nuclei"],
-)
-
-NervousSystemStructure.lateral_ventricle_choroid_plexus_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/lateralVentricleChoroidPlexusEpithelium",
-    definition="Is a choroid plexus epithelium. Is part of the choroid plexus of lateral ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004274) ('is_a' and 'relationship')]",
-    description="A choroid plexus epithelium that is part of a lateral ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004274)]",
-    name="lateral ventricle choroid plexus epithelium",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0004274#lateral-ventricle-choroid-plexus-epithelium"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004274"),
-    synonyms=[
-        "chorioid plexus of cerebral hemisphere epithelial tissue of lateral ventricle",
-        "chorioid plexus of cerebral hemisphere epithelium of lateral ventricle",
-        "choroid plexus epithelial tissue of lateral ventricle",
-        "choroid plexus epithelium of lateral ventricle",
-        "epithelial tissue of chorioid plexus of cerebral hemisphere of lateral ventricle",
-        "epithelial tissue of choroid plexus of lateral ventricle",
-        "epithelium of chorioid plexus of cerebral hemisphere of lateral ventricle",
-        "epithelium of choroid plexus of lateral ventricle",
-        "lateral ventricle chorioid plexus of cerebral hemisphere epithelial tissue",
-        "lateral ventricle chorioid plexus of cerebral hemisphere epithelium",
-        "lateral ventricle choroid plexus epithelial tissue",
-        "lateral ventricle epithelial tissue of chorioid plexus of cerebral hemisphere",
-        "lateral ventricle epithelial tissue of choroid plexus",
-        "lateral ventricle epithelium of chorioid plexus of cerebral hemisphere",
-        "lateral ventricle epithelium of choroid plexus",
-    ],
-)
-
-NervousSystemStructure.lateral_ventricle_ependyma = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/lateralVentricleEpendyma",
-    definition="Is a brain ependyma. Is part of the telencephalic ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004643) ('is_a' and 'relationship')]",
-    description="An ependyma that is part of a lateral ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004643)]",
-    name="lateral ventricle ependyma",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004643#lateral-ventricle-ependyma"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004643"),
-    synonyms=["ependyma of lateral ventricle"],
-)
-
-NervousSystemStructure.lateral_ventricle_subependymal_layer = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/lateralVentricleSubependymalLayer",
-    definition="Is part of the telencephalic ventricle and the postnatal subventricular zone. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010404)]",
-    description="A cell layer below the ependyma in the lateral ventricles of the brain. This region contains adult neural stem cells which have the potential to generate new neurons and glial cells via neurogenesis. It is an adult version of the embryonic forebrain germinal zone. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0010404)]",
-    name="lateral ventricle subependymal layer",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0010404#lateral-ventricle-subependymal-layer"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0010404"),
 )
 
 NervousSystemStructure.lateral_vestibular_nucleus = NervousSystemStructure(
@@ -17370,22 +17013,6 @@ NervousSystemStructure.olfactory_entorhinal_cortex = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0022453"),
 )
 
-NervousSystemStructure.olfactory_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/olfactoryEpithelium",
-    definition="Is a sensory epithelium. Is part of the somatic nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001997) ('is_a' and 'relationship')]",
-    description="A sensory epithelium inside the nasal cavity that is responsible for detecting odors. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001997)]",
-    name="olfactory epithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0001997#olfactory-epithelium-1"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001997"),
-    synonyms=[
-        "main olfactory epithelium",
-        "nasal cavity olfactory epithelium",
-        "olfactory membrane",
-        "olfactory sensory epithelium",
-        "sensory olfactory epithelium",
-    ],
-)
-
 NervousSystemStructure.olfactory_glomerulus = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/olfactoryGlomerulus",
     definition="Is a neural glomerulus. Is part of the olfactory bulb glomerular layer. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005387) ('is_a' and 'relationship')]",
@@ -21361,15 +20988,6 @@ NervousSystemStructure.proisocortex = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014951"),
 )
 
-NervousSystemStructure.proliferating_neuroepithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/proliferatingNeuroepithelium",
-    definition="Is a developing neuroepithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034706)]",
-    description="An epithelium that is undergoing proliferation to provide large numbers of neuronal cells. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0034706)]",
-    name="proliferating neuroepithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0034706#proliferating-neuroepithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034706"),
-)
-
 NervousSystemStructure.prosomere = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/prosomere",
     definition="Is a neuromere. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0014775)]",
@@ -23652,15 +23270,6 @@ NervousSystemStructure.sensory_dissociation_area = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003938"),
 )
 
-NervousSystemStructure.sensory_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/sensoryEpithelium",
-    definition="Is an anatomical entity. Is part of the peripheral nervous system. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006934) ('is_a' and 'relationship')]",
-    description="Simple columnar epithelium made up of cells specialized to serve as sensory cells for the reception of external stimuli, as the sensory cells of the cochlea, vestibule, nasal mucosa, and tongue. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006934)]",
-    name="sensory epithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0006934#sensory-epithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006934"),
-)
-
 NervousSystemStructure.sensory_ganglion = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/sensoryGanglion",
     definition="Is a ganglion. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001800)]",
@@ -23996,16 +23605,6 @@ NervousSystemStructure.spinal_cord_dorsal_white_commissure = NervousSystemStruct
         "dorsal white commissure of spinal cord",
         "posterior white commissure of spinal cord",
     ],
-)
-
-NervousSystemStructure.spinal_cord_ependyma = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/spinalCordEpendyma",
-    definition="Is an ependyma. Is part of the central canal of spinal cord. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005359) ('is_a' and 'relationship')]",
-    description="The ependymal cell layer that lines the spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0005359)]",
-    name="spinal cord ependyma",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005359#spinal-cord-ependyma"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005359"),
-    synonyms=["ependyma of central canal of spinal cord", "spinal cord ependymal layer"],
 )
 
 NervousSystemStructure.spinal_cord_gray_commissure = NervousSystemStructure(
@@ -24400,15 +23999,6 @@ NervousSystemStructure.spur_of_arcuate_sulcus = NervousSystemStructure(
     name="spur of arcuate sulcus",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0025772#spur-of-arcuate-sulcus-1"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0025772"),
-)
-
-NervousSystemStructure.statoacoustic_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/statoacousticEpithelium",
-    definition="Is a sensory epithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0009969)]",
-    name="statoacoustic epithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0009969#statoacoustic-epithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0009969"),
-    synonyms=["stato-acoustic epithelium"],
 )
 
 NervousSystemStructure.statoconial_membrane = NervousSystemStructure(
@@ -26879,44 +26469,6 @@ NervousSystemStructure.third_ventricle = NervousSystemStructure(
     synonyms=["3rd ventricle", "ventriculus diencephali"],
 )
 
-NervousSystemStructure.third_ventricle_choroid_plexus_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/thirdVentricleChoroidPlexusEpithelium",
-    definition="Is a choroid plexus epithelium. Is part of the choroid plexus of third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004275) ('is_a' and 'relationship')]",
-    description="A choroid plexus epithelium that is part of a third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004275)]",
-    name="third ventricle choroid plexus epithelium",
-    preferred_cross_reference=IRI(
-        "https://knowledge-space.org/wiki/UBERON:0004275#third-ventricle-choroid-plexus-epithelium"
-    ),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004275"),
-    synonyms=[
-        "chorioid plexus of cerebral hemisphere epithelial tissue of third ventricle",
-        "chorioid plexus of cerebral hemisphere epithelium of third ventricle",
-        "choroid plexus epithelial tissue of third ventricle",
-        "choroid plexus epithelium of third ventricle",
-        "epithelial tissue of chorioid plexus of cerebral hemisphere of third ventricle",
-        "epithelial tissue of choroid plexus of third ventricle",
-        "epithelium of chorioid plexus of cerebral hemisphere of third ventricle",
-        "epithelium of choroid plexus of third ventricle",
-        "third ventricle chorioid plexus of cerebral hemisphere epithelial tissue",
-        "third ventricle chorioid plexus of cerebral hemisphere epithelium",
-        "third ventricle choroid plexus epithelial tissue",
-        "third ventricle epithelial tissue of chorioid plexus of cerebral hemisphere",
-        "third ventricle epithelial tissue of choroid plexus",
-        "third ventricle epithelium of chorioid plexus of cerebral hemisphere",
-        "third ventricle epithelium of choroid plexus",
-    ],
-)
-
-NervousSystemStructure.third_ventricle_ependyma = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/thirdVentricleEpendyma",
-    definition="Is a brain ependyma. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004642) ('is_a' and 'relationship')]",
-    description="An ependyma that is part of a third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0004642)]",
-    name="third ventricle ependyma",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0004642#third-ventricle-ependyma"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0004642"),
-    synonyms=["3rd ventricle ependyma", "ependyma of third ventricle"],
-)
-
 NervousSystemStructure.thoracic_aortic_plexus = NervousSystemStructure(
     id="https://openminds.om-i.org/instances/nervousSystemStructure/thoracicAorticPlexus",
     definition="Is an aortic plexus. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035774)]",
@@ -28949,20 +28501,6 @@ NervousSystemStructure.vertical_limb_of_the_diagonal_band = NervousSystemStructu
         "crus verticale striae diagonalis",
         "vertical limb of diagonal band",
         "vertical limb of the diagonal band of Broca",
-    ],
-)
-
-NervousSystemStructure.vestibular_epithelium = NervousSystemStructure(
-    id="https://openminds.om-i.org/instances/nervousSystemStructure/vestibularEpithelium",
-    definition="Is a sensory epithelium. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006932)]",
-    description="An epithelium that is part of a vestibular labyrinth. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0006932)]",
-    name="vestibular epithelium",
-    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0006932#vestibular-epithelium"),
-    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006932"),
-    synonyms=[
-        "epithelium of vestibular labyrinth",
-        "inner ear vestibular component epithelium",
-        "vestibular sensory epithelium",
     ],
 )
 
