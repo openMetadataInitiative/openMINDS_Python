@@ -26,6 +26,15 @@ VascularStructure.anterior_mesencephalic_central_artery = VascularStructure(
     synonyms=["AMCtA", "rostral mesencephalic central artery"],
 )
 
+VascularStructure.arachnoid_barrier_layer = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/arachnoidBarrierLayer",
+    definition="Is part of the endothelial blood brain barrier and the arachnoid mater. [auto-generated from 'relationship' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000437)]",
+    description="The arachnoid barrier layer is a part of the arachnoid meningeal layer. It is formed by tight junctions between the endothelial cells of cerebral capillaries in the arachnoid mater. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0000437)]",
+    name="arachnoid barrier layer",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0000437#arachnoid-barrier-layer"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000437"),
+)
+
 VascularStructure.basal_vein = VascularStructure(
     id="https://openminds.om-i.org/instances/vascularStructure/basalVein",
     definition="Is a deep cerebral vein. [auto-generated from 'is_a' property of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0035530)]",
@@ -139,6 +148,105 @@ VascularStructure.cerebral_vein = VascularStructure(
     name="cerebral vein",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0001663#cerebral-vein"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001663"),
+)
+
+VascularStructure.choroid_plexus = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/choroidPlexus",
+    definition="Is a brain ventricle/choroid plexus and vasculature of central nervous system. Is part of the brain ventricle and the tela choroidea. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001886) ('is_a' and 'relationship')]",
+    description="A network formed by blood vessels and the tela choroidea which secretes CSF into the ventricular spaces. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0001886)]",
+    name="choroid plexus",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0102142"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0001886#choroid-plexus-1"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0001886"),
+    synonyms=["chorioid plexus", "plexus choroideus"],
+)
+
+VascularStructure.choroid_plexus_corpora_arenacea = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/choroidPlexusCorporaArenacea",
+    definition="Is a calcified structure of brain. Is part of the choroid plexus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0017633) ('is_a' and 'relationship')]",
+    description="A calcified structure of brain that is part of a choroid plexus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0017633)]",
+    name="choroid plexus corpora arenacea",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0728330"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0017633#choroid-plexus-corpora-arenacea"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0017633"),
+)
+
+VascularStructure.choroid_plexus_of_fourth_ventricle = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/choroidPlexusOfFourthVentricle",
+    definition="Is a choroid plexus and cerebellum vasculature. Is part of the fourth ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002290) ('is_a' and 'relationship')]",
+    description="Choroid plexus of the fourth ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002290)]",
+    name="choroid plexus of fourth ventricle",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0102143"],
+    preferred_cross_reference=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0002290#choroid-plexus-of-fourth-ventricle"
+    ),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002290"),
+    synonyms=[
+        "chorioid plexus of cerebral hemisphere of fourth ventricle",
+        "chorioid plexus of fourth ventricle",
+        "choroid plexus fourth ventricle",
+        "fourth ventricle chorioid plexus of cerebral hemisphere",
+        "fourth ventricle choroid plexus",
+    ],
+)
+
+VascularStructure.choroid_plexus_of_lateral_ventricle = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/choroidPlexusOfLateralVentricle",
+    definition="Is a choroid plexus. Is part of the telencephalic ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002307) ('is_a' and 'relationship')]",
+    description="Part of choroid plexus contained in the lateral ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002307)]",
+    name="choroid plexus of lateral ventricle",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0102144"],
+    preferred_cross_reference=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0002307#choroid-plexus-of-lateral-ventricle"
+    ),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002307"),
+    synonyms=[
+        "chorioid plexus of cerebral hemisphere of lateral ventricle",
+        "chorioid plexus of lateral ventricle",
+        "choroid plexus telencephalic ventricle",
+        "lateral ventricle chorioid plexus of cerebral hemisphere",
+        "lateral ventricle choroid plexus",
+    ],
+)
+
+VascularStructure.choroid_plexus_of_tectal_ventricle = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/choroidPlexusOfTectalVentricle",
+    definition="Is a choroid plexus. Is part of the midbrain cerebral aqueduct. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007299) ('is_a' and 'relationship')]",
+    description="A choroid plexus that is part of a cerebral aqueduct. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0007299)]",
+    name="choroid plexus of tectal ventricle",
+    preferred_cross_reference=IRI(
+        "https://knowledge-space.org/wiki/UBERON:0007299#choroid-plexus-of-tectal-ventricle"
+    ),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007299"),
+    synonyms=["choroid plexus tectal ventricle"],
+)
+
+VascularStructure.choroid_plexus_of_third_ventricle = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/choroidPlexusOfThirdVentricle",
+    definition="Is a choroid plexus. Is part of the third ventricle. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002288) ('is_a' and 'relationship')]",
+    description="Part of choroid plexus contained in the third ventricle. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0002288)]",
+    name="choroid plexus of third ventricle",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0102145"],
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002288#choroid-plexus-of-third-ventricle"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002288"),
+    synonyms=[
+        "chorioid plexus of cerebral hemisphere of third ventricle",
+        "chorioid plexus of third ventricle",
+        "choroid plexus third ventricle",
+        "diencephalic choroid plexus",
+        "third ventricle chorioid plexus of cerebral hemisphere",
+        "third ventricle choroid plexus",
+    ],
+)
+
+VascularStructure.choroid_plexus_vascular_circuit = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/choroidPlexusVascularCircuit",
+    definition="Is a vasculature of brain. Is part of the choroid plexus. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005219) ('is_a' and 'relationship')]",
+    description="Cranial vasculature where the posterior cerebral veins and the trans-choroid plexus branch form a circuit around the 4th ventricle choroid plexus. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005219)]",
+    name="choroid plexus vascular circuit",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:2005219#choroid-plexus-vascular-circuit"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005219"),
+    synonyms=["CVC"],
 )
 
 VascularStructure.deep_cerebral_vein = VascularStructure(
@@ -423,6 +531,15 @@ VascularStructure.tentorial_sinus = VascularStructure(
     name="tentorial sinus",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0005481#tentorial-sinus"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0005481"),
+)
+
+VascularStructure.trans_choroid_plexus_branch = VascularStructure(
+    id="https://openminds.om-i.org/instances/vascularStructure/transChoroidPlexusBranch",
+    definition="Is a brain blood vessel. Is part of the choroid plexus vascular circuit. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_2005248) ('is_a' and 'relationship')]",
+    name="trans-choroid plexus branch",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:2005248#trans-choroid-plexus-branch"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_2005248"),
+    synonyms=["TCB"],
 )
 
 VascularStructure.transverse_sinus = VascularStructure(

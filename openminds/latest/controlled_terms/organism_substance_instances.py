@@ -39,6 +39,15 @@ OrganismSubstance.cerebrospinal_fluid = OrganismSubstance(
     synonyms=["CSF", "cerebral spinal fluid", "liquor cerebrospinalis", "spinal fluid"],
 )
 
+OrganismSubstance.endoneurial_fluid = OrganismSubstance(
+    id="https://openminds.om-i.org/instances/organismSubstance/endoneurialFluid",
+    definition="Is an anatomical entity. Is part of the endoneurium. [auto-generated from properties of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011893) ('is_a' and 'relationship')]",
+    description="Fluid of the ganglia and peripheral nerves that lie outside the brain and spinal cord. [definition of the [UBERON ontology term](http://purl.obolibrary.org/obo/UBERON_0011893)]",
+    name="endoneurial fluid",
+    preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0011893#endoneurial-fluid"),
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0011893"),
+)
+
 OrganismSubstance.venous_blood = OrganismSubstance(
     id="https://openminds.om-i.org/instances/organismSubstance/venousBlood",
     definition="'Venous blood' is deoxygenated blood which travels from the peripheral vessels, through the venous system into the right atrium of the heart.",
