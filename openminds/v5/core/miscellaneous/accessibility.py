@@ -19,6 +19,14 @@ class Accessibility(LinkedMetadata):
 
     properties = [
         Property(
+            "application",
+            str,
+            "application",
+            formatting="text/plain",
+            description="no description available",
+            instructions="Enter guidance on when this access type should be selected. Describe the applicable access conditions, eligibility criteria, or usage scenario that distinguishes it from the other access types.",
+        ),
+        Property(
             "channel",
             "openminds.v5.controlled_terms.AccessChannel",
             "channel",
@@ -51,7 +59,7 @@ class Accessibility(LinkedMetadata):
             min_items=1,
             required=True,
             description="no description available",
-            instructions="Add all relevant payment model types indicating how access costs are determined. If no payment is requires, select zero-cost payment model.",
+            instructions="Add all relevant payment model types indicating how access costs are determined. If no payment is required, select zero-cost payment model.",
         ),
         Property(
             "process",
@@ -63,9 +71,12 @@ class Accessibility(LinkedMetadata):
         ),
     ]
 
-    def __init__(self, id=None, channel=None, eligibility=None, form=None, payment_models=None, process=None):
+    def __init__(
+        self, id=None, application=None, channel=None, eligibility=None, form=None, payment_models=None, process=None
+    ):
         return super().__init__(
             id=id,
+            application=application,
             channel=channel,
             eligibility=eligibility,
             form=form,
