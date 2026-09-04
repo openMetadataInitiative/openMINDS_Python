@@ -1,5 +1,6 @@
 from .actors import AccountInformation, Affiliation, Consortium, ContactInformation, Contribution, Organization, Person
 from .data import (
+    Channel,
     ContentType,
     ContentTypePattern,
     Copyright,
@@ -10,6 +11,7 @@ from .data import (
     FileRepository,
     FileRepositoryStructure,
     GridImage,
+    GridImageSequence,
     GridImageStack,
     GridVolume,
     GridVolumeSequence,
@@ -17,6 +19,7 @@ from .data import (
     License,
     LocalFile,
     Measurement,
+    RegularTimeSeries,
     ServiceLink,
     UsageAgreement,
 )
