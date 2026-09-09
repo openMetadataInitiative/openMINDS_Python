@@ -114,3 +114,12 @@ Note that this release contains two changes in behaviour which, although they ar
 
 - Cross-references between instance library instances are now resolved to typed openMINDS objects instead of being left as raw dicts [#95](https://github.com/openMetadataInitiative/openMINDS_Python/pull/95), fixing [#94](https://github.com/openMetadataInitiative/openMINDS_Python/issues/94). For example, `Accessibility.direct_virtual_open_access.payment_models[0]` is now a `PaymentModelType` object, where previously it was a dict. Code that treated such values as dicts will need updating. As part of this fix, `Node._resolve_links()` now keeps an unresolvable `Link` in a list-valued property rather than raising `KeyError`.
 - IRI validation has moved from the `IRI` constructor to the `validate()` method [#101](https://github.com/openMetadataInitiative/openMINDS_Python/pull/101), fixing [#93](https://github.com/openMetadataInitiative/openMINDS_Python/issues/93). Creating an `IRI` with an invalid value no longer raises `ValueError`; the problem is instead reported as a validation failure, with a specific hint to replace spaces with "%20" where that would make the IRI valid.
+
+
+## Release 0.6.1 (2026-09-07)
+
+This release contains no changes to the library code. It picks up an upstream bug fix to the openMINDS v5.0 schemas and instance library, and therefore affects the `openminds.v5` and `openminds.latest` modules.
+
+- Three classes that are part of the v5.0 specification, but were missing from the previously published schemas, are now available in `core`: `Channel` (embedded), `GridImageSequence` and `RegularTimeSeries`.
+- `Accessibility` has a new `application` property, giving guidance on when a given access type should be selected.
+- 67 instances that were previously classified as `NervousSystemStructure` have been moved to more precise controlled term types: `TissueStructure`, `AnatomicalCavity`, `VascularStructure` or `OrganismSubstance`. Code that referred to any of these as an attribute of `NervousSystemStructure` will need updating.
