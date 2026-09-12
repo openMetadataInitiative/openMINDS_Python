@@ -516,6 +516,7 @@ class CommonCoordinateFrameworkVersion(LinkedMetadata):
         all: bool = False,
         case_sensitive: bool = True,
         ignore_accents: bool = False,
+        ignore_separators: bool = False,
     ):
         """
         Search for instances in the openMINDS instance library based on their name.
@@ -535,6 +536,9 @@ class CommonCoordinateFrameworkVersion(LinkedMetadata):
                 other diacritical marks (cedilla, tilde, ring, etc.) when matching. Also treat
                 special letters (ß, œ, æ, ø, ł, etc.) as their closest plain-letter equivalents
                 (e.g. "ß" as "ss"). Defaults to False.
+            ignore_separators (bool, optional): Whether to ignore hyphens ("-"), underscores
+                ("_"), slashes ("/"), and repeated whitespace when matching, by collapsing
+                them all to a single space. Defaults to False.
         """
         namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
         if cls._instance_lookup is None:
@@ -589,25 +593,31 @@ class CommonCoordinateFrameworkVersion(LinkedMetadata):
                 s = s.casefold()
             if ignore_accents:
                 s = remove_accents(s)
+            if ignore_separators:
+                s = s.replace("-", " ").replace("_", " ").replace("/", " ")
+                s = " ".join(s.split())
             return s
 
         if match == "equals":
-            if case_sensitive and not ignore_accents:
+            if case_sensitive and not ignore_accents and not ignore_separators:
                 matches = cls._instance_lookup.get(name, [])
             else:
+                normalized_name = normalize(name)
                 matches = []
                 for key, instances in cls._instance_lookup.items():
-                    if normalize(key) == normalize(name):
+                    if normalize(key) == normalized_name:
                         matches.extend(instances)
         elif match == "contains":
+            normalized_name = normalize(name)
             matches = []
             for key, instances in cls._instance_lookup.items():
-                if normalize(name) in normalize(key):
+                if normalized_name in normalize(key):
                     matches.extend(instances)
         elif match == "within":
+            normalized_name = normalize(name)
             matches = []
             for key, instances in cls._instance_lookup.items():
-                if normalize(key) in normalize(name):
+                if normalize(key) in normalized_name:
                     matches.extend(instances)
         else:
             raise ValueError("'match' must be either 'equals', 'contains', or 'within'")
