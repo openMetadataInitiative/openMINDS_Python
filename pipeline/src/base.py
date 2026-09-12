@@ -12,6 +12,7 @@ from collections import defaultdict
 from enum import Enum
 import json
 from typing import Union
+import unicodedata
 
 import rfc3987
 
@@ -244,6 +245,107 @@ class Node(metaclass=Registry):
                         if hasattr(item, "_resolve_links"):
                             item._resolve_links(node_lookup)
                 setattr(self, property.name, resolved_values)
+
+
+# The properties `by_name()` searches, other than "synonyms", which is list-valued and so is handled separately.
+NAMELIKE_PROPERTIES = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
+
+# Letters that `remove_accents()` cannot handle by stripping combining marks, because
+# the accent is part of the letter shape or the plain form is more than one letter.
+SPECIAL_LETTERS = str.maketrans(
+    {
+        "Ł": "L",
+        "ł": "l",
+        "Ø": "O",
+        "ø": "o",
+        "Đ": "D",
+        "đ": "d",
+        "Ð": "D",
+        "ð": "d",
+        "Þ": "Th",
+        "þ": "th",
+        "Æ": "AE",
+        "æ": "ae",
+        "Œ": "OE",
+        "œ": "oe",
+        "ß": "ss",
+        "ẞ": "SS",
+        "Ə": "E",
+        "ə": "e",
+        "ı": "i",
+    }
+)
+
+MATCH_TYPES = ("equals", "contains", "within")
+
+
+def remove_accents(s):
+    """
+    Strip accents (acute, grave, circumflex) and other diacritical marks (cedilla, tilde,
+    ring, etc.) from a string, and replace special letters (ß, œ, æ, ø, ł, etc.) by their closest
+    plain-letter equivalents (e.g. "ß" with "ss").
+    """
+    nfd_form = unicodedata.normalize("NFD", s)
+    stripped = "".join(c for c in nfd_form if not unicodedata.combining(c))
+    return stripped.translate(SPECIAL_LETTERS)
+
+
+def normalize_name(s, case_sensitive=True, ignore_accents=False, ignore_separators=False):
+    """
+    Put a name-like string into the form in which `matches_name()` compares names.
+
+    Args:
+        s (str): the string to normalize.
+        case_sensitive (bool, optional): if False, case-fold the string. Defaults to True.
+        ignore_accents (bool, optional): if True, apply `remove_accents()`. Defaults to False.
+        ignore_separators (bool, optional): if True, replace hyphens, underscores and slashes
+            with spaces, and collapse runs of whitespace to a single space. Defaults to False.
+    """
+    if not case_sensitive:
+        s = s.casefold()
+    if ignore_accents:
+        s = remove_accents(s)
+    if ignore_separators:
+        s = s.replace("-", " ").replace("_", " ").replace("/", " ")
+        s = " ".join(s.split())
+    return s
+
+
+def matches_name(value, query, match="equals", case_sensitive=True, ignore_accents=False,
+                 ignore_separators=False):
+    """
+    Whether a name-like property value matches a search string.
+
+    This is the comparison `by_name()` applies to each name in the instance library.
+
+    Args:
+        value (str): a name-like property value belonging to a metadata node.
+        query (str): the string being searched for.
+        match (str, optional): either "equals" (exact match - default), "contains"
+            (`value` contains `query`), or "within" (`query` contains `value`).
+        case_sensitive (bool, optional): Whether the comparison should be case-sensitive.
+            Defaults to True.
+        ignore_accents (bool, optional): Whether to ignore accents (acute, grave, circumflex)
+            and other diacritical marks (cedilla, tilde, ring, etc.) when matching. Also treat
+            special letters (ß, œ, æ, ø, ł, etc.) as their closest plain-letter equivalents
+            (e.g. "ß" as "ss"). Defaults to False.
+        ignore_separators (bool, optional): Whether to ignore hyphens ("-"), underscores ("_"),
+            slashes ("/"), and repeated whitespace when matching, by collapsing them all to a
+            single space. Defaults to False.
+
+    Raises:
+        ValueError: if `match` is not one of "equals", "contains" or "within".
+    """
+    normalized_value = normalize_name(value, case_sensitive, ignore_accents, ignore_separators)
+    normalized_query = normalize_name(query, case_sensitive, ignore_accents, ignore_separators)
+    if match == "equals":
+        return normalized_value == normalized_query
+    elif match == "contains":
+        return normalized_query in normalized_value
+    elif match == "within":
+        return normalized_value in normalized_query
+    else:
+        raise ValueError("'match' must be either 'equals', 'contains', or 'within'")
 
 
 class LinkedMetadata(Node):
