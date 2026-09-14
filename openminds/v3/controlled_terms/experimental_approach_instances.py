@@ -122,7 +122,8 @@ ExperimentalApproach.electrophysiology = ExperimentalApproach(
     definition="Any experimental approach focused on electrical phenomena associated with living systems, most notably the nervous system, cardiac system, and musculoskeletal system.",
     interlex_identifier=IRI("http://uri.interlex.org/base/ilx_0741202"),
     name="electrophysiology",
-    preferred_ontology_identifier=IRI("http://uri.interlex.org/tgbugs/uris/readable/modality/Electrophysiology"),
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741202"),
+    synonyms=["ephys"],
 )
 
 ExperimentalApproach.epidemiology = ExperimentalApproach(

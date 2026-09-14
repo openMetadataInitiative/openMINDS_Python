@@ -240,7 +240,7 @@ CellType.granule_neuron = CellType(
     id="https://openminds.ebrains.eu/instances/cellType/granuleNeuron",
     definition="The term 'granule neuron' refers to a set of neuron types typically found in granular layers across brain regions whose only common feature is that they all have very small cell bodies [[adapted from Wikipedia](https://en.wikipedia.org/wiki/Granule_cell)].",
     name="granule neuron",
-    synonyms=["granule cell"],
+    synonyms=["granular neuron", "granule cell"],
 )
 
 CellType.hippocampus_ca1_pyramidal_neuron = CellType(

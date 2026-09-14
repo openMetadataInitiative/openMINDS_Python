@@ -22,6 +22,7 @@ OperatingDevice.high_performance_computer = OperatingDevice(
     id="https://openminds.om-i.org/instances/operatingDevice/highPerformanceComputer",
     name="high-performance computer",
     preferred_cross_reference=IRI("https://www.wikidata.org/entity/Q121117"),
+    synonyms=["HPC"],
 )
 
 OperatingDevice.mobile = OperatingDevice(

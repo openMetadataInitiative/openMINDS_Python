@@ -82,6 +82,7 @@ SubjectAttribute.head_restrained = SubjectAttribute(
     id="https://openminds.om-i.org/instances/subjectAttribute/headRestrained",
     definition="An organism that has been restrained on the head causing e.g., decreased motion range and/or increased resistance in movement.",
     name="head restrained",
+    synonyms=["head-restrained"],
 )
 
 SubjectAttribute.knockin = SubjectAttribute(

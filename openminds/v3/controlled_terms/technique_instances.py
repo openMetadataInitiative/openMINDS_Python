@@ -288,11 +288,13 @@ Technique.electrocorticography = Technique(
 Technique.electroencephalography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/electroencephalography",
     name="electroencephalography",
+    synonyms=["EEG"],
 )
 
 Technique.electromyography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/electromyography",
     name="electromyography",
+    synonyms=["EMG"],
 )
 
 Technique.electron_microscopy = Technique(
@@ -368,6 +370,7 @@ Technique.extracellular_electrophysiology = Technique(
     id="https://openminds.ebrains.eu/instances/technique/extracellularElectrophysiology",
     definition="In 'extracellular electrophysiology' electrodes are inserted into living tissue, but remain outside the cells in the extracellular environment to measure or stimulate electrical activity coming from adjacent cells, usually neurons.",
     name="extracellular electrophysiology",
+    synonyms=["ecephys"],
 )
 
 Technique.eye_movement_tracking = Technique(
@@ -604,6 +607,7 @@ Technique.intracellular_injection = Technique(
 Technique.intracranial_electroencephalography = Technique(
     id="https://openminds.ebrains.eu/instances/technique/intracranialElectroencephalography",
     name="intracranial electroencephalography",
+    synonyms=["iEEG", "intracranial EEG"],
 )
 
 Technique.intraperitoneal_injection = Technique(
@@ -713,6 +717,7 @@ Technique.motion_capture = Technique(
 Technique.multi_compartment_modeling = Technique(
     id="https://openminds.ebrains.eu/instances/technique/multi-compartmentModeling",
     name="multi-compartment modeling",
+    synonyms=["multicompartment modeling"],
 )
 
 Technique.multi_electrode_extracellular_electrophysiology = Technique(
@@ -1316,6 +1321,7 @@ Technique.ultra_high_field_magnetic_resonance_imaging = Technique(
     name="ultra high-field magnetic resonance imaging",
     synonyms=[
         "UHF MRI",
+        "UHF-MRI",
         "UHF magnetic resonance imaging",
         "UHF unspecified magnetic resonance imaging",
         "ultra high-field MRI",
