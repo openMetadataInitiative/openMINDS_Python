@@ -8,14 +8,14 @@ from openminds.latest.controlled_terms.age_category import AgeCategory
 
 AgeCategory.adolescent = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/adolescent",
-    definition="'Adolescent' categorizes a transitional life cycle stage of growth and development between childhood and adulthood, often described as 'puberty'.",
+    definition="Life cycle stage of a subject loosely defined by the transitional growth and development between childhood and adulthood, often described as 'puberty'.",
     name="adolescent",
     synonyms=["puberty"],
 )
 
 AgeCategory.adult = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/adult",
-    definition="'Adult' categorizes the life cycle stage of an animal or human that reached sexual maturity.",
+    definition="Life cycle stage of a subject that starts with sexual maturity and ends with death.",
     name="adult",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0729043"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000113"),
@@ -24,7 +24,7 @@ AgeCategory.adult = AgeCategory(
 
 AgeCategory.embryo = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/embryo",
-    definition="'Embryo' categorizes the life cycle stage of an animal or human that starts with fertilitzation and ends with the fully formed embryo.",
+    definition="Life cycle stage of a subject that starts with fertilization and ends with the fully formed embryo.",
     name="embryo",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0735599"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0000068"),
@@ -33,7 +33,7 @@ AgeCategory.embryo = AgeCategory(
 
 AgeCategory.infant = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/infant",
-    definition="'Infant' categorizes the life cycle stage of mammals (animal or human) that follows the neonate stage and ends at weaning.",
+    definition="Life cycle stage of a mammalian subject that follows the neonate stage and ends at weaning.",
     name="infant",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0735063"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034920"),
@@ -42,7 +42,7 @@ AgeCategory.infant = AgeCategory(
 
 AgeCategory.juvenile = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/juvenile",
-    definition="'Juvenile' categorizes the life cycle stage of an animal or human that starts with the independence of the nest and/or caregivers and ends with sexual maturity.",
+    definition="Life cycle stage of a subject that starts with the independence of the nest and/or caregiver and ends with sexual maturity.",
     name="juvenile",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0730395"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0034919"),
@@ -51,7 +51,7 @@ AgeCategory.juvenile = AgeCategory(
 
 AgeCategory.late_adult = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/lateAdult",
-    definition="'Late adult' categorizes the life cycle stage of an animal or human that follows the prime adult stage.",
+    definition="Life cycle stage of a subject that follows the prime adult stage and ends with death.",
     name="late adult",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0725713"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007222"),
@@ -60,7 +60,7 @@ AgeCategory.late_adult = AgeCategory(
 
 AgeCategory.neonate = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/neonate",
-    definition="'Neonate' categorizes the life cycle stage of an animal or human that immediately follows birth.",
+    definition="Life cycle stage of a subject that immediately follows birth.",
     name="neonate",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0732178"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0007221"),
@@ -78,7 +78,7 @@ AgeCategory.perinatal = AgeCategory(
 
 AgeCategory.prime_adult = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/primeAdult",
-    definition="'Prime adult' categorizes the life cycle stage of an animal or human that starts at the onset of sexual maturity or the cessation of growth, whichever comes last, and ends before senescence.",
+    definition="Life cycle stage of a subject that starts with sexual maturity or the cessation of growth, whichever comes last, and ends before senescence.",
     name="prime adult",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0733125"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0018241"),
@@ -87,7 +87,7 @@ AgeCategory.prime_adult = AgeCategory(
 
 AgeCategory.young_adult = AgeCategory(
     id="https://openminds.om-i.org/instances/ageCategory/youngAdult",
-    definition="'Young adult' categorizes the early adult stage of an animal or human when sexual maturity has been reached, but not the cessation of growth.",
+    definition="Life cycle stage of a subject that starts with sexual maturity and ends with the cessation of growth (if reached after sexual maturity).",
     name="young adult",
     synonyms=["early adult", "early adult stage", "young adult stage"],
 )
