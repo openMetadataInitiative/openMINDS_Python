@@ -2366,10 +2366,13 @@ NervousSystemStructure.brain_gray_matter = NervousSystemStructure(
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0003528#brain-gray-matter"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0003528"),
     synonyms=[
+        "brain gray matter",
         "brain grey matter",
+        "brain gray substance",
         "brain grey substance",
         "gray matter of brain",
         "grey matter of brain",
+        "gray substance of brain",
         "grey substance of brain",
     ],
 )
@@ -3383,7 +3386,12 @@ NervousSystemStructure.central_gray_substance_of_medulla = NervousSystemStructur
         "https://knowledge-space.org/wiki/UBERON:0002867#central-gray-substance-of-medulla-1"
     ),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002867"),
-    synonyms=["central gray matter", "medullary central gray substance"],
+    synonyms=[
+        "central gray matter",
+        "central grey matter",
+        "medullary central gray substance",
+        "medullary central grey substance",
+    ],
 )
 
 NervousSystemStructure.central_gray_substance_of_midbrain = NervousSystemStructure(
@@ -3399,12 +3407,16 @@ NervousSystemStructure.central_gray_substance_of_midbrain = NervousSystemStructu
     synonyms=[
         "anulus of cerebral aqueduct",
         "central (periaqueductal) gray",
+        "central (periaqueductal) grey",
+        "midbrain periaqueductal gray",
         "midbrain periaqueductal grey",
         "periaqueductal gray",
-        "periaqueductal gray matter",
-        "periaqueductal gray of tegmentum",
         "periaqueductal grey",
+        "periaqueductal gray matter",
         "periaqueductal grey matter",
+        "periaqueductal gray of tegmentum",
+        "periaqueductal grey of tegmentum",
+        "periaqueductal gray substance",
         "periaqueductal grey substance",
     ],
 )
@@ -3416,7 +3428,13 @@ NervousSystemStructure.central_gray_substance_of_pons = NervousSystemStructure(
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0101893"],
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0002968#central-gray-substance-of-pons-1"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002968"),
-    synonyms=["central gray of pons", "griseum centrale pontis", "pontine central gray"],
+    synonyms=[
+        "central gray of pons",
+        "central grey of pons",
+        "griseum centrale pontis",
+        "pontine central gray",
+        "pontine central grey",
+    ],
 )
 
 NervousSystemStructure.central_lateral_nucleus = NervousSystemStructure(
@@ -6492,9 +6510,13 @@ NervousSystemStructure.dorsal_gray_commissure_of_spinal_cord = NervousSystemStru
     synonyms=[
         "commissura grisea posterior medullae spinalis",
         "dorsal gray commissure",
+        "dorsal grey commissure",
+        "dorsal gray commissure of spinal cord",
         "dorsal grey commissure of spinal cord",
+        "posterior gray commissure of spinal cord",
         "posterior grey commissure of spinal cord",
         "spinal cord posterior gray commissure",
+        "spinal cord posterior grey commissure",
     ],
 )
 
@@ -9314,11 +9336,15 @@ NervousSystemStructure.granular_layer_of_cerebellar_cortex = NervousSystemStruct
     ),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002956"),
     synonyms=[
+        "cerebellar granular cell layer",
         "cerebellar granular layer",
         "cerebellar granule cell layer",
         "cerebellar granule layer",
+        "cerebellum granular cell layer",
+        "cerebellum granular layer",
         "cerebellum granule cell layer",
         "cerebellum granule layer",
+        "granular cell layer of cerebellar cortex",
         "granule cell layer of cerebellar cortex",
         "stratum granulosum cerebelli",
         "stratum granulosum corticis cerebelli",
@@ -9342,7 +9368,7 @@ NervousSystemStructure.gray_matter_layer_of_superior_colliculus = NervousSystemS
         "https://knowledge-space.org/wiki/UBERON:0006785#gray-matter-layer-of-superior-colliculus"
     ),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006785"),
-    synonyms=["gray matter of superior colliculus"],
+    synonyms=["gray matter of superior colliculus", "grey matter of superior colliculus"],
 )
 
 NervousSystemStructure.gray_matter_of_diencephalon = NervousSystemStructure(
@@ -9368,7 +9394,7 @@ NervousSystemStructure.gray_matter_of_hindbrain = NervousSystemStructure(
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0724553"],
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/UBERON:0019263#gray-matter-of-hindbrain"),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0019263"),
-    synonyms=["gray matter of the hindbrain"],
+    synonyms=["gray matter of the hindbrain", "grey matter of the hindbrain"],
 )
 
 NervousSystemStructure.gray_matter_of_midbrain = NervousSystemStructure(
@@ -9388,10 +9414,12 @@ NervousSystemStructure.gray_matter_of_spinal_cord = NervousSystemStructure(
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0002315"),
     synonyms=[
         "gray substance of spinal cord",
+        "gray matter of spinal cord",
         "grey matter of spinal cord",
         "grey substance of spinal cord",
         "spinal cord gray matter",
         "spinal cord grey matter",
+        "spinal cord gray substance",
         "spinal cord grey substance",
         "substantia grisea medullae spinalis",
     ],
@@ -9406,7 +9434,10 @@ NervousSystemStructure.gray_matter_of_telencephalon = NervousSystemStructure(
         "https://knowledge-space.org/wiki/UBERON:0011300#predominantly-gray-regional-part-of-telencephalon"
     ),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0011300"),
-    synonyms=["predominantly gray regional part of telencephalon"],
+    synonyms=[
+        "predominantly gray regional part of telencephalon",
+        "predominantly grey regional part of telencephalon",
+    ],
 )
 
 NervousSystemStructure.great_auricular_nerve = NervousSystemStructure(
@@ -11553,6 +11584,7 @@ NervousSystemStructure.lamina_i_of_gray_matter_of_spinal_cord = NervousSystemStr
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006118"),
     synonyms=[
         "lamina i of gray matter of spinal cord",
+        "lamina i of grey matter of spinal cord",
         "lamina marginalis",
         "lamina spinalis i",
         "layer of Waldeyer",
@@ -15258,6 +15290,8 @@ NervousSystemStructure.middle_gray_layer_of_superior_colliculus = NervousSystemS
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0006788"),
     synonyms=[
         "intermediate gray layer",
+        "intermediate grey layer",
+        "intermediate gray layer of superior colliculus",
         "intermediate grey layer of superior colliculus",
         "lamina colliculi superioris iv",
         "lamina IV of superior colliculus",
@@ -23617,8 +23651,10 @@ NervousSystemStructure.spinal_cord_gray_commissure = NervousSystemStructure(
     synonyms=[
         "area spinalis X",
         "gray commissure of spinal cord",
+        "grey commissure of spinal cord",
         "lamina X",
         "lamina X of gray matter of spinal cord",
+        "lamina X of grey matter of spinal cord",
         "rexed lamina X",
         "spinal area X",
         "spinal cord grey commissure",
@@ -25235,6 +25271,7 @@ NervousSystemStructure.superior_colliculus_superficial_gray_layer = NervousSyste
         "lamina II of superior colliculus",
         "layer II of superior colliculus",
         "outer gray layer of superior colliculus",
+        "outer grey layer of superior colliculus",
         "stratum cinereum",
         "stratum griseum superficiale",
         "stratum griseum superficiale colliculi superioris",
@@ -27728,9 +27765,11 @@ NervousSystemStructure.ventral_gray_commissure_of_spinal_cord = NervousSystemStr
     ),
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0014630"),
     synonyms=[
+        "anterior gray commissure of spinal cord",
         "anterior grey commissure of spinal cord",
         "commissura grisea anterior medullae spinalis",
         "spinal cord anterior gray commissure",
+        "spinal cord anterior grey commissure",
         "ventral grey commissure of spinal cord",
     ],
 )

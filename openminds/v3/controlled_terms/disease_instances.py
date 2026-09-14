@@ -18,6 +18,7 @@ Disease.alzheimers_disease = Disease(
     id="https://openminds.ebrains.eu/instances/disease/alzheimersDisease",
     name="Alzheimer's disease",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_10652"),
+    synonyms=["Alzheimer disease"],
 )
 
 Disease.autism_spectrum_disorder = Disease(
@@ -180,6 +181,7 @@ Disease.parkinsons_disease = Disease(
     definition="Parkinson's is a progressive central nervous system disorder that affects the motor system.",
     name="Parkinson's disease",
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/DOID_14330"),
+    synonyms=["Parkinson disease"],
 )
 
 Disease.stroke = Disease(
