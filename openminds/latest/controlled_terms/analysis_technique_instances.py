@@ -271,6 +271,7 @@ AnalysisTechnique.image_registration = AnalysisTechnique(
 AnalysisTechnique.independent_component_analysis = AnalysisTechnique(
     id="https://openminds.om-i.org/instances/analysisTechnique/independentComponentAnalysis",
     name="independent component analysis",
+    synonyms=["ICA"],
 )
 
 AnalysisTechnique.inter_subject_analysis = AnalysisTechnique(
