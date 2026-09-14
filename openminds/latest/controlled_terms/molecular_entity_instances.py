@@ -791,7 +791,7 @@ MolecularEntity.gaba_a_receptor = MolecularEntity(
     definition="The GABA-A receptor is an ionotropic subtype of the GABA receptor class that respond to the neurotransmitter gamma-aminobutyric acid (GABA) as endogenous ligand.",
     name="GABA-A receptor",
     preferred_cross_reference=IRI("https://knowledge-space.org/wiki/GO:1902711#gaba-a-receptor-complex"),
-    synonyms=["GABA A receptor", "GABA_A", "GABAA"],
+    synonyms=["GABA A receptor", "GABA_A", "GABAA", "GABAA receptor"],
 )
 
 MolecularEntity.gaba_b_receptor = MolecularEntity(
@@ -800,7 +800,7 @@ MolecularEntity.gaba_b_receptor = MolecularEntity(
     name="GABA-B receptor",
     preferred_cross_reference=IRI("http://uri.neuinfo.org/nif/nifstd/nlx_mol_090801"),
     preferred_ontology_identifier=IRI("http://uri.interlex.org/ilx_0104503"),
-    synonyms=["GABA B receptor", "GABA_B", "GABAB"],
+    synonyms=["GABA B receptor", "GABA_B", "GABAB", "GABAB receptor"],
 )
 
 MolecularEntity.gaba_receptor = MolecularEntity(

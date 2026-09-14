@@ -122,6 +122,7 @@ ExperimentalApproach.electrophysiology = ExperimentalApproach(
     name="electrophysiology",
     other_ontology_identifiers=["http://uri.interlex.org/tgbugs/uris/readable/modality/Electrophysiology"],
     preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0741202"),
+    synonyms=["ephys"],
 )
 
 ExperimentalApproach.epidemiology = ExperimentalApproach(
