@@ -34,11 +34,11 @@ Accessibility.direct_virtual_authenticated_controlled_access = Accessibility(
     process=AccessProcessType.authenticated_access,
 )
 
-Accessibility.direct_virtual_authorized_controlled_access = Accessibility(
-    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthorizedControlledAccess",
-    application="Select when a research product can be accessed directly online at no cost only by users who have been authenticated and explicitly authorized under defined access conditions. Example: access granted by a project owner or repository administrator to approved project members.",
+Accessibility.direct_virtual_authorized_restricted_access = Accessibility(
+    id="https://openminds.om-i.org/instances/accessibilities/directVirtualAuthorizedRestrictedAccess",
+    application="Select when a research product can be accessed directly online at no cost only by authenticated users who have received explicit authorization and who satisfy enhanced legal, ethical, contractual, security, or governance requirements. Example: approved researchers accessing sensitive data directly in a secure virtual environment.",
     channel=AccessChannel.virtual_access,
-    eligibility=AccessEligibilityType.controlled_access,
+    eligibility=AccessEligibilityType.restricted_access,
     form=AccessForm.direct_access,
     payment_models=[PaymentModelType.zero_cost_payment_model],
     process=AccessProcessType.authorized_access,
