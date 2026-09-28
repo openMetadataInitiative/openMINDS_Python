@@ -24,6 +24,14 @@ MeasuredSignalType.beta_activity = MeasuredSignalType(
     synonyms=["beta-wave", "beta wave", "beta", "beta oscillation", "beta rhythm"],
 )
 
+MeasuredSignalType.bold_signal = MeasuredSignalType(
+    id="https://openminds.om-i.org/instances/measuredSignalType/BOLDSignal",
+    definition="A computed signal type that corresponds to the blood oxygenation level of tissue that the measurement was performed on.",
+    name="BOLD signal",
+    preferred_ontology_identifier=IRI("http://uri.interlex.org/base/ilx_0101356"),
+    synonyms=["blood-oxygen-level-dependent signal", "BOLD", "blood oxygen level dependent signal"],
+)
+
 MeasuredSignalType.gamma_activity = MeasuredSignalType(
     id="https://openminds.om-i.org/instances/measuredSignalType/gammaActivity",
     definition="A neural oscillation in the high frequency range (typically between 30-150 Hz) arising from synchronous and coherent electrical activity in the brain. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Gamma_wave)]",

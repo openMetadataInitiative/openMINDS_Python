@@ -96,6 +96,12 @@ Technique.callosotomy = Technique(
     name="callosotomy",
 )
 
+Technique.cartesian_k_space_sampling_technique = Technique(
+    id="https://openminds.om-i.org/instances/technique/cartesianK-spaceSamplingTechnique",
+    definition="A k-space sampling strategy that follows a rectilinear grid.",
+    name="cartesian k-space sampling technique",
+)
+
 Technique.cell_attached_patch_clamp = Technique(
     id="https://openminds.om-i.org/instances/technique/cellAttachedPatchClamp",
     definition="'Cell-attached patch clamp' is an intracellular electrophysiology technique that fully preserves the intracellular integrity by forming a megaohm or gigaohm seal, leaving the cell membrane intact.",
@@ -960,6 +966,12 @@ Technique.quantitative_susceptibility_mapping = Technique(
     synonyms=["QSM"],
 )
 
+Technique.radial_k_space_sampling_technique = Technique(
+    id="https://openminds.om-i.org/instances/technique/radialK-spaceSamplingTechnique",
+    definition="A k-space sampling strategy that follows a radial pattern.",
+    name="radial k-space sampling technique",
+)
+
 Technique.raman_spectroscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/RamanSpectroscopy",
     definition="A spectroscopic technique where scattered light is used to measure the vibrational energy modes of a sample. It relies upon inelastic scattering of photons (Raman scattering) and can provide both chemical and structural information.",
@@ -1119,6 +1131,26 @@ Technique.sodium_mri = Technique(
 Technique.sonography = Technique(
     id="https://openminds.om-i.org/instances/technique/sonography",
     name="sonography",
+)
+
+Technique.spiral_in_k_space_sampling_technique = Technique(
+    id="https://openminds.om-i.org/instances/technique/spiral-inK-spaceSamplingTechnique",
+    definition="A k-space sampling strategy that follows a pattern that spirals into the centre of k-space.",
+    name="spiral-in k-space sampling technique",
+    synonyms=["spiral in k-space sampling technique"],
+)
+
+Technique.spiral_k_space_sampling_technique = Technique(
+    id="https://openminds.om-i.org/instances/technique/spiralK-spaceSamplingTechnique",
+    definition="A k-space sampling strategy that follows a spiral pattern.",
+    name="spiral k-space sampling technique",
+)
+
+Technique.spiral_out_k_space_sampling_technique = Technique(
+    id="https://openminds.om-i.org/instances/technique/spiral-outK-spaceSamplingTechnique",
+    definition="A k-space sampling strategy that follows a pattern that spirals out from the centre of k-space.",
+    name="spiral-out k-space sampling technique",
+    synonyms=["spiral out k-space sampling technique"],
 )
 
 Technique.standardization = Technique(
@@ -1412,4 +1444,11 @@ Technique.widefield_fluorescence_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/widefieldFluorescenceMicroscopy",
     definition="'Widefield fluorescence microscopy' comprises all microscopy techniques in which fluorescent molecules of an entire sample are excited through a permanent exposure of a light source of a specific wavelength.",
     name="widefield fluorescence microscopy",
+)
+
+Technique.zigzag_k_space_sampling_technique = Technique(
+    id="https://openminds.om-i.org/instances/technique/zigzagK-spaceSamplingTechnique",
+    definition="A k-space sampling strategy that follows a zigzag pattern.",
+    name="zigzag k-space sampling technique",
+    synonyms=["zig-zag k-space sampling technique"],
 )
