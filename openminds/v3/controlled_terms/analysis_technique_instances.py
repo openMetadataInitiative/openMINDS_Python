@@ -48,6 +48,13 @@ AnalysisTechnique.bias_field_correction = AnalysisTechnique(
     synonyms=["BFC"],
 )
 
+AnalysisTechnique.bold_image_processing = AnalysisTechnique(
+    id="https://openminds.ebrains.eu/instances/analysisTechnique/BOLDImageProcessing",
+    definition="Image processing technique that outputs a blood oxygenation level dependent (BOLD) signal.",
+    name="BOLD image processing",
+    synonyms=["Blood oxygenation level dependent imaging", "Blood-oxygenation-level dependent imaging"],
+)
+
 AnalysisTechnique.bootstrap_aggregating = AnalysisTechnique(
     id="https://openminds.ebrains.eu/instances/analysisTechnique/bootstrapAggregating",
     definition="A specialized machine learning ensemble meta-algorithm designed to improve the stability and accuracy of machine learning algorithms used in statistical classification and regression. [adapted from [Wikipedia](https://en.wikipedia.org/wiki/Bootstrap_aggregating)]",
@@ -71,6 +78,13 @@ AnalysisTechnique.boundary_based_registration = AnalysisTechnique(
     definition="The term 'boundary-based registration' refers to feature based image registration methods which utilize a boundary which can be identified in the source and target image.",
     name="boundary-based registration",
     synonyms=["BBR"],
+)
+
+AnalysisTechnique.cerebral_blood_volume_image_processing = AnalysisTechnique(
+    id="https://openminds.ebrains.eu/instances/analysisTechnique/cerebralBloodVolumeImageProcessing",
+    definition="Image processing technique that outputs a measure of cerebral blood volume.",
+    name="cerebral blood volume image processing",
+    synonyms=["cbv"],
 )
 
 AnalysisTechnique.cluster_analysis = AnalysisTechnique(
@@ -411,6 +425,12 @@ AnalysisTechnique.model_based_stimulation_artifact_correction = AnalysisTechniqu
     definition="The 'model-based stimulation artifact correction' is a model-based analysis technique for removing stimulation artifacts from intracranial electroencephalography signals to uncover the cortico-cortical evoked potentials caused by the stimulation (cf. [Trebaul et al. (2016)](https://doi.org/10.1016/j.jneumeth.2016.03.002)).",
     name="model-based stimulation artifact correction",
     synonyms=["model-based artifact correction"],
+)
+
+AnalysisTechnique.mono_exponential_decay_fitting = AnalysisTechnique(
+    id="https://openminds.ebrains.eu/instances/analysisTechnique/mono-exponentialDecayFitting",
+    definition="Curve fitting technique that uses a mono-exponential decay function as the underlying model.",
+    name="mono-exponential decay fitting",
 )
 
 AnalysisTechnique.morphometry = AnalysisTechnique(
