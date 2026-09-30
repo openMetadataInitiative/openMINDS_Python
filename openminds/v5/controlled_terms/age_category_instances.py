@@ -67,13 +67,13 @@ AgeCategory.neonate = AgeCategory(
     synonyms=["neonatal stage", "neonate stage"],
 )
 
-AgeCategory.perinatal = AgeCategory(
-    id="https://openminds.om-i.org/instances/ageCategory/perinatal",
-    definition="'Perinatal' categorizes the life cycle stage of an animal or human that starts right before birth and ends right after birth.",
-    name="perinatal",
+AgeCategory.perinate = AgeCategory(
+    id="https://openminds.om-i.org/instances/ageCategory/perinate",
+    definition="Life cycle stage of a subject that starts right before and ends right after birth.",
+    name="perinate",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0724163"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/UBERON_0012101"),
-    synonyms=["perinatal stage"],
+    synonyms=["perinatal stage", "perinate stage"],
 )
 
 AgeCategory.prime_adult = AgeCategory(
