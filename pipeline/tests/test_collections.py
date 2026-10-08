@@ -159,3 +159,45 @@ def test_collection_sort_by_id():
     }
 
     assert saved_data == expected_saved_data
+
+
+class CountingCollection(Collection):
+    def __init__(self):
+        self.calls = 0
+        super().__init__()
+
+    def _add_node(self, node):
+        self.calls += 1
+        super()._add_node(node)
+
+
+def build_chain(n):
+    """Return n subject states, each one descended from the previous one."""
+    states = [omcore.SubjectState(lookup_label="s0")]
+    for i in range(1, n):
+        states.append(omcore.SubjectState(lookup_label=f"s{i}", descended_from=states[-1]))
+    return states
+
+
+def test_add_visits_each_node_once():
+    # adding a chain must not revisit nodes already reached through the recursion
+    # (iterating over node.links instead of the direct links made 2**(n-1) calls here)
+    states = build_chain(12)
+    collection = CountingCollection()
+    collection.add(states[-1])
+    assert len(collection) == 12
+    assert collection.calls == 12
+
+
+def test_blank_node_ids_follow_depth_first_order():
+    _, _, third = build_chain(3)
+    other = omcore.SubjectState(lookup_label="other")
+    subject = omcore.Subject(lookup_label="S", studied_states=[third, other])
+    collection = Collection(subject)
+    assert [(node_id, node.lookup_label) for node_id, node in collection.nodes.items()] == [
+        ("_:000000", "S"),
+        ("_:000001", "s2"),
+        ("_:000002", "s1"),
+        ("_:000003", "s0"),
+        ("_:000004", "other"),
+    ]

@@ -204,26 +204,35 @@ class Node(metaclass=Registry):
         return len(failures) == 0
 
     @property
-    def links(self):
+    def _direct_links(self):
         """
-        Return a list of attributes that reference other metadata nodes
+        Return the linked nodes directly referenced by this node's attributes.
+
+        Embedded nodes are not listed, but the linked nodes inside them are.
         """
         _links = []
         for property in self.__class__.properties:
             value = getattr(self, property.name)
-            if property.multiple:
-                if not isinstance(value, (tuple, list)):
-                    value = [value]
-                for item in value:
-                    if isinstance(item, LinkedMetadata):
-                        _links.append(item)
-                    if hasattr(item, "links"):
-                        _links.extend(item.links)
-            elif isinstance(value, LinkedMetadata):
-                _links.append(value)
-            if hasattr(value, "links"):
-                _links.extend(value.links)
+            if not property.multiple or not isinstance(value, (tuple, list)):
+                value = [value]
+            for item in value:
+                if isinstance(item, LinkedMetadata):
+                    _links.append(item)
+                elif isinstance(item, EmbeddedMetadata):
+                    _links.extend(item._direct_links)
         return _links
+
+    @property
+    def links(self):
+        """
+        Return all linked nodes reachable from this node, at any depth.
+
+        Nodes are listed depth-first: each directly linked node is followed by
+        its own links. Embedded nodes are not listed, but the linked nodes inside
+        them are. Duplicates are kept: a node reachable through several paths
+        appears once per path.
+        """
+        return [node for child in self._direct_links for node in (child, *child.links)]
 
     def _resolve_links(self, node_lookup):
         """Replace `Link` attributes with typed Nodes where possible"""

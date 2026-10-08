@@ -55,7 +55,7 @@ class Collection:
         if node.id is None:
             node.id = self._get_blank_node_identifier()
         self.nodes[node.id] = node
-        for linked_node in node.links:
+        for linked_node in node._direct_links:
             self._add_node(linked_node)
 
     def _get_blank_node_identifier(self):
@@ -133,7 +133,7 @@ class Collection:
             else:
                 data_context = {"@vocab": "https://openminds.om-i.org/props/"}
 
-            for linked_node in node.links:
+            for linked_node in node._direct_links:
                 self._add_node(linked_node)
         # Now we can actually save the nodes
         if not individual_files:
