@@ -80,6 +80,13 @@ class TestMatchesName:
 class TestByNameUsesMatchesName:
     """`by_name()` must apply exactly the rules `matches_name()` describes."""
 
+    @staticmethod
+    def namelike_values(instance):
+        """Every value `by_name()` is expected to compare the query against."""
+        values = [getattr(instance, prop_name, None) for prop_name in NAMELIKE_PROPERTIES]
+        values += list(instance.synonyms or []) if hasattr(instance, "synonyms") else []
+        return [value for value in values if value is not None]
+
     @pytest.mark.parametrize("match", MATCH_TYPES)
     @pytest.mark.parametrize("case_sensitive", [True, False])
     @pytest.mark.parametrize("ignore_accents", [True, False])
@@ -87,22 +94,22 @@ class TestByNameUsesMatchesName:
     def test_agreement(self, om, match, case_sensitive, ignore_accents, ignore_separators):
         SovereignState = om.controlled_terms.SovereignState
         query = "Republique francaise"
-        found = SovereignState.by_name(
-            query,
+        options = dict(
             match=match,
-            all=True,
             case_sensitive=case_sensitive,
             ignore_accents=ignore_accents,
             ignore_separators=ignore_separators,
         )
-        for state in found or []:
-            names = [getattr(state, prop_name, None) for prop_name in NAMELIKE_PROPERTIES]
-            names += list(state.synonyms or []) if hasattr(state, "synonyms") else []
-            assert any(
-                matches_name(name, query, match, case_sensitive, ignore_accents, ignore_separators)
-                for name in names
-                if name is not None
-            )
+        found = SovereignState.by_name(query, all=True, **options)
+        expected = [
+            state
+            for state in SovereignState.instances()
+            if any(matches_name(name, query, **options) for name in self.namelike_values(state))
+        ]
+        # every matching instance must be returned, once each, and no others
+        assert sorted(state.id for state in found or []) == sorted(state.id for state in expected)
+        if not expected:
+            assert found is None
 
     def test_invalid_match_is_rejected(self, om):
         with pytest.raises(ValueError):
