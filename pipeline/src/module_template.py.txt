@@ -6,7 +6,7 @@
 
 {{preamble}}
 
-from openminds.base import {{ base_class }}
+from openminds.base import {{ base_class }}{% if additional_methods %}, MATCH_TYPES, NAMELIKE_PROPERTIES, matches_name{% endif %}
 from openminds.properties import Property
 
 

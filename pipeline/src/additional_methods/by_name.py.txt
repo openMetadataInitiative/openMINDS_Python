@@ -33,13 +33,17 @@
             ignore_separators (bool, optional): Whether to ignore hyphens ("-"), underscores
                 ("_"), slashes ("/"), and repeated whitespace when matching, by collapsing
                 them all to a single space. Defaults to False.
+
+        Raises:
+            ValueError: if `match` is not one of "equals", "contains" or "within".
         """
-        namelike_properties = ("name", "lookup_label", "family_name", "full_name", "short_name", "abbreviation")
+        if match not in MATCH_TYPES:
+            raise ValueError("'match' must be either 'equals', 'contains', or 'within'")
         if cls._instance_lookup is None:
             cls._instance_lookup = {}
             for instance in cls.instances():
                 keys = []
-                for prop_name in namelike_properties:
+                for prop_name in NAMELIKE_PROPERTIES:
                     value = getattr(instance, prop_name, None)
                     if value is not None:
                         keys.append(value)
@@ -52,61 +56,17 @@
                     else:
                         cls._instance_lookup[key] = [instance]
 
-        def remove_accents(s):
-            import unicodedata
-
-            special = str.maketrans({
-                "Ł": "L", "ł": "l",
-                "Ø": "O", "ø": "o",
-                "Đ": "D", "đ": "d",
-                "Ð": "D", "ð": "d",
-                "Þ": "Th", "þ": "th",
-                "Æ": "AE", "æ": "ae",
-                "Œ": "OE", "œ": "oe",
-                "ß": "ss", "ẞ": "SS",
-                "Ə": "E", "ə": "e",
-                "ı": "i",
-            })
-            nfd_form = unicodedata.normalize("NFD", s)
-            stripped = "".join(c for c in nfd_form if not unicodedata.combining(c))
-            return stripped.translate(special)
-
-        def normalize(s):
-            if not case_sensitive:
-                s = s.casefold()
-            if ignore_accents:
-                s = remove_accents(s)
-            if ignore_separators:
-                s = s.replace("-", " ").replace("_", " ").replace("/", " ")
-                s = " ".join(s.split())
-            return s
-
-        if match == "equals":
-            if case_sensitive and not ignore_accents and not ignore_separators:
-                matches = cls._instance_lookup.get(name, [])
-            else:
-                normalized_name = normalize(name)
-                matches = []
-                for key, instances in cls._instance_lookup.items():
-                    if normalize(key) == normalized_name:
-                        matches.extend(instances)
-        elif match == "contains":
-            normalized_name = normalize(name)
-            matches = []
-            for key, instances in cls._instance_lookup.items():
-                if normalized_name in normalize(key):
-                    matches.extend(instances)
-        elif match == "within":
-            normalized_name = normalize(name)
-            matches = []
-            for key, instances in cls._instance_lookup.items():
-                if normalize(key) in normalized_name:
-                    matches.extend(instances)
+        if match == "equals" and case_sensitive and not ignore_accents and not ignore_separators:
+            matches = cls._instance_lookup.get(name, [])  # the lookup is keyed on exactly this
         else:
-            raise ValueError("'match' must be either 'equals', 'contains', or 'within'")
+            matches = []
+            for key, instances in cls._instance_lookup.items():
+                if matches_name(key, name, match, case_sensitive, ignore_accents, ignore_separators):
+                    matches.extend(instances)
         if not matches:
             return None
         elif all:
-            return list(dict.fromkeys(matches))
+            # de-duplicate by identity, preserving order
+            return list({id(match): match for match in matches}.values())
         else:
             return matches[0]
