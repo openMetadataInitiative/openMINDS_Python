@@ -31,6 +31,14 @@ AnalysisTechnique.affine_transformation = AnalysisTechnique(
     name="affine transformation",
 )
 
+AnalysisTechnique.analysis_of_variance = AnalysisTechnique(
+    id="https://openminds.om-i.org/instances/analysisTechnique/analysisOfVariance",
+    definition="A family of statistical hypothesis testing methods used to determine whether the means of two or more groups differ significantly by comparing the variation between groups with the variation within groups.",
+    name="analysis of variance",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/OBI_0200201"),
+    synonyms=["ANOVA"],
+)
+
 AnalysisTechnique.anatomical_delineation_technique = AnalysisTechnique(
     id="https://openminds.om-i.org/instances/analysisTechnique/anatomicalDelineationTechnique",
     name="anatomical delineation technique",
