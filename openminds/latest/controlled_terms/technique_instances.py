@@ -109,6 +109,13 @@ Technique.cell_attached_patch_clamp = Technique(
     name="cell attached patch clamp",
 )
 
+Technique.chemiluminescence_immunoassay = Technique(
+    id="https://openminds.om-i.org/instances/technique/chemiluminescenceImmunoassay",
+    definition="An immunoassay that detects or quantifies a target substance by measuring light emitted from a chemical reaction associated with an antibody–antigen binding event.",
+    name="chemiluminescence immunoassay",
+    synonyms=["chemiluminescent immunoassay", "CLIA"],
+)
+
 Technique.clarity_tde = Technique(
     id="https://openminds.om-i.org/instances/technique/CLARITY_TDE",
     name="CLARITY/TDE",
@@ -340,8 +347,8 @@ Technique.electroporation = Technique(
 
 Technique.enzyme_linked_immunosorbent_assay = Technique(
     id="https://openminds.om-i.org/instances/technique/enzymeLinkedImmunosorbentAssay",
-    definition="The 'enzyme-linked immunosorbent assay' is a commonly used analytical biochemistry assay for the quantitative determination of antibodies, first described by [Engvall and Perlmann (1972)](https://www.jimmunol.org/content/109/1/129.abstract). [adapted from [wikipedia](https://en.wikipedia.org/wiki/ELISA)]",
-    description="This immunoassay utilizes an antibody labeled with an enzyme marker such as horseradish peroxidase. While either the enzyme or the antibody is bound to an immunosorbent substrate, they both retain their biologic activity; the change in enzyme activity as a result of the enzyme-antibody-antigen reaction is proportional to the concentration of the antigen and can be measured spectrophotometrically or with the naked eye. Many variations of the method have been developed.",
+    definition="An immunoassay that detects or quantifies a target substance using antigen–antibody binding on a solid surface and an enzyme-linked reagent that generates a measurable signal upon reaction with a substrate.",
+    description="The enzyme-linked immunosorbent assay (ELISA) was independently developed in 1971 by Eva Engvall and Peter Perlmann and by Bauke van Weemen and Anton Schuurs as a non-radioactive alternative to radioimmunoassays ([Engvall & Perlmann, 1971](https://doi.org/10.1016/0019-2791(71)90454-X); [Van Weemen & Schuurs, 1971](https://doi.org/10.1016/0014-5793(71)80319-8)). The technique involves immobilizing an antigen or antibody on a solid surface, typically a microtiter plate, followed by sample incubation and washing steps to remove unbound components. Detection relies on an enzyme-linked reagent that produces a measurable signal, usually a color change, upon addition of a substrate. Several ELISA formats exist, including direct, indirect, sandwich, and competitive ELISA, which differ in their antigen–antibody binding arrangements. ELISA is widely used in clinical diagnostics, biomedical research, and biomarker quantification ([Tabatabaei & Ahmed, 2022](https://doi.org/10.1007/978-1-0716-2376-3_10)).",
     name="enzyme-linked immunosorbent assay",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0484188"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0007526"),
@@ -405,6 +412,15 @@ Technique.fluorescence_microscopy = Technique(
     name="fluorescence microscopy",
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0780848"],
     preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/CHMO_0000087"),
+)
+
+Technique.fluorescence_polarization_immunoassay = Technique(
+    id="https://openminds.om-i.org/instances/technique/fluorescencePolarizationImmunoassay",
+    definition="An immunoassay that detects or quantifies a target substance by measuring changes in the polarization of fluorescence emitted by labeled molecules as their rotational mobility changes upon binding to antibodies.",
+    name="fluorescence polarization immunoassay",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0484399"],
+    preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0024787"),
+    synonyms=["FPIA", "polarization fluoroimmunoassay"],
 )
 
 Technique.focused_ion_beam_scanning_electron_microscopy = Technique(
@@ -561,6 +577,13 @@ Technique.hpc_simulation = Technique(
     id="https://openminds.om-i.org/instances/technique/HPCSimulation",
     name="HPC simulation",
     synonyms=["High Performance Computing simulation"],
+)
+
+Technique.immunoassay = Technique(
+    id="https://openminds.om-i.org/instances/technique/immunoassay",
+    definition="An analytical assay that uses the specific binding between antibodies and antigens to detect or quantify a target substance in a biological or chemical sample.",
+    name="immunoassay",
+    synonyms=["immunochemical assay", "immunological assay"],
 )
 
 Technique.immunohistochemistry = Technique(
@@ -970,6 +993,15 @@ Technique.radial_k_space_sampling_technique = Technique(
     id="https://openminds.om-i.org/instances/technique/radialK-spaceSamplingTechnique",
     definition="A k-space sampling strategy that follows a radial pattern.",
     name="radial k-space sampling technique",
+)
+
+Technique.radioimmunoassay = Technique(
+    id="https://openminds.om-i.org/instances/technique/radioimmunoassay",
+    definition="An immunoassay that detects or quantifies a target substance by measuring radioactivity associated with the binding of radiolabeled antigens or antibodies in an antigen–antibody reaction.",
+    name="radioimmunoassay",
+    other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0486472"],
+    preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0018419"),
+    synonyms=["radioimmunological assay", "RIA"],
 )
 
 Technique.raman_spectroscopy = Technique(
