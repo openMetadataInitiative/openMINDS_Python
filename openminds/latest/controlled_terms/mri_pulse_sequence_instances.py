@@ -86,6 +86,13 @@ MRIPulseSequence.spin_echo_pulse_sequence = MRIPulseSequence(
     synonyms=["SE pulse sequence"],
 )
 
+MRIPulseSequence.stimulated_echo_pulse_sequence = MRIPulseSequence(
+    id="https://openminds.om-i.org/instances/MRIPulseSequence/stimulatedEchoPulseSequence",
+    definition="A family of magnetic resonance imaging pulse sequences that use three or more radiofrequency (RF) pulses to generate stimulated echoes by temporarily storing transverse magnetization as longitudinal magnetization and subsequently converting it back into transverse magnetization for signal formation.",
+    name="stimulated echo pulse sequence",
+    synonyms=["STE pulse sequence"],
+)
+
 MRIPulseSequence.t2_pulse_sequence = MRIPulseSequence(
     id="https://openminds.om-i.org/instances/MRIPulseSequence/T2PulseSequence",
     definition="A magnetic resonance imaging pulse sequence that is optimized to measure the spin-spin relaxation time (T2).",
