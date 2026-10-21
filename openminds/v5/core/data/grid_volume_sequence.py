@@ -52,7 +52,7 @@ class GridVolumeSequence(LinkedMetadata):
             max_items=3,
             required=True,
             description="no description available",
-            instructions="Enter the dimension of grid volumes.",
+            instructions="Enter the dimension of the grid volumes in this sequence.",
         ),
         Property(
             "name",
@@ -96,7 +96,7 @@ class GridVolumeSequence(LinkedMetadata):
             "temporalSamplingFrequency",
             required=True,
             description="no description available",
-            instructions="Enter the rate at which consecutive grid volume are captured in a sequence, preferably measured in Hertz (Hz).",
+            instructions="Enter the rate at which consecutive grid volumes are captured in a sequence, preferably measured in Hertz (Hz).",
         ),
         Property(
             "voxel_sizes",

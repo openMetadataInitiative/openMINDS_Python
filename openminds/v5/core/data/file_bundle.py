@@ -100,7 +100,7 @@ class FileBundle(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Reference to the aspect used to group something.",
-            instructions="Add all entities that defined which files were grouped into this file bundle. Note that the schema types of the instances stated here, need to match the ones stated under 'groupingType'.",
+            instructions="Add all entities that defined which files were grouped into this file bundle. Note that the schema types of the instances stated here need to match the ones stated under 'groupingType'.",
         ),
         Property(
             "grouping_types",

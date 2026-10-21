@@ -230,7 +230,7 @@ class Service(LinkedMetadata):
             min_items=1,
             required=True,
             description="Extent of something.",
-            instructions="Add the scope of this service, i.e., what analysis methods does it perform, what kinds of experimental data is it intended for.",
+            instructions="Add the scope of this service, i.e., what analysis methods it performs and what kinds of experimental data it is intended for.",
         ),
         Property(
             "short_name",

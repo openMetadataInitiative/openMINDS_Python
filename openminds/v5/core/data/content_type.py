@@ -86,7 +86,7 @@ class ContentType(LinkedMetadata):
             formatting="text/plain",
             required=True,
             description="Word or phrase that constitutes the distinctive designation of the content type.",
-            instructions="Enter the name of this content type following a IANA.org inspired convention.",
+            instructions="Enter the name of this content type following an IANA.org-inspired convention.",
         ),
         Property(
             "specification",

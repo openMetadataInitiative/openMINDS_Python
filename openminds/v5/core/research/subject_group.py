@@ -35,7 +35,7 @@ class SubjectGroup(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce.",
-            instructions="Add the biological sex of all specimen in this set.",
+            instructions="Add the biological sex of all specimens in this set.",
         ),
         Property(
             "internal_identifier",
@@ -80,7 +80,7 @@ class SubjectGroup(LinkedMetadata):
             min_items=1,
             required=True,
             description="Category of biological classification comprising related organisms or populations potentially capable of interbreeding, and being designated by a binomial that consists of the name of a genus followed by a Latin or latinized uncapitalized noun or adjective.",
-            instructions="Add the species and/or strain (a sub-type of a genetic variant of species) of all specimen in this set.",
+            instructions="Add the species and/or strain (a sub-type of a genetic variant of species) of all specimens in this set.",
         ),
         Property(
             "studied_states",

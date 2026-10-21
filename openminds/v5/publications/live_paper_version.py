@@ -325,7 +325,7 @@ class LivePaperVersion(LinkedMetadata):
             "releaseDate",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
-            instructions="Enter the date (actual or intended) on which this research product version was first release, formatted as 'YYYY-MM-DD'.",
+            instructions="Enter the date (actual or intended) on which this research product version was first released, formatted as 'YYYY-MM-DD'.",
         ),
         Property(
             "repository",

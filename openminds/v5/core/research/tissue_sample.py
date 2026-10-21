@@ -99,7 +99,7 @@ class TissueSample(LinkedMetadata):
             "origin",
             required=True,
             description="Source at which something begins or rises, or from which something derives.",
-            instructions="Add the biogical origin of this tissue sample.",
+            instructions="Add the biological origin of this tissue sample.",
         ),
         Property(
             "species",

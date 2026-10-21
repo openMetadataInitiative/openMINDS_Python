@@ -210,7 +210,7 @@ class HardwareProduct(LinkedMetadata):
             "openminds.v5.core.PropertyValueList",
             "specification",
             description="Detailed and precise presentation of, or proposal for something.",
-            instructions="Add the specification(s) of this hardware product as property value list.",
+            instructions="Add the specification(s) of this hardware product as a property-value list.",
         ),
         Property(
             "type",

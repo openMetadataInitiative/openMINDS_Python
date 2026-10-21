@@ -61,7 +61,7 @@ class Organization(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Digital handle to identify objects or legal persons.",
-            instructions="Add all globally unique and persistent digital identifier of this organization.",
+            instructions="Add all globally unique and persistent digital identifiers of this organization.",
         ),
         Property(
             "has_parents",

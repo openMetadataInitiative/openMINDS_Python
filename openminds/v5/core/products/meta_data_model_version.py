@@ -307,7 +307,7 @@ class MetaDataModelVersion(LinkedMetadata):
             "releaseDate",
             required=True,
             description="Fixed date on which a product is due to become or was made available for the general public to see or buy",
-            instructions="Enter the date (actual or intended) on which this research product version was first release, formatted as 'YYYY-MM-DD'.",
+            instructions="Enter the date (actual or intended) on which this research product version was first released, formatted as 'YYYY-MM-DD'.",
         ),
         Property(
             "repository",
@@ -324,7 +324,7 @@ class MetaDataModelVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Form in which a particular data structure or object state is translated to for storage.",
-            instructions="Add all content types in which (meta)data compliant with this (meta)data model version can be stored in.",
+            instructions="Add all content types in which (meta)data compliant with this (meta)data model version can be stored.",
         ),
         Property(
             "short_name",
@@ -343,7 +343,7 @@ class MetaDataModelVersion(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Form in which a particular data structure or object state is specified in.",
-            instructions="Add all content types in which the schemas of this (meta)data model version are stored in.",
+            instructions="Add all content types in which the schemas of this (meta)data model version are stored.",
         ),
         Property(
             "support_channels",

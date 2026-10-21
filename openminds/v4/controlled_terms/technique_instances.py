@@ -497,6 +497,13 @@ Technique.genome_wide_association_study = Technique(
     ],
 )
 
+Technique.genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/genotyping",
+    definition="Any experimental or computational method used to determine or infer the alleles or genetic variants present at one or more genomic loci in a biological organism or sample, based on molecular measurements or previously obtained genetic data.",
+    name="genotyping",
+    synonyms=["genotype determination"],
+)
+
 Technique.golgi_staining = Technique(
     id="https://openminds.om-i.org/instances/technique/GolgiStaining",
     definition="'Golgi staining' includes several silver staining techniques in which fixed tissue is impregnated with silver nitrate and potassium dichromate resulting in the complete staining of some nerve cells while other cells are not stained at all. [adapted from InterLex](http://uri.interlex.org/ilx_0104713)",
@@ -751,6 +758,13 @@ Technique.mass_spectrometry = Technique(
     name="mass spectrometry",
 )
 
+Technique.mass_spectrometry_based_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/massSpectrometryBasedGenotyping",
+    definition="Any genotyping technique that identifies genetic variants by measuring mass differences between allele-specific nucleic acid products using mass spectrometry, often following PCR amplification or primer extension.",
+    name="mass spectrometry-based genotyping",
+    synonyms=["mass spectrometric genotyping"],
+)
+
 Technique.micro_computed_tomography = Technique(
     id="https://openminds.om-i.org/instances/technique/microComputedTomography",
     definition="'Micro computed tomography' uses X-rays to create cross-sections of physical objects with resolution in the micrometer range that can be used to recreate 3-dimensional models [adapted from [Wikipedia](https://en.wikipedia.org/wiki/X-ray_microtomography)].",
@@ -758,6 +772,33 @@ Technique.micro_computed_tomography = Technique(
     name="micro computed tomography",
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0514122"),
     synonyms=["micro CT", "microtomography", "X-ray microtomography", "X-ray micro computed tomography"],
+)
+
+Technique.microarray_based_snp_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/microarrayBasedSNPGenotyping",
+    definition="Any genotyping technique that uses DNA microarrays with predefined probes to determine single-nucleotide polymorphism (SNP) genotypes through allele-specific hybridization or associated detection reactions, potentially incorporating DNA amplification.",
+    name="microarray-based SNP genotyping",
+    synonyms=[
+        "microarray-based single-nucleotide polymorphism genotyping",
+        "single-nucleotide polymorphism array genotyping",
+        "single-nucleotide polymorphism chip genotyping",
+        "single-nucleotide polymorphism microarray genotyping",
+        "SNP array genotyping",
+        "SNP chip genotyping",
+        "SNP microarray genotyping",
+    ],
+)
+
+Technique.microsatellite_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/microsatelliteGenotyping",
+    definition="Any genotyping technique that determines allelic variation at microsatellite loci by analyzing differences in short tandem DNA repeats, typically using PCR amplification followed by fragment-length analysis or sequencing.",
+    name="microsatellite genotyping",
+    synonyms=[
+        "short tandem repeat genotyping",
+        "simple sequence repeat genotyping",
+        "SSR genotyping",
+        "STR genotyping",
+    ],
 )
 
 Technique.microtome_sectioning = Technique(
@@ -898,6 +939,13 @@ Technique.organ_extraction = Technique(
 Technique.patch_clamp = Technique(
     id="https://openminds.om-i.org/instances/technique/patchClamp",
     name="patch clamp",
+)
+
+Technique.pcr_based_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/PCRBasedGenotyping",
+    definition="Any genotyping technique that uses polymerase chain reaction (PCR) to amplify specific DNA regions and determine genetic variants through amplification-associated detection methods, potentially incorporating restriction enzyme digestion, fragment analysis, or sequencing.",
+    name="PCR-based genotyping",
+    synonyms=["PCR genotyping", "polymerase chain reaction-based genotyping"],
 )
 
 Technique.performance_based_testing = Technique(
@@ -1083,6 +1131,12 @@ Technique.reporter_protein_based_expression_measurement = Technique(
     name="reporter protein based expression measurement",
 )
 
+Technique.restriction_enzyme_based_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/restrictionEnzymeBasedGenotyping",
+    definition="Any genotyping technique that uses restriction enzymes to identify genetic variants through differences in DNA fragment patterns, potentially incorporating PCR amplification as in restriction fragment length polymorphism analysis.",
+    name="restriction enzyme-based genotyping",
+)
+
 Technique.retinotopic_mapping = Technique(
     id="https://openminds.om-i.org/instances/technique/retinotopicMapping",
     definition="In 'retinotopic mapping' the retina is repeatedly stimulated in such a way that the response of neurons, particularly within the visual stream, can be mapped to the location of the stimulus on the retina.",
@@ -1149,6 +1203,13 @@ Technique.semi_structured_questioning = Technique(
     definition="A data collection technique in which respondents are presented with questions guided by a predefined framework or set of topics, allowing flexibility in question wording, order, and follow-up questions to explore responses in greater depth.",
     name="semi-structured questioning",
     synonyms=["semi structured questioning"],
+)
+
+Technique.sequencing_based_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/sequencingBasedGenotyping",
+    definition="Any genotyping technique that determines genetic variants through the analysis of DNA sequence data, encompassing targeted, whole-exome, and whole-genome approaches and potentially incorporating PCR-based amplification.",
+    name="sequencing-based genotyping",
+    synonyms=["sequence-based genotyping"],
 )
 
 Technique.serial_block_face_scanning_electron_microscopy = Technique(
@@ -1342,6 +1403,13 @@ Technique.susceptibility_weighted_imaging = Technique(
 Technique.switch_immunohistochemistry = Technique(
     id="https://openminds.om-i.org/instances/technique/SWITCHImmunohistochemistry",
     name="SWITCH immunohistochemistry",
+)
+
+Technique.targeted_sequencing_based_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/targetedSequencingBasedGenotyping",
+    definition="Any sequencing-based genotyping technique that determines genetic variants within predefined genomic regions using targeted amplification or enrichment followed by DNA sequencing, encompassing whole-exome sequencing-based genotyping.",
+    name="targeted sequencing-based genotyping",
+    synonyms=["targeted sequencing genotyping"],
 )
 
 Technique.tde_clearing = Technique(
@@ -1548,6 +1616,13 @@ Technique.whole_cell_patch_clamp = Technique(
     name="whole cell patch clamp",
 )
 
+Technique.whole_exome_sequencing_based_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/wholeExomeSequencingBasedGenotyping",
+    definition="Any targeted sequencing-based genotyping technique that determines genetic variants primarily within protein-coding genomic regions through the analysis of whole-exome sequencing data.",
+    name="whole-exome sequencing-based genotyping",
+    synonyms=["WES genotyping", "WES-based genotyping", "whole-exome sequencing genotyping"],
+)
+
 Technique.whole_genome_sequencing = Technique(
     id="https://openminds.om-i.org/instances/technique/wholeGenomeSequencing",
     definition="'Whole genome sequencing' is a genetic test (sequencing technique) to determine the entire, or nearly the entire, DNA sequence of an organism's genome at a single time. [adapted from [wikipedia](https://en.wikipedia.org/wiki/Whole_genome_sequencing)]",
@@ -1555,6 +1630,13 @@ Technique.whole_genome_sequencing = Technique(
     name="whole genome sequencing",
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M000621306"),
     synonyms=["complete genome sequencing", "entire genome sequencing", "full genome sequencing", "WGS"],
+)
+
+Technique.whole_genome_sequencing_based_genotyping = Technique(
+    id="https://openminds.om-i.org/instances/technique/wholeGenomeSequencingBasedGenotyping",
+    definition="Any sequencing-based genotyping technique that determines genetic variants across coding and non-coding genomic regions through the analysis of whole-genome sequencing data, without restricting sequencing to predefined genomic targets.",
+    name="whole-genome sequencing-based genotyping",
+    synonyms=["WGS genotyping", "WGS-based genotyping", "whole-genome sequencing genotyping"],
 )
 
 Technique.widefield_fluorescence_microscopy = Technique(

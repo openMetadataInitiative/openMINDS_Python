@@ -67,7 +67,7 @@ class GridVolume(LinkedMetadata):
             int,
             "numberOfPlanes",
             description="no description available",
-            instructions="Enter number of planes in this grid volume.",
+            instructions="Enter the number of planes in this grid volume.",
         ),
         Property(
             "obtained_with",

@@ -28,7 +28,7 @@ class QuantitativeValueArray(EmbeddedMetadata):
             unique_items=False,
             min_items=2,
             description="no description available",
-            instructions="Enter the negative uncertainties for all values. Note that the length of the arrays have to match.",
+            instructions="Enter the negative uncertainties for all values. Note that the lengths of the arrays have to match.",
         ),
         Property(
             "positive_uncertainties",
@@ -38,7 +38,7 @@ class QuantitativeValueArray(EmbeddedMetadata):
             unique_items=False,
             min_items=2,
             description="no description available",
-            instructions="Enter the positive uncertainties for all values. Note that the length of the arrays have to match.",
+            instructions="Enter the positive uncertainties for all values. Note that the lengths of the arrays have to match.",
         ),
         Property(
             "type_of_uncertainty",

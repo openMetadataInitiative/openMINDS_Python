@@ -43,7 +43,7 @@ class SubjectGroupState(LinkedMetadata):
             min_items=1,
             required=True,
             description="Distinct life cycle class that is defined by a similar age or age range (developmental stage) within a group of individual beings.",
-            instructions="Add the age category of the subject in this state.",
+            instructions="Add the age category of the subject group in this state.",
         ),
         Property(
             "associated_protocols",

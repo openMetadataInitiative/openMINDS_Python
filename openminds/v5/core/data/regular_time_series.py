@@ -81,7 +81,7 @@ class RegularTimeSeries(LinkedMetadata):
             "openminds.v5.core.RegularTimeSeries",
             "previousRegularTimeSeries",
             description="no description available",
-            instructions="If this regular time series is part of a sequence of regular time seriess (e.g., multiple repetitions or sweeps), add the regular time series preceding this regular time series.",
+            instructions="If this regular time series is part of a sequence of regular time series (e.g., multiple repetitions or sweeps), add the regular time series preceding this regular time series.",
         ),
         Property(
             "sampling_frequency",

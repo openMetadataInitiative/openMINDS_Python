@@ -79,7 +79,7 @@ class File(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Reference to the ensemble of multiple things or beings.",
-            instructions="Add all file bundles in which this file instance is grouped into.",
+            instructions="Add all file bundles in which this file instance is grouped.",
         ),
         Property(
             "name",

@@ -54,7 +54,7 @@ class Person(LinkedMetadata):
             unique_items=True,
             min_items=1,
             description="Digital handle to identify objects or legal persons.",
-            instructions="Add all globally unique and persistent digital identifier of this person.",
+            instructions="Add all globally unique and persistent digital identifiers of this person.",
         ),
         Property(
             "family_name",
@@ -79,7 +79,7 @@ class Person(LinkedMetadata):
             formatting="text/plain",
             required=True,
             description="no description available",
-            instructions="Enter the person’s preferred way to write their name in a professional context. It is recommended to place given before family name separated by space.",
+            instructions="Enter the person’s preferred way to write their name in a professional context. It is recommended to place the given name before the family name, separated by a space.",
         ),
     ]
 

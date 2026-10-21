@@ -44,7 +44,7 @@ class StimulationActivity(LinkedMetadata):
             [datetime, time],
             "endTime",
             description="no description available",
-            instructions="Enter the date and/or time on when this activity ended, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
+            instructions="Enter the date and/or time at which this activity ended, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
         Property(
             "inputs",
@@ -136,7 +136,7 @@ class StimulationActivity(LinkedMetadata):
             [datetime, time],
             "startTime",
             description="no description available",
-            instructions="Enter the date and/or time on when this activity started, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
+            instructions="Enter the date and/or time at which this activity started, formatted as either '2023-02-07T16:00:00+00:00' (date-time) or '16:00:00+00:00' (time).",
         ),
         Property(
             "stimuli",
