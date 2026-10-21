@@ -415,6 +415,7 @@ AnalysisTechnique.maximum_probability_projection = AnalysisTechnique(
 
 AnalysisTechnique.meta_analysis = AnalysisTechnique(
     id="https://openminds.ebrains.eu/instances/analysisTechnique/metaAnalysis",
+    definition="A statistical analysis technique that quantitatively combines results from multiple independent studies addressing a common research question to estimate an overall effect or investigate patterns across studies.",
     name="meta-analysis",
 )
 

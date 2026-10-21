@@ -42,6 +42,20 @@ Technique.anterograde_tracing = Technique(
     name="anterograde tracing",
 )
 
+Technique.anthropometry = Technique(
+    id="https://openminds.om-i.org/instances/technique/anthropometry",
+    definition="A measurement technique that involves systematically measuring the physical dimensions, size, weight, and proportions of the human or other primate body.",
+    name="anthropometry",
+    synonyms=["anthropometric assessment", "anthropometric measurement"],
+)
+
+Technique.archival_data_retrieval = Technique(
+    id="https://openminds.om-i.org/instances/technique/archivalDataRetrieval",
+    definition="A secondary data collection technique that involves systematically extracting information from existing records, documents, or datasets to investigate research questions.",
+    name="archival data retrieval",
+    synonyms=["archival records retrieval"],
+)
+
 Technique.autoradiography = Technique(
     id="https://openminds.om-i.org/instances/technique/autoradiography",
     definition="'Autoradiography' is a photography technique that creates images of a radioactive source (e.g., molecules or fragments of molecules that have been radioactively labeled) by the direct exposure to an imaging media (e.g., X-ray film or nuclear emulsion)",
@@ -119,6 +133,13 @@ Technique.chemiluminescence_immunoassay = Technique(
 Technique.clarity_tde = Technique(
     id="https://openminds.om-i.org/instances/technique/CLARITY_TDE",
     name="CLARITY/TDE",
+)
+
+Technique.closed_ended_questioning = Technique(
+    id="https://openminds.om-i.org/instances/technique/closedEndedQuestioning",
+    definition="A data collection technique in which respondents are presented with predefined questions using standardized wording and order, with answers restricted to predefined response options or categories without allowing free-text responses.",
+    name="closed-ended questioning",
+    synonyms=["closed-response questioning", "fixed-response questioning"],
 )
 
 Technique.coherent_anti_stokes_raman_spectroscopy = Technique(
@@ -381,6 +402,13 @@ Technique.epifluorescent_microscopy = Technique(
     ],
 )
 
+Technique.expert_reporting = Technique(
+    id="https://openminds.om-i.org/instances/technique/expertReporting",
+    definition="A data collection technique in which an individual with specialized expertise provides information, evaluations, or judgments about a subject, system, or phenomenon based on professional knowledge or experience.",
+    name="expert-reporting",
+    synonyms=["expert reporting"],
+)
+
 Technique.extracellular_electrophysiology = Technique(
     id="https://openminds.om-i.org/instances/technique/extracellularElectrophysiology",
     definition="In 'extracellular electrophysiology' electrodes are inserted into living tissue, but remain outside the cells in the extracellular environment to measure or stimulate electrical activity coming from adjacent cells, usually neurons.",
@@ -608,6 +636,13 @@ Technique.in_situ_hybridisation = Technique(
     name="in situ hybridisation",
 )
 
+Technique.informant_reporting = Technique(
+    id="https://openminds.om-i.org/instances/technique/informantReporting",
+    definition="A data collection technique in which an individual provides information about another individual or subject based on their observations, experiences, or knowledge.",
+    name="informant-reporting",
+    synonyms=["informant reporting", "other non-expert reporting"],
+)
+
 Technique.infrared_differential_interference_contrast_video_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/infraredDifferentialInterferenceContrastVideoMicroscopy",
     name="infrared differential interference contrast video microscopy",
@@ -740,6 +775,13 @@ Technique.microtome_sectioning = Technique(
     synonyms=["microtomy"],
 )
 
+Technique.mixed_format_questioning = Technique(
+    id="https://openminds.om-i.org/instances/technique/mixedFormatQuestioning",
+    definition="A data collection technique in which respondents are presented with predefined questions using standardized wording and order, with answers collected through a combination of predefined response options or categories and unrestricted free-text responses.",
+    name="mixed-format questioning",
+    synonyms=["mixed-response-format questioning"],
+)
+
 Technique.motion_capture = Technique(
     id="https://openminds.om-i.org/instances/technique/motionCapture",
     definition="'Motion capture' refers to a group of techniques used to measure the movement and/or position of an object, specimen, or anatomical parts of a specimen over a given period of time.",
@@ -819,6 +861,13 @@ Technique.nucleic_acid_extraction = Technique(
     name="nucleic acid extraction",
 )
 
+Technique.open_ended_questioning = Technique(
+    id="https://openminds.om-i.org/instances/technique/openEndedQuestioning",
+    definition="A data collection technique in which respondents are presented with predefined questions using standardized wording and order, with answers recorded exclusively as unrestricted free-text responses without predefined response options or categories.",
+    name="open-ended questioning",
+    synonyms=["open-response questioning", "free-response questioning"],
+)
+
 Technique.optical_coherence_tomography = Technique(
     id="https://openminds.om-i.org/instances/technique/opticalCoherenceTomography",
     definition="Imaging technique that combines interferometry with short-coherence-length light to obtain micrometer-level depth resolution. Transverse scanning of the light beam is used to form two- and three-dimensional images, reflected from biological tissue or scattering media [Adapted from [Wikipedia](https://en.wikipedia.org/wiki/Optical_coherence_tomography)].",
@@ -854,6 +903,13 @@ Technique.organ_extraction = Technique(
 Technique.patch_clamp = Technique(
     id="https://openminds.om-i.org/instances/technique/patchClamp",
     name="patch clamp",
+)
+
+Technique.performance_based_testing = Technique(
+    id="https://openminds.om-i.org/instances/technique/performanceBasedTesting",
+    definition="An assessment technique that evaluates the abilities, skills, or functional performance of a subject through the direct observation and standardized measurement of performance on predefined tasks.",
+    name="performance-based testing",
+    synonyms=["performance testing", "performance-based assessment"],
 )
 
 Technique.perfusion_fixation_technique = Technique(
@@ -921,6 +977,13 @@ Technique.photoplethysmography = Technique(
     other_ontology_identifiers=["http://uri.interlex.org/base/ilx_0487650"],
     preferred_ontology_identifier=IRI("http://id.nlm.nih.gov/mesh/2018/M0026056"),
     synonyms=["PPG"],
+)
+
+Technique.physiological_monitoring = Technique(
+    id="https://openminds.om-i.org/instances/technique/physiologicalMonitoring",
+    definition="A measurement technique that involves continuously or repeatedly recording physiological parameters of a living organism to assess its physiological state and changes over time.",
+    name="physiological monitoring",
+    synonyms=["physiologic monitoring"],
 )
 
 Technique.polarized_light_microscopy = Technique(
@@ -1079,6 +1142,20 @@ Technique.secondary_antibody_staining = Technique(
     name="secondary antibody staining",
 )
 
+Technique.self_reporting = Technique(
+    id="https://openminds.om-i.org/instances/technique/selfReporting",
+    definition="A data collection technique in which individuals provide information about their own characteristics, behaviors, experiences, attitudes, or conditions through questionnaires, interviews, or other reporting instruments.",
+    name="self-reporting",
+    synonyms=["self reporting"],
+)
+
+Technique.semi_structured_questioning = Technique(
+    id="https://openminds.om-i.org/instances/technique/semiStructuredQuestioning",
+    definition="A data collection technique in which respondents are presented with questions guided by a predefined framework or set of topics, allowing flexibility in question wording, order, and follow-up questions to explore responses in greater depth.",
+    name="semi-structured questioning",
+    synonyms=["semi structured questioning"],
+)
+
 Technique.serial_block_face_scanning_electron_microscopy = Technique(
     id="https://openminds.om-i.org/instances/technique/serialBlockFaceScanningElectronMicroscopy",
     definition="Serial block face scanning electron microscopy is a serial section scanning electron microscopy technique where an ultramicrotome is used to remove the surface layer of a specimen.",
@@ -1230,6 +1307,13 @@ Technique.structural_magnetic_resonance_imaging = Technique(
 Technique.structural_neuroimaging = Technique(
     id="https://openminds.om-i.org/instances/technique/structuralNeuroimaging",
     name="structural neuroimaging",
+)
+
+Technique.structured_questioning = Technique(
+    id="https://openminds.om-i.org/instances/technique/structuredQuestioning",
+    definition="A data collection technique in which respondents are presented with a predetermined set of questions using standardized wording and order, ensuring consistency and comparability of questions across respondents.",
+    name="structured questioning",
+    synonyms=["standardized questioning"],
 )
 
 Technique.subcutaneous_injection = Technique(
@@ -1416,6 +1500,12 @@ Technique.ultra_high_field_structural_magnetic_resonance_imaging = Technique(
         "UHF magnetic resonance imaging",
         "ultra high-field magnetic resonance imaging",
     ],
+)
+
+Technique.unstructured_questioning = Technique(
+    id="https://openminds.om-i.org/instances/technique/unstructuredQuestioning",
+    definition="A data collection technique in which questions are formulated and adapted flexibly during the interaction without a predetermined wording or order, allowing respondents' answers to guide the development of subsequent questions.",
+    name="unstructured questioning",
 )
 
 Technique.vibratome_sectioning = Technique(
