@@ -199,6 +199,14 @@ Species.meriones_unguiculatus = Species(
     synonyms=["Mongolian gerbil", "Mongolian jird"],
 )
 
+Species.microtus_ochrogaster = Species(
+    id="https://openminds.ebrains.eu/instances/species/microtusOchrogaster",
+    definition="The species *Microtus ochrogaster* (prairie vole) belongs to the family of *cricetidae* (hamsters, voles, lemmings and New World rats and mice).",
+    name="Microtus ochrogaster",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_79684"),
+    synonyms=["prairie vole"],
+)
+
 Species.monodelphis_domestica = Species(
     id="https://openminds.ebrains.eu/instances/species/monodelphisDomestica",
     definition="The species *Monodelphis domestica* (gray short-tailed opossum) belongs to the family of *didelphidae* (American possums).",
