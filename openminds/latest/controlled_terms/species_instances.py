@@ -259,6 +259,16 @@ Species.ovis_aries = Species(
     synonyms=["domestic sheep", "sheep"],
 )
 
+Species.pogona_vitticeps = Species(
+    id="https://openminds.om-i.org/instances/species/pogonaVitticeps",
+    definition="The species *Pogona vitticeps* (central bearded dragon) belongs to the family of *agamidae* (Old World Arboreal Lizards, Agamid Lizards).",
+    description="It is a medium-sized lizard characterized by its flattened body, triangular head, spiny scales, and distinctive expandable throat pouch resembling a beard. Native to central and eastern Australia, it typically inhabits arid and semi-arid environments, including deserts, scrublands, and open woodlands. It is closely related to other Australian bearded dragons of the genus Pogona and is commonly bred in captivity for the pet trade, while also serving as a model organism in scientific research.",
+    name="Pogona vitticeps",
+    other_ontology_identifiers=["http://purl.obolibrary.org/obo/VTO_0022066"],
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_103695"),
+    synonyms=["central bearded dragon", "inland bearded dragon"],
+)
+
 Species.quiscalus_mexicanus = Species(
     id="https://openminds.om-i.org/instances/species/quiscalusMexicanus",
     definition="The species *Quiscalus mexicanus* (great-tailed grackle) belongs to the family of *Icteridae* (New World blackbirds, orioles and allies) of the order *Passeriformes* (song birds).",
