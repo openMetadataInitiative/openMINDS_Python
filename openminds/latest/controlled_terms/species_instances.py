@@ -234,6 +234,15 @@ Species.mustela_putorius_furo = Species(
     synonyms=["black ferret", "domestic ferret", "ferret", "mustela furo"],
 )
 
+Species.oryctolagus_cuniculus = Species(
+    id="https://openminds.om-i.org/instances/species/oryctolagusCuniculus",
+    definition="The species *Oryctolagus cuniculus* (European rabbit) belongs to the family of *leporidae* (rabbits and hares).",
+    description="It is a small herbivorous mammal characterized by its soft fur, long ears, short tail, and powerful hind legs. Native to the Iberian Peninsula, it typically inhabits grasslands and open woodlands, living in social groups within underground burrow systems known as warrens. It is also the ancestral species of all domestic rabbit breeds, including those used in laboratory research.",
+    name="Oryctolagus cuniculus",
+    preferred_ontology_identifier=IRI("http://purl.obolibrary.org/obo/NCBITaxon_9986"),
+    synonyms=["European rabbit", "rabbit", "domestic rabbit"],
+)
+
 Species.ovis_aries = Species(
     id="https://openminds.om-i.org/instances/species/ovisAries",
     definition="The species *Ovis aries* (domestic sheep) belongs to the family of bovidae (bovids).",
