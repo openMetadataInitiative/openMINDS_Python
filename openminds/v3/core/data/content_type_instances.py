@@ -2940,6 +2940,14 @@ ContentType.text_x_python_3_9 = ContentType(
     name="text/x-python.3.9",
 )
 
+ContentType.video_matroska = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/video_matroska",
+    file_extensions=[".mkv"],
+    name="video/matroska",
+    specification=IRI("https://www.rfc-editor.org/rfc/rfc9559"),
+    synonyms=["Matroska video file", "video/x-matroska"],
+)
+
 ContentType.video_mp4 = ContentType(
     id="https://openminds.ebrains.eu/instances/contentTypes/video_mp4",
     file_extensions=[".mp4"],
@@ -2953,6 +2961,14 @@ ContentType.video_quicktime = ContentType(
     file_extensions=[".mov"],
     name="video/quicktime",
     synonyms=["QuickTime Movie"],
+)
+
+ContentType.video_x_ms_wmv = ContentType(
+    id="https://openminds.ebrains.eu/instances/contentTypes/video_x-ms-wmv",
+    description="Windows Media Video is a proprietary Microsoft file format, which uses the Advanced Systems Format (ASF) container to store video compressed with a Windows Media Video (WMV) codec.",
+    file_extensions=[".wmv"],
+    name="video/x-ms-wmv",
+    synonyms=["Windows Media Video", "WMV"],
 )
 
 ContentType.video_x_msvideo = ContentType(
