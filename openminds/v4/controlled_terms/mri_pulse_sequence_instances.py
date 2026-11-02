@@ -70,6 +70,13 @@ MRIPulseSequence.multi_echo_pulse_sequence = MRIPulseSequence(
     name="multi-echo pulse sequence",
 )
 
+MRIPulseSequence.proton_density_pulse_sequence = MRIPulseSequence(
+    id="https://openminds.om-i.org/instances/MRIPulseSequence/protonDensityPulseSequence",
+    definition="A family of MRI pulse sequences intended to enhance the contrast of differences in proton density across tissues.",
+    name="proton density pulse sequence",
+    synonyms=["PD pulse sequence"],
+)
+
 MRIPulseSequence.saturation_recovery_pulse_sequence = MRIPulseSequence(
     id="https://openminds.om-i.org/instances/MRIPulseSequence/saturationRecoveryPulseSequence",
     definition="A magnetic resonance imaging pulse sequence composed of multiple slice selective 90-degree radiofrequency pulses at regular intervals delayed to allow the recovery of all the longitudinal magnetization before another pulse is applied.",
@@ -90,6 +97,12 @@ MRIPulseSequence.stimulated_echo_pulse_sequence = MRIPulseSequence(
     definition="A family of magnetic resonance imaging pulse sequences that use three or more radiofrequency (RF) pulses to generate stimulated echoes by temporarily storing transverse magnetization as longitudinal magnetization and subsequently converting it back into transverse magnetization for signal formation.",
     name="stimulated echo pulse sequence",
     synonyms=["STE pulse sequence"],
+)
+
+MRIPulseSequence.t1_pulse_sequence = MRIPulseSequence(
+    id="https://openminds.om-i.org/instances/MRIPulseSequence/T1PulseSequence",
+    definition="A family of MRI pulse sequences intended to enhance the contrast of differences in the longitudinal (T1) relaxation times across tissues.",
+    name="T1 pulse sequence",
 )
 
 MRIPulseSequence.t2_pulse_sequence = MRIPulseSequence(
